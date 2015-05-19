@@ -8,13 +8,13 @@
 // @grant        all
 // ==/UserScript==
 
-setTimeout(runLnK,1000);
 
 var runLnK = function() {
     checkMissions();
-    sleep(60000);// sixty seconds
-    setTimeout(runLnK, 1000);
+    setTimeout(runLnK, 60000);
 }
+
+setTimeout(runLnK,1000);
 
 jQuery(document).on('DOMContentLoaded','.globalMissions',function(){
     console.log('globalMissions');
@@ -30,6 +30,7 @@ function checkMissions(){
             jQuery('.globalMissions .execute').click();
             // close
             jQuery('.globalMissions .close').click();
+            console.log('missions');
         }, 1000);
     } catch(e){
         console.log('globalMissions',e);
@@ -46,8 +47,8 @@ function checkBuildings(){
             // execute them!
             jQuery('.buildingList .close').click();
         }, 1000);
-    } catch(Exception e){
-        console.log('globalMissions');
+    } catch(e){
+        console.log('globalMissions',e);
     }
 }
 
