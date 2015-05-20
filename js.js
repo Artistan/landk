@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Lords & Knights
-// @namespace    http://your.homepage/
+// @namespace    https://raw.githubusercontent.com/Artistan/landk/master/js.js
 // @version      0.1
 // @description  enter something useful
 // @author       CPeterson
