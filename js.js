@@ -12,11 +12,17 @@
 if(typeof unsafeWindow == 'undefined'){
     var unsafeWindow = window;
 }
+unsafeWindow.runLnK=true;
 
 var runLnK = function() {
-    checkMissions();
-    checkBuildings();
-    checkCastles();
+    if(unsafeWindow.runLnK){
+        checkMissions();
+        checkBuildings();
+        checkCastles();
+        console.log('lnk running USE: unsafeWindow.runLnK=false;')
+    } else {
+        console.log('lnk paused USE: unsafeWindow.runLnK=true;')
+    }
     timer = setTimeout(runLnK, 60000);
 }
 
@@ -110,7 +116,11 @@ function checkCastles(){
                         jQuery('.tradableItems.Keep .marketListItem:last .button',this).click()
                         var carts = Math.ceil(total/2500);
                         var $oxCart = jQuery('.unitElement[data-primary-key="10002"] input',this);
-                        if($oxCart.attr('placeholder') * 1 < carts){
+                        if( $oxCart.attr('placeholder')==0 ){
+                            unsafeWindow.console.log('NO OXEN CARTS');
+                            jQuery('.close',this).click();
+                            return false;
+                        } else if($oxCart.attr('placeholder') * 1 < carts){
                             carts = $oxCart.attr('placeholder') * 1;
                             total = carts+2500;
                             while(wood + stone + ore > total){
@@ -141,7 +151,7 @@ function checkCastles(){
                         jQuery('.typeContainer .button',this).click();
                         unsafeWindow.console.log('silver');
                     }
-                    //jQuery('.close',this).click();
+                    jQuery('.close',this).click();
                 });
             }, 10000);
             unsafeWindow.console.log('castles');
