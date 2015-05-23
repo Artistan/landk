@@ -77,7 +77,7 @@ function castleBuildings(ele){
         var buttons = $c.find('.buildbutton:not(.disabled)');
         //unsafeWindow.console.log('cityBuildings',$c,$c.find('.upgrade').length,buttons.length);
         Matches = false;
-        for (len = buttons.length-1; len > 0 && $c.find('.upgrade').length < 3; len--) {
+        for (len = buttons.length-1; len >= 0 && $c.find('.upgrade').length < 3; len--) {
             jQuery(buttons[len]).click();
         }
     }
