@@ -18,6 +18,9 @@ unsafeWindow.buildings=true;
 unsafeWindow.silver=true;
 
 var runLnK = function() {
+    if(jQuery('#jsLnK').length==0){
+        initJsLnK();
+    }
     if(unsafeWindow.runLnK){
         checkMissions();
         checkBuildings();
@@ -29,18 +32,18 @@ var runLnK = function() {
     timer = setTimeout(runLnK, 60000);
 }
 
-var timer = setTimeout(runLnK,1000);
+var timer = setTimeout(runLnK,5000);
 
 function initJsLnK(){
     jQuery('body').append('<div id="jsLnK">' +
-    '   <a onclick="toggleMiniMap()">ToggleMap</a>' +
-    '   <a onclick="toggleSilver()">toggleSilver</a>' +
-    '   <a onclick="toggleBuildings()">ToggleBuildings</a>' +
-    '   <a onclick="toggleMissions()">ToggleMissions</a>' +
-    '</div>');
+    '   <a onclick="unsafeWindow.toggleMiniMap()">ToggleMap</a>' +
+    '   <a onclick="unsafeWindow.toggleSilver()">toggleSilver</a>' +
+    '   <a onclick="unsafeWindow.toggleBuildings()">ToggleBuildings</a>' +
+    '   <a onclick="unsafeWindow.toggleMissions()">ToggleMissions</a>' +
+    '</div>').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
 }
 
-function toggleMissions(){
+unsafeWindow.toggleMissions = function(){
     unsafeWindow.missions = !unsafeWindow.missions;
 }
 
@@ -66,11 +69,11 @@ function checkMissions(){
     }
 }
 
-function toggleMiniMap(){
+unsafeWindow.toggleMiniMap = function(){
     jQuery('.miniMapContainer').hide();
 }
 
-function toggleBuildings(){
+unsafeWindow.toggleBuildings = function(){
     unsafeWindow.buildings = !unsafeWindow.buildings;
 }
 
@@ -107,7 +110,7 @@ function castleBuildings(ele){
     }
 }
 
-function toggleSilver(){
+unsafeWindow.toggleSilver = function(){
     unsafeWindow.silver = !unsafeWindow.silver;
 }
 
