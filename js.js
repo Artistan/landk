@@ -17,37 +17,37 @@ unsafeWindow.missions=true;
 unsafeWindow.buildings=true;
 unsafeWindow.silver=true;
 
-var runLnK = function() {
+runLnK = function() {
     if(jQuery('#jsLnK').length==0){
-        initJsLnK();
+        unsafeWindow.initJsLnK();
     }
     if(unsafeWindow.runLnK){
         checkMissions();
         checkBuildings();
-        checkCastles();
+        castleFunctions ();
         console.log('lnk running USE: unsafeWindow.runLnK=false;')
     } else {
         console.log('lnk paused USE: unsafeWindow.runLnK=true;')
     }
-    timer = setTimeout(runLnK, 60000);
+    unsafeWindow.timer = setTimeout(runLnK, 60000);
 }
 
-var timer = setTimeout(runLnK,5000);
+unsafeWindow.timer = setTimeout(runLnK,15000);
 
-function initJsLnK(){
+unsafeWindow.initJsLnK = function(){
     jQuery('body').append('<div id="jsLnK">' +
     '   <a onclick="unsafeWindow.toggleMiniMap()">ToggleMap</a>' +
-    '   <a onclick="unsafeWindow.toggleSilver()">toggleSilver</a>' +
+    '   <a onclick="toggleSilver ()">toggleSilver</a>' +
     '   <a onclick="unsafeWindow.toggleBuildings()">ToggleBuildings</a>' +
     '   <a onclick="unsafeWindow.toggleMissions()">ToggleMissions</a>' +
-    '</div>').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+    '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
 }
 
 unsafeWindow.toggleMissions = function(){
     unsafeWindow.missions = !unsafeWindow.missions;
 }
 
-function checkMissions(){
+checkMissions = function(){
     if(unsafeWindow.missions){
         try{
             // make sure it is closed before we try to open.
@@ -77,7 +77,7 @@ unsafeWindow.toggleBuildings = function(){
     unsafeWindow.buildings = !unsafeWindow.buildings;
 }
 
-function checkBuildings(){
+checkBuildings = function(){
     if(unsafeWindow.buildings){
         try{
             // make sure it is closed before we try to open.
@@ -97,7 +97,7 @@ function checkBuildings(){
     }
 }
 
-function castleBuildings(ele){
+castleBuildings = function (ele){
     var $c = jQuery(ele);
     var Matches = true;
     while( $c.find('.upgrade').length < 2 && Matches ){
@@ -110,92 +110,99 @@ function castleBuildings(ele){
     }
 }
 
-unsafeWindow.toggleSilver = function(){
+toggleSilver  = function(){
     unsafeWindow.silver = !unsafeWindow.silver;
 }
-
-function checkCastles(){
+/*
+checkCastles  = function(){
     try{
         // make sure it is closed before we try to open.
         if(jQuery('.castleList').length==0){
             // open castleList panel
             jQuery(jQuery('.topbarImageContainer')[0]).click();
+        } else {
+            castleFunctions();
         }
-        setTimeout(function(){
-            if(typeof unsafeWindow == 'undefined'){
-                var unsafeWindow = window;
-            }
-            // close any active habitat (castle);
-            jQuery('.habitat .close').click();
-
-            if(unsafeWindow.silver){
-                // try select all
-                jQuery(".castleList .castleListItem .points:contains('289 Points')").each(function(){
-                    unsafeWindow.console.log('silver');
-                    // open this castle view
-                    jQuery(this).click();
-                });
-
-                setTimeout(function(){
-                    // try select all
-                    jQuery('.habitat').each(function(){
-                        var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
-                        var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
-                        var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
-                        var total = wood + stone + ore;
-                        if(total > 6000){
-                            unsafeWindow.console.log('total',total);
-                            jQuery('.keep',this).click();
-                            jQuery('.tradableItems.Keep .marketListItem:last .button',this).click()
-                            var carts = Math.ceil(total/2500);
-                            var $oxCart = jQuery('.unitElement[data-primary-key="10002"] input',this);
-                            if( $oxCart.attr('placeholder')==0 ){
-                                unsafeWindow.console.log('NO OXEN CARTS');
-                                jQuery('.close',this).click();
-                                return false;
-                            } else if($oxCart.attr('placeholder') * 1 < carts){
-                                carts = $oxCart.attr('placeholder') * 1;
-                                total = carts+2500;
-                                while(wood + stone + ore > total){
-                                    wood -= 5;
-                                    stone -= 5;
-                                    ore -= 5;
-                                }
-                            }
-                            $oxCart.focus().click().val(carts).blur();
-                            jQuery('.resourceContainer input',this).each(function(){
-                                var $t = jQuery(this);
-                                $t.focus().click().val($t.attr('placeholder')-1000).blur();
-                            });
-
-
-                            $oxCart
-                                .val(carts).trigger("change").trigger("blur");
-
-                            jQuery('.resourceContainer .resourceElement[data-primary-key="1"] input',this)
-                                .val(wood).trigger("change").trigger("blur");
-                            jQuery('.resourceContainer .resourceElement[data-primary-key="2"] input',this)
-                                .val(stone).trigger("change").trigger("blur");
-                            jQuery('.resourceContainer .resourceElement[data-primary-key="3"] input',this)
-                                .val(ore).trigger("change").trigger("blur");
-
-
-
-                            jQuery('.typeContainer .button',this).click();
-                            unsafeWindow.console.log('exchanged');
-                        }
-                        jQuery('.close',this).click();
-                    });
-                }, 10000);
-                unsafeWindow.console.log('castles');
-            }
-        }, 5000);
     } catch(e){
         unsafeWindow.console.log('globalMissions',e);
     }
+}*/
+castleFunctions = function(){
+    if(unsafeWindow.silver){
+        jQuery(".castleListItem .points:contains('289 Points')").click();
+        unsafeWindow.console.log('castles');
+    }
 }
 
+habitatFunctions = function(){
+    //do stuff here
+    if(jQuery(this).find('.artistan').length==0){
+        jQuery(this).append('<div class="artistan"></div>');
+        console.log('habitat activated');
 
+        var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
+        var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
+        var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
+        var total = wood + stone + ore;
+        if(total > 20000){
+            unsafeWindow.console.log('total',total);
+            jQuery('.keep',this).click();
+            jQuery('.tradableItems.Keep .marketListItem:last .button',this).click()
+            var carts = Math.ceil(total/2500);
+            var $oxCart = jQuery('.unitElement[data-primary-key="10002"] input',this);
+            if( $oxCart.attr('placeholder')==0 ){
+                unsafeWindow.console.log('NO OXEN CARTS');
+                jQuery('.close',this).click();
+                return false;
+            } else if($oxCart.attr('placeholder') * 1 < carts){
+                carts = $oxCart.attr('placeholder') * 1;
+                total = carts+2500;
+                while(wood + stone + ore > total){
+                    wood -= 5;
+                    stone -= 5;
+                    ore -= 5;
+                }
+            }
+            $oxCart.focus().click().val(carts).blur();
+            jQuery('.resourceContainer input',this).each(function(){
+                var $t = jQuery(this);
+                $t.focus().click().val($t.attr('placeholder')-1000).blur();
+            });
+
+            $oxCart
+                .val(carts).trigger("change").trigger("blur");
+
+            jQuery('.resourceContainer .resourceElement[data-primary-key="1"] input',this)
+                .val(wood).trigger("change").trigger("blur");
+            jQuery('.resourceContainer .resourceElement[data-primary-key="2"] input',this)
+                .val(stone).trigger("change").trigger("blur");
+            jQuery('.resourceContainer .resourceElement[data-primary-key="3"] input',this)
+                .val(ore).trigger("change").trigger("blur");
+
+            jQuery('.typeContainer .button',this).click();
+            unsafeWindow.console.log('exchanged');
+        }
+        unsafeWindow.console.log('closing habitat');
+        jQuery('.close',this).click();
+    }
+}
+
+// document ready function
+jQuery(function(){
+
+    // extending addclass method
+    var originalAddClassMethod = jQuery.fn.addClass;
+    jQuery.fn.addClass = function(){
+        // Execute the original method.
+        var result = originalAddClassMethod.apply( this, arguments );
+        // trigger a custom event
+        jQuery(this).trigger('cssClassChanged');
+        // return the original result
+        return result;
+    }
+// adds class of activewindow when activated, so this should work for checking new windows
+    jQuery("body").on('cssClassChanged','.habitat', habitatFunctions);
+});
 
 
 
