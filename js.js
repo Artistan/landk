@@ -15,7 +15,7 @@ if(typeof unsafeWindow == 'undefined'){
 unsafeWindow.runLnK=true;
 unsafeWindow.missions=true;
 unsafeWindow.buildings=true;
-unsafeWindow.silver=true;
+unsafeWindow.silver=false;
 
 runLnK = function() {
     if(jQuery('#jsLnK').length==0){
@@ -113,32 +113,35 @@ castleBuildings = function (ele){
 toggleSilver  = function(){
     unsafeWindow.silver = !unsafeWindow.silver;
 }
-/*
-checkCastles  = function(){
-    try{
+
+checkCastles  = function() {
+    try {
         // make sure it is closed before we try to open.
-        if(jQuery('.castleList').length==0){
+        if (jQuery('.castleList').length == 0) {
             // open castleList panel
             jQuery(jQuery('.topbarImageContainer')[0]).click();
         } else {
             castleFunctions();
         }
-    } catch(e){
-        unsafeWindow.console.log('globalMissions',e);
+    } catch (e) {
+        unsafeWindow.console.log('globalMissions', e);
     }
-}*/
+}
 castleFunctions = function(){
     if(unsafeWindow.silver){
         jQuery(".castleListItem .points:contains('289 Points')").click();
         unsafeWindow.console.log('castles');
+
+        habitatTimeout = setTimeout(function(){
+            jQuery('.habitat').each(habitatFunctions);
+        }, 10000);
     }
 }
-
+var habitatTimeout=false;
 habitatFunctions = function(){
     //do stuff here
-    if(jQuery(this).find('.artistan').length==0){
-        jQuery(this).append('<div class="artistan"></div>');
-        console.log('habitat activated');
+    if(unsafeWindow.silver){
+        console.log('habitat');
 
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
@@ -182,9 +185,8 @@ habitatFunctions = function(){
             jQuery('.typeContainer .button',this).click();
             unsafeWindow.console.log('exchanged');
         }
-        unsafeWindow.console.log('closing habitat');
-        jQuery('.close',this).click();
     }
+    jQuery('.close',this).click();
 }
 
 // document ready function
@@ -200,8 +202,6 @@ jQuery(function(){
         // return the original result
         return result;
     }
-// adds class of activewindow when activated, so this should work for checking new windows
-    jQuery("body").on('cssClassChanged','.habitat', habitatFunctions);
 });
 
 
