@@ -156,7 +156,7 @@ habitatFunctions = function(){
             if( $oxCart.attr('placeholder')==0 ){
                 unsafeWindow.console.log('NO OXEN CARTS');
                 jQuery('.close',this).click();
-                return false;
+                return true;
             } else if($oxCart.attr('placeholder') * 1 < carts){
                 carts = $oxCart.attr('placeholder') * 1;
                 total = carts+2500;
