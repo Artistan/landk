@@ -5,9 +5,13 @@
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
+// @resource    customCSS localhost/landk.css
 // @grant        all
 // @grant unsafeWindow
 // ==/UserScript==
+
+var newCSS = GM_getResourceText ("customCSS");
+GM_addStyle (newCSS);
 
 if(typeof unsafeWindow == 'undefined'){
     var unsafeWindow = window;
