@@ -5,27 +5,29 @@
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS localhost/landk.css
-// @grant        all
-// @grant unsafeWindow
+// @resource    customCSS http://localhost/landk.css
+// @grant       all
+// @grant       unsafeWindow
+// @grant       GM_getResourceText
+// @grant       GM_addStyle
 // ==/UserScript==
 
 var newCSS = GM_getResourceText ("customCSS");
-GM_addStyle (newCSS);
+GM_addStyle(newCSS);
 
 if(typeof unsafeWindow == 'undefined'){
     var unsafeWindow = window;
 }
-unsafeWindow.runLnK=true;
+unsafeWindow.runLnKNow=true;
 unsafeWindow.missions=true;
 unsafeWindow.buildings=true;
-unsafeWindow.silver=false;
+unsafeWindow.silver=true;
 
 runLnK = function() {
     if(jQuery('#jsLnK').length==0){
         unsafeWindow.initJsLnK();
     }
-    if(unsafeWindow.runLnK){
+    if(unsafeWindow.runLnKNow){
         checkMissions();
         checkBuildings();
         castleFunctions ();
@@ -74,7 +76,7 @@ checkMissions = function(){
 }
 
 unsafeWindow.toggleMiniMap = function(){
-    jQuery('.miniMapContainer').hide();
+    jQuery('.miniMapContainer').toggle();
 }
 
 unsafeWindow.toggleBuildings = function(){
@@ -206,6 +208,7 @@ jQuery(function(){
         // return the original result
         return result;
     }
+    jQuery('.static.topbar.frame-container').on('css');
 });
 
 

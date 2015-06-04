@@ -1763,7 +1763,7 @@
                 i = this.templates[t];
                 e = a(t);
                 if (e) {
-                    utils.Template.add(i, e)
+                    utils.Template.add(i, e);
                 }
             }
         };
