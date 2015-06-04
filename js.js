@@ -5,7 +5,7 @@
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS http://localhost/landk.css
+// @resource    customCSS http://localhost/landk.css?asdf=4
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
