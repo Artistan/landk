@@ -42,10 +42,10 @@ unsafeWindow.timer = setTimeout(runLnK,15000);
 
 unsafeWindow.initJsLnK = function(){
     jQuery('body').append('<div id="jsLnK">' +
-    '   <a onclick="unsafeWindow.toggleMiniMap()">ToggleMap</a>' +
+    '   <a onclick="toggleMiniMap()">ToggleMap</a>' +
     '   <a onclick="toggleSilver ()">toggleSilver</a>' +
-    '   <a onclick="unsafeWindow.toggleBuildings()">ToggleBuildings</a>' +
-    '   <a onclick="unsafeWindow.toggleMissions()">ToggleMissions</a>' +
+    '   <a onclick="toggleBuildings()">ToggleBuildings</a>' +
+    '   <a onclick="toggleMissions()">ToggleMissions</a>' +
     '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
 }
 

@@ -10671,3 +10671,11 @@ SOURCE
     z-index: 9999;
     background-color: #55765d;
 }
+
+#jsLnK a{
+    cursor: pointer;
+}
+
+#jsLnK a:hover{
+    background-color: #23b739;
+}
