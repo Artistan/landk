@@ -153,11 +153,16 @@ habitatFunctions = function(){
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
         var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
+        var silver = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="6"] .resourceAmount',this).html() * 1 - 1000;
         var total = wood + stone + ore;
-        if(total > 20000){
+        if(total > 14000){
             unsafeWindow.console.log('total',total);
             jQuery('.keep',this).click();
-            jQuery('.tradableItems.Keep .marketListItem:last .button',this).click()
+            if(silver==20000){
+                jQuery('.tradableItems.Keep .marketListItem:first .button',this).click(); //trade for copper
+            } else {
+                jQuery('.tradableItems.Keep .marketListItem:last .button',this).click(); //trade for silver
+            }
             var carts = Math.ceil(total/2500);
             var $oxCart = jQuery('.unitElement[data-primary-key="10002"] input',this);
             if( $oxCart.attr('placeholder')==0 ){
