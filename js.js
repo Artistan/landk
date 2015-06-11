@@ -136,6 +136,7 @@ checkCastles  = function() {
 castleFunctions = function(){
     if(unsafeWindow.silver){
         jQuery(".castleListItem .points:contains('289 Points')").click();
+        jQuery(".castleListItem .points:contains('290 Points')").click();
         unsafeWindow.console.log('castles');
 
         habitatTimeout = setTimeout(function(){

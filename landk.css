@@ -10679,3 +10679,7 @@ SOURCE
 #jsLnK a:hover{
     background-color: #23b739;
 }
+
+.recruitingList .resources{
+    display: none;
+}
