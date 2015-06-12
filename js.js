@@ -153,22 +153,27 @@ habitatFunctions = function(){
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
         var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
-        var silver = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="6"] .resourceAmount',this).html() * 1 - 1000;
+        // check total silver and copper
+        var silver = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="6"] .resourceAmount',this).html() * 1;
+        var copper = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="5"] .resourceAmount',this).html() * 1;
         var total = wood + stone + ore;
         if(total > 14000){
             unsafeWindow.console.log('total',total);
             jQuery('.keep',this).click();
-            if(silver==20000){
+            if(silver<20000){
+                jQuery('.tradableItems.Keep .marketListItem:last .button',this).click(); //trade for silver
+            } else if(copper<30000) {
                 jQuery('.tradableItems.Keep .marketListItem:first .button',this).click(); //trade for copper
             } else {
-                jQuery('.tradableItems.Keep .marketListItem:last .button',this).click(); //trade for silver
+                jQuery('.close',this).click();
+                return true;// true so jQuery loop keeps going, kinda like a "break"
             }
             var carts = Math.ceil(total/2500);
             var $oxCart = jQuery('.unitElement[data-primary-key="10002"] input',this);
             if( $oxCart.attr('placeholder')==0 ){
                 unsafeWindow.console.log('NO OXEN CARTS');
                 jQuery('.close',this).click();
-                return true;
+                return true;// true so jQuery loop keeps going, kinda like a "break"
             } else if($oxCart.attr('placeholder') * 1 < carts){
                 carts = $oxCart.attr('placeholder') * 1;
                 total = carts+2500;
@@ -199,6 +204,7 @@ habitatFunctions = function(){
         }
     }
     jQuery('.close',this).click();
+    return true;// true so jQuery loop keeps going, kinda like a "break"
 }
 
 // document ready function
