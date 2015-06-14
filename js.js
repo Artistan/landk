@@ -5,7 +5,7 @@
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS http://localhost/landk.css?lksnsss=111
+// @resource    customCSS http://localhost/landk.css?2l=111
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
@@ -42,15 +42,24 @@ unsafeWindow.timer = setTimeout(runLnK,15000);
 
 unsafeWindow.initJsLnK = function(){
     jQuery('body').append('<div id="jsLnK">' +
-    '   <a onclick="toggleMiniMap()">ToggleMap</a>' +
-    '   <a onclick="toggleSilver ()">toggleSilver</a>' +
-    '   <a onclick="toggleBuildings()">ToggleBuildings</a>' +
-    '   <a onclick="toggleMissions()">ToggleMissions</a>' +
+    '   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleMiniMap()">MiniMap</a>' +
     '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+}
+
+unsafeWindow.toggleAuto = function(){
+    unsafeWindow.runLnKNow = !unsafeWindow.runLnKNow;
+    jQuery('#auto_runLnKNow').removeClass(unsafeWindow.runLnKNow?'Stopped':'Running').addClass(unsafeWindow.runLnKNow?'Running':'Stopped');
+    console.log('unsafeWindow.runLnKNow',unsafeWindow.runLnKNow);
 }
 
 unsafeWindow.toggleMissions = function(){
     unsafeWindow.missions = !unsafeWindow.missions;
+    jQuery('#auto_missions').removeClass(unsafeWindow.missions?'Stopped':'Running').addClass(unsafeWindow.missions?'Running':'Stopped');
+    console.log('unsafeWindow.missions',unsafeWindow.missions);
 }
 
 checkMissions = function(){
@@ -81,6 +90,8 @@ unsafeWindow.toggleMiniMap = function(){
 
 unsafeWindow.toggleBuildings = function(){
     unsafeWindow.buildings = !unsafeWindow.buildings;
+    jQuery('#auto_buildings').removeClass(unsafeWindow.buildings?'Stopped':'Running').addClass(unsafeWindow.buildings?'Running':'Stopped');
+    console.log('unsafeWindow.buildings',unsafeWindow.buildings);
 }
 
 checkBuildings = function(){
@@ -118,6 +129,8 @@ castleBuildings = function (ele){
 
 toggleSilver  = function(){
     unsafeWindow.silver = !unsafeWindow.silver;
+    jQuery('#auto_silver').removeClass(unsafeWindow.silver?'Stopped':'Running').addClass(unsafeWindow.silver?'Running':'Stopped');
+    console.log('unsafeWindow.silver',unsafeWindow.silver);
 }
 
 checkCastles  = function() {

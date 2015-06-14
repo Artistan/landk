@@ -1050,7 +1050,7 @@ body {
 textarea, input {
     width: 98%;
     margin: 5px 0 10px 0;
-    padding: 2px;
+    padding: 1px;
     background: #f2ece3;
     border: 1px solid #999;
     color: #272322;
@@ -1126,17 +1126,17 @@ p.error {
     width: 35px;
     float: left;
     height: 13px;
-    margin: 5px -4px 5px 0
+    margin: 5px -15px 0px 0
 }
 
 .maxInput .button {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     float: left;
     position: relative;
     left: 3px;
     top: 3px;
-    padding: 4px 2px 3px 5px;
+    padding: 0px 0px 6px 5px;
     margin: 2px 0 0 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -2756,11 +2756,11 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
 }
 
 .win.habitat .tabbar .tab:first-child {
-    margin-left: 5px
+    margin-left: 2px
 }
 
 .win.habitat .tabbar .specials {
-    margin-right: 5px;
+    margin-right: 2px;
     width: 96px;
     height: 43px;
     padding-left: 15px;
@@ -5334,11 +5334,11 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
 }
 
 .win.foreignAction .sendStuffList .res-table .table-icon img {
-    max-width: 48px;
-    max-height: 48px;
+    max-width: 24px;
+    max-height: 24px;
     display: inline;
     position: relative;
-    margin-bottom: -5px
+    margin-bottom: -10px
 }
 
 .win.foreignAction .sendStuffList .unitIcon.table-icon {
@@ -10680,6 +10680,19 @@ SOURCE
     background-color: #23b739;
 }
 
-.recruitingList .resources{
-    display: none;
+.Stopped{
+    height:10px;
+    width:10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 4px 2px 2px 6px;
+    background-color: #b92628;
+}
+.Running{
+    height:10px;
+    width:10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 4px 2px 2px 6px;
+    background-color: #23b739;
 }
