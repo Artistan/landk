@@ -5,7 +5,7 @@
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS http://localhost/landk.css?2l=111
+// @resource    customCSS http://localhost/landk.css?4l=111
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
@@ -22,6 +22,8 @@ unsafeWindow.runLnKNow=true;
 unsafeWindow.missions=true;
 unsafeWindow.buildings=true;
 unsafeWindow.silver=true;
+var silverCount=10;
+var silverCounter=0;
 
 runLnK = function() {
     if(jQuery('#jsLnK').length==0){
@@ -147,7 +149,12 @@ checkCastles  = function() {
     }
 }
 castleFunctions = function(){
-    if(unsafeWindow.silver){
+    silverCounter++;
+    if(silverCounter>silverCount){
+        silverCounter=1;
+    }
+    jQuery('#auto_silver').html(silverCounter);
+    if(unsafeWindow.silver && silverCount==silverCounter){
         jQuery(".castleListItem .points:contains('289 Points')").click();
         jQuery(".castleListItem .points:contains('290 Points')").click();
         unsafeWindow.console.log('castles');
