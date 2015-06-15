@@ -22,6 +22,7 @@ unsafeWindow.runLnKNow=true;
 unsafeWindow.missions=true;
 unsafeWindow.buildings=true;
 unsafeWindow.silver=true;
+unsafeWindow.research=true;
 var silverCount=10;
 var silverCounter=0;
 
@@ -46,6 +47,7 @@ unsafeWindow.initJsLnK = function(){
     jQuery('body').append('<div id="jsLnK">' +
     '   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleMiniMap()">MiniMap</a>' +
@@ -139,6 +141,12 @@ toggleSilver  = function(){
     console.log('unsafeWindow.silver',unsafeWindow.silver);
 }
 
+toggleResearch  = function(){
+    unsafeWindow.research = !unsafeWindow.research;
+    jQuery('#auto_research').removeClass(unsafeWindow.research?'Stopped':'Running').addClass(unsafeWindow.research?'Running':'Stopped');
+    console.log('unsafeWindow.research',unsafeWindow.research);
+}
+
 checkCastles  = function() {
     try {
         // make sure it is closed before we try to open.
@@ -192,6 +200,14 @@ habitatFunctions = function(){
         }
     }
     closeDialogs();
+
+    if(unsafeWindow.research){
+        console.log('research');
+        jQuery('.building-area.library',this).click();
+        jQuery('.knowledgeListItem .button:not(.disabled)',this).click();
+    }
+    closeDialogs();
+
 
     silverCounter++;
     if(silverCounter>silverCount){
