@@ -64,22 +64,24 @@ unsafeWindow.toggleMissions = function(){
     console.log('unsafeWindow.missions',unsafeWindow.missions);
 }
 
+
 checkMissions = function(){
     if(unsafeWindow.missions){
         try{
             // make sure it is closed before we try to open.
             jQuery('.globalMissions .close').click();
-            // open missions panel
-            jQuery(jQuery('.topbarImageContainer')[6]).click();
-            setTimeout(function(){
-                // try select all
-                jQuery('.globalMissions .selectAllButton').click();
-                // execute them!
-                jQuery('.globalMissions .execute').click();
-                // close
-                jQuery('.globalMissions .close').click();
-                unsafeWindow.console.log('missions');
-            }, 1000);
+            // open missions panel, if it exists.
+            jQuery('.topbarImageContainer:nth-of-type(7)').click().each(function(){
+                setTimeout(function(){
+                    // try select all
+                    jQuery('.globalMissions .selectAllButton').click();
+                    // execute them!
+                    jQuery('.globalMissions .execute').click();
+                    // close
+                    jQuery('.globalMissions .close').click();
+                    unsafeWindow.console.log('missions');
+                }, 1000);
+            });
         } catch(e){
             unsafeWindow.console.log('globalMissions',e);
         }
@@ -102,14 +104,16 @@ checkBuildings = function(){
             // make sure it is closed before we try to open.
             jQuery('.buildingList .close').click();
             // open buildings panel
-            jQuery(jQuery('.topbarImageContainer')[1]).click();
-            setTimeout(function(){
-                // try select all
-                jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this) });
-                // execute them!
-                jQuery('.buildingList .close').click();
-                unsafeWindow.console.log('buildings');
-            }, 1000);
+            var buildingsPanel = jQuery('.topbarImageContainer:nth-of-type(2)').click().each(function(){
+                setTimeout(function(){
+                    // try select all
+                    jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this) });
+                    // execute them!
+                    jQuery('.buildingList .close').click();
+                    unsafeWindow.console.log('buildings');
+                }, 1000);
+            });
+
         } catch(e){
             unsafeWindow.console.log('globalMissions',e);
         }
@@ -140,7 +144,7 @@ checkCastles  = function() {
         // make sure it is closed before we try to open.
         if (jQuery('.castleList').length == 0) {
             // open castleList panel
-            jQuery(jQuery('.topbarImageContainer')[0]).click();
+            jQuery('.topbarImageContainer:nth-of-type(1)').click();
         } else {
             castleFunctions();
         }
@@ -148,15 +152,23 @@ checkCastles  = function() {
         unsafeWindow.console.log('globalMissions', e);
     }
 }
+var manualMissions=false;
 castleFunctions = function(){
-    silverCounter++;
-    if(silverCounter>silverCount){
-        silverCounter=1;
-    }
-    jQuery('#auto_silver').html(silverCounter);
-    if(unsafeWindow.silver && silverCount==silverCounter){
-        jQuery(".castleListItem .points:contains('289 Points')").click();
-        jQuery(".castleListItem .points:contains('290 Points')").click();
+    console.log('castleFunctions');
+    // check missions panel, if it exists.
+    manualMissions = jQuery('.topbarImageContainer:nth-of-type(7)').length==0;
+
+    if(unsafeWindow.silver || (unsafeWindow.missions && manualMissions) ){
+        console.log('running castleFunctions');
+        if(unsafeWindow.missions && manualMissions){
+            console.log('running manualMissions');
+            // open all...
+            jQuery(".castleListItem").click();
+        } else {
+            console.log('running silver');
+            jQuery(".castleListItem .points:contains('289 Points')").click();
+            jQuery(".castleListItem .points:contains('290 Points')").click();
+        }
         unsafeWindow.console.log('castles');
 
         habitatTimeout = setTimeout(function(){
@@ -166,10 +178,28 @@ castleFunctions = function(){
 }
 var habitatTimeout=false;
 habitatFunctions = function(){
-    //do stuff here
-    if(unsafeWindow.silver){
-        console.log('habitat');
 
+    console.log('habitat');
+
+
+    //do stuff here
+    if(unsafeWindow.missions && manualMissions){
+        console.log('manualMissions');
+        jQuery('.building-area.tavern',this).click();
+        if(jQuery('.building-area.tavern').length<2){
+            var cntBuld = 0;
+            jQuery('.missionListItem .button:not(.disabled)',this).click();
+        }
+    }
+    closeDialogs();
+
+    silverCounter++;
+    if(silverCounter>silverCount && silverCount==silverCounter){
+        silverCounter=1;
+    }
+    jQuery('#auto_silver').html(silverCounter);
+
+    if(unsafeWindow.silver){
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
         var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
@@ -223,6 +253,7 @@ habitatFunctions = function(){
             unsafeWindow.console.log('exchanged');
         }
     }
+    closeDialogs();
     jQuery('.close',this).click();
     return true;// true so jQuery loop keeps going, kinda like a "break"
 }
@@ -245,6 +276,9 @@ jQuery(function(){
 
 
 
-
+function closeDialogs(){
+    jQuery('.button:contains("Cancel")').click();
+    jQuery('.button:contains("Ok")').click();
+}
 
 
