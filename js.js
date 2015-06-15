@@ -194,12 +194,12 @@ habitatFunctions = function(){
     closeDialogs();
 
     silverCounter++;
-    if(silverCounter>silverCount && silverCount==silverCounter){
+    if(silverCounter>silverCount){
         silverCounter=1;
     }
     jQuery('#auto_silver').html(silverCounter);
 
-    if(unsafeWindow.silver){
+    if(unsafeWindow.silver && silverCount==silverCounter){
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
         var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
