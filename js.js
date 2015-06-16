@@ -23,10 +23,15 @@ unsafeWindow.missions=true;
 unsafeWindow.buildings=true;
 unsafeWindow.silver=true;
 unsafeWindow.research=true;
-var silverCount=10;
-var silverCounter=0;
+var incrementalCount=10;
+var incrementalCounter=9;
 
 runLnK = function() {
+    incrementalCounter++;
+    if(incrementalCounter>incrementalCount){
+        incrementalCounter=1;
+    }
+
     if(jQuery('#jsLnK').length==0){
         unsafeWindow.initJsLnK();
     }
@@ -166,9 +171,9 @@ castleFunctions = function(){
     // check missions panel, if it exists.
     manualMissions = jQuery('.topbarImageContainer:nth-of-type(7)').length==0;
 
-    if(unsafeWindow.silver || (unsafeWindow.missions && manualMissions) ){
+    if(unsafeWindow.silver || unsafeWindow.research || (unsafeWindow.missions && manualMissions) ){
         console.log('running castleFunctions');
-        if(unsafeWindow.missions && manualMissions){
+        if( unsafeWindow.research || (unsafeWindow.missions && manualMissions) ){
             console.log('running manualMissions');
             // open all...
             jQuery(".castleListItem").click();
@@ -188,7 +193,7 @@ var habitatTimeout=false;
 habitatFunctions = function(){
 
     console.log('habitat');
-
+    jQuery('#auto_silver,#auto_research').html(incrementalCounter);
 
     //do stuff here
     if(unsafeWindow.missions && manualMissions){
@@ -201,21 +206,14 @@ habitatFunctions = function(){
     }
     closeDialogs();
 
-    if(unsafeWindow.research){
+    if(unsafeWindow.research && incrementalCount==incrementalCounter){
         console.log('research');
         jQuery('.building-area.library',this).click();
         jQuery('.knowledgeListItem .button:not(.disabled)',this).click();
     }
     closeDialogs();
-
-
-    silverCounter++;
-    if(silverCounter>silverCount){
-        silverCounter=1;
-    }
-    jQuery('#auto_silver').html(silverCounter);
-
-    if(unsafeWindow.silver && silverCount==silverCounter){
+    // if silver automation and once every incremental counter rounds, and no knowledge to learn.
+    if(unsafeWindow.silver && incrementalCount==incrementalCounter && jQuery('.knowledgeListItem .button',this).length==0){
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
         var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;

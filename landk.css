@@ -4037,7 +4037,7 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
 }
 
 .win.habitat .tradableItems.Keep .marketListItem, .win.habitat .tradableItems.Townhall .marketListItem {
-    width: 176px;
+    width: 156px;
     margin: 0 10px 0 0
 }
 
@@ -7077,13 +7077,13 @@ body.has-scrollbar .win.recruitingList .unitTableHeader {
 }
 
 .win.alliance .tabbar.alliance .tab {
-    width: 57px;
+    width: 30px;
     border: 1px solid #272322;
     margin: 0 0 0 3px
 }
 
 .win.alliance .tabbar.alliance .tab:first-child {
-    margin-left: 5px
+    margin-left: 0px
 }
 
 .win.alliance .sortBar {
