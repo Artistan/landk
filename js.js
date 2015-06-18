@@ -39,6 +39,7 @@ runLnK = function() {
         checkMissions();
         checkBuildings();
         castleFunctions ();
+        jQuery('.incrementalCounter').html(incrementalCounter);
         console.log('lnk running USE: unsafeWindow.runLnK=false;')
     } else {
         console.log('lnk paused USE: unsafeWindow.runLnK=true;')
@@ -51,8 +52,8 @@ unsafeWindow.timer = setTimeout(runLnK,15000);
 unsafeWindow.initJsLnK = function(){
     jQuery('body').append('<div id="jsLnK">' +
     '   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleMiniMap()">MiniMap</a>' +
@@ -170,30 +171,32 @@ castleFunctions = function(){
     console.log('castleFunctions');
     // check missions panel, if it exists.
     manualMissions = jQuery('.topbarImageContainer:nth-of-type(7)').length==0;
+    // only run these every incrementalCount, or if manualMisssions
+    if(incrementalCount==incrementalCounter || manualMissions){
+        if(unsafeWindow.silver || unsafeWindow.research || unsafeWindow.missions ){
+            console.log('running castleFunctions');
+            if( unsafeWindow.research || (unsafeWindow.missions && manualMissions) ){
+                console.log('running manualMissions');
+                // open all...
+                jQuery(".castleListItem").click();
+            } else {
+                console.log('running silver');
+                jQuery(".castleListItem .points:contains('289 Points')").click();
+                jQuery(".castleListItem .points:contains('290 Points')").click();
+            }
+            unsafeWindow.console.log('castles');
 
-    if(unsafeWindow.silver || unsafeWindow.research || (unsafeWindow.missions && manualMissions) ){
-        console.log('running castleFunctions');
-        if( unsafeWindow.research || (unsafeWindow.missions && manualMissions) ){
-            console.log('running manualMissions');
-            // open all...
-            jQuery(".castleListItem").click();
-        } else {
-            console.log('running silver');
-            jQuery(".castleListItem .points:contains('289 Points')").click();
-            jQuery(".castleListItem .points:contains('290 Points')").click();
+            habitatTimeout = setTimeout(function(){
+                jQuery('.habitat').each(habitatFunctions);
+            }, 10000);
         }
-        unsafeWindow.console.log('castles');
-
-        habitatTimeout = setTimeout(function(){
-            jQuery('.habitat').each(habitatFunctions);
-        }, 10000);
     }
+
 }
 var habitatTimeout=false;
 habitatFunctions = function(){
 
     console.log('habitat');
-    jQuery('#auto_silver,#auto_research').html(incrementalCounter);
 
     //do stuff here
     if(unsafeWindow.missions && manualMissions){
