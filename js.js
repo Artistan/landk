@@ -40,7 +40,7 @@ toggleDebug  = function(){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.debug',unsafeWindow.debug);
 }
 
-runLnK = function() {
+unsafeWindow.runLnK = function(force) {
     incrementalCounter++;
     if(incrementalCounter>incrementalCount){
         incrementalCounter=1;
@@ -49,19 +49,27 @@ runLnK = function() {
     if(jQuery('#jsLnK').length==0){
         unsafeWindow.initJsLnK();
     }
-    if(unsafeWindow.runLnKNow){
-        checkMissions();
-        checkBuildings();
-        castleFunctions ();
-        jQuery('.incrementalCounter').html(incrementalCounter);
-        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk running USE: unsafeWindow.runLnK=false;');
+    if(unsafeWindow.runLnKNow || force){
+        checkMissions(function(){
+            checkBuildings(function(){
+                castleFunctions (function(){
+                    jQuery('.incrementalCounter').html(incrementalCounter);
+                    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk running USE: unsafeWindow.runLnKNow=false;');
+                    finalizeRun();
+                });
+            });
+        });
     } else {
-        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk paused USE: unsafeWindow.runLnK=true;');
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk paused USE: unsafeWindow.runLnKNow=true;');
+        finalizeRun();
     }
+}
+
+function finalizeRun(){
     if(unsafeWindow.clear){
         unsafeWindow.console.clear();
     }
-    unsafeWindow.timer = setTimeout(runLnK, 120000);// wait 2 minutes.
+    unsafeWindow.timer = setTimeout(unsafeWindow.runLnK, 120000);// wait 2 minutes.
 }
 
 function doNothing(){
@@ -72,6 +80,7 @@ unsafeWindow.timer = setTimeout(runLnK,15000);
 
 unsafeWindow.initJsLnK = function(){
     jQuery('body').append('<div id="jsLnK">' +
+    '   <a onclick="runLnK(true)">RUN NOW</a>' +
     '   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
@@ -96,7 +105,7 @@ unsafeWindow.toggleMissions = function(){
 }
 
 
-checkMissions = function(){
+checkMissions = function(callback){
     if(unsafeWindow.missions){
         try{
             // make sure it is closed before we try to open.
@@ -109,17 +118,25 @@ checkMissions = function(){
                     // execute them!
                     jQuery('.globalMissions .execute').click();
                     // now check fortress
-                    jQuery('.globalMissions  .tab.tab-castle-fortess.clicable').click();
-                    setTimeout(function(){
-                        // try select all
-                        jQuery('.globalMissions .selectAllButton').click();
-                        // execute them!
-                        jQuery('.globalMissions .execute').click();
-                        // close
-                        jQuery('.globalMissions .close').click();
-                        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions');
-                    }, 1000);
-                    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions');
+                    if(jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
+                        jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function () {
+                            setTimeout(function(){
+                                // try select all
+                                jQuery('.globalMissions .selectAllButton').click();
+                                // execute them!
+                                jQuery('.globalMissions .execute').click();
+                                // close
+                                jQuery('.globalMissions .close').click();
+                                unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions fortress');
+                                if(typeof callback != 'undefined')
+                                    callback();
+                            }, 1000);
+                        });
+                    } else {
+                        if(typeof callback != 'undefined')
+                            callback();
+                    }
+                    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions castle');
                 }, 1000);
             });
         } catch(e){
@@ -138,7 +155,7 @@ unsafeWindow.toggleBuildings = function(){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.buildings',unsafeWindow.buildings);
 }
 
-checkBuildings = function(){
+checkBuildings = function(callback){
     if(unsafeWindow.buildings){
         try{
             // make sure it is closed before we try to open.
@@ -147,16 +164,23 @@ checkBuildings = function(){
             var buildingsPanel = jQuery('.topbarImageContainer:nth-of-type(2)').click().each(function(){
                 setTimeout(function(){
                     // try select all
-                    jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this) });
+                    jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
                     // now check fortress
-                    jQuery('.buildingList  .tab.tab-castle-fortess.clicable').click();
-                    setTimeout(function(){
-                        // try select all
-                        jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this) });
-                        // execute them!
-                        jQuery('.buildingList .close').click();
-                        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings');
-                    }, 3000);
+                    if(jQuery('.buildingList .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
+                        jQuery('.buildingList .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function(){
+                            setTimeout(function(){
+                                // try select all
+                                jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'fortress') });
+                                // execute them!
+                                jQuery('.buildingList .close').click();
+                                if(typeof callback != 'undefined')
+                                    callback();
+                            }, 3000);
+                        });
+                    } else {
+                        if(typeof callback != 'undefined')
+                            callback();
+                    }
                 }, 1000);
             });
 
@@ -166,15 +190,20 @@ checkBuildings = function(){
     }
 }
 
-castleBuildings = function (ele){
+castleBuildings = function (ele,txt){
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castleBuildings',txt);
     var $c = jQuery(ele);
-    var Matches = true;
-    while( $c.find('.upgrade').length < 2 && Matches ){
+    if( $c.find('.upgrade').length < 2 && $c.find('.buildbutton:not(.disabled)').length > 0 ){
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings upgrade ', $c, $c.find('.upgrade').length);
+
         var buttons = $c.find('.buildbutton:not(.disabled)');
         //unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('cityBuildings',$c,$c.find('.upgrade').length,buttons.length);
         Matches = false;
+        // try to click upgrade until at least 2 upgrades are being performed
         for (len = buttons.length-1; len >= 0 && $c.find('.upgrade').length < 3; len--) {
-            jQuery(buttons[len]).click();
+            jQuery(buttons[len]).click().each(function(){
+                unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings upgrading ', this);
+            });
         }
     }
 }
@@ -205,7 +234,7 @@ checkCastles  = function() {
     }
 }
 var manualMissions=false;
-castleFunctions = function(){
+castleFunctions = function(callback){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castleFunctions');
     // check missions panel, if it exists.
     manualMissions = jQuery('.topbarImageContainer:nth-of-type(7)').length==0;
@@ -226,10 +255,11 @@ castleFunctions = function(){
 
             habitatTimeout = setTimeout(function(){
                 jQuery('.habitat').each(habitatFunctions);
+                if(typeof callback != 'undefined')
+                    callback();
             }, 10000);
         }
     }
-
 }
 var habitatTimeout=false;
 habitatFunctions = function(){
