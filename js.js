@@ -28,6 +28,18 @@ unsafeWindow.debug=true;
 var incrementalCount=10;
 var incrementalCounter=9;
 
+toggleClear  = function(){
+    unsafeWindow.clear = !unsafeWindow.clear;
+    jQuery('#auto_clear').removeClass(unsafeWindow.clear?'Stopped':'Running').addClass(unsafeWindow.clear?'Running':'Stopped');
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.clear',unsafeWindow.clear);
+}
+
+toggleDebug  = function(){
+    unsafeWindow.debug = !unsafeWindow.debug;
+    jQuery('#auto_debug').removeClass(unsafeWindow.debug?'Stopped':'Running').addClass(unsafeWindow.debug?'Running':'Stopped');
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.debug',unsafeWindow.debug);
+}
+
 runLnK = function() {
     incrementalCounter++;
     if(incrementalCounter>incrementalCount){
@@ -65,6 +77,8 @@ unsafeWindow.initJsLnK = function(){
     '   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleDebug()">Debug</a><span id="auto_debug" class="' + (unsafeWindow.debug?'Running':'Stopped') + '"></span>' +
+    '   <a onclick="toggleClear()">Clear</a><span id="auto_clear" class="' + (unsafeWindow.clear?'Running':'Stopped') + '"></span>' +
     '   <a onclick="toggleMiniMap()">MiniMap</a>' +
     '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
 }
