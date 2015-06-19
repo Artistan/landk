@@ -61,7 +61,7 @@ runLnK = function() {
     if(unsafeWindow.clear){
         unsafeWindow.console.clear();
     }
-    unsafeWindow.timer = setTimeout(runLnK, 60000);
+    unsafeWindow.timer = setTimeout(runLnK, 120000);// wait 2 minutes.
 }
 
 function doNothing(){
@@ -156,7 +156,7 @@ checkBuildings = function(){
                         // execute them!
                         jQuery('.buildingList .close').click();
                         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings');
-                    }, 1000);
+                    }, 3000);
                 }, 1000);
             });
 
