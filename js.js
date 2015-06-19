@@ -41,20 +41,22 @@ toggleDebug  = function(){
 }
 
 unsafeWindow.runLnK = function(force) {
+    if(unsafeWindow.clear){
+        unsafeWindow.console.clear();
+    }
+
     incrementalCounter++;
     if(incrementalCounter>incrementalCount){
         incrementalCounter=1;
     }
-
     if(jQuery('#jsLnK').length==0){
         unsafeWindow.initJsLnK();
     }
     if(unsafeWindow.runLnKNow || force){
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk running USE: unsafeWindow.runLnKNow=false;');
         checkMissions(function(){
             checkBuildings(function(){
                 castleFunctions (function(){
-                    jQuery('.incrementalCounter').html(incrementalCounter);
-                    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk running USE: unsafeWindow.runLnKNow=false;');
                     finalizeRun();
                 });
             });
@@ -66,10 +68,9 @@ unsafeWindow.runLnK = function(force) {
 }
 
 function finalizeRun(){
-    if(unsafeWindow.clear){
-        unsafeWindow.console.clear();
-    }
+    jQuery('.incrementalCounter').html(incrementalCounter);
     unsafeWindow.timer = setTimeout(unsafeWindow.runLnK, 120000);// wait 2 minutes.
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('finalizeRun waiting 2 minutes');
 }
 
 function doNothing(){
@@ -258,7 +259,13 @@ castleFunctions = function(callback){
                 if(typeof callback != 'undefined')
                     callback();
             }, 10000);
+        } else {
+            if(typeof callback != 'undefined')
+                callback();
         }
+    } else {
+        if(typeof callback != 'undefined')
+            callback();
     }
 }
 var habitatTimeout=false;
