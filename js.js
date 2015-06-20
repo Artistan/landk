@@ -11,7 +11,6 @@
 // @grant       GM_getResourceText
 // @grant       GM_addStyle
 // ==/UserScript==
-
 var newCSS = GM_getResourceText ("customCSS");
 GM_addStyle(newCSS);
 
@@ -40,6 +39,18 @@ toggleDebug  = function(){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.debug',unsafeWindow.debug);
 }
 
+jQuery('body').append('<div id="jsLnK">' +
+'   <a onclick="runLnK(true)">START/RESET</a>' +
+'   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleDebug()">Debug</a><span id="auto_debug" class="' + (unsafeWindow.debug?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleClear()">Clear</a><span id="auto_clear" class="' + (unsafeWindow.clear?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleMiniMap()">MiniMap</a>' +
+'</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+
 unsafeWindow.runLnK = function(force) {
     if(unsafeWindow.clear){
         unsafeWindow.console.clear();
@@ -48,9 +59,6 @@ unsafeWindow.runLnK = function(force) {
     incrementalCounter++;
     if(incrementalCounter>incrementalCount){
         incrementalCounter=1;
-    }
-    if(jQuery('#jsLnK').length==0){
-        unsafeWindow.initJsLnK();
     }
     if(unsafeWindow.runLnKNow || force){
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk running USE: unsafeWindow.runLnKNow=false;');
@@ -69,6 +77,7 @@ unsafeWindow.runLnK = function(force) {
 
 function finalizeRun(){
     jQuery('.incrementalCounter').html(incrementalCounter);
+    clearTimeout(unsafeWindow.timer);
     unsafeWindow.timer = setTimeout(unsafeWindow.runLnK, 120000);// wait 2 minutes.
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('finalizeRun waiting 2 minutes');
 }
@@ -77,22 +86,7 @@ function doNothing(){
     return true;
 }
 
-unsafeWindow.timer = setTimeout(runLnK,15000);
-
-unsafeWindow.initJsLnK = function(){
-    jQuery('body').append('<div id="jsLnK">' +
-    '   <a onclick="runLnK(true)">RUN NOW</a>' +
-    '   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleDebug()">Debug</a><span id="auto_debug" class="' + (unsafeWindow.debug?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleClear()">Clear</a><span id="auto_clear" class="' + (unsafeWindow.clear?'Running':'Stopped') + '"></span>' +
-    '   <a onclick="toggleMiniMap()">MiniMap</a>' +
-    '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
-}
-
+//unsafeWindow.timer = setTimeout(unsafeWindow.runLnK,15000);
 unsafeWindow.toggleAuto = function(){
     unsafeWindow.runLnKNow = !unsafeWindow.runLnKNow;
     jQuery('#auto_runLnKNow').removeClass(unsafeWindow.runLnKNow?'Stopped':'Running').addClass(unsafeWindow.runLnKNow?'Running':'Stopped');
@@ -166,9 +160,12 @@ checkBuildings = function(callback){
                 setTimeout(function(){
                     // try select all
                     jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
+                    jQuery('.buildingList .tab.tab-castle-fortess.clicable[data-action="fortress"]').click();
                     // now check fortress
-                    if(jQuery('.buildingList .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
-                        jQuery('.buildingList .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function(){
+                    if(jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').length){
+                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
+                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
+                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click().each(function(){
                             setTimeout(function(){
                                 // try select all
                                 jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'fortress') });
@@ -176,7 +173,7 @@ checkBuildings = function(callback){
                                 jQuery('.buildingList .close').click();
                                 if(typeof callback != 'undefined')
                                     callback();
-                            }, 3000);
+                            }, 4000);
                         });
                     } else {
                         if(typeof callback != 'undefined')
@@ -286,7 +283,8 @@ habitatFunctions = function(){
 
     if(unsafeWindow.research && incrementalCount==incrementalCounter){
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('research');
-        jQuery('.building-area.library',this).click();
+        jQuery('.building-area.library',this).click();// for castles...
+        jQuery('.building-area.university',this).click();// for fortresses...
         jQuery('.knowledgeListItem .button:not(.disabled)',this).click();
     }
     closeDialogs();
