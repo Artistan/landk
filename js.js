@@ -125,14 +125,14 @@ checkMissions = function(callback){
                                 unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions fortress');
                                 if(typeof callback != 'undefined')
                                     callback();
-                            }, 1000);
+                            }, 2000);
                         });
                     } else {
                         if(typeof callback != 'undefined')
                             callback();
                     }
                     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions castle');
-                }, 1000);
+                }, 2000);
             });
         } catch(e){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('globalMissions',e);
@@ -160,11 +160,9 @@ checkBuildings = function(callback){
                 setTimeout(function(){
                     // try select all
                     jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
-                    jQuery('.buildingList .tab.tab-castle-fortess.clicable[data-action="fortress"]').click();
+                    jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
                     // now check fortress
                     if(jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').length){
-                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
-                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
                         jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click().each(function(){
                             setTimeout(function(){
                                 // try select all
@@ -173,13 +171,13 @@ checkBuildings = function(callback){
                                 jQuery('.buildingList .close').click();
                                 if(typeof callback != 'undefined')
                                     callback();
-                            }, 4000);
+                            }, 2000);
                         });
                     } else {
                         if(typeof callback != 'undefined')
                             callback();
                     }
-                }, 1000);
+                }, 2000);
             });
 
         } catch(e){
