@@ -105,38 +105,45 @@ checkMissions = function(callback){
         try{
             // make sure it is closed before we try to open.
             jQuery('.globalMissions .close').click();
-            // open missions panel, if it exists.
-            jQuery('.topbarImageContainer:nth-of-type(7)').click().each(function(){
-                setTimeout(function(){
-                    // try select all
-                    jQuery('.globalMissions .selectAllButton').click();
-                    // execute them!
-                    jQuery('.globalMissions .execute').click();
-                    // now check fortress
-                    if(jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
-                        jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function () {
-                            setTimeout(function(){
-                                // try select all
-                                jQuery('.globalMissions .selectAllButton').click();
-                                // execute them!
-                                jQuery('.globalMissions .execute').click();
-                                // close
-                                jQuery('.globalMissions .close').click();
-                                unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions fortress');
-                                if(typeof callback != 'undefined')
-                                    callback();
-                            }, 2000);
-                        });
-                    } else {
-                        if(typeof callback != 'undefined')
-                            callback();
-                    }
-                    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions castle');
-                }, 2000);
-            });
+            if(jQuery('.topbarImageContainer:nth-of-type(7)').length>0){
+                // open missions panel, if it exists.
+                jQuery('.topbarImageContainer:nth-of-type(7)').click().each(function(){
+                    setTimeout(function(){
+                        // try select all
+                        jQuery('.globalMissions .selectAllButton').click();
+                        // execute them!
+                        jQuery('.globalMissions .execute').click();
+                        // now check fortress
+                        if(jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
+                            jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function () {
+                                setTimeout(function(){
+                                    // try select all
+                                    jQuery('.globalMissions .selectAllButton').click();
+                                    // execute them!
+                                    jQuery('.globalMissions .execute').click();
+                                    // close
+                                    jQuery('.globalMissions .close').click();
+                                    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions fortress');
+                                    if(typeof callback != 'undefined')
+                                        callback();
+                                }, 2000);
+                            });
+                        } else {
+                            jQuery('.globalMissions .close').click();
+                            if(typeof callback != 'undefined')
+                                callback();
+                        }
+                        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions castle');
+                    }, 2000);
+                });
+            } else if(typeof callback != 'undefined'){
+                callback();
+            }
         } catch(e){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('globalMissions',e);
         }
+    } else if(typeof callback != 'undefined'){
+        callback();
     }
 }
 
@@ -155,34 +162,40 @@ checkBuildings = function(callback){
         try{
             // make sure it is closed before we try to open.
             jQuery('.buildingList .close').click();
-            // open buildings panel
-            var buildingsPanel = jQuery('.topbarImageContainer:nth-of-type(2)').click().each(function(){
-                setTimeout(function(){
-                    // try select all
-                    jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
-                    jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
-                    // now check fortress
-                    if(jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').length){
-                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click().each(function(){
-                            setTimeout(function(){
-                                // try select all
-                                jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'fortress') });
-                                // execute them!
-                                jQuery('.buildingList .close').click();
-                                if(typeof callback != 'undefined')
-                                    callback();
-                            }, 2000);
-                        });
-                    } else {
-                        if(typeof callback != 'undefined')
-                            callback();
-                    }
-                }, 2000);
-            });
-
+            if(jQuery('.topbarImageContainer:nth-of-type(2)').length>0){
+                // open buildings panel
+                var buildingsPanel = jQuery('.topbarImageContainer:nth-of-type(2)').click().each(function(){
+                    setTimeout(function(){
+                        // try select all
+                        jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
+                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
+                        // now check fortress
+                        if(jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').length){
+                            jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click().each(function(){
+                                setTimeout(function(){
+                                    // try select all
+                                    jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'fortress') });
+                                    // execute them!
+                                    jQuery('.buildingList .close').click();
+                                    if(typeof callback != 'undefined')
+                                        callback();
+                                }, 2000);
+                            });
+                        } else {
+                            jQuery('.buildingList .close').click();
+                            if(typeof callback != 'undefined')
+                                callback();
+                        }
+                    }, 2000);
+                });
+            } else if(typeof callback != 'undefined'){
+                callback();
+            }
         } catch(e){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('globalMissions',e);
         }
+    } else if(typeof callback != 'undefined'){
+        callback();
     }
 }
 
@@ -254,13 +267,11 @@ castleFunctions = function(callback){
                 if(typeof callback != 'undefined')
                     callback();
             }, 10000);
-        } else {
-            if(typeof callback != 'undefined')
-                callback();
-        }
-    } else {
-        if(typeof callback != 'undefined')
+        } else if(typeof callback != 'undefined') {
             callback();
+        }
+    } else if(typeof callback != 'undefined') {
+        callback();
     }
 }
 var habitatTimeout=false;
