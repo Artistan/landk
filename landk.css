@@ -1060,22 +1060,22 @@ textarea, input {
 
 textarea::-moz-placeholder, input::-moz-placeholder {
     font-style: italic;
-    color: #bbb
+    color: #6f6f6d
 }
 
 textarea:-ms-input-placeholder, input:-ms-input-placeholder {
     font-style: italic;
-    color: #bbb
+    color: #6f6f6d
 }
 
 textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
     font-style: italic;
-    color: #bbb
+    color: #6f6f6d
 }
 
 textarea:disabled, input:disabled {
     font-style: italic;
-    background-color: #bbb
+    background-color: #6f6f6d
 }
 
 textarea {
@@ -1123,7 +1123,7 @@ p.error {
 }
 
 .maxInput input {
-    width: 35px;
+    width: 56px;
     float: left;
     height: 13px;
     margin: 5px -15px 0px 0
