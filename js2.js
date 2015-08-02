@@ -262,7 +262,7 @@ castleFunctions = function(callback){
         if(unsafeWindow.research || unsafeWindow.missions ){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('running castleFunctions');
 
-            jQuery(".troopMovements table.tree-table tr span.icon").click();// open all.
+            jQuery(".troopMovements table.tree-table tr.level-1 span.icon").click();// open all.
 
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castles');
 
