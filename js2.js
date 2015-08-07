@@ -105,17 +105,32 @@ unsafeWindow.findLoners = function(){
     if(!profileVisible()){
         jQuery('.bottombarImageContainer.Player').click();
     }
-    timeoutLoop(100,profileVisible,function(){
+    timeoutLoop(200,profileVisible,function(){
         if(!positionsVisible()){
             jQuery('.profile .clickable.listButton.profileListButton').click();
         }
-        timeoutLoop(100,positionsVisible,function(){
+        timeoutLoop(200,positionsVisible,function(){
             // need to keep clicking on this one....
-            timeoutLoop(100,rankingScrollUp,function(){
+            timeoutLoop(200,rankingScrollUp,function(){
                 // now we can look at the rankings and scroll down.
+                timeoutLoop(1000,rankingScrollDown,function(){
+                    // each truthy check goes through the current page list
+                });
             });
         });
     });
+}
+
+// rankingView
+
+rankingScrollDown = function(){
+    // look at all the lines
+    jQuery('#rankingList .rowInfo.clickable ').click();
+    timeoutLoop(1000,rankingView,function(){
+        // each truthy check goes through the current page list
+    });
+    // click down and start over if there is more.
+
 }
 
 rankingScrollUp = function(){
