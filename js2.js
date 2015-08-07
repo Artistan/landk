@@ -101,6 +101,61 @@ unsafeWindow.toggleMissions = function(){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.missions',unsafeWindow.missions);
 }
 
+unsafeWindow.findLoners = function(){
+    if(!profileVisible()){
+        jQuery('.bottombarImageContainer.Player').click();
+    }
+    timeoutLoop(100,profileVisible,function(){
+        if(!positionsVisible()){
+            jQuery('.profile .clickable.listButton.profileListButton').click();
+        }
+        timeoutLoop(100,positionsVisible,function(){
+            // need to keep clicking on this one....
+            timeoutLoop(100,rankingScrollUp,function(){
+                // now we can look at the rankings and scroll down.
+            });
+        });
+    });
+}
+
+rankingScrollUp = function(){
+    if(!rankingTop()){
+        jQuery('#rankingList .button.up.paginate').click();
+        return true;
+    }
+    return false;
+}
+
+rankingTop = function(){
+    return jQuery('#rankingList .button.up.paginate').length==0;
+}
+
+profileVisible = function(){
+    return jQuery('.profile').length > 0;
+}
+
+positionsVisible = function(){
+    return jQuery('.profile .clickable.listButton.profileListButton').length>0;
+}
+
+// when truthyFunction then call callback
+// failInt causes max time out.
+timeoutLoop = function(waitTimeInt,truthyFunction,callback,failInt) {
+    if(typeof failInt == 'undefined'){
+        failInt = 100;
+    } else if (failInt == 0) {
+        return false;
+    } else {
+        failInt--;
+    }
+    if(truthyFunction()){
+        callback();
+    } else {
+        setTimeout(function () {
+            timeoutLoop(truthyFunction,callback,waitTimeInt,failInt);
+        }, waitTimeInt);
+    }
+}
 
 checkMissions = function(callback){
     if(unsafeWindow.missions){
@@ -246,23 +301,34 @@ checkCastles  = function() {
 }
 var manualMissions=false;
 var leaveTroopsOpen=false;
+var useTroopsView=true;
 castleFunctions = function(callback){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castleFunctions');
     // check missions panel, if it exists.
     manualMissions = jQuery('.topbarImageContainer:nth-of-type(7)').length==0;
-    // only run these every incrementalCount, or if manualMisssions
-    if(jQuery('.troopMovements .close').length>1){
-        leaveTroopsOpen=true;
+    if(jQuery(".castleList").length>0){
+        // use the castleList
+        useTroopsView = false;
     } else {
-        leaveTroopsOpen=false;
-        jQuery('.topbarImageContainer:nth-of-type(3)').click();
-        // then jQuery('.troopMovements .close').click();
+        useTroopsView = true;
+        // only run these every incrementalCount, or if manualMisssions
+        if(jQuery('.troopMovements .close').length>1){
+            leaveTroopsOpen=true;
+        } else {
+            leaveTroopsOpen=false;
+            jQuery('.topbarImageContainer:nth-of-type(3)').click();
+            // then jQuery('.troopMovements .close').click();
+        }
     }
     if(incrementalCount==incrementalCounter || manualMissions){
         if(unsafeWindow.research || unsafeWindow.missions ){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('running castleFunctions');
 
-            jQuery(".troopMovements table.tree-table tr.level-1 span.icon").click();// open all.
+            if(useTroopsView){
+                jQuery(".troopMovements table.tree-table tr.level-1 span.icon").click();// open all.
+            } else {
+                jQuery(".castleList .castleListItem .points").click();
+            }
 
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castles');
 
