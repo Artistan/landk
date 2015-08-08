@@ -121,16 +121,50 @@ unsafeWindow.findLoners = function(){
     });
 }
 
-// rankingView
-
-rankingScrollDown = function(){
-    // look at all the lines
-    jQuery('#rankingList .rowInfo.clickable ').click();
-    timeoutLoop(1000,rankingView,function(){
+rankingView = function(){
+    if(!rankingsVisible()){
+        jQuery('#rankingList .clickable.alliance').click();
+    }
+    timeoutLoop(1000,rankingScrollDown,function(){
         // each truthy check goes through the current page list
     });
-    // click down and start over if there is more.
+}
 
+rankingsVisible = function(){
+    return jQuery('#rankingList .clickable.alliance').length > 0;
+}
+
+rankingProcess = function(){
+    jQuery('.foreignPlayer').each(function(){
+        if(jQuery('.alliance',this).length>0){
+            // has alliance
+        } else {
+            console.log(jQuery('.foreignPlayer .title').html());
+        }
+        jQuery('.foreignPlayer .close').click();
+    });
+}
+
+rankingScrollDown = function(){
+    // if not processing, start.
+    if(!processingRanking()){
+        // mark as processing
+        jQuery('#rankingList').addClass('processing');
+        // look at all the lines
+        jQuery('#rankingList .rowInfo.clickable ').click();
+        timeoutLoop(1000,rankingProcess,function(){
+            return jQuery('#rankingList').removeClass('processing');
+        });
+    } else if (!processingRanking() && jQuery('#rankingList .button.down.paginate').length>0){
+        jQuery('#rankingList .button.down.paginate').click();
+    } else {
+        return true;
+    }
+    return false;
+}
+
+processingRanking = function(){
+    return jQuery('#rankingList').hasClass('processing');
 }
 
 rankingScrollUp = function(){
