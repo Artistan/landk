@@ -124,13 +124,19 @@ unsafeWindow.findLoners = function(){
 // rankingView
 
 rankingScrollDown = function(){
-    // look at all the lines
-    jQuery('#rankingList .rowInfo.clickable ').click();
-    timeoutLoop(1000,rankingView,function(){
-        // each truthy check goes through the current page list
-    });
-    // click down and start over if there is more.
+    if(!jQuery('#rankingList').hasClass('processing')){
+        jQuery('#rankingList').addClass('processing');
+        // look at all the lines
+        jQuery('#rankingList .rowInfo.clickable ').click();
+        timeoutLoop(1000,rankingView,function(){
+            // each truthy check goes through the current page list
 
+            // when done, remove the processing class
+        });
+        // click down and start over if there is more.
+        jQuery('#rankingList .button.down.paginate').click();
+    } else {
+    }
 }
 
 rankingScrollUp = function(){
