@@ -460,7 +460,7 @@ habitatSilverFunctions = function(){
         if(total > 14000){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('total',total);
             jQuery('.keep',this).click();
-            if(silver<18000){
+            if(silver<19800){
                 jQuery('.tradableItems.Keep .marketListItem:last .button',this).click(); //trade for silver
             } else if(copper<28000) {
                 jQuery('.tradableItems.Keep .marketListItem:first .button',this).click(); //trade for copper
