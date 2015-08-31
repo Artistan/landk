@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         landk
-// @namespace    https://raw.githubusercontent.com/Artistan/landk/master/js.js
+// @namespace    https://raw.githubusercontent.com/Artistan/landk/master/js2.js
 // @version      0.1
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS http://localhost/landk2.css?4l1=111
+// @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2.css?4l1=111
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
@@ -26,6 +26,21 @@ unsafeWindow.clear=true;
 unsafeWindow.debug=true;
 var incrementalCount=10;
 var incrementalCounter=9;
+var tAr=[]; // test array
+
+// if not set / false, then
+trueFalseFunc = function(key){
+    if(tAr[key] == true){
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('trueFalseFunc',true);
+        tAr[key] = false;
+    } else {
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('trueFalseFunc',false);
+        tAr[key] = true;
+    }
+    // return the opposite
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('trueFalseFunc',key,tAr[key]);
+    return !tAr[key];
+}
 
 toggleClear  = function(){
     unsafeWindow.clear = !unsafeWindow.clear;
@@ -80,8 +95,9 @@ unsafeWindow.runLnK = function(force) {
 function finalizeRun(){
     jQuery('.incrementalCounter').html(incrementalCounter);
     clearTimeout(unsafeWindow.timer);
-    unsafeWindow.timer = setTimeout(unsafeWindow.runLnK, 120000);// wait 2 minutes.
-    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('finalizeRun waiting 2 minutes');
+    var randomWaitTime = randomIntFromInterval(240000,600000);// 4-10 minutes
+    unsafeWindow.timer = setTimeout(unsafeWindow.runLnK, randomWaitTime);// wait 10 minutes.
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('finalizeRun waiting '+(randomWaitTime/60000)+' minutes');
 }
 
 function doNothing(){
@@ -105,15 +121,15 @@ unsafeWindow.findLoners = function(){
     if(!profileVisible()){
         jQuery('.bottombarImageContainer.Player').click();
     }
-    timeoutLoop(200,profileVisible,function(){
+    timeoutLoop(200,300,profileVisible,function(){
         if(!positionsVisible()){
             jQuery('.profile .clickable.listButton.profileListButton').click();
         }
-        timeoutLoop(200,positionsVisible,function(){
+        timeoutLoop(200,300,positionsVisible,function(){
             // need to keep clicking on this one....
-            timeoutLoop(200,rankingScrollUp,function(){
+            timeoutLoop(200,300,rankingScrollUp,function(){
                 // now we can look at the rankings and scroll down.
-                timeoutLoop(1000,rankingScrollDown,function(){
+                timeoutLoop(1000,2000,rankingScrollDown,function(){
                     // each truthy check goes through the current page list
                 });
             });
@@ -125,7 +141,7 @@ rankingView = function(){
     if(!rankingsVisible()){
         jQuery('#rankingList .clickable.alliance').click();
     }
-    timeoutLoop(1000,rankingScrollDown,function(){
+    timeoutLoop(1000,3000,rankingScrollDown,function(){
         // each truthy check goes through the current page list
     });
 }
@@ -152,7 +168,7 @@ rankingScrollDown = function(){
         jQuery('#rankingList').addClass('processing');
         // look at all the lines
         jQuery('#rankingList .rowInfo.clickable ').click();
-        timeoutLoop(1000,rankingProcess,function(){
+        timeoutLoop(1000,2000,rankingProcess,function(){
             return jQuery('#rankingList').removeClass('processing');
         });
     } else if (!processingRanking() && jQuery('#rankingList .button.down.paginate').length>0){
@@ -189,7 +205,8 @@ positionsVisible = function(){
 
 // when truthyFunction then call callback
 // failInt causes max time out.
-timeoutLoop = function(waitTimeInt,truthyFunction,callback,failInt) {
+timeoutLoop = function(waitTimeIntMin,waitTimeIntMax,truthyFunction,callback,failInt) {
+    var waitTimeInt = randomIntFromInterval(waitTimeIntMin,waitTimeIntMax);
     if(typeof failInt == 'undefined'){
         failInt = 100;
     } else if (failInt == 0) {
@@ -201,7 +218,7 @@ timeoutLoop = function(waitTimeInt,truthyFunction,callback,failInt) {
         callback();
     } else {
         setTimeout(function () {
-            timeoutLoop(truthyFunction,callback,waitTimeInt,failInt);
+            timeoutLoop(waitTimeInt,waitTimeIntMax,truthyFunction,callback,failInt);
         }, waitTimeInt);
     }
 }
@@ -214,7 +231,8 @@ checkMissions = function(callback){
             if(jQuery('.topbarImageContainer:nth-of-type(7)').length>0){
                 // open missions panel, if it exists.
                 jQuery('.topbarImageContainer:nth-of-type(7)').click().each(function(){
-                    setTimeout(function(){
+
+                    timeoutLoop(2000,3000,function(){return trueFalseFunc('missionControlCastle');},function(){
                         // try select all
                         jQuery('.globalMissions .selectAllButton').click();
                         // execute them!
@@ -222,7 +240,7 @@ checkMissions = function(callback){
                         // now check fortress
                         if(jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
                             jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function () {
-                                setTimeout(function(){
+                                timeoutLoop(1000,2000,function(){return trueFalseFunc('missionControlFortress');},function(){
                                     // try select all
                                     jQuery('.globalMissions .selectAllButton').click();
                                     // execute them!
@@ -232,7 +250,7 @@ checkMissions = function(callback){
                                     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions fortress');
                                     if(typeof callback != 'undefined')
                                         callback();
-                                }, 2000);
+                                });
                             });
                         } else {
                             jQuery('.globalMissions .close').click();
@@ -240,7 +258,8 @@ checkMissions = function(callback){
                                 callback();
                         }
                         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions castle');
-                    }, 2000);
+                    });
+
                 });
             } else if(typeof callback != 'undefined'){
                 callback();
@@ -271,28 +290,29 @@ checkBuildings = function(callback){
             if(jQuery('.topbarImageContainer:nth-of-type(2)').length>0){
                 // open buildings panel
                 var buildingsPanel = jQuery('.topbarImageContainer:nth-of-type(2)').click().each(function(){
-                    setTimeout(function(){
+
+                    timeoutLoop(2000,3000,function(){ return trueFalseFunc('castleBuildings'); },function(){
                         // try select all
                         jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
                         jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
                         // now check fortress
                         if(jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').length){
                             jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click().each(function(){
-                                setTimeout(function(){
+                                timeoutLoop(2000,3000,function(){return trueFalseFunc('fortessBuildings');},function(){
                                     // try select all
                                     jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'fortress') });
                                     // execute them!
                                     jQuery('.buildingList .close').click();
                                     if(typeof callback != 'undefined')
                                         callback();
-                                }, 2000);
+                                });
                             });
                         } else {
                             jQuery('.buildingList .close').click();
                             if(typeof callback != 'undefined')
                                 callback();
                         }
-                    }, 2000);
+                    });
                 });
             } else if(typeof callback != 'undefined'){
                 callback();
@@ -381,11 +401,12 @@ castleFunctions = function(callback){
 
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castles');
 
-            habitatTimeout = setTimeout(function(){
+            timeoutLoop(10000,20000,function(){return trueFalseFunc('habitatFunctions');},function(){
                 jQuery('.habitat').each(habitatFunctions);
                 if(typeof callback != 'undefined')
                     callback();
-            }, 10000);
+            });
+
         } else if(typeof callback != 'undefined') {
             callback();
         }
@@ -394,7 +415,6 @@ castleFunctions = function(callback){
     }
 }
 
-var habitatTimeout=false;
 habitatFunctions = function(){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('habitat');
     //do stuff here
@@ -431,11 +451,12 @@ silverFunctions = function(callback){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('running silverFunctions');
             jQuery(".castleListItem .points:contains('289 Points')").click();
             jQuery(".castleListItem .points:contains('290 Points')").click();
-            habitatSilverTimeout = setTimeout(function(){
+            jQuery(".castleListItem .points:contains('1797 Points')").click();
+            timeoutLoop(10000,20000,function(){return trueFalseFunc('silverTrade');},function(){
                 jQuery('.habitat').each(habitatSilverFunctions);
                 if(typeof callback != 'undefined')
                     callback();
-            }, 10000);
+            });
         } else if(typeof callback != 'undefined') {
             callback();
         }
@@ -444,26 +465,38 @@ silverFunctions = function(callback){
     }
 }
 
-var habitatSilverTimeout=false;
 habitatSilverFunctions = function(){
 
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('habitatSilver');
     // if silver automation and once every incremental counter rounds, and no knowledge to learn.
     if(unsafeWindow.silver && incrementalCount==incrementalCounter){
-        var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - 1000;
-        var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - 1000;
-        var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - 1000;
+        // check limits
+        var silverLimit = 19800;
+        var copperLimit = 19800;
+        var resourceMinimum = 14000;
+        var leaveBehind = 1000; // each
+        if(jQuery('.townhall',this).length>0){
+            // set the fortress limits much higher.
+            silverLimit = 117000;
+            copperLimit = 117000;
+            resourceMinimum = 140000;
+            leaveBehind = 20000; // each
+        }
+        // check resources
+        var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - leaveBehind;
+        var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - leaveBehind;
+        var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - leaveBehind;
         // check total silver and copper
         var silver = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="6"] .resourceAmount',this).html() * 1;
         var copper = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="5"] .resourceAmount',this).html() * 1;
         var total = wood + stone + ore;
-        if(total > 14000){
+        if(total > resourceMinimum){
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('total',total);
-            jQuery('.keep',this).click();
-            if(silver<19800){
-                jQuery('.tradableItems.Keep .marketListItem:last .button',this).click(); //trade for silver
-            } else if(copper<28000) {
-                jQuery('.tradableItems.Keep .marketListItem:first .button',this).click(); //trade for copper
+            jQuery('.keep,.townhall',this).click();
+            if(silver<silverLimit){
+                jQuery('.tradableItems .marketListItem:last .button',this).click(); //trade for silver
+            } else if(copper<copperLimit) {
+                jQuery('.tradableItems .marketListItem:first .button',this).click(); //trade for copper
             } else {
                 jQuery('.close',this).click();
                 return true;// true so jQuery loop keeps going, kinda like a "break"
@@ -475,9 +508,11 @@ habitatSilverFunctions = function(){
                 jQuery('.close',this).click();
                 return true;// true so jQuery loop keeps going, kinda like a "break"
             } else if($oxCart.attr('placeholder') * 1 < carts){
-                carts = $oxCart.attr('placeholder') * 1;
-                total = carts+2500;
+                // less carts than resources to trade, so reduce the resources until fit in carts.
+                carts = $oxCart.attr('placeholder') * 1;// set carts to max avail instead of total / 2500
+                total = carts+2500; // then set new total to that * 2500
                 while(wood + stone + ore > total){
+                    // reduce resources until they fit into the available carts.
                     wood -= 5;
                     stone -= 5;
                     ore -= 5;
@@ -528,5 +563,11 @@ function closeDialogs(){
     jQuery('.button:contains("Cancel")').click();
     jQuery('.button:contains("Ok")').click();
 }
+
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
 
 
