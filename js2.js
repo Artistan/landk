@@ -58,7 +58,7 @@ jQuery('body').append('<div id="jsLnK">' +
 '   <a onclick="runLnK(true)">START/RESET</a>' +
 '   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
 '   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
+'   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.research?'Running':'Stopped') + '"></span>' +
 '   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
 '   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
 '   <a onclick="toggleDebug()">Debug</a><span id="auto_debug" class="' + (unsafeWindow.debug?'Running':'Stopped') + '"></span>' +
