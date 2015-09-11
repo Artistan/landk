@@ -6,13 +6,19 @@
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
 // @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2.css?4l1=111
+// @resource    customCSS2 http://local.dev/landk/landk2.css?4l1=111
+// @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
 // @grant       GM_addStyle
 // ==/UserScript==
-var newCSS = GM_getResourceText ("customCSS");
-GM_addStyle(newCSS);
+
+
+/*var newCSS = GM_getResourceText ("customCSS");
+GM_addStyle(newCSS);*/
+var newCSS2 = GM_getResourceText ("customCSS2");
+GM_addStyle(newCSS2);
 
 if(typeof unsafeWindow == 'undefined'){
     var unsafeWindow = window;
@@ -24,12 +30,18 @@ unsafeWindow.silver=true;
 unsafeWindow.research=true;
 unsafeWindow.clear=true;
 unsafeWindow.debug=true;
+jQuery = unsafeWindow.jQuery;
+console = unsafeWindow.console;
 var incrementalCount=10;
 var incrementalCounter=9;
 var tAr=[]; // test array
 
+// wait for elements...ΩΩ
+//waitForKeyElements ("#atfResults", addCustomSearchResult);
+
+
 // if not set / false, then
-trueFalseFunc = function(key){
+var trueFalseFunc = function(key){
     if(tAr[key] == true){
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('trueFalseFunc',true);
         tAr[key] = false;
@@ -40,31 +52,19 @@ trueFalseFunc = function(key){
     // return the opposite
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('trueFalseFunc',key,tAr[key]);
     return !tAr[key];
-}
+};
 
-toggleClear  = function(){
+var toggleClear  = function(){
     unsafeWindow.clear = !unsafeWindow.clear;
     jQuery('#auto_clear').removeClass(unsafeWindow.clear?'Stopped':'Running').addClass(unsafeWindow.clear?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.clear',unsafeWindow.clear);
-}
+};
 
-toggleDebug  = function(){
+var toggleDebug  = function(){
     unsafeWindow.debug = !unsafeWindow.debug;
     jQuery('#auto_debug').removeClass(unsafeWindow.debug?'Stopped':'Running').addClass(unsafeWindow.debug?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.debug',unsafeWindow.debug);
-}
-
-jQuery('body').append('<div id="jsLnK">' +
-'   <a onclick="runLnK(true)">START/RESET</a>' +
-'   <a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="incrementalCounter ' + (unsafeWindow.silver?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleResearch ()">Research</a><span id="auto_research" class="incrementalCounter ' + (unsafeWindow.research?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleDebug()">Debug</a><span id="auto_debug" class="' + (unsafeWindow.debug?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleClear()">Clear</a><span id="auto_clear" class="' + (unsafeWindow.clear?'Running':'Stopped') + '"></span>' +
-'   <a onclick="toggleMiniMap()">MiniMap</a>' +
-'</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+};
 
 unsafeWindow.runLnK = function(force) {
     if(unsafeWindow.clear){
@@ -90,7 +90,7 @@ unsafeWindow.runLnK = function(force) {
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('lnk paused USE: unsafeWindow.runLnKNow=true;');
         finalizeRun();
     }
-}
+};
 
 function finalizeRun(){
     jQuery('.incrementalCounter').html(incrementalCounter);
@@ -109,13 +109,13 @@ unsafeWindow.toggleAuto = function(){
     unsafeWindow.runLnKNow = !unsafeWindow.runLnKNow;
     jQuery('#auto_runLnKNow').removeClass(unsafeWindow.runLnKNow?'Stopped':'Running').addClass(unsafeWindow.runLnKNow?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.runLnKNow',unsafeWindow.runLnKNow);
-}
+};
 
 unsafeWindow.toggleMissions = function(){
     unsafeWindow.missions = !unsafeWindow.missions;
     jQuery('#auto_missions').removeClass(unsafeWindow.missions?'Stopped':'Running').addClass(unsafeWindow.missions?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.missions',unsafeWindow.missions);
-}
+};
 
 unsafeWindow.findLoners = function(){
     if(!profileVisible()){
@@ -135,77 +135,78 @@ unsafeWindow.findLoners = function(){
             });
         });
     });
-}
+};
 
-rankingView = function(){
+var rankingView = function(){
     if(!rankingsVisible()){
-        jQuery('#rankingList .clickable.alliance').click();
+        jQuery('#rankingList').find('.clickable.alliance').click();
     }
     timeoutLoop(1000,3000,rankingScrollDown,function(){
         // each truthy check goes through the current page list
     });
-}
+};
 
-rankingsVisible = function(){
-    return jQuery('#rankingList .clickable.alliance').length > 0;
-}
+var rankingsVisible = function(){
+    return jQuery('#rankingList').find('.clickable.alliance').length > 0;
+};
 
-rankingProcess = function(){
+var rankingProcess = function(){
     jQuery('.foreignPlayer').each(function(){
         if(jQuery('.alliance',this).length>0){
             // has alliance
         } else {
-            console.log(jQuery('.foreignPlayer .title').html());
+            console.log(jQuery('.title',this).html());
         }
-        jQuery('.foreignPlayer .close').click();
+        jQuery('.close',this).click();
     });
-}
+};
 
-rankingScrollDown = function(){
+var rankingScrollDown = function(){
     // if not processing, start.
+    var $rankList = jQuery('#rankingList');
     if(!processingRanking()){
         // mark as processing
-        jQuery('#rankingList').addClass('processing');
+        $rankList.addClass('processing');
         // look at all the lines
-        jQuery('#rankingList .rowInfo.clickable ').click();
+        $rankList.find('.rowInfo.clickable ').click();
         timeoutLoop(1000,2000,rankingProcess,function(){
-            return jQuery('#rankingList').removeClass('processing');
+            return $rankList.removeClass('processing');
         });
-    } else if (!processingRanking() && jQuery('#rankingList .button.down.paginate').length>0){
-        jQuery('#rankingList .button.down.paginate').click();
+    } else if (!processingRanking() && $rankList.find('.button.down.paginate').length>0){
+        $rankList.find('.button.down.paginate').click();
     } else {
         return true;
     }
     return false;
-}
+};
 
-processingRanking = function(){
+var processingRanking = function(){
     return jQuery('#rankingList').hasClass('processing');
-}
+};
 
-rankingScrollUp = function(){
+var rankingScrollUp = function(){
     if(!rankingTop()){
-        jQuery('#rankingList .button.up.paginate').click();
+        jQuery('#rankingList').find('.button.up.paginate').click();
         return true;
     }
     return false;
-}
+};
 
-rankingTop = function(){
-    return jQuery('#rankingList .button.up.paginate').length==0;
-}
+var rankingTop = function(){
+    return jQuery('#rankingList').find('.button.up.paginate').length==0;
+};
 
-profileVisible = function(){
+var profileVisible = function(){
     return jQuery('.profile').length > 0;
-}
+};
 
-positionsVisible = function(){
+var positionsVisible = function(){
     return jQuery('.profile .clickable.listButton.profileListButton').length>0;
-}
+};
 
 // when truthyFunction then call callback
 // failInt causes max time out.
-timeoutLoop = function(waitTimeIntMin,waitTimeIntMax,truthyFunction,callback,failInt) {
+var timeoutLoop = function(waitTimeIntMin,waitTimeIntMax,truthyFunction,callback,failInt) {
     var waitTimeInt = randomIntFromInterval(waitTimeIntMin,waitTimeIntMax);
     if(typeof failInt == 'undefined'){
         failInt = 100;
@@ -221,39 +222,42 @@ timeoutLoop = function(waitTimeIntMin,waitTimeIntMax,truthyFunction,callback,fai
             timeoutLoop(waitTimeInt,waitTimeIntMax,truthyFunction,callback,failInt);
         }, waitTimeInt);
     }
-}
+};
 
-checkMissions = function(callback){
+var checkMissions = function(callback){
     if(unsafeWindow.missions){
         try{
             // make sure it is closed before we try to open.
             jQuery('.globalMissions .close').click();
-            if(jQuery('.topbarImageContainer:nth-of-type(7)').length>0){
+            var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
+            if($missionsElem.length>0){
                 // open missions panel, if it exists.
-                jQuery('.topbarImageContainer:nth-of-type(7)').click().each(function(){
+                $missionsElem.click().each(function(){
 
                     timeoutLoop(2000,3000,function(){return trueFalseFunc('missionControlCastle');},function(){
+                        var $gMissions = jQuery('.globalMissions');
                         // try select all
-                        jQuery('.globalMissions .selectAllButton').click();
+                        $gMissions.find('.selectAllButton').click();
                         // execute them!
-                        jQuery('.globalMissions .execute').click();
+                        $gMissions.find('.execute').click();
                         // now check fortress
-                        if(jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').length){
-                            jQuery('.globalMissions  .tab.tab-castle-fortess.clicable[data-action="fortress"]').click().each(function () {
+                        var $fortMissions = $gMissions.find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
+                        if($fortMissions.length){
+                            $fortMissions.click().each(function () {
                                 timeoutLoop(1000,2000,function(){return trueFalseFunc('missionControlFortress');},function(){
                                     // try select all
-                                    jQuery('.globalMissions .selectAllButton').click();
+                                    $gMissions.find('.selectAllButton').click();
                                     // execute them!
-                                    jQuery('.globalMissions .execute').click();
+                                    $gMissions.find('.execute').click();
                                     // close
-                                    jQuery('.globalMissions .close').click();
+                                    $gMissions.find('.close').click();
                                     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('missions fortress');
                                     if(typeof callback != 'undefined')
                                         callback();
                                 });
                             });
                         } else {
-                            jQuery('.globalMissions .close').click();
+                            $gMissions.find('.close').click();
                             if(typeof callback != 'undefined')
                                 callback();
                         }
@@ -270,45 +274,49 @@ checkMissions = function(callback){
     } else if(typeof callback != 'undefined'){
         callback();
     }
-}
+};
 
 unsafeWindow.toggleMiniMap = function(){
     jQuery('.miniMapContainer').toggle();
-}
+};
 
 unsafeWindow.toggleBuildings = function(){
     unsafeWindow.buildings = !unsafeWindow.buildings;
     jQuery('#auto_buildings').removeClass(unsafeWindow.buildings?'Stopped':'Running').addClass(unsafeWindow.buildings?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.buildings',unsafeWindow.buildings);
-}
+};
 
-checkBuildings = function(callback){
+var checkBuildings = function(callback){
     if(unsafeWindow.buildings){
         try{
+            var $bList = jQuery('.buildingList');
             // make sure it is closed before we try to open.
-            jQuery('.buildingList .close').click();
-            if(jQuery('.topbarImageContainer:nth-of-type(2)').length>0){
+            $bList.find('.close').click();
+            var $buildButton = jQuery('.topbarImageContainer:nth-of-type(2)');
+            if($buildButton.length>0){
                 // open buildings panel
-                var buildingsPanel = jQuery('.topbarImageContainer:nth-of-type(2)').click().each(function(){
+                $buildButton.click().each(function(){
 
                     timeoutLoop(2000,3000,function(){ return trueFalseFunc('castleBuildings'); },function(){
+                        var $bList = jQuery('.buildingList');
                         // try select all
-                        jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'castle') });
-                        jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click();
+                        $bList.find('.listContentRow').each(function(){ castleBuildings(this,'castle') });
+                        var $fortressList = $bList.find('.tab.tab-castle-fortess[data-action="fortress"]').click();
                         // now check fortress
-                        if(jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').length){
-                            jQuery('.buildingList .tab.tab-castle-fortess[data-action="fortress"]').click().each(function(){
+                        if($fortressList.length){
+                            $fortressList.click().each(function(){
                                 timeoutLoop(2000,3000,function(){return trueFalseFunc('fortessBuildings');},function(){
                                     // try select all
-                                    jQuery('.buildingList .listContentRow').each(function(){ castleBuildings(this,'fortress') });
+                                    $bList.find('.listContentRow').each(function(){ castleBuildings(this,'fortress'); });
                                     // execute them!
-                                    jQuery('.buildingList .close').click();
-                                    if(typeof callback != 'undefined')
+                                    $bList.find('.close').click();
+                                    if(typeof callback != 'undefined'){
                                         callback();
+                                    }
                                 });
-                            });
+                            }) ;
                         } else {
-                            jQuery('.buildingList .close').click();
+                            $bList.find('.close').click();
                             if(typeof callback != 'undefined')
                                 callback();
                         }
@@ -323,39 +331,37 @@ checkBuildings = function(callback){
     } else if(typeof callback != 'undefined'){
         callback();
     }
-}
+};
 
-castleBuildings = function (ele,txt){
+var castleBuildings = function (ele,txt){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castleBuildings',txt);
     var $c = jQuery(ele);
     if( $c.find('.upgrade').length < 2 && $c.find('.buildbutton:not(.disabled)').length > 0 ){
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings upgrade ', $c, $c.find('.upgrade').length);
 
         var buttons = $c.find('.buildbutton:not(.disabled)');
-        //unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('cityBuildings',$c,$c.find('.upgrade').length,buttons.length);
-        Matches = false;
         // try to click upgrade until at least 2 upgrades are being performed
-        for (len = buttons.length-1; len >= 0 && $c.find('.upgrade').length < 3; len--) {
+        for (var len = buttons.length-1; len >= 0 && $c.find('.upgrade').length < 3; len--) {
             jQuery(buttons[len]).click().each(function(){
                 unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings upgrading ', this);
             });
         }
     }
-}
+};
 
-toggleSilver  = function(){
+var toggleSilver  = function(){
     unsafeWindow.silver = !unsafeWindow.silver;
     jQuery('#auto_silver').removeClass(unsafeWindow.silver?'Stopped':'Running').addClass(unsafeWindow.silver?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.silver',unsafeWindow.silver);
-}
+};
 
-toggleResearch  = function(){
+var toggleResearch  = function(){
     unsafeWindow.research = !unsafeWindow.research;
     jQuery('#auto_research').removeClass(unsafeWindow.research?'Stopped':'Running').addClass(unsafeWindow.research?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.research',unsafeWindow.research);
-}
+};
 
-checkCastles  = function() {
+var checkCastles  = function() {
     try {
         // make sure it is closed before we try to open.
         if (jQuery('.castleList').length == 0) {
@@ -367,11 +373,11 @@ checkCastles  = function() {
     } catch (e) {
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('globalMissions', e);
     }
-}
+};
 var manualMissions=false;
 var leaveTroopsOpen=false;
 var useTroopsView=true;
-castleFunctions = function(callback){
+var castleFunctions = function(callback){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castleFunctions');
     // check missions panel, if it exists.
     manualMissions = jQuery('.topbarImageContainer:nth-of-type(7)').length==0;
@@ -413,16 +419,15 @@ castleFunctions = function(callback){
     } else if(typeof callback != 'undefined') {
         callback();
     }
-}
+};
 
-habitatFunctions = function(){
+var habitatFunctions = function(){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('habitat');
     //do stuff here
     if(unsafeWindow.missions && manualMissions){
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('manualMissions');
         jQuery('.building-area.tavern',this).click();
         if(jQuery('.building-area.tavern').length<2){
-            var cntBuld = 0;
             jQuery('.missionListItem .button:not(.disabled)',this).click();
         }
     }
@@ -440,10 +445,10 @@ habitatFunctions = function(){
         jQuery('.troopMovements .close').click();
     }
     return true;// true so jQuery loop keeps going, kinda like a "break"
-}
+};
 
 
-silverFunctions = function(callback){
+var silverFunctions = function(callback){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('silverFunctions');
     // only run these every incrementalCount, or if manualMisssions
     if(incrementalCount==incrementalCounter){
@@ -463,9 +468,9 @@ silverFunctions = function(callback){
     } else if(typeof callback != 'undefined') {
         callback();
     }
-}
+};
 
-habitatSilverFunctions = function(){
+var habitatSilverFunctions = function(){
 
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('habitatSilver');
     // if silver automation and once every incremental counter rounds, and no knowledge to learn.
@@ -541,23 +546,60 @@ habitatSilverFunctions = function(){
     closeDialogs();
     jQuery('.close',this).click();
     return true;// true so jQuery loop keeps going, kinda like a "break"
-}
+};
 
-// document ready function
-jQuery(function(){
+// add events to the addClass function
 
-    // extending addclass method
-    var originalAddClassMethod = jQuery.fn.addClass;
-    jQuery.fn.addClass = function(){
-        // Execute the original method.
-        var result = originalAddClassMethod.apply( this, arguments );
-        // trigger a custom event
-        jQuery(this).trigger('cssClassChanged');
-        // return the original result
-        return result;
-    }
-    jQuery('.static.topbar.frame-container').on('css');
+var originalCssMethod = jQuery.fn.css;
+jQuery.fn.css = function(){
+    var result = originalCssMethod.apply( this, arguments );
+    jQuery(this).trigger('cssChanged').trigger('cssUpdated');
+    return result;
+};
+var originalRemoveClassMethod = jQuery.fn.removeClass;
+jQuery.fn.removeClass = function(){
+    var result = originalRemoveClassMethod.apply( this, arguments );
+    jQuery(this).trigger('classChanged').trigger('classRemoved');
+    return result;
+};
+var originalAddClassMethod = jQuery.fn.addClass;
+jQuery.fn.addClass = function(){
+    var result = originalAddClassMethod.apply( this, arguments );
+    jQuery(this).trigger('classChanged').trigger('classAdded');
+    return result;
+};
+
+jQuery('body').prepend('<div id="incrementalNumber" class="incrementalCounter"></div>')
+
+waitForKeyElements(".topbar", function(){
+    unsafeWindow.console.log('.topbar created');
+    $('.topbar[style],.topbar *[style]').removeAttr('style');
+
+
+    jQuery('.topbar').find('.controls').append('<div id="jsLnK">' +
+        '   <div><a onclick="runLnK(true)">START/RESET</a></div>' +
+        '   <div><a onclick="toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (unsafeWindow.runLnKNow?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleSilver ()">Silver</a><span id="auto_silver" class="' + (unsafeWindow.silver?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleResearch ()">Research</a><span id="auto_research" class="' + (unsafeWindow.research?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (unsafeWindow.buildings?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleMissions()">Missions</a><span id="auto_missions" class="' + (unsafeWindow.missions?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleDebug()">Debug</a><span id="auto_debug" class="' + (unsafeWindow.debug?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleClear()">Clear</a><span id="auto_clear" class="' + (unsafeWindow.clear?'Running':'Stopped') + '"></span></div>' +
+        '   <div><a onclick="toggleMiniMap()">Toggle MiniMap</a></div>' +
+        '   <div><a onclick="rankingView()">Ranking View</a></div>' +
+        '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+
 });
+waitForKeyElements(".miniMapContainer", function(){
+    unsafeWindow.console.log('.miniMapContainer created');
+    $('.miniMapContainer').hide();
+});
+
+waitForKeyElements(".bottombar", function(){
+    unsafeWindow.console.log('.bottombar created');
+    $('.bottombar[style],.bottombar *[style]').removeAttr('style');
+});
+
 
 function closeDialogs(){
     jQuery('.button:contains("Cancel")').click();

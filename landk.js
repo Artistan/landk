@@ -1,38 +1,38 @@
 (function () {
-    var z = {};
-    var Ie = {};
+    var G = {};
+    var xe = {};
     var Qi = {};
-    var xi = {};
     var Ii = {};
+    var xi = {};
     var Ti = {};
-    var De = {};
-    var Ze = {};
-    var Ue = {};
+    var ke = {};
+    var Je = {};
+    var Pe = {};
     var e = {};
     var Oi = {};
     var F = {};
     var q = {};
-    var qi = {};
+    var $i = {};
     var Ai = {};
-    var I = {};
+    var x = {};
     var fe = {};
     var bi = {};
     var We = {};
-    var H = {};
-    var gi = {};
+    var B = {};
+    var yi = {};
     var fi = {};
     var wi = {};
     var ii = {};
-    var ji = {};
-    var Z = {};
+    var Xi = {};
+    var J = {};
     var ea = {};
     var Mi = {};
     var ti = {};
     var Ri = {};
-    var Ye = {};
+    var ze = {};
     var Ni = {};
     var u = {};
-    var Ui = {};
+    var Pi = {};
     var Li = {};
     var E = {};
     var se = {};
@@ -46,93 +46,93 @@
     var A = {};
     var m = {};
     var Fi = {};
-    var Xi = {};
+    var ji = {};
     var Ae = {};
-    var p = {};
+    var f = {};
     var te = {};
     var we = {};
     var W = {};
     var L = {};
     var C = {};
-    var Y = {};
-    var ke = {};
+    var z = {};
+    var De = {};
     var he = {};
-    var qe = {};
+    var $e = {};
     var Qe = {};
     var X = {};
-    var Ji = {};
+    var Zi = {};
     var N = {};
-    var Pe = {};
-    var v = {};
+    var Ue = {};
+    var g = {};
     var o = {};
-    var ve = {};
+    var ge = {};
     var Ce = {};
     o.InvitationManager = {};
     o.ReportDetails = {};
     var Q = {};
     var c = {};
-    var Hi = {};
+    var Bi = {};
     var si = {};
     var Ve = {};
     var Me = {};
     var li = {};
     var di = {};
     var Le = {};
-    var D = {};
-    var He = {};
+    var k = {};
+    var Be = {};
     var ai = {};
-    var B = {};
+    var H = {};
     var ae = {};
     var oe = {};
     var _e = {};
-    var J = {};
+    var Z = {};
     var O = {};
     var w = {};
     var M = {};
-    var Je = {};
+    var Ze = {};
     var s = {};
     var Ne = {};
     var Wi = {};
     Wi.eventHelper = {};
-    var G = {};
+    var Y = {};
     var V = {};
-    var Be = {};
+    var He = {};
     var r = {};
-    var Di = {};
-    var Re = {};
     var ki = {};
+    var Re = {};
+    var Di = {};
     var ni = {};
     var Ci = {};
     var Fe = {};
-    var vi = {};
+    var gi = {};
     var S = {};
     var _i = {};
-    var ge = {};
+    var ye = {};
     var a;
-    var f;
-    var P;
+    var d;
+    var U;
     var le;
-    var Xe;
+    var je;
     var oi;
     var K;
-    var xe;
+    var Ie;
     var t;
     var re;
     var Ee;
     var l;
-    var Ge;
+    var Ye;
     var h;
-    var U;
-    var yi;
-    var x;
-    var g;
+    var P;
+    var vi;
+    var I;
+    var y;
     var ie;
-    var $i;
+    var qi;
     var ne;
     var ci;
     var Si = "11";
-    var zi = "LKBrowser";
-    var d = {
+    var Gi = "LKBrowser";
+    var p = {
         ALL: -1,
         INVITE_PLAYER: 1,
         DISMISS_PLAYER: 2,
@@ -144,7 +144,7 @@
         MAX: 127
     };
     var ce = {VASSAL: 3, ALLY: 2, NAP: 1, NEUTRAL: 0, ENEMY: -1, ALL: -2};
-    var y = {
+    var v = {
         ATTACK_WARNING: 1,
         MISSION_FINISHED: 2,
         KNOWLEDGE_RESEARCHED: 3,
@@ -168,10 +168,10 @@
         SPY: 6,
         TRANSIT_SPY: 7
     };
-    var k = {OWN_HABITAT: 0, EXTERNAL_UNITS_TO_DEFENSE: 1, ATTACKER: 2, WAR_EFFORTS: {ATTACK: 1, DEFENCE: 0}};
+    var D = {OWN_HABITAT: 0, EXTERNAL_UNITS_TO_DEFENSE: 1, ATTACKER: 2, WAR_EFFORTS: {ATTACK: 1, DEFENCE: 0}};
     var n = {WOOD: "1", STONE: "2", ORE: "3", PEOPLE: "4", COPPER: "5", SILVER: "6", GOLD: "7", TIME: "99"};
     var be = {1: "Wood", 2: "Stone", 3: "Ore", 4: "People", 5: "Copper", 6: "Silver", 7: "Gold"};
-    var Zi = {WOOD: 1, STONE: 2, ORE: 3, PEOPLE: 4, COPPER: 5, SILVER: 6, GOLD: 7};
+    var Ji = {WOOD: 1, STONE: 2, ORE: 3, PEOPLE: 4, COPPER: 5, SILVER: 6, GOLD: 7};
     var hi = {GREEN: "#008000", YELLOW: "#e63333", RED: "#ff8000"};
     var ee = {
         SPEARMAN: 1,
@@ -198,7 +198,7 @@
         ALLY: "#64a842"
     };
     var ta = ["arsenal", "farm", "keep", "library", "lumberjack", "market", "oremine", "quarry", "tavern", "wall"];
-    var Bi = {
+    var Hi = {
         Keep: 1,
         Arsenal: 2,
         Tavern: 3,
@@ -248,18 +248,18 @@
         VASALL: {BG: "rgba(255, 127, 00, " + me + ")", FG: "rgb(0, 0, 0)"},
         ALLIANCE: {BG: "rgba(254, 203, 0, " + me + ")", FG: "rgb(0, 0, 0)"}
     };
-    var je = 0;
-    var Pi = 0;
-    var Gi = 20;
-    var Yi = 75;
-    var $e = 25;
+    var Xe = 0;
+    var Ui = 0;
+    var Yi = 20;
+    var zi = 75;
+    var qe = 25;
     var Te = 25;
     var Se = "jsonp";
     var Oe = 4096;
     var ei = {showDialog: 1, updateSession: 2, logout: 4, clearCache: 8};
-    var ze = 100;
+    var Ge = 100;
     var de = {REQUESTED: 0, ACCEPTED: 1, REJECTED: 2};
-    var ye = {
+    var ve = {
         INTERNAL_LINK: /(l\+k|lkxmas):\/\/[A-Za-z0-9=?&,;]*/gi,
         EXTERNAL_LINK: /https*:\/\/[A-Za-z0-9=?&,;.\/\?\=\-\_\%]*/gi
     };
@@ -468,7 +468,7 @@
         }
 
         function r(e) {
-            var t = e - (new Date - U);
+            var t = e - (new Date - P);
             t = parseInt(t / 1e3, 10);
             return t
         }
@@ -763,8 +763,8 @@
         Handlebars.registerHelper("formattedText", function (e) {
             e = utils.sanitize(e);
             e = e.replace(/\n/g, "<br />");
-            e = t(e, ye.INTERNAL_LINK, "window.linkHandler");
-            e = t(e, ye.EXTERNAL_LINK, "window.externalLinkHandler");
+            e = t(e, ve.INTERNAL_LINK, "window.linkHandler");
+            e = t(e, ve.EXTERNAL_LINK, "window.externalLinkHandler");
             return e
         });
         Handlebars.registerHelper("each_hash", function (t, a) {
@@ -1237,11 +1237,11 @@
         };
         var r = {
             getImage: function (t, e) {
-                return this.notify("3s(kBgiI", this, {imageName: t, imageCategory: e})
+                return this.notify("Z-XGNYVU", this, {imageName: t, imageCategory: e})
             }, getIcon: function (t) {
                 return this.getImage(t, "icons")
             }, getImageSrc: function (t, e) {
-                return this.notify("ttHKxwy5", this, {imageName: t, imageCategory: e})
+                return this.notify("oqS1fWVg", this, {imageName: t, imageCategory: e})
             }, getIconSrc: function (t) {
                 return this.getImageSrc(t, "icons")
             }
@@ -1253,7 +1253,7 @@
         V.dataSourceLink = n;
         V.getImage = r
     })(this);
-    z = function () {
+    G = function () {
         utils.mixin(t, V.delegate);
         utils.mixin(t, V.dataSourceLink);
         utils.mixin(t, V.configurable);
@@ -1422,8 +1422,8 @@
         i._.storeLocal = utils.storeLocal;
         i._.storeSession = utils.storeSession
     })(this);
-    Ie = function (e) {
-        utils.__extends(t, z);
+    xe = function (e) {
+        utils.__extends(t, G);
         utils.mixin(t, V.singleViewController);
         utils.mixin(t, V.getImage);
         function t(e, i) {
@@ -1432,19 +1432,19 @@
             this._sessionKeys = []
         }
 
-        t.prototype["bKUGf9HF"] = function (t, e) {
-            this.notify("bKUGf9HF", t, e)
+        t.prototype["enjA1c%5"] = function (t, e) {
+            this.notify("enjA1c%5", t, e)
         };
-        t.prototype["o873Cuvp"] = function (t, e) {
-            this.notify("o873Cuvp", t, e)
+        t.prototype["YHC95tkO"] = function (t, e) {
+            this.notify("YHC95tkO", t, e)
         };
-        t.prototype["7Z0O7C(A"] = function (t) {
+        t.prototype["SA%d-uxO"] = function (t) {
             if (t && t.runningTimer === true) {
                 t.startTimer()
             }
         };
-        t.prototype["3s(kBgiI"] = function (a, e) {
-            var i = this.notify("YrKz7XU6", this);
+        t.prototype["Z-XGNYVU"] = function (a, e) {
+            var i = this.notify("AN4-Dk1u", this);
             if (!i) {
                 return null
             }
@@ -1455,15 +1455,15 @@
                 return false
             }
         };
-        t.prototype["ttHKxwy5"] = function (i, t) {
-            var e = this.notify("YrKz7XU6", this);
+        t.prototype["oqS1fWVg"] = function (i, t) {
+            var e = this.notify("AN4-Dk1u", this);
             if (!e) {
                 return null
             }
             return e.getImageSrc(t.imageName, t.imageCategory)
         };
-        t.prototype["j)909BLe"] = function () {
-            this.notify("j)909BLe", this)
+        t.prototype["-_bqDYa1"] = function () {
+            this.notify("-_bqDYa1", this)
         };
         t.prototype.isInteraction = function () {
             return this.view.interaction
@@ -1471,10 +1471,10 @@
         t.prototype.delayData = function (t, e) {
             this._delayedData = {ds: t, data: e}
         };
-        t.prototype["JM_B(VFa"] = function () {
+        t.prototype["XVibjw5Z"] = function () {
             this.view.interaction = true
         };
-        t.prototype["FWinfzS-"] = function () {
+        t.prototype["PD7ufFz9"] = function () {
             this.view.interaction = false;
             if (this._delayedData) {
                 this.dataUpdate(this._delayedData.ds, this._delayedData.data)
@@ -1490,7 +1490,7 @@
         t.prototype.refreshView = function (t, e) {
             this.view.dataUpdate(t, e)
         };
-        t.prototype["wCMEKBWp"] = function (e, t) {
+        t.prototype["KfuWwK)P"] = function (e, t) {
             this._sessionKeys.push(t)
         };
         t.prototype.clearSessionStorage = function () {
@@ -1506,8 +1506,8 @@
             }
         };
         return t
-    }(z);
-    xi = function (e) {
+    }(G);
+    Ii = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t(a, e, i) {
@@ -1555,7 +1555,7 @@
             this.nightgfx = {};
             this.overview = {};
             this.animationsData = null;
-            this.notify("hp6iDa61", this);
+            this.notify("v2Kd5j8(", this);
             if (this.map.normal) {
                 this._mapImages = {normal: {}};
                 if (this.map.normal.ground) {
@@ -1638,7 +1638,7 @@
             return this.castle.coords[t]
         };
         t.prototype.getImageIDForLevel = function (t, e) {
-            var i = this.castle.numberOfPictures[t], a = f.settings.maxLevels[t] ? f.settings.maxLevels[t] : this.castle.maxLevel[t], s = a / (i - 1);
+            var i = this.castle.numberOfPictures[t], a = d.settings.maxLevels[t] ? d.settings.maxLevels[t] : this.castle.maxLevel[t], s = a / (i - 1);
             return Math.floor(e / s)
         };
         t.prototype.getBuildingImage = function (e) {
@@ -1701,7 +1701,7 @@
             }
             return a
         };
-        t.prototype["a8rU&2qE"] = function (e, t) {
+        t.prototype["QC85Y4Ex"] = function (e, t) {
             return this.frame[t]
         };
         t.prototype.getImageSrc = function (e, t) {
@@ -1768,8 +1768,8 @@
             }
         };
         return t
-    }(z);
-    Ii = function (e) {
+    }(G);
+    xi = function (e) {
         utils.__extends(t, e);
         function t(e) {
             t.__super__.constructor.apply(this, arguments);
@@ -1780,17 +1780,17 @@
             this.subcontroller = [];
             this.datasources = [];
             this.globalTimerInterval = 1e4;
-            this.timer = new gi(this, {interval: this.globalTimerInterval});
+            this.timer = new yi(this, {interval: this.globalTimerInterval});
             this.timer.add(this);
             this.leftMouse = false;
-            this.UI_THROTTLE_MOUSEMOVE = Gi;
-            this.UI_DEBOUNCE_RESIZE = Yi;
+            this.UI_THROTTLE_MOUSEMOVE = Yi;
+            this.UI_DEBOUNCE_RESIZE = zi;
             this.dragging = false
         }
 
         t.prototype.setTheme = function (t) {
             var e = typeof t === "string" ? JSON.parse(t) : t;
-            this.themeController = new xi(null, e, this)
+            this.themeController = new Ii(null, e, this)
         };
         t.prototype.addSubController = function (t) {
             this.subcontroller.push(t)
@@ -1823,27 +1823,27 @@
         };
         t.prototype.globalMouseUpEvent = function (t) {
             this.leftMouse = false;
-            this.notifySubControllers("bS_P(RTt", this, t)
+            this.notifySubControllers("acyTgezU", this, t)
         };
         t.prototype.globalMouseMoveEvent = function (t) {
-            this.notifySubControllers("0jOar_HJ", this, t)
+            this.notifySubControllers("NEJghIoP", this, t)
         };
         t.prototype.globalMouseDownEvent = function (t) {
             this.leftMouse = true;
-            this.notifySubControllers("AvJe&lSJ", this, t)
+            this.notifySubControllers("dyWiidsC", this, t)
         };
         t.prototype.globalMouseLeaveEvent = function (t) {
             this.leftMouse = false;
-            this.notifySubControllers("B%4ymU(v", this, t)
+            this.notifySubControllers("HOW0p6&u", this, t)
         };
         t.prototype.globalMouseClickEvent = function (t) {
-            this.notifySubControllers("U7o3QmDP", this, t)
+            this.notifySubControllers("jWf&hJpy", this, t)
         };
         t.prototype.globalWindowResizeEvent = function (t) {
-            this.notifySubControllers("-nc-59bb", this, t)
+            this.notifySubControllers("6%wiVnzB", this, t)
         };
         t.prototype.globalKeypressEvent = function (t) {
-            this.notifySubControllers("iuO9OjI0", this, t)
+            this.notifySubControllers("GY5ce((7", this, t)
         };
         t.prototype.enableMouseEvents = function (e) {
             var t = $(e || "body"), i = $(window);
@@ -1896,7 +1896,7 @@
             t.off("keypress");
             t.off("mousemove touchmove")
         };
-        t.prototype["im6p6kaS"] = function () {
+        t.prototype["bnG&ldX0"] = function () {
             return this.leftMouse
         };
         t.prototype.draw = function () {
@@ -1904,13 +1904,13 @@
                 this.subcontroller[t].draw()
             }
         };
-        t.prototype["YrKz7XU6"] = function () {
+        t.prototype["AN4-Dk1u"] = function () {
             if (typeof this.themeController === "undefined") {
                 return null
             }
             return this.themeController
         };
-        t.prototype["G%bZnzLF"] = function (t, a) {
+        t.prototype["hcE%RfUx"] = function (t, a) {
             var s = a.doFlashing, n = a.zIndex, e = t.view, r = e && e.zIndex === this.zIndex || false, o = e && e.isFlashing === false || false, i;
             if (s && r && o) {
                 i = $("#" + t.view.id);
@@ -1932,7 +1932,7 @@
             this.zIndex += 1;
             return this.zIndex
         };
-        t.prototype["vT5KxfU3"] = function () {
+        t.prototype["FCm_StIp"] = function () {
             this.initialWindowCoordinates.x += 15;
             this.initialWindowCoordinates.y += 15;
             if (this.initialWindowCoordinates.y > $(document).height() / 6) {
@@ -1940,13 +1940,13 @@
             }
             return {x: this.initialWindowCoordinates.x, y: this.initialWindowCoordinates.y}
         };
-        t.prototype["NbKCY7mj"] = function (t) {
+        t.prototype["7GVwxkqP"] = function (t) {
             t.showBlockOverlay()
         };
-        t.prototype["gl%9o7sY"] = function (t) {
+        t.prototype["i8j%qM54"] = function (t) {
             t.hideBlockOverlay()
         };
-        t.prototype["EE)XdOZG"] = function (a, e) {
+        t.prototype["XSMaUxne"] = function (a, e) {
             for (var t = 0, i = this.subcontroller.length; t < i; t++) {
                 if (typeof this.subcontroller[t].view !== "undefined" && typeof this.subcontroller[t].view.center !== "undefined") {
                     this.subcontroller[t].view.center(e, true);
@@ -1957,9 +1957,9 @@
                 }
             }
         };
-        t.prototype["Rtk1Hcq)"] = function () {
+        t.prototype["jkCeUHjs"] = function () {
         };
-        t.prototype["I6Fr(MqC"] = function () {
+        t.prototype["vU1u)Cuc"] = function () {
         };
         t.prototype.addDatasource = function (t) {
             this.datasources.push(t)
@@ -1983,7 +1983,7 @@
                 }
             }
         };
-        t.prototype["P&5_qidj"] = function (t, e) {
+        t.prototype["5gU6aKug"] = function (t, e) {
             if (typeof this.updateModel !== "undefined") {
                 this.updateModel(e, t)
             }
@@ -1991,43 +1991,43 @@
         };
         t.prototype.updateModel = function () {
         };
-        t.prototype["bKUGf9HF"] = function (t) {
+        t.prototype["enjA1c%5"] = function (t) {
             this.timer.add(t)
         };
-        t.prototype["o873Cuvp"] = function (t) {
+        t.prototype["YHC95tkO"] = function (t) {
             this.timer.remove(t)
         };
-        t.prototype["3s(kBgiI"] = function (i, t) {
-            var e = this["YrKz7XU6"]();
+        t.prototype["Z-XGNYVU"] = function (i, t) {
+            var e = this["AN4-Dk1u"]();
             if (e !== null) {
                 return e.getImage(t.imageName, t.imageCategory)
             }
             return null
         };
-        t.prototype["ttHKxwy5"] = function (i, t) {
-            var e = this["YrKz7XU6"]();
+        t.prototype["oqS1fWVg"] = function (i, t) {
+            var e = this["AN4-Dk1u"]();
             if (e !== null) {
                 return e.getImageSrc(t.imageName, t.imageCategory)
             }
             return null
         };
-        t.prototype["(eqm1mvJ"] = function (i, e) {
-            var t = this["YrKz7XU6"]();
+        t.prototype["83bg5u9u"] = function (i, e) {
+            var t = this["AN4-Dk1u"]();
             if (t !== null) {
                 return t.getSound(e)
             }
             return null
         };
-        t.prototype["jhhPVgFI"] = function () {
+        t.prototype["zv7sENy7"] = function () {
             this.dragging = true
         };
-        t.prototype["X1MBP2Ca"] = function () {
+        t.prototype["y)XIHKdo"] = function () {
             this.dragging = false
         };
         return t
-    }(z);
+    }(G);
     Ti = function (e) {
-        utils.__extends(t, z);
+        utils.__extends(t, G);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.addOption("width", "");
@@ -2054,8 +2054,8 @@
             return i.wrap("<div>").parent().html()
         };
         return t
-    }(z);
-    De = function (e) {
+    }(G);
+    ke = function (e) {
         utils.__extends(t, e);
         utils.mixin(t, V.getImage);
         function t(i, e) {
@@ -2073,8 +2073,8 @@
             this.addOption("attributes", {});
             this.addOption("handleLinks", false);
             this.addOption("attachMethod", "append");
-            this.addOption("drawStartMessage", "&Zi7iGZp");
-            this.addOption("drawEndMessage", "Af1MgvTo");
+            this.addOption("drawStartMessage", "YMk6N38I");
+            this.addOption("drawEndMessage", "pm6TwodG");
             this.setOptions(e);
             this.parentID = this.parent.id || null;
             this.interaction = false
@@ -2163,8 +2163,8 @@
             var i = $(t);
             var a = $(t).html();
             if (this.handleLinks && a !== "" && !!~a.indexOf("data:image/png;base64")) {
-                i.linkify(ye.INTERNAL_LINK, "window.linkHandler");
-                i.linkify(ye.EXTERNAL_LINK, "window.externalLinkHandler")
+                i.linkify(ve.INTERNAL_LINK, "window.linkHandler");
+                i.linkify(ve.EXTERNAL_LINK, "window.externalLinkHandler")
             }
             this.attachToDOM(t);
             if (typeof this.drawSubviews !== "undefined") {
@@ -2290,7 +2290,7 @@
             }
         };
         return t
-    }(z);
+    }(G);
     S = function (e) {
         utils.__extends(t, e);
         utils.mixin(t, V.getImage);
@@ -2319,7 +2319,7 @@
         }
 
         t.prototype._startTimer = function () {
-            this.notify("bKUGf9HF", this)
+            this.notify("enjA1c%5", this)
         };
         t.prototype._attachEvents = function () {
             var s = this.getEvents();
@@ -2452,7 +2452,7 @@
         t.prototype.activateSlider = function (t, i, a, s) {
             var e;
             e = function (e) {
-                this.notify("EOZSXY)U", this, {name: t, value: e})
+                this.notify("3cy_tB41", this, {name: t, value: e})
             };
             return new Ai(t, {value: s, min: i, max: a, change: e.bind(this)})
         };
@@ -2473,8 +2473,8 @@
             $(e).hide()
         };
         return t
-    }(z);
-    Ue = function (e) {
+    }(G);
+    Pe = function (e) {
         utils.__extends(t, e);
         utils.mixin(t, V.subViews);
         function t(i, e) {
@@ -2485,13 +2485,13 @@
             this.addOption("lockZIndex", false);
             this.addOption("staticPosition", false);
             this.addOption("closable", true);
-            this.addOption("clickMessage", "hta%%fDI", true);
+            this.addOption("clickMessage", "jhYSrWJA", true);
             this.setOptions(e);
             if (this.pos === null) {
-                this.pos = this.notify("vT5KxfU3", this)
+                this.pos = this.notify("FCm_StIp", this)
             }
-            this.drawStartMessage = "9Jo&Crsd";
-            this.drawEndMessage = "DbSTNafr";
+            this.drawStartMessage = "zD%8if2Y";
+            this.drawEndMessage = "4qlajYYq";
             this.isFlashing = false;
             if (this.staticPosition === true) {
                 this.styleArray.push("static")
@@ -2527,7 +2527,7 @@
             if (this.staticPosition === true) {
                 return false
             }
-            var e = this.notify("f6Ylekkg", this);
+            var e = this.notify("buqqHDHe", this);
             if (!this.width) {
                 this.width = this.$win.width()
             }
@@ -2556,9 +2556,9 @@
                 }
             }
             if (!this.lockZIndex) {
-                this.notify("uz2YMV97", this, t)
+                this.notify("vaa)3JSY", this, t)
             }
-            this.notify("XDyVas7u", this, null)
+            this.notify("W1qWr6IS", this, null)
         };
         t.prototype.hide = function () {
             if (this.$win.length === 0) {
@@ -2574,12 +2574,12 @@
         };
         t.prototype.resetZIndex = function () {
             this.lockZIndex = false;
-            this.notify("uz2YMV97", this)
+            this.notify("vaa)3JSY", this)
         };
         t.prototype.compileHTML = function () {
             var i = t.__super__.compileHTML.apply(this, arguments), e = $(i);
             if (this.zIndex === -1) {
-                this.notify("uz2YMV97", this, false)
+                this.notify("vaa)3JSY", this, false)
             }
             if (!this.staticPosition) {
                 e.css("z-index", this.zIndex);
@@ -2606,7 +2606,7 @@
             }
             if (this.blockOverlay) {
                 if (!this.$win.find(".overlay").length) {
-                    this.$win.append($("<div class='overlay'>").append(this.notify("1V5y4e3c", this)));
+                    this.$win.append($("<div class='overlay'>").append(this.notify("5f9mIWE-", this)));
                     this.$win.find("div.overlay").click(function (t) {
                         t.stopPropagation();
                         t.preventDefault();
@@ -2619,7 +2619,7 @@
                 }
                 this.$win.find(".window-content").hide();
                 if (!this.$win.find(".content-container .overlay").length) {
-                    this.$win.find(".inner-frame").append($("<div class='overlay'>").append(this.notify("1V5y4e3c", this)))
+                    this.$win.find(".inner-frame").append($("<div class='overlay'>").append(this.notify("5f9mIWE-", this)))
                 }
             } else {
                 if (!this._moveOverlayRemoved || !this._blockOverlayRemoved) {
@@ -2637,7 +2637,7 @@
                 return
             }
             if (this.zIndex === -1) {
-                this.notify("uz2YMV97", this, false)
+                this.notify("vaa)3JSY", this, false)
             }
             if (this.$win.length === 0) {
                 return
@@ -2682,7 +2682,7 @@
             this.moveOverlay = false
         };
         t.prototype._unblockTimer = function () {
-            this.notify("j)909BLe", this);
+            this.notify("-_bqDYa1", this);
             this.hideBlockOverlay()
         };
         t.prototype.dataUpdate = function (e, t) {
@@ -2691,9 +2691,9 @@
             this.create()
         };
         return t
-    }(De);
-    Ze = function (e) {
-        utils.__extends(t, Ie);
+    }(ke);
+    Je = function (e) {
+        utils.__extends(t, xe);
         function t(e) {
             t.__super__.constructor.apply(this, arguments)
         }
@@ -2705,7 +2705,7 @@
             if (!this.view || this.view.lockZIndex === true) {
                 return
             }
-            var t = this.notify("G%bZnzLF", this, {doFlashing: e, zIndex: this.view.zIndex});
+            var t = this.notify("hcE%RfUx", this, {doFlashing: e, zIndex: this.view.zIndex});
             if (t !== this.view.zIndex) {
                 this.view.zIndex = t;
                 this.view.liveUpdate()
@@ -2714,28 +2714,28 @@
                 this.setActive()
             }
         };
-        t.prototype["uz2YMV97"] = function (e, t) {
+        t.prototype["vaa)3JSY"] = function (e, t) {
             if (t !== true) {
                 t = false
             }
             this.raise(t)
         };
-        t.prototype["hta%%fDI"] = function (t) {
+        t.prototype["jhYSrWJA"] = function (t) {
             this.raise(false)
         };
-        t.prototype["9Jo&Crsd"] = function (e, a) {
-            var i = this.notify("YrKz7XU6", this);
+        t.prototype["zD%8if2Y"] = function (e, a) {
+            var i = this.notify("AN4-Dk1u", this);
             var t = i.getFrameController();
             if (t !== null) {
                 return t.frame(e)
             }
             return
         };
-        t.prototype["DbSTNafr"] = function (t, e) {
+        t.prototype["4qlajYYq"] = function (t, e) {
             this.view.$win = $("#" + this.view.id);
             this.view.height = this.view.$win.height()
         };
-        t.prototype["0jOar_HJ"] = function (e, t) {
+        t.prototype["NEJghIoP"] = function (e, t) {
             if (!this.draggingElement) {
                 return
             }
@@ -2748,7 +2748,7 @@
             });
             this.view.liveUpdate()
         };
-        t.prototype["bS_P(RTt"] = function (t, e) {
+        t.prototype["acyTgezU"] = function (t, e) {
             if (typeof this.draggingElement == "undefined") {
                 return
             }
@@ -2756,23 +2756,23 @@
             if (t && t.name && this.name && t.name == this.name) {
                 this.raise(false)
             }
-            this.notify("dmY_k48Y", this, this.view.pos)
+            this.notify("zK8yjN6p", this, this.view.pos)
         };
-        t.prototype["B%4ymU(v"] = function (t, e) {
-            this["bS_P(RTt"](arguments)
+        t.prototype["HOW0p6&u"] = function (t, e) {
+            this["acyTgezU"](arguments)
         };
-        t.prototype["(9%biIQJ"] = function (t, e) {
+        t.prototype["udWVpu2F"] = function (t, e) {
             var i = this.view.position();
             this.draggingElement = t;
             t.drag.down = true;
             t.drag.start = {offsetX: e.x - i.x, offsetY: e.y - i.y};
             this.raise(false)
         };
-        t.prototype["1V5y4e3c"] = function (e) {
-            var t = this.notify("YrKz7XU6", this);
+        t.prototype["5f9mIWE-"] = function (e) {
+            var t = this.notify("AN4-Dk1u", this);
             return t.getImage("loaderAnimationClean", "browserIcons")
         };
-        t.prototype["-nc-59bb"] = function (a, e) {
+        t.prototype["6%wiVnzB"] = function (a, e) {
             if (!this.view) {
                 return
             }
@@ -2790,7 +2790,7 @@
             }
             this.view.liveUpdate()
         };
-        t.prototype["f6Ylekkg"] = function (e) {
+        t.prototype["buqqHDHe"] = function (e) {
             if (this.viewport && this.viewport.target.length && this.viewport.width && this.viewport.height) {
                 return this.viewport
             }
@@ -2798,19 +2798,19 @@
             this.viewport = {target: t, width: t.width(), height: t.height()};
             return this.viewport
         };
-        t.prototype["vT5KxfU3"] = function (t) {
-            return this.notify("vT5KxfU3", t)
+        t.prototype["FCm_StIp"] = function (t) {
+            return this.notify("FCm_StIp", t)
         };
-        t.prototype["dmY_k48Y"] = function (e, t) {
-            return this.notify("dmY_k48Y", this, t)
+        t.prototype["zK8yjN6p"] = function (e, t) {
+            return this.notify("zK8yjN6p", this, t)
         };
-        t.prototype["XDyVas7u"] = function (t) {
-            return this.notify("XDyVas7u", this)
+        t.prototype["W1qWr6IS"] = function (t) {
+            return this.notify("W1qWr6IS", this)
         };
         return t
-    }(Ie);
+    }(xe);
     e = function (e) {
-        utils.__extends(t, De);
+        utils.__extends(t, ke);
         utils.mixin(t, V.subViews);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -2819,8 +2819,8 @@
             this.addOption("data", null);
             this.addOption("propagateClicks", true);
             this.setOptions(e);
-            this.drawStartMessage = "Af1MgvTo";
-            this.drawEndMessage = "&Zi7iGZp"
+            this.drawStartMessage = "pm6TwodG";
+            this.drawEndMessage = "YMk6N38I"
         }
 
         t.prototype.create = function () {
@@ -2838,7 +2838,7 @@
             return this
         };
         return t
-    }(De);
+    }(ke);
     Oi = function (i) {
         utils.__extends(t, e);
         function t() {
@@ -2848,7 +2848,7 @@
 
         t.prototype.mouseDown = function (t) {
             var e = t.data;
-            e.notify("(9%biIQJ", e, {x: t.pageX, y: t.pageY});
+            e.notify("udWVpu2F", e, {x: t.pageX, y: t.pageY});
             t.preventDefault();
             t.stopPropagation();
             return false
@@ -2998,11 +2998,11 @@
             this.addOption("runningTimer", false);
             this.addOption("formatFunction", utils.date.secToTimeStr);
             this.setOptions(e);
-            this.drawEndMessage = "7Z0O7C(A"
+            this.drawEndMessage = "SA%d-uxO"
         }
 
         t.prototype.startTimer = function () {
-            this.notify("bKUGf9HF", this, {time: this.time})
+            this.notify("enjA1c%5", this, {time: this.time})
         };
         t.prototype.create = function () {
             var t;
@@ -3031,7 +3031,7 @@
             }
         };
         t.prototype.destroy = function () {
-            this.notify("o873Cuvp", this)
+            this.notify("YHC95tkO", this)
         };
         t.prototype.timeEvent = function (e) {
             if (this.timeLeft > 0) {
@@ -3046,7 +3046,7 @@
         };
         return t
     }(e);
-    qi = function (e) {
+    $i = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -3064,7 +3064,7 @@
         };
         return t
     }(e);
-    I = function () {
+    x = function () {
         utils.mixin(t, V.delegate);
         utils.mixin(t, V.getImage);
         function t(t) {
@@ -3109,12 +3109,12 @@
         };
         t.prototype.triggerModelUpdate = function (t) {
             this.informControllerUnblock();
-            this.notify("P&5_qidj", this, t)
+            this.notify("5gU6aKug", this, t)
         };
         t.prototype.displayError = function (t) {
             var e = t && t.error ? t.error : t;
             var i = {content: translate(e), title: translate("Error")};
-            this.notify("SzIzPcz%", this, i);
+            this.notify("pQnJoWLu", this, i);
             this.informControllerUnblock();
             this.publishUpdate()
         };
@@ -3122,7 +3122,7 @@
             var e = this.getSubscribers();
             for (var t = 0; t < e.length; t++) {
                 if (typeof e[t].view !== "undefined" && e[t].view !== null) {
-                    this.notify("gl%9o7sY", e[t].view)
+                    this.notify("i8j%qM54", e[t].view)
                 }
             }
         };
@@ -3134,16 +3134,16 @@
         return t
     }();
     fe = function (e) {
-        utils.__extends(t, De);
+        utils.__extends(t, ke);
         utils.mixin(t, V.subViews);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.addRequired("rowClass");
             this.addOption("data", null);
-            this.clickMessage = "1nw1dv-0";
+            this.clickMessage = "yWDk4Ipd";
             this.setOptions(e);
-            this.drawStartMessage = "64v1Ef%c";
-            this.drawEndMessage = "A%(b9daJ"
+            this.drawStartMessage = "wU-F_weP";
+            this.drawEndMessage = "-KlsTAN2"
         }
 
         t.prototype.create = function () {
@@ -3172,7 +3172,7 @@
             return e
         };
         return t
-    }(De);
+    }(ke);
     bi = function (e) {
         utils.__extends(t, fe);
         function t(i, e) {
@@ -3225,22 +3225,22 @@
             t.__super__.constructor.apply(this, arguments);
             this.addRequired("pageItems");
             this.addOption("hasPrevButton", false);
-            this.addOption("nextButtonClickMessage", "K9JD6y%S");
-            this.addOption("prevButtonClickMessage", "_Mq0iC_3");
+            this.addOption("nextButtonClickMessage", "J0knhMCA");
+            this.addOption("prevButtonClickMessage", "(uu&chpK");
             this.setOptions(e);
             this.page = 0;
             this.pageMax = 0;
-            this.continueButton = new p(this.controller, {
+            this.continueButton = new f(this.controller, {
                 parent: this,
                 name: "nextPageButton",
-                content: this.notify("3s(kBgiI", this, {imageName: "arrowDown", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "arrowDown", imageCategory: "icons"}),
                 clickMessage: this.nextButtonClickMessage,
                 styles: "paginate wide bottom"
             });
-            this.previousButton = new p(this.controller, {
+            this.previousButton = new f(this.controller, {
                 parent: this,
                 name: "prevPageButton",
-                content: this.notify("3s(kBgiI", this, {imageName: "arrowUp", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "arrowUp", imageCategory: "icons"}),
                 clickMessage: this.prevButtonClickMessage,
                 styles: "paginate wide"
             })
@@ -3330,19 +3330,19 @@
             }
             s = typeof s === "undefined" ? 1 : s;
             var n = "";
-            for (var l = 0, v = o.rows.length; l < v; l++) {
-                var t = o.rows[l], g = "level-" + s, f = t.data, h = !!t.rows, c;
-                c = a(s, g, f, h);
+            for (var l = 0, g = o.rows.length; l < g; l++) {
+                var t = o.rows[l], y = "level-" + s, f = t.data, h = !!t.rows, c;
+                c = a(s, y, f, h);
                 n += "<tr " + c + ">";
                 for (var r = 0, p = t.cells.length; r < p; r++) {
                     var i = t.cells[r], d = "";
                     if (r === 0) {
-                        var y = i;
+                        var v = i;
                         i = "";
                         if (t.icon) {
                             i += "<span class='icon'>" + t.icon + "</span>"
                         }
-                        i += "<span class='text smart-truncate'>" + y;
+                        i += "<span class='text smart-truncate'>" + v;
                         if (t.extraContent) {
                             d = ' class="has-extra-content"';
                             i += "<span class='extra'>" + t.extraContent + "</span>"
@@ -3461,7 +3461,7 @@
         };
         return t
     }(e);
-    H.Input = function (e) {
+    B.Input = function (e) {
         utils.__extends(t, e);
         function t(a, i) {
             t.__super__.constructor.apply(this, arguments);
@@ -3571,7 +3571,7 @@
             } else {
                 this._removeValidationOutput("blank")
             }
-            var e = t ? "aC%(xYUr" : "j%CMIq2b";
+            var e = t ? "R1Ok1EP)" : "uQ7VPTg-";
             this.notify(e, this);
             return t
         };
@@ -3605,7 +3605,7 @@
         };
         return t
     }(e);
-    H.Element = function (i) {
+    B.Element = function (i) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -3622,7 +3622,7 @@
         };
         return t
     }(e);
-    H.Checkbox = function (e) {
+    B.Checkbox = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -3667,8 +3667,8 @@
             }
         };
         return t
-    }(H.Element);
-    H.LabeledCheckbox = function (e) {
+    }(B.Element);
+    B.LabeledCheckbox = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -3758,8 +3758,8 @@
             t.checkBanner()
         };
         return t
-    }(H.Element);
-    H.InputFieldWithMax = function (i) {
+    }(B.Element);
+    B.InputFieldWithMax = function (i) {
         utils.__extends(t, i);
         function t(a, i) {
             t.__super__.constructor.apply(this, arguments);
@@ -3798,7 +3798,7 @@
             this.inputField = this.createSubview(a, {element: "input", attributes: e});
             this.maxButton = this.createSubview(this, {
                 styles: "button",
-                content: this.notify("3s(kBgiI", this, {imageName: "maximum", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "maximum", imageCategory: "icons"}),
                 hover: i,
                 clickMessage: null,
                 hoverDelay: 0
@@ -3887,7 +3887,7 @@
                 return
             }
             _.storeSession.setItem(this.storageId, this.data);
-            this.notify("wCMEKBWp", this, this.storageId)
+            this.notify("KfuWwK)P", this, this.storageId)
         };
         t.prototype.readValue = function () {
             if (this.storageId === "") {
@@ -3904,7 +3904,7 @@
         };
         return t
     }(e);
-    H.EditFieldForm = function (e) {
+    B.EditFieldForm = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -3922,7 +3922,7 @@
             this.addOption("useDefaultIcons", false);
             this.addOption("styles", "editFieldForm", true);
             this.addOption("pasteLinkButton", false);
-            this.addOption("pasteMessage", "J5FA3x6C");
+            this.addOption("pasteMessage", "NYd&saEH");
             this.addOption("pasteText", translate("paste_link"));
             this.setOptions(e);
             if (this.useDefaultIcons) {
@@ -3941,7 +3941,7 @@
             if (this.cancelIcon) {
                 t = this.iconDetails(t, this.cancelIcon)
             }
-            this.input = new H.Input(this.controller, {
+            this.input = new B.Input(this.controller, {
                 parent: this,
                 maxLength: this.maxLength,
                 minLength: this.minLength,
@@ -3970,7 +3970,7 @@
                     content: this.pasteText,
                     clickMessage: this.pasteMessage,
                     styles: "paste"
-                }, p)
+                }, f)
             }
             this.validationMessageContainer = this.createSubview(this, {
                 name: "validationMessageContainer",
@@ -4009,7 +4009,7 @@
             this.input.$el().trigger("keyup")
         };
         t.prototype.iconDetails = function (t, e, i) {
-            t.content = this.notify("3s(kBgiI", this, {imageName: e, imageCategory: i || "browserIcons"});
+            t.content = this.notify("Z-XGNYVU", this, {imageName: e, imageCategory: i || "browserIcons"});
             t.styles += " icon";
             return t
         };
@@ -4024,11 +4024,11 @@
             if (!u) {
                 return false
             }
-            var c = [], n, o, h, l, g, p, f;
+            var c = [], n, o, h, l, y, p, f;
             try {
                 n = new DataView(u)
-            } catch (v) {
-                console.error("Error parsing BPlist", v);
+            } catch (g) {
+                console.error("Error parsing BPlist", g);
                 return false
             }
             for (o = 0; o < "bplist".length; o++) {
@@ -4044,9 +4044,9 @@
             if (t) {
                 console.log("objectRefSize: " + l)
             }
-            g = a(n, u.byteLength - 32 + 8);
+            y = a(n, u.byteLength - 32 + 8);
             if (t) {
-                console.log("numObjects: " + g)
+                console.log("numObjects: " + y)
             }
             p = a(n, u.byteLength - 32 + 16);
             if (t) {
@@ -4056,7 +4056,7 @@
             if (t) {
                 console.log("offsetTableOffset: " + f)
             }
-            for (o = 0; o < g; o++) {
+            for (o = 0; o < y; o++) {
                 c[o] = i(n, f + o * h, h);
                 if (t) {
                     console.log("Offset for Object #" + o + " is " + c[o] + " [" + c[o].toString(16) + "]")
@@ -4071,11 +4071,11 @@
                     case 0:
                         return w();
                     case 1:
-                        return g();
+                        return y();
                     case 8:
                         return S();
                     case 2:
-                        return v();
+                        return g();
                     case 3:
                         return m();
                     case 4:
@@ -4087,7 +4087,7 @@
                     case 10:
                         return _();
                     case 13:
-                        return y();
+                        return v();
                     default:
                         throw new Error("Unhandled type 0x" + h.toString(16))
                 }
@@ -4109,7 +4109,7 @@
                     }
                 }
 
-                function g() {
+                function y() {
                     if (t) {
                         console.debug("parseInteger: " + a)
                     }
@@ -4131,7 +4131,7 @@
                     return i(n, o + 1, s)
                 }
 
-                function v() {
+                function g() {
                     if (t) {
                         console.debug("parseReal: " + a)
                     }
@@ -4233,27 +4233,27 @@
                     if (r * l > e) {
                         throw new Error("To little heap space available!")
                     }
-                    var g = [];
+                    var y = [];
                     for (var s = 0; s < r; s++) {
-                        var y = i(n, o + p + s * l, l);
-                        g[s] = d(y)
+                        var v = i(n, o + p + s * l, l);
+                        y[s] = d(v)
                     }
-                    return g
+                    return y
                 }
 
-                function y() {
+                function v() {
                     if (t) {
                         console.debug("parseDictionary:", a)
                     }
-                    var s = a, f = 1, h, c, v, p;
+                    var s = a, f = 1, h, c, g, p;
                     if (a === 15) {
                         h = n.getUint8(o + 1);
                         c = (h & 240) / 16;
                         if (c !== 1) {
                             console.error("0xD: UNEXPECTED LENGTH-INT TYPE!", c)
                         }
-                        v = h & 15;
-                        p = 1 << v;
+                        g = h & 15;
+                        p = 1 << g;
                         f = 2 + p;
                         s = i(n, o + 2, p)
                     }
@@ -4263,26 +4263,26 @@
                     if (t) {
                         console.log("Parsing dictionary #" + u)
                     }
-                    var w = {}, m, b, g, y;
+                    var w = {}, m, b, y, v;
                     for (var r = 0; r < s; r++) {
                         m = i(n, o + f + r * l, l);
                         b = i(n, o + f + r * l + s * l, l);
-                        g = d(m);
-                        y = d(b);
+                        y = d(m);
+                        v = d(b);
                         if (t) {
-                            console.log("  DICT #" + u + ": Mapped " + g + " to " + y)
+                            console.log("  DICT #" + u + ": Mapped " + y + " to " + v)
                         }
-                        w[g] = y
+                        w[y] = v
                     }
                     return w
                 }
             }
 
-            var y = d(p);
+            var v = d(p);
             if (t) {
-                console.debug("aTopMostObject: " + y)
+                console.debug("aTopMostObject: " + v)
             }
-            return y
+            return v
         }
 
         function r(s, e, i) {
@@ -4359,7 +4359,7 @@
         }
         function o() {
             var e = t.id;
-            var i = yi;
+            var i = vi;
             var a = "9FF";
             var s = a + "" + e + "" + i;
             return $.sha1(s)
@@ -4549,7 +4549,7 @@
         s.chainActionFromArray = l;
         s.stripHTML = h
     })(this);
-    gi = function (e) {
+    yi = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -4618,7 +4618,7 @@
             this.start()
         };
         return t
-    }(z);
+    }(G);
     fi = function (e) {
         utils.__extends(t, e);
         function t(e, i) {
@@ -4661,7 +4661,7 @@
         };
         return t
     }(e);
-    p = function (e) {
+    f = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -4738,8 +4738,8 @@
             this.draw()
         };
         t.prototype._performCreation = function () {
-            this.orig = this.notify("3s(kBgiI", this, {imageName: this.graphic, imageCategory: "icons"});
-            this.hover = this.notify("3s(kBgiI", this, {imageName: this.graphic + "_hover", imageCategory: "icons"});
+            this.orig = this.notify("Z-XGNYVU", this, {imageName: this.graphic, imageCategory: "icons"});
+            this.hover = this.notify("Z-XGNYVU", this, {imageName: this.graphic + "_hover", imageCategory: "icons"});
             this.content = this.orig
         };
         t.prototype._createHover = function () {
@@ -4763,7 +4763,7 @@
                 hidden: true,
                 name: "back",
                 graphic: "headlineButton_Back",
-                clickMessage: "Z04XvT7k"
+                clickMessage: "v2v6tJij"
             }, te)
         }
 
@@ -4898,7 +4898,7 @@
             return "<a href='#" + e + "' " + t + ">" + e + "</a>"
         })
     };
-    ji = function (a) {
+    Xi = function (a) {
         function t(s) {
             for (var e in i) {
                 var a = i[e];
@@ -4967,7 +4967,7 @@
                 i.request = e;
                 i = this.precalculateMapData(i);
                 if (!this.initialNotificationSend) {
-                    this.notify("0YP-io%3", this, null)
+                    this.notify("vcXO1R&i", this, null)
                 }
             }.bind(this), this);
             return true
@@ -5137,7 +5137,7 @@
             this.__data = JSON.parse(t)
         };
         return e
-    }(I);
+    }(x);
     ti = function (i) {
         utils.__extends(t, i);
         function t(i, e) {
@@ -5158,7 +5158,7 @@
             if (!t) {
                 return
             }
-            this.notify("I6Fr(MqC", this);
+            this.notify("vU1u)Cuc", this);
             this.view.mapDataRequestPending = false;
             this.view.updateMapData(t);
             if (!this.view.fastMap) {
@@ -5173,7 +5173,7 @@
                 e = true
             }
         };
-        t.prototype["m_mUthWK"] = function (e, t) {
+        t.prototype["5GFKBWEh"] = function (e, t) {
             if (this.view.type === "normal") {
                 return this.datasource.requestSector(t)
             } else {
@@ -5193,7 +5193,7 @@
             }
             return true
         };
-        t.prototype["U7o3QmDP"] = function (e, i) {
+        t.prototype["jWf&hJpy"] = function (e, i) {
             if (this.ignoreNextClickEvent === true) {
                 this.ignoreNextClickEvent = false;
                 return null
@@ -5209,23 +5209,23 @@
             if (this._cache.habitat === null) {
                 return {mapX: t.x, mapY: t.y}
             } else {
-                this.notify("DGiiS)m4", this, this._cache.habitat)
+                this.notify("z4nJtGuw", this, this._cache.habitat)
             }
             return this._cache.habitat
         };
-        t.prototype["0jOar_HJ"] = function (a, e) {
+        t.prototype["NEJghIoP"] = function (a, e) {
             if (!this._checkGlobalEventsTarget(a, e)) {
                 return null
             }
             this.mouse = utils.mouse.getMouseCoords(e);
-            var s = this.notify("im6p6kaS", this);
+            var s = this.notify("bnG&ldX0", this);
             if (s === false) {
                 this.view.drag.down = false;
                 var i = this.view.getTileForCoords(this.mouse.x, this.mouse.y);
                 if (i !== this._cache.tile) {
                     this._cache.tile = i;
                     this._cache.habitat = this.getHabitatInfo(i);
-                    this.notify("dDzG08SK", this, {habitat: this._cache.habitat, mouse: this.mouse})
+                    this.notify("UGUcVx1E", this, {habitat: this._cache.habitat, mouse: this.mouse})
                 }
                 return
             }
@@ -5233,7 +5233,7 @@
                 utils.helpers.clearSelection();
                 var t = this._pageXY(e);
                 if (this.view.type !== "overview") {
-                    this.notify("S4LQV_Km", this)
+                    this.notify("Xh-P9vqA", this)
                 }
                 var n = (this.view.drag.start.offsetX - t.x) * 1 / this.view.zoom | 0;
                 var r = (this.view.drag.start.offsetY - t.y) * 1 / this.view.zoom | 0;
@@ -5243,25 +5243,25 @@
                 this.ignoreNextClickEvent = true
             }
         };
-        t.prototype["bS_P(RTt"] = function () {
+        t.prototype["acyTgezU"] = function () {
             if (this.view.drag.down) {
                 this.view.drag.down = false
             }
-            this.notify("X1MBP2Ca", this)
+            this.notify("y)XIHKdo", this)
         };
-        t.prototype["AvJe&lSJ"] = function (i, t) {
+        t.prototype["dyWiidsC"] = function (i, t) {
             if (!this._checkGlobalEventsTarget(i, t)) {
                 return null
             }
             this.draggingElement = this.view;
             this.view.drag.down = true;
-            this.notify("jhhPVgFI", this);
+            this.notify("zv7sENy7", this);
             var e = this._pageXY(t);
             var a = e.x;
             var s = e.y;
             this.view.drag.start = {offsetX: a, offsetY: s}
         };
-        t.prototype["-nc-59bb"] = function () {
+        t.prototype["6%wiVnzB"] = function () {
             if (this.view.fastMap) {
                 this.view.resize($("#map").width(), $("#map").height());
                 this.view.preRender()
@@ -5274,8 +5274,8 @@
             }
             this.view.draw()
         };
-        t.prototype["pRah1jbP"] = function (e) {
-            var t = this.notify("YrKz7XU6", this);
+        t.prototype["peGFwVgR"] = function (e) {
+            var t = this.notify("AN4-Dk1u", this);
             if (t !== null) {
                 return t.getMapTileSet(e.type)
             }
@@ -5284,11 +5284,11 @@
         t.prototype.getLastMouseEvent = function () {
             return this.lastMouseEvent
         };
-        t.prototype["1V5y4e3c"] = function () {
-            var t = this.notify("YrKz7XU6", this);
+        t.prototype["5f9mIWE-"] = function () {
+            var t = this.notify("AN4-Dk1u", this);
             return t.getImage("loaderAnimation", "browserIcons")
         };
-        t.prototype["KG_OB_a4"] = function (a, t) {
+        t.prototype["FHOVc2MY"] = function (a, t) {
             var e = t.x, i = t.y;
             return this.datasource.nextGround(e * i)
         };
@@ -5304,13 +5304,13 @@
             return {x: i, y: a}
         };
         return t
-    }(Ie);
+    }(xe);
     Ri = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments);
-            this.mapServer = this.notify("cGDmNeaS", this);
+            this.mapServer = this.notify("k9yCxA%X", this);
             this._resetMapDict()
         }
 
@@ -5358,7 +5358,7 @@
                 this.__data.centerToTarget = e.centerToTarget;
                 this.__data.useFrameOrigin = true;
                 this.__data.map.frame = {origin: e.origin};
-                this.emitSubscribers("gl%9o7sY");
+                this.emitSubscribers("i8j%qM54");
                 this.publishUpdate();
                 return false
             }
@@ -5372,14 +5372,14 @@
             }.bind(this);
             var s = _.try(this, "subscribers.0.view");
             if (s) {
-                this.notify("NbKCY7mj", s)
+                this.notify("7GVwxkqP", s)
             }
             for (t = 0; t < this.totalSectors; t++) {
                 $.ajax({type: "GET", url: this.mapServer + "/" + i[t] + ".jtile", dataType: "jsonp", timeout: 62e3})
             }
             window.setTimeout(function () {
                 if (s) {
-                    this.notify("gl%9o7sY", s)
+                    this.notify("i8j%qM54", s)
                 }
                 this.publishUpdate()
             }.bind(this), 1e3);
@@ -5507,8 +5507,8 @@
             this.mapDict = {loaded: true}
         };
         return t
-    }(I);
-    Di = function (e) {
+    }(x);
+    ki = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t(i, e) {
@@ -5601,16 +5601,16 @@
             this._drawArrow(t.x, t.y, this.distanceIndicatorOptions.w, this.distanceIndicatorOptions.h, 50, a, i)
         };
         return t
-    }(z);
-    Ye = function (s) {
+    }(G);
+    ze = function (s) {
         "use strict";
         var e = false;
         var n = 3;
         utils.__extends(t, s);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "a_qTiYUi";
-            this.drawEndMessage = "1d6&v_93";
+            this.drawStartMessage = "RSZXnNha";
+            this.drawEndMessage = "KNIpHb7w";
             this.addRequired("canvas");
             this.addRequired("mapOrigin");
             this.addOption("zoom", 1);
@@ -5684,7 +5684,7 @@
                 centerToTarget: i,
                 centerTarget: {x: t.x, y: t.y}
             };
-            this.mapDataRequestPending = this.notify("m_mUthWK", this, a)
+            this.mapDataRequestPending = this.notify("5GFKBWEh", this, a)
         };
         t.prototype.checkDistanceToMapBorder = function (t) {
             var e = {x: t.x - this.mapOrigin.x, y: t.y - this.mapOrigin.y};
@@ -5696,7 +5696,7 @@
         };
         t.prototype.getCurrentTileSet = function () {
             var t;
-            t = this.notify("pRah1jbP", this);
+            t = this.notify("peGFwVgR", this);
             if (t) {
                 this.images = t.images;
                 this.tileInfo = t.tileInfo;
@@ -5799,7 +5799,7 @@
             }
         };
         t.prototype.getImageForTile = function (t, e) {
-            return this.notify("u6y9&srd", this, {habitatID: t, bgTileTyp: e})
+            return this.notify("HyeBMKAV", this, {habitatID: t, bgTileTyp: e})
         };
         t.prototype.draw = function () {
             this.getCurrentTileSet();
@@ -5880,11 +5880,11 @@
                     t = this.calculateTilePosition(i, a, u);
                     var p = t.x < this.canvasWidth;
                     var f = t.x > 0 - d * o;
-                    var g = t.y > -(c * o) - c / this.drawOffset.odd.y * o;
-                    var y = t.y < this.canvasHeight;
-                    var v = false;
-                    if (p && f && g && y) {
-                        v = true
+                    var y = t.y > -(c * o) - c / this.drawOffset.odd.y * o;
+                    var v = t.y < this.canvasHeight;
+                    var g = false;
+                    if (p && f && y && v) {
+                        g = true
                     } else {
                         continue
                     }
@@ -5914,9 +5914,9 @@
             }
         };
         t.prototype.calculateTilePosition = function (m, h, d) {
-            var p, y, v, l, e, o, c, r, s, f = this.pointOfZoomOffset, g = this.offset, t = this.zoom, n = this.tileInfo, u = this.drawOffset;
-            p = i(g.x, f.x, t);
-            y = i(g.y, f.y, t);
+            var p, v, g, l, e, o, c, r, s, f = this.pointOfZoomOffset, y = this.offset, t = this.zoom, n = this.tileInfo, u = this.drawOffset;
+            p = i(y.x, f.x, t);
+            v = i(y.y, f.y, t);
             e = n.width * t;
             o = n.height * t;
             if (h % 2) {
@@ -5926,9 +5926,9 @@
             }
             c = s.x;
             r = s.y;
-            v = m * e + c + p + d.x * e;
-            l = h * r + y + d.y * r;
-            return {x: v, y: l, width: e, height: o}
+            g = m * e + c + p + d.x * e;
+            l = h * r + v + d.y * r;
+            return {x: g, y: l, width: e, height: o}
         };
         var i = _.memoize(function (t, e, i) {
             return (t + e) * i
@@ -5986,7 +5986,7 @@
             var t = {x: Math.floor(i / 32) * 32, y: Math.floor(a / 32) * 32};
             var n = {x: t.x - this.mapOrigin.x, y: t.y - this.mapOrigin.y};
             var r = this.calculateTilePosition(i - t.x, a - t.y, n);
-            var o = this.notify("KG_OB_a4", this, {x: i, y: a});
+            var o = this.notify("FHOVc2MY", this, {x: i, y: a});
             var s = this.getImageForTile(e, o);
             if (s.info.blinking === false && this.blinkingCache[e]) {
                 delete this.blinkingCache[e]
@@ -5997,11 +5997,11 @@
             if (!this.blinkingCache[t]) {
                 this.blinkingCache[t] = {id: t, bgColor: e, alpha: 1, countUp: false, mapX: i, mapY: a}
             }
-            this.notify("6of)9Mmk", this, null)
+            this.notify("&ll(EYgA", this, null)
         };
         t.prototype.stopBlinking = function () {
             this.blinkingCache = {};
-            this.notify("00inBGFA", this, null)
+            this.notify("smbgw0qi", this, null)
         };
         t.prototype.timeEvent = function () {
             if (this.drag.down) {
@@ -6078,7 +6078,7 @@
             if (t.find(".overlay").length) {
                 return
             }
-            var e = this.notify("1V5y4e3c", this);
+            var e = this.notify("5f9mIWE-", this);
             $(e).attr("draggable", "false");
             t.prepend($("<div class='overlay'>").append(e));
             t.find("div.overlay").click(function (t) {
@@ -6097,7 +6097,7 @@
             this.offset = t
         };
         return t
-    }(z);
+    }(G);
     Re = function () {
         "use strict";
         function t(t) {
@@ -6141,8 +6141,8 @@
 
         function e(s, a) {
             e.__super__.constructor.apply(this, arguments);
-            this.addOption("drawStartMessage", "a_qTiYUi");
-            this.addOption("drawEndMessage", "1d6&v_93");
+            this.addOption("drawStartMessage", "RSZXnNha");
+            this.addOption("drawEndMessage", "KNIpHb7w");
             this.addOption("markedCastles", []);
             this.addOption("distanceIndicatorOptions", {w: 60, h: 20, appendingText: ""});
             this.addOption("mapContainerSelector", "#mapContainer");
@@ -6172,7 +6172,7 @@
             this.drag = {down: false, start: null, dist: null};
             this.images = {ground: [], castles: [], free: []};
             this.type = "normal";
-            var t = this.notify("pRah1jbP", this);
+            var t = this.notify("peGFwVgR", this);
             if (t) {
                 this.images = t.images
             }
@@ -6313,23 +6313,23 @@
             if (i) {
                 preRenderDebug(this.cArray)
             }
-            var e = this.controller.datasource.getMap(this._mapFrame), S = 0, T = this._mapFrame.origin.y % 2 ? true : false, D = t.id, k = t.alliance ? t.alliance.id : null;
+            var e = this.controller.datasource.getMap(this._mapFrame), S = 0, T = this._mapFrame.origin.y % 2 ? true : false, k = t.id, D = t.alliance ? t.alliance.id : null;
             for (var r = e.frame.origin.y; r <= e.frame.origin.y + e.frame.size.height; r++) {
                 for (var o = e.frame.origin.x; o <= e.frame.origin.x + e.frame.size.width; o++) {
-                    var m = e.map[r] ? e.map[r][o] : null, u = this.notify("u6y9&srd", this, {
+                    var m = e.map[r] ? e.map[r][o] : null, u = this.notify("HyeBMKAV", this, {
                         habitatID: m ? +m : 0,
                         bgTileTyp: n(o * r)
-                    }), v = (o - e.frame.origin.x) * this.tileInfo.w, C = (r - e.frame.origin.y) * this.tileInfo.h, w = r - e.frame.origin.y, c;
+                    }), g = (o - e.frame.origin.x) * this.tileInfo.w, C = (r - e.frame.origin.y) * this.tileInfo.h, w = r - e.frame.origin.y, c;
                     c = w % 2;
                     if (T) {
                         c ^= 1
                     }
                     if (c) {
-                        v += this.tileInfo.off_x
+                        g += this.tileInfo.off_x
                     }
-                    var y = this.displayedOn(v, C, this.tileInfo.w, this.tileInfo.h, false);
-                    for (var f = 0, b = y.length; f < b; f++) {
-                        var s = y[f];
+                    var v = this.displayedOn(g, C, this.tileInfo.w, this.tileInfo.h, false);
+                    for (var f = 0, b = v.length; f < b; f++) {
+                        var s = v[f];
                         if (s.id > this.tiledMap.w * this.tiledMap.h - 1) {
                             continue
                         }
@@ -6339,27 +6339,27 @@
                         } else {
                             this.cArray[s.id].ctx.drawImage(u.image, s.x, s.y);
                             this.drawInfo(this.cArray[s.id].ctx, u.info, s);
-                            var g = _.try(u, "info.id"), l = false, h;
-                            if (g && a.habitatReservations) {
+                            var y = _.try(u, "info.id"), l = false, h;
+                            if (y && a.habitatReservations) {
                                 h = a.habitatReservations.filter(function (t) {
-                                    return +t.habitatID === +g && +t.status === +de.ACCEPTED
+                                    return +t.habitatID === +y && +t.status === +de.ACCEPTED
                                 });
                                 if (h.length) {
                                     var p = null, l = {ally: null, shared: null};
-                                    for (var d = 0, I = h.length; d < I; d++) {
+                                    for (var d = 0, x = h.length; d < x; d++) {
                                         p = h[d].playerID;
-                                        if (p === D) {
+                                        if (p === k) {
                                             l.ally = "own"
                                         } else {
-                                            if (a.players[p].alliance != k) {
+                                            if (a.players[p].alliance != D) {
                                                 l.shared = "shared"
                                             } else if (!l.ally) {
                                                 l.ally = "member"
                                             }
                                         }
                                     }
-                                    for (var x in l) {
-                                        this.drawReservationBadge(l[x], u.info, this.cArray[s.id].ctx, s)
+                                    for (var I in l) {
+                                        this.drawReservationBadge(l[I], u.info, this.cArray[s.id].ctx, s)
                                     }
                                 }
                             }
@@ -6539,15 +6539,15 @@
             return {gx: t, gy: e, x: t - this.displayRect.x, y: e - this.displayRect.y, rid: i.id, rx: i.x, ry: i.y}
         };
         e.prototype.showBlockOverlay = function () {
-            Ye.prototype.showBlockOverlay.call(this)
+            ze.prototype.showBlockOverlay.call(this)
         };
         e.prototype.hideBlockOverlay = function () {
-            Ye.prototype.hideBlockOverlay.call(this)
+            ze.prototype.hideBlockOverlay.call(this)
         };
         e.prototype._drawOneCastleInfo = function (t, e, i) {
             var s = this.getTileTopLeftCoords(e, i);
             var r = n(e, i);
-            var a = this.notify("u6y9&srd", this, {habitatID: t, bgTileTyp: r});
+            var a = this.notify("HyeBMKAV", this, {habitatID: t, bgTileTyp: r});
             if (a.info.blinking === false && this.blinkingCache[t]) {
                 delete this.blinkingCache[t]
             }
@@ -6557,11 +6557,11 @@
             if (!this.blinkingCache[t]) {
                 this.blinkingCache[t] = {id: t, bgColor: e, alpha: 1, countUp: false, mapX: i, mapY: a}
             }
-            this.notify("6of)9Mmk", this, null)
+            this.notify("&ll(EYgA", this, null)
         };
         e.prototype.stopBlinking = function () {
             this.blinkingCache = {};
-            this.notify("00inBGFA", this, null)
+            this.notify("smbgw0qi", this, null)
         };
         e.prototype.timeEvent = function () {
             if (this.drag.down) {
@@ -6599,7 +6599,7 @@
             s(this, "shared", this.reservationBadges)
         };
         function s(e, i, a) {
-            var s = e.notify("ttHKxwy5", e, {
+            var s = e.notify("oqS1fWVg", e, {
                 imageName: "mapReserve" + utils.helpers.capitalize(i),
                 imageCategory: "icons"
             });
@@ -6611,7 +6611,7 @@
         }
 
         return e
-    }(z);
+    }(G);
     ni = function (i) {
         utils.__extends(t, i);
         function t(i, e) {
@@ -6628,7 +6628,7 @@
             return t
         };
         t.prototype.create = function () {
-            this.notify("bKUGf9HF", this, {time: 20})
+            this.notify("enjA1c%5", this, {time: 20})
         };
         t.prototype.timeEvent = function () {
             for (var i = 0, s = this.timers.length; i < s; i++) {
@@ -6674,7 +6674,7 @@
         };
         t.prototype._updateStorageElement = function (t, e) {
             _.storeSession.setItem(t, e);
-            this.notify("wCMEKBWp", this, this.storageId)
+            this.notify("KfuWwK)P", this, this.storageId)
         };
         t.prototype.clickHandler = function (e) {
             var s = e.currentTarget.id;
@@ -6792,7 +6792,7 @@
             e += " />";
             e += this.addElement({
                 styles: "button",
-                content: this.notify("3s(kBgiI", this, {imageName: "maximum", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "maximum", imageCategory: "icons"}),
                 lazyHoverClass: t.lazyHoverClass,
                 lazyHoverOptions: t.lazyHoverOptions,
                 clickMessage: t.maxButtonClickMessage,
@@ -6813,7 +6813,7 @@
             return this.openHtml("div", {styles: "clearfix"}) + this.closeHtml("div")
         };
         return t
-    }(De);
+    }(ke);
     r.Master = function (e) {
         function t(t) {
             this.lastUpdate = null;
@@ -7259,16 +7259,16 @@
             if (!t) {
                 return -1
             }
-            var e = t.split("/")[0], i = Bi;
+            var e = t.split("/")[0], i = Hi;
             return i[e] || -1
         }
 
         function s(t) {
-            return _.conv.mapWithDictionary(t, xe)
+            return _.conv.mapWithDictionary(t, Ie)
         }
 
         function n(t) {
-            return _.conv.mapWithDictionary(t, g)
+            return _.conv.mapWithDictionary(t, y)
         }
 
         function o(t) {
@@ -7291,7 +7291,7 @@
             }
             var i = [];
             for (var e = 0, a = t.length; e < a; e++) {
-                i.push(P[t[e]])
+                i.push(U[t[e]])
             }
             return _.sortByOrder(i)
         }
@@ -7326,7 +7326,7 @@
             if (!s || !e || !a) {
                 return false
             }
-            t = f[s];
+            t = d[s];
             i = t.volumeResource;
             if (!t) {
                 return false
@@ -7377,8 +7377,8 @@
         };
         function i(t) {
             var e = null;
-            if (typeof f !== "undefined" && typeof f[t] !== "undefined") {
-                e = f[t]
+            if (typeof d !== "undefined" && typeof d[t] !== "undefined") {
+                e = d[t]
             }
             return e
         }
@@ -7387,7 +7387,7 @@
             return this.durationFactor === .5
         };
         t.prototype.isHalfDurationReached = function () {
-            var e = (this.complete - (new Date - U)) / 1e3;
+            var e = (this.complete - (new Date - P)) / 1e3;
             var i = this.durationInSeconds;
             var t = e - i;
             if (t < 0) {
@@ -7530,7 +7530,7 @@
             var a = {}, t = 0;
             for (var e = 0, s = i.length; e < s; e++) {
                 t = i[e];
-                a[t] = P[t]
+                a[t] = U[t]
             }
             return a
         }
@@ -7591,9 +7591,9 @@
         };
         return e
     }(r.Master);
-    r.Habitat = function (v) {
+    r.Habitat = function (g) {
         "use strict";
-        utils.__extends(e, v);
+        utils.__extends(e, g);
         function e() {
             e.__super__.constructor.apply(this, arguments)
         }
@@ -7632,7 +7632,7 @@
             id: _.conv.toNumber,
             publicHabitatType: _.conv.toNumber,
             points: _.conv.toNumber,
-            player: D,
+            player: k,
             mapX: _.conv.toNumber,
             mapY: _.conv.toNumber,
             nextBattleDate: _.conv.toDate,
@@ -7641,12 +7641,12 @@
             habitatResources: T,
             habitatMissions: h,
             habitatKnowledges: c,
-            habitatKnowledgeOrders: d,
+            habitatKnowledgeOrders: p,
             habitatUnitOrders: u,
-            habitatUnits: p,
-            externalHabitatUnits: y,
+            habitatUnits: f,
+            externalHabitatUnits: v,
             habitatBuildingUpgrades: S,
-            habitatUpgradeOrder: I,
+            habitatUpgradeOrder: x,
             habitatTransits: C,
             nextLegalRestockDate: _.conv.toDate,
             noobProtectionEndDate: _.conv.toDate,
@@ -7664,7 +7664,7 @@
             return typeof t === "undefined" || t === false ? translate("Renegade") + " " + e : t
         }
 
-        function D(t) {
+        function k(t) {
             if (typeof t === "number" && a.players[t]) {
                 t = a.players[t]
             }
@@ -7700,12 +7700,12 @@
             var a = {}, t = 0, s = i.length, r = false;
             for (var e = 0; e < s; e++) {
                 t = i[e];
-                a[t] = P[t]
+                a[t] = U[t]
             }
             return a
         }
 
-        function d(t, n) {
+        function p(t, n) {
             if (!t || !t.length) {
                 return []
             }
@@ -7718,15 +7718,15 @@
             return _.sortByOrder(i)
         }
 
-        function p(t, e) {
+        function f(t, e) {
             return i("internal", t, e)
         }
 
-        function y(t, e) {
+        function v(t, e) {
             return i("external", t, e)
         }
 
-        function i(g, f, s) {
+        function i(y, f, s) {
             var o = [], t = {}, c = [];
 
             function m(t, e) {
@@ -7749,30 +7749,30 @@
                 } else if (l.sourceHabitat === s.id) {
                     n = "external"
                 }
-                if (!n || n !== g) {
+                if (!n || n !== y) {
                     continue
                 }
                 c.push(l)
             }
             for (var h = 0, _ = c.length; h < _; h++) {
-                var e = c[h], i = e.battleType, y = e.sourceHabitat, v = e.habitat, u = g === "internal" ? y : v;
+                var e = c[h], i = e.battleType, v = e.sourceHabitat, g = e.habitat, u = y === "internal" ? v : g;
                 if (!t[i]) {
                     t[i] = {}
                 }
                 if (!t[i][u]) {
-                    t[i][u] = {units: {}, habitatID: v, sourceHabitatID: y}
+                    t[i][u] = {units: {}, habitatID: g, sourceHabitatID: v}
                 }
                 t[i][u]["units"][e.unitId] = e.amount
             }
             for (var b in t) {
                 var w = t[b], p;
                 for (var S in w) {
-                    var d = w[S], k = m(d.sourceHabitatID, s), D = m(d.habitatID, s);
+                    var d = w[S], D = m(d.sourceHabitatID, s), k = m(d.habitatID, s);
                     p = new r.HabitatUnit({
                         battleType: b,
                         habitatUnitDictionary: d.units,
-                        sourceHabitat: k,
-                        habitat: D
+                        sourceHabitat: D,
+                        habitat: k
                     });
                     o.push(p)
                 }
@@ -7794,12 +7794,12 @@
         }
 
         function w(t, n) {
-            if (!t || !t.length || !f) {
+            if (!t || !t.length || !d) {
                 return {}
             }
-            var i = {}, l = f.settings.maxLevels;
+            var i = {}, l = d.settings.maxLevels;
             for (var e = 0, o = t.length; e < o; e++) {
-                var a = t[e], s = f[a], u = s.identifier.toLowerCase().replace(" ", "").replace(/\/[0-9]+/, "");
+                var a = t[e], s = d[a], u = s.identifier.toLowerCase().replace(" ", "").replace(/\/[0-9]+/, "");
                 i[a] = new r.HabitatBuilding({habitat: n, building: s})
             }
             return i
@@ -7879,7 +7879,7 @@
             return t
         }
 
-        function I(i, s) {
+        function x(i, s) {
             var n = {};
             s.habitatExpandingOrder = {};
             for (var e = 0, o = i.length; e < o; e++) {
@@ -7897,9 +7897,9 @@
             this.stats = {
                 units: {
                     allDefending: this.getAllDefendingUnits(),
-                    own: this.getUnitsForBattleType(k.OWN_HABITAT),
-                    external: this.getUnitsForBattleType(k.EXTERNAL_UNITS_TO_DEFENSE),
-                    attacker: this.getUnitsForBattleType(k.ATTACKER)
+                    own: this.getUnitsForBattleType(D.OWN_HABITAT),
+                    external: this.getUnitsForBattleType(D.EXTERNAL_UNITS_TO_DEFENSE),
+                    attacker: this.getUnitsForBattleType(D.ATTACKER)
                 }, resources: this.getAllResources()
             }
         };
@@ -7920,7 +7920,7 @@
                 return e
             }
             for (var i = 0; i < this.habitatUnits.length; i++) {
-                var t = this.habitatUnits[i], n = t.battleType === k.OWN_HABITAT, r = t.battleType === k.EXTERNAL_UNITS_TO_DEFENSE;
+                var t = this.habitatUnits[i], n = t.battleType === D.OWN_HABITAT, r = t.battleType === D.EXTERNAL_UNITS_TO_DEFENSE;
                 if (n || r) {
                     for (var a = 0; a < t.units.length; a++) {
                         var s = t.units[a];
@@ -7935,7 +7935,7 @@
             if (!this.habitatUnits) {
                 return e
             }
-            t = t || k.OWN_HABITAT;
+            t = t || D.OWN_HABITAT;
             for (var i = 0; i < this.habitatUnits.length; i++) {
                 var a = this.habitatUnits[i];
                 if (a.battleType === t) {
@@ -7956,15 +7956,22 @@
                 return t.building.order < e.building.order ? -1 : +1
             })
         };
-        e.prototype.getSortedMissions = function (i, l) {
-            i = _.defaultsTo(i, []);
-            var n = [], r;
-            r = function (t) {
+        e.prototype.getSortedMissions = function (a, u) {
+            a = _.defaultsTo(a, []);
+            var l = [], o;
+            o = function (t) {
                 return t.mission.primaryKey === e.primaryKey
             };
-            var o = _.sortBy(_.toArray(K), "order").reverse();
-            for (var a = 0, u = o.length; a < u; a++) {
-                var e = o[a], s = this.habitatMissions.filter(r), t = {
+            var s;
+            if (this.publicHabitatType === 2) {
+                s = "tavernarea"
+            } else {
+                s = "tavern"
+            }
+            var h = d.settings.maxLevelsPrimaryKey[s], p = d[h].missions;
+            var r = _.sortBy(_.toArray(p), "order").reverse();
+            for (var n = 0, c = r.length; n < c; n++) {
+                var e = r[n], i = this.habitatMissions.filter(o), t = {
                     running: false,
                     order: e.order,
                     primaryKey: e.primaryKey,
@@ -7972,20 +7979,20 @@
                     selected: false,
                     isSpedUp: null
                 };
-                if (s.length) {
+                if (i.length) {
                     t.running = true;
                     t.executable = true;
-                    t.complete = s[0].complete;
-                    t.isSpedUp = s[0].isSpeededup()
+                    t.complete = i[0].complete;
+                    t.isSpedUp = i[0].isSpeededup()
                 } else {
                     t.executable = e.isMissionPossible(this);
                     if (t.executable) {
-                        t.selected = !!~i.indexOf(e.primaryKey)
+                        t.selected = !!~a.indexOf(e.primaryKey)
                     }
                 }
-                n.push(t)
+                l.push(t)
             }
-            return _.sortByOrder(A(this, n, l))
+            return _.sortByOrder(A(this, l, u))
         };
         e.prototype.getSortedBuffs = function (i) {
             i = _.defaultsTo(i, []);
@@ -8028,9 +8035,9 @@
             }
             return false
         };
-        function x() {
+        function I() {
             var e = $.extend(true, {}, re);
-            var i = $.extend(true, {}, g);
+            var i = $.extend(true, {}, y);
             var t;
             for (t in e) {
                 e[t] = 0
@@ -8042,7 +8049,7 @@
         }
 
         function A(c, h, d) {
-            var o = x(), r, u, i, s, t, n, e, a;
+            var o = I(), r, u, i, s, t, n, e, a;
             r = h.filter(function (t) {
                 return t.executable === true && t.running === false
             });
@@ -8157,7 +8164,7 @@
             var a = 0;
             for (var t = 0, o = this.habitatUnits.length; t < o; t++) {
                 var e = this.habitatUnits[t], s = e.battleType;
-                if (typeof s === "undefined" || s !== k.OWN_HABITAT) {
+                if (typeof s === "undefined" || s !== D.OWN_HABITAT) {
                     continue
                 }
                 for (var i = 0, l = e.units.length; i < l; i++) {
@@ -8174,12 +8181,12 @@
             var e = [], t, i;
             for (t = 0, i = this.habitatUnits.length; t < i; t++) {
                 var a = this.habitatUnits[t], s = a.battleType;
-                if (typeof s !== "undefined" && s === k.OWN_HABITAT) {
+                if (typeof s !== "undefined" && s === D.OWN_HABITAT) {
                     e = a.units
                 }
             }
             if (e.length === 0) {
-                for (t = 0, i = g.length; t < i; t++) {
+                for (t = 0, i = y.length; t < i; t++) {
                     var n = mUnit[t].clone();
                     n.setCount(0);
                     e.push(n)
@@ -8188,19 +8195,19 @@
             return _.sortByOrder(e)
         };
         e.prototype.getAllDefendingUnits = function () {
-            return this._getBundledUnits(this.habitatUnits, [k.OWN_HABITAT, k.EXTERNAL_UNITS_TO_DEFENSE])
+            return this._getBundledUnits(this.habitatUnits, [D.OWN_HABITAT, D.EXTERNAL_UNITS_TO_DEFENSE])
         };
         e.prototype.getOwnDefendingUnits = function () {
-            return this._getBundledUnits(this.habitatUnits, [k.OWN_HABITAT])
+            return this._getBundledUnits(this.habitatUnits, [D.OWN_HABITAT])
         };
         e.prototype.getAttackingUnits = function () {
-            return this._getBundledUnits(this.habitatUnits, [k.ATTACKER])
+            return this._getBundledUnits(this.habitatUnits, [D.ATTACKER])
         };
         e.prototype.getExternDefendingUnits = function () {
-            return this._getBundledUnits(this.externalHabitatUnits, [k.EXTERNAL_UNITS_TO_DEFENSE])
+            return this._getBundledUnits(this.externalHabitatUnits, [D.EXTERNAL_UNITS_TO_DEFENSE])
         };
         e.prototype.getExternAttackingUnits = function () {
-            return this._getBundledUnits(this.externalHabitatUnits, [k.ATTACKER])
+            return this._getBundledUnits(this.externalHabitatUnits, [D.ATTACKER])
         };
         e.prototype.getHabitatMission = function (s) {
             var e;
@@ -8321,7 +8328,7 @@
             }
             if (this.habitatBuildings) {
                 for (a = 0, r = this.habitatBuildings.length; a < r; a++) {
-                    var n = f[this.habitatBuildings[a]];
+                    var n = d[this.habitatBuildings[a]];
                     if (n.modifier) {
                         for (i in n.modifier) {
                             var t = n.modifier[i];
@@ -8360,7 +8367,7 @@
             var r = this.distanceTo(a.mapX, a.mapY);
             var t = [];
             for (var e = 0, o = this.habitatUnits.length; e < o; e++) {
-                var i = this.habitatUnits[e], l = i.battleType !== k.OWN_HABITAT;
+                var i = this.habitatUnits[e], l = i.battleType !== D.OWN_HABITAT;
                 if (l || +i.sourceHabitat.id !== +this.id) {
                     continue
                 }
@@ -8375,7 +8382,7 @@
                     continue
                 }
                 for (var a = 0, n = this.habitatUnits.length; a < n; a++) {
-                    var t = this.habitatUnits[a], o = t.battleType !== k.OWN_HABITAT, l = t.sourceHabitat.id !== this.id;
+                    var t = this.habitatUnits[a], o = t.battleType !== D.OWN_HABITAT, l = t.sourceHabitat.id !== this.id;
                     if (o || l) {
                         continue
                     }
@@ -8417,7 +8424,7 @@
         function R(t) {
             var e = [];
             for (var i in t) {
-                var s = t[i], a = g[i].clone();
+                var s = t[i], a = y[i].clone();
                 a.setCount(s);
                 e.push(a)
             }
@@ -8436,7 +8443,7 @@
         e.prototype.getRecruitableUnits = function () {
             var t = [];
             for (var s in ee) {
-                var e = ee[s], i = g[e], a = i.getMaxRecruiting(this), n = {
+                var e = ee[s], i = y[e], a = i.getMaxRecruiting(this), n = {
                     habitatID: this.id,
                     unitID: e,
                     maxAmount: a,
@@ -8525,12 +8532,12 @@
             var t;
             switch (this.habitatType) {
                 case 0:
-                    t = Ge[1];
+                    t = Ye[1];
                     break;
                 case 1:
-                    t = Ge[2];
+                    t = Ye[2];
                     if (this.fortressExpansionArray.length >= t.habitatAmount) {
-                        t = Ge[3]
+                        t = Ye[3]
                     }
                     break;
                 default:
@@ -8564,8 +8571,8 @@
             return i
         };
         e.prototype.checkReadness = function (t) {
-            var e = this.isFortressKnowledgeResearched(t.requiredKnowledgeArray), n = this.isAllKnowledgeResearched(), r = this.isAllBuildingUpgaded(), i = n && r, a = this.isResourcesEnought(t.buildResourceDictionary), s = this.isFrotressUpgradeIsInProgress(t.primaryKey), o = !s && e && i && a;
-            return {isResearched: e, isUpgraded: i, isResourcesEnough: a, isInProgress: s, isReadyForBuild: o}
+            var e = this.isFortressKnowledgeResearched(t.requiredKnowledgeArray), n = this.isAllKnowledgeResearched(), r = this.isAllBuildingUpgaded(), i = n && r, a = this.isResourcesEnought(t.buildResourceDictionary), s = this.isFrotressUpgradeIsInProgress(t.primaryKey), o = this.isExpanded(t.habitatAmount), l = !s && e && i && a && o;
+            return {isResearched: e, isUpgraded: i, isResourcesEnough: a, isInProgress: s, isReadyForBuild: l}
         };
         e.prototype.isFortressKnowledgeResearched = function (e) {
             var t = true;
@@ -8582,7 +8589,7 @@
             return t >= Ki.maxAmount[this.publicHabitatType]
         };
         e.prototype.isAllBuildingUpgaded = function () {
-            var t = true, a = f.settings.maxLevels, e = this.habitatBuildings;
+            var t = true, a = d.settings.maxLevels, e = this.habitatBuildings;
             for (var s in e) {
                 var i = e[s].building, n = i.name.toLowerCase().replace(" ", "");
                 if (+i.level < a[n]) {
@@ -8621,6 +8628,10 @@
                 i = translate("This castle is already connected to the following castles: %@", e.join(", "))
             }
             return i
+        };
+        e.prototype.isExpanded = function (t) {
+            t = t || 0;
+            return this.fortressExpansionArray.length >= t
         };
         return e
     }(r.Master);
@@ -8717,7 +8728,7 @@
             return this.durationFactor === .5
         };
         t.prototype.isHalfDurationReached = function () {
-            var e = (this.complete - (new Date - U)) / 1e3;
+            var e = (this.complete - (new Date - P)) / 1e3;
             var t = e - this.durationInSeconds;
             if (t < 0) {
                 t = 0
@@ -8808,13 +8819,13 @@
             };
             for (var n in a) {
                 var o = a[n];
-                t = g[n].clone();
+                t = y[n].clone();
                 t.setCount(o);
                 e.push(t)
             }
-            for (var l in g) {
+            for (var l in y) {
                 var r, i;
-                t = g[l];
+                t = y[l];
                 r = e.filter(s);
                 if (r.length) {
                     continue
@@ -8859,7 +8870,7 @@
             this.imageCategory = "knowledges"
         };
         function s(t) {
-            return _.conv.mapWithDictionary(t, xe)
+            return _.conv.mapWithDictionary(t, Ie)
         }
 
         function i(i, n, r) {
@@ -8886,9 +8897,9 @@
         };
         e.prototype.getEnabled = function () {
             var t = [], a = [], e = this.primaryKey;
-            t = t.concat(i(f, "building", e));
-            t = t.concat(i(g, "units", e));
-            t = t.concat(i(P, "knowledge", e));
+            t = t.concat(i(d, "building", e));
+            t = t.concat(i(y, "units", e));
+            t = t.concat(i(U, "knowledge", e));
             if (this.modifier) {
                 for (var n in this.modifier) {
                     var s = this.modifier[n];
@@ -8917,7 +8928,7 @@
             }
             if (this.requiredKnowledges) {
                 for (var o in this.requiredKnowledges) {
-                    var n = P[this.requiredKnowledges[o]];
+                    var n = U[this.requiredKnowledges[o]];
                     if (n && !n.alreadyResearched(e)) {
                         return false
                     }
@@ -8960,8 +8971,8 @@
         };
         function i(t) {
             var e = null;
-            if (typeof P !== "undefined" && P[t] !== "undefined") {
-                e = P[t]
+            if (typeof U !== "undefined" && U[t] !== "undefined") {
+                e = U[t]
             }
             return e
         }
@@ -8970,7 +8981,7 @@
             return this.durationFactor === .5
         };
         t.prototype.isHalfDurationReached = function () {
-            var e = (this.complete - (new Date - U)) / 1e3;
+            var e = (this.complete - (new Date - P)) / 1e3;
             var i = this.durationInSeconds;
             var t = e - i;
             if (t < 0) {
@@ -9002,6 +9013,7 @@
             identifier: "identifier",
             buildSpeedupCost: "buildSpeedupCost",
             duration: "duration",
+            missionOccurrence: "missionOccurrence",
             unitProductions: "unitProduction",
             unitProductionVariance: "unitProductionVariance",
             unitConsumptions: "unitConsumption",
@@ -9026,12 +9038,12 @@
             }
             s = _.defaultsTo(s, {});
             i = _.defaultsTo(i, {});
-            var h = e.getTavern().missions, v = this.unitConsumptions, p = false;
+            var h = e.getTavern().missions, g = this.unitConsumptions, p = false;
             if (e.getHabitatMission(this.primaryKey)) {
                 return false
             }
-            for (var y in h) {
-                if (h[y].primaryKey === this.primaryKey) {
+            for (var v in h) {
+                if (h[v].primaryKey === this.primaryKey) {
                     p = true;
                     break
                 }
@@ -9055,8 +9067,8 @@
                 if (!n.length) {
                     return false
                 }
-                for (var o = 0, g = n.length; o < g; o++) {
-                    var l = n[o], f = l.count, d = v[l.primaryKey], u = s[l.primaryKey];
+                for (var o = 0, y = n.length; o < y; o++) {
+                    var l = n[o], f = l.count, d = g[l.primaryKey], u = s[l.primaryKey];
                     if (d && typeof u !== "undefined") {
                         f -= u
                     }
@@ -9203,8 +9215,8 @@
             return this.alliance && this.alliance.lastUpdate !== null
         };
         t.prototype.hasAlliancePermission = function (t) {
-            if (t === d.ALL) {
-                return this.alliancePermission === d.ALL
+            if (t === p.ALL) {
+                return this.alliancePermission === p.ALL
             }
             return !!(this.alliancePermission & t)
         };
@@ -9596,18 +9608,18 @@
                 return null
             }
             var e, t = {};
-            t[y.ATTACK_WARNING] = 1;
-            t[y.LOST_FOREIGN_DEFENDER] = 1;
-            t[y.CONQUEST_FAILED] = 2;
-            t[y.CONQUEST] = 2;
-            t[y.TRANSIT_RETURNED] = 3;
-            t[y.DELIVERED_RESOURCES] = 3;
-            t[y.DELIVERED_DEFENSE] = 3;
-            t[y.KNOWLEDGE_RESEARCHED] = 4;
-            t[y.MISSION_FINISHED] = 5;
-            t[y.SPY_FINISHED] = 6;
-            t[y.SPY_CAPTURED] = 6;
-            t[y.BATTLE_ROUND_FINISHED] = -1;
+            t[v.ATTACK_WARNING] = 1;
+            t[v.LOST_FOREIGN_DEFENDER] = 1;
+            t[v.CONQUEST_FAILED] = 2;
+            t[v.CONQUEST] = 2;
+            t[v.TRANSIT_RETURNED] = 3;
+            t[v.DELIVERED_RESOURCES] = 3;
+            t[v.DELIVERED_DEFENSE] = 3;
+            t[v.KNOWLEDGE_RESEARCHED] = 4;
+            t[v.MISSION_FINISHED] = 5;
+            t[v.SPY_FINISHED] = 6;
+            t[v.SPY_CAPTURED] = 6;
+            t[v.BATTLE_ROUND_FINISHED] = -1;
             e = t[i] || null;
             if (e === -1) {
                 e = a === 0 || a === 1 ? 1 : 2
@@ -9650,7 +9662,7 @@
             this.successful = null;
             this.impactDate = null;
             if (typeof t.knowledgeId !== "undefined") {
-                this.knowledge = P[t.knowledgeId]
+                this.knowledge = U[t.knowledgeId]
             }
             if (typeof t.missionId !== "undefined") {
                 this.mission = K[t.missionId]
@@ -10063,13 +10075,13 @@
             };
             for (var n in a) {
                 var o = a[n];
-                t = g[n].clone();
+                t = y[n].clone();
                 t.setCount(o);
                 e.push(t)
             }
-            for (var l in g) {
+            for (var l in y) {
                 var r, i;
-                t = g[l];
+                t = y[l];
                 r = e.filter(s);
                 if (r.length) {
                     continue
@@ -10087,7 +10099,7 @@
             if (!t) {
                 return false
             }
-            var e = g[t];
+            var e = y[t];
             if (e) {
                 return e.clone()
             } else {
@@ -10227,7 +10239,7 @@
         }
 
         function s(t) {
-            return _.conv.mapWithDictionary(t, P)
+            return _.conv.mapWithDictionary(t, U)
         }
 
         t.prototype.setCount = function (t) {
@@ -10373,8 +10385,8 @@
         };
         function i(t) {
             var e = null;
-            if (typeof g !== "undefined" && typeof g[t] !== "undefined") {
-                e = g[t]
+            if (typeof y !== "undefined" && typeof y[t] !== "undefined") {
+                e = y[t]
             }
             return e
         }
@@ -10383,7 +10395,7 @@
             return this.durationFactor === .5
         };
         t.prototype.isHalfDurationReached = function () {
-            var e = (this.complete - (new Date - U)) / 1e3;
+            var e = (this.complete - (new Date - P)) / 1e3;
             var i = this.durationPerUnitInSeconds * this.orderAmount;
             var t = e - i;
             if (t < 0) {
@@ -10399,7 +10411,7 @@
         tutorialPointOffset: 20,
         CDNUrl: "http://cdn.lordsandknights.com/"
     });
-    Z.TrakingEvent = function (t, e) {
+    J.TrakingEvent = function (t, e) {
         if (t.type === "world" && e.type === "world") {
             if (t.success === true && e.success === true) {
                 return t.completedAt - e.completedAt
@@ -10428,7 +10440,7 @@
             return 1
         }
     };
-    Z.ReservationList = function (t, e) {
+    J.ReservationList = function (t, e) {
         var i = 0;
         if (t.sharedAlliance === false && e.sharedAlliance === false) {
             i = t.title > e.title ? +1 : -1
@@ -10445,7 +10457,7 @@
         }
         return i
     };
-    Z.AllianceList = function (t, e) {
+    J.AllianceList = function (t, e) {
         var i = 0;
         if (t.relationship === e.relationship) {
             i = t.name > e.name ? +1 : -1
@@ -10454,10 +10466,10 @@
         }
         return i
     };
-    Z.AllianceClash = function (t, e) {
+    J.AllianceClash = function (t, e) {
         return t.eventDate < e.eventDate ? -1 : 1
     };
-    Z.expansionCandidats = function (t, e) {
+    J.expansionCandidats = function (t, e) {
         var i = 0;
         if (t.isOwn && e.isOwn) {
             if (t.isReady && e.isReady || t.isReady === false && e.isReady === false) {
@@ -10503,8 +10515,8 @@
             this.aniamtionIsInProgressFlag = false
         };
         return t
-    }(z);
-    Ui = function (i) {
+    }(G);
+    Pi = function (i) {
         utils.__extends(e, ti);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
@@ -10536,7 +10548,7 @@
                 this.view.pointOfZoomOffset.y = this.mouse.y / t
             }
         };
-        e.prototype["u6y9&srd"] = function (t, e) {
+        e.prototype["HyeBMKAV"] = function (t, e) {
             return this.getTileNormalMap(t, e)
         };
         e.prototype.getTileNormalMap = function (o, s) {
@@ -10544,7 +10556,7 @@
             var i;
             var n, h;
             var r;
-            var g = this.notify("YrKz7XU6", this);
+            var y = this.notify("AN4-Dk1u", this);
             var p = [1, 1, 0, 0, 0, 0, 0, 0, 2, 2, 0];
             var f = p[s.bgTileTyp];
             if (!o.images) {
@@ -10604,7 +10616,7 @@
                     }
                     for (i = 0; i < t.habitate[n].externalHabitatUnits.length; i++) {
                         r = t.habitate[n].externalHabitatUnits[i];
-                        if (r.battleType == k.ATTACKER && r.habitat.id == s.habitatID) {
+                        if (r.battleType == D.ATTACKER && r.habitat.id == s.habitatID) {
                             e.fgColor = R.ATTACKER.FG;
                             e.bgColor = R.ATTACKER.BG;
                             e.blinking = true;
@@ -10614,7 +10626,7 @@
                     }
                     for (i = 0; i < t.habitate[n].habitatUnits.length; i++) {
                         r = t.habitate[n].habitatUnits[i];
-                        if (r.battleType == k.ATTACKER && r.habitat.id == s.habitatID) {
+                        if (r.battleType == D.ATTACKER && r.habitat.id == s.habitatID) {
                             e.fgColor = R.ATTACKED.FG;
                             e.bgColor = R.ATTACKED.BG;
                             e.blinking = true;
@@ -10636,7 +10648,7 @@
                 if (!t.hasAlliance()) {
                     return {image: a, info: e}
                 }
-                var d = e.player.alliance.id, y;
+                var d = e.player.alliance.id, v;
                 if (t.alliance && t.alliance.diplomacyToArray) {
                     var u = t.alliance.diplomacyToArray;
                     for (i = 0; i < u.length; i++) {
@@ -10677,14 +10689,14 @@
             }
             return {image: a, info: e}
         };
-        e.prototype["6of)9Mmk"] = function (t) {
+        e.prototype["&ll(EYgA"] = function (t) {
             if (this.blinkingTimer) {
                 return
             }
-            this.blinkingTimer = new gi(this, {interval: this.blinkingSpeed, useDOM: false});
+            this.blinkingTimer = new yi(this, {interval: this.blinkingSpeed, useDOM: false});
             this.blinkingTimer.add(t)
         };
-        e.prototype["00inBGFA"] = function () {
+        e.prototype["smbgw0qi"] = function () {
             if (this.blinkingTimer) {
                 this.blinkingTimer.stop()
             }
@@ -10708,13 +10720,13 @@
                 this.view.zoom = t
             }
         };
-        e.prototype["U7o3QmDP"] = function () {
-            var t = e.__super__["U7o3QmDP"].apply(this, arguments);
+        e.prototype["jWf&hJpy"] = function () {
+            var t = e.__super__["jWf&hJpy"].apply(this, arguments);
             if (t !== null) {
-                this.notify("EE)XdOZG", this, {x: t.mapX, y: t.mapY})
+                this.notify("XSMaUxne", this, {x: t.mapX, y: t.mapY})
             }
         };
-        e.prototype["u6y9&srd"] = function (t, e) {
+        e.prototype["HyeBMKAV"] = function (t, e) {
             return this.getTileOverviewMap(t, e)
         };
         e.prototype.getTileOverviewMap = function (l, r) {
@@ -10795,9 +10807,9 @@
             }
             s = {title: e, content: r, modal: true, confirmButton: n, success: i, failure: a, uniqueKey: o};
             if (typeof t.controller !== "undefined") {
-                t.notify("SzIzPcz%", t, s)
+                t.notify("pQnJoWLu", t, s)
             } else {
-                t["SzIzPcz%"](t, s)
+                t["pQnJoWLu"](t, s)
             }
         }
 
@@ -10813,7 +10825,7 @@
         if (!t.helpers) {
             t.helpers = {}
         }
-        G.getRelationshipString = function (t) {
+        Y.getRelationshipString = function (t) {
             var e = translate("Neutral");
             if (t === 2) {
                 e = translate("Allies")
@@ -10826,7 +10838,7 @@
             }
             return e
         };
-        G.getRelationshipImage = function (t) {
+        Y.getRelationshipImage = function (t) {
             var e = "neutral";
             if (t === 2) {
                 e = "ally"
@@ -10867,7 +10879,7 @@
             t.add(i);
             if (s) {
                 t.draw();
-                if (typeof t["-nc-59bb"] !== "undefined")t["-nc-59bb"]()
+                if (typeof t["6%wiVnzB"] !== "undefined")t["6%wiVnzB"]()
             }
             return i
         };
@@ -10878,7 +10890,7 @@
             return {controller: t, view: o, datasource: r}
         };
         e.prototype.createProfileWindow = function () {
-            var t = this._join(Y.Controller, {name: "Player"}, Y.DataSource, Y.View, {
+            var t = this._join(z.Controller, {name: "Player"}, z.DataSource, z.View, {
                 styles: "win profile",
                 name: "profileView",
                 headlineContent: "<span>" + translate("Player") + "</span>"
@@ -10924,10 +10936,10 @@
             return t.controller
         };
         e.prototype.createBuildingsWindow = function () {
-            var t = this._join(ke.Controller, {
+            var t = this._join(De.Controller, {
                 name: "Buildings",
                 group: "globalActionList"
-            }, ke.DataSource, ke.View, {
+            }, De.DataSource, De.View, {
                 styles: "win buildingList",
                 headlineContent: "<span>" + h.getValueOf("Running Building Upgrades") + "</span>",
                 minimumWindowHeight: 100
@@ -10960,10 +10972,10 @@
             return t.controller
         };
         e.prototype.createGlobalMarketWindow = function () {
-            var t = this._join(J.Controller, {
+            var t = this._join(Z.Controller, {
                 name: "globalMarket",
                 group: "globalActionList"
-            }, J.DataSource, J.Window, {
+            }, Z.DataSource, Z.Window, {
                 styles: "win globalMarket",
                 headlineContent: translate("Market"),
                 minimumWindowHeight: 166
@@ -10984,10 +10996,10 @@
             return t.controller
         };
         e.prototype.createGlobalBuffsWindow = function () {
-            var t = this._join(ve.Controller, {
+            var t = this._join(ge.Controller, {
                 name: "globalBuffs",
                 group: "globalActionList"
-            }, ve.DataSource, ve.Window, {
+            }, ge.DataSource, ge.Window, {
                 styles: "win globalBuffs",
                 headlineContent: translate("Banners"),
                 minimumWindowHeight: 145
@@ -11032,10 +11044,10 @@
             return t.controller
         };
         e.prototype.createCastleListWindow = function () {
-            var t = this._join(B.Controller, {
+            var t = this._join(H.Controller, {
                 name: "castleList",
                 group: "globalActionList"
-            }, B.DataSource, B.View, {
+            }, H.DataSource, H.View, {
                 styles: "win castleList",
                 headlineContent: "<span>" + h.getValueOf("Habitat list") + "</span>",
                 hasSortBar: true,
@@ -11045,10 +11057,10 @@
             return t.controller
         };
         e.prototype.createChooseCastleWindow = function (t) {
-            var e = this._join(B.Controller, {
+            var e = this._join(H.Controller, {
                 name: "createChooseCastleWindow",
                 group: "globalCastleList"
-            }, B.DataSource, B.View, {
+            }, H.DataSource, H.View, {
                 styles: "win castleList",
                 headlineContent: "<span>" + h.getValueOf("Habitat list") + "</span>",
                 hasSortBar: true,
@@ -11060,15 +11072,15 @@
             return e.controller
         };
         e.prototype.createSelectCastleWindow = function (t) {
-            var e = this._join(B.Controller, {
+            var e = this._join(H.Controller, {
                 name: "selectCastle_" + t.habitat.id,
                 group: "lastRaidController"
-            }, B.DataSource, B.View, {
+            }, H.DataSource, H.View, {
                 styles: "win castleList",
                 headlineContent: "<span>" + h.getValueOf("Habitat list") + "</span>",
                 hasSortBar: true,
                 showSummary: false,
-                castleSelectMessage: "4PhQPW7B",
+                castleSelectMessage: "oGIHT%3e",
                 foreignHabitat: t.habitat
             });
             e.datasource.setForeignHabitat(t.habitat);
@@ -11079,11 +11091,11 @@
             if (!t.habitat.name) {
                 t.habitat.name = translate("Renegade") + " " + t.habitat.id
             }
-            var e = this._join(D.LastRaidController, {
+            var e = this._join(k.LastRaidController, {
                 name: "ForeignHabitat_lastRaid_" + t.habitat.id,
                 group: "lastRaidController",
                 habitat: t.habitat
-            }, D.DataSource, D.LastRaidWindow, {
+            }, k.DataSource, k.LastRaidWindow, {
                 styles: "win lastRaid",
                 headlineContent: t.habitat.name + " (" + t.habitat.points + ")",
                 habitat: t.habitat,
@@ -11096,14 +11108,14 @@
             if (!t.foreignHabitat.name) {
                 t.foreignHabitat.name = translate("Renegade") + " " + t.foreignHabitat.id
             }
-            var e = this._join(D.ActionController, {
+            var e = this._join(k.ActionController, {
                 name: t.controllerName,
                 group: "ForeignHabitatActionController",
                 habitat: t.foreignHabitat,
                 exclusionIDs: t.exclusionIDs,
                 miniController: t.controller,
                 syncTransit: t.syncTransit
-            }, D.DataSource, D.ActionWindow, {
+            }, k.DataSource, k.ActionWindow, {
                 styles: "win foreignAction " + t.action,
                 action: t.action,
                 headlineContent: utils.sanitize(t.foreignHabitat.name) + " (" + t.foreignHabitat.points + ")",
@@ -11124,12 +11136,12 @@
             if (!t.name) {
                 t.name = translate("Renegade") + " " + t.id
             }
-            var e = this._join(D.Controller, {
+            var e = this._join(k.Controller, {
                 habitat: t,
                 foreign: true,
                 name: t.id,
                 group: "ForeignHabitatController"
-            }, D.DataSource, D.Window, {
+            }, k.DataSource, k.Window, {
                 styles: "win foreignHabitat",
                 habitat: t,
                 hidden: false,
@@ -11169,8 +11181,8 @@
             return e.controller
         };
         e.prototype.createSettingsWindow = function () {
-            var t = this.notify("qkIndvot", this);
-            var e = this._join(Ne.Controller, {name: "Settings"}, Y.DataSource, Ne.Window, {
+            var t = this.notify("bqLV9Zt_", this);
+            var e = this._join(Ne.Controller, {name: "Settings"}, z.DataSource, Ne.Window, {
                 styles: "win settingsWindow",
                 name: "Settings",
                 headlineContent: "<span>" + translate("Preferences") + "</span>",
@@ -11180,10 +11192,10 @@
             return e.controller
         };
         e.prototype.createEventWindow = function (t) {
-            var e = this._join(ge.Controller, {
+            var e = this._join(ye.Controller, {
                 name: "eventWindow" + t.id,
                 group: "eventPopUp"
-            }, ge.DataSource, ge.Window, {
+            }, ye.DataSource, ye.Window, {
                 styles: "papyrusWindow eventWindow",
                 resizeable: false,
                 closeable: false,
@@ -11193,21 +11205,21 @@
             return e.controller
         };
         return e
-    }(z);
+    }(G);
     (function () {
         function i() {
             return _.storeLocal.createKey("lr")
         }
 
         var e = {};
-        e["u_kfVLf9"] = function (e, t) {
+        e["jNrGbro&"] = function (e, t) {
             _.storeLocal.setJSON(i(), t)
         };
-        e["hv0qkxeD"] = function () {
+        e["uoOeS_pu"] = function () {
             return _.storeLocal.getJSON(i())
         };
-        e["phIT(daK"] = function () {
-            var i = e["hv0qkxeD"]();
+        e["BkuR(17Z"] = function () {
+            var i = e["uoOeS_pu"]();
             if (i !== null) {
                 var n = i.sourceHabID, s = _.try(t, "habitate." + n + ".stats.units.own");
                 if (!s) {
@@ -11223,7 +11235,7 @@
             }
             return false
         };
-        e["JpnUlvf-"] = function (i) {
+        e["pyQe%Au6"] = function (i) {
             var e = i.foreignHabitat;
             var a = "ForeignHabitat_lastRaid_" + e.id;
             var t = this.findControllerByName(a);
@@ -11231,9 +11243,9 @@
                 t.view.show(!t.view.hidden);
                 return t
             }
-            this.windowFactory.createLastRaidWindow({habitat: e, lastRaid: this["hv0qkxeD"]()})
+            this.windowFactory.createLastRaidWindow({habitat: e, lastRaid: this["uoOeS_pu"]()})
         };
-        e["%jk-hJc4"] = function (e) {
+        e["uahWB6Sn"] = function (e) {
             var i = e.habitat.id, t = this.findControllerByName("selectCastle_" + i);
             if (t !== null) {
                 if (t.view.hidden) {
@@ -11245,12 +11257,12 @@
             }
             this.windowFactory.createSelectCastleWindow({habitat: e.habitat})
         };
-        e["4PhQPW7B"] = function (n, e) {
+        e["oGIHT%3e"] = function (n, e) {
             var a = e.id;
             var s = e.foreignHabitat;
-            var t = this["hv0qkxeD"]();
+            var t = this["uoOeS_pu"]();
             t.sourceHabID = a;
-            this["u_kfVLf9"](null, t);
+            this["jNrGbro&"](null, t);
             var i = this.findControllerByName("ForeignHabitat_lastRaid_" + s.id);
             if (!i) {
                 return
@@ -11283,9 +11295,9 @@
         e.prototype._timeoutError = function (t) {
             utils.dialog.alert(t, "No response from server (timeout)", "Error", function () {
                 if (t.controller) {
-                    t.controller["j)909BLe"]()
+                    t.controller["-_bqDYa1"]()
                 } else {
-                    t["j)909BLe"]()
+                    t["-_bqDYa1"]()
                 }
             })
         };
@@ -11324,22 +11336,22 @@
                 e[t.id] = s.getHash()
             }
             e.PropertyListVersion = Si;
-            e.clientPlatform = zi;
-            this._informAllChildControllers(a, "NbKCY7mj");
+            e.clientPlatform = Gi;
+            this._informAllChildControllers(a, "7GVwxkqP");
             return e
         };
         e.prototype.success = function (t, e, i) {
             if (t.controller) {
                 t.controller = this.controller
             }
-            this._informAllChildControllers(t, "gl%9o7sY");
+            this._informAllChildControllers(t, "i8j%qM54");
             i.call(t, e)
         };
         e.prototype.softError = function (t, e, i) {
             if (t.controller) {
                 t.controller = this.controller
             }
-            this._informAllChildControllers(t, "gl%9o7sY");
+            this._informAllChildControllers(t, "i8j%qM54");
             if (e.clientCommand) {
                 this._handleClientCommand(t, e)
             } else {
@@ -11372,7 +11384,7 @@
             }
             if (!this.showNoSessionDialog) {
                 if (!!~i.indexOf(e.error)) {
-                    this.notify("MsYB6W-h", this)
+                    this.notify("H7vOs_Ce", this)
                 }
                 if (this.callbackOnSoftError && errorCallback) {
                     errorCallback.call(a, e)
@@ -11383,7 +11395,7 @@
                 utils.dialog.alert(this.controller, t.content, t.title, function () {
                     window.logout()
                 });
-                this.notify("MsYB6W-h", this)
+                this.notify("H7vOs_Ce", this)
             } else {
                 utils.dialog.alert(this.controller, t.content, t.title, null)
             }
@@ -11392,7 +11404,7 @@
             if (t.controller) {
                 t.controller = this.controller
             }
-            this._informAllChildControllers(t, "gl%9o7sY");
+            this._informAllChildControllers(t, "i8j%qM54");
             if (e) {
                 e === "timeout" ? this._timeoutError(t, e) : this._genericError(t, e)
             }
@@ -11404,25 +11416,25 @@
         e.prototype._getActionFunction = function (t) {
             if (t & ei.updateSession) {
                 return function () {
-                    this.notify("j)909BLe", this)
+                    this.notify("-_bqDYa1", this)
                 }.bind(this)
             }
             if (t & ei.logout) {
-                this.notify("MsYB6W-h", this);
+                this.notify("H7vOs_Ce", this);
                 return function () {
                     window.logout()
                 }.bind(this)
             }
             if (t & ei.clearCache) {
                 return function () {
-                    this.notify("FicR8P_d", this)
+                    this.notify("4TD&&1Ol", this)
                 }.bind(this)
             }
             return null
         };
         return e
-    }(z);
-    vi = function (i) {
+    }(G);
+    gi = function (i) {
         "use strict";
         utils.__extends(t, i);
         var e = 2, a = 13;
@@ -11469,11 +11481,11 @@
                     a.click()
                 }
             } else if (t.length > e) {
-                this.notify("C4rOPYeq", this, {query: t})
+                this.notify("8sDLoa9F", this, {query: t})
             }
         };
         t.prototype.buttonClicked = function (t) {
-            this.notify("mF4s7qEY", this, {type: t.data("type")})
+            this.notify(")uagZWVK", this, {type: t.data("type")})
         };
         t.prototype.getEvents = function () {
             var e = t.__super__.getEvents.apply(this, arguments);
@@ -11537,13 +11549,13 @@
             return e
         };
         t.prototype.openPlayerProfile = function (t) {
-            this.notify("BWhFjW-%", this, {playerID: t.data("id")})
+            this.notify("oC)Bwm7V", this, {playerID: t.data("id")})
         };
         t.prototype.arrowButtonClicked = function (t) {
-            this.notify("zsvB7hs&", this, {page: +t.data("page")})
+            this.notify("utcrRntJ", this, {page: +t.data("page")})
         };
         t.prototype.checkboxClicked = function (t) {
-            this.notify("mUyfCWPw", this, {checkbox: t, playerID: t.data("id")})
+            this.notify("14MNP9Ot", this, {checkbox: t, playerID: t.data("id")})
         };
         t.prototype.dataUpdate = function (e, t) {
             this.templateData = t;
@@ -11668,7 +11680,7 @@
             var i = "";
             var a = e;
             if (this.icon) {
-                i = this.notify("3s(kBgiI", this, {imageName: this.icon, imageCategory: this.iconCategory});
+                i = this.notify("Z-XGNYVU", this, {imageName: this.icon, imageCategory: this.iconCategory});
                 this.wrapper.styles += " with-icon"
             }
             if (this.iconHover !== null) {
@@ -11697,7 +11709,7 @@
             this.addOption("maxCapacity", 0);
             this.addOption("onlyMax", false);
             this.addOption("capacityButton", false);
-            this.addOption("capacityButtonMessage", "sEquWZGu");
+            this.addOption("capacityButtonMessage", ")pw4)Kaz");
             this.setOptions(e)
         }
 
@@ -11705,7 +11717,7 @@
             var i, t = "";
             if (this.showIcon === true) {
                 this.createSubview(this, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "capacity",
                         imageCategory: "icons"
                     }), styles: "capacityIcon icon"
@@ -11734,7 +11746,7 @@
         };
         return t
     }(e);
-    Xi = function (i) {
+    ji = function (i) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -11748,7 +11760,7 @@
                 return
             }
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "dayIcon",
                     imageCategory: "icons"
                 })
@@ -11760,7 +11772,7 @@
                 formatFunction: utils.date.formatDateTime
             }, q);
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "nightIcon",
                     imageCategory: "icons"
                 })
@@ -11820,15 +11832,15 @@
         }
         return {clear: i, $bar: e, $tabs: t}
     };
-    Be = function (e) {
+    He = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.styleArray.push("editControls");
             this.addOption("name", "editControls", true);
             this.addOption("hidden", true, true);
-            this.addOption("cmDelete", "1DfX0LnX");
-            this.addOption("cmSelect", "eQu_xVWE");
+            this.addOption("cmDelete", "ks4PL(lT");
+            this.addOption("cmSelect", "OBIEVAdp");
             this.addOption("deleteText", "Delete");
             this.addOption("count", 0);
             this.setOptions(e)
@@ -11840,12 +11852,12 @@
                 content: this._deleteContents(),
                 hover: translate("Delete"),
                 clickMessage: this.cmDelete
-            }, p);
+            }, f);
             this.btnAll = this.createSubview(this, {
                 name: "all",
                 content: translate("All"),
                 clickMessage: this.cmSelect
-            }, p);
+            }, f);
             this.updateCounter()
         };
         t.prototype.updateCounter = function (t) {
@@ -11863,7 +11875,7 @@
         };
         return t
     }(e);
-    ki = function (i) {
+    Di = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
@@ -11911,7 +11923,7 @@
                 activeTypes: ["player", "noob_vacation"],
                 hover: translate("Defend Habitat")
             });
-            if (this.controller["phIT(daK"]() === true) {
+            if (this.controller["BkuR(17Z"]() === true) {
                 e.push({
                     icon: this.themeController.getImage("lastRaid", "icons"),
                     data: {action: "lastRaid"},
@@ -11989,7 +12001,7 @@
             var e = this.controller.findControllerByName("castleHover"), t = u.habitat, o = this.controller.findControllerByName("map"), h = o.view.getTileCenterCoords(t.mapX, t.mapY), c = {
                 x: -10,
                 y: -5
-            }, d = o.view.zoom, i = this.notify("ZT9mJF71", this, t), s;
+            }, d = o.view.zoom, i = this.notify("REAh)4Ju", this, t), s;
             if (e !== null) {
                 this.controller.removeSubController(e);
                 e.view.deleteAllSubviews();
@@ -12001,15 +12013,15 @@
             if (t.noobProtectionEndDate) {
                 n = t.noobProtectionEndDate < new Date
             } else {
-                n = this.notify("VhaIj0_A", this, t.creationDate)
+                n = this.notify("cHRPueWe", this, t.creationDate)
             }
             if (i === "player" && (n !== "" || t.player.isOnVacation.toString() === "true")) {
                 i = "noob_vacation"
             }
             s = this.getHoverCircles(i);
-            var l = "h4LimkDm";
+            var l = "ftwphcGZ";
             if (i === "own") {
-                l = "9obJO5Cf"
+                l = "_w32GmpP"
             }
             if (t.player && !t.player.alliance) {
                 s.shift()
@@ -12034,7 +12046,7 @@
             return a
         };
         return e
-    }(z);
+    }(G);
     $.gaevents = {
         liveTracking: true, pagePrefix: false, isActive: function () {
             return typeof _gaq !== "undefined"
@@ -12135,7 +12147,7 @@
             t.css("top", "auto")
         };
         return e
-    }(Ue);
+    }(Pe);
     se.HelpButton = function (e) {
         utils.__extends(t, e);
         function t() {
@@ -12187,16 +12199,16 @@
                 var i = this.createSubview(this, {
                     name: t,
                     styles: "bottombarImageContainer " + r,
-                    clickMessage: "0o7%5zJv"
+                    clickMessage: "GXdBIZPw"
                 });
                 var e = i.createSubview(i, {styles: "imageElement"});
-                var o = this.notify("3s(kBgiI", this, {imageName: t, imageCategory: n});
+                var o = this.notify("Z-XGNYVU", this, {imageName: t, imageCategory: n});
                 i.data = {pressed: this.controller.state[t]};
                 if (i.data.pressed) {
                     i.styleArray.push("pressed")
                 }
                 if (this.category === "bottombar") {
-                    var l = this.notify("cXGnaIHP", this, {name: t});
+                    var l = this.notify("XE35pfz1", this, {name: t});
                     var s = t;
                     if (s === "Settings") {
                         s = "Preferences"
@@ -12208,7 +12220,7 @@
                 } else {
                     e.styles = "resImg";
                     e.createSubview(e, {content: o});
-                    e.createSubview(e, {content: this.notify("Fx1XE8UH", this, {resource: t}), styles: "resValues"})
+                    e.createSubview(e, {content: this.notify("Z0tdZeGK", this, {resource: t}), styles: "resValues"})
                 }
             }
         };
@@ -12235,7 +12247,7 @@
             }
         }
 
-        t.prototype["0o7%5zJv"] = function (t) {
+        t.prototype["GXdBIZPw"] = function (t) {
             if (this.state[t.name]) {
                 t.node().removeClass("pressed");
                 t.data.pressed = false;
@@ -12246,10 +12258,10 @@
                 this.state[t.name] = true
             }
             if (t.name === "Logout") {
-                this.notify("Ko-MDOi)", this);
+                this.notify("nxLKo6gw", this);
                 return
             }
-            this.notify("aH1WfGjW", this, {name: t.name})
+            this.notify(")_0HtzDq", this, {name: t.name})
         };
         t.prototype.updateBottomBarButtons = function (e) {
             if (this.state[e]) {
@@ -12271,10 +12283,10 @@
                 }
             }
         };
-        t.prototype["Fx1XE8UH"] = function (e, t) {
+        t.prototype["Z0tdZeGK"] = function (e, t) {
             return this.datasource.getResourcesAmount(t.resource)
         };
-        t.prototype["cXGnaIHP"] = function (t, e) {
+        t.prototype["XE35pfz1"] = function (t, e) {
             switch (e.name) {
                 case"castleList":
                     return this.datasource.getCountOfAttackedHabitats();
@@ -12292,7 +12304,7 @@
             this.view.dataUpdate(t, e)
         };
         return t
-    }(Ze);
+    }(Je);
     se.DataSource = function (s) {
         utils.__extends(e, s);
         function e() {
@@ -12358,7 +12370,7 @@
         }
 
         return e
-    }(I);
+    }(x);
     pe.Window = function (e) {
         utils.__extends(t, e);
         function t(e, i) {
@@ -12386,7 +12398,7 @@
             e.css("top", 0)
         };
         return t
-    }(Ue);
+    }(Pe);
     pe.View = function (i) {
         utils.__extends(e, i);
         function e(t, i) {
@@ -12403,8 +12415,8 @@
             e.push(["TroopOverview", "Troop overview"]);
             var r = parseInt(l.massBuffCastleCount, 10) || 2, s = false;
             s = _.filter(_.toArray(t.habitate), function (t) {
-                return t.getSortedBuffs().length
-            }).length > 0;
+                    return t.getSortedBuffs().length
+                }).length > 0;
             if (i >= r && l.activationOfBuffs && s) {
                 e.push(["globalBuffs", "Banners"])
             } else {
@@ -12465,10 +12477,10 @@
                 var e = this.createSubview(this, {
                     name: this.imageArray[t][0],
                     styles: "topbarImageContainer",
-                    clickMessage: "0o7%5zJv"
+                    clickMessage: "GXdBIZPw"
                 });
                 var i = e.createSubview(e, {styles: "imageElement"});
-                var s = this.notify("3s(kBgiI", this, {imageName: this.imageArray[t][0], imageCategory: "bottombar"});
+                var s = this.notify("Z-XGNYVU", this, {imageName: this.imageArray[t][0], imageCategory: "bottombar"});
                 e.data = {pressed: this.controller.state[this.imageArray[t][0]]};
                 if (e.data.pressed === true) {
                     e.styleArray.push("pressed")
@@ -12479,7 +12491,7 @@
                     lazyHoverOptions: {text: this.imageArray[t][1]}
                 }, F);
                 if (this.imageArray[t][0] == "castleList") {
-                    var a = this.notify("dIrVeZkX", this);
+                    var a = this.notify("9%p2OAry", this);
                     if (a > 0) {
                         i.createSubview(i, {content: a, styles: "badgeValues"})
                     }
@@ -12507,7 +12519,7 @@
         e.prototype.dataUpdate = function (t, e) {
             this.view.dataUpdate(t, e)
         };
-        e.prototype["0o7%5zJv"] = function (t) {
+        e.prototype["GXdBIZPw"] = function (t) {
             if (t.parent.mainButton) {
                 if (this.state[t.name]) {
                     t.node().removeClass("pressed");
@@ -12519,7 +12531,7 @@
                     this.state[t.name] = true
                 }
             }
-            this.notify("aH1WfGjW", this, {name: t.name})
+            this.notify(")_0HtzDq", this, {name: t.name})
         };
         e.prototype.updateTopBarButtons = function (e) {
             if (utils.dict.size(t.habitate) === 1) {
@@ -12552,7 +12564,7 @@
                 }
             }
         };
-        e.prototype["dIrVeZkX"] = function () {
+        e.prototype["9%p2OAry"] = function () {
             var e = 0;
             for (var i in t.habitate) {
                 if (t.habitate[i].isHabitatAttacked()) {
@@ -12564,9 +12576,9 @@
             }
         };
         return e
-    }(Ze);
-    mi = function (d) {
-        utils.__extends(e, d);
+    }(Je);
+    mi = function (p) {
+        utils.__extends(e, p);
         utils.mixin(e, V.gameController.lastRaid);
         function e() {
             e.__super__.constructor.apply(this, arguments);
@@ -12591,7 +12603,7 @@
         }
 
         var i = 0;
-        x = false;
+        I = false;
         e.prototype.notifyProxy = function (e, i, a, s) {
             var t = this.checkTutorialMessages(e);
             if (t !== true && this[e]) {
@@ -12617,10 +12629,10 @@
             }
             return false
         };
-        e.prototype["t1lXY8hf"] = function () {
+        e.prototype["J%5iNxCh"] = function () {
             this.openFirstHabitat()
         };
-        e.prototype["xEp)9xJ9"] = function () {
+        e.prototype["(uxH&&1J"] = function () {
             this.openFirstHabitat()
         };
         e.prototype.initTutorial = function () {
@@ -12669,7 +12681,7 @@
             this.checkSuccesEvents();
             this.checkPendingEvents()
         };
-        e.prototype["uwF%qusA"] = function (t, e) {
+        e.prototype["DTuCd2bq"] = function (t, e) {
             if (typeof t === "undefined") {
                 return
             }
@@ -12693,7 +12705,7 @@
         e.prototype.checkSuccesEvents = function () {
             var e = 0, i = 0;
             if (typeof a !== "undefined" && a.trackingEvents) {
-                a.trackingEvents.sort(Z.TrakingEvent);
+                a.trackingEvents.sort(J.TrakingEvent);
                 for (var t = 0, s = a.trackingEvents.length; t < s; t++) {
                     var n = a.trackingEvents[t];
                     if (n.success) {
@@ -12713,7 +12725,7 @@
                     var n = t.pendingEventArray[e];
                     var i = a.trackableEvents[n];
                     if (i) {
-                        this["uwF%qusA"](i);
+                        this["DTuCd2bq"](i);
                         return false
                     }
                 }
@@ -12721,11 +12733,11 @@
             }
             return true
         };
-        e.prototype["Hg_BGJOV"] = function (e) {
+        e.prototype["Cw9F&nH9"] = function (e) {
             var t = this.findControllerByName("createChooseCastleWindow"), i;
             if (typeof t !== "undefined" && t && t.group === "globalCastleList") {
                 t.view.caller = e;
-                t.view.castleSelectMessage = "_guK27)X";
+                t.view.castleSelectMessage = "1J7l(HbP";
                 if (t.view.hidden === true) {
                     t.view.show(false)
                 } else {
@@ -12734,10 +12746,10 @@
                 t.datasource.modelUpdate();
                 return t
             }
-            i = this.windowFactory.createChooseCastleWindow.call(this.windowFactory, {message: "_guK27)X", caller: e});
+            i = this.windowFactory.createChooseCastleWindow.call(this.windowFactory, {message: "1J7l(HbP", caller: e});
             return i
         };
-        e.prototype["_guK27)X"] = function (t, e) {
+        e.prototype["1J7l(HbP"] = function (t, e) {
             var i = this.findControllerByName("createChooseCastleWindow");
             if (e) {
                 a.eventsSetting.rewardDestination = e
@@ -12747,7 +12759,7 @@
             }
             i.view.hide()
         };
-        e.prototype["0YP-io%3"] = function () {
+        e.prototype["vcXO1R&i"] = function () {
             if (!this.mapLoadedInitial) {
                 this.openFirstHabitat();
                 this.showStaticUI();
@@ -12755,7 +12767,7 @@
             }
             this.initEvents()
         };
-        e.prototype["qsBGtsBz"] = function (e) {
+        e.prototype["cfdiF6Wv"] = function (e) {
             if (!this.tutorialController || !this.tutorialController.isActive()) {
                 return
             }
@@ -12765,64 +12777,64 @@
             }
             this.tutorialController.completeStep(e)
         };
-        e.prototype["5gDHtT_N"] = function (e, i, a) {
+        e.prototype["x2x7Uarm"] = function (e, i, a) {
             if (t.habitate && e.name !== "" && t.habitate[e.name] && !!~this.openHabWindows.indexOf(e.name)) {
                 this.openHabWindows.splice(this.openHabWindows.indexOf(e.name), 1);
                 this.checkAtmoSound()
             }
-            i["5gDHtT_N"].apply(e, a)
+            i["x2x7Uarm"].apply(e, a)
         };
-        e.prototype["Z04XvT7k"] = function (e, t) {
+        e.prototype["v2v6tJij"] = function (e, t) {
             var i = t && t.force ? t.force : false;
             if (!e) {
                 return
             }
             e.slideOut({forceToolbar: i})
         };
-        e.prototype["DGiiS)m4"] = function (t, e) {
+        e.prototype["z4nJtGuw"] = function (t, e) {
             if (t.view.type === "overview") {
                 return
             }
             this.createHabitatWindow(e)
         };
         e.prototype.openFirstHabitat = function () {
-            var i = typeof x !== "undefined" && x === true;
+            var i = typeof I !== "undefined" && I === true;
             if (i) {
                 return
             }
-            var e = this["QB%fhFep"](null, t.getSortedHabitate()[0].id);
+            var e = this["%T)kNhIc"](null, t.getSortedHabitate()[0].id);
             e.updatePosition({x: 20, y: $(window).height() / 2 - $("#" + e.view.id).height() / 2});
             e.view.liveUpdate()
         };
-        e.prototype["QB%fhFep"] = function (a, i) {
+        e.prototype["%T)kNhIc"] = function (a, i) {
             var e = t.habitate[i];
             e.player = t;
             return this.createHabitatWindow(e)
         };
         e.prototype.handleHabitatAction = function (t, e) {
-            var i = this["ZT9mJF71"](null, t);
-            var a = x && (typeof mTutorialFreeCastle !== "undefined" && mTutorialFreeCastle === true);
+            var i = this["REAh)4Ju"](null, t);
+            var a = I && (typeof mTutorialFreeCastle !== "undefined" && mTutorialFreeCastle === true);
             if (a) {
                 return
             }
             if (e === "copyCastleLink") {
-                var s = this["TVwAjJ5A"](null, {coordinates: {x: t.mapX, y: t.mapY}});
-                this["xCzXgU2u"](null, s);
+                var s = this["SswFkNj1"](null, {coordinates: {x: t.mapX, y: t.mapY}});
+                this["1EMjIwLd"](null, s);
                 return true
             }
             if (e === "markCastle") {
-                this["5V%JaJ8W"](null, {habitat: t});
+                this["SYCOIbyA"](null, {habitat: t});
                 return true
             }
             if (e === "toggleHabitatReservation") {
-                this["&S(&Ah0z"](t);
+                this["_xwSfwKa"](t);
                 return true
             }
             if (e === "showPlayer") {
                 if (i === "own") {
                     this.windowFactory.createProfileWindow()
                 } else if (i === "player") {
-                    this["FZpvdvBU"](null, t.player)
+                    this["i5I1OIPu"](null, t.player)
                 }
                 return true
             }
@@ -12835,20 +12847,20 @@
                 return true
             }
             if (e === "centerCastle") {
-                this["EE)XdOZG"](null, {x: +t.mapX, y: +t.mapY});
+                this["XSMaUxne"](null, {x: +t.mapX, y: +t.mapY});
                 return true
             }
             if (e === "lastRaid") {
-                this["JpnUlvf-"]({foreignHabitat: t});
+                this["pyQe%Au6"]({foreignHabitat: t});
                 return true
             }
             if (e === "buyFreeCastle") {
-                this["t-Bsb()d"](t);
+                this["p)xTVMui"](t);
                 return true
             }
             return false
         };
-        e.prototype["9obJO5Cf"] = function (n, e) {
+        e.prototype["_w32GmpP"] = function (n, e) {
             var i = t.habitate[e.habitatID];
             var a = e.action;
             var s = e.source || null;
@@ -12858,7 +12870,7 @@
             i.player = t;
             this.createOwnHabitatWindow(i, a, s)
         };
-        e.prototype["h4LimkDm"] = function (a, t) {
+        e.prototype["ftwphcGZ"] = function (a, t) {
             var e = t.habitat;
             var i = t.action;
             if (this.handleHabitatAction(e, i)) {
@@ -12866,7 +12878,7 @@
             }
             this.createForeignHabitatWindow(e, i)
         };
-        e.prototype["&S(&Ah0z"] = function (a) {
+        e.prototype["_xwSfwKa"] = function (a) {
             var t = new o.DataSource(this), e = a.id, i = o.Controller.habitatIsReserved(e);
             t.addSubscriber(this);
             if (i) {
@@ -12875,10 +12887,10 @@
                 t.reserveHabitat(e)
             }
         };
-        e.prototype["4GA3WK-e"] = function (e, t) {
+        e.prototype["YB4gw(qZ"] = function (e, t) {
             this.animationController.setAnimationList(t)
         };
-        e.prototype["aH1WfGjW"] = function (l, r, o) {
+        e.prototype[")_0HtzDq"] = function (l, r, o) {
             var e = r.name;
             this.removeAllHoverElements();
             var s = {Reports: this.createReportsWindow, Help: this.showHelp};
@@ -12909,7 +12921,7 @@
                     if (a.view.hidden === true) {
                         a.view.show(false)
                     } else {
-                        a["5gDHtT_N"](a.view)
+                        a["x2x7Uarm"](a.view)
                     }
                 } else {
                     if (s[e]) {
@@ -12922,13 +12934,13 @@
                     }
                 }
                 if (i) {
-                    i["-nc-59bb"](this)
+                    i["6%wiVnzB"](this)
                 }
                 return a || i
             }
             return false
         };
-        e.prototype["6)kQoR7F"] = function (e) {
+        e.prototype["%HVTsgFN"] = function (e) {
             if (e.view.findSubviewByField("tag", "currentView").group !== "ForumThread") {
                 return
             }
@@ -12940,46 +12952,46 @@
             }
             i.scrollTop(s)
         };
-        e.prototype["yK%MHDwp"] = function () {
+        e.prototype["PuU3ioWm"] = function () {
             t.alliance = null;
-            this["Hp44jb48"]();
+            this["tZ72LCtM"]();
             var e = this.findControllerByName("Forum");
             if (e) {
-                this["56MCdi79"](e)
+                this["Eu50z7&J"](e)
             }
         };
-        e.prototype["6)kQoR7F"] = function () {
-            this["Hp44jb48"]()
+        e.prototype["%HVTsgFN"] = function () {
+            this["tZ72LCtM"]()
         };
-        e.prototype["wLMgD-&F"] = function (e, t) {
+        e.prototype["Qz9L)T)V"] = function (e, t) {
             if (typeof t === "undefined") {
                 return
             }
             var i = {
                 receiver: t,
-                clickMessage: "1Xm08BW0",
+                clickMessage: "5K_2H29H",
                 name: "newMessage",
                 viewName: "newMessage",
                 styles: "newMessageView"
             };
-            e.showNextViewOfClass(Pe.NewView, i, true)
+            e.showNextViewOfClass(Ue.NewView, i, true)
         };
-        e.prototype["1Xm08BW0"] = function (t) {
+        e.prototype["5K_2H29H"] = function (t) {
             var e = t.view.findSubviewByField("viewName", "newMessage");
             var a = e.getSubject();
             var s = e.getMessage();
             if (e.validate()) {
                 t.datasource.sendMessageToPlayer(e.receiver.id, a, s);
-                t["Z04XvT7k"].call(t);
+                t["v2v6tJij"].call(t);
                 var i = this.findControllerByName("Messages");
                 if (i) {
                     i.datasource.refresh()
                 }
             }
         };
-        e.prototype["j)909BLe"] = function () {
+        e.prototype["-_bqDYa1"] = function () {
             s.request("SessionAction/update", {}, function (t) {
-                this["P&5_qidj"](null, t)
+                this["5gU6aKug"](null, t)
             }, this, 5e3, function () {
                 if (this.timer) {
                     this.timer.stop()
@@ -12994,13 +13006,13 @@
                 }
             })
         };
-        e.prototype["MsYB6W-h"] = function () {
+        e.prototype["H7vOs_Ce"] = function () {
             this.sessionEnded = true
         };
         e.prototype.checkTransitTimers = function (e) {
             var i = new Date;
             for (var t = 0; t < e.habitatTransits.length; t++) {
-                if (i - U > e.habitatTransits[t].destinationETA) {
+                if (i - P > e.habitatTransits[t].destinationETA) {
                     return true
                 }
             }
@@ -13009,7 +13021,7 @@
         e.prototype.checkResearchTimers = function (e) {
             var i = new Date;
             for (var t = 0; t < e.habitatKnowledgeOrders.length; t++) {
-                if (i - U > e.habitatKnowledgeOrders[t].complete) {
+                if (i - P > e.habitatKnowledgeOrders[t].complete) {
                     return true
                 }
             }
@@ -13018,7 +13030,7 @@
         e.prototype.checkBannerTimers = function (e) {
             var i = new Date;
             for (var t = 0; t < e.habitatBuffs.length; t++) {
-                if (i - U > e.habitatBuffs[t].expirationDate) {
+                if (i - P > e.habitatBuffs[t].expirationDate) {
                     return true
                 }
             }
@@ -13027,7 +13039,7 @@
         e.prototype.checkMissionTimers = function (e) {
             var i = new Date;
             for (var t = 0; t < e.habitatMissions.length; t++) {
-                if (i - U > e.habitatMissions[t].complete) {
+                if (i - P > e.habitatMissions[t].complete) {
                     return true
                 }
             }
@@ -13036,7 +13048,7 @@
         e.prototype.checkRecruitingTimers = function (e) {
             var i = new Date;
             for (var t = 0; t < e.habitatUnitOrders.length; t++) {
-                if (i - U > e.habitatUnitOrders[t].complete) {
+                if (i - P > e.habitatUnitOrders[t].complete) {
                     return true
                 }
             }
@@ -13045,7 +13057,7 @@
         e.prototype.checkBuildingTimers = function (e) {
             var i = new Date;
             for (var t = 0; t < e.habitatBuildingUpgrades.length; t++) {
-                if (i - U > e.habitatBuildingUpgrades[t].complete) {
+                if (i - P > e.habitatBuildingUpgrades[t].complete) {
                     return true
                 }
             }
@@ -13054,7 +13066,7 @@
         e.prototype.checkBattleTimers = function (a) {
             var s = new Date, t = a.nextBattleDate;
             externalHabitatUnits = a.externalHabitatUnits;
-            if (t && s - U > t) {
+            if (t && s - P > t) {
                 return true
             }
             for (var e = 0, n = externalHabitatUnits.length; e < n; e++) {
@@ -13069,7 +13081,7 @@
                     default:
                         t = null
                 }
-                if (t && s - U > t) {
+                if (t && s - P > t) {
                     return true
                 }
             }
@@ -13082,7 +13094,7 @@
             var a, e, h = false;
             this.sessionTimeout -= this.globalTimerInterval / 1e3;
             if (!this.sessionEnded && this.sessionTimeout < this.halfSessionTimeout) {
-                this["j)909BLe"]();
+                this["-_bqDYa1"]();
                 return
             }
             if (typeof t === "undefined") {
@@ -13102,7 +13114,7 @@
                     }
                 }
                 if (h) {
-                    this["j)909BLe"]();
+                    this["-_bqDYa1"]();
                     return
                 }
             }
@@ -13130,7 +13142,7 @@
                 t.updateStatistics()
             }
         };
-        e.prototype["5V%JaJ8W"] = function (n, a) {
+        e.prototype["SYCOIbyA"] = function (n, a) {
             var s = a.habitat, e = +s.id, i = _.storeLocal.createKey("mar"), t = _.storeLocal.getJSON(i);
             if (t === null || t.length === 0) {
                 _.storeLocal.setJSON(i, [e])
@@ -13142,9 +13154,9 @@
                 }
                 _.storeLocal.setJSON(i, t)
             }
-            this["E8-%)wR0"](this, _.storeLocal.getJSON(i))
+            this["cVkRGPwt"](this, _.storeLocal.getJSON(i))
         };
-        e.prototype["E8-%)wR0"] = function (a, t) {
+        e.prototype["cVkRGPwt"] = function (a, t) {
             var e = this.findControllerByName("map");
             if (e) {
                 e.view.setOptions({markedCastles: t})
@@ -13153,9 +13165,9 @@
             if (i) {
                 i.setMarkedCastles(t)
             }
-            this["aKR2A5nz"]()
+            this["r0dymb73"]()
         };
-        e.prototype["aKR2A5nz"] = function () {
+        e.prototype["r0dymb73"] = function () {
             var t = this.findControllerByName("map"), e = this.findControllerByName("overview");
             if (t) {
                 t.view.preRender();
@@ -13170,7 +13182,7 @@
                 this.castleHoverExtension.createHoverWindow(t)
             }
         };
-        e.prototype["dDzG08SK"] = function (e, i) {
+        e.prototype["UGUcVx1E"] = function (e, i) {
             var t = i.habitat;
             var a = i.mouse;
             if (typeof t === "undefined" || t === null) {
@@ -13221,7 +13233,7 @@
                 this.castleHoverExtension.castleHoverShown = false
             }
         };
-        e.prototype["ZT9mJF71"] = function (s, i) {
+        e.prototype["REAh)4Ju"] = function (s, i) {
             var e = "free";
             if (typeof i.player !== "undefined") {
                 e = "player"
@@ -13233,7 +13245,7 @@
             }
             return e
         };
-        e.prototype["S4LQV_Km"] = function () {
+        e.prototype["Xh-P9vqA"] = function () {
             var t = this.findControllerByName("castleHover"), i = this.findControllerByName("map"), e, a;
             if (!i || !t || !t.view) {
                 return
@@ -13242,7 +13254,7 @@
             a = i.view.getTileCenterCoords(e.mapX, e.mapY);
             t.view.setPosition(a)
         };
-        e.prototype["SzIzPcz%"] = function (i, t) {
+        e.prototype["pQnJoWLu"] = function (i, t) {
             var s = this.findControllerByName("dialog_" + t.uniqueKey);
             if (s) {
                 s.view.show(true);
@@ -13277,7 +13289,7 @@
             t.updatePosition({x: o, y: l});
             t.draw()
         };
-        e.prototype["56MCdi79"] = function (e) {
+        e.prototype["Eu50z7&J"] = function (e) {
             var t = e.view;
             var i = e.datasource;
             this.removeSubController(e);
@@ -13300,7 +13312,7 @@
             var e;
             if (typeof t.habitate[i.id] !== "undefined") {
                 e = this.createOwnHabitatWindow(t.habitate[i.id], "visitCastle");
-                this["qsBGtsBz"]("welcome");
+                this["cfdiF6Wv"]("welcome");
                 this.checkAtmoSound()
             } else {
                 e = this.createForeignHabitatWindow(i)
@@ -13310,7 +13322,7 @@
             }
             return e
         };
-        e.prototype["y7R3bxYT"] = function (t) {
+        e.prototype["WumqB(Zw"] = function (t) {
             var i = "ForeignHabitat_" + t.action + "_" + t.foreignHabitat.id;
             var e = this.findControllerByName(i);
             if (e) {
@@ -13328,10 +13340,10 @@
                     return i
                 }
                 var t = this.windowFactory.createForeignHabitatWindow(a);
-                if (x && typeof mTutorialFreeCastle !== "undefined" && this.tutorialController) {
+                if (I && typeof mTutorialFreeCastle !== "undefined" && this.tutorialController) {
                     var e = this.tutorialController.getCurrentStep();
                     e.setTargetController(t);
-                    this["qsBGtsBz"](e.name)
+                    this["cfdiF6Wv"](e.name)
                 }
                 this.addWindowToSession(t);
                 return t
@@ -13340,28 +13352,28 @@
                 return
             }
             if (t.id && !t.mapX && !t.mapY) {
-                D.DataSource.prototype.habitatInfo(t.id, function (t) {
+                k.DataSource.prototype.habitatInfo(t.id, function (t) {
                     this.createForeignHabitatWindow(t.Data.Habitat[0], e)
                 }.bind(this));
                 return
             }
             var i = this.findControllerByName(t.id);
-            if (x && (typeof mTutorialFreeCastle !== "undefined" && mTutorialFreeCastle) && t.player) {
+            if (I && (typeof mTutorialFreeCastle !== "undefined" && mTutorialFreeCastle) && t.player) {
                 return null
             }
             if (!e) {
                 a(t);
                 return
             }
-            if (D.Controller.prototype.useMiniWindowForAction(e)) {
+            if (k.Controller.prototype.useMiniWindowForAction(e)) {
                 var s = a(t);
                 s.performAction(e);
                 return
             }
-            this["y7R3bxYT"]({action: e, foreignHabitat: t})
+            this["WumqB(Zw"]({action: e, foreignHabitat: t})
         };
         e.prototype.createOwnHabitatWindow = function (n, r, o) {
-            var l = x && (typeof mTutorialFreeCastle !== "undefined" && mTutorialFreeCastle === true);
+            var l = I && (typeof mTutorialFreeCastle !== "undefined" && mTutorialFreeCastle === true);
             var a;
             if (r === "" || l) {
                 return null
@@ -13399,7 +13411,7 @@
             }
             return e
         };
-        e.prototype["eQbjanoz"] = function (i, e) {
+        e.prototype["Ve2s0mbd"] = function (i, e) {
             if (t && t.alliance && t.alliance.id === e.id) {
                 this.windowFactory.createAllianceWindow()
             } else {
@@ -13437,32 +13449,32 @@
             return e
         };
         e.prototype.createReportsWindow = function () {
-            var e = new v.Controller(this, {name: "Reports", group: "ReportsController"});
+            var e = new g.Controller(this, {name: "Reports", group: "ReportsController"});
             this.addSubController(e);
-            var a = new v.Window(e, {
+            var a = new g.Window(e, {
                 styles: "win reports",
                 headlineContent: "<span>" + h.getValueOf("Reports") + "</span>",
                 reportSetupValue: t.reportSetup,
                 minimumWindowHeight: 118
             });
             e.add(a);
-            var i = new v.DataSource(this);
+            var i = new g.DataSource(this);
             this.addDatasource(i);
             e.linkDataSource(i);
             i.addSubscriber(e);
             e.draw();
             i.refreshReportsFromServer();
-            this["MNqu6z(R"]();
+            this["2_A-_Erh"]();
             return e
         };
-        e.prototype["vF4Exq0E"] = function (s, i) {
+        e.prototype["8xvB5GpX"] = function (s, i) {
             var a = $.sprintf(h.getValueOf("You need %d but have only %d.\nDo you want to buy more %@?"), i.costs, t.gold, "Gold");
             var e = this;
             utils.dialog.confirm(this, a, "Gold", function () {
-                e["5-kIwyYc"](e)
+                e["TeVG5tXR"](e)
             })
         };
-        e.prototype["5-kIwyYc"] = function () {
+        e.prototype["TeVG5tXR"] = function () {
             var t = this.findControllerByName("gold");
             if (t !== null) {
                 if (t.view.hidden) {
@@ -13474,7 +13486,7 @@
             }
             this.windowFactory.createShopWindow()
         };
-        e.prototype["BWhFjW-%"] = function () {
+        e.prototype["oC)Bwm7V"] = function () {
             var t = this.findControllerByName("Player");
             if (t !== null) {
                 if (t.view.hidden) {
@@ -13486,7 +13498,7 @@
             }
             this.windowFactory.createProfileWindow()
         };
-        e.prototype["FZpvdvBU"] = function (e, t) {
+        e.prototype["i5I1OIPu"] = function (e, t) {
             if (typeof t === "string" || typeof t === "number") {
                 this.createForeignPlayerWindow(t)
             } else {
@@ -13531,7 +13543,7 @@
             s.loadPlayerInfo(a, r);
             return i
         };
-        e.prototype["he%vKN47"] = function (e, t) {
+        e.prototype["4KN1micD"] = function (e, t) {
             if (typeof t === "string") {
                 this.createForeignPlayerWindow(t)
             } else {
@@ -13552,11 +13564,11 @@
                 return t
             }
             var n;
-            var e = new He.Controller(this, {name: "foreignReport_" + a + "_" + s, group: "foreignReportController"});
+            var e = new Be.Controller(this, {name: "foreignReport_" + a + "_" + s, group: "foreignReportController"});
             n = {styles: "win foreignReport reports", headlineContent: translate("Reports")};
-            var r = new He.Window(e, n);
+            var r = new Be.Window(e, n);
             e.add(r);
-            var i = new He.DataSource(this);
+            var i = new Be.DataSource(this);
             this.addDatasource(i);
             i.addSubscriber(e);
             e.linkDataSource(i);
@@ -13565,7 +13577,7 @@
             i.loadReport(a, s);
             return e
         };
-        e.prototype["&fD44Rq_"] = function (n, t) {
+        e.prototype["Ced9kdMJ"] = function (n, t) {
             var a = typeof t.showConfirm !== "undefined" ? t.showConfirm : true;
             var s = typeof t.resizeable !== "undefined" ? t.resizeable : false;
             var e = new w.FullscreenFrameController(this, {name: t.headline, group: "ShopFrame", showConfirm: a});
@@ -13583,14 +13595,14 @@
             });
             e.draw()
         };
-        e.prototype["tHxEb5Yw"] = function (e, t) {
+        e.prototype["gvX2OHg6"] = function (e, t) {
             this.windowFactory.createTransactionWindow(t)
         };
-        e.prototype["QI9ZDZ5g"] = function (e, t) {
+        e.prototype["U1Fx%0%0"] = function (e, t) {
             this.windowFactory.createSuccessWindow(t)
         };
         e.prototype.showHelp = function () {
-            this["&fD44Rq_"](this, {
+            this["Ced9kdMJ"](this, {
                 headline: "Help",
                 url: "http://xyrality.helpshift.com/a/lords-knights/?p=web&l=" + le,
                 showConfirm: false,
@@ -13600,7 +13612,7 @@
         e.prototype.removeAllHoverElements = function () {
             utils.removeOrphanHovers()
         };
-        e.prototype["(3bFTVRB"] = function (a) {
+        e.prototype["xq8TwXe0"] = function (a) {
             if (!this.subcontroller) {
                 return false
             }
@@ -13608,33 +13620,33 @@
             for (var e = 0; e < i.length; e++) {
                 var t = i[e];
                 if (t && t.view && t.view.closable) {
-                    t.view.notify("5gDHtT_N", a)
+                    t.view.notify("x2x7Uarm", a)
                 }
             }
-            this["jEtkS_7p"](this, {name: "bottombar", controller: null, closeall: true});
-            this["jEtkS_7p"](this, {name: "topbar", controller: null, closeall: true});
+            this["cRyH7EZ2"](this, {name: "bottombar", controller: null, closeall: true});
+            this["cRyH7EZ2"](this, {name: "topbar", controller: null, closeall: true});
             return true
         };
-        e.prototype["gQbco8tG"] = function (t, e) {
+        e.prototype["_sVoovfC"] = function (t, e) {
             var i = ["ForeignPlayerController", "foreignReportController", "ForeignHabitatController", "foreignHabitat", "ForeignHabitatActionController", "foreignAlliance", "globalActionList", "alliance", "ownHabitatController", "ReportsController", "lastRaidController", "lastRaidController", "ShopFrame", "ForeignHabitatActionController", "messages"];
             if (!!~i.indexOf(t.group)) {
-                this["56MCdi79"](t)
+                this["Eu50z7&J"](t)
             }
             if (this.soundController) {
                 this.soundController.linkPauseSFX(t.id)
             }
             this.removeWindowFromSession(e)
         };
-        e.prototype["XDyVas7u"] = function (t) {
+        e.prototype["W1qWr6IS"] = function (t) {
             this.addWindowToSession(t)
         };
-        e.prototype["dmY_k48Y"] = function (t) {
+        e.prototype["zK8yjN6p"] = function (t) {
             this.updateWindowInSession(t)
         };
-        e.prototype["&Bte(ymt"] = function (t) {
+        e.prototype["bblKvJGb"] = function (t) {
             this.updateWindowInSession(t)
         };
-        e.prototype["X6v6Myfo"] = function () {
+        e.prototype["Zwrs_W3G"] = function () {
             for (var t = 0, i = this.subcontroller.length; t < i; t++) {
                 var e = this.subcontroller[t];
                 if (e.windowIsActive) {
@@ -13643,7 +13655,7 @@
             }
             return null
         };
-        e.prototype["&yp50yHz"] = function (i) {
+        e.prototype["T1&rjWh4"] = function (i) {
             for (var t = 0, a = this.subcontroller.length; t < a; t++) {
                 var e = this.subcontroller[t];
                 if (e.removeActive) {
@@ -13652,7 +13664,7 @@
             }
             i.setActive(true)
         };
-        e.prototype["(SpjKs8G"] = function () {
+        e.prototype["EfUQKw6W"] = function () {
             var t = [];
             for (var i = 0, a = this.subcontroller.length; i < a; i++) {
                 var e = this.subcontroller[i];
@@ -13669,7 +13681,7 @@
             }
             return false
         };
-        e.prototype["t-Bsb()d"] = function (n) {
+        e.prototype["p)xTVMui"] = function (n) {
             var a = translate("Annex the castle");
             var e;
             var i = t.nextLegalFreeHabitatPurchaseDate;
@@ -13683,7 +13695,7 @@
             var r = t ? t.gold : 0;
             e = translate("The annexation of the castle costs %1$d gold coins. You currently own %2$d gold coins. Do you wish to claim the castle?", s, r);
             utils.dialog.confirm(this, e, a, function () {
-                var t = new D.DataSource(this);
+                var t = new k.DataSource(this);
                 t.addSubscriber(this);
                 t.buyFreeCastle(n.id, s)
             })
@@ -13697,25 +13709,26 @@
             h = new r.Stringtable({lang: le, manifestUrl: i, urlLang: e});
             h.setUpTable()
         };
-        function p(t, e) {
+        function f(t, e, i) {
             if (!e) {
                 return
             }
             t = t.toLowerCase().replace(" ", "").replace(/\/[0-9]+/, "");
-            f.settings.maxLevels[t] = +e
+            d.settings.maxLevels[t] = +e;
+            d.settings.maxLevelsPrimaryKey[t] = +i
         }
 
         e.prototype.updateModel = function (e, m) {
             this.removeAllHoverElements();
             if (typeof e.touchDate !== "undefined") {
-                yi = e.touchDate
+                vi = e.touchDate
             }
             if (typeof e.defaultValues !== "undefined") {
                 l.update(e.defaultValues);
                 this.setLanguage(le)
             }
             if (typeof e.time !== "undefined") {
-                U = Math.ceil(new Date - _.conv.toDate(e.time))
+                P = Math.ceil(new Date - _.conv.toDate(e.time))
             }
             this.sessionTimeout = e.sessionTimeout;
             this.halfSessionTimeout = this.sessionTimeout / 2;
@@ -13742,34 +13755,34 @@
                 })
             }
             if (typeof e.Modifier !== "undefined") {
-                xe = {};
+                Ie = {};
                 $.each(e.Modifier, function (e, t) {
-                    xe[t.primaryKey] = new r.Modifier(t)
+                    Ie[t.primaryKey] = new r.Modifier(t)
                 })
             }
             if (typeof e.Knowledge !== "undefined") {
-                P = {};
+                U = {};
                 $.each(e.Knowledge, function (e, t) {
-                    P[t.primaryKey] = new r.Knowledge(t)
+                    U[t.primaryKey] = new r.Knowledge(t)
                 })
             }
             if (typeof e.Unit !== "undefined") {
-                g = {};
+                y = {};
                 $.each(e.Unit, function (e, t) {
-                    g[t.primaryKey] = new r.Unit(t)
+                    y[t.primaryKey] = new r.Unit(t)
                 })
             }
             if (typeof e.Building !== "undefined") {
-                f = {settings: {maxLevels: {}}};
+                d = {settings: {maxLevels: {}, maxLevelsPrimaryKey: {}}};
                 $.each(e.Building, function (e, t) {
-                    f[t.primaryKey] = new r.Building(t);
-                    p(t.identifier, t.level)
+                    d[t.primaryKey] = new r.Building(t);
+                    f(t.identifier, t.level, t.primaryKey)
                 })
             }
             if (typeof e.Upgrade !== "undefined") {
-                Ge = {};
+                Ye = {};
                 $.each(e.Upgrade, function (e, t) {
-                    Ge[t.primaryKey] = new r.FortressUpgrade(t)
+                    Ye[t.primaryKey] = new r.FortressUpgrade(t)
                 })
             }
             var o, i;
@@ -13876,12 +13889,18 @@
                 if (typeof i.TrackableEvent !== "undefined") {
                     a.trackableEvents = {};
                     $.each(i.TrackableEvent, function (e, t) {
+                        if (t.id.indexOf("tutorial") > -1) {
+                            return
+                        }
                         a.trackableEvents[t.id] = new r.TrackableEvent(t)
                     })
                 }
                 if (typeof i.TrackingEvent !== "undefined") {
                     a.trackingEvents = [];
                     $.each(i.TrackingEvent, function (e, t) {
+                        if (t.eventName.indexOf("tutorial") > -1) {
+                            return
+                        }
                         a.trackingEvents.push(new r.TrackingEvent(t))
                     })
                 } else if (typeof i.TrackingEvent === "undefined" && a.trackingEvents) {
@@ -13905,17 +13924,17 @@
                 t.setCastleAmount()
             }
             if (typeof e.discussion !== "undefined" && t.discussions) {
-                var d = false;
-                for (var s = 0, y = t.discussions.length; s < y; s++) {
-                    var v = t.discussions[s];
-                    if (+v.id === +e.discussion.id) {
+                var p = false;
+                for (var s = 0, v = t.discussions.length; s < v; s++) {
+                    var g = t.discussions[s];
+                    if (+g.id === +e.discussion.id) {
                         t.discussions[s] = this.createDiscussion(e.discussion);
-                        d = true;
+                        p = true;
                         m.updateDiscussion(t.discussions[s]);
                         break
                     }
                 }
-                if (!d) {
+                if (!p) {
                     t.discussions.push(this.createDiscussion(e.discussion))
                 }
                 t.sortDiscussions()
@@ -13971,7 +13990,7 @@
                     continue
                 }
                 if (!t.habitate[e.name]) {
-                    this["56MCdi79"](e)
+                    this["Eu50z7&J"](e)
                 }
             }
         };
@@ -13988,7 +14007,7 @@
                 }
                 e.view.center({x: t.getSortedHabitate()[0].mapX, y: t.getSortedHabitate()[0].mapY});
                 a.view.center({x: t.getSortedHabitate()[0].mapX, y: t.getSortedHabitate()[0].mapY});
-                this["jEtkS_7p"](this, {name: "topbar", controller: null, closeall: true})
+                this["cRyH7EZ2"](this, {name: "topbar", controller: null, closeall: true})
             };
             var e = this.connect;
             if (this.subcontroller.length > 0) {
@@ -14001,40 +14020,37 @@
                 window.logout()
             })
         };
-        e.prototype["2toYNBHJ"] = function (c, a) {
+        e.prototype["rXj8(_)&"] = function (c, i) {
+            var r = [];
             var o = [];
-            var l = [];
-            var u = 0;
-            var e, s;
+            var l = 0;
+            var e, a;
+            var s;
             var n;
-            var r;
-            if (a && a.Data) {
-                n = a.Data.Discussion;
-                r = a.Data.SystemMessage
+            if (i && i.Data) {
+                s = i.Data.Discussion;
+                n = i.Data.SystemMessage
+            }
+            if (typeof s !== "undefined") {
+                for (e = 0, a = s.length; e < a; e++) {
+                    var h = s[e];
+                    r.push(this.createDiscussion(h));
+                    if (!h.lastReadDate) {
+                        l += 1
+                    }
+                }
             }
             if (typeof n !== "undefined") {
-                for (e = 0, s = n.length; e < s; e++) {
-                    var h = n[e];
-                    o.push(this.createDiscussion(h));
-                    if (!h.lastReadDate) {
-                        u += 1
+                for (e = 0, a = n.length; e < a; e++) {
+                    var u = n[e];
+                    o.push(this.createDiscussion(u));
+                    if (!u.lastReadDate) {
+                        l += 1
                     }
                 }
             }
-            if (typeof r !== "undefined") {
-                for (e = 0, s = r.length; e < s; e++) {
-                    var i = r[e];
-                    if (i.id > 0) {
-                        i.id = -i.id
-                    }
-                    l.push(this.createDiscussion(i));
-                    if (!i.lastReadDate) {
-                        u += 1
-                    }
-                }
-            }
-            t.setDiscussions(o.concat(l));
-            return {discussions: o, systemMessages: l, unread: u}
+            t.setDiscussions(r.concat(o));
+            return {discussions: r, systemMessages: o, unread: l}
         };
         e.prototype.createDiscussion = function (t) {
             var e = {};
@@ -14060,7 +14076,7 @@
                 discussionListener: i
             })
         };
-        e.prototype["cGDmNeaS"] = function () {
+        e.prototype["k9yCxA%X"] = function () {
             return oi
         };
         e.prototype.refreshMaps = function () {
@@ -14129,28 +14145,28 @@
                 this.openForeignReportLink(t)
             }
             if (n.test(t) === true) {
-                this["5-kIwyYc"]()
+                this["TeVG5tXR"]()
             }
         };
-        e.prototype["TVwAjJ5A"] = function (a, t) {
+        e.prototype["SswFkNj1"] = function (a, t) {
             var e = t.coordinates.x, i = t.coordinates.y;
             return "l+k://coordinates?" + e + "," + i + "&" + ie
         };
-        e.prototype["rS8PDx-i"] = function (i, t) {
+        e.prototype["XQTkRBdF"] = function (i, t) {
             var e = t.alliance;
             return "l+k://alliance?" + e + "&" + ie
         };
-        e.prototype["Sh932WIb"] = function (a, t) {
+        e.prototype["ROYLfKTf"] = function (a, t) {
             var e = t.report, i = t.habitat;
             return "l+k://report?" + e + "&" + i + "&" + ie
         };
-        e.prototype["-SD9RgVg"] = function (e, t) {
+        e.prototype["n5BlUfYY"] = function (e, t) {
             return "l+k://player?" + t.player + "&" + ie
         };
-        e.prototype["xCzXgU2u"] = function (e, t) {
+        e.prototype["1EMjIwLd"] = function (e, t) {
             this.clippy = t
         };
-        e.prototype["J5FA3x6C"] = function () {
+        e.prototype["NYd&saEH"] = function () {
             return this.clippy
         };
         e.prototype.setGameVersion = function (t) {
@@ -14162,9 +14178,9 @@
             ie = t.worldID;
             Ee = t.worldUrl;
             le = t.languageID;
-            Xe = t.logoutUrl;
+            je = t.logoutUrl;
             oi = t.mapUrl;
-            $i = t.fb_host
+            qi = t.fb_host
         };
         e.prototype.login = function (t) {
             this.credentials = t;
@@ -14201,7 +14217,7 @@
                 })
             }
             this.setLoginGlobals(t);
-            var e = {worldId: ie, logoutUrl: Xe}, i = {};
+            var e = {worldId: ie, logoutUrl: je}, i = {};
             if (t.email && t.password) {
                 e.login = t.email;
                 i.login = t.email;
@@ -14222,7 +14238,7 @@
             this.createArrowMap(a)
         };
         e.prototype.createNormalMap = function (r, i) {
-            var t = new Ui(this, {name: "map"}), e, a, s, n;
+            var t = new Pi(this, {name: "map"}), e, a, s, n;
             this.addSubController(t);
             a = {
                 canvas: new Re($("canvas#map")[0]),
@@ -14243,7 +14259,7 @@
         e.prototype.createOverviewMap = function (a, e) {
             var t = new Li(this, {name: "overview", zoomMax: 1, zoomMin: 1});
             this.addSubController(t);
-            t.add(new Ye(t, {
+            t.add(new ze(t, {
                 canvas: $("#miniMap")[0],
                 type: "overview",
                 eventTarget: "miniMap",
@@ -14261,10 +14277,10 @@
             t.linkDataSource(i)
         };
         e.prototype.createArrowMap = function (t) {
-            var e = new Di(t, {});
+            var e = new ki(t, {});
             t.setOptions({arrowMap: e})
         };
-        function y() {
+        function v() {
             var e = _.storeLocal.createKey("mar"), t = _.storeLocal.getJSON(e);
             if (t) {
                 return t
@@ -14281,7 +14297,7 @@
             _.storeSession.clear();
             _convertLocalStorageKeys(r, ie);
             this.windowFactory = new ri(this, {});
-            this.castleHoverExtension = new ki(this, {themeController: this.themeController});
+            this.castleHoverExtension = new Di(this, {themeController: this.themeController});
             function u() {
                 var e = "Georgia, Helvetica, sans-serif, 'Android Emoji'", t = e;
                 if (s.appleEmoji) {
@@ -14296,7 +14312,7 @@
                 return
             }
             l = u();
-            this.createMaps(y(t.id));
+            this.createMaps(v(t.id));
             var e = new se.DataSource;
             this.addDatasource(e);
             var i = new se.Controller(this, {name: "bottombar"});
@@ -14307,7 +14323,7 @@
             this.addSubController(i);
             n = {styles: "topbar", zIndex: 2, staticPosition: true, closable: false, hidden: false};
             var a = new pe.Controller(this, {name: "topbar"});
-            e = new I;
+            e = new x;
             e.addSubscriber(a);
             this.addDatasource(e);
             a.linkDataSource(e);
@@ -14315,28 +14331,28 @@
             this.addSubController(a);
             if (s.audioformat && s.audioformat !== "none") {
                 this.themeController.setOptions({audioformat: s.audioformat});
-                this.soundController = new Je.Controller(this, {
+                this.soundController = new Ze.Controller(this, {
                     backgroundTracks: utils.array.shuffle(this.themeController.getSoundForKey("background")),
                     castleAtmo: this.themeController.getSoundForKey("castlescene"),
                     mapAtmo: this.themeController.getSoundForKey("map"),
                     name: "Sound"
                 });
-                e = new Je.Datasource(this.soundController);
+                e = new Ze.Datasource(this.soundController);
                 e.addSubscriber(this.soundController);
                 this.soundController.linkDataSource(e);
                 e.loadSettings()
             }
             this.draw()
         };
-        e.prototype["hp6iDa61"] = function () {
+        e.prototype["v2Kd5j8("] = function () {
             $("div#loader").remove()
         };
-        e.prototype["Hp44jb48"] = function () {
+        e.prototype["tZ72LCtM"] = function () {
             var t = this.findControllerByName("bottombar");
             t.dataUpdate(null, {});
             t.draw()
         };
-        e.prototype["jEtkS_7p"] = function (r, i) {
+        e.prototype["cRyH7EZ2"] = function (r, i) {
             var s = i.controller, a = s ? i.controller.name : "", n = i.closeall, t = this.findControllerByName("bottombar"), e = this.findControllerByName("topbar");
             if (n) {
                 if (t) {
@@ -14354,7 +14370,7 @@
                 }
             }
         };
-        e.prototype["HnfG6nFV"] = function () {
+        e.prototype["9sjusDKD"] = function () {
             var e = 0;
             if (t.discussions) {
                 var i = t.discussions.filter(function (t) {
@@ -14363,9 +14379,9 @@
                 e = i.length;
                 t.unreadDiscussionCount = e
             }
-            this["Hp44jb48"]()
+            this["tZ72LCtM"]()
         };
-        e.prototype["-o83K1Li"] = function () {
+        e.prototype["2h2rLIOv"] = function () {
             var e = 0;
             if (t.alliance && t.alliance.forumThreadArray) {
                 var i = t.alliance.forumThreadArray.filter(function (t) {
@@ -14374,13 +14390,13 @@
                 e = i.length;
                 t.unreadThreadCount = e
             }
-            this["Hp44jb48"]()
+            this["tZ72LCtM"]()
         };
-        e.prototype["MNqu6z(R"] = function () {
+        e.prototype["2_A-_Erh"] = function () {
             t.unreadReportCount = 0;
-            this["Hp44jb48"]()
+            this["tZ72LCtM"]()
         };
-        e.prototype["Ko-MDOi)"] = function () {
+        e.prototype["nxLKo6gw"] = function () {
             utils.dialog.confirm(this, translate("Logout.message"), translate("Logout"), function () {
                 var t = s.manager;
                 t.showNoSessionDialog = false;
@@ -14427,7 +14443,7 @@
 
                 t.prototype.create = function () {
                     this.createSubview(this, {
-                        content: this.notify("3s(kBgiI", this, {
+                        content: this.notify("Z-XGNYVU", this, {
                             imageName: "dayIcon",
                             imageCategory: "icons"
                         }), styles: "icon"
@@ -14435,7 +14451,7 @@
                     this.createSubview(this, {content: utils.date.formatDateTime(l.worldDawn), styles: "time"});
                     this.clearfix();
                     this.createSubview(this, {
-                        content: this.notify("3s(kBgiI", this, {
+                        content: this.notify("Z-XGNYVU", this, {
                             imageName: "nightIcon",
                             imageCategory: "icons"
                         }), styles: "icon"
@@ -14501,18 +14517,18 @@
             t.miniMapZoomHover.removeFromDOM();
             t.miniMapZoomHover = undefined
         };
-        e.prototype["VhaIj0_A"] = function (s, t) {
+        e.prototype["cHRPueWe"] = function (s, t) {
             if (typeof t !== "undefined") {
                 var a = new Date;
                 var e = _.conv.toDate(t);
                 var i = parseInt(l.newbieProtectionDays, 10) * 864e5;
-                if (e.getTime() + i > a - U) {
+                if (e.getTime() + i > a - P) {
                     return utils.date.formatDateTime(new Date(e.getTime() + i))
                 }
             }
             return ""
         };
-        e.prototype["0lnjIEGM"] = function (r, e) {
+        e.prototype["&bByotxh"] = function (r, e) {
             var t = this.findControllerByName("map"), i = +e.start.mapX, a = +e.start.mapY, s = +e.end.mapX, n = +e.end.mapY;
             if (!t || !t.arrowMap) {
                 return
@@ -14526,7 +14542,7 @@
             });
             t.arrowMap.draw()
         };
-        e.prototype["YY&))zm_"] = function () {
+        e.prototype["C-eD0kzq"] = function () {
             var t = this.findControllerByName("map");
             if (!t || !t.arrowMap) {
                 return
@@ -14536,24 +14552,24 @@
         };
         e.prototype.cleanupModel = function () {
             window.cred = undefined;
-            f = undefined;
-            P = undefined;
+            d = undefined;
+            U = undefined;
             le = undefined;
-            Xe = undefined;
+            je = undefined;
             oi = undefined;
             K = undefined;
-            xe = undefined;
+            Ie = undefined;
             t = undefined;
             re = undefined;
             Ee = undefined;
             l = undefined;
             h = undefined;
-            U = undefined;
-            yi = undefined;
-            g = undefined;
+            P = undefined;
+            vi = undefined;
+            y = undefined;
             ie = undefined
         };
-        e.prototype["N60zjkFe"] = function (i, t) {
+        e.prototype["moYXcWen"] = function (i, t) {
             if (!this.soundController || !this.themeController) {
                 return
             }
@@ -14564,7 +14580,7 @@
                 this.soundController.playSFX(e)
             }
         };
-        e.prototype["69%UYxhx"] = function () {
+        e.prototype["SrbXsq-H"] = function () {
             if (this.soundController) {
                 this.soundController.linkPauseCategorySFX("building")
             }
@@ -14579,26 +14595,26 @@
                 this.soundController.playAtmo()
             }
         };
-        e.prototype["qkIndvot"] = function () {
+        e.prototype["bqLV9Zt_"] = function () {
             if (this.soundController) {
                 return this.soundController
             }
             return null
         };
-        e.prototype["ibcsiB-q"] = function (e, t) {
+        e.prototype["PEsG(rsC"] = function (e, t) {
             if (!this.soundController) {
                 return
             }
             this.soundController.setVolume(t)
         };
-        e.prototype["bWGYCYy2"] = function () {
+        e.prototype["rkE%NpQa"] = function () {
             if (!this.soundController) {
                 return
             }
             return this.soundController.getVolume()
         };
         e.prototype.addWindowToSession = function (e) {
-            var a = typeof x !== "undefined" && x === true;
+            var a = typeof I !== "undefined" && I === true;
             var s = typeof t !== "undefined" && t.points < l.tutorialPointOffset;
             if (a || s || !e || !e.view) {
                 return
@@ -14626,7 +14642,7 @@
             $(".miniMapContainer").show()
         };
         e.prototype.restoreSession = function () {
-            var u = typeof x !== "undefined" && x === true;
+            var u = typeof I !== "undefined" && I === true;
             var h = typeof t !== "undefined" && t.points < l.tutorialPointOffset;
             if (u || h) {
                 return
@@ -14659,7 +14675,7 @@
                         i = this.createForeignReportWindow.apply(this, r)
                     }
                 } else if (r.length === 0 && isNaN(parseInt(e, 10)) || e.indexOf("gold") !== -1) {
-                    i = this["aH1WfGjW"](null, {name: e}, true);
+                    i = this[")_0HtzDq"](null, {name: e}, true);
                     if (s && typeof s.state[e] !== "undefined") {
                         s.state[e] = true
                     }
@@ -14704,20 +14720,20 @@
             this.session = {};
             this.writeSession()
         };
-        e.prototype["ssx1foxn"] = function () {
+        e.prototype["W%XDAN3G"] = function () {
             if (this.habitatAnimationsCounter >= this.maxAnimations) {
                 return false
             }
             this.habitatAnimationsCounter += 1;
             return true
         };
-        e.prototype["2cRv0JGh"] = function () {
+        e.prototype["Z(etOrSk"] = function () {
             this.habitatAnimationsCounter -= 1;
             if (this.habitatAnimationsCounter < 0) {
                 this.habitatAnimationsCounter = 0
             }
         };
-        e.prototype["sfAGfxHm"] = function (a, s) {
+        e.prototype["-EUI6Hr_"] = function (a, s) {
             var t = s.habitatId;
             var e = this.findControllerByName("globalMissions");
             if (e && e.id !== a.id) {
@@ -14728,11 +14744,11 @@
                 i.refreshMissionsForHabitat(t)
             }
         };
-        e.prototype["ECn)rA6i"] = function () {
+        e.prototype["(%ZZHnv&"] = function () {
             return this.shopbaseurlid
         };
         return e
-    }(Ii);
+    }(xi);
     $(document).ready(function () {
         var a = {
             en: "https://support.xyrality.com/index.php?/Knowledgebase/Article/View/187/0/browser-version-requirements",
@@ -14763,7 +14779,7 @@
             return
         }
         var t = new mi;
-        var g = l.CDNUrl;
+        var y = l.CDNUrl;
         var i = parseInt("1", 10);
         if (typeof i !== "undefined" && !isNaN(i)) {
             t.shopbaseurlid = i
@@ -14786,7 +14802,7 @@
             }
         };
         window.logout = function () {
-            var t = Xe;
+            var t = je;
             window.cleanUp();
             window.location = t
         };
@@ -14824,7 +14840,7 @@
             for (var s in e) {
                 var o = e[s];
                 $.ajax({
-                    url: g + "game/res/theme/" + s + "?hash=" + o,
+                    url: y + "game/res/theme/" + s + "?hash=" + o,
                     type: "GET",
                     contentType: "application/x-json",
                     jsonpCallback: "na",
@@ -14896,15 +14912,15 @@
         $("#mapContainer, .miniMapContainer").on("contextmenu", function () {
             return false
         });
-        $(".close-all").on("click", t["(3bFTVRB"].bind(t));
+        $(".close-all").on("click", t["xq8TwXe0"].bind(t));
         if (navigator.userAgent.indexOf("Opera") === 0) {
-            t["hp6iDa61"]()
+            t["v2Kd5j8("]()
         }
         Handlebars.registerHelper("getImageSrc", function (i, e) {
             if (typeof e !== "string") {
                 e = "icons"
             }
-            return t["YrKz7XU6"]().getImageSrc(i, e)
+            return t["AN4-Dk1u"]().getImageSrc(i, e)
         })
     });
     window._convertLocalStorageKeys = function (o, s) {
@@ -14962,13 +14978,13 @@
         t.prototype.setActive = function (t) {
             t = t || false;
             if (t === false) {
-                this.notify("&yp50yHz", this)
+                this.notify("T1&rjWh4", this)
             }
             this.windowIsActive = true;
             this.view.node().removeClass("passiveWindow");
             this.view.node().addClass("activeWindow");
             if (this.animationList) {
-                this.notify("4GA3WK-e", this, this.animationList)
+                this.notify("YB4gw(qZ", this, this.animationList)
             }
         };
         t.prototype.removeActive = function () {
@@ -15028,7 +15044,7 @@
             } else {
                 this.viewStack = []
             }
-            this.notify("SZ2X9fY2", this);
+            this.notify("JQbM7Db6", this);
             a.removeClass("contentNextView");
             a.addClass("contentCurrentView");
             e.styles = a.attr("class");
@@ -15045,10 +15061,10 @@
             }
             var l = typeof options !== "undefined" && typeof options.showBack !== "undefined" ? options.showBack : true;
             this.showBackButton(l);
-            if (typeof this["6)kQoR7F"] !== "undefined") {
-                this["6)kQoR7F"](this)
+            if (typeof this["%HVTsgFN"] !== "undefined") {
+                this["%HVTsgFN"](this)
             } else {
-                this.notify("6)kQoR7F", this)
+                this.notify("%HVTsgFN", this)
             }
         };
         t.prototype.popOut = function (a) {
@@ -15084,10 +15100,10 @@
                 this.view.node().find(".main-content").scrollTop(0)
             }
 
-            if (this["EffYILjU"]) {
-                this["EffYILjU"](this)
+            if (this["N0O)e3nK"]) {
+                this["N0O)e3nK"](this)
             } else {
-                this.notify("EffYILjU", this)
+                this.notify("N0O)e3nK", this)
             }
             r.bind(this)();
             o.bind(this)();
@@ -15111,18 +15127,18 @@
                 }
             }
             this.hideBackButton(n);
-            if (typeof this["gRayY3gp"] === "undefined") {
-                this.notify("gRayY3gp", this)
+            if (typeof this["BzDoxZ0V"] === "undefined") {
+                this.notify("BzDoxZ0V", this)
             } else {
-                this["gRayY3gp"](this)
+                this["BzDoxZ0V"](this)
             }
         };
-        t.prototype["Z04XvT7k"] = function () {
+        t.prototype["v2v6tJij"] = function () {
             if (this.view) {
                 this.slideOut()
             }
         };
-        t.prototype["5gDHtT_N"] = function (t, e) {
+        t.prototype["x2x7Uarm"] = function (t, e) {
             if (!this.view || this.view.closable === false) {
                 return
             }
@@ -15131,35 +15147,35 @@
             }
             var i;
             if (e && e.shiftKey) {
-                i = this.notify("(3bFTVRB", t, e);
+                i = this.notify("xq8TwXe0", t, e);
                 return
             }
-            this.notify("jEtkS_7p", this, {name: "bottombar", controller: t.controller, closeall: false});
-            this.notify("jEtkS_7p", this, {name: "topbar", controller: t.controller, closeall: false});
+            this.notify("cRyH7EZ2", this, {name: "bottombar", controller: t.controller, closeall: false});
+            this.notify("cRyH7EZ2", this, {name: "topbar", controller: t.controller, closeall: false});
             this.view.hide();
             this._manageCloseButton();
-            this.notify("(SpjKs8G", this);
-            this.notify("gQbco8tG", this, this.name)
+            this.notify("EfUQKw6W", this);
+            this.notify("_sVoovfC", this, this.name)
         };
-        t.prototype["XDyVas7u"] = function () {
-            t.__super__["XDyVas7u"].apply(this, arguments);
+        t.prototype["W1qWr6IS"] = function () {
+            t.__super__["W1qWr6IS"].apply(this, arguments);
             this._manageCloseButton();
             if (this.view && this.view.height > $(window).height()) {
                 this.view.resizeWindow($(window).height())
             }
         };
-        t.prototype["DbSTNafr"] = function () {
-            t.__super__["DbSTNafr"].apply(this, arguments);
+        t.prototype["4qlajYYq"] = function () {
+            t.__super__["4qlajYYq"].apply(this, arguments);
             this._manageCloseButton();
             this.setActive()
         };
-        t.prototype["gQbco8tG"] = function () {
+        t.prototype["_sVoovfC"] = function () {
             this._manageCloseButton();
-            this.notify("(SpjKs8G", this)
+            this.notify("EfUQKw6W", this)
         };
         t.prototype._manageCloseButton = function () {
             var t = $(".win:visible").length, e = $(".close-all");
-            if (typeof x !== "undefined" && x) {
+            if (typeof I !== "undefined" && I) {
                 t = 0
             }
             if (t > 0) {
@@ -15194,18 +15210,18 @@
             this.viewStack = [];
             this.view.reset()
         };
-        t.prototype["0D14R2Mg"] = function (t) {
+        t.prototype["jpKWh83B"] = function (t) {
             if (this.view) {
                 this.view.scrollList = t
             }
         };
-        t.prototype[")j1jgltl"] = function (e, t) {
+        t.prototype["h2J2ZQXQ"] = function (e, t) {
             if (this.view) {
                 this.view.setScrollIndicator(t)
             }
         };
-        t.prototype["bS_P(RTt"] = function (e, i) {
-            t.__super__["bS_P(RTt"].apply(this, arguments);
+        t.prototype["acyTgezU"] = function (e, i) {
+            t.__super__["acyTgezU"].apply(this, arguments);
             if (!this.view) {
                 return
             }
@@ -15214,14 +15230,14 @@
                 this.view.handlebarDragging = false
             }
         };
-        t.prototype["0jOar_HJ"] = function (i, e) {
-            t.__super__["0jOar_HJ"].apply(this, arguments);
+        t.prototype["NEJghIoP"] = function (i, e) {
+            t.__super__["NEJghIoP"].apply(this, arguments);
             if (this.view && this.view.resizeable) {
                 this.view.moveEvent(e)
             }
         };
-        t.prototype["-nc-59bb"] = function (e, i) {
-            t.__super__["-nc-59bb"].apply(this, arguments);
+        t.prototype["6%wiVnzB"] = function (e, i) {
+            t.__super__["6%wiVnzB"].apply(this, arguments);
             if (!this.view) {
                 return
             }
@@ -15229,22 +15245,22 @@
                 this.view.resizeWindow($(window).height())
             }
         };
-        t.prototype["&Bte(ymt"] = function (e, t) {
-            return this.notify("&Bte(ymt", this, t)
+        t.prototype["bblKvJGb"] = function (e, t) {
+            return this.notify("bblKvJGb", this, t)
         };
-        t.prototype["Cg2txIGZ"] = function (t) {
+        t.prototype["riV-Rd0o"] = function (t) {
             if (!this.view.sortMenu) {
                 this.view.createSortMenu()
             }
             this.view.sortMenu.toggle()
         };
         t.prototype._callSortMessage = function () {
-            if (typeof this["lUe%pBmJ"] === "undefined") {
+            if (typeof this["umQ(96%b"] === "undefined") {
             } else {
-                return this["lUe%pBmJ"](this.sort.type, this.sort.value, this.sort.direction)
+                return this["umQ(96%b"](this.sort.type, this.sort.value, this.sort.direction)
             }
         };
-        t.prototype["(SovDy2S"] = function (t, n) {
+        t.prototype["w3nkALRR"] = function (t, n) {
             var e = "special";
             var i = t.data;
             var a = "sortElement";
@@ -15264,16 +15280,16 @@
             this.view.sortMenu.toggleOnce();
             this.view.updateSortBar(e, i, s, a)
         };
-        t.prototype["E)vBKxuO"] = function (t) {
+        t.prototype["OZj3GvzM"] = function (t) {
             this.sort.direction = "asc";
             this._callSortMessage()
         };
-        t.prototype["6f%mPBXR"] = function (t) {
+        t.prototype["zySl8f8R"] = function (t) {
             this.sort.direction = "dsc";
             this._callSortMessage()
         };
         return t
-    }(Ze);
+    }(Je);
     u.Window = function (i) {
         utils.__extends(t, i);
         function t(r, n) {
@@ -15292,7 +15308,7 @@
                 styles: "title smart-truncate"
             });
             if (this.closable) {
-                this.createSubview(this.headline, {styles: "close", name: "closeButton", clickMessage: "5gDHtT_N"}, e)
+                this.createSubview(this.headline, {styles: "close", name: "closeButton", clickMessage: "x2x7Uarm"}, e)
             }
             this.headline.clearfix();
             var a = ["l", "r", "t", "b"];
@@ -15417,11 +15433,11 @@
             if (this.resizeable && this.handlebarClicked) {
                 this.handlebarDragging = true;
                 this.resizeWindow(t.pageY);
-                this.notify("&Bte(ymt", this, this.height)
+                this.notify("bblKvJGb", this, this.height)
             }
         };
         t.prototype.resizeWindow = function (t) {
-            if (typeof x !== "undefined" && x) {
+            if (typeof I !== "undefined" && I) {
                 return
             }
             var e = parseInt($("#" + this.id).css("top"), 10);
@@ -15436,7 +15452,7 @@
             return $("#" + this.id + " .main-content").height()
         };
         return t
-    }(Ue);
+    }(Pe);
     u.PopUp = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
@@ -15499,7 +15515,7 @@
         }
 
         t.prototype.getImageSrc = function (t, e) {
-            return this.notify("ttHKxwy5", this, {imageName: t, imageCategory: e})
+            return this.notify("oqS1fWVg", this, {imageName: t, imageCategory: e})
         };
         t.prototype.getButtonLabelForSortCriteria = function (a, t) {
             var e = this.getImageSrc("buttonCastle", "icons");
@@ -15510,7 +15526,7 @@
             }
             if (a === "unit") {
                 e = this.getImageSrc(t, "units");
-                i = translate(g[t].identifier)
+                i = translate(y[t].identifier)
             }
             if (a === "special" && t === "dist") {
                 e = this.getImageSrc("filter_dist", "icons");
@@ -15527,17 +15543,17 @@
             return {icon: e, text: i}
         };
         t.prototype.sortButtonClickHandler = function () {
-            this.notify("Cg2txIGZ", this)
+            this.notify("riV-Rd0o", this)
         };
         t.prototype.ascClickHandler = function () {
             $("#" + this.templateData.htmlID + " .control.asc").addClass("active");
             $("#" + this.templateData.htmlID + " .control.desc").removeClass("active");
-            this.notify("E)vBKxuO", this)
+            this.notify("OZj3GvzM", this)
         };
         t.prototype.dscClickHandler = function () {
             $("#" + this.templateData.htmlID + " .control.asc").removeClass("active");
             $("#" + this.templateData.htmlID + " .control.desc").addClass("active");
-            this.notify("6f%mPBXR", this)
+            this.notify("zySl8f8R", this)
         };
         t.prototype.getEvents = function () {
             var e = t.__super__.getEvents.apply(this, arguments);
@@ -15568,7 +15584,7 @@
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.styleArray.push("dropdown");
-            this.addOption("selectMessage", "(SovDy2S");
+            this.addOption("selectMessage", "w3nkALRR");
             this.addOption("foreignHabitat", null);
             this.addOption("resourceFilter", [n.WOOD, n.STONE, n.ORE, n.COPPER, n.SILVER]);
             this.addOption("unitFilter", null);
@@ -15602,7 +15618,7 @@
             }, L.Table);
             this.createEntry(t, "buttonCastle", translate("all_resources"), "mainResources");
             this.createSubview(t, {
-                units: g,
+                units: y,
                 showNames: true,
                 reverseOrder: false,
                 clickMessage: this.selectMessage,
@@ -15649,7 +15665,7 @@
         };
         return t
     }(S);
-    ge.Controller = function (e) {
+    ye.Controller = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -15661,7 +15677,7 @@
                 this.view.renewHeight()
             }
         };
-        t.prototype["(33vV0WG"] = function (t, e) {
+        t.prototype["eIM&8EL6"] = function (t, e) {
             if (t) {
                 if (t.success) {
                     this.datasource.acknowledge({
@@ -15672,30 +15688,30 @@
                 }
             }
             if (e) {
-                this["M33QKZB2"]()
+                this["ENXYwA&Y"]()
             }
         };
-        t.prototype["G0RA_w0i"] = function (t, e) {
+        t.prototype["Twd_4v4v"] = function (t, e) {
             if (t) {
                 this.datasource.start(t.id)
             }
             if (e) {
-                this["M33QKZB2"]()
+                this["ENXYwA&Y"]()
             }
         };
-        t.prototype["8NnzY0Em"] = function (t, e) {
+        t.prototype["ikjpJgUY"] = function (t, e) {
             if (t) {
                 this.datasource.skip(t.id)
             }
             if (e) {
-                this["M33QKZB2"]()
+                this["ENXYwA&Y"]()
             }
         };
-        t.prototype["&)OmY9pC"] = function (e, t, i) {
+        t.prototype["wh0P_MoQ"] = function (e, t, i) {
             if (t) {
-                if (ye.INTERNAL_LINK.test(t)) {
+                if (ve.INTERNAL_LINK.test(t)) {
                     this.controller.linkHandler(t)
-                } else if (ye.EXTERNAL_LINK.test(t)) {
+                } else if (ve.EXTERNAL_LINK.test(t)) {
                     window.open(t)
                 }
             }
@@ -15703,10 +15719,10 @@
                 if (e) {
                     this.datasource.start(e.id)
                 }
-                this["M33QKZB2"]()
+                this["ENXYwA&Y"]()
             }
         };
-        t.prototype["M33QKZB2"] = function () {
+        t.prototype["ENXYwA&Y"] = function () {
             this.view.hide(false)
         };
         t.prototype.dataUpdate = function (t, i, e) {
@@ -15723,7 +15739,7 @@
         };
         return t
     }(u.Controller);
-    ge.DataSource = function (e) {
+    ye.DataSource = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t() {
@@ -15764,15 +15780,15 @@
         }
 
         return t
-    }(I);
-    ge.List = function (i) {
+    }(x);
+    ye.List = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
             this.setOptions(t);
-            utils.linkMethod("prepareEventData", ge.DataSource, e);
-            utils.linkMethod("prepareResources", B.DataSource, e);
-            utils.linkMethod("prepareUnits", B.DataSource, e)
+            utils.linkMethod("prepareEventData", ye.DataSource, e);
+            utils.linkMethod("prepareResources", H.DataSource, e);
+            utils.linkMethod("prepareUnits", H.DataSource, e)
         }
 
         function s(e) {
@@ -15791,7 +15807,7 @@
             if (this.parent.hidden) {
                 return
             }
-            var y = 0, c = 0, n = {
+            var v = 0, c = 0, n = {
                 htmlID: this.id,
                 name: this.name,
                 isSuccessAvailable: false,
@@ -15816,8 +15832,11 @@
             if (typeof a.trackingEvents !== "undefined" && a.trackingEvents.length) {
                 for (var o = 0, d = a.trackingEvents.length; o < d; o++) {
                     var e = a.trackingEvents[o];
+                    if (e.type === "tutorial") {
+                        continue
+                    }
                     if (e.success) {
-                        y++;
+                        v++;
                         n.isSuccessAvailable = true
                     } else {
                         c++
@@ -15828,7 +15847,7 @@
                             continue
                         }
                     }
-                    var u = e.completionCount ? +e.completionCount : 0, h = e.conditions.length - 1, r = +e.conditions[h].value, g = e.conditions[h].identifier, l = e.remainingConditions[g];
+                    var u = e.completionCount ? +e.completionCount : 0, h = e.conditions.length - 1, r = +e.conditions[h].value, y = e.conditions[h].identifier, l = e.remainingConditions[y];
                     if (e.type === "world") {
                         e.totalDone = (e.success ? u + 1 : u) * r + l
                     } else if (e.type === "task" && typeof l !== "undefined") {
@@ -15841,12 +15860,12 @@
                     i[e.type].push(e)
                 }
                 if (i.world.length) {
-                    i.world.sort(Z.TrakingEvent)
+                    i.world.sort(J.TrakingEvent)
                 } else {
                     i.world = null
                 }
                 if (i.task.length) {
-                    i.task.sort(Z.TrakingEvent)
+                    i.task.sort(J.TrakingEvent)
                 } else {
                     i.task = null
                 }
@@ -15864,14 +15883,14 @@
             this.draw()
         };
         e.prototype.chooseCastleClicked = function () {
-            this.controller.notify("Hg_BGJOV", this)
+            this.controller.notify("Cw9F&nH9", this)
         };
         e.prototype.eventDetailsClicked = function (e) {
             var i = e.find(".rowInfo").data("id"), t = this.prepareEventData(i);
             if (!t) {
                 return
             }
-            this.controller.notify("uwF%qusA", t, {isProfileList: true, caller: this})
+            this.controller.notify("DTuCd2bq", t, {isProfileList: true, caller: this})
         };
         e.prototype.clickHandler = function (t) {
             this.bubble(t, s.bind(this), this.templateData.htmlId)
@@ -15888,13 +15907,13 @@
         };
         return e
     }(S);
-    ge.Window = function (e) {
+    ye.Window = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.setOptions(e);
             this.contentContainer = this.createSubview(this, {styles: "content-container"});
-            this.eventContainer = this.createSubview(this.contentContainer, {template: "eventContent"}, ge.EventContainer, null, false)
+            this.eventContainer = this.createSubview(this.contentContainer, {template: "eventContent"}, ye.EventContainer, null, false)
         }
 
         t.prototype.renewHeight = function () {
@@ -15908,7 +15927,7 @@
             this.eventContainer.dataUpdate(null, e)
         };
         t.prototype.toCenter = function (t) {
-            var e = this.notify("f6Ylekkg", this), t = {};
+            var e = this.notify("buqqHDHe", this), t = {};
             this.width = this.$win.width();
             this.height = this.$win.height();
             t.x = (e.width - this.width) / 2;
@@ -15916,8 +15935,8 @@
             this.pos = t
         };
         return t
-    }(Ue);
-    ge.EventContainer = function (e) {
+    }(Pe);
+    ye.EventContainer = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -15950,22 +15969,22 @@
         }
 
         t.prototype._dismiss = function () {
-            this.notify("M33QKZB2")
+            this.notify("ENXYwA&Y")
         };
         t.prototype._accept = function (t) {
-            this.notify("(33vV0WG", this.templateData, t)
+            this.notify("eIM&8EL6", this.templateData, t)
         };
         t.prototype._start = function (t) {
-            this.notify("G0RA_w0i", this.templateData, t)
+            this.notify("Twd_4v4v", this.templateData, t)
         };
         t.prototype._skip = function (t) {
-            this.notify("8NnzY0Em", this.templateData, t)
+            this.notify("ikjpJgUY", this.templateData, t)
         };
         t.prototype._link = function (t) {
             var e = t.data("link"), i = t.is(".dissmissable");
-            this.notify("&)OmY9pC", this.templateData, e, i)
+            this.notify("wh0P_MoQ", this.templateData, e, i)
         };
-        t.prototype.dataUpdate = function (y, t) {
+        t.prototype.dataUpdate = function (v, t) {
             if (this.templateData && this.templateData.isDemo && t.success !== true) {
                 t.isDemo = true
             }
@@ -16014,7 +16033,7 @@
                 })
             }
             if (t.clientInfo.buttonList) {
-                var i, r, g = null, o = "", s, u;
+                var i, r, y = null, o = "", s, u;
                 for (i = 0, r = t.clientInfo.buttonList.length; i < r; i++) {
                     s = t.clientInfo.buttonList[i];
                     if (s.dismissesEvent === "true") {
@@ -16096,8 +16115,8 @@
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "k6WK9lkX";
-            this.drawEndMessage = "Kg&sj-mM";
+            this.drawStartMessage = "4pSopmCi";
+            this.drawEndMessage = "Ts6snhIA";
             this.addRequired("buildings");
             this.addRequired("habitat");
             this.addOption("levelString", true);
@@ -16119,10 +16138,10 @@
                 this.buildingsArray.push([t, this.buildings[t]])
             }
             this.buildingsArray.sort(function (t, e) {
-                if (f[t[0]].order < f[e[0]].order) {
+                if (d[t[0]].order < d[e[0]].order) {
                     return -1
                 }
-                if (f[t[0]].order > f[e[0]].order) {
+                if (d[t[0]].order > d[e[0]].order) {
                     return 1
                 }
                 return 0
@@ -16133,10 +16152,10 @@
             this.sort();
             for (var o = 0; o < this.buildingsArray.length; o++) {
                 t = this.buildingsArray[o][0];
-                s = e = f[t].primaryKey;
+                s = e = d[t].primaryKey;
                 a = this.habitat.habitatBuildingUpgrades;
                 i = false;
-                if (this.build === true && f[t].isUpgradeable(this.habitat)) {
+                if (this.build === true && d[t].isUpgradeable(this.habitat)) {
                     i = true
                 }
                 if (a !== null) {
@@ -16149,13 +16168,13 @@
                         }
                     }
                 }
-                if (!f[e].upgradeTo) {
+                if (!d[e].upgradeTo) {
                     i = false
                 }
-                if (f[e].isUpgradeable(this.habitat) === false) {
+                if (d[e].isUpgradeable(this.habitat) === false) {
                     i = false
                 }
-                var u = f[t].identifier.split("/")[0];
+                var u = d[t].identifier.split("/")[0];
                 if (!this.requiredResearchDone) {
                     i = false
                 }
@@ -16173,10 +16192,10 @@
                     showImage: this.showImage,
                     showUpgrades: this.showUpgrades,
                     upgradeInfo: this.habitat.habitatBuildingUpgrades,
-                    buildingLevel: parseInt(f[t].identifier.split("/")[1], 10),
+                    buildingLevel: parseInt(d[t].identifier.split("/")[1], 10),
                     buttonEnabled: i,
                     clickMessage: this.clickMessage,
-                    buttonClickMessage: "EvzUGlwm",
+                    buttonClickMessage: "xvCZvjBw",
                     buttonPrimaryKey: e,
                     styles: "building",
                     useContainer: this.useElementContainer,
@@ -16189,7 +16208,7 @@
             this.setOptions(i);
             for (var t = 0; t < this.subviews.length; t++) {
                 if (typeof this.buildings[this.subviews[t].buildingID] != "undefined") {
-                    this.subviews[t].dataUpdate(e, {name: translate(f[building].identifier)})
+                    this.subviews[t].dataUpdate(e, {name: translate(d[building].identifier)})
                 }
             }
         };
@@ -16205,7 +16224,7 @@
         }
 
         t.prototype.create = function () {
-            var t = f[this.buildingID];
+            var t = d[this.buildingID];
             var e = t.buildResources;
             this.createSubview(this, {content: translate("Level") + " " + this.level, styles: "title"});
             this.createSubview(this, {resources: e, styles: "resources"}, L.Table);
@@ -16222,22 +16241,22 @@
         }
 
         t.prototype.create = function () {
-            var n = f[this.buildingID];
+            var n = d[this.buildingID];
             if (!n.upgradeTo) {
                 this.createSubview(this, {content: translate("Building completed"), styles: "title"});
                 this.clearfix();
                 return
             }
-            var t = f[n.upgradeTo[0]];
+            var t = d[n.upgradeTo[0]];
             var m = parseInt(t.identifier.split("/")[1], 10);
             var h = t.buildResources;
-            var p = t.buildDuration;
+            var f = t.buildDuration;
             var e, i, r, a;
             if (t.volumeResource !== null) {
-                h[t.volumeResource] = t.volumeAmount - f[this.buildingID].volumeAmount
+                h[t.volumeResource] = t.volumeAmount - d[this.buildingID].volumeAmount
             }
             this.createSubview(this, {content: translate("Level") + " " + m, styles: "title"});
-            this.createSubview(this, {resources: h, styles: "resources", negativePeople: false, time: p}, L.Table);
+            this.createSubview(this, {resources: h, styles: "resources", negativePeople: false, time: f}, L.Table);
             this.clearfix();
             if (t.storeAmount || utils.dict.size(t.modifier) > 0) {
                 this.createSubview(this, {content: translate("Enables"), styles: "title"});
@@ -16249,16 +16268,16 @@
                 }
                 if (utils.dict.size(t.modifier) > 0) {
                     for (var S in t.modifier) {
-                        var k = t.modifier[S];
-                        this.createSubview(this, {content: translate(k.identifier)})
+                        var D = t.modifier[S];
+                        this.createSubview(this, {content: translate(D.identifier)})
                     }
                 }
             }
             if (t.battleValues) {
                 for (var u in t.battleValues) {
-                    var I = t.battleValues[u], g = translate(u), y = this.getIcon(u), v = I.defense, o = "";
-                    o = "<span class='name'>" + y + g + "</span>";
-                    o += "<span class='val'>" + v + "</span><div class='clearfix'></div>";
+                    var x = t.battleValues[u], y = translate(u), v = this.getIcon(u), g = x.defense, o = "";
+                    o = "<span class='name'>" + v + y + "</span>";
+                    o += "<span class='val'>" + g + "</span><div class='clearfix'></div>";
                     this.createSubview(this, {styles: "battleValueRow", content: o})
                 }
             }
@@ -16278,14 +16297,14 @@
             if (t.knowledges && t.knowledges.length) {
                 this.createSubview(this, {content: translate("Available research"), styles: "title"});
                 var _ = function (t) {
-                    return t.primaryKey === d.primaryKey
+                    return t.primaryKey === p.primaryKey
                 };
                 for (e = 0, i = t.knowledges.length; e < i; e++) {
-                    var d = t.knowledges[e];
+                    var p = t.knowledges[e];
                     if (n.knowledges.filter(_).length) {
                         continue
                     }
-                    this.createSubview(this, {content: translate(d.identifier)})
+                    this.createSubview(this, {content: translate(p.identifier)})
                 }
             }
             if (t.generateResources) {
@@ -16307,8 +16326,8 @@
                     var s = this.createSubview(this, {styles: "wrapper tradeUpgradeAmount"});
                     s.createSubview(s, {content: r, styles: "tradeFor"});
                     for (a in l.rates) {
-                        var T = l.rates[a], D = this.getImage(a, "resources");
-                        s.createSubview(s, {content: D + " 1:" + T, styles: "tradeWith"})
+                        var T = l.rates[a], k = this.getImage(a, "resources");
+                        s.createSubview(s, {content: k + " 1:" + T, styles: "tradeWith"})
                     }
                     s.clearfix()
                 }
@@ -16330,7 +16349,7 @@
         }
 
         t.prototype.create = function () {
-            var t = f[this.buildingID];
+            var t = d[this.buildingID];
             this.createSubview(this, {content: translate(t.identifier.split("/")[0]), styles: "title"});
             this.createSubview(this, {content: t.getDescription(), styles: "description"})
         };
@@ -16340,8 +16359,8 @@
         utils.__extends(t, i);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "VVv)aOHM";
-            this.drawEndMessage = "ew-KaY(A";
+            this.drawStartMessage = "ysp3a85Y";
+            this.drawEndMessage = "p8hrcI2H";
             this.addRequired("buildingID");
             this.addOption("group", "BuildingElement");
             this.addOption("buildingName", "");
@@ -16374,23 +16393,23 @@
             return t
         };
         t.prototype.create = function () {
-            var a = "", h, D, u = null, l, s, y, r, t, o, w = true, k = this.clickMessage ? "clickable" : "";
-            t = this.useContainer ? this.createContainer({styles: k}) : this;
+            var a = "", h, k, u = null, l, s, v, r, t, o, w = true, D = this.clickMessage ? "clickable" : "";
+            t = this.useContainer ? this.createContainer({styles: D}) : this;
             this.container = t;
             if (this.showName === true) {
                 a = translate(this.buildingName);
                 this.createSubview(t, {styles: "title buildingName", content: a})
             }
             if (this.showImage) {
-                var n = {styles: "buildingimage", content: this.getImage(this.buildingName, "buildings")}, g = e;
+                var n = {styles: "buildingimage", content: this.getImage(this.buildingName, "buildings")}, y = e;
                 if (this.showInfoHover) {
-                    g = F;
+                    y = F;
                     n.lazyHoverClass = W.InfoHoverView;
                     n.lazyHoverOptions = {buildingID: this.buildingID};
                     n.hoverDelay = 500;
                     n.expiryInterval = 15e3
                 }
-                u = this.createSubview(t, n, g)
+                u = this.createSubview(t, n, y)
             }
             if (this.levelString === true) {
                 h = "levelInfo1";
@@ -16416,12 +16435,12 @@
                 }, F);
                 this.createSubview(r, {content: a, styles: "level"})
             }
-            var v = this.buttonClickMessage;
-            y = this.buttonImage || this.getIcon("build");
+            var g = this.buttonClickMessage;
+            v = this.buttonImage || this.getIcon("build");
             s = "button buildbutton";
             if (this.buttonEnabled === false) {
                 s = "button buildbuttondisabled disabled buildbutton";
-                v = null
+                g = null
             }
             if (this.build === true) {
                 var m = e;
@@ -16430,11 +16449,11 @@
                 } else {
                     w = false
                 }
-                if (f[this.buildingPrimaryKey].upgradeTo && f[this.buildingPrimaryKey].upgradeTo.length > 0) {
+                if (d[this.buildingPrimaryKey].upgradeTo && d[this.buildingPrimaryKey].upgradeTo.length > 0) {
                     o = this.createSubview(t, {
                         styles: s,
-                        content: y,
-                        clickMessage: v,
+                        content: v,
+                        clickMessage: g,
                         data: {
                             primaryKey: this.buildingPrimaryKey,
                             upgradeTo: this.buttonPrimaryKey,
@@ -16457,14 +16476,14 @@
                 var b = this.buildingPrimaryKey;
                 for (var c = 0, C = this.upgradeInfo.length; c < C; c++) {
                     var i = this.upgradeInfo[c], _ = this.getIcon("doubleArrow");
-                    var d = "button speedup";
-                    var p = "EnrZIB7r";
+                    var p = "button speedup";
+                    var f = "duJ(Odl5";
                     if (i.buildingTarget.upgradeOf == b) {
                         if (i.isSpeededup() || i.isHalfDurationReached()) {
                             _ = this.getIcon("finishTick");
                             if (this.buildingPrimaryKey != i.buildingTarget.upgradeOf) {
-                                d += " disabled";
-                                p = null
+                                p += " disabled";
+                                f = null
                             }
                         }
                         this.createSubview(t, {
@@ -16475,9 +16494,9 @@
                         r = this.createSubview(this, {content: this.getIcon("levelInfo1"), styles: "nextlevelInfo"});
                         this.createSubview(r, {content: i.buildingTarget.level, styles: "level"});
                         o = this.createSubview(t, {
-                            styles: d,
+                            styles: p,
                             content: _,
-                            clickMessage: p,
+                            clickMessage: f,
                             data: {primaryKey: this.buildingPrimaryKey, upgrade: i},
                             propagateClicks: false
                         });
@@ -16542,7 +16561,7 @@
                     buildingName: i.identifier.split("/")[0],
                     buildingLevel: parseInt(i.identifier.split("/")[1], 10),
                     clickMessage: this.clickMessage,
-                    buttonClickMessage: "EnrZIB7r",
+                    buttonClickMessage: "duJ(Odl5",
                     buttonImage: o,
                     buttonEnabled: a,
                     useHover: false,
@@ -16566,8 +16585,8 @@
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "k6WK9lkX";
-            this.drawEndMessage = "Kg&sj-mM";
+            this.drawStartMessage = "4pSopmCi";
+            this.drawEndMessage = "Ts6snhIA";
             this.addRequired("buildings");
             this.addRequired("habitat");
             this.addOption("levelString", true);
@@ -16581,12 +16600,12 @@
         }
 
         t.prototype.gatherBuildingInfos = function (i) {
-            var a = f[i].primaryKey;
+            var a = d[i].primaryKey;
             var t = a;
             var e = this.habitat.habitatBuildingUpgrades;
             var s = false;
-            var o = f[i].identifier.split("/")[0];
-            if (this.build === true && f[i].isUpgradeable(this.habitat)) {
+            var o = d[i].identifier.split("/")[0];
+            if (this.build === true && d[i].isUpgradeable(this.habitat)) {
                 s = true
             }
             if (e !== null) {
@@ -16599,10 +16618,10 @@
                     }
                 }
             }
-            if (f[t].upgradeTo === null) {
+            if (d[t].upgradeTo === null) {
                 s = false
             }
-            if (f[t].isUpgradeable(this.habitat) === false) {
+            if (d[t].isUpgradeable(this.habitat) === false) {
                 s = false
             }
             return {name: o, primaryKey: a, buttonEnabled: s, buttonPrimaryKey: t, upgrades: e}
@@ -16625,10 +16644,10 @@
                     showImage: this.showImage,
                     showUpgrades: this.showUpgrades,
                     upgradeInfo: this.habitat.habitatBuildingUpgrades,
-                    buildingLevel: parseInt(f[building].identifier.split("/")[1], 10),
+                    buildingLevel: parseInt(d[building].identifier.split("/")[1], 10),
                     buttonEnabled: i.buttonEnabled,
                     clickMessage: this.clickMessage,
-                    buttonClickMessage: "EvzUGlwm",
+                    buttonClickMessage: "xvCZvjBw",
                     buttonPrimaryKey: i.buttonPrimaryKey,
                     styles: "building",
                     useHover: true
@@ -16670,7 +16689,7 @@
             var i = "", e;
             var n, r;
             if (t.build === false)return "";
-            if (!f[t.buildingPrimaryKey].upgradeTo || f[t.buildingPrimaryKey].upgradeTo.length === 0)return "";
+            if (!d[t.buildingPrimaryKey].upgradeTo || d[t.buildingPrimaryKey].upgradeTo.length === 0)return "";
             var a = t.buttonClickMessage;
             var s = t.buttonImage || this.getIcon("build");
             e = "button buildbutton";
@@ -16703,7 +16722,7 @@
                 var t = e.upgradeInfo[a];
                 var s = this.getIcon("doubleArrow");
                 var r = "button speedup";
-                var o = "EnrZIB7r";
+                var o = "duJ(Odl5";
                 if (t.buildingTarget.upgradeOf == n) {
                     if (t.isSpeededup() || t.isHalfDurationReached()) {
                         s = this.getIcon("finishTick");
@@ -16742,7 +16761,7 @@
             this.setOptions(i);
             for (var t = 0; t < this.subviews.length; t++) {
                 if (typeof this.buildings[this.subviews[t].buildingID] != "undefined") {
-                    this.subviews[t].dataUpdate(e, {name: translate(f[building].identifier)})
+                    this.subviews[t].dataUpdate(e, {name: translate(d[building].identifier)})
                 }
             }
         };
@@ -16775,7 +16794,7 @@
             for (var s = 0; s < o.length; s++) {
                 var t = o[s].primaryKey;
                 if (this.showNames === true) {
-                    r = translate(g[t].identifier)
+                    r = translate(y[t].identifier)
                 }
                 i = this.units[t].getMaxRecruiting(this.habitat);
                 n = Boolean(this.units[t].isRecruitable(this.habitat) && i);
@@ -16829,10 +16848,10 @@
             for (var e = 0; e < this.unitOrders.length; e++) {
                 var t = this.unitOrders[e];
                 var s = t.unit;
-                var n = this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: "recruitSpeedup"});
+                var n = this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: "recruitSpeedup"});
                 var l = this.buttonClickMessage;
                 if (t.isSpeededup() || t.isHalfDurationReached()) {
-                    n = this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: "recruitFinish"})
+                    n = this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: "recruitFinish"})
                 }
                 if (this.showNames === true) {
                     a = translate(s.identifier)
@@ -16843,7 +16862,7 @@
                 } else {
                     this.showShortTimer = true
                 }
-                var o = Math.floor((t.complete - (new Date - U)) / 1e3);
+                var o = Math.floor((t.complete - (new Date - P)) / 1e3);
                 var u = o / t.orderAmount;
                 i = {
                     unitID: "" + s.primaryKey,
@@ -16898,7 +16917,7 @@
             for (var a = 0; a < o.length; a++) {
                 var e = o[a].primaryKey;
                 if (this.showNames === true) {
-                    r = translate(g[e].identifier)
+                    r = translate(y[e].identifier)
                 }
                 i = this.units[e].getMaxRecruiting(this.habitat);
                 n = Boolean(this.units[e].isRecruitable(this.habitat) && i);
@@ -16925,7 +16944,7 @@
                     showShortTimer: false,
                     timerTotal: null,
                     timerSingle: null,
-                    maxButtonClickMessage: "ayZTC%1_",
+                    maxButtonClickMessage: "SVqH3B3t",
                     inputChangeMessage: null,
                     timerDivider: null,
                     showZeroUnits: true
@@ -16939,7 +16958,7 @@
         };
         t.prototype.createUnitElement = function (t) {
             var i, n;
-            var y;
+            var v;
             var e = "";
             var l;
             var s;
@@ -16986,13 +17005,13 @@
             e += this.closeHtml("div");
             s = null;
             if (t.inputFields) {
-                var g = t.sessionPrefix && t.habitat ? t.sessionPrefix + "_" + ie + "_" + t.habitat.id + "_" + t.unitID : "";
+                var y = t.sessionPrefix && t.habitat ? t.sessionPrefix + "_" + ie + "_" + t.habitat.id + "_" + t.unitID : "";
                 l = {
                     max: t.amount,
                     maxButtonClickMessage: t.maxButtonClickMessage,
                     inputChangeMessage: t.inputChangeMessage,
                     styles: "maxInput",
-                    storageId: g,
+                    storageId: y,
                     registerChangeHandler: true,
                     lazyHoverClass: E,
                     lazyHoverOptions: {content: translate("%d affordable", t.amount), styles: "buildingHover"}
@@ -17012,14 +17031,14 @@
                 e += this.addElement({
                     clickMessage: r,
                     styles: n,
-                    content: this.notify("3s(kBgiI", this, {imageName: "recruit", imageCategory: "icons"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: "recruit", imageCategory: "icons"}),
                     data: {inputFieldId: s, habitat: t.habitat, unitID: t.unitID}
                 }, r ? true : false)
             }
             if (t.speedUp === true) {
                 e += this.addElement({
                     styles: "button",
-                    content: t.buttonImage || this.notify("3s(kBgiI", this, {
+                    content: t.buttonImage || this.notify("Z-XGNYVU", this, {
                         imageName: "recruitSpeedup",
                         imageCategory: "icons"
                     }),
@@ -17040,9 +17059,9 @@
                     e += this.addElement({content: a.orderAmount, styles: "orderAmount"});
                     e += this.addElement({
                         styles: "button speedup",
-                        content: this.notify("3s(kBgiI", this, {imageName: d, imageCategory: "icons"}),
+                        content: this.notify("Z-XGNYVU", this, {imageName: d, imageCategory: "icons"}),
                         data: {unitOrder: a},
-                        clickMessage: "dOoGMVuH"
+                        clickMessage: "Bj(UiJ6a"
                     }, true)
                 }
             }
@@ -17073,8 +17092,8 @@
         utils.__extends(t, we);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "TN(maQ3b";
-            this.drawEndMessage = "_2f6_NyJ";
+            this.drawStartMessage = "Eznu&%Ey";
+            this.drawEndMessage = "q8(a6WbT";
             this.addOption("rowID", -1);
             this.addOption("resources", null);
             this.addOption("habitat", null);
@@ -17122,7 +17141,7 @@
                         a = translate(re[t].identifier)
                     }
                     if (this.habitat !== null && this.generate === true) {
-                        this.notify("bKUGf9HF", this)
+                        this.notify("enjA1c%5", this)
                     }
                     i = "";
                     if (typeof this.resources[t] === "string") {
@@ -17188,7 +17207,7 @@
             }
         };
         t.prototype.destroy = function () {
-            this.notify("o873Cuvp", this)
+            this.notify("YHC95tkO", this)
         };
         t.prototype.timeEvent = function (r) {
             var t;
@@ -17265,8 +17284,8 @@
         utils.__extends(t, e);
         function t(o, n) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "xuitqLSO";
-            this.drawEndMessage = "8ojhJks&";
+            this.drawStartMessage = "cRI4_KkZ";
+            this.drawEndMessage = "PCOs%(P_";
             this.addRequired("resourceID");
             this.addOption("habitat", null);
             this.addOption("group", "Resource");
@@ -17274,7 +17293,7 @@
             this.addOption("amount", "");
             this.addOption("inputFields", false);
             this.addOption("colorClass", null);
-            this.addOption("maxButtonClickMessage", "ayZTC%1_");
+            this.addOption("maxButtonClickMessage", "SVqH3B3t");
             this.addOption("inputChangeMessage", null);
             this.addOption("rate", null);
             this.addOption("imageClickMessage", null);
@@ -17282,7 +17301,7 @@
             this.setOptions(n);
             var i = {
                 parent: this,
-                content: this.notify("3s(kBgiI", this, {imageName: this.resourceID, imageCategory: "resources"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: this.resourceID, imageCategory: "resources"}),
                 styles: "resourceIcon",
                 clickMessage: this.imageClickMessage,
                 data: this.resourceID
@@ -17315,7 +17334,7 @@
                     styles: "maxInput",
                     storageId: r
                 };
-                this.inputField = new H.InputFieldWithMax(this.controller, i);
+                this.inputField = new B.InputFieldWithMax(this.controller, i);
                 this.addSubview(this.inputField)
             }
         }
@@ -17363,8 +17382,8 @@
         utils.__extends(t, we);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "BnI(c(sy";
-            this.drawEndMessage = "dqIJH1Ws";
+            this.drawStartMessage = "s6hvj0iI";
+            this.drawEndMessage = "E(JHU%Mc";
             this.addOption("units", null);
             this.addOption("habitat", null);
             this.addOption("showNames", false);
@@ -17406,7 +17425,7 @@
                     }
                 }
                 if (this.showNames === true) {
-                    s = translate(g[t].identifier)
+                    s = translate(y[t].identifier)
                 }
                 e = {
                     parent: this,
@@ -17442,7 +17461,7 @@
             for (var t = 0; t < this.subviews.length; t++) {
                 if (typeof this.units[this.subviews[t].unitID] != "undefined") {
                     this.subviews[t].dataUpdate(e, {
-                        name: translate(g[this.subviews[t].unitID].identifier),
+                        name: translate(y[this.subviews[t].unitID].identifier),
                         amount: this.units[this.subviews[t].unitID]
                     })
                 }
@@ -17461,7 +17480,7 @@
                 if (e === null || e.value === 0) {
                     continue
                 }
-                i.push(g[this.subviews[t].unitID])
+                i.push(y[this.subviews[t].unitID])
             }
             return i
         };
@@ -17517,7 +17536,7 @@
                 for (var e = 0; e < t.length; e++) {
                     this.createSubview(this, {
                         styles: "icon",
-                        content: this.notify("3s(kBgiI", this, {
+                        content: this.notify("Z-XGNYVU", this, {
                             imageName: t[e].identifier,
                             imageCategory: "knowledges"
                         })
@@ -17565,7 +17584,7 @@
             if (this.showUnitInfo) {
                 this.createSubview(this, {
                     styles: "icon",
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: this.unit.primaryKey.toString(),
                         imageCategory: "units"
                     })
@@ -17600,7 +17619,7 @@
                 t = this.createSubview(n, {});
                 t.createSubview(t, {
                     styles: "categoryIcon",
-                    content: this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: i})
+                    content: this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: i})
                 });
                 t.createSubview(t, {styles: "name", content: translate(i)});
                 a = t.createSubview(t, {styles: "attackRow"});
@@ -17612,7 +17631,7 @@
             this.clearfix()
         };
         t.prototype._createImageWithValue = function (t, e, i) {
-            t.createSubview(t, {content: this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: e})});
+            t.createSubview(t, {content: this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: e})});
             t.createSubview(t, {content: i})
         };
         return t
@@ -17621,8 +17640,8 @@
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.drawStartMessage = "CwWfIt7d";
-            this.drawEndMessage = "_g5w5wJ8";
+            this.drawStartMessage = "Z7IN-H1L";
+            this.drawEndMessage = "McOny00N";
             this.addRequired("unitID");
             this.addRequired("habitat");
             this.addOption("showUpgrades", false);
@@ -17646,7 +17665,7 @@
             this.addOption("timerTotal", null);
             this.addOption("timerSingle", null);
             this.addOption("inputFields", false);
-            this.addOption("maxButtonClickMessage", "ayZTC%1_");
+            this.addOption("maxButtonClickMessage", "SVqH3B3t");
             this.addOption("inputChangeMessage", null);
             this.addOption("styles", "unitElement");
             this.addOption("timerDivider", null);
@@ -17662,17 +17681,17 @@
             var m;
             if (!this.showZeroUnits && this.amount === 0)return;
             if (this.showImage) {
-                var u = this.notify("3s(kBgiI", this, {imageName: this.unitID, imageCategory: "units"});
+                var u = this.notify("Z-XGNYVU", this, {imageName: this.unitID, imageCategory: "units"});
                 var l = $(u);
                 l.on("load", function () {
-                    this.notify("6P71vlIF", this);
+                    this.notify("(uTI&mLD", this);
                     l.off("load")
                 }.bind(this));
                 this.createSubview(this, {
                     content: u,
                     clickMessage: this.imageClickMessage,
                     lazyHoverClass: C.HoverView,
-                    lazyHoverOptions: {unit: g[this.unitID], habitat: this.habitat},
+                    lazyHoverOptions: {unit: y[this.unitID], habitat: this.habitat},
                     styles: "unitIcon",
                     data: this.unitID,
                     hoverOnClick: this.hoverOnClick
@@ -17693,8 +17712,8 @@
                 this.addSubview(new e(this.controller, i))
             }
             if (this.recruit === true) {
-                var y = this.recruitButtonEnabled ? this.amount.toString() : "0";
-                t = translate("%d affordable", y)
+                var v = this.recruitButtonEnabled ? this.amount.toString() : "0";
+                t = translate("%d affordable", v)
             } else {
                 t = this.amount
             }
@@ -17735,18 +17754,18 @@
                     maxButtonClickMessage: this.maxButtonClickMessage,
                     inputChangeMessage: this.inputChangeMessage,
                     styles: "maxInput",
-                    maxButtonClass: p,
+                    maxButtonClass: f,
                     storageId: d
                 };
                 if (this.recruit === true) {
                     i.textOption = "recruit"
                 }
-                this.inputField = new H.InputFieldWithMax(this.controller, i);
+                this.inputField = new B.InputFieldWithMax(this.controller, i);
                 this.addSubview(this.inputField)
             }
             if (this.recruit === true) {
                 var h = null;
-                t = this.notify("3s(kBgiI", this, {imageName: "recruit", imageCategory: "icons"});
+                t = this.notify("Z-XGNYVU", this, {imageName: "recruit", imageCategory: "icons"});
                 if (this.recruitButtonEnabled === true) {
                     n = "button";
                     h = this.recruitButtonClickMessage
@@ -17758,10 +17777,10 @@
             }
             if (this.speedUp === true) {
                 n = "button";
-                t = this.buttonImage || this.notify("3s(kBgiI", this, {
-                    imageName: "recruitSpeedup",
-                    imageCategory: "icons"
-                });
+                t = this.buttonImage || this.notify("Z-XGNYVU", this, {
+                        imageName: "recruitSpeedup",
+                        imageCategory: "icons"
+                    });
                 i = {parent: this, styles: n, content: t, clickMessage: this.speedUpButtonClickMessage};
                 this.addSubview(new e(this.controller, i))
             }
@@ -17770,7 +17789,7 @@
                 for (var o = 0; o < c.length; o++) {
                     var s = c[o];
                     if (s.unit.primaryKey === +this.unitID) {
-                        var v = s.isSpeededup() || s.isHalfDurationReached(), f = v ? "finishTick" : "doubleArrow";
+                        var g = s.isSpeededup() || s.isHalfDurationReached(), p = g ? "finishTick" : "doubleArrow";
                         this.createSubview(this, {
                             time: utils.date.setCountDownTime(s.complete),
                             runningTimer: true,
@@ -17779,9 +17798,9 @@
                         this.createSubview(this, {content: s.orderAmount, styles: "orderAmount"});
                         this.createSubview(this, {
                             styles: "button speedup",
-                            content: this.notify("3s(kBgiI", this, {imageName: f, imageCategory: "icons"}),
+                            content: this.notify("Z-XGNYVU", this, {imageName: p, imageCategory: "icons"}),
                             data: s,
-                            clickMessage: "dOoGMVuH"
+                            clickMessage: "Bj(UiJ6a"
                         })
                     }
                 }
@@ -17804,7 +17823,7 @@
         };
         return t
     }(e);
-    Y.Controller = function (i) {
+    z.Controller = function (i) {
         "use strict";
         utils.__extends(e, u.Controller);
         function e() {
@@ -17840,8 +17859,8 @@
                 }
             }
         };
-        e.prototype["Z04XvT7k"] = function (i) {
-            e.__super__["Z04XvT7k"].apply(this, arguments);
+        e.prototype["v2v6tJij"] = function (i) {
+            e.__super__["v2v6tJij"].apply(this, arguments);
             this.view.hideSubView();
             this.datasource.resetData();
             var t = $("#" + this.view.id).find("#" + this.view.profileList.id);
@@ -17850,29 +17869,29 @@
                 this.view.profileList.draw()
             }
         };
-        e.prototype["51hduvXk"] = function (e) {
+        e.prototype["dYvV(&8z"] = function (e) {
             var t = {parent: this.view.profileList, name: "playerName", buttonText: translate("Edit"), edit: false};
-            this.playerName = new Y.ChangeName(this, t);
+            this.playerName = new z.ChangeName(this, t);
             this.view.profileList.findSubviewByName("changeNameSection").hide();
             this.view.profileList.replaceSubviewByName("changeNameSection", this.playerName);
             this.playerName.create();
             this.view.profileList.draw();
             this.updateBlocked = false
         };
-        e.prototype["vMXqJEm_"] = function (e) {
+        e.prototype["RPUhmI31"] = function (e) {
             var t = {
                 parent: this.view.profileList,
                 name: "changeNameSection",
                 buttonText: translate("Cancel"),
                 edit: "true"
             };
-            this.changeNameSection = new Y.ChangeName(this, t);
+            this.changeNameSection = new z.ChangeName(this, t);
             this.view.profileList.replaceSubviewByName("playerName", this.changeNameSection);
             this.changeNameSection.create();
             this.view.profileList.draw();
             this.updateBlocked = true
         };
-        e.prototype["D553GQNf"] = function (s) {
+        e.prototype["o&nXvueD"] = function (s) {
             var e = this.view.findSubviewByName("editableField").getValue(), i = l.playerNameLengthMin || l.nameMinimumLength || 3, a = l.playerNameLengthMax || l.nameMaximumLength || 31;
             if (e.length > a) {
                 utils.dialog.alert(this, translate("The name is too long"), translate("Error"), function () {
@@ -17893,11 +17912,11 @@
             } else {
                 this.wantedNickName = e;
                 this.datasource.changePlayerName(e);
-                this["vMXqJEm_"]();
+                this["RPUhmI31"]();
                 this.updateBlocked = false
             }
         };
-        e.prototype["ebi%x(HP"] = function (i) {
+        e.prototype["c)OEwsCw"] = function (i) {
             var e = this;
             utils.dialog.confirm(this, this.getVacationTimeString(), translate("Error"), function () {
                 if (t.remainingVacationHours > 0) {
@@ -17913,37 +17932,37 @@
             var i = t.remainingVacationHours - e * 24;
             return translate("You have %1$d days and %2$d hours left for vacations. Vacation mode starts %3$d hours after you confirm. You can not log in for %4$d hours after vacation mode started.", e, i, l.vacationDelayHours, l.minimumVacationHours)
         };
-        e.prototype["WeOzWbZC"] = function (t) {
+        e.prototype["1xpg(Kpr"] = function (t) {
             this.datasource.getRankingEntries()
         };
-        e.prototype["zsvB7hs&"] = function (i, t) {
+        e.prototype["utcrRntJ"] = function (i, t) {
             var e = t.page;
             this.datasource.getRankingEntries(e)
         };
-        e.prototype["mF4s7qEY"] = function (t, e) {
+        e.prototype[")uagZWVK"] = function (t, e) {
             this.datasource.showCurrentPlayerRanking()
         };
-        e.prototype["C4rOPYeq"] = function (i, t) {
+        e.prototype["8sDLoa9F"] = function (i, t) {
             var e = t.query;
             this.datasource.search(e)
         };
-        e.prototype["BWhFjW-%"] = function (e, t) {
-            this.notify("FZpvdvBU", this.view, {id: t.playerID})
+        e.prototype["oC)Bwm7V"] = function (e, t) {
+            this.notify("i5I1OIPu", this.view, {id: t.playerID})
         };
-        e.prototype["UZYHQ&PO"] = function (t, i) {
-            var e = this.notify("-SD9RgVg", this, t.data);
-            this.notify("xCzXgU2u", this, e);
+        e.prototype["7Tdp-GIh"] = function (t, i) {
+            var e = this.notify("n5BlUfYY", this, t.data);
+            this.notify("1EMjIwLd", this, e);
             _.blinkButton($("#" + this.view.id + " .button.copy"))
         };
-        e.prototype["5-kIwyYc"] = function (t) {
-            this.notify("5-kIwyYc", this)
+        e.prototype["TeVG5tXR"] = function (t) {
+            this.notify("TeVG5tXR", this)
         };
-        e.prototype["AsG0w1LB"] = function () {
+        e.prototype["Q(fRSkfA"] = function () {
             this.datasource.setData({htmlID: "id" + utils.uniqueID(), eventList: true})
         };
         return e
     }(u.Controller);
-    Y.Page = function () {
+    z.Page = function () {
         "use strict";
         function t(t, e) {
             this.rankingStart = t;
@@ -17952,9 +17971,9 @@
 
         return t
     }();
-    Y.DataSource = function (i) {
+    z.DataSource = function (i) {
         "use strict";
-        utils.__extends(e, I);
+        utils.__extends(e, x);
         function e() {
             e.__super__.constructor.apply(this, arguments);
             this._setRankings();
@@ -17963,13 +17982,13 @@
         }
 
         e.prototype._setRankings = function (e, i) {
-            e = e || this.rankingStart || t.rank - $e;
-            i = i || this.rankingEnd || t.rank + $e;
+            e = e || this.rankingStart || t.rank - qe;
+            i = i || this.rankingEnd || t.rank + qe;
             this.rankingStart = e;
             this.rankingEnd = i;
             if (this.rankingStart < 0) {
                 this.rankingStart = 1;
-                this.rankingEnd = $e
+                this.rankingEnd = qe
             }
         };
         e.prototype.prepareRankingData = function (e) {
@@ -17993,7 +18012,7 @@
             var l = Math.ceil(e.ranking.length / 500);
             this.pages = [];
             for (var i = 0, r = l; i < r; i++) {
-                this.pages.push(new Y.Page(i * 500, i * 500 + 499))
+                this.pages.push(new z.Page(i * 500, i * 500 + 499))
             }
             if (a !== null) {
                 this._currentInternalPage = a / 500 | 0
@@ -18058,11 +18077,11 @@
             }
             var e, i;
             if (t < 0) {
-                e = this.rankingStart - 2 * $e;
+                e = this.rankingStart - 2 * qe;
                 i = this.rankingStart - 1
             } else if (t >= 0) {
                 e = this.rankingEnd + 1;
-                i = this.rankingEnd + 2 * $e
+                i = this.rankingEnd + 2 * qe
             }
             this._setRankings(e, i);
             s.request("ProfileAction/showRankingV2", {
@@ -18091,8 +18110,8 @@
             s.request("ProfileAction/search", {nick: t}, this.setSearchResults, this)
         };
         return e
-    }(I);
-    Y.ChangeName = function (a) {
+    }(x);
+    z.ChangeName = function (a) {
         utils.__extends(i, e);
         function i(e, t) {
             i.__super__.constructor.apply(this, arguments);
@@ -18112,18 +18131,18 @@
                     maxLength: l.playerNameLengthMax || l.nameMaximumLength,
                     caption: "Change Name",
                     currentValue: t.nick
-                }, H.Input);
+                }, B.Input);
                 this.createSubview(this.changeNameContainer, {
                     content: translate("Save"),
                     styles: "saveButton",
-                    clickMessage: "D553GQNf"
-                }, p);
+                    clickMessage: "o&nXvueD"
+                }, f);
                 this.createSubview(this.changeNameContainer, {
                     name: "editButton",
                     content: this.buttonText,
                     styles: "editButton",
-                    clickMessage: "51hduvXk"
-                }, p);
+                    clickMessage: "dYvV(&8z"
+                }, f);
                 this.changeNameContainer.clearfix();
                 this.createSubview(this.changeNameContainer, {styles: "error"})
             } else {
@@ -18133,21 +18152,21 @@
                     content: utils.sanitize(t.nick)
                 });
                 this.createSubview(this.changeNameContainer, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "pasteBoardPlayerWhite",
                         imageCategory: "icons"
                     }),
                     hover: translate("Copy player link"),
-                    clickMessage: "UZYHQ&PO",
+                    clickMessage: "7Tdp-GIh",
                     data: {player: t.id},
                     styles: "copy icon editButton"
-                }, p);
+                }, f);
                 this.createSubview(this.changeNameContainer, {
                     name: "editButton",
-                    content: this.notify("3s(kBgiI", this, {imageName: "edit", imageCategory: "icons"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: "edit", imageCategory: "icons"}),
                     styles: "editButton icon",
-                    clickMessage: "vMXqJEm_"
-                }, p)
+                    clickMessage: "RPUhmI31"
+                }, f)
             }
             this.createSubview(this.changeNameContainer, {styles: "inputDivider"});
             this.createSubview(this.changeNameContainer, {styles: "leftSide", content: translate("Points")});
@@ -18156,17 +18175,17 @@
             this.createSubview(this.changeNameContainer, {styles: "rightSide", content: utils.dict.size(t.habitate)});
             this.createSubview(this.changeNameContainer, {styles: "leftSide", content: translate("Gold")});
             var e = $("<div>");
-            e.append(this.notify("3s(kBgiI", this, {imageName: n.GOLD.toString(), imageCategory: "resources"}));
+            e.append(this.notify("Z-XGNYVU", this, {imageName: n.GOLD.toString(), imageCategory: "resources"}));
             e.append(" " + t.gold);
             this.createSubview(this.changeNameContainer, {
                 styles: "rightSide goldIcon clickable",
                 content: e,
-                clickMessage: "5-kIwyYc"
+                clickMessage: "TeVG5tXR"
             })
         };
         return i
     }(e);
-    Y.ProfileList = function (s) {
+    z.ProfileList = function (s) {
         utils.__extends(i, e);
         function i(e, t) {
             i.__super__.constructor.apply(this, arguments);
@@ -18179,14 +18198,14 @@
                 name: "playerName",
                 edit: false,
                 buttonText: translate("Edit")
-            }, Y.ChangeName);
+            }, z.ChangeName);
             this.createSubview(this, {
                 content: h.getValueOf("Rank"),
                 detail: t.rank,
                 styles: "profileListButton",
                 icon: "rankList",
                 iconCategory: "icons",
-                clickMessage: "WeOzWbZC"
+                clickMessage: "1xpg(Kpr"
             }, m);
             if (t.hasAlliance()) {
                 var i = this.createSubview(this, {
@@ -18219,7 +18238,7 @@
                     name: "startVacation",
                     icon: "holiday",
                     iconCategory: "icons",
-                    clickMessage: "ebi%x(HP"
+                    clickMessage: "c)OEwsCw"
                 }, m)
             }
             this.createSubview(this, {
@@ -18229,12 +18248,12 @@
                 name: "openEventList",
                 icon: "task",
                 iconCategory: "eventIcons",
-                clickMessage: "AsG0w1LB"
+                clickMessage: "Q(fRSkfA"
             }, m)
         };
         return i
     }(e);
-    Y.PlayerRow = function (i) {
+    z.PlayerRow = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
@@ -18253,7 +18272,7 @@
 
         e.prototype.create = function () {
             e.__super__.create.apply(this, arguments);
-            var i, a = "BWhFjW-%", s = "rowInfo";
+            var i, a = "oC)Bwm7V", s = "rowInfo";
             if (t.id == this.playerID) {
                 this.ownPlayer = true;
                 a = null
@@ -18267,7 +18286,7 @@
         };
         return e
     }(T);
-    Y.SearchList = function (e) {
+    z.SearchList = function (e) {
         utils.__extends(t, e);
         function t(e, i) {
             t.__super__.constructor.apply(this, arguments);
@@ -18288,7 +18307,7 @@
             this.input = this.queryField = this.createSubview(this.searchForm, {
                 name: "input",
                 styles: "input"
-            }, H.Input);
+            }, B.Input);
             this.input.jQueryEvents = function () {
                 this.$el().on("keydown", function (t) {
                     if (t.keyCode === 13) {
@@ -18299,18 +18318,18 @@
             this.createSubview(this.searchForm, {
                 name: "control",
                 styles: "control button icon",
-                content: this.notify("3s(kBgiI", this, {imageName: "search", imageCategory: "icons"}),
-                clickMessage: "C4rOPYeq"
+                content: this.notify("Z-XGNYVU", this, {imageName: "search", imageCategory: "icons"}),
+                clickMessage: "8sDLoa9F"
             });
             this.table = this.createSubview(this, {
                 name: "allianceSearchResults",
                 styles: "searchTable",
-                rowClass: Y.PlayerRow
+                rowClass: z.PlayerRow
             }, fe)
         };
         return t
     }(e);
-    Y.View = function (e) {
+    z.View = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t(i, e) {
@@ -18334,7 +18353,7 @@
             this.profileList = this.createSubview(this.content, {
                 tag: "currentView",
                 styles: "contentCurrentView"
-            }, Y.ProfileList)
+            }, z.ProfileList)
         };
         t.prototype.showRankings = function (t) {
             if (this.rankingList) {
@@ -18358,13 +18377,13 @@
                     template: "profileRankingControls",
                     templateData: t,
                     attachTo: this.topButtonsContainer
-                }, vi, null, false)
+                }, gi, null, false)
             }
             this.rankingListShown = true;
             $("#" + this.id).addClass("lightBG").addClass("rankingsView")
         };
         t.prototype.showEventsList = function () {
-            this.eventsList = this.controller.showNextViewOfClass(ge.List, {
+            this.eventsList = this.controller.showNextViewOfClass(ye.List, {
                 create: false,
                 name: "eventsList",
                 template: "eventList"
@@ -18401,11 +18420,11 @@
         };
         return t
     }(u.Window);
-    ke.View = function (i) {
+    De.View = function (i) {
         utils.__extends(e, i);
         function e() {
             e.__super__.constructor.apply(this, arguments);
-            utils.linkMethod("prepareResources", B.DataSource, e);
+            utils.linkMethod("prepareResources", H.DataSource, e);
             this.castleFortressSwithcer = {onlyForCastle: true, onlyForFortress: false}
         }
 
@@ -18437,7 +18456,7 @@
                 template: "buildingList",
                 useTimer: true,
                 templateData: {listItems: this._habitatData()}
-            }, ke.Table)
+            }, De.Table)
         };
         e.prototype.createTopBar = function () {
             this.deleteSubviewChain(this.topButtons);
@@ -18497,7 +18516,7 @@
             }
         };
         e.prototype.castleFortressTabClick = function (t) {
-            this.notify("YC7U%D_j", {action: t.action})
+            this.notify("V0a_VK)I", {action: t.action})
         };
         e.prototype._habitatData = function () {
             var a = t.getSortedHabitate(null, null, null, null, this.castleFortressSwithcer), s = [];
@@ -18516,7 +18535,7 @@
         };
         return e
     }(u.Window);
-    ke.Table = function (e) {
+    De.Table = function (e) {
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments)
@@ -18549,13 +18568,13 @@
         }
 
         t.prototype.buildButtonClicked = function (t) {
-            this.notify("EvzUGlwm", {habitatID: t.parents(".building").data("habitat"), buildingID: t.data("building")})
+            this.notify("xvCZvjBw", {habitatID: t.parents(".building").data("habitat"), buildingID: t.data("building")})
         };
         t.prototype.speedButtonClicked = function (t) {
-            this.notify("EnrZIB7r", {upgradeID: t.data("upgrade"), habitatID: t.parents(".building").data("habitat")})
+            this.notify("duJ(Odl5", {upgradeID: t.data("upgrade"), habitatID: t.parents(".building").data("habitat")})
         };
         t.prototype.openHabitat = function (t) {
-            this.notify("Q7xJDnbo", {habitat: {id: t.parents(".listContentRow").data("habitat")}})
+            this.notify("mvimqhdM", {habitat: {id: t.parents(".listContentRow").data("habitat")}})
         };
         t.prototype.showUpgradeInfo = function (t, e) {
             this.showHover(t, W.BuildHoverElement, {styles: "buildingHover", buildingID: e.data("building")})
@@ -18585,7 +18604,7 @@
         };
         return t
     }(S);
-    ke.Controller = function (a) {
+    De.Controller = function (a) {
         utils.__extends(e, a);
         function e() {
             e.__super__.constructor.apply(this, arguments)
@@ -18604,7 +18623,7 @@
             return $.sprintf(i, a, s, n, e, r, e)
         }
 
-        e.prototype["YC7U%D_j"] = function (t) {
+        e.prototype["V0a_VK)I"] = function (t) {
             this.view.castleFortressSwithcer.onlyForCastle = t.action === "castle" ? true : false;
             this.view.castleFortressSwithcer.onlyForFortress = t.action === "fortress" ? true : false;
             this.view.dataUpdate()
@@ -18617,18 +18636,18 @@
                 this.view.dataUpdate.call(this.view, e, t)
             }
         };
-        e.prototype["Q7xJDnbo"] = function (t) {
+        e.prototype["mvimqhdM"] = function (t) {
             this.notify("createHabitatWindow", t.habitat)
         };
-        e.prototype["EvzUGlwm"] = function (a) {
+        e.prototype["xvCZvjBw"] = function (a) {
             var i = t.habitate[a.habitatID];
-            var n = f[a.buildingID];
-            var e = f[n.upgradeTo];
+            var n = d[a.buildingID];
+            var e = d[n.upgradeTo];
             if (i.habitatBuildingUpgrades.length >= l.maxItemsInBuildingList) {
                 var r = s(e.buildSpeedupCost);
                 utils.dialog.confirm(this, r, translate("Additional upgrade slot"), function () {
                     if (t.gold < e.buildSpeedupCost) {
-                        this.notify("vF4Exq0E", this, {costs: n.buildSpeedupCost})
+                        this.notify("8xvB5GpX", this, {costs: n.buildSpeedupCost})
                     } else {
                         this.datasource.upgradeBuilding(i.id, e.primaryKey, true)
                     }
@@ -18637,7 +18656,7 @@
                 this.datasource.upgradeBuilding(i.id, e.primaryKey, false)
             }
         };
-        e.prototype["EnrZIB7r"] = function (l) {
+        e.prototype["duJ(Odl5"] = function (l) {
             var u = l.upgradeID;
             var s = t.habitate[l.habitatID].habitatBuildingUpgrades.filter(function (t) {
                 return t.id === u
@@ -18657,7 +18676,7 @@
             }
             utils.dialog.confirm(this, n, translate(o), function () {
                 if (t.gold < e.buildSpeedupCost) {
-                    this.notify("vF4Exq0E", this, {costs: e.buildSpeedupCost})
+                    this.notify("8xvB5GpX", this, {costs: e.buildSpeedupCost})
                 } else {
                     this.datasource[r](s.id)
                 }
@@ -18665,8 +18684,8 @@
         };
         return e
     }(u.Controller);
-    ke.DataSource = function (i) {
-        utils.__extends(e, I);
+    De.DataSource = function (i) {
+        utils.__extends(e, x);
         function e() {
             e.__super__.constructor.apply(this, arguments)
         }
@@ -18688,7 +18707,7 @@
             this.setData(t.getSortedHabitate())
         };
         return e
-    }(I);
+    }(x);
     he.Controller = function (i) {
         "use strict";
         utils.__extends(e, i);
@@ -18703,7 +18722,7 @@
             if (t === null || this.view.hidden) {
                 return
             }
-            this.notify("NbKCY7mj", this.view);
+            this.notify("7GVwxkqP", this.view);
             window.setTimeout(function () {
                 if (this.view) {
                     this.view.dataUpdate(e, t, this.selectedTab);
@@ -18711,9 +18730,9 @@
                         this.view.recruitingList.select(this.datasource.getAllSelected())
                     }
                     this.updateExecuteButton();
-                    this.notify("o873Cuvp", this.view.recruitingList);
-                    this.notify("bKUGf9HF", this.view.recruitingList);
-                    this.notify("gl%9o7sY", this.view)
+                    this.notify("YHC95tkO", this.view.recruitingList);
+                    this.notify("enjA1c%5", this.view.recruitingList);
+                    this.notify("i8j%qM54", this.view)
                 }
             }.bind(this), 0)
         };
@@ -18722,12 +18741,12 @@
             this.view.headline.draw();
             this.view.recruitingList.deltaUpdate(t, e, this.datasource.lastActionHabitatID)
         };
-        e.prototype["l5bniaxM"] = function (e, t) {
+        e.prototype["r&tMinEs"] = function (e, t) {
             this.notify("createHabitatWindow", t.habitat);
             this.view.cancelNextClickMessage()
         };
-        e.prototype["xiimBRnX"] = function (c, i) {
-            var a = t.habitate[i.habitatID], s = g[i.unitID], e = +i.amount, h = +i.max, r = translate("Recruit");
+        e.prototype["AI8DW&Wy"] = function (c, i) {
+            var a = t.habitate[i.habitatID], s = y[i.unitID], e = +i.amount, h = +i.max, r = translate("Recruit");
             if (e === 0) {
                 return
             }
@@ -18749,13 +18768,13 @@
         e.prototype._goldDialog = function (e, i, a, s) {
             utils.dialog.confirm(this, i, a, function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     s()
                 }
             }.bind(this))
         };
-        e.prototype["dOoGMVuH"] = function (h, u) {
+        e.prototype["Bj(UiJ6a"] = function (h, u) {
             var r = u.habitatID, o = u.unitOrderID, e = t.habitate[r].getHabitatUnitOrderByID(o), i = translate("Gold"), a = e.unit.buildSpeedupCost * e.orderAmount, s, n, l;
             if (!e) {
                 return
@@ -18792,10 +18811,10 @@
                 return e === "speedup" ? this.datasource.speedUpLine(s) : this.datasource.finishLine(s)
             }.bind(this))
         };
-        e.prototype["yzWpilav"] = function (e, t) {
+        e.prototype["fYCCYc95"] = function (e, t) {
             this._lineOperation("speedup", t.habitatID)
         };
-        e.prototype["gq0ruBWL"] = function (e, t) {
+        e.prototype["C6MLvP6U"] = function (e, t) {
             this._lineOperation("finish", t.habitatID)
         };
         e.prototype._speedUpFinishDialog = function (i) {
@@ -18814,7 +18833,7 @@
             }
             this._goldDialog(e, r, n, function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e});
+                    this.notify("8xvB5GpX", this, {costs: e});
                     return
                 }
                 if (i === "speedup") {
@@ -18824,13 +18843,13 @@
                 }
             }.bind(this))
         };
-        e.prototype["XP(ePHrh"] = function () {
+        e.prototype["d(G)Ii)a"] = function () {
             this._speedUpFinishDialog("speedup")
         };
-        e.prototype["RONgTqqi"] = function () {
+        e.prototype["2QzR%1C2"] = function () {
             this._speedUpFinishDialog("finish")
         };
-        e.prototype["Q7uQ1C)m"] = function () {
+        e.prototype["8SuUShtP"] = function () {
             this.selectedTab = "normal";
             this.view.removeClass("massRecruitment");
             this.view.hideUnitSelector();
@@ -18838,7 +18857,7 @@
             this.view.showUnitHeaderTable();
             this.datasource.loadRecruitingList()
         };
-        e.prototype["1p3AfeSw"] = function () {
+        e.prototype["DCVHrE&z"] = function () {
             this.selectedTab = "fast";
             this.view.addClass("massRecruitment");
             this.view.showUnitSelector();
@@ -18847,18 +18866,18 @@
             this.updateExecuteButton();
             this.datasource.loadFastRecruitingList()
         };
-        e.prototype["EUwCgC_-"] = function () {
+        e.prototype["lgQKVP-n"] = function () {
             this.view.unitMenu.setOptions({tradeItem: this.datasource.selectedUnitID.toString()});
             this.view.unitMenu.toggle()
         };
-        e.prototype["mgSz(qLh"] = function (e) {
+        e.prototype["Vv(M5IJ8"] = function (e) {
             var t = e.data;
             this.datasource.unitSelected(t.primaryKey);
             this.view.unitMenu.hide();
             this.view.unitMenu.selectItem(t.primaryKey.toString());
             this.view.updateChooserButton(this.datasource.selectedUnitID)
         };
-        e.prototype["(mFcm2Os"] = function () {
+        e.prototype["S(lnDJS2"] = function () {
             if (this.selectStatus === "all" || this.view.allCheckboxesSelected()) {
                 this.selectStatus = "none";
                 this.datasource.deselectAllHabitats()
@@ -18870,8 +18889,8 @@
             var t = this.datasource.getAllSelected();
             this.view.recruitingList.select(t)
         };
-        e.prototype["G8(BzBGg"] = function () {
-            var i = 0, e = this.view.selectedMassHabitatIDs(), n = h.getValueOf("Gold"), r = g[this.datasource.selectedUnitID], o, a;
+        e.prototype["S1QkSH4F"] = function () {
+            var i = 0, e = this.view.selectedMassHabitatIDs(), n = h.getValueOf("Gold"), r = y[this.datasource.selectedUnitID], o, a;
             if (e.length === 0) {
                 return
             }
@@ -18890,12 +18909,12 @@
                 this.datasource.executeMassRecruit(e, true)
             }.bind(this))
         };
-        e.prototype["0uD(LsDS"] = function (i, t) {
+        e.prototype["z0LoxPuW"] = function (i, t) {
             var e = t.habitat.id;
             this.datasource.selectHabitat(e);
             this.updateExecuteButton()
         };
-        e.prototype["(mOv_YK2"] = function (i, t) {
+        e.prototype["OSO)gUim"] = function (i, t) {
             var e = t.habitat.id;
             this.datasource.deselectHabitat(e);
             this.updateExecuteButton()
@@ -18919,7 +18938,7 @@
             e.__super__.constructor.apply(this, arguments);
             this.selectedUnitID = ee.PUSHCART;
             this.lastActionHabitatID = null;
-            utils.linkMethod("prepareResources", B.DataSource, e)
+            utils.linkMethod("prepareResources", H.DataSource, e)
         }
 
         e.prototype.loadRecruitingList = function () {
@@ -18960,7 +18979,7 @@
             }.bind(this))
         };
         e.prototype._prepareFastTemplateData = function () {
-            var e = [n.WOOD, n.STONE, n.ORE, n.PEOPLE], t = g[this.selectedUnitID], i = "amountDefault";
+            var e = [n.WOOD, n.STONE, n.ORE, n.PEOPLE], t = y[this.selectedUnitID], i = "amountDefault";
             return this._prepare(function (a) {
                 var s = {
                     htmlID: "id" + utils.uniqueID(),
@@ -18994,7 +19013,7 @@
             var s = [];
             for (var e in i) {
                 var t = {};
-                var o = g[e];
+                var o = y[e];
                 t.unitID = e;
                 t.amount = i[e];
                 t.recruitButton = this.getImageSrc("recruit", "icons");
@@ -19083,7 +19102,7 @@
             return _.storeLocal.createKey("fastR", this.selectedUnitID)
         };
         e.prototype.getTotalAmount = function () {
-            var i = this._findDeadHabitatsInCacheAndRemove(), a = g[this.selectedUnitID], s = 0;
+            var i = this._findDeadHabitatsInCacheAndRemove(), a = y[this.selectedUnitID], s = 0;
             for (var e = 0, r = i.length; e < r; e++) {
                 var o = i[e], n = t.habitate[o];
                 if (a.isRecruitable(n)) {
@@ -19145,7 +19164,7 @@
             return this._findDeadHabitatsInCacheAndRemove()
         };
         return e
-    }(I);
+    }(x);
     he.FastRecruiting = function (e) {
         "use strict";
         utils.__extends(t, e);
@@ -19167,7 +19186,7 @@
         }
 
         t.prototype.openHabitat = function (t) {
-            this.notify("l5bniaxM", this, {habitat: {id: t.parents(".container").data("habitat")}})
+            this.notify("r&tMinEs", this, {habitat: {id: t.parents(".container").data("habitat")}})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "recruitingList")
@@ -19178,7 +19197,7 @@
             return e
         };
         t.prototype.habitatSelected = function (t) {
-            var e = t.prop("checked") ? "0uD(LsDS" : "(mOv_YK2";
+            var e = t.prop("checked") ? "z0LoxPuW" : "OSO)gUim";
             this.notify(e, this, {habitat: {id: t.parents(".line").data("habitat")}})
         };
         t.prototype.select = function (t) {
@@ -19233,17 +19252,17 @@
             return false
         };
         t.prototype.openHabitat = function (t) {
-            this.notify("l5bniaxM", this, {habitat: {id: t.parents(".container").data("habitat")}})
+            this.notify("r&tMinEs", this, {habitat: {id: t.parents(".container").data("habitat")}})
         };
         t.prototype.speedupLineButtonClicked = function (t) {
-            this.notify("yzWpilav", this, {habitatID: t.parents(".container").data("habitat")})
+            this.notify("fYCCYc95", this, {habitatID: t.parents(".container").data("habitat")})
         };
         t.prototype.finishLineButtonClicked = function (t) {
-            this.notify("gq0ruBWL", this, {habitatID: t.parents(".container").data("habitat")})
+            this.notify("C6MLvP6U", this, {habitatID: t.parents(".container").data("habitat")})
         };
         t.prototype.speedupButtonClicked = function (t) {
             var e = t.data("unit");
-            this.notify("dOoGMVuH", this, {
+            this.notify("Bj(UiJ6a", this, {
                 habitatID: t.parents(".container").data("habitat"),
                 unitOrderID: t.data("upgrade")
             })
@@ -19254,7 +19273,7 @@
         };
         t.prototype.recruitButtonClicked = function (t) {
             var e = t.data("unit");
-            this.notify("xiimBRnX", this, {
+            this.notify("AI8DW&Wy", this, {
                 habitatID: t.parents(".container").data("habitat"),
                 unitID: e,
                 amount: t.parents(".unit").find(".unitElement[data-primary-key=" + e + "] .maxInput input").val(),
@@ -19403,22 +19422,22 @@
                 icon: "recruit",
                 styles: "tab",
                 name: translate("Unit Recruiting"),
-                clickMessage: "Q7uQ1C)m"
-            }, v.TabButton);
+                clickMessage: "8SuUShtP"
+            }, g.TabButton);
             this.createSubview(this, {
                 count: 1,
                 icon: "recruitGroup",
                 styles: "tab",
                 name: translate("Mass recruitment"),
-                clickMessage: "1p3AfeSw"
-            }, v.TabButton);
+                clickMessage: "DCVHrE&z"
+            }, g.TabButton);
             this.filler = this.createSubview(this, {
                 count: 2,
                 icon: "",
                 styles: "tab filler unitTable",
                 filler: true
-            }, v.TabButton);
-            this.unitTable = this.filler.createSubview(this.filler, {units: g, styles: "unitTableHeader"}, C.Table);
+            }, g.TabButton);
+            this.unitTable = this.filler.createSubview(this.filler, {units: y, styles: "unitTableHeader"}, C.Table);
             this.clearfix();
             this.createSubview(this, {styles: "divider"});
             this.draw()
@@ -19503,7 +19522,7 @@
                 icon: ee.PUSHCART,
                 content: translate("Pushcart"),
                 iconCategory: "units",
-                clickMessage: "EUwCgC_-",
+                clickMessage: "lgQKVP-n",
                 styles: "unitSelector",
                 hidden: true
             }, m);
@@ -19512,9 +19531,9 @@
                 chooserButtonSelector: "#" + this.id + " .listButton.unitSelector",
                 itemSelector: "unitElement",
                 hidden: true,
-                selectMessage: "mgSz(qLh",
+                selectMessage: "Vv(M5IJ8",
                 selectedItemID: ee.PUSHCART
-            }, J.UnitMenu);
+            }, Z.UnitMenu);
             this.tabbar.dataUpdate(null, {})
         };
         e.prototype._bottomBar = function () {
@@ -19525,14 +19544,14 @@
             this.massRecruitButton = this.createSubview(this.bottomButtons, {
                 styles: "recruitButton",
                 content: translate("Unit factory"),
-                clickMessage: "G8(BzBGg"
-            }, p);
+                clickMessage: "S1QkSH4F"
+            }, f);
             this.createSubview(this.bottomButtons, {
                 styles: "selectAllButton",
                 content: this.getIcon("buttonCastleMultiple"),
-                clickMessage: "(mFcm2Os",
+                clickMessage: "S(lnDJS2",
                 hover: translate("Select all habitats")
-            }, p)
+            }, f)
         };
         e.prototype.showUnitSelector = function () {
             this.unitButton.show()
@@ -19564,28 +19583,28 @@
             this.deleteSubviewChain(this.speedAllButton);
             this.deleteSubviewChain(this.finishAllButton);
             if (this.canSpeedUpUnitOrders()) {
-                t = this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: "doubleArrow"});
+                t = this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: "doubleArrow"});
                 e = translate("Speedup all units");
                 i = "speedUpAllButton";
-                a = "XP(ePHrh";
+                a = "d(G)Ii)a";
                 this.speedAllButton = this.createSubview(this.headline.buttons, {
                     content: t,
                     hover: e,
                     name: i,
                     clickMessage: a
-                }, p)
+                }, f)
             }
             if (this.canFinishUnitOrders()) {
-                t = this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: "finishTick"});
+                t = this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: "finishTick"});
                 e = translate("Finish all units");
                 i = "finishAllButton";
-                a = "RONgTqqi";
+                a = "2QzR%1C2";
                 this.finishAllButton = this.createSubview(this.headline.buttons, {
                     content: t,
                     hover: e,
                     name: i,
                     clickMessage: a
-                }, p)
+                }, f)
             }
         };
         e.prototype.canFinishUnitOrders = function () {
@@ -19613,7 +19632,7 @@
             return e
         };
         e.prototype.updateChooserButton = function (t) {
-            var e = t ? t : "10001", i = t ? translate(g[t].identifier) : "Pushcart";
+            var e = t ? t : "10001", i = t ? translate(y[t].identifier) : "Pushcart";
             this.unitButton.dataUpdate(null, {icon: e, content: i});
             this.unitButton.draw()
         };
@@ -19633,7 +19652,7 @@
         };
         return e
     }(u.Window);
-    qe.HoverView = function (e) {
+    $e.HoverView = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -19649,7 +19668,7 @@
             this.createSubview(this, {styles: "title", content: translate(s)});
             this.createSubview(this, {
                 styles: "icon",
-                content: this.notify("3s(kBgiI", this, {imageName: s, imageCategory: "knowledges"})
+                content: this.notify("Z-XGNYVU", this, {imageName: s, imageCategory: "knowledges"})
             });
             this.createSubview(this, {styles: "description", content: this.knowledge.getDescription()});
             this.clearfix();
@@ -19658,9 +19677,9 @@
                 var o = this.createSubview(this, {styles: "enables"});
                 for (t = 0; t < this.knowledge.requiredKnowledges.length > 0; t++) {
                     var r = this.createSubview(o, {styles: "requiredKnowledge"});
-                    e = P[this.knowledge.requiredKnowledges[t]];
+                    e = U[this.knowledge.requiredKnowledges[t]];
                     this.createSubview(r, {
-                        content: this.notify("3s(kBgiI", this, {
+                        content: this.notify("Z-XGNYVU", this, {
                             imageName: e.identifier,
                             imageCategory: "knowledges"
                         })
@@ -19714,7 +19733,7 @@
         };
         return t
     }(E);
-    qe.HabitatList = function (e) {
+    $e.HabitatList = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -19731,21 +19750,21 @@
             for (var n = 0; n < h.length; n++) {
                 var u = false;
                 a = h[n];
-                hoverView = new qe.HoverView(this.controller, {knowledge: a, habitat: this.habitat});
+                hoverView = new $e.HoverView(this.controller, {knowledge: a, habitat: this.habitat});
                 hoverView.create();
-                var d = this.notify("3s(kBgiI", this, {imageName: a.identifier, imageCategory: "knowledges"});
+                var d = this.notify("Z-XGNYVU", this, {imageName: a.identifier, imageCategory: "knowledges"});
                 e = this.createSubview(this, {styles: "knowledgeListItem"});
                 this.createSubview(e, {content: d, hoverView: hoverView, styles: "knowledgeIcon"}, F);
-                i = this.notify("3s(kBgiI", this, {imageName: "research", imageCategory: "icons"});
-                r = "S2-_ba6Y";
+                i = this.notify("Z-XGNYVU", this, {imageName: "research", imageCategory: "icons"});
+                r = "ZWcHPcYk";
                 o = "button";
-                l = P[a.primaryKey];
+                l = U[a.primaryKey];
                 if (l.isExplorable(this.habitat) === false) {
-                    i = this.notify("3s(kBgiI", this, {imageName: "researchBlack", imageCategory: "icons"});
+                    i = this.notify("Z-XGNYVU", this, {imageName: "researchBlack", imageCategory: "icons"});
                     o = "button disabled"
                 }
                 if (l.alreadyResearched(this.habitat) === true) {
-                    i = this.notify("3s(kBgiI", this, {
+                    i = this.notify("Z-XGNYVU", this, {
                         imageName: "permissionTrueBlack",
                         imageCategory: "browserIcons"
                     });
@@ -19753,12 +19772,12 @@
                 }
                 var s = this.habitat.getHabitatKnowledge(a.primaryKey);
                 if (typeof s !== "undefined") {
-                    i = this.notify("3s(kBgiI", this, {imageName: "researchSpeedup", imageCategory: "icons"});
+                    i = this.notify("Z-XGNYVU", this, {imageName: "researchSpeedup", imageCategory: "icons"});
                     o = "button";
-                    r = "1W&CJ7f_";
+                    r = "EcocpNKT";
                     if (s.isSpeededup() || s.isHalfDurationReached()) {
-                        i = this.notify("3s(kBgiI", this, {imageName: "researchFinish", imageCategory: "icons"});
-                        r = "5lTV0a0i"
+                        i = this.notify("Z-XGNYVU", this, {imageName: "researchFinish", imageCategory: "icons"});
+                        r = "Dk2QBR27"
                     }
                 }
                 if (!this.parent.isPreview && !u) {
@@ -19775,7 +19794,7 @@
                 e.clearfix();
                 if (s) {
                     this.createSubview(e, {
-                        time: Math.floor((s.complete - (new Date - U)) / 1e3),
+                        time: Math.floor((s.complete - (new Date - P)) / 1e3),
                         runningTimer: true,
                         formatFunction: utils.date.secToTimeStr
                     }, q)
@@ -19796,17 +19815,17 @@
             this.setOptions(e)
         }
 
-        t.prototype["&rB8(3qK"] = function (t, e) {
+        t.prototype["d%HQFxtD"] = function (t, e) {
             this.success(this);
-            this.notify("56MCdi79", this)
+            this.notify("Eu50z7&J", this)
         };
-        t.prototype["MV%-gFHU"] = function (t, e) {
+        t.prototype["aiqKd0o)"] = function (t, e) {
             if (typeof this.failure != "undefined" && this.failure !== null) {
                 this.failure(this)
             }
-            this.notify("56MCdi79", this)
+            this.notify("Eu50z7&J", this)
         };
-        t.prototype["DbSTNafr"] = function (t, e) {
+        t.prototype["4qlajYYq"] = function (t, e) {
             this.view.fixHeight()
         };
         t.prototype.dataUpdate = function (t, e) {
@@ -19834,19 +19853,19 @@
                 this.createSubview(this.buttonContainer, {
                     group: "DialogWindow",
                     content: translate("cancel"),
-                    clickMessage: "MV%-gFHU"
-                }, p);
+                    clickMessage: "aiqKd0o)"
+                }, f);
                 this.createSubview(this.buttonContainer, {
                     group: "DialogWindow",
                     content: translate("ok"),
-                    clickMessage: "&rB8(3qK"
-                }, p)
+                    clickMessage: "d%HQFxtD"
+                }, f)
             } else {
                 this.createSubview(this.buttonContainer, {
                     group: "DialogWindow",
                     content: translate("ok"),
-                    clickMessage: "MV%-gFHU"
-                }, p)
+                    clickMessage: "aiqKd0o)"
+                }, f)
             }
         };
         t.prototype.fixHeight = function () {
@@ -19881,8 +19900,8 @@
         t.prototype.dataUpdate = function (t, e) {
             this.view.dataUpdate(t, e)
         };
-        t.prototype["bWGYCYy2"] = function () {
-            return this.notify("bWGYCYy2")
+        t.prototype["rkE%NpQa"] = function () {
+            return this.notify("rkE%NpQa")
         };
         t.prototype._setVolumes = function (t) {
             var i = {}, e;
@@ -19896,7 +19915,7 @@
                 t.value = 0
             }
             i[e] = t.value / 100;
-            this.notify("ibcsiB-q", this, i)
+            this.notify("PEsG(rsC", this, i)
         };
         t.prototype._setMapValues = function (t) {
             if (t.name === "settings_mapspeed") {
@@ -19905,7 +19924,7 @@
                 this.controller.enableMouseEvents()
             }
         };
-        t.prototype["EOZSXY)U"] = function (i, t) {
+        t.prototype["3cy_tB41"] = function (i, t) {
             var e = t.name;
             if (!this.mapSlider[e]) {
                 return
@@ -19921,8 +19940,8 @@
                 t.find(".title").append('<span class="value">' + i + "</span>")
             }
         };
-        t.prototype["bS_P(RTt"] = function () {
-            t.__super__["bS_P(RTt"].apply(this, arguments);
+        t.prototype["acyTgezU"] = function () {
+            t.__super__["acyTgezU"].apply(this, arguments);
             var i = this.view.settings.sliders;
             for (var e = 0, a = i.length; e < a; e++) {
                 var s = i[e];
@@ -19941,7 +19960,7 @@
 
         t.prototype.draw = function () {
             t.__super__.draw.apply(this, arguments);
-            var e = this.notify("bWGYCYy2");
+            var e = this.notify("rkE%NpQa");
             if (!e) {
                 e = {bgMusic: 100, sfx: 100}
             } else {
@@ -19968,7 +19987,7 @@
         };
         return t
     }(u.Window);
-    Je.Controller = function (i) {
+    Ze.Controller = function (i) {
         utils.__extends(t, i);
         var e = "_sfx";
 
@@ -19978,11 +19997,11 @@
             this.addOption("castleAtmo", []);
             this.addOption("mapAtmo", []);
             this.setOptions(e);
-            this.bgMusic = this._getControlObj(this.backgroundTracks, Pi);
-            this.atmo = this._getControlObj(this.castleAtmo, je);
-            this.mAtmo = this._getControlObj(this.mapAtmo, je);
+            this.bgMusic = this._getControlObj(this.backgroundTracks, Ui);
+            this.atmo = this._getControlObj(this.castleAtmo, Xe);
+            this.mAtmo = this._getControlObj(this.mapAtmo, Xe);
             this._sfxCache = {};
-            this.sfx = {volume: je}
+            this.sfx = {volume: Xe}
         }
 
         t.prototype.start = function () {
@@ -20152,7 +20171,7 @@
         t.prototype.getVolume = function () {
             return {bgMusic: this.bgMusic.volume, sfx: this.sfx.volume}
         };
-        t.prototype["GjCkBQgD"] = function () {
+        t.prototype["Rn5NoH-D"] = function () {
             if (this.bgMusic.playing) {
                 this.setVolume({bgMusic: 0})
             } else {
@@ -20168,7 +20187,7 @@
             t.setValue(this.bgMusic.volume);
             t.draw()
         };
-        t.prototype["5HvDXsgC"] = function () {
+        t.prototype["A7VcZN&W"] = function () {
             if (this.sfx.volume > 0) {
                 this.setVolume({sfx: 0})
             } else {
@@ -20186,11 +20205,11 @@
         };
         return t
     }(u.Controller);
-    Je.Datasource = function (i) {
+    Ze.Datasource = function (i) {
         utils.__extends(e, i);
         function e(i, a) {
             e.__super__.constructor.apply(this, arguments);
-            this._defaults = {bgMusic: Pi, sfx: je};
+            this._defaults = {bgMusic: Ui, sfx: Xe};
             this.storeKey = "sound_" + t.id
         }
 
@@ -20207,7 +20226,7 @@
             this.setData(t)
         };
         return e
-    }(I);
+    }(x);
     X.Controller = function (i) {
         utils.__extends(e, i);
         function e() {
@@ -20217,7 +20236,7 @@
             this.playerReplied = false;
             this.forceForumRefresh = false;
             this.playerAlliancePermissions = t.alliancePermission;
-            this.currentPlayerCanEdit = t.alliancePermission === d.ALL || t.alliancePermission & d.MODERATE_FORUM;
+            this.currentPlayerCanEdit = t.alliancePermission === p.ALL || t.alliancePermission & p.MODERATE_FORUM;
             var i = _.storeSession.createKey("fop");
             this.overviewPosition = _.storeSession.getItem(i)
         }
@@ -20238,7 +20257,7 @@
             this.data = i || [];
             if (this.playerAlliancePermissions !== t.alliancePermission) {
                 this.playerAlliancePermissions = t.alliancePermission;
-                if (t.hasAlliancePermission(d.MODERATE_FORUM)) {
+                if (t.hasAlliancePermission(p.MODERATE_FORUM)) {
                     if (this.view) {
                         this.currentPlayerCanEdit = true
                     }
@@ -20268,7 +20287,7 @@
                 this.refreshForum()
             }
             if (this.forceForumRefresh) {
-                this["Z04XvT7k"]();
+                this["v2v6tJij"]();
                 this.refreshForum();
                 this.forceForumRefresh = false
             }
@@ -20301,16 +20320,16 @@
                 this.view.editModeButton.hide()
             }
         };
-        e.prototype["CF5SLW4J"] = function (t) {
-            this.notify("FZpvdvBU", this, t)
+        e.prototype["D2KOZnv)"] = function (t) {
+            this.notify("i5I1OIPu", this, t)
         };
-        e.prototype["Z04XvT7k"] = function () {
+        e.prototype["v2v6tJij"] = function () {
             var i = $("#" + this.view.id).find(".main-content").scrollTop(), t = this.view.findSubviewByField("tag", "currentView");
             if (t && t.thread && t.thread.id) {
                 var a = _.storeSession.createKey("ftp", t.thread.id);
                 _.storeSession.setItem(a, i)
             }
-            e.__super__["Z04XvT7k"].apply(this, arguments);
+            e.__super__["v2v6tJij"].apply(this, arguments);
             this.view.hideThreadModeratorButtons();
             if (this.currentPlayerCanEdit) {
                 this.view.editModeButton.show()
@@ -20321,12 +20340,12 @@
             this.currentThreadWrapper = null;
             this.preventUpdate = false
         };
-        e.prototype["gRayY3gp"] = function () {
+        e.prototype["BzDoxZ0V"] = function () {
             if (this.overviewPosition) {
                 $("#" + this.view.mainContentContainer.id).scrollTop(this.overviewPosition)
             }
         };
-        e.prototype["1HerxaSo"] = function () {
+        e.prototype["9EjE8a6w"] = function () {
             if (this.editmode) {
                 this.view.stopEditMode()
             } else {
@@ -20334,7 +20353,7 @@
             }
             this.editmode ^= 1
         };
-        e.prototype["xl&azH4-"] = function () {
+        e.prototype["Op31QdeJ"] = function () {
             if (this.singleeditmode) {
                 this.view.stopSingleEditMode()
             } else {
@@ -20342,7 +20361,7 @@
             }
             this.singleeditmode ^= 1
         };
-        e.prototype["xvxkIzc)"] = function () {
+        e.prototype["VvZVYVb7"] = function () {
             if (this.currentPlayerCanEdit) {
                 var t = this.currentThread;
                 this.view.closeThread.setOptions({threadID: t.id});
@@ -20350,7 +20369,7 @@
                 this.view.showThreadModeratorButtons(t.closed)
             }
         };
-        e.prototype["GI2rA-qQ"] = function (a) {
+        e.prototype["Us_i&sN4"] = function (a) {
             if (this.view.blockOverlay === true) {
                 return
             }
@@ -20366,7 +20385,7 @@
             if (!e.read) {
                 e.read = true;
                 t.unreadAllianceMessages -= 1;
-                this.notify("-o83K1Li", this);
+                this.notify("2h2rLIOv", this);
                 this.refreshForum()
             }
             this.currentThreadWrapper = this.showNextViewOfClass(X.ThreadWrapper, {
@@ -20387,27 +20406,27 @@
             this.currentThreadDS = i;
             this.currentThread = e;
             this.preventUpdate = true;
-            this.notify("Rtk1Hcq)", this);
-            this["xvxkIzc)"]()
+            this.notify("jkCeUHjs", this);
+            this["VvZVYVb7"]()
         };
-        e.prototype["t_NghH&9"] = function () {
-            this.notify("I6Fr(MqC", this)
+        e.prototype["Uj6hHRcE"] = function () {
+            this.notify("vU1u)Cuc", this)
         };
-        e.prototype["nRsVITk6"] = function () {
+        e.prototype["Gy%-nCXl"] = function () {
             this.showNextViewOfClass(X.NewThread, {});
             this.preventUpdate = true
         };
-        e.prototype["D8YuRAsO"] = function () {
+        e.prototype["lP78gjTc"] = function () {
             var t = this.view.findSubviewByField("name", "ForumNewThread").form;
             var i = t.getInput().subject;
             var a = t.getInput().message;
             var e = t.validate();
             if (e.subject && e.message) {
                 this.datasource.createForumThread(i, a);
-                this["Z04XvT7k"]()
+                this["v2v6tJij"]()
             }
         };
-        e.prototype["PitzPsvv"] = function () {
+        e.prototype["XndVMZVR"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView").answerForm;
             var e = t.getInput().message;
             if (t.validate().message) {
@@ -20415,7 +20434,7 @@
                 this.playerReplied = true
             }
         };
-        e.prototype["qc)ASB2Q"] = function (t) {
+        e.prototype["j5mXkOjM"] = function (t) {
             this.datasource.closeThread(t.threadID);
             this.view.toggleCloseThreadButton(true);
             currentView = this.view.findSubviewByField("tag", "currentView");
@@ -20424,7 +20443,7 @@
                 this.forceForumRefresh = true
             }
         };
-        e.prototype["FdvsuYN&"] = function (t) {
+        e.prototype["J)6pZ0N0"] = function (t) {
             this.datasource.openThread(t.threadID);
             this.view.toggleCloseThreadButton(false);
             currentView = this.view.findSubviewByField("tag", "currentView");
@@ -20433,7 +20452,7 @@
                 this.forceForumRefresh = true
             }
         };
-        e.prototype["4yT(wpcO"] = function () {
+        e.prototype["PSY1tj7U"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView"), n = $("#" + t.id), r = t.name === "ForumOverviewWrapper" ? "overview" : "thread", s = a(n), e, i;
             if (r === "overview") {
                 e = "Really delete selection?";
@@ -20454,13 +20473,13 @@
                 this.datasource[i](s)
             }.bind(this))
         };
-        e.prototype["VY5V_6Ae"] = function () {
+        e.prototype["ZBgfT&Yx"] = function () {
             this._editControlsCounter()
         };
-        e.prototype["J5FA3x6C"] = function () {
-            return this.notify("J5FA3x6C", this)
+        e.prototype["NYd&saEH"] = function () {
+            return this.notify("NYd&saEH", this)
         };
-        e.prototype["eQu_xVWE"] = function () {
+        e.prototype["OBIEVAdp"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             $("#" + t.id + " :checkbox").prop("checked", true);
             this._editControlsCounter()
@@ -20515,17 +20534,17 @@
             });
             if (t.error === "The forum thread does not exist") {
                 var e = this.subscribers[0];
-                e["Z04XvT7k"]();
+                e["v2v6tJij"]();
                 e.getForumTopics()
             } else {
-                this.notify("j)909BLe", this, null)
+                this.notify("-_bqDYa1", this, null)
             }
         };
         t.prototype.getThread = function (t) {
             s.request("ForumAction/forumMessageArray", {id: t}, this.setData, this, 62e3, this.errorHandler)
         };
         return t
-    }(I);
+    }(x);
     X.NewThread = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
@@ -20537,7 +20556,7 @@
         t.prototype.create = function () {
             this.form = this.createSubview(this, {
                 attachTo: this,
-                replyMessage: "D8YuRAsO",
+                replyMessage: "lP78gjTc",
                 templateData: {messageMaxLength: 1e3, subject: true, subjectMaxLength: 100}
             }, N.AnswerForm);
             this.form.draw()
@@ -20566,10 +20585,10 @@
         }
 
         t.prototype.checkboxClicked = function () {
-            this.notify("VY5V_6Ae")
+            this.notify("ZBgfT&Yx")
         };
         t.prototype.listItemClicked = function (t) {
-            this.notify("GI2rA-qQ", t)
+            this.notify("Us_i&sN4", t)
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "#forumOverview")
@@ -20588,48 +20607,48 @@
             this.editModeButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_Edit",
                 hover: translate("Edit"),
-                clickMessage: "1HerxaSo",
+                clickMessage: "9EjE8a6w",
                 hidden: true
             }, te);
-            if (t.alliancePermission === d.ALL === false && (t.alliancePermission & d.MODERATE_FORUM) === 0) {
+            if (t.alliancePermission === p.ALL === false && (t.alliancePermission & p.MODERATE_FORUM) === 0) {
                 this.editModeButton.hideLock = true
             }
             this.singleEditModeButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_Edit",
                 hover: translate("Edit"),
-                clickMessage: "xl&azH4-",
+                clickMessage: "Op31QdeJ",
                 hidden: true
             }, te);
             this.newThread = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_newThread",
                 hover: translate("New Thread"),
-                clickMessage: "nRsVITk6"
+                clickMessage: "Gy%-nCXl"
             }, te);
             this.closeThread = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_closeThread",
                 hover: translate("Close thread"),
                 name: "closeThreadButton",
-                clickMessage: "qc)ASB2Q",
+                clickMessage: "j5mXkOjM",
                 hidden: true
             }, X.ThreadButton);
             this.openThread = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_openThread",
                 hover: translate("Reopen thread"),
                 name: "openThreadButton",
-                clickMessage: "FdvsuYN&",
+                clickMessage: "J)6pZ0N0",
                 hidden: true
             }, X.ThreadButton);
             this.deleteItems = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_eraseThread",
                 hover: translate("Delete thread?"),
                 name: "deleteItemsButton",
-                clickMessage: "4yT(wpcO",
+                clickMessage: "PSY1tj7U",
                 hidden: true
             }, X.ThreadButton);
             this.editControls = this.createSubview(this.mainContentContainer.parent, {
-                cmDelete: "4yT(wpcO",
+                cmDelete: "PSY1tj7U",
                 deleteText: "Delete forum thread (%@)"
-            }, Be);
+            }, He);
             this.singleModeThreadClosed = false
         }
 
@@ -20717,7 +20736,7 @@
                 if (t.closed) {
                     s = "threadClosed"
                 }
-                t.icon = this.notify("ttHKxwy5", this, {imageName: s, imageCategory: "icons"});
+                t.icon = this.notify("oqS1fWVg", this, {imageName: s, imageCategory: "icons"});
                 t.lastMessageDate = utils.date.formatDateTime(t.lastMessageDate);
                 t.context = {styles: "clickable", data: {id: t.id}};
                 a.push(t)
@@ -20773,7 +20792,7 @@
         };
         t.prototype._mapPosts = function () {
             var i = [];
-            var s = this.notify("ttHKxwy5", this, {imageName: "buttonPlayer", imageCategory: "icons"});
+            var s = this.notify("oqS1fWVg", this, {imageName: "buttonPlayer", imageCategory: "icons"});
             for (var e = 0, n = this.posts.length; e < n; e++) {
                 var t = $.extend(true, {}, this.posts[e]);
                 if (typeof t.author === "number") {
@@ -20808,10 +20827,10 @@
         }
 
         t.prototype.showPlayer = function (t) {
-            this.notify("CF5SLW4J", t)
+            this.notify("D2KOZnv)", t)
         };
         t.prototype.checkboxClicked = function () {
-            this.notify("VY5V_6Ae")
+            this.notify("ZBgfT&Yx")
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "#forumThread")
@@ -20858,7 +20877,7 @@
                 this.slideOut();
                 this.slideOut();
                 this.slideOut();
-                this["GI2rA-qQ"](this.currentDiscussion);
+                this["Us_i&sN4"](this.currentDiscussion);
                 return
             }
             if (this.editmode || this.discussionActive) {
@@ -20880,7 +20899,7 @@
                 i.findSubviewByName("back").hide();
                 i.findSubviewByName("edit").show()
             }
-            this.notify("HnfG6nFV");
+            this.notify("9sjusDKD");
             this.view.deleteButton.hide();
             this.view.manageMemberButton.hide();
             this._editControlsCounter()
@@ -20892,17 +20911,17 @@
             this.dataUpdate(null, this.delayedData);
             this.delayedData = null
         };
-        e.prototype["Z04XvT7k"] = function () {
+        e.prototype["v2v6tJij"] = function () {
             var n = $("#" + this.view.id).find(".main-content").scrollTop(), i = this.view.findSubviewByField("tag", "currentView"), s, a;
             if (i && i.data && i.data.discussionID) {
                 var r = _.storeSession.createKey("mtp", i.data.discussionID);
                 _.storeSession.setItem(r, n)
             }
-            e.__super__["Z04XvT7k"].apply(this, arguments);
+            e.__super__["v2v6tJij"].apply(this, arguments);
             s = this.view.findSubviewByField("tag", "currentView");
             a = s.group === "MailDiscussion" ? "show" : "hide";
             this.view.deleteButton[a]();
-            if (t.hasAlliancePermission(d.MASS_MAIL)) {
+            if (t.hasAlliancePermission(p.MASS_MAIL)) {
                 a = s.group === "MailMemberList" ? "show" : "hide";
                 this.view.manageMemberButton[a]()
             } else {
@@ -20910,7 +20929,7 @@
             }
             this.view.manageMemberBar.hide()
         };
-        e.prototype["gRayY3gp"] = function () {
+        e.prototype["BzDoxZ0V"] = function () {
             if (this.overviewPosition) {
                 $("#" + this.view.mainContentContainer.id).scrollTop(this.overviewPosition)
             }
@@ -20919,7 +20938,7 @@
                 this.doDelayedDataUpdate()
             }
         };
-        e.prototype["I(qZH6PB"] = function () {
+        e.prototype["6W3tA8U("] = function () {
             if (this.editmode) {
                 this.view.stopEditMode()
             } else {
@@ -20930,7 +20949,7 @@
                 this.doDelayedDataUpdate()
             }
         };
-        e.prototype["VY5V_6Ae"] = function () {
+        e.prototype["ZBgfT&Yx"] = function () {
             this._editControlsCounter()
         };
         e.prototype.findMarkedThreads = function () {
@@ -20951,7 +20970,7 @@
             }
             return a
         };
-        e.prototype["1UtYT&st"] = function () {
+        e.prototype["qTFcCuH5"] = function () {
             var e = this.view.findSubviewByField("tag", "currentView");
             var t = [];
             if (e.data && e.data.discussionID) {
@@ -20971,7 +20990,7 @@
                 utils.dialog.confirm(this, translate(s), translate("Messages"), i, a)
             }
         };
-        e.prototype["GI2rA-qQ"] = function (t) {
+        e.prototype["Us_i&sN4"] = function (t) {
             if (this.view.blockOverlay === true || this.editmode) {
                 return
             }
@@ -20979,11 +20998,12 @@
             var i = _.storeSession.createKey("mop");
             _.storeSession.setItem(i, this.overviewPosition);
             this.discussionActive = true;
-            this.notify("NbKCY7mj", this.view);
+            this.notify("7GVwxkqP", this.view);
             var a = {
                 group: "MailDiscussion",
                 parent: this.view.content,
                 rowID: t.rowID,
+                isSystemMessage: t.isSystemMessage,
                 closed: t.closed,
                 topic: t.topic,
                 lastMessageDate: t.lastMessageDate,
@@ -20998,68 +21018,70 @@
             } else {
                 this.discussionDataSource.subscribers[0] = e
             }
-            this.discussionDataSource.discussion(t.id, this);
-            this.notify("Rtk1Hcq)", this);
+            this.discussionDataSource.discussion(t, this);
+            this.notify("jkCeUHjs", this);
             if (t.previouslyRead === false) {
                 t.previouslyRead = true;
                 this.datasource.markThreadRead(t.id);
-                this.notify("HnfG6nFV")
+                this.notify("9sjusDKD")
             }
             this.editmode = 0;
             this.view.deleteButton.show()
         };
-        e.prototype["LZkt67Uz"] = function () {
+        e.prototype["mgpA8ncR"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t && t.data && t.data.discussionID) {
                 var i = _.storeSession.createKey("mtp", t.data.discussionID);
                 var e = $("#" + this.view.id).find(".main-content");
                 e.scrollTop(_.storeSession.getItem(i) || e.find("#discussionWrapper").height())
             }
-            this.notify("gl%9o7sY", this.view);
-            this.notify("jP-Mbq2&", this)
+            this.notify("i8j%qM54", this.view);
+            this.notify("WZ23TyuK", this)
         };
-        e.prototype["bY0q92&v"] = function () {
-            this.showNextViewOfClass(Pe.NewView, {})
+        e.prototype["PNzZEcQG"] = function () {
+            this.showNextViewOfClass(Ue.NewView, {})
         };
-        e.prototype["CF5SLW4J"] = function (t) {
-            this.notify("FZpvdvBU", this, t.author || t.data)
+        e.prototype["D2KOZnv)"] = function (t) {
+            this.notify("i5I1OIPu", this, t.author || t.data)
         };
-        e.prototype["163)GVeq"] = function (t) {
-            this.showNextViewOfClass(Pe.NewView, {messageID: t.threadID, showSubject: false, clickMessage: "PitzPsvv"})
+        e.prototype["lJAKPAgn"] = function (t) {
+            this.showNextViewOfClass(Ue.NewView, {messageID: t.threadID, showSubject: false, clickMessage: "XndVMZVR"})
         };
-        e.prototype["PitzPsvv"] = function (t) {
+        e.prototype["XndVMZVR"] = function (t) {
             if (this.view.findSubviewByField("name", "answerForm").validate().message === true) {
                 this.discussionActive = false;
                 this.datasource.answerDiscussion(t.threadID, t.content)
             }
         };
-        e.prototype["J5FA3x6C"] = function () {
-            return this.notify("J5FA3x6C", this)
+        e.prototype["NYd&saEH"] = function () {
+            return this.notify("NYd&saEH", this)
         };
         e.prototype.recoverAjaxFailure = function () {
             var t = translate("Internal error.");
-            this.notify("gl%9o7sY", this.view);
+            this.notify("i8j%qM54", this.view);
             utils.dialog.alert(this, t, t)
         };
-        e.prototype["skteVVTN"] = function () {
+        e.prototype["z(smEA&x"] = function () {
             var e = this.currentDiscussion.members.sort(function (t, e) {
                 return t.nick > e.nick ? +1 : -1
             });
-            var i = e.filter(function (e) {
-                return _.try(e, "alliance") === t.alliance.id
+            var i = t.alliance ? t.alliance.id : -1;
+            var a = t.alliance ? t.alliance.playerArray.length : -1;
+            var s = e.filter(function (t) {
+                return _.try(t, "alliance") === i
             });
-            var a = i.length >= t.alliance.playerArray.length;
+            var n = s.length >= a;
             this.showNextViewOfClass(N.MemberList, {
                 group: "MailMemberList",
                 members: e,
                 title: this.currentDiscussion.title
             });
-            if (t.hasAlliancePermission(d.MASS_MAIL) && !a) {
+            if (t.hasAlliancePermission(p.MASS_MAIL) && !n) {
                 this.view.manageMemberButton.show()
             }
         };
-        e.prototype["0_OOtwNb"] = function () {
-            if (!t.hasAlliancePermission(d.MASS_MAIL)) {
+        e.prototype["9JhVb8S7"] = function () {
+            if (!t.hasAlliancePermission(p.MASS_MAIL)) {
                 return
             }
             this.showNextViewOfClass(N.ManageMembersWrapper, {
@@ -21072,11 +21094,11 @@
             this.view.manageMemberBar.show();
             this.view.manageMemberBar.updateCounter(0)
         };
-        e.prototype["&lNIQfu3"] = function () {
+        e.prototype["SzD1R7Zq"] = function () {
             var t = $("#mailManageMembersList :checkbox");
             this.view.manageMemberBar.updateCounter(t.length)
         };
-        e.prototype["DlH_f7Bx"] = function () {
+        e.prototype["z5RN3xgS"] = function () {
             var t = $("#mailManageMembersList :checkbox"), a = t.filter(":checked"), i = true, e = t.length;
             if (e === a.length) {
                 i = false;
@@ -21085,7 +21107,7 @@
             t.prop("checked", i);
             this.view.manageMemberBar.updateCounter(e)
         };
-        e.prototype["TCPkUBR-"] = function () {
+        e.prototype["jXb2V60m"] = function () {
             var e = $("#mailManageMembersList :checkbox:checked"), t = e.map(function (e, t) {
                 return $(t).data("id")
             }).get();
@@ -21095,7 +21117,7 @@
             this.manageUserUpdate = true;
             this.datasource.addDiscussionMembers(t, this.currentDiscussion.discussionID)
         };
-        e.prototype["eQu_xVWE"] = function () {
+        e.prototype["OBIEVAdp"] = function () {
             var e = $("#" + this.view.mailOverview.templateData.htmlID + " .checkboxWrapper input"), t = true;
             if (this.reportsChecked) {
                 t = false
@@ -21117,7 +21139,7 @@
         }
 
         t.prototype.setData = function (n) {
-            var t = this.notify("2toYNBHJ", this, n);
+            var t = this.notify("rXj8(_)&", this, n);
             if (!t) {
                 return false
             }
@@ -21136,7 +21158,7 @@
             i.sort(s);
             this.__data = {systemMessages: a, discussions: i};
             if (e && e > 0) {
-                this.notify("HnfG6nFV", this, e)
+                this.notify("9sjusDKD", this, e)
             }
             this.informControllerUnblock();
             this.publishUpdate()
@@ -21206,24 +21228,27 @@
             }, this.setData, this)
         };
         return t
-    }(I);
+    }(x);
     N.DiscussionDataSource = function (e) {
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments)
         }
 
-        t.prototype.setData = function (e) {
-            var t, i, n = [];
-            if (e.discussion) {
-                t = e.discussion;
-                i = t.discussionEntryArray
+        t.prototype.setData = function (t) {
+            var e, i, n = [];
+            if (t.discussion) {
+                e = t.discussion;
+                i = e.discussionEntryArray
+            } else if (t.Data.SystemMessage) {
+                e = t.Data.SystemMessage[0];
+                i = t.Data.SystemMessage
             } else {
-                t = e.Data.Discussion[0];
-                i = e.Data.DiscussionEntry
+                e = t.Data.Discussion[0];
+                i = t.Data.DiscussionEntry
             }
-            if (_.try(e, "Data.Player")) {
-                $.each(e.Data.Player, function (e, t) {
+            if (_.try(t, "Data.Player")) {
+                $.each(t.Data.Player, function (e, t) {
                     a.players[t.id] = t
                 })
             }
@@ -21234,24 +21259,35 @@
                     return +1
                 }
             });
-            if (t.playerArray) {
+            if (e.playerArray) {
                 var r = function (t) {
                     return t.id === l
                 };
-                for (var s = 0, o = t.discussionListenerArray.length; s < o; s++) {
-                    var l = t.discussionListenerArray[s];
-                    n.push(e.Data.Player.filter(r)[0])
+                for (var s = 0, o = e.discussionListenerArray.length; s < o; s++) {
+                    var l = e.discussionListenerArray[s];
+                    n.push(t.Data.Player.filter(r)[0])
                 }
             }
-            this.__data = {discussionID: t.id, members: n, entries: i, title: t.title};
+            this.__data = {discussionID: e.id, members: n, entries: i, title: e.title};
             this.informControllerUnblock();
             this.publishUpdate()
         };
-        t.prototype.discussion = function (e, t) {
-            s.request("DiscussionAction/discussion", {discussionId: e}, this.setData, this, 62e3, utils.bind(t.recoverAjaxFailure, t))
+        t.prototype.discussion = function (t, e) {
+            var i, a = false;
+            if (typeof t !== "object") {
+                i = t
+            } else {
+                i = t.id;
+                a = t.isSystemMessage
+            }
+            if (a) {
+                s.request("SystemMessageAction/displaySystemMessage", {systemMessageId: i}, this.setData, this, 62e3, utils.bind(e.recoverAjaxFailure, e))
+            } else {
+                s.request("DiscussionAction/discussion", {discussionId: i}, this.setData, this, 62e3, utils.bind(e.recoverAjaxFailure, e))
+            }
         };
         return t
-    }(I);
+    }(x);
     N.MemberList = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
@@ -21297,7 +21333,7 @@
         }
 
         t.prototype.showPlayer = function (t) {
-            this.notify("CF5SLW4J", {author: {id: t}})
+            this.notify("D2KOZnv)", {author: {id: t}})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "mailMemberList")
@@ -21313,7 +21349,7 @@
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
-            this.drawEndMessage = "r9KiPJNJ";
+            this.drawEndMessage = "kw&YxhKJ";
             this.addOption("title", "");
             this.addOption("currentMembers", []);
             this.setOptions(t)
@@ -21366,11 +21402,11 @@
         }
 
         t.prototype.memberSelected = function (t) {
-            this.notify("&lNIQfu3", t);
+            this.notify("SzD1R7Zq", t);
             return false
         };
         t.prototype.showPlayer = function (t) {
-            this.notify("CF5SLW4J", {author: {id: t}})
+            this.notify("D2KOZnv)", {author: {id: t}})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "mailManageMembersList")
@@ -21418,22 +21454,30 @@
             };
             this.create()
         };
-        t.prototype.rowClickHandler = function (a) {
-            var e = $(a.currentTarget);
-            var i = e.attr("data");
-            if (!i) {
+        t.prototype.rowClickHandler = function (n) {
+            var e = $(n.currentTarget);
+            var s = e.attr("data");
+            if (!s) {
                 return
             }
-            var s = e.hasClass("systemMessage") ? this.templateData.systemMessages : this.templateData.discussions;
-            var t = s[i];
-            this.notify("GI2rA-qQ", t);
+            var i, a;
+            if (e.hasClass("systemMessage")) {
+                a = true;
+                i = this.templateData.systemMessages
+            } else {
+                a = false;
+                i = this.templateData.discussions
+            }
+            var t = i[s];
+            t.isSystemMessage = a;
+            this.notify("Us_i&sN4", t);
             t.previouslyRead = true;
             t.icon = this.getImageSrc("messageRead", "icons");
             e.find(".icon img").attr("src", t.icon)
         };
         t.prototype.checkBoxHandler = function (t) {
             t.stopPropagation();
-            this.notify("VY5V_6Ae", this)
+            this.notify("ZBgfT&Yx", this)
         };
         t.prototype.getEvents = function () {
             var e = t.__super__.getEvents.apply(this, arguments);
@@ -21481,10 +21525,10 @@
 
         t.prototype.showPlayer = function (t) {
             var e = t.parents(".content-frame").data("author");
-            this.notify("CF5SLW4J", {author: {id: e}})
+            this.notify("D2KOZnv)", {author: {id: e}})
         };
         t.prototype.showMembers = function () {
-            this.notify("skteVVTN")
+            this.notify("z(smEA&x")
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "discussionWrapper")
@@ -21511,7 +21555,7 @@
             if (this.answerForm) {
                 this.answerForm.draw()
             }
-            this.notify("LZkt67Uz", this)
+            this.notify("mgpA8ncR", this)
         };
         t.prototype._createTemplate = function () {
             this.discussion = this.createSubview(this, {
@@ -21529,26 +21573,26 @@
             }
         };
         t.prototype._prepareData = function (t) {
-            var e = this.notify("ttHKxwy5", this, {imageName: "buttonPlayer", imageCategory: "icons"});
+            var e = this.notify("oqS1fWVg", this, {imageName: "buttonPlayer", imageCategory: "icons"});
             t.subscriberContext = {styles: "discussionMemberList clickable"};
             t.totalMembers = t.members ? t.members.length : 0;
             t.entries = i(t, e);
             t.systemMessage = t.discussionID < 0;
             return t
         };
-        function i(t, r) {
+        function i(e, r) {
             var n = [];
-            for (var e = 0, o = t.entries.length; e < o; e++) {
-                var i = t.entries[e], a = s(i, t.members);
+            for (var i = 0, o = e.entries.length; i < o; i++) {
+                var t = e.entries[i], a = s(t, e.members), l = t.creationDate || t.lastReadDate;
                 n.push({
                     author: a,
-                    message: i.content,
+                    message: t.content,
                     entryContext: {data: {author: a.id}},
                     header: {
                         title: utils.sanitize(a.nick),
                         icon: r,
                         clickable: true,
-                        creationdate: utils.date.formatDateTime(_.conv.toDate(i.creationDate))
+                        creationdate: utils.date.formatDateTime(_.conv.toDate(l))
                     }
                 })
             }
@@ -21589,27 +21633,27 @@
             this.editModeButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_Edit",
                 hover: translate("Edit"),
-                clickMessage: "I(qZH6PB",
+                clickMessage: "6W3tA8U(",
                 name: "edit"
             }, te);
             this.deleteButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_eraseThread",
                 hover: translate("Delete"),
-                clickMessage: "1UtYT&st",
+                clickMessage: "qTFcCuH5",
                 name: "delete",
                 hidden: true
             }, te);
             this.manageMemberButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_Edit",
                 hover: translate("Edit"),
-                clickMessage: "0_OOtwNb",
+                clickMessage: "9JhVb8S7",
                 name: "manageMembersButton",
                 hidden: true
             }, te);
             this.editControls = this.createSubview(this.mainContentContainer.parent, {
-                cmDelete: "1UtYT&st",
+                cmDelete: "qTFcCuH5",
                 deleteText: "Delete messages (%@)"
-            }, Be);
+            }, He);
             this.mailOverview = this.createSubview(this.content, {
                 name: "mailTable",
                 tag: "currentView",
@@ -21633,14 +21677,14 @@
         };
         t.prototype.createManageBottomBar = function () {
             this.manageMemberBar = this.createSubview(this.mainContentContainer.parent, {
-                cmDelete: "TCPkUBR-",
-                cmSelect: "DlH_f7Bx",
+                cmDelete: "jXb2V60m",
+                cmSelect: "z5RN3xgS",
                 deleteText: "Execute"
-            }, Be)
+            }, He)
         };
         return t
     }(u.Window);
-    Pe.View = function (e) {
+    Ue.View = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -21665,7 +21709,7 @@
                     name: "author_" + this.author.id,
                     author: this.author,
                     showIcon: true
-                }, Ji);
+                }, Zi);
                 this.createSubview(e, {content: this.creationDate, styles: "timestamp detail"})
             } else {
                 e = this.createSubview(this, {styles: "content-header systemMessage"});
@@ -21677,7 +21721,7 @@
                 this.checkbox = this.createSubview(this, {
                     styles: "markMessageCheckbox",
                     content: "<input type='checkbox' />",
-                    clickMessage: "BlA7MtZM",
+                    clickMessage: "jjmGUOCA",
                     hidden: !this.moderator
                 })
             }
@@ -21705,7 +21749,7 @@
         };
         return t
     }(T);
-    Pe.NewView = function (e) {
+    Ue.NewView = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -21738,24 +21782,24 @@
                     allowBlank: false,
                     maxLength: 100,
                     caption: "Subject"
-                }, H.Input)
+                }, B.Input)
             }
             this.message = this.createSubview(this.container, {
                 name: "message",
                 allowBlank: false,
                 maxLength: 1e3,
                 inputType: "text"
-            }, H.Input);
+            }, B.Input);
             this.submitButton = this.createSubview(this.container, {
                 name: "submit",
                 content: this.buttonText,
                 clickMessage: this.elementClickMessage
-            }, p);
+            }, f);
             this.createSubview(this.container, {
                 name: "paste",
                 content: translate("paste_link"),
-                clickMessage: "J5FA3x6C"
-            }, p);
+                clickMessage: "NYd&saEH"
+            }, f);
             this.errorContainer = this.createSubview(this.container, {name: "errorContainer", styles: "warning"})
         };
         t.prototype.getSubject = function () {
@@ -21805,7 +21849,7 @@
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.addOption("template", "mailNewMessageForm", true);
-            this.addOption("replyMessage", "PitzPsvv");
+            this.addOption("replyMessage", "XndVMZVR");
             this.setOptions(e);
             this.templateData.htmlID = this.id;
             this.uniqueSelector = "#" + this.id
@@ -21840,7 +21884,7 @@
             this.notify(this.replyMessage, {threadID: t.data.discussion, content: t.$textarea.val()})
         };
         t.prototype.paste = function () {
-            var t = this._getSections(), e = t.$textarea.val(), i = this.notify("J5FA3x6C");
+            var t = this._getSections(), e = t.$textarea.val(), i = this.notify("NYd&saEH");
             if (!t.$textarea[0].selectionStart) {
                 t.$textarea.val(e + i);
                 this.updateLimit({target: t.$textarea[0]});
@@ -21908,7 +21952,7 @@
 
         return t
     }(S);
-    v.Controller = function (i) {
+    g.Controller = function (i) {
         utils.__extends(e, i);
         function e() {
             e.__super__.constructor.apply(this, arguments);
@@ -21951,13 +21995,13 @@
             }
             this._editControlsCounter()
         };
-        e.prototype["Z04XvT7k"] = function () {
-            e.__super__["Z04XvT7k"].apply(this, arguments);
+        e.prototype["v2v6tJij"] = function () {
+            e.__super__["v2v6tJij"].apply(this, arguments);
             if (this.view.settingsActive) {
                 this.view.hideSettings()
             }
         };
-        e.prototype["d2oxInrs"] = function () {
+        e.prototype["(LvKJ&b&"] = function () {
             if (this.editmode) {
                 this.view.stopEditMode()
             } else {
@@ -21965,7 +22009,7 @@
             }
             this.editmode ^= 1
         };
-        e.prototype["CIf%Qpvp"] = function () {
+        e.prototype["p-CuqGcj"] = function () {
             var t = this.data.reportsView[this.selectedTableForDisplay];
             var i = [];
             if (!t) {
@@ -21979,10 +22023,10 @@
             }.bind(this), function () {
             })
         };
-        e.prototype["p9f7f1va"] = function (t) {
+        e.prototype["hQK__QBI"] = function (t) {
             this.notify("handleHabitatAction", t.data, "centerCastle")
         };
-        e.prototype["JZkhy60s"] = function () {
+        e.prototype["Q51jx&5a"] = function () {
             utils.dialog.confirm(this, translate("Really delete selection?"), translate("Reports"), function () {
                 this.datasource.deleteReport(this.currentReportID);
                 this.initialDataUpdate = true;
@@ -21990,10 +22034,10 @@
             }.bind(this), function () {
             })
         };
-        e.prototype["zog0GRpX"] = function (t) {
+        e.prototype["s&TH%udj"] = function (t) {
             this.notify("createHabitatWindow", t.data)
         };
-        e.prototype["gRayY3gp"] = function () {
+        e.prototype["BzDoxZ0V"] = function () {
             this.view.hideSettings();
             this.view.deleteSingleReportButton.hide();
             if (this.lastListPosition) {
@@ -22030,30 +22074,30 @@
             if (t.foreignReport !== true) {
                 e.paginationInfo = this._getPaginationInfo(t.threadID)
             }
-            var i = this["ID(Le_5-"](e);
+            var i = this["O&Mpa%G2"](e);
             e.reportInfo = i;
             e.header = {
                 title: translate(t.headline),
                 icon: i.icon,
                 headlineClass: "report-detail-title",
-                detail: v.DataParsers.formatHeadlineDate(t.date)
+                detail: g.DataParsers.formatHeadlineDate(t.date)
             };
-            e.habitat.icon = this.notify("ttHKxwy5", this, {imageName: "centerHabitat", imageCategory: "icons"});
-            e = v.DataParsers.modifyDataSourceDest(e, i);
-            e = v.DataParsers.modifyDataBuildings(e);
-            e = v.DataParsers.modifyDataResources(e);
-            e = v.DataParsers.modifyDataUnits(e);
-            e = v.DataParsers.modifyDataUnitsLoss(e);
-            e = v.DataParsers.modifyDataUnitParties(e, "battlePartyDictionary");
-            e = v.DataParsers.modifyDataUnitParties(e, "defenderUnitDictionary");
-            e = v.DataParsers.modifyDataSilver(e);
-            e = v.DataParsers.modifyDataKnowledge(e, this);
+            e.habitat.icon = this.notify("oqS1fWVg", this, {imageName: "centerHabitat", imageCategory: "icons"});
+            e = g.DataParsers.modifyDataSourceDest(e, i);
+            e = g.DataParsers.modifyDataBuildings(e);
+            e = g.DataParsers.modifyDataResources(e);
+            e = g.DataParsers.modifyDataUnits(e);
+            e = g.DataParsers.modifyDataUnitsLoss(e);
+            e = g.DataParsers.modifyDataUnitParties(e, "battlePartyDictionary");
+            e = g.DataParsers.modifyDataUnitParties(e, "defenderUnitDictionary");
+            e = g.DataParsers.modifyDataSilver(e);
+            e = g.DataParsers.modifyDataKnowledge(e, this);
             if (e.type === 11) {
-                e.facebook = v.DataParsers.facebookData(this)
+                e.facebook = g.DataParsers.facebookData(this)
             }
             return e
         };
-        e.prototype["GI2rA-qQ"] = function (t, e) {
+        e.prototype["Us_i&sN4"] = function (t, e) {
             if (this.editmode) {
                 return
             }
@@ -22065,12 +22109,12 @@
                     _.storeLocal.setItem(i, t.date.toString())
                 }
             }
-            this.showNextViewOfClass(v.View, {data: this._prepareData(t), styles: "report"}, e);
+            this.showNextViewOfClass(g.View, {data: this._prepareData(t), styles: "report"}, e);
             this.currentReportID = t.threadID;
             this.view.deleteSingleReportButton.setOptions({data: this.currentReportID});
             this.view.deleteSingleReportButton.show()
         };
-        e.prototype["mZmWEEX8"] = function (a) {
+        e.prototype["RvwH-3P9"] = function (a) {
             var s = a.direction, t = this.paginationCurrentIndex, e = this.view.findSubviewByField("tag", "currentView"), i;
             if (s === "next") {
                 t += 1
@@ -22099,12 +22143,12 @@
             this.paginationCurrentIndex = e;
             return t
         };
-        e.prototype["ID(Le_5-"] = function (e) {
+        e.prototype["O&Mpa%G2"] = function (e) {
             var t = this.reportIconName(e);
             return {icon: t.icon, headline: t.headline, description: t.description, type: e.type}
         };
-        e.prototype["JzqX9Tne"] = function (t) {
-            this["Z04XvT7k"]();
+        e.prototype["%Zauimt_"] = function (t) {
+            this["v2v6tJij"]();
             this.selectedTableForDisplay = t.arrayName;
             var e = this.view.findSubviewByName("reportstable");
             this.view.hideSettings();
@@ -22117,8 +22161,8 @@
         };
         e.prototype.reportIconName = function (t) {
             var a = "", s = "", e = "";
-            var i = this.notify("YrKz7XU6", this);
-            if (t.type === y.ATTACK_WARNING) {
+            var i = this.notify("AN4-Dk1u", this);
+            if (t.type === v.ATTACK_WARNING) {
                 e = translate("%@ sent an attack to %@.", t.sourceHabitat.name, t.habitat.name);
                 return {
                     icon: i.getImageSrc("AttackWarning", "reportIcons"),
@@ -22126,7 +22170,7 @@
                     description: e
                 }
             }
-            if (t.type === y.MISSION_FINISHED) {
+            if (t.type === v.MISSION_FINISHED) {
                 e = translate("Mission %@ accomplished", translate(t.mission.identifier));
                 return {
                     icon: i.getImageSrc(t.mission.identifier, "missions"),
@@ -22134,7 +22178,7 @@
                     description: e
                 }
             }
-            if (t.type === y.KNOWLEDGE_RESEARCHED) {
+            if (t.type === v.KNOWLEDGE_RESEARCHED) {
                 e = translate("Research of %@ finished.", translate(t.knowledge.identifier));
                 return {
                     icon: i.getImageSrc(t.knowledge.identifier, "knowledges"),
@@ -22142,7 +22186,7 @@
                     description: e
                 }
             }
-            if (t.type === y.TRANSIT_RETURNED) {
+            if (t.type === v.TRANSIT_RETURNED) {
                 if (t.transitType === b.TRANSIT_TRANSPORT) {
                     if (t.resources && t.resources[n.SILVER] !== 0) {
                         e = translate("A transit from a Market arrived at %@.", t.destinationHabitat.name)
@@ -22172,7 +22216,7 @@
                     }
                 }
             }
-            if (t.type === y.SPY_FINISHED) {
+            if (t.type === v.SPY_FINISHED) {
                 if (t.successful === true) {
                     e = translate("Your spy returned with valuable information from %@.", t.destinationHabitat.name);
                     return {
@@ -22189,10 +22233,10 @@
                     }
                 }
             }
-            if (t.type === y.BATTLE_ROUND_FINISHED) {
-                if (t.battleType && t.battleType === k.EXTERNAL_UNITS_TO_DEFENSE) {
+            if (t.type === v.BATTLE_ROUND_FINISHED) {
+                if (t.battleType && t.battleType === D.EXTERNAL_UNITS_TO_DEFENSE) {
                     a = i.getImageSrc("ForeignDefenseReport", "reportIcons")
-                } else if (t.internalCategory === k.EXTERNAL_UNITS_TO_DEFENSE) {
+                } else if (t.internalCategory === D.EXTERNAL_UNITS_TO_DEFENSE) {
                     a = i.getImageSrc("DefenseReport", "reportIcons")
                 } else {
                     a = i.getImageSrc("TransitAttack", "reportIcons")
@@ -22212,7 +22256,7 @@
                     description: e
                 }
             }
-            if (t.type === y.LOST_FOREIGN_DEFENDER) {
+            if (t.type === v.LOST_FOREIGN_DEFENDER) {
                 e = translate("Lost defenders from %@", t.destinationHabitat.name);
                 return {
                     icon: i.getImageSrc("ForeignDefenseReport", "reportIcons"),
@@ -22220,7 +22264,7 @@
                     description: e
                 }
             }
-            if (t.type === y.CONQUEST_FAILED) {
+            if (t.type === v.CONQUEST_FAILED) {
                 e = translate("Failed to conquer %@", t.destinationHabitat.name);
                 return {
                     icon: i.getImageSrc("TransitAttack", "reportIcons"),
@@ -22228,7 +22272,7 @@
                     description: e
                 }
             }
-            if (t.type === y.CONQUEST) {
+            if (t.type === v.CONQUEST) {
                 e = translate("%@ was conquered.", t.destinationHabitat.name);
                 return {
                     icon: i.getImageSrc("TransitAttack", "reportIcons"),
@@ -22236,7 +22280,7 @@
                     description: e
                 }
             }
-            if (t.type === y.SPY_CAPTURED) {
+            if (t.type === v.SPY_CAPTURED) {
                 e = translate("A spy from %@ was captured at %@.", t.sourceHabitat.name, t.habitat.name);
                 return {
                     icon: i.getImageSrc("SpyCaptured", "reportIcons"),
@@ -22244,7 +22288,7 @@
                     description: e
                 }
             }
-            if (t.type === y.DELIVERED_RESOURCES) {
+            if (t.type === v.DELIVERED_RESOURCES) {
                 e = translate("A transport from %@ arrived at %@.", t.sourceHabitat.name, t.destinationHabitat.name);
                 return {
                     icon: i.getImageSrc("TransitTransport", "reportIcons"),
@@ -22252,7 +22296,7 @@
                     description: e
                 }
             }
-            if (t.type === y.DELIVERED_DEFENSE) {
+            if (t.type === v.DELIVERED_DEFENSE) {
                 e = translate("Defenders from %@ arrived at %@.", t.sourceHabitat.name, t.destinationHabitat.name);
                 return {
                     icon: i.getImageSrc("TransitTransport", "reportIcons"),
@@ -22261,10 +22305,10 @@
                 }
             }
         };
-        e.prototype["bM1U7Pqn"] = function () {
+        e.prototype["5Eqd3%kA"] = function () {
             this.view.showSettings()
         };
-        e.prototype["oK7TuyDE"] = function (a) {
+        e.prototype["Zg2JPtc%"] = function (a) {
             var e = a.parent;
             var i = 0;
             for (var t = 0; t < e.settings.length; t++) {
@@ -22275,22 +22319,22 @@
             this.view.hideSettings();
             this.datasource.changeReportSetup(i)
         };
-        e.prototype["PN3LX(6K"] = function (t) {
+        e.prototype["JZlkPbRb"] = function (t) {
             var e = t.published;
             this.datasource.togglePublishReport(t.id, e)
         };
-        e.prototype["vO5eiMg9"] = function (t) {
-            var e = this.notify("Sh932WIb", this, t);
-            this.notify("xCzXgU2u", this, e);
+        e.prototype["onYrSmLG"] = function (t) {
+            var e = this.notify("ROYLfKTf", this, t);
+            this.notify("1EMjIwLd", this, e);
             _.blinkButton($("#" + this.view.id + " .button.copy"))
         };
-        e.prototype["MNqu6z(R"] = function (t) {
-            this.notify("MNqu6z(R", t)
+        e.prototype["2_A-_Erh"] = function (t) {
+            this.notify("2_A-_Erh", t)
         };
-        e.prototype["RHKHoLnp"] = function () {
+        e.prototype["WS4sGboL"] = function () {
             this._editControlsCounter()
         };
-        e.prototype["eQu_xVWE"] = function () {
+        e.prototype["OBIEVAdp"] = function () {
             if (!this.reportsChecked) {
                 $("#" + this.view.reportTable.templateData.htmlID + " .markTableEntryCheckbox input").prop("checked", true);
                 this.reportsChecked = true
@@ -22304,7 +22348,7 @@
             var t = $("#" + this.view.reportTable.templateData.htmlID + " .markTableEntryCheckbox input:checked").length;
             this.view.editControls.updateCounter(t)
         };
-        e.prototype["1DfX0LnX"] = function (a) {
+        e.prototype["ks4PL(lT"] = function (a) {
             var e = [];
             if (!!~a.styleArray.indexOf("disabled")) {
                 return false
@@ -22317,14 +22361,14 @@
             }
             utils.dialog.confirm(this, translate("Delete the selected reports?"), translate("Reports"), function () {
                 this.datasource.deleteReportCategory(e);
-                this["d2oxInrs"]()
+                this["(LvKJ&b&"]()
             }.bind(this), function () {
             })
         };
         return e
     }(u.Controller);
     (function () {
-        v.DataParsers = {
+        g.DataParsers = {
             formatHeadlineDate: u,
             unitHeadline: i,
             modeliseResources: a,
@@ -22333,8 +22377,8 @@
             modifyDataSourceDest: l,
             modifyDataBuildings: C,
             modifyDataResources: c,
-            modifyDataUnits: d,
-            modifyDataUnitsLoss: p,
+            modifyDataUnits: p,
+            modifyDataUnitsLoss: f,
             modifyDataUnitParties: m,
             modifyDataSilver: w,
             modifyDataKnowledge: S,
@@ -22360,7 +22404,7 @@
                 i = translate("%@ - battle survivors", utils.truncate(e.habitat.name, t))
             } else if (e.type === b.TRANSIT_SPY) {
                 i = translate("Spied Units")
-            } else if (e.type === y.LOST_FOREIGN_DEFENDER) {
+            } else if (e.type === v.LOST_FOREIGN_DEFENDER) {
                 i = translate("Deserted units")
             }
             return i
@@ -22378,7 +22422,7 @@
         function s(i) {
             var a = [];
             for (var t in i) {
-                var s = i[t], e = f[t];
+                var s = i[t], e = d[t];
                 a.push({
                     primaryKey: t,
                     level: s,
@@ -22396,7 +22440,7 @@
             }
             var a = [];
             for (var e in t) {
-                var s = t[e], i = g[e].clone();
+                var s = t[e], i = y[e].clone();
                 i.unitID = e;
                 i.amount = s;
                 a.push(i)
@@ -22425,7 +22469,7 @@
                 return t
             }
             t.buildingHeader = {title: translate("Spied Buildings")};
-            t.buildings = v.DataParsers.formatBuildings(t.buildings);
+            t.buildings = g.DataParsers.formatBuildings(t.buildings);
             return t
         }
 
@@ -22440,23 +22484,23 @@
                 e = translate("Carried resources")
             }
             t.resourceHeader = {title: e};
-            t.resources = {habitatResources: v.DataParsers.modeliseResources(t.resources)};
+            t.resources = {habitatResources: g.DataParsers.modeliseResources(t.resources)};
             return t
         }
 
-        function d(t) {
+        function p(t) {
             if (!t.units || !utils.dict.size(t.units)) {
                 t.units = null;
                 return t
             }
             t.units = {
-                header: {title: v.DataParsers.unitHeadline(t)},
-                habitatUnits: v.DataParsers.formatUnits(t.units)
+                header: {title: g.DataParsers.unitHeadline(t)},
+                habitatUnits: g.DataParsers.formatUnits(t.units)
             };
             return t
         }
 
-        function p(e) {
+        function f(e) {
             if (!e.unitsLoss || !utils.dict.size(e.unitsLoss)) {
                 e.unitsLoss = null;
                 return e
@@ -22468,7 +22512,7 @@
                 i = e.habitat.name
             }
             a = translate("%@ - battle losses", utils.truncate(i, t));
-            e.unitsLoss = {header: {title: a}, habitatUnits: v.DataParsers.formatUnits(e.unitsLoss)};
+            e.unitsLoss = {header: {title: a}, habitatUnits: g.DataParsers.formatUnits(e.unitsLoss)};
             return e
         }
 
@@ -22496,7 +22540,7 @@
                     r = true;
                     n.survivors = {
                         header: {title: translate("%@ - battle survivors", utils.truncate(o, t))},
-                        habitatUnits: v.DataParsers.formatUnits(u)
+                        habitatUnits: g.DataParsers.formatUnits(u)
                     }
                 }
                 if (p > 0) {
@@ -22506,7 +22550,7 @@
                     }
                     n.losses = {
                         header: {title: translate("%@ - battle losses", utils.truncate(o, t))},
-                        habitatUnits: v.DataParsers.formatUnits(h)
+                        habitatUnits: g.DataParsers.formatUnits(h)
                     }
                 }
                 c.parties.push(n)
@@ -22527,7 +22571,7 @@
             var e = {};
             e[n.SILVER] = t.silverAmount;
             t.silverHeader = {title: translate("Silver")};
-            t.silverAmount = {habitatResources: v.DataParsers.modeliseResources(e)};
+            t.silverAmount = {habitatResources: g.DataParsers.modeliseResources(e)};
             return t
         }
 
@@ -22553,7 +22597,7 @@
                     if (n === "units") {
                         r = a.primaryKey.toString()
                     }
-                    u = o.notify("ttHKxwy5", o, {imageName: r, imageCategory: n})
+                    u = o.notify("oqS1fWVg", o, {imageName: r, imageCategory: n})
                 }
                 l.push({headline: e, icon: u})
             }
@@ -22570,11 +22614,11 @@
             var n = encodeURIComponent(h.getValueOf("fbCaptureCastlePicture"));
             var r = encodeURIComponent(h.getValueOf("fbCaptureCastleDescription"));
             var o = "https://www.facebook.com/dialog/feed?app_id=" + e + "&redirect_uri=" + a + "&display=page&link=" + i + "&picture=" + n + "&name=" + s + "&description=" + r + "&show_error=true";
-            var l = t.notify("ttHKxwy5", t, {imageName: "facebook", imageCategory: "icons"});
+            var l = t.notify("oqS1fWVg", t, {imageName: "facebook", imageCategory: "icons"});
             return {url: o, icon: l}
         }
     })();
-    v.DataSource = function (i) {
+    g.DataSource = function (i) {
         utils.__extends(e, i);
         function e() {
             e.__super__.constructor.apply(this, arguments)
@@ -22660,31 +22704,31 @@
             this.__data.reportsView[e].push(t)
         };
         e.prototype.sortReportIntoCategory = function (e, t) {
-            t.reportViewClass = v.ListEntry;
+            t.reportViewClass = g.ListEntry;
             e.arrayAll.push(t);
-            if (t.type === y.ATTACK_WARNING || t.type === y.LOST_FOREIGN_DEFENDER) {
+            if (t.type === v.ATTACK_WARNING || t.type === v.LOST_FOREIGN_DEFENDER) {
                 this._reportToCategory(t, "arrayDefense", "Defense Report")
             }
-            if (t.type === y.CONQUEST || t.type === y.CONQUEST_FAILED) {
+            if (t.type === v.CONQUEST || t.type === v.CONQUEST_FAILED) {
                 this._reportToCategory(t, "arrayAttack", "Battle Report")
             }
-            if (t.type === y.TRANSIT_RETURNED || t.type === y.DELIVERED_RESOURCES || t.type === y.DELIVERED_DEFENSE) {
+            if (t.type === v.TRANSIT_RETURNED || t.type === v.DELIVERED_RESOURCES || t.type === v.DELIVERED_DEFENSE) {
                 this._reportToCategory(t, "arrayTransit", "Transit Report")
             }
-            if (t.type === y.KNOWLEDGE_RESEARCHED) {
+            if (t.type === v.KNOWLEDGE_RESEARCHED) {
                 this._reportToCategory(t, "arrayResearch", "Knowledge researched report")
             }
-            if (t.type === y.MISSION_FINISHED) {
+            if (t.type === v.MISSION_FINISHED) {
                 this._reportToCategory(t, "arrayMission", "Mission Report")
             }
-            if (t.type === y.SPY_FINISHED || t.type === y.SPY_CAPTURED) {
+            if (t.type === v.SPY_FINISHED || t.type === v.SPY_CAPTURED) {
                 this._reportToCategory(t, "arraySpy", "Spy Report")
             }
-            if (t.type === y.LOST_FOREIGN_DEFENDER) {
+            if (t.type === v.LOST_FOREIGN_DEFENDER) {
                 this._reportToCategory(t, "arrayDefense", "Lost foreign defenders")
             }
-            if (t.type === y.BATTLE_ROUND_FINISHED) {
-                if (t.battleType === k.ATTACKER) {
+            if (t.type === v.BATTLE_ROUND_FINISHED) {
+                if (t.battleType === D.ATTACKER) {
                     this._reportToCategory(t, "arrayAttack", "Battle Report")
                 } else {
                     this._reportToCategory(t, "arrayDefense", "Defense Report")
@@ -22692,8 +22736,8 @@
             }
         };
         return e
-    }(I);
-    v.DetailView = function (e) {
+    }(x);
+    g.DetailView = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -22719,20 +22763,20 @@
 
         t.prototype.centerMapOver = function (e) {
             var t = e.data();
-            this.notify("p9f7f1va", {data: {id: t.id, mapX: t.x, mapY: t.y}})
+            this.notify("hQK__QBI", {data: {id: t.id, mapX: t.x, mapY: t.y}})
         };
         t.prototype.togglePublish = function (t) {
-            this.notify("PN3LX(6K", {published: t.data("published"), id: t.data("id")})
+            this.notify("JZlkPbRb", {published: t.data("published"), id: t.data("id")})
         };
         t.prototype.copyReport = function (t) {
-            this.notify("vO5eiMg9", {habitat: t.data("habitat"), report: t.data("id")})
+            this.notify("onYrSmLG", {habitat: t.data("habitat"), report: t.data("id")})
         };
         t.prototype.paginationClick = function (i) {
             var t = $(i.target), e = "next";
             if (t.hasClass("back") || t.parent().is(".back")) {
                 e = "back"
             }
-            this.notify("mZmWEEX8", {direction: e})
+            this.notify("RvwH-3P9", {direction: e})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "reportDetail")
@@ -22745,7 +22789,7 @@
         };
         return t
     }(S);
-    v.View = function (e) {
+    g.View = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -22761,7 +22805,7 @@
                 templateData: this.data,
                 template: "reportDetail",
                 attachTo: this
-            }, v.DetailView)
+            }, g.DetailView)
         };
         t.prototype.dataUpdate = function (e, t) {
             this.data = t;
@@ -22769,7 +22813,7 @@
         };
         return t
     }(e);
-    v.Overview = function (e) {
+    g.Overview = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -22786,7 +22830,7 @@
             var r = false;
             this.templateData = {days: {}, showMoreButton: r, htmlID: this.id};
             for (var t = 0, o = n; t < o; t++) {
-                var a = this.notify("ID(Le_5-", this.reports[t]);
+                var a = this.notify("O&Mpa%G2", this.reports[t]);
                 var e = utils.date.showFormatShortDateTime(this.reports[t].date);
                 if (!this.templateData.days[e]) {
                     this.templateData.days[e] = {date: e, reports: []}
@@ -22817,7 +22861,7 @@
                 return
             }
             var t = this.reports[i];
-            this.notify("GI2rA-qQ", t);
+            this.notify("Us_i&sN4", t);
             if (this.readReportIDs.indexOf(t.serverID) === -1) {
                 this.readReportIDs.push(t.serverID);
                 e.removeClass("new")
@@ -22828,7 +22872,7 @@
             }
         };
         t.prototype.checkBoxHandler = function () {
-            this.notify("RHKHoLnp", this)
+            this.notify("WS4sGboL", this)
         };
         t.prototype.getEvents = function () {
             var e = t.__super__.getEvents.apply(this, arguments);
@@ -22855,7 +22899,7 @@
         };
         return t
     }(S);
-    v.Settings = function (i) {
+    g.Settings = function (i) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -22869,29 +22913,29 @@
             this.createSubview(this, {
                 content: translate("Save"),
                 hover: translate("Save"),
-                clickMessage: "oK7TuyDE"
-            }, p);
-            this.settings.push(this.createSettingsLine("defense", "Attack Warning", y.ATTACK_WARNING));
-            this.settings.push(this.createSettingsLine("defense", "Lost foreign defenders", y.LOST_FOREIGN_DEFENDER));
-            this.settings.push(this.createSettingsLine("transitAttack", "Battle Report", y.BATTLE_ROUND_FINISHED));
-            this.settings.push(this.createSettingsLine("transitAttack", "Successful Conquest", y.CONQUEST));
-            this.settings.push(this.createSettingsLine("transitAttack", "Failed Conquest", y.CONQUEST_FAILED));
-            this.settings.push(this.createSettingsLine("transport", "Transit Report", y.TRANSIT_RETURNED));
-            this.settings.push(this.createSettingsLine("transport", "Delivered Resources", y.DELIVERED_RESOURCES));
-            this.settings.push(this.createSettingsLine("researchBlack", "Knowledge researched report", y.KNOWLEDGE_RESEARCHED));
-            this.settings.push(this.createSettingsLine("missionBlack", "Mission Report", y.MISSION_FINISHED));
-            this.settings.push(this.createSettingsLine("transitSpy", "Spy Report", y.SPY_FINISHED));
-            this.settings.push(this.createSettingsLine("transitSpy", "Spy captured report", y.SPY_CAPTURED))
+                clickMessage: "Zg2JPtc%"
+            }, f);
+            this.settings.push(this.createSettingsLine("defense", "Attack Warning", v.ATTACK_WARNING));
+            this.settings.push(this.createSettingsLine("defense", "Lost foreign defenders", v.LOST_FOREIGN_DEFENDER));
+            this.settings.push(this.createSettingsLine("transitAttack", "Battle Report", v.BATTLE_ROUND_FINISHED));
+            this.settings.push(this.createSettingsLine("transitAttack", "Successful Conquest", v.CONQUEST));
+            this.settings.push(this.createSettingsLine("transitAttack", "Failed Conquest", v.CONQUEST_FAILED));
+            this.settings.push(this.createSettingsLine("transport", "Transit Report", v.TRANSIT_RETURNED));
+            this.settings.push(this.createSettingsLine("transport", "Delivered Resources", v.DELIVERED_RESOURCES));
+            this.settings.push(this.createSettingsLine("researchBlack", "Knowledge researched report", v.KNOWLEDGE_RESEARCHED));
+            this.settings.push(this.createSettingsLine("missionBlack", "Mission Report", v.MISSION_FINISHED));
+            this.settings.push(this.createSettingsLine("transitSpy", "Spy Report", v.SPY_FINISHED));
+            this.settings.push(this.createSettingsLine("transitSpy", "Spy captured report", v.SPY_CAPTURED))
         };
         t.prototype.createSettingsLine = function (a, s, i) {
             var t = this.createSubview(this, {styles: "reportSettingsLine"}, T);
             var e;
             t.createSubview(t, {
                 styles: "icon",
-                content: this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: a})
+                content: this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: a})
             });
             t.createSubview(t, {styles: "title", content: translate(s)});
-            e = t.createSubview(t, {styles: "checkbox", clickMessage: "3q)LSka6", data: {reportType: i}}, H.Checkbox);
+            e = t.createSubview(t, {styles: "checkbox", clickMessage: "AMoh5qXK", data: {reportType: i}}, B.Checkbox);
             if (this.setupValue & 1 << i) {
                 e.check()
             }
@@ -22899,7 +22943,7 @@
         };
         return t
     }(e);
-    v.TabBar = function (i) {
+    g.TabBar = function (i) {
         utils.__extends(t, e);
         function t(e, i) {
             t.__super__.constructor.apply(this, arguments)
@@ -22945,7 +22989,7 @@
                         arrayName: i,
                         styles: "tab",
                         name: translate(e)
-                    }, v.TabButton)
+                    }, g.TabButton)
                 }
             }
             this.draw()
@@ -22956,7 +23000,7 @@
         };
         return t
     }(e);
-    v.TabHover = function (e) {
+    g.TabHover = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -22970,7 +23014,7 @@
         };
         return t
     }(E);
-    v.TabButton = function (e) {
+    g.TabButton = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -22980,15 +23024,15 @@
             this.addOption("name", "");
             this.addOption("filler", false);
             this.setOptions(e);
-            if (!this.filler && !this.clickMessage)this.clickMessage = "JzqX9Tne"
+            if (!this.filler && !this.clickMessage)this.clickMessage = "%Zauimt_"
         }
 
         t.prototype.create = function () {
             if (this.filler)return;
-            var t = this.notify("3s(kBgiI", this, {
+            var t = this.notify("Z-XGNYVU", this, {
                 imageName: this.icon,
                 imageCategory: "tabs"
-            }), e = this.notify("3s(kBgiI", this, {
+            }), e = this.notify("Z-XGNYVU", this, {
                 imageName: this.icon + "_active",
                 imageCategory: "tabs"
             }), i = $(t).attr("src"), a = $(e).attr("src");
@@ -22996,13 +23040,13 @@
             this.createSubview(this, {
                 styles: "tab-content",
                 content: t,
-                lazyHoverClass: v.TabHover,
+                lazyHoverClass: g.TabHover,
                 lazyHoverOptions: {name: this.name}
             }, F)
         };
         return t
     }(e);
-    v.Window = function (e) {
+    g.Window = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -23017,22 +23061,22 @@
                 graphic: "headlineButton_Edit",
                 hover: translate("Edit"),
                 name: "editButton",
-                clickMessage: "d2oxInrs"
+                clickMessage: "(LvKJ&b&"
             }, te);
             this.settingsButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_SetUp",
                 hover: translate("Preferences"),
                 name: "setupButton",
-                clickMessage: "bM1U7Pqn"
+                clickMessage: "5Eqd3%kA"
             }, te);
             this.deleteSingleReportButton = this.createSubview(this.headline.buttons, {
                 graphic: "headlineButton_eraseThread",
                 hover: translate("Delete"),
                 name: "deleteItemsButton",
-                clickMessage: "JZkhy60s",
+                clickMessage: "Q51jx&5a",
                 hidden: true
             }, te);
-            this.tabbar = new v.TabBar(this.controller, {
+            this.tabbar = new g.TabBar(this.controller, {
                 parent: this.subviews[0],
                 name: "reportTabBar",
                 styles: "tabbar reports"
@@ -23042,14 +23086,14 @@
                 name: "reportsettings",
                 setupValue: this.reportSetupValue,
                 hidden: true
-            }, v.Settings);
+            }, g.Settings);
             this.reportTable = this.createSubview(this.content, {
                 name: "reportstable",
                 tag: "currentView",
                 styles: "reportstable contentCurrentView",
                 template: "reportOverview"
-            }, v.Overview);
-            this.editControls = this.createSubview(this.mainContentContainer.parent, {}, Be)
+            }, g.Overview);
+            this.editControls = this.createSubview(this.mainContentContainer.parent, {}, He)
         };
         t.prototype.startEditMode = function () {
             this.content.styleArray.push("editmode");
@@ -23091,7 +23135,7 @@
         };
         t.prototype.show = function () {
             t.__super__.show.apply(this, arguments);
-            this.notify("MNqu6z(R", this)
+            this.notify("2_A-_Erh", this)
         };
         return t
     }(u.Window);
@@ -23147,16 +23191,16 @@
                 this.counterTimer = setInterval(t.timeEvent, 3e4)
             }
         };
-        e.prototype["5gDHtT_N"] = function () {
+        e.prototype["x2x7Uarm"] = function () {
             this._resetCounter();
-            e.__super__["5gDHtT_N"].apply(this, arguments)
+            e.__super__["x2x7Uarm"].apply(this, arguments)
         };
-        e.prototype["Z04XvT7k"] = function () {
-            e.__super__["Z04XvT7k"].apply(this, arguments);
+        e.prototype["v2v6tJij"] = function () {
+            e.__super__["v2v6tJij"].apply(this, arguments);
             if (this.currentView !== "allianceHabitatReservation") {
                 this.toggleHeadlineControls("none")
             } else if (this.currentView === "allianceHabitatReservation") {
-                var a = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS), s = this._getHabitatReservationView(), n = _.try(s, "currentSortType") === "own", r = !a && n ? "habitatReservationOwnInactive" : "habitatReservation";
+                var a = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS), s = this._getHabitatReservationView(), n = _.try(s, "currentSortType") === "own", r = !a && n ? "habitatReservationOwnInactive" : "habitatReservation";
                 if (this.currentSubView && this.currentSubView.length > 0) {
                     this.currentSubView.pop()
                 }
@@ -23170,9 +23214,9 @@
                 i.find(".main-content").removeAttr("style");
                 i.addClass("lightBG")
             }
-            this["1CmE0gbb"]()
+            this["k9wCBiR-"]()
         };
-        e.prototype["V(czOnDu"] = function (e) {
+        e.prototype["Ph0zh-Lk"] = function (e) {
             var t;
             switch (e.data.action) {
                 case"habitatReservationEditMode":
@@ -23190,19 +23234,19 @@
                 t.bind(this)()
             }
         };
-        e.prototype["qzIosSCY"] = function () {
+        e.prototype["vW)jV6Bl"] = function () {
             this.toggleViews("allianceProfile")
         };
-        e.prototype["8GH&4Rt7"] = function () {
+        e.prototype["tKCsX5hK"] = function () {
             this.toggleViews("allianceMembers")
         };
-        e.prototype["lSvY_A4_"] = function () {
+        e.prototype["yeXsWvwR"] = function () {
             this.toggleViews("allianceRights")
         };
-        e.prototype["DLgBYKbW"] = function () {
+        e.prototype["FNTZw990"] = function () {
             this.toggleViews("allianceInvitations")
         };
-        e.prototype["eStinXxk"] = function () {
+        e.prototype["mJv86y&L"] = function () {
             var t = this.view.sections[2], e = Date.now(), i;
             if (!t.reports) {
                 this.datasource.loadReports(t);
@@ -23216,21 +23260,21 @@
             }
             this.toggleViews("allianceReports")
         };
-        e.prototype["veXQ82sI"] = function () {
+        e.prototype["fLETrW6)"] = function () {
             this.toggleViews("allianceDiplomacy")
         };
-        e.prototype["zHGF57hK"] = function () {
+        e.prototype["9_Mtz2Nn"] = function () {
             this.toggleViews("allianceRankings")
         };
-        e.prototype["HG3r_1P("] = function () {
+        e.prototype["YVSsxXdG"] = function () {
             this.toggleViews("allianceClashes")
         };
-        e.prototype["4W(SHY2N"] = function () {
+        e.prototype["euKcB8G5"] = function () {
             this.toggleHeadlineControls("habitatReservation");
             this.toggleViews("allianceHabitatReservation")
         };
         e.prototype.toggleHeadlineControls = function (e) {
-            var n = this.view.headline.buttons, i = n.findSubviewByName("habitatReservationEditMode"), a = n.findSubviewByName("habitatReservationSettings"), r = n.findSubviewByName("habitatReservationDeleteItem"), s = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS);
+            var n = this.view.headline.buttons, i = n.findSubviewByName("habitatReservationEditMode"), a = n.findSubviewByName("habitatReservationSettings"), r = n.findSubviewByName("habitatReservationDeleteItem"), s = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS);
             if (e !== "habitatReservationDeleteItem") {
                 r.hide()
             } else if (s) {
@@ -23256,48 +23300,48 @@
                 a.hide()
             }
         };
-        e.prototype["&uRjGX9z"] = function () {
+        e.prototype["xMJUxKth"] = function () {
             var t = this.view.findSubviewByName("createNewAlliance").input, e = t.getValue();
             if (t.validate()) {
                 this.resetRequired = true;
                 this.datasource.createAlliance({name: e})
             }
         };
-        e.prototype["&&kCfpGD"] = function (t) {
+        e.prototype["BRwD6gOK"] = function (t) {
             var e = t.parent.allianceID;
             utils.dialog.confirm(this, translate("Accept invitation"), translate("Invitations"), function () {
                 this.resetRequired = true;
                 this.datasource.acceptAllianceInvitation(e)
             }.bind(this))
         };
-        e.prototype["076vjPWa"] = function (t) {
+        e.prototype["&nrw52vq"] = function (t) {
             var e = t.parent.allianceID;
             utils.dialog.confirm(this, translate("Decline invitation"), translate("Invitations"), function () {
                 this.datasource.declineAllianceInvitation(e)
             }.bind(this))
         };
-        e.prototype["Qr6_DGCk"] = function (t) {
+        e.prototype["PS9m0MRm"] = function (t) {
             var e = t.parent.parent.parent.playerID;
             this.datasource.cancelAllianceInvitation(e)
         };
-        e.prototype["XMgvBu2x"] = function () {
+        e.prototype["I%_-hy6C"] = function () {
             utils.dialog.confirm(this, translate("Are you sure?"), translate("Alliance"), function () {
                 this.resetRequired = true;
                 this.datasource.leaveAlliance();
-                this.notify("yK%MHDwp", this)
+                this.notify("PuU3ioWm", this)
             }.bind(this))
         };
-        e.prototype["1dclKW7h"] = function () {
+        e.prototype["BIZo3IBZ"] = function () {
             if (!t || !t.hasAlliance()) {
                 return
             }
             utils.dialog.confirm(this, translate("Do you really wish to disband the alliance?"), translate("Alliance"), function () {
                 this.resetRequired = true;
                 this.datasource.disbandAlliance(t.alliance.id);
-                this.notify("yK%MHDwp", this)
+                this.notify("PuU3ioWm", this)
             }.bind(this))
         };
-        e.prototype["o9HCvao6"] = function () {
+        e.prototype["Is5KiAGz"] = function () {
             var t = this.view.findSubviewByName("allianceMembers");
             if (!t) {
                 return
@@ -23321,18 +23365,18 @@
                     memberIDs = memberIDs.substr(0, memberIDs.length - 1)
                 }
             }
-            this.showNextViewOfClass(Pe.NewView, {
+            this.showNextViewOfClass(Ue.NewView, {
                 name: "massMailForm",
                 styles: "massMail",
                 receivingPlayerArray: memberIDs,
                 maxLength: l.maxDiscussionTitleLength,
-                clickMessage: "KQQXQ7mW"
+                clickMessage: "Ze80Y)rl"
             });
             $("#" + this.view.id).removeClass("lightBG");
             $("#" + this.view.id).find(".main-content").css("top", "0");
             t.buttons.hide()
         };
-        e.prototype["KQQXQ7mW"] = function () {
+        e.prototype["Ze80Y)rl"] = function () {
             var t = this.view.findSubviewByName("massMailForm"), e = t.subject, i = t.message, a = t.receivingPlayerArray;
             if (e.validate() && i.validate()) {
                 if (a === "all") {
@@ -23340,25 +23384,25 @@
                 } else {
                     this.datasource.sendMassMailToSelectedMembers(e.getValue(), i.getValue(), a)
                 }
-                this["Z04XvT7k"]()
+                this["v2v6tJij"]()
             } else {
                 utils.dialog.alert(this, translate("You are not allowed to send empty messages."), translate("Error"), function () {
                 })
             }
         };
-        e.prototype["YUgL-Vlp"] = function () {
+        e.prototype["td_0Qz_H"] = function () {
             this._profileEditAction("allianceProfileDescription")
         };
-        e.prototype["doswn27X"] = function () {
+        e.prototype["fnCRZrZT"] = function () {
             this._profileEditAction("allianceProfileName")
         };
-        e.prototype["66%y9X9S"] = function () {
+        e.prototype["m)T3tA6Q"] = function () {
             var t = this.view.findSubviewByName("form_allianceProfileName"), e = t.input.getValue();
             this.datasource.changeAllianceData({name: s.stripHTML(e)});
             this.editting = false;
             this._checkDelayedUpdate()
         };
-        e.prototype["UPTbvAsE"] = function () {
+        e.prototype["2UtD5IFN"] = function () {
             var t = this.view.findSubviewByName("form_allianceProfileDescription"), e = t.input.getValue();
             this.datasource.changeAllianceData({descriptionText: e});
             this.editting = false;
@@ -23389,53 +23433,53 @@
             }
             this.view.findSubviewByName("allianceProfile").draw()
         };
-        e.prototype["96)_)L(B"] = function (t) {
+        e.prototype["CCfDhj&W"] = function (t) {
             var e = $("#" + t.id).find(":input"), i = $("#" + this.view.id).find("#allianceMemberTable input[type=checkbox]");
             i.prop("checked", e.is(":checked"));
             t.uncheck()
         };
-        e.prototype["mUyfCWPw"] = function () {
+        e.prototype["14MNP9Ot"] = function () {
             var t = $("#" + this.view.id).find(".buttons.members .checkAll :input");
             t.prop("checked", false);
             if (this.currentView && this.currentView.selectAllCheckbox) {
                 this.currentView.selectAllCheckbox.uncheck()
             }
         };
-        e.prototype["u)&mSkej"] = function () {
+        e.prototype["nK4TnHhR"] = function () {
             var t = this.view.findSubviewByName("allianceMembers");
             this.memberSortingDirection = "asc";
             t.show()
         };
-        e.prototype["FtEPOkZG"] = function () {
+        e.prototype["UbqMNyov"] = function () {
             var t = this.view.findSubviewByName("allianceMembers");
             this.memberSortingDirection = "desc";
             t.show()
         };
-        e.prototype["fX0_23Ty"] = function () {
+        e.prototype["MWFxfBKH"] = function () {
             var t = this.view.findSubviewByName("allianceMembers");
             if (!t) {
                 return
             }
             t.sortTypeMenu.toggle()
         };
-        e.prototype["WaRM6quc"] = function (e) {
+        e.prototype["y%AiWsud"] = function (e) {
             var t = this.view.findSubviewByName("allianceMembers");
             var i = e.data.type;
             this.memberSortingType = i;
             t.sortTypeMenu.hide();
             t.show()
         };
-        e.prototype["DAUelF3P"] = function () {
+        e.prototype["s0uKR2HC"] = function () {
             var t = this.view.findSubviewByName("allianceRights").table;
             t.nextPage();
             t.draw()
         };
-        e.prototype["AKOTnZkF"] = function () {
+        e.prototype["-BenSknm"] = function () {
             var t = this.view.findSubviewByName("allianceRights").table;
             t.prevPage();
             t.draw()
         };
-        e.prototype["u6s1&COU"] = function () {
+        e.prototype["nLJwKdai"] = function () {
             var s = this.view.findSubviewByName("allianceRights").table.subviews;
             for (var i = 0; i < s.length; i++) {
                 var e = s[i], r = e.playerID, t = e.alliancePermission;
@@ -23445,32 +23489,32 @@
                         var n = e.icons[a], o = n.currentStatus ? n.permissionMask : 0;
                         t = t | o
                     }
-                    if (t === d.MAX) {
-                        t = d.ALL
+                    if (t === p.MAX) {
+                        t = p.ALL
                     }
                     e.reset(t);
-                    this["DhT8iU6a"]();
+                    this["i0YsiXJe"]();
                     this.datasource.changePermissionForMember(r, t)
                 }
             }
         };
-        e.prototype["FIG7cAGf"] = function (t) {
+        e.prototype["CDw7dcBi"] = function (t) {
             t.toggle();
             this.view.draw()
         };
-        e.prototype["xly6pIFw"] = function () {
+        e.prototype["uTFupPHQ"] = function () {
             var t = this.view.findSubviewByName("savePermissions");
             if (t.hidden) {
                 t.show()
             }
         };
-        e.prototype["DhT8iU6a"] = function () {
+        e.prototype["i0YsiXJe"] = function () {
             var t = this.view.findSubviewByName("savePermissions");
             if (!t.hidden) {
                 t.hide()
             }
         };
-        e.prototype["lvdtGFZJ"] = function (t) {
+        e.prototype["lx63IcgV"] = function (t) {
             if (this.view.slideLock) {
                 return false
             }
@@ -23491,17 +23535,17 @@
             this.showNextViewOfClass(o.ReportDetails.View, e);
             this.resetSlideLock()
         };
-        e.prototype["Kb0r0i8g"] = function (e) {
+        e.prototype["V5&miggF"] = function (e) {
             var t = e.parent.parent.table;
             t.nextPage();
             t.draw()
         };
-        e.prototype["KySZTMly"] = function () {
+        e.prototype["IAHX5rtN"] = function () {
             var t = this.view.findSubviewByName("allianceDiplomacy").table;
             t.nextPage();
             t.draw()
         };
-        e.prototype["zrv319v-"] = function (t) {
+        e.prototype["c0oBVDzM"] = function (t) {
             var i = t.parent.diplomacy, e = t.data.relation, a = this._filterDiplomacy(i, e);
             this.showNextViewOfClass(o.DiplomacyList, {rows: a, relation: e})
         };
@@ -23517,22 +23561,22 @@
             }
             return i
         };
-        e.prototype["rDoaQUUH"] = function (t) {
+        e.prototype["aOKZ2mpq"] = function (t) {
             var e = t.data.alliance;
             this.controller.createForeignAllianceWindow(e)
         };
-        e.prototype["QsEB2)Iu"] = function (t) {
+        e.prototype["q3&0&cpS"] = function (t) {
             this.datasource.changeRelationship(t.data);
-            this["Z04XvT7k"]();
+            this["v2v6tJij"]();
             t.parent.toggle()
         };
-        e.prototype["zsvB7hs&"] = function (i, t) {
+        e.prototype["utcrRntJ"] = function (i, t) {
             var e = t.page;
             this.datasource.getNextRankings(e)
         };
-        e.prototype["BWhFjW-%"] = function (i, e) {
+        e.prototype["oC)Bwm7V"] = function (i, e) {
             if (i.name === "allianceMembers") {
-                this.notify("FZpvdvBU", this, e.playerID)
+                this.notify("i5I1OIPu", this, e.playerID)
             } else {
                 if (t.alliance.id === e.playerID) {
                     return
@@ -23540,10 +23584,10 @@
                 this.controller.createForeignAllianceWindow({id: e.playerID})
             }
         };
-        e.prototype["eQbjanoz"] = function (t) {
-            this.notify("eQbjanoz", this, {id: t})
+        e.prototype["Ve2s0mbd"] = function (t) {
+            this.notify("Ve2s0mbd", this, {id: t})
         };
-        e.prototype["mF4s7qEY"] = function (i, t) {
+        e.prototype[")uagZWVK"] = function (i, t) {
             var e = t.type;
             if (e === "points") {
                 this.datasource.showCurrentPointsRanking()
@@ -23551,11 +23595,11 @@
                 this.datasource.showCurrentAverageRanking()
             }
         };
-        e.prototype["C4rOPYeq"] = function (i, t) {
+        e.prototype["8sDLoa9F"] = function (i, t) {
             var e = t.query;
             this.datasource.searchAlliance(e)
         };
-        e.prototype["qyC12Db9"] = function (t) {
+        e.prototype["tvjStDjx"] = function (t) {
             this._changeClashesTabSubView(t)
         };
         e.prototype._changeClashesTabSubView = function (e) {
@@ -23565,8 +23609,8 @@
                 t.dataUpdate(null, t.data)
             }
         };
-        e.prototype["nOsdY(EH"] = function (t) {
-            this.notify("EE)XdOZG", null, {x: +t.mapX, y: +t.mapY})
+        e.prototype["X&xG6LgE"] = function (t) {
+            this.notify("XSMaUxne", null, {x: +t.mapX, y: +t.mapY})
         };
         e.prototype._getHabitatReservationView = function () {
             var t = this.view.sections.filter(function (t) {
@@ -23579,7 +23623,7 @@
         };
         e.prototype._habitatReservationEditMode = function (i) {
             i = _.defaultsTo(i, false);
-            var s = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS), e = this._getHabitatReservationView(), a = "admin";
+            var s = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS), e = this._getHabitatReservationView(), a = "admin";
             if (!e) {
                 return
             }
@@ -23616,13 +23660,13 @@
             }
             a = function () {
                 this.datasource.deleteHabitatReservations([t.reservationID]);
-                this["Z04XvT7k"]()
+                this["v2v6tJij"]()
             };
             e = translate("Castle Reservations");
             i = translate("Do you really want to delete this request?");
             utils.dialog.confirm(this, i, e, a.bind(this))
         };
-        e.prototype["cNdMs)Te"] = function () {
+        e.prototype["8ra1wc64"] = function () {
             var e = this._getHabitatReservationView(), i = translate("Castle Reservations"), a = translate("Do you really want to delete all requests and reservations?"), t;
             if (!e) {
                 return
@@ -23636,7 +23680,7 @@
                 this.datasource.deleteHabitatReservations(t)
             }.bind(this))
         };
-        e.prototype["g7pIY_c3"] = function () {
+        e.prototype["qThK_fCE"] = function () {
             var t = this._getHabitatReservationView(), e, i, a;
             if (!t) {
                 return
@@ -23645,9 +23689,9 @@
             i = t.getTotalListItems();
             a = e < i ? true : false;
             t.node().find(":checkbox").prop("checked", a);
-            this["HthdKXJ8"]()
+            this["KB9qAibt"]()
         };
-        e.prototype["HthdKXJ8"] = function () {
+        e.prototype["KB9qAibt"] = function () {
             var t = this._getHabitatReservationView(), e;
             if (!t) {
                 return
@@ -23655,37 +23699,37 @@
             e = t.getSelectedListItems().length;
             t.editControls.updateCounter(e)
         };
-        e.prototype["Oho&tClr"] = function (t, e) {
+        e.prototype["xcAy7_ng"] = function (t, e) {
             return this.datasource.formatReservationListData(t, e)
         };
-        e.prototype["Ku0T(_r5"] = function (e) {
+        e.prototype["dIIURfmn"] = function (e) {
             this._habitatReservationEditMode("clear");
             e.view.currentSortType = e.type;
             e.view.create();
             e.view.draw();
-            if (!t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS)) {
+            if (!t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS)) {
                 var i = e.type === "own" ? "habitatReservationOwnInactive" : "none";
                 this.toggleHeadlineControls(i)
             }
         };
-        e.prototype["_awa4Ar1"] = function (t) {
+        e.prototype["DilIyUGG"] = function (t) {
             this.showNextViewOfClass(o.HabitatReservationDetailWrapper, {reservationID: t})
         };
-        e.prototype["RMoFBZ7K"] = function (t) {
+        e.prototype["Lm05kZmj"] = function (t) {
             this.datasource.reservationStatus(t, de.ACCEPTED)
         };
-        e.prototype["862TQ0PC"] = function (t) {
+        e.prototype["W7jLIqs)"] = function (t) {
             this.datasource.reservationStatus(t, de.REJECTED)
         };
-        e.prototype["BB7(oHxa"] = function () {
+        e.prototype["Daozpoi_"] = function () {
             this.datasource.reservationSettings(this._settingsSliderVals);
-            this["Z04XvT7k"]()
+            this["v2v6tJij"]()
         };
-        e.prototype["EOZSXY)U"] = function (i, t) {
+        e.prototype["3cy_tB41"] = function (i, t) {
             var e = t.name;
             this._flashSliderValue(e, t.value)
         };
-        e.prototype["1CmE0gbb"] = function () {
+        e.prototype["k9wCBiR-"] = function () {
             var t = $(".allianceContainer"), i = t.find(".habitatReservation"), e = this._getHabitatReservationView();
             if (i.length) {
                 t.removeClass("contentCurrentView");
@@ -23695,7 +23739,7 @@
                 }
             }
         };
-        e.prototype["6)kQoR7F"] = function () {
+        e.prototype["%HVTsgFN"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t.name === "AllianceHabitatDetailWrapper") {
                 t._manageDeleteIcon()
@@ -23719,34 +23763,34 @@
             this.showNextViewOfClass(o.HabitatReservationShareWithWrapper, {});
             this.currentSubView.push("habitatReservationShareSetting")
         };
-        e.prototype["4uO3oJ9O"] = function () {
+        e.prototype["h)IqLX5_"] = function () {
             this._habitatReservationShareSetting.bind(this)()
         };
-        e.prototype["9-OEputz"] = function (t) {
+        e.prototype["vQXgMm11"] = function (t) {
             if (t instanceof Array && t.length) {
                 var e = {allianceIdArray: t, sharingType: 1};
-                this["Z04XvT7k"]();
+                this["v2v6tJij"]();
                 this.datasource.requestSharing(e)
             } else {
-                this["Z04XvT7k"]()
+                this["v2v6tJij"]()
             }
         };
-        e.prototype["q&LGY8QH"] = function (t) {
+        e.prototype["X3sypod2"] = function (t) {
             if (t) {
                 var e = {sharingIdArray: [t]};
                 this.datasource.deleteSharing(e)
             } else {
-                utils.dialog.alert(this, translate("'q&LGY8QH' error"), translate("Error"))
+                utils.dialog.alert(this, translate("'X3sypod2' error"), translate("Error"))
             }
         };
-        e.prototype["9lFIh4B3"] = function (e) {
+        e.prototype["hEEey9QX"] = function (e) {
             var t = e.parent.playerInfo;
             if (typeof t === "undefined") {
                 return
             }
-            this.notify("wLMgD-&F", this, t)
+            this.notify("Qz9L)T)V", this, t)
         };
-        e.prototype["j%CMIq2b"] = function () {
+        e.prototype["uQ7VPTg-"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -23756,7 +23800,7 @@
             }
             t.draw()
         };
-        e.prototype["aC%(xYUr"] = function () {
+        e.prototype["R1Ok1EP)"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -23766,32 +23810,32 @@
             }
             t.draw()
         };
-        e.prototype["1Xm08BW0"] = function () {
-            this.notify("1Xm08BW0", this);
-            this["Z04XvT7k"]()
+        e.prototype["5K_2H29H"] = function () {
+            this.notify("5K_2H29H", this);
+            this["v2v6tJij"]()
         };
-        e.prototype["tCXKN27v"] = function (t) {
+        e.prototype["cZglS4&2"] = function (t) {
             this.notify("createHabitatWindow", {id: t})
         };
-        e.prototype["iv58ii09"] = function (e) {
+        e.prototype["ym_pqyCM"] = function (e) {
             var t = a.habitate[e];
             if (!t || !t.mapX || !t.mapY) {
                 return
             }
-            this.notify("EE)XdOZG", this, {x: +t.mapX, y: +t.mapY})
+            this.notify("XSMaUxne", this, {x: +t.mapX, y: +t.mapY})
         };
-        e.prototype["hs75jVT("] = function (i) {
+        e.prototype["57OYU6)G"] = function (i) {
             var a = i.playerData || i.data, e = a.playerID || a.id;
             if (!e) {
                 return
             }
             if (e === t.id) {
-                this.notify("BWhFjW-%", this)
+                this.notify("oC)Bwm7V", this)
             } else {
-                this.notify("FZpvdvBU", this, e)
+                this.notify("i5I1OIPu", this, e)
             }
         };
-        e.prototype["2Mwsy)GG"] = function (i) {
+        e.prototype["%0Cz-FiM"] = function (i) {
             var a = i.allianceData || i.data, e = a.id, s = a.name || null;
             if (!e) {
                 return
@@ -23805,7 +23849,7 @@
         e.prototype.toggleViews = function (e) {
             this._resetCounter();
             if (this.currentSubView === "AllianceHabitatReservationShareWithWrapper") {
-                this["Z04XvT7k"]();
+                this["v2v6tJij"]();
                 this.currentSubView = null
             }
             for (var i = 0; i < this.view.sections.length; i++) {
@@ -23829,7 +23873,7 @@
                 }
             }
             this.currentView = e;
-            this["Z04XvT7k"]()
+            this["v2v6tJij"]()
         };
         e.prototype.resetSlideLock = function () {
             setTimeout(utils.bind(function () {
@@ -23838,25 +23882,25 @@
                 }
             }, this), 250)
         };
-        e.prototype["vzb87()F"] = function (t) {
-            var e = this.notify("rS8PDx-i", this, t.data);
-            this.notify("xCzXgU2u", this, e)
+        e.prototype["WN4rR%IB"] = function (t) {
+            var e = this.notify("XQTkRBdF", this, t.data);
+            this.notify("1EMjIwLd", this, e)
         };
         e.prototype._checkDelayedUpdate = function () {
             if (this.deplayedUpdate) {
                 this.dataUpdate(null, this.deplayedUpdate)
             }
         };
-        e.prototype["J5FA3x6C"] = function () {
+        e.prototype["NYd&saEH"] = function () {
             var t;
             t = this.view.findSubviewByName("allianceProfile");
             if (t && !t.hidden) {
-                t.paste(this.notify("J5FA3x6C", this));
+                t.paste(this.notify("NYd&saEH", this));
                 return
             }
             t = this.view.findSubviewByName("massMailForm");
             if (t && !t.hidden) {
-                t.paste(this.notify("J5FA3x6C", this));
+                t.paste(this.notify("NYd&saEH", this));
                 return
             }
         };
@@ -23876,7 +23920,7 @@
         for (var i = 0; i < t.alliance.diplomacyToArray.length; i++) {
             var s = t.alliance.diplomacyToArray[i];
             if (+s.id === +e.alliance.id) {
-                return G.getRelationshipImage(s.relationship)
+                return Y.getRelationshipImage(s.relationship)
             }
         }
         return a
@@ -23915,7 +23959,7 @@
         }
 
         function l(t, s) {
-            var e = {}, a = Z.ReservationList;
+            var e = {}, a = J.ReservationList;
             for (var i in t) {
                 e[i] = t[i].sort(a)
             }
@@ -23955,10 +23999,10 @@
             }
         }
 
-        function p(o) {
+        function d(o) {
             var l = [], n = t.alliance.id;
             for (var r = 0, u = o.length; r < u; r++) {
-                var s = o[r], e = s.clone(), i, h = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS);
+                var s = o[r], e = s.clone(), i, h = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS);
                 e.playerID = s.playerID;
                 e.player = a.players[s.playerID] || null;
                 e.habitat = a.habitate[s.habitatID] || null;
@@ -23969,7 +24013,7 @@
                 }
                 e.sharedAlliance = false;
                 if (i && i != n) {
-                    e.sharedAlliance = {icon: G.getRelationshipImage(a.diplomacies[n + "-" + i].relationship)}
+                    e.sharedAlliance = {icon: Y.getRelationshipImage(a.diplomacies[n + "-" + i].relationship)}
                 }
                 e.hasControls = i === n && h && e.status === 0;
                 e.hasCountdown = e.expirationDate && e.status === de.ACCEPTED;
@@ -24005,14 +24049,14 @@
             s.request("AllianceAction/cancelInvitation", {id: t}, this.triggerModelUpdate, this)
         };
         e.prototype.sendMassMail = function (t, e) {
-            s.request("AllianceAction/massMail", {subject: t, content: e}, this.triggerModelUpdate, this)
+            s.request("AllianceAction/massMail", {subject: t, content: e}, this.modelUpdate, this)
         };
         e.prototype.sendMassMailToSelectedMembers = function (t, e, i) {
             s.request("DiscussionAction/createDiscussion", {
                 subject: t,
                 content: e,
                 receivingPlayerArray: i
-            }, this.triggerModelUpdate, this)
+            }, this.modelUpdate, this)
         };
         e.prototype.changeRelationship = function (t) {
             s.request("AllianceAction/setDiplomaticRelation", t, this.triggerModelUpdate, this)
@@ -24030,16 +24074,16 @@
             this.clashesView = t.view;
             s.request("AllianceAction/clashes", {}, this.prepareClashesDataCallBack, this)
         };
-        e.prototype.prepareClashesDataCallBack = function (v) {
-            var b = [], w = [], s = {}, g = {}, u = {transit: [], battle: []}, h = {
+        e.prototype.prepareClashesDataCallBack = function (g) {
+            var b = [], w = [], s = {}, y = {}, u = {transit: [], battle: []}, h = {
                 transit: [],
                 battle: []
             }, f = {}, l = {}, m = t.id, c = t.alliance ? t.alliance.id : null, i, n;
             if (!c) {
                 return
             }
-            if (v.Data) {
-                s = v.Data
+            if (g.Data) {
+                s = g.Data
             }
             n = s.Habitat ? s.Habitat.length : 0;
             for (i = 0; i < n; i++) {
@@ -24069,23 +24113,23 @@
                             diplomacy = a.diplomacies ? a.diplomacies[c + "-" + d] : false;
                             o = diplomacy ? diplomacy.relationship : 0
                         }
-                        icon = G.getRelationshipImage(o)
+                        icon = Y.getRelationshipImage(o)
                     }
                 }
                 r.icon = icon;
-                if (p.battleType === k.WAR_EFFORTS.ATTACK) {
+                if (p.battleType === D.WAR_EFFORTS.ATTACK) {
                     u.transit.push(r)
                 } else {
                     h.transit.push(r)
                 }
             }
-            u.transit.sort(Z.AllianceClash);
-            h.transit.sort(Z.AllianceClash);
+            u.transit.sort(J.AllianceClash);
+            h.transit.sort(J.AllianceClash);
             n = s.AllianceClashBattle ? s.AllianceClashBattle.length : 0;
             for (i = 0; i < n; i++) {
-                var y = s.AllianceClashBattle[i];
-                e = f[y.affectedHabitat], templateBattle = {}, o = 0;
-                templateBattle.nextBattle = translate("Next battle") + " " + utils.date.formatDateTime(y.eventDate);
+                var v = s.AllianceClashBattle[i];
+                e = f[v.affectedHabitat], templateBattle = {}, o = 0;
+                templateBattle.nextBattle = translate("Next battle") + " " + utils.date.formatDateTime(v.eventDate);
                 templateBattle.affectedHabitatName = e.name ? e.name : translate("Renegade") + " " + e.id;
                 templateBattle.affectedHabitatPos = {mapX: e.mapX, mapY: e.mapY};
                 if (e.player) {
@@ -24100,21 +24144,21 @@
                             diplomacy = a.diplomacies ? a.diplomacies[c + "-" + d] : false;
                             o = diplomacy ? diplomacy.relationship : 0
                         }
-                        icon = G.getRelationshipImage(o)
+                        icon = Y.getRelationshipImage(o)
                     }
                 }
                 templateBattle.icon = icon;
-                if (y.battleType === k.WAR_EFFORTS.ATTACK) {
+                if (v.battleType === D.WAR_EFFORTS.ATTACK) {
                     u.battle.push(templateBattle)
                 } else {
                     h.battle.push(templateBattle)
                 }
             }
-            u.battle.sort(Z.AllianceClash);
-            h.battle.sort(Z.AllianceClash);
-            g.attack = u;
-            g.defence = h;
-            this.clashesView.dataUpdate(null, g);
+            u.battle.sort(J.AllianceClash);
+            h.battle.sort(J.AllianceClash);
+            y.attack = u;
+            y.defence = h;
+            this.clashesView.dataUpdate(null, y);
             this.informControllerUnblock()
         };
         e.prototype._setRankings = function (t, e) {
@@ -24143,7 +24187,7 @@
                 }
                 n.forEach(function (t) {
                     if (+e.id === +t.id) {
-                        i = G.getRelationshipImage(t.relationship);
+                        i = Y.getRelationshipImage(t.relationship);
                         return
                     }
                 });
@@ -24292,7 +24336,7 @@
                 receivingPlayerArray: t,
                 subject: e,
                 content: i
-            }, this.triggerModelUpdate, this)
+            }, this.modelUpdate, this)
         };
         e.prototype.reserveHabitat = function (t) {
             s.request("HabitatReservationAction/makeInquiry", {habitatID: t}, this.triggerModelUpdate, this)
@@ -24323,7 +24367,7 @@
         };
         e.prototype.formatReservationListData = function (s, r) {
             var i = a.habitatReservations || [], e;
-            i = p(i);
+            i = d(i);
             if (s === "own") {
                 var n = i.filter(function (e) {
                     return e.playerID === t.id
@@ -24417,7 +24461,7 @@
             }
         };
         return e
-    }(I);
+    }(x);
     Q.Controller = function (e) {
         utils.__extends(t, e);
         function t() {
@@ -24427,46 +24471,46 @@
         t.prototype.dataUpdate = function (t, e) {
             this.view.dataUpdate(t, e)
         };
-        t.prototype["QsEB2)Iu"] = function (t) {
+        t.prototype["q3&0&cpS"] = function (t) {
             this.datasource.changeRelationship(t.data);
             this.view.forceUpdate = true;
             t.parent.toggle()
         };
-        t.prototype["xUN91IYY"] = function () {
+        t.prototype["Fgfqhy3z"] = function () {
             this.toggleViews("profile")
         };
-        t.prototype["X)kKcIYW"] = function () {
+        t.prototype["Yl(XCtxi"] = function () {
             this.toggleViews("members")
         };
-        t.prototype["Ex7qvDRM"] = function (e) {
+        t.prototype["XMHkK1_w"] = function (e) {
             var t = e.parent.parent.table;
             t.nextPage();
             t.draw()
         };
-        t.prototype["EmBziOUz"] = function (e) {
+        t.prototype["-teTp4jG"] = function (e) {
             var t = e.parent.parent.table;
             t.prevPage();
             t.draw()
         };
-        t.prototype["hs75jVT("] = function (t) {
-            this.notify("FZpvdvBU", this, t.playerData.id)
+        t.prototype["57OYU6)G"] = function (t) {
+            this.notify("i5I1OIPu", this, t.playerData.id)
         };
-        t.prototype["Z04XvT7k"] = function () {
-            t.__super__["Z04XvT7k"].apply(this, arguments);
+        t.prototype["v2v6tJij"] = function () {
+            t.__super__["v2v6tJij"].apply(this, arguments);
             if (this.viewStack.length === 0) {
                 this.view.renderBlocked = false;
                 this.view.showToolbarButtons()
             }
         };
-        t.prototype["9lFIh4B3"] = function (e) {
+        t.prototype["hEEey9QX"] = function (e) {
             var t = e.parent.playerInfo;
             if (typeof t === "undefined") {
                 return
             }
             this.view.renderBlocked = true;
-            this.notify("wLMgD-&F", this, t)
+            this.notify("Qz9L)T)V", this, t)
         };
-        t.prototype["j%CMIq2b"] = function () {
+        t.prototype["uQ7VPTg-"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -24476,7 +24520,7 @@
             }
             t.draw()
         };
-        t.prototype["aC%(xYUr"] = function () {
+        t.prototype["R1Ok1EP)"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -24486,9 +24530,9 @@
             }
             t.draw()
         };
-        t.prototype["1Xm08BW0"] = function () {
-            this.notify("1Xm08BW0", this);
-            t.__super__["Z04XvT7k"].apply(this, arguments)
+        t.prototype["5K_2H29H"] = function () {
+            this.notify("5K_2H29H", this);
+            t.__super__["v2v6tJij"].apply(this, arguments)
         };
         t.prototype.toggleViews = function (i) {
             for (var t = 0; t < this.view.sections.length; t++) {
@@ -24496,18 +24540,18 @@
                 e.name !== i ? e.hide() : e.show()
             }
         };
-        t.prototype["vzb87()F"] = function (t) {
-            var e = this.notify("rS8PDx-i", this, t.data);
-            this.notify("xCzXgU2u", this, e);
+        t.prototype["WN4rR%IB"] = function (t) {
+            var e = this.notify("XQTkRBdF", this, t.data);
+            this.notify("1EMjIwLd", this, e);
             _.blinkButton($("#" + this.view.id + " .button.copy"))
         };
-        t.prototype["(&GZp&WQ"] = function (t) {
+        t.prototype["ep8wM7GI"] = function (t) {
             if (t.data.allianceSharingId instanceof Array) {
                 var e = {sharingIdArray: t.data.allianceSharingId};
                 this.datasource.acceptSharing(e)
             }
         };
-        t.prototype["q&LGY8QH"] = function (t) {
+        t.prototype["X3sypod2"] = function (t) {
             if (t.data.allianceSharingId instanceof Array) {
                 var e = {sharingIdArray: t.data.allianceSharingId};
                 this.datasource.deleteSharing(e)
@@ -24551,10 +24595,10 @@
                 receivingPlayerArray: t,
                 subject: e,
                 content: i
-            }, this.triggerModelUpdate, this)
+            }, this.modelUpdate, this)
         };
         return t
-    }(I);
+    }(x);
     Q.Window = function (i) {
         utils.__extends(t, i);
         function t(e, i) {
@@ -24630,23 +24674,23 @@
                 content: translate("Profile"),
                 hover: translate("Profile"),
                 styles: "text",
-                clickMessage: "xUN91IYY"
-            }, p);
+                clickMessage: "Fgfqhy3z"
+            }, f);
             t.createSubview(t, {
                 group: "foreignAlliance",
                 content: translate("Members"),
                 hover: translate("Members"),
                 styles: "text",
-                clickMessage: "X)kKcIYW"
-            }, p);
+                clickMessage: "Yl(XCtxi"
+            }, f);
             t.createSubview(t, {
                 group: "foreignAlliance",
-                content: this.notify("3s(kBgiI", this, {imageName: "pasteBoardAllianceWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "pasteBoardAllianceWhite", imageCategory: "icons"}),
                 hover: translate("Copy alliance link"),
-                clickMessage: "vzb87()F",
+                clickMessage: "WN4rR%IB",
                 data: {alliance: this.allianceID},
                 styles: "copy"
-            }, p);
+            }, f);
             t.clearfix()
         };
         t.prototype.addSections = function () {
@@ -24698,7 +24742,7 @@
                 name: "foreignAllianceMembers",
                 rowClass: o.MemberRow,
                 pageItems: this.perPage,
-                nextButtonClickMessage: "Ex7qvDRM"
+                nextButtonClickMessage: "XMHkK1_w"
             }, We);
             this.table.dataUpdate(null, this.playerData)
         };
@@ -24745,7 +24789,7 @@
                             icon: "acceptReservation",
                             iconCategory: "habitatReservation",
                             data: {allianceSharingId: [e]},
-                            clickMessage: "(&GZp&WQ"
+                            clickMessage: "ep8wM7GI"
                         }, m);
                         this.createSubview(this, {
                             content: translate("Reject"),
@@ -24753,7 +24797,7 @@
                             icon: "canselBlackCross",
                             iconCategory: "icons",
                             data: {allianceSharingId: [e]},
-                            clickMessage: "q&LGY8QH"
+                            clickMessage: "X3sypod2"
                         }, m)
                     } else {
                         this.createSubview(this, {
@@ -24761,7 +24805,7 @@
                             icon: "canselBlackCross",
                             iconCategory: "icons",
                             data: {allianceSharingId: [e]},
-                            clickMessage: "q&LGY8QH"
+                            clickMessage: "X3sypod2"
                         }, m)
                     }
                 } else {
@@ -24773,7 +24817,7 @@
                             icon: "canselBlackCross",
                             iconCategory: "icons",
                             data: {allianceSharingId: [e]},
-                            clickMessage: "q&LGY8QH"
+                            clickMessage: "X3sypod2"
                         }, m)
                     }
                 }
@@ -24798,8 +24842,8 @@
             var e = utils.sanitize(i);
             e = e.replace(/&lt;br\/>/g, "<br/>");
             if (this.dataAttribute === "descriptionText") {
-                e = $.linkify(e, ye.INTERNAL_LINK, "window.linkHandler");
-                e = $.linkify(e, ye.EXTERNAL_LINK, "window.externalLinkHandler")
+                e = $.linkify(e, ve.INTERNAL_LINK, "window.linkHandler");
+                e = $.linkify(e, ve.EXTERNAL_LINK, "window.externalLinkHandler")
             }
             this.createSubview(this, {title: this.title}, A);
             this.createSubview(this, {styles: "content", content: e, handleLinks: true})
@@ -24814,7 +24858,7 @@
             this.addOption("profile", false);
             this.setOptions(i);
             this.styles = this.styles += " relationship";
-            this.editable = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS);
+            this.editable = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS);
             this.allianceID = this.parent.allianceData.id
         }
 
@@ -24910,11 +24954,11 @@
                         }
                     }
                 }
-                i = G.getRelationshipImage(e)
+                i = Y.getRelationshipImage(e)
             }
             return {
-                text: G.getRelationshipString(e),
-                icon: this.notify("3s(kBgiI", this, {imageName: i, imageCategory: "diplomacy"}),
+                text: Y.getRelationshipString(e),
+                icon: this.notify("Z-XGNYVU", this, {imageName: i, imageCategory: "diplomacy"}),
                 relation: e
             }
         };
@@ -24994,14 +25038,14 @@
         }
 
         t.prototype._switchToAttack = function () {
-            this.notify("qyC12Db9", "attack")
+            this.notify("tvjStDjx", "attack")
         };
         t.prototype._switchToDefence = function () {
-            this.notify("qyC12Db9", "defence")
+            this.notify("tvjStDjx", "defence")
         };
         t.prototype._clickOnEntry = function (t) {
             var e = t.data("mapx"), i = t.data("mapy");
-            this.notify("nOsdY(EH", {mapX: e, mapY: i})
+            this.notify("X&xG6LgE", {mapX: e, mapY: i})
         };
         function i(e) {
             var t = $(e);
@@ -25071,7 +25115,7 @@
                 var e = s[i], a = this.controller._filterDiplomacy(this.diplomacy, e.relation).length, n = "diplomacyRow", r = null, t;
                 if (a && a > 0) {
                     n += " clickable";
-                    r = "zrv319v-"
+                    r = "c0oBVDzM"
                 }
                 t = this.createSubview(this, {
                     styles: n,
@@ -25080,7 +25124,7 @@
                     clickMessage: r
                 }, T);
                 t.createSubview(t, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: e.icon,
                         imageCategory: "diplomacy"
                     }), styles: "typeIcon"
@@ -25114,7 +25158,7 @@
                 styles: "diplomacyTable",
                 pageItems: this.perPage,
                 rowClass: o.DiplomacyRow,
-                nextButtonClickMessage: "KySZTMly"
+                nextButtonClickMessage: "IAHX5rtN"
             }, We);
             this.table.dataUpdate(null, this.rows)
         };
@@ -25133,7 +25177,7 @@
         }
 
         e.prototype.create = function () {
-            var i = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS), n = G.getRelationshipImage(this.relationship), a = null, s = null, e = "col icon";
+            var i = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS), n = Y.getRelationshipImage(this.relationship), a = null, s = null, e = "col icon";
             if (i) {
                 a = utils.bind(this.toggleMenu, this);
                 e = e += " clickable";
@@ -25143,16 +25187,16 @@
             this.createSubview(this.diplomacyContainer, {
                 styles: e,
                 addButtonClass: false,
-                content: this.notify("3s(kBgiI", this, {imageName: n, imageCategory: "diplomacy"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: n, imageCategory: "diplomacy"}),
                 clickCallback: a,
                 hover: s,
                 addClass: false
-            }, p);
+            }, f);
             this.createSubview(this.diplomacyContainer, {
                 styles: "col name clickable smart-truncate",
                 content: utils.sanitize(this.name),
                 data: {alliance: this.allianceData},
-                clickMessage: "rDoaQUUH"
+                clickMessage: "aOKZ2mpq"
             });
             this.createSubview(this.diplomacyContainer, {styles: "col points", content: this.points});
             this.createSubview(this.diplomacyContainer, {styles: "col rank", content: this.rank});
@@ -25190,18 +25234,18 @@
         t.prototype.create = function () {
             this.deleteAllSubviews();
             for (var a = 0; a < e.length; a++) {
-                var i = e[a], s = "row clickable", n = G.getRelationshipImage(i.relation), t;
+                var i = e[a], s = "row clickable", n = Y.getRelationshipImage(i.relation), t;
                 if (this.currentRelationship === i.relation) {
                     s += " current"
                 }
                 t = this.createSubview(this, {
                     styles: s,
                     data: {diplomaticValue: i.relation, id: this.allianceID},
-                    clickMessage: "QsEB2)Iu"
+                    clickMessage: "q3&0&cpS"
                 });
                 t.createSubview(t, {content: translate(i.name), styles: "name"});
                 t.createSubview(t, {
-                    content: this.notify("3s(kBgiI", this, {imageName: n, imageCategory: "diplomacy"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: n, imageCategory: "diplomacy"}),
                     styles: "icon"
                 });
                 t.clearfix()
@@ -25248,12 +25292,12 @@
                 minLength: l.allianceNameLengthMin,
                 maxLength: l.allianceNameLengthMax,
                 caption: "Rename Habitat"
-            }, H.Input);
+            }, B.Input);
             t.createSubview(t, {
                 name: "createAllianceControl",
                 styles: "create button",
                 content: translate("Form"),
-                clickMessage: "&uRjGX9z"
+                clickMessage: "xMJUxKth"
             })
         };
         return t
@@ -25294,7 +25338,7 @@
 
         t.prototype.create = function () {
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "buttonAlliance",
                     imageCategory: "icons"
                 }), styles: "col allianceIcon"
@@ -25302,21 +25346,21 @@
             this.createSubview(this, {
                 content: utils.sanitize(this.allianceName),
                 styles: "col allianceName clickable",
-                clickMessage: "rDoaQUUH",
+                clickMessage: "aOKZ2mpq",
                 data: {alliance: {id: this.allianceID, name: this.allianceName}}
             });
             this.createSubview(this, {content: this.points, styles: "col alliancePoints"});
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "permissionTrueColored",
                     imageCategory: "browserIcons"
-                }), name: "acceptAlliance", styles: "col accept button", clickMessage: "&&kCfpGD"
+                }), name: "acceptAlliance", styles: "col accept button", clickMessage: "BRwD6gOK"
             });
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "permissionFalseColored",
                     imageCategory: "browserIcons"
-                }), name: "declineAlliance", styles: "col decline button", clickMessage: "076vjPWa"
+                }), name: "declineAlliance", styles: "col decline button", clickMessage: "&nrw52vq"
             });
             this.createSubview(this, {styles: "clearfix", content: ""})
         };
@@ -25393,19 +25437,19 @@
             this.invitationTable = this.createSubview(this, {styles: "tablerow clickable"}, T);
             var i = new e(this.controller, {parent: this, styles: "col nickname"});
             i.playerData = this.playerData;
-            if (t.hasAlliancePermission(d.INVITE_PLAYER)) {
+            if (t.hasAlliancePermission(p.INVITE_PLAYER)) {
                 i.createSubview(this.invitationTable, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "permissionFalseColored",
                         imageCategory: "browserIcons"
-                    }), name: "cancelInvite", styles: "cancel", clickMessage: "Qr6_DGCk"
+                    }), name: "cancelInvite", styles: "cancel", clickMessage: "PS9m0MRm"
                 })
             }
             i.createSubview(this.invitationTable, {
                 content: utils.sanitize(this.nick),
                 styles: "col nickname",
                 data: {id: this.playerID},
-                clickMessage: "hs75jVT("
+                clickMessage: "57OYU6)G"
             });
             this.addSubview(i);
             this.createSubview(this.invitationTable, {content: this.points, styles: "col points"});
@@ -25419,8 +25463,8 @@
         function e(a, i) {
             e.__super__.constructor.apply(this, arguments);
             this.hasLightBG = true;
-            this.addOption("canDismiss", !!t.hasAlliancePermission(d.DISMISS_PLAYER));
-            this.addOption("canMassMail", !!t.hasAlliancePermission(d.MASS_MAIL));
+            this.addOption("canDismiss", !!t.hasAlliancePermission(p.DISMISS_PLAYER));
+            this.addOption("canMassMail", !!t.hasAlliancePermission(p.MASS_MAIL));
             this.setOptions(i)
         }
 
@@ -25512,15 +25556,15 @@
                 styles: t ? "checkAll disabled" : "checkAll",
                 checked: !t,
                 fireClickMessage: !t,
-                clickMessage: t ? null : "96)_)L(B",
+                clickMessage: t ? null : "CCfDhj&W",
                 tag: "editControl"
-            }, H.Checkbox);
+            }, B.Checkbox);
             this.createSubview(this.buttons, {
                 content: this.getImage("buttonMessages", "icons"),
                 styles: t ? "massMailButton disabled" : "massMailButton",
-                clickMessage: t ? null : "o9HCvao6",
+                clickMessage: t ? null : "Is5KiAGz",
                 tag: "editControl"
-            }, p)
+            }, f)
         };
         e.prototype.addSortControls = function () {
             var t = "sort asc";
@@ -25535,7 +25579,7 @@
                 icon: false,
                 iconCategory: "icons",
                 content: translate("alliance.sort." + this.controller.memberSortingType),
-                clickMessage: "fX0_23Ty",
+                clickMessage: "MWFxfBKH",
                 styles: "searchTypeSelector",
                 tag: "sortControl"
             }, m);
@@ -25552,14 +25596,14 @@
                 styles: t,
                 name: "sortAsc",
                 tag: "sortControl",
-                clickMessage: "u)&mSkej"
+                clickMessage: "nK4TnHhR"
             });
             this.sortDesc = this.createSubview(this.buttons, {
                 content: "<span class='shell'></span>",
                 styles: e,
                 name: "sortDesc",
                 tag: "sortControl",
-                clickMessage: "FtEPOkZG"
+                clickMessage: "UbqMNyov"
             })
         };
         return e
@@ -25571,7 +25615,7 @@
             this.styleArray.push("sort alliance dropdown");
             this.addOption("itemSelector", "sortDropdownItem");
             this.addOption("dropdownSelector", "type");
-            this.addOption("selectMessage", "WaRM6quc");
+            this.addOption("selectMessage", "y%AiWsud");
             this.setOptions(e)
         }
 
@@ -25629,7 +25673,7 @@
             } else {
                 a += " clickable"
             }
-            this.clickMessage = "hs75jVT(";
+            this.clickMessage = "57OYU6)G";
             if (this.canDismiss || this.canMassMail) {
                 a += " editable"
             }
@@ -25650,7 +25694,7 @@
                         name: "checkbox_" + this.playerID,
                         data: {playerID: +this.playerID, nick: this.nick},
                         checked: true
-                    }, H.Checkbox)
+                    }, B.Checkbox)
                 } else {
                     this.createSubview(this, {styles: "rowSection checkboxContainer empty"})
                 }
@@ -25691,7 +25735,7 @@
             if (t.length === 1) {
                 t = "0" + t
             }
-            return this.notify("3s(kBgiI", this, {imageName: "permission" + t, imageCategory: "icons"})
+            return this.notify("Z-XGNYVU", this, {imageName: "permission" + t, imageCategory: "icons"})
         };
         return i
     }(T);
@@ -25717,28 +25761,28 @@
                 this.createSubview(this.buttons, {
                     group: "profileButtonControl",
                     name: "copyLink",
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "pasteBoardAllianceWhite",
                         imageCategory: "icons"
                     }),
                     hover: translate("Copy alliance link"),
-                    clickMessage: "vzb87()F",
+                    clickMessage: "WN4rR%IB",
                     data: {alliance: t.alliance.id},
                     styles: "icon"
-                }, p)
+                }, f)
             }
-            if (t.hasAlliancePermission(d.DISBAND_ALLIANCE)) {
+            if (t.hasAlliancePermission(p.DISBAND_ALLIANCE)) {
                 this.createSubview(this.buttons, {
                     group: "profileButtonControl",
                     content: translate("Disband Alliance"),
-                    clickMessage: "1dclKW7h"
-                }, p)
+                    clickMessage: "BIZo3IBZ"
+                }, f)
             }
             this.createSubview(this.buttons, {
                 group: "profileButtonControl",
                 content: translate("Leave alliace"),
-                clickMessage: "XMgvBu2x"
-            }, p);
+                clickMessage: "I%_-hy6C"
+            }, f);
             this.buttons.clearfix()
         };
         e.prototype.create = function () {
@@ -25750,8 +25794,8 @@
                 group: "allianceProfile",
                 name: "allianceProfileName",
                 dataAttribute: "name",
-                buttonMessage: "doswn27X",
-                saveMessage: "66%y9X9S",
+                buttonMessage: "fnCRZrZT",
+                saveMessage: "m)T3tA6Q",
                 styles: "profile",
                 minMessage: translate("Please enter alliance name"),
                 maxMessage: translate("The name is too long"),
@@ -25762,8 +25806,8 @@
                 group: "allianceProfile",
                 name: "allianceProfileDescription",
                 dataAttribute: "descriptionText",
-                buttonMessage: "YUgL-Vlp",
-                saveMessage: "UPTbvAsE",
+                buttonMessage: "td_0Qz_H",
+                saveMessage: "2UtD5IFN",
                 maxLength: +l.maxAllianceDescriptionLength,
                 minLength: false,
                 allowBlank: true,
@@ -25820,8 +25864,8 @@
             var a = utils.sanitize(s);
             a = a.replace(/&lt;br\/>/g, "<br/>");
             if (this.descriptionSection) {
-                a = $.linkify(a, ye.INTERNAL_LINK, "window.linkHandler");
-                a = $.linkify(a, ye.EXTERNAL_LINK, "window.externalLinkHandler")
+                a = $.linkify(a, ve.INTERNAL_LINK, "window.linkHandler");
+                a = $.linkify(a, ve.EXTERNAL_LINK, "window.externalLinkHandler")
             }
             this.createSubview(this, {
                 group: "allianceProfileSection",
@@ -25830,7 +25874,7 @@
                 content: a,
                 handleLinks: true
             });
-            var l = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS) || t.hasAlliancePermission(d.ALL);
+            var l = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS) || t.hasAlliancePermission(p.ALL);
             if (this.buttonMessage && this.saveMessage && this.inputType && l) {
                 var u = {min: this.minMessage, max: this.maxMessage, blank: ""};
                 var h = this.descriptionSection ? "Description" : "Change Name";
@@ -25853,16 +25897,16 @@
                 if (this.descriptionSection) {
                     n.pasteLinkButton = true
                 }
-                var c = this.createSubview(this, n, H.EditFieldForm);
+                var c = this.createSubview(this, n, B.EditFieldForm);
                 c.clearfix();
                 this.createSubview(this, {
                     group: "allianceProfileSection",
                     name: "editButton_" + this.name,
                     styles: "edit button",
                     hover: translate("Edit"),
-                    content: this.notify("3s(kBgiI", this, {imageName: "edit", imageCategory: "icons"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: "edit", imageCategory: "icons"}),
                     clickMessage: this.buttonMessage
-                }, p)
+                }, f)
             }
             if (!this.descriptionSection) {
                 var i = this.createSubview(this, {
@@ -25966,7 +26010,7 @@
                     template: "allianceRankingControls",
                     templateData: t,
                     attachTo: this.topButtonsContainer
-                }, vi);
+                }, gi);
                 this.topButtons.draw()
             }
         };
@@ -26026,7 +26070,7 @@
                 group: "allianceReportsGroup",
                 pageItems: 10,
                 rowClass: o.ReportRow,
-                nextButtonClickMessage: "Kb0r0i8g"
+                nextButtonClickMessage: "V5&miggF"
             }, We);
             this.table.dataUpdate(null, this.reports);
             this._managePaginationControls()
@@ -26074,7 +26118,7 @@
             this.addOption("newDiplomaticRelation", null);
             this.addOption("oldDiplomaticRelation", null);
             this.addOption("rowID", -1);
-            this.addOption("clickMessage", "lvdtGFZJ", true);
+            this.addOption("clickMessage", "lx63IcgV", true);
             this.setOptions(e);
             this.styles += " reportRow clickable"
         }
@@ -26083,7 +26127,7 @@
             t.__super__.create.apply(this, arguments);
             this.createSubview(this, {
                 styles: "arrow",
-                content: this.notify("3s(kBgiI", this, {imageName: "clickableArrow", imageCategory: "browserIcons"})
+                content: this.notify("Z-XGNYVU", this, {imageName: "clickableArrow", imageCategory: "browserIcons"})
             });
             this.createSubview(this, {name: "title", styles: "title", content: this.title});
             this.createSubview(this, {
@@ -26172,7 +26216,7 @@
                 content: utils.sanitize(this.playerData.nick),
                 styles: "playerName reportDetail clickable smart-truncate",
                 data: this.playerData,
-                clickMessage: "hs75jVT("
+                clickMessage: "57OYU6)G"
             })
         };
         return t
@@ -26189,7 +26233,7 @@
         }
 
         t.prototype.create = function () {
-            var t, e, i = G.getRelationshipImage(this.oldRelationship), a = G.getRelationshipImage(this.newRelationship);
+            var t, e, i = Y.getRelationshipImage(this.oldRelationship), a = Y.getRelationshipImage(this.newRelationship);
             this.allianceContainer = this.createSubview(this, {styles: "allianceContainer"});
             this.createSubview(this.allianceContainer, {
                 content: translate("For alliance") + ":",
@@ -26198,27 +26242,27 @@
             this.createSubview(this.allianceContainer, {
                 content: utils.sanitize(this.allianceData.name),
                 data: this.allianceData,
-                clickMessage: "2Mwsy)GG",
+                clickMessage: "%0Cz-FiM",
                 styles: "allianceName reportDetail clickable smart-truncate"
             });
             this.diplomacyContainer = this.createSubview(this, {styles: "diplomacyContainer"});
             t = this.createSubview(this.diplomacyContainer, {styles: "relation old"});
             this.createSubview(t, {
                 styles: "icon",
-                content: this.notify("3s(kBgiI", this, {imageName: i, imageCategory: "diplomacy"})
+                content: this.notify("Z-XGNYVU", this, {imageName: i, imageCategory: "diplomacy"})
             });
             this.createSubview(t, {styles: "reportTitle", content: translate("Old diplomacy relationship") + ":"});
-            this.createSubview(t, {styles: "reportDetail", content: G.getRelationshipString(this.oldRelationship)});
+            this.createSubview(t, {styles: "reportDetail", content: Y.getRelationshipString(this.oldRelationship)});
             t.clearfix();
             e = this.createSubview(this.diplomacyContainer, {styles: "relation new"});
             this.createSubview(e, {
                 styles: "icon",
-                content: this.notify("3s(kBgiI", this, {imageName: a, imageCategory: "diplomacy"})
+                content: this.notify("Z-XGNYVU", this, {imageName: a, imageCategory: "diplomacy"})
             });
             this.createSubview(e, {styles: "reportTitle", content: translate("New diplomacy relationship") + ":"});
             this.createSubview(e, {
                 styles: "reportDetail smart-truncate",
-                content: G.getRelationshipString(this.newRelationship)
+                content: Y.getRelationshipString(this.newRelationship)
             });
             e.clearfix()
         };
@@ -26236,16 +26280,16 @@
 
         t.prototype.create = function () {
             t.__super__.create.apply(this, arguments);
-            var n = [{name: "Invite Player", mask: d.INVITE_PLAYER}, {
+            var n = [{name: "Invite Player", mask: p.INVITE_PLAYER}, {
                 name: "Dismiss Player",
-                mask: d.DISMISS_PLAYER
-            }, {name: "Moderate Forum", mask: d.MODERATE_FORUM}, {
+                mask: p.DISMISS_PLAYER
+            }, {name: "Moderate Forum", mask: p.MODERATE_FORUM}, {
                 name: "Mass Mail",
-                mask: d.MASS_MAIL
-            }, {name: "Diplomacy Relationship", mask: d.DIPLOMATIC_RELATIONS}, {
+                mask: p.MASS_MAIL
+            }, {name: "Diplomacy Relationship", mask: p.DIPLOMATIC_RELATIONS}, {
                 name: "Change Permission",
-                mask: d.PLAYER_PERMISSIONS
-            }, {name: "Disband Alliance", mask: d.DISBAND_ALLIANCE}];
+                mask: p.PLAYER_PERMISSIONS
+            }, {name: "Disband Alliance", mask: p.DISBAND_ALLIANCE}];
             var e = this.createSubview(this, {styles: "header"});
             this.createSubview(e, {content: translate("Permission"), styles: "col title"});
             this.createSubview(e, {content: translate("Old Permissions"), styles: "col old"});
@@ -26257,11 +26301,11 @@
                 this.createSubview(i, {styles: "title", content: translate(s.name)});
                 this.createSubview(i, {
                     styles: "oldPermission",
-                    content: this.notify("3s(kBgiI", this, {imageName: r, imageCategory: "browserIcons"})
+                    content: this.notify("Z-XGNYVU", this, {imageName: r, imageCategory: "browserIcons"})
                 });
                 this.createSubview(i, {
                     styles: "newPermission",
-                    content: this.notify("3s(kBgiI", this, {imageName: o, imageCategory: "browserIcons"})
+                    content: this.notify("Z-XGNYVU", this, {imageName: o, imageCategory: "browserIcons"})
                 })
             }
             this.clearfix()
@@ -26297,14 +26341,14 @@
                 name: "prevButton",
                 content: translate("Previous"),
                 hover: translate("Previous"),
-                clickMessage: "AKOTnZkF"
-            }, p);
+                clickMessage: "-BenSknm"
+            }, f);
             this.createSubview(this.buttons, {
                 name: "nextButton",
                 content: translate("Next"),
                 hover: translate("Next"),
-                clickMessage: "DAUelF3P"
-            }, p)
+                clickMessage: "s0uKR2HC"
+            }, f)
         };
         e.prototype.create = function () {
             if (!this.data || !this.active) {
@@ -26323,14 +26367,14 @@
             this.created = true
         };
         e.prototype.applyEditControls = function () {
-            if (t.hasAlliancePermission(d.PLAYER_PERMISSIONS)) {
+            if (t.hasAlliancePermission(p.PLAYER_PERMISSIONS)) {
                 this.createSubview(this.buttons, {
                     hidden: true,
                     name: "savePermissions",
                     content: translate("Verify"),
                     hover: translate("Verify"),
-                    clickMessage: "u6s1&COU"
-                }, p)
+                    clickMessage: "nLJwKdai"
+                }, f)
             }
         };
         e.prototype._headerContent = function () {
@@ -26390,16 +26434,16 @@
         i.prototype.create = function () {
             this.topContainer = this.createSubview(this, {}, T);
             this.rightsContainer = this.createSubview(this.topContainer, {styles: "rightsContainer"}, e);
-            var n = [{name: "invitePlayer", mask: d.INVITE_PLAYER}, {
+            var n = [{name: "invitePlayer", mask: p.INVITE_PLAYER}, {
                 name: "massMail",
-                mask: d.MASS_MAIL
-            }, {name: "moderateForum", mask: d.MODERATE_FORUM}, {
+                mask: p.MASS_MAIL
+            }, {name: "moderateForum", mask: p.MODERATE_FORUM}, {
                 name: "diplomaticRelations",
-                mask: d.DIPLOMATIC_RELATIONS
-            }, {name: "dismissPlayer", mask: d.DISMISS_PLAYER}, {
+                mask: p.DIPLOMATIC_RELATIONS
+            }, {name: "dismissPlayer", mask: p.DISMISS_PLAYER}, {
                 name: "changeRights",
-                mask: d.PLAYER_PERMISSIONS
-            }, {name: "disbandAlliance", mask: d.DISBAND_ALLIANCE}], h = new e(this.controller, {
+                mask: p.PLAYER_PERMISSIONS
+            }, {name: "disbandAlliance", mask: p.DISBAND_ALLIANCE}], h = new e(this.controller, {
                 name: "nickname",
                 content: this.nick,
                 parent: this.rightsContainer,
@@ -26408,8 +26452,8 @@
             this.addSubview(h);
             for (var a = 0; a < n.length; a++) {
                 var i = n[a], l = null, u = "rowSection " + i.name, s;
-                if (t.hasAlliancePermission(d.PLAYER_PERMISSIONS)) {
-                    l = "FIG7cAGf";
+                if (t.hasAlliancePermission(p.PLAYER_PERMISSIONS)) {
+                    l = "CDw7dcBi";
                     u += " edittable"
                 }
                 s = new o.RightIcon(this.controller, {
@@ -26436,12 +26480,12 @@
             }
         };
         i.prototype.permissionImageFor = function (t) {
-            var e = this.alliancePermission & t || this.alliancePermission == d.ALL, i = e ? "permissionTrueColored" : "permissionFalseColored";
-            return this.notify("3s(kBgiI", this, {imageName: i, imageCategory: "browserIcons"})
+            var e = this.alliancePermission & t || this.alliancePermission == p.ALL, i = e ? "permissionTrueColored" : "permissionFalseColored";
+            return this.notify("Z-XGNYVU", this, {imageName: i, imageCategory: "browserIcons"})
         };
         i.prototype.confimEdit = function () {
             this.editted = true;
-            this.notify("xly6pIFw", this)
+            this.notify("uTFupPHQ", this)
         };
         return i
     }(e);
@@ -26463,7 +26507,7 @@
         };
         t.prototype.edittedImage = function (t) {
             var e = t ? "permissionTrue" : "permissionFalse";
-            return this.notify("3s(kBgiI", this, {imageName: e, imageCategory: "browserIcons"})
+            return this.notify("Z-XGNYVU", this, {imageName: e, imageCategory: "browserIcons"})
         };
         return t
     }(e);
@@ -26477,10 +26521,10 @@
         }
 
         t.prototype.create = function () {
-            var t = this.notify("3s(kBgiI", this, {
+            var t = this.notify("Z-XGNYVU", this, {
                 imageName: this.icon,
                 imageCategory: "tabs"
-            }), e = this.notify("3s(kBgiI", this, {
+            }), e = this.notify("Z-XGNYVU", this, {
                 imageName: this.icon + "_active",
                 imageCategory: "tabs"
             }), i = $(t).attr("src"), a = $(e).attr("src");
@@ -26488,7 +26532,7 @@
             this.createSubview(this, {
                 styles: "tab-content",
                 content: t,
-                lazyHoverClass: v.TabHover,
+                lazyHoverClass: g.TabHover,
                 lazyHoverOptions: {name: this.hoverText}
             }, F)
         };
@@ -26565,43 +26609,43 @@
                 name: "profile",
                 icon: "alliance",
                 contentString: "Profile",
-                clickMessage: "qzIosSCY",
+                clickMessage: "vW)jV6Bl",
                 hoverText: "Alliance Profile"
             }, {
                 name: "members",
                 icon: "member_list",
                 contentString: "Members",
-                clickMessage: "8GH&4Rt7",
+                clickMessage: "tKCsX5hK",
                 hoverText: "Members"
             }, {
                 name: "reports",
                 icon: "reports",
                 contentString: "Reports",
-                clickMessage: "eStinXxk",
+                clickMessage: "mJv86y&L",
                 hoverText: "Alliance Report"
             }, {
                 name: "diplomacy",
                 icon: "diplomacy",
                 contentString: "Diplomacy",
-                clickMessage: "veXQ82sI",
+                clickMessage: "fLETrW6)",
                 hoverText: "Diplomacy Relatioship"
             }, {
                 name: "invitations",
                 icon: "invites",
                 contentString: "Invitations",
-                clickMessage: "DLgBYKbW",
+                clickMessage: "FNTZw990",
                 hoverText: "Invitations"
             }, {
                 name: "rankings",
                 icon: "alliance_ranklist",
                 contentString: "Ranking",
-                clickMessage: "zHGF57hK",
+                clickMessage: "9_Mtz2Nn",
                 hoverText: "Ranking"
             }, {
                 name: "clashes",
                 icon: "attack",
                 contentString: "Clashes",
-                clickMessage: "HG3r_1P(",
+                clickMessage: "YVSsxXdG",
                 hoverText: "Clashes"
             }];
             if (l.featureHabitatReservation) {
@@ -26609,7 +26653,7 @@
                     name: "habitatReservationTab",
                     icon: "habitat_reservation",
                     contentString: "Reservation",
-                    clickMessage: "4W(SHY2N",
+                    clickMessage: "euKcB8G5",
                     hoverText: "Castle Reservations"
                 })
             } else {
@@ -26696,7 +26740,7 @@
                 this.createSubview(this.headline.buttons, {
                     graphic: e.graphic,
                     hover: e.hover,
-                    clickMessage: "V(czOnDu",
+                    clickMessage: "Ph0zh-Lk",
                     data: {action: e.action},
                     name: e.action,
                     group: "headlineControls",
@@ -26729,7 +26773,7 @@
             this.addOption("name", "AllianceHabitatDetailWrapper", true);
             this.addOption("isOwnAlly", false);
             this.setOptions(t);
-            this.drawEndMessage = "1aFe1cSu"
+            this.drawEndMessage = "B(qk3tIJ"
         }
 
         var i = null;
@@ -26762,7 +26806,7 @@
             var l = a.habitatReservations.filter(function (t) {
                 return t.id === this.reservationID
             }.bind(this))[0];
-            var e = $.extend(true, {}, l), S = utils.date.formatDateTime, w = t.hasAlliancePermission(d.DIPLOMATIC_RELATIONS), s = "reservationRow", n, i;
+            var e = $.extend(true, {}, l), S = utils.date.formatDateTime, w = t.hasAlliancePermission(p.DIPLOMATIC_RELATIONS), s = "reservationRow", n, i;
             if (e.expirationDate && e.status !== de.REJECTED) {
                 e.expirationMessage = translate("Reservation valid until %1$@", S(e.expirationDate))
             }
@@ -26781,7 +26825,7 @@
                     titleIcon: i ? "permission00" : "buttonPlayer",
                     name: e.nick,
                     points: translate("%d Points", e.points),
-                    allianceIcon: i ? false : G.getRelationshipImage(o)
+                    allianceIcon: i ? false : Y.getRelationshipImage(o)
                 }
             };
             e.baseframeClass = {styles: s + " habitatReservator"};
@@ -26796,15 +26840,15 @@
                 }).sort(function (t, e) {
                     return t.reservationDate < e.reservationDate ? +1 : -1
                 });
-                var g = [];
+                var y = [];
                 for (var r = 0; r < n.length; r++) {
-                    var y = n[r];
-                    if (y.status === de.ACCEPTED) {
-                        g.push(y);
+                    var v = n[r];
+                    if (v.status === de.ACCEPTED) {
+                        y.push(v);
                         n.splice(r, 1)
                     }
                 }
-                e.clashPlayersReserved = _.map(g, c);
+                e.clashPlayersReserved = _.map(y, c);
                 e.clashPlayersRequested = _.map(n, c)
             }
             e.allianceIcon = o.Controller.findTransitRelation(u || e.player);
@@ -26815,16 +26859,16 @@
                 e.frameClassPlayer.styles += " clickable";
                 e.frameClassPlayer.data = {id: h.player}
             }
-            var v = s + " alliance", p = false;
+            var g = s + " alliance", d = false;
             if (e.player.alliance) {
                 if (e.player.alliance.id !== t.alliance.id) {
-                    v += " clickable"
+                    g += " clickable"
                 }
-                p = {id: e.player.alliance.id}
+                d = {id: e.player.alliance.id}
             }
-            e.frameClassAlliance = {styles: v};
-            if (p) {
-                e.frameClassAlliance.data = p
+            e.frameClassAlliance = {styles: g};
+            if (d) {
+                e.frameClassAlliance.data = d
             }
             return e
         };
@@ -26836,13 +26880,13 @@
         e.prototype._loadProfileInfo = function (t) {
             var e = a._rawHabitate[t.habitatID], s = [e.player, this];
             i = this.controller;
-            this.notify("NbKCY7mj", i.view);
+            this.notify("7GVwxkqP", i.view);
             oe.DataSource.prototype.loadPlayerInfo.apply(this, s)
         };
         e.prototype.savePlayerInfo = function (t) {
             this.controller = i;
             this.create(t);
-            this.notify("gl%9o7sY", i.view);
+            this.notify("i8j%qM54", i.view);
             this.draw()
         };
         e.prototype.informControllerUnblock = $.noop;
@@ -26898,22 +26942,22 @@
             this.bubble(t, i.bind(this), "#habitatReservationDetail")
         };
         t.prototype.acceptReservation = function (t) {
-            this.notify("RMoFBZ7K", t)
+            this.notify("Lm05kZmj", t)
         };
         t.prototype.declineReservation = function (t) {
-            this.notify("862TQ0PC", t)
+            this.notify("W7jLIqs)", t)
         };
         t.prototype.centerMap = function (t) {
-            this.notify("iv58ii09", t)
+            this.notify("ym_pqyCM", t)
         };
         t.prototype.openHabitat = function (t) {
-            this.notify("tCXKN27v", t)
+            this.notify("cZglS4&2", t)
         };
         t.prototype.showPlayer = function (t) {
-            this.notify("hs75jVT(", {playerData: {id: t}})
+            this.notify("57OYU6)G", {playerData: {id: t}})
         };
         t.prototype.openAlliance = function (t) {
-            this.notify("eQbjanoz", t)
+            this.notify("Ve2s0mbd", t)
         };
         return t
     }(S);
@@ -26939,7 +26983,7 @@
             this.createSubview(this, {
                 styles: "alliance-share-button",
                 content: translate("Share Reservations"),
-                clickMessage: "4uO3oJ9O"
+                clickMessage: "h)IqLX5_"
             }, m)
         };
         return t
@@ -26974,7 +27018,7 @@
             this.bubble(t, n.bind(this), "#habitatReservationSettings")
         };
         e.prototype.save = function () {
-            this.notify("BB7(oHxa")
+            this.notify("Daozpoi_")
         };
         e.prototype.draw = function () {
             e.__super__.draw.apply(this, arguments);
@@ -27018,7 +27062,7 @@
                         id: e,
                         name: s.name,
                         relationship: t.relationship,
-                        icon: G.getRelationshipImage(t.relationship)
+                        icon: Y.getRelationshipImage(t.relationship)
                     })
                 }
             }
@@ -27038,14 +27082,14 @@
         }
 
         t.prototype.goBack = function () {
-            this.notify("Z04XvT7k")
+            this.notify("v2v6tJij")
         };
         t.prototype.prepareRequestShare = function () {
             var e = $("#habitatReservationShareList input:checked"), t = [];
             e.each(function (i, e) {
                 t.push($(e).data("id"))
             });
-            this.notify("9-OEputz", t)
+            this.notify("vQXgMm11", t)
         };
         function i(e) {
             var t = $(e);
@@ -27102,7 +27146,7 @@
                     allyId: i,
                     name: r.name,
                     relationship: c,
-                    icon: G.getRelationshipImage(c)
+                    icon: Y.getRelationshipImage(c)
                 };
                 if (e.accepted) {
                     s.push(l)
@@ -27110,8 +27154,8 @@
                     n.push(l)
                 }
             }
-            n.sort(Z.AllianceList);
-            s.sort(Z.AllianceList);
+            n.sort(J.AllianceList);
+            s.sort(J.AllianceList);
             data = {pendingReservationSharing: n, acceptedReservationSharing: s};
             this.allianceListShared = this.createSubview(this, {
                 template: "allianceHabitatReservationAllianceList",
@@ -27128,12 +27172,12 @@
 
         t.prototype.prepareDeletingShare = function (t) {
             var e = t.data("id");
-            this.notify("q&LGY8QH", e)
+            this.notify("X3sypod2", e)
         };
         t.prototype.prepareOpenForeignAlly = function (t) {
             var e = t.data("allyid");
             var i = a.alliances[e];
-            this.notify("rDoaQUUH", {data: {alliance: i}})
+            this.notify("aOKZ2mpq", {data: {alliance: i}})
         };
         function i(e) {
             var t = $(e);
@@ -27169,7 +27213,7 @@
             this.currentSortType = "date";
             this.currentSortDirection = "desc";
             this.pendingUpdate = false;
-            this.drawEndMessage = "1CmE0gbb"
+            this.drawEndMessage = "k9wCBiR-"
         }
 
         e.prototype.sortingTypes = function () {
@@ -27200,7 +27244,7 @@
                     return t.id === e.reservationID
                 });
                 if (!i) {
-                    this.notify("Z04XvT7k", this)
+                    this.notify("v2v6tJij", this)
                 } else {
                     e.dataUpdate(null, s)
                 }
@@ -27231,13 +27275,13 @@
         e.prototype._addBottomBar = function () {
             var t = this.controller.view.mainContentContainer.parent;
             this.editControls = t.createSubview(t, {
-                cmDelete: "cNdMs)Te",
-                cmSelect: "g7pIY_c3",
+                cmDelete: "8ra1wc64",
+                cmSelect: "qThK_fCE",
                 deleteText: "Delete Selection (%1$d)"
-            }, Be)
+            }, He)
         };
         e.prototype._formatData = function () {
-            var i = this.sortingTypes(), a = this.currentSortType, l = this.currentSortDirection, e = this.notify("Oho&tClr", a, l), s = false, n = this.currentSortType === "own";
+            var i = this.sortingTypes(), a = this.currentSortType, l = this.currentSortDirection, e = this.notify("xcAy7_ng", a, l), s = false, n = this.currentSortType === "own";
             if (n) {
                 var r = 0, o;
                 o = _.try(t, "alliance.settingNumberOfPlayerHabitatReservation") || 2;
@@ -27312,16 +27356,16 @@
         }
 
         t.prototype.sortList = function (t) {
-            this.notify("Ku0T(_r5", {type: t, view: this.parent})
+            this.notify("dIIURfmn", {type: t, view: this.parent})
         };
         t.prototype.checkboxClicked = function () {
-            this.notify("HthdKXJ8")
+            this.notify("KB9qAibt")
         };
         t.prototype.acceptReservation = function (t) {
-            this.notify("RMoFBZ7K", t)
+            this.notify("Lm05kZmj", t)
         };
         t.prototype.viewReservation = function (t) {
-            this.notify("_awa4Ar1", t)
+            this.notify("DilIyUGG", t)
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "#allianceHabitatReservationList")
@@ -27395,7 +27439,7 @@
                     upgrades: t,
                     buildings: this.habitat.habitatBuildings,
                     showImage: true,
-                    clickMessage: "jIPyzFS)"
+                    clickMessage: "Mqs(JcJm"
                 }, W.UpgradeTable, null, false);
                 this.clearfix();
                 this.createSubview(this, {
@@ -27411,7 +27455,7 @@
                 build: true,
                 habitat: this.habitat,
                 showNames: true,
-                clickMessage: "jIPyzFS)",
+                clickMessage: "Mqs(JcJm",
                 styles: "fixedBuildingList"
             }, W.Table, null, false)
         };
@@ -27579,7 +27623,7 @@
         e.prototype._restockCallback = function (t) {
             if (t.error && t.error === "Gold amount has changed.") {
                 this._restockRecalculate = true;
-                this.notify("j)909BLe")
+                this.notify("-_bqDYa1")
             } else {
                 this._restockRecalculate = false;
                 this.triggerModelUpdate.apply(this, arguments)
@@ -27608,15 +27652,15 @@
             s.request("HabitatAction/activateBuff", {habitatID: t, primaryKey: e}, this.triggerModelUpdate, this)
         };
         e.prototype.extendDisplayedTransits = function (t) {
-            this.displayedTransists.from += ze;
-            this.displayedTransists.to += ze;
+            this.displayedTransists.from += Ge;
+            this.displayedTransists.to += Ge;
             if (this.displayedTransists.to > t.length) {
                 this.displayedTransists.to = trasits.length
             }
             return this.prepareTransits(t)
         };
         e.prototype.prepareTransits = function (a) {
-            var u = translate("Transits"), c = [], f = a.length > ze ? ze : a.length, h = 0, r = 0, o = 0;
+            var u = translate("Transits"), c = [], f = a.length > Ge ? Ge : a.length, h = 0, r = 0, o = 0;
             this.displayedTransists = {from: 0, to: f};
             if (a.length === 0) {
                 u = translate("No transits")
@@ -27634,7 +27678,7 @@
                     if (t.destinationHabitat) {
                         e.destName = utils.sanitize(t.destinationHabitat.name)
                     }
-                    e.icon = this.notify("ttHKxwy5", this, i);
+                    e.icon = this.notify("oqS1fWVg", this, i);
                     e.id = t.id ? t.id : t.generatedTransitId;
                     e.countDown = utils.date.secToTimeStr(utils.date.setCountDownTime(t.destinationETA));
                     e.formattedETA = t.formattedETA;
@@ -27650,8 +27694,8 @@
                             e.syncIcon = this.getImageSrc(i.syncIconName, i.imageCategory)
                         }
                     }
-                    var d = +e.model.transitType === +b.TRANSIT_SPY, g = l.featureSpeedupReturningSpy, y = l.featureSpeedupReturningUnits;
-                    if (i.finishTransitIconName && (d && g || !d && y)) {
+                    var d = +e.model.transitType === +b.TRANSIT_SPY, y = l.featureSpeedupReturningSpy, v = l.featureSpeedupReturningUnits;
+                    if (i.finishTransitIconName && (d && y || !d && v)) {
                         h += 1;
                         e.speedUpTransit = true;
                         e.speedUpIcon = this.getImageSrc(i.finishTransitIconName, "icons")
@@ -27664,12 +27708,12 @@
                 transitSilver: this.__data.id ? o : null,
                 transits: c,
                 hasMultipleSpeedup: h > 1,
-                showButton: a.length > ze ? true : false,
+                showButton: a.length > Ge ? true : false,
                 htmlID: "id" + utils.uniqueID()
             }
         };
         return e
-    }(I);
+    }(x);
     c.DetailView = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
@@ -27740,7 +27784,7 @@
             if (this.building.knowledges && this.building.knowledges.length) {
                 this.addKnowledges()
             }
-            if (l.restockingResourcesSecondsToWaitForNext && this.building.buildingType === Bi["Market"]) {
+            if (l.restockingResourcesSecondsToWaitForNext && this.building.buildingType === Hi["Market"]) {
                 this.addMarketRestockButton()
             }
             if (this.building.marketRates) {
@@ -27797,7 +27841,7 @@
             return null
         };
         e.prototype.addNameAndImage = function () {
-            var t = this.notify("3s(kBgiI", this, {imageName: this.buildingName, imageCategory: "buildings"});
+            var t = this.notify("Z-XGNYVU", this, {imageName: this.buildingName, imageCategory: "buildings"});
             this.createSubview(this.headContainer, {
                 title: translate(this.buildingName),
                 detail: translate("Level") + " " + this.building.level
@@ -27860,7 +27904,7 @@
                 this.peopleDisplay = this.createSubview(this.headContainer, {styles: "peopleDisplay"});
                 this.createSubview(this.peopleDisplay, {
                     styles: "icon",
-                    content: this.notify("3s(kBgiI", this, {imageName: i.toString(), imageCategory: "resources"})
+                    content: this.notify("Z-XGNYVU", this, {imageName: i.toString(), imageCategory: "resources"})
                 });
                 this.peopleContainer = this.createSubview(this.peopleDisplay, {styles: "peopleContainer"});
                 this.createSubview(this.peopleContainer, {
@@ -27882,7 +27926,7 @@
             $.each(t.building.generateResources, function (e) {
                 t.createSubview(t.generateResources, {
                     styles: "icon",
-                    content: t.notify("3s(kBgiI", t, {imageName: e, imageCategory: "resources"})
+                    content: t.notify("Z-XGNYVU", t, {imageName: e, imageCategory: "resources"})
                 });
                 t.valueContainer = t.createSubview(t.generateResources, {styles: "valueContainer"});
                 t.createSubview(t.valueContainer, {styles: "resourceName", element: "span", content: translate(be[e])});
@@ -27928,14 +27972,14 @@
                 styles: "knowledgeContainer",
                 habitat: this.habitat,
                 building: this.building
-            }, qe.HabitatList)
+            }, $e.HabitatList)
         };
         e.prototype.addMarketRates = function (t) {
             var e = t === "Keep" && l.featureSpecialExchange && this.building.specialExchangeArray && this.building.specialExchangeArray.length;
             this.createSubview(this, {content: translate("Available market resources"), styles: "wood-hl title"});
             this.createSubview(this, {
                 building: this.building,
-                itemClickMessage: "dG5BeAbH",
+                itemClickMessage: "NRBiuJgn",
                 styles: "tradableItems " + t
             }, di);
             if (e && this._isTownHall(t)) {
@@ -27943,7 +27987,7 @@
                 this.createSubview(this, {content: translate("Exchange Gold for goods"), styles: "wood-hl pusher-top"});
                 this.createSubview(this, {
                     building: this.building,
-                    itemClickMessage: "dG5BeAbH",
+                    itemClickMessage: "NRBiuJgn",
                     styles: "tradableItems " + t + " nobleMetalPurchase",
                     goldTrade: true
                 }, di)
@@ -27961,17 +28005,17 @@
                 iconCategory: "icons",
                 content: t.title,
                 secondaryContent: t.subTitle,
-                clickMessage: "9V3ABh3_"
+                clickMessage: "LZtgMWGP"
             }, m)
         };
         e.prototype.addMarketRestockButton = function () {
-            var t = this.habitat.nextLegalRestockDate, e = !t || t < new Date - U, i = this.habitat.getRestockResourceAmount() && e, a = translate("Fill up the stock of resources");
+            var t = this.habitat.nextLegalRestockDate, e = !t || t < new Date - P, i = this.habitat.getRestockResourceAmount() && e, a = translate("Fill up the stock of resources");
             if (!e) {
                 a += '<span class="timestamp">(' + utils.date.formatDateTime(t) + ")</span>"
             }
             this.createSubview(this, {
                 content: a,
-                clickMessage: i ? "HK_Jo-Lt" : null,
+                clickMessage: i ? "ElGl)BXz" : null,
                 icon: "restockResources",
                 iconCategory: "icons",
                 styles: i ? "" : "disabled"
@@ -27982,7 +28026,7 @@
                 this.createSubview(this, {
                     habitat: this.habitat,
                     unitOrders: this.habitat.habitatUnitOrders,
-                    buttonClickMessage: "1_kTu9KH",
+                    buttonClickMessage: "h6cRanxe",
                     styles: "pendingUnits",
                     useContainers: true
                 }, C.RecruitOrderTable)
@@ -27993,10 +28037,10 @@
                 units: this.building.units,
                 inputFields: true,
                 amountOnly: true,
-                maxButtonClickMessage: "-akxnDw7",
-                inputChangeMessage: "D9UzMCzr",
-                recruitButtonClickMessage: "CpQaYl92",
-                imageClickMessage: "&N2xhhek",
+                maxButtonClickMessage: "83Yo4xKR",
+                inputChangeMessage: "20sAjsAw",
+                recruitButtonClickMessage: "%A%_1MMF",
+                imageClickMessage: ")WyTi%0g",
                 sessionPrefix: "habitat"
             }, C.RecruitTable)
         };
@@ -28007,7 +28051,7 @@
             var e = this.createSubview(this, {name: "buffContainer", styles: "buffContainer"});
             e.createSubview(e, {name: "buffHeader", styles: "wood-hl title", content: translate("Banners")});
             for (var r in ne) {
-                var t = ne[r], a = t.identifier, i = this.habitat.hasActiveBuff(t.primaryKey), s = "buffButton " + a, o = "MmruwsT(";
+                var t = ne[r], a = t.identifier, i = this.habitat.hasActiveBuff(t.primaryKey), s = "buffButton " + a, o = "%yyEEyq%";
                 if (i) {
                     s += " isActive"
                 }
@@ -28044,11 +28088,11 @@
                     this.goldSection = this.createSubview(this, {
                         name: "buyGoldButton",
                         styles: "buyGoldButton",
-                        icon: Zi.GOLD.toString(),
+                        icon: Ji.GOLD.toString(),
                         iconCategory: "resources",
                         content: translate("Gold"),
                         detail: t.gold,
-                        clickMessage: "5-kIwyYc"
+                        clickMessage: "TeVG5tXR"
                     }, m)
                 }
                 if (i === "Rename Habitat") {
@@ -28145,7 +28189,7 @@
             }
             var s = this.habitat.isHabitatAttacked(), i = "buttonCastle", n = null, u = s ? "reportIcons" : "icons", e = null, o;
             if (this.centerIcon) {
-                n = "g4pXoIQx";
+                n = "zmYT51%9";
                 i = "centerHabitat"
             }
             if (s) {
@@ -28169,7 +28213,7 @@
             o = this.createSubview(t, {
                 title: this.habitat.name,
                 detail: e,
-                icon: this.notify("3s(kBgiI", this, {imageName: i, imageCategory: u}),
+                icon: this.notify("Z-XGNYVU", this, {imageName: i, imageCategory: u}),
                 iconClickMessage: n,
                 data: this.habitat
             }, A);
@@ -28205,7 +28249,7 @@
                     clickMessage: this.selectClickMessage,
                     fireClickMessage: r,
                     data: this.habitat.id
-                }, H.Checkbox)
+                }, B.Checkbox)
             } else if (this.displayActions) {
                 this.renderActions(t);
                 t.styleArray.splice(t.styleArray.indexOf("clickable"), 1)
@@ -28228,9 +28272,9 @@
                 s.createSubview(s, {
                     clickMessage: this.actionClickMessage,
                     data: {action: i.action, habitatID: this.habitat.id},
-                    content: this.notify("3s(kBgiI", this, {imageName: i.icon, imageCategory: "icons"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: i.icon, imageCategory: "icons"}),
                     hover: translate(i.hover)
-                }, p)
+                }, f)
             }
         };
         t.prototype.select = function (t) {
@@ -28307,21 +28351,21 @@
             if (!t) {
                 return
             }
-            this.notify("SV&qDvlX", this, {transit: t})
+            this.notify("7Y3Pp4y(", this, {transit: t})
         };
         t.prototype.syncTransitIconClicked = function (e) {
             var i = e.data("id"), t = this._findTransit(i);
             if (!t) {
                 return
             }
-            this.notify("&PbdUOlv", this, t.model)
+            this.notify("D74stK4b", this, t.model)
         };
         t.prototype.speedUpTransitIconClicked = function (e) {
             var i = e.data("id"), t = this._findTransit(i);
             if (!t) {
                 return
             }
-            this.notify("V0QJ_K1n", this, t.model)
+            this.notify("McQXIq&a", this, t.model)
         };
         t.prototype.speedUpAllTransitsClicked = function (t) {
             var e = this;
@@ -28333,10 +28377,10 @@
                     transits.push(t)
                 }
             });
-            this.notify("sEozpTO_", this, transits)
+            this.notify("2rQSA-wF", this, transits)
         };
         t.prototype.nextButtonClicked = function () {
-            this.notify("RH1ea9rA", this)
+            this.notify("TwE19Ltt", this)
         };
         t.prototype.getEvents = function () {
             var e = t.__super__.getEvents.apply(this, arguments);
@@ -28424,16 +28468,16 @@
             var i = this.createContainer({styles: "habitat " + s.type}), e = s.habitat, n = null, r = null, l = null, u, h;
             u = s.type === "target" ? "Target habitat" : "Source habitat";
             if (e.id !== this.controller.view.habitat.id) {
-                n = "ktCned%L"
+                n = "t2Qb%36o"
             }
             if (e.player) {
-                r = "hI3sAban";
+                r = "M0hdYxpo";
                 if (+e.player.id === +t.id) {
                     e.player = t
                 }
             }
             if (e.player && e.player.alliance) {
-                l = "QjJvGay1";
+                l = "zLFMAO4v";
                 if (typeof e.player.alliance === "number") {
                     e.player.alliance = a.alliances[e.player.alliance]
                 }
@@ -28441,7 +28485,7 @@
             h = o.Controller.findTransitRelation(e.player || {});
             this.createSubview(i, {
                 title: translate(u),
-                icon: this.notify("3s(kBgiI", this, {imageName: h, imageCategory: "diplomacy"})
+                icon: this.notify("Z-XGNYVU", this, {imageName: h, imageCategory: "diplomacy"})
             }, A);
             if (!e.name) {
                 e.name = translate("Renegade") + " " + _.try(e, "id")
@@ -28503,7 +28547,7 @@
                 }
                 e.createSubview(e, {
                     styles: "icon",
-                    content: this.notify("3s(kBgiI", this, {imageName: i.imageName, imageCategory: i.imageCategory})
+                    content: this.notify("Z-XGNYVU", this, {imageName: i.imageName, imageCategory: i.imageCategory})
                 })
             }
             e.createSubview(e, {styles: "detail", content: t.text})
@@ -28516,7 +28560,7 @@
         e.prototype.addUnits = function () {
             var e = this.createContainer({styles: "units"}), i = this.model, a = null, s = "";
             if (this.controller instanceof c.ViewController) {
-                a = "&N2xhhek";
+                a = ")WyTi%0g";
                 s = " clickable"
             }
             this.createSubview(e, {title: translate("Transit units")}, A);
@@ -28537,7 +28581,7 @@
             }, c.TransitUnitElement)
         };
         e.prototype.addCallHelp = function () {
-            var p = this.model.transitType, c = this.model.id, d = this.model.sourceHabitat.id, e = t.alliance ? t.alliance.id : null, r = [], o = "callHelpButton margin-bottom-sm", n = "DhKYVx7V", u = 0, s, i, l, h;
+            var p = this.model.transitType, c = this.model.id, d = this.model.sourceHabitat.id, e = t.alliance ? t.alliance.id : null, r = [], o = "callHelpButton margin-bottom-sm", n = "mSVw8M5T", u = 0, s, i, l, h;
             if (p !== 2) {
                 return
             }
@@ -28594,7 +28638,7 @@
         t.prototype.create = function () {
             this.createSubview(this, {
                 styles: "icon",
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: this.unit.primaryKey.toString(),
                     imageCategory: "units"
                 })
@@ -28627,7 +28671,7 @@
             if (utils.dict.size(n) > 0) {
                 e = this.createContainer({
                     data: {habitat: i, ownExternalTroops: false, title: "Offending troops"},
-                    clickMessage: "t64Lne%E"
+                    clickMessage: "tkOw_o7l"
                 });
                 e.createSubview(e, {title: translate("Offending troops")}, A);
                 e.createSubview(e, {
@@ -28648,7 +28692,7 @@
             l = i.getAllDefendingUnits();
             if (utils.dict.size(l) > 0) {
                 e = this.createContainer({
-                    clickMessage: "t64Lne%E",
+                    clickMessage: "tkOw_o7l",
                     data: {habitat: i, ownExternalTroops: false, title: "Defending troops"}
                 });
                 e.createSubview(e, {title: translate("Defending troops")}, A);
@@ -28668,7 +28712,7 @@
                         habitat: i,
                         ownExternalTroops: true,
                         title: "Outbound defending troops"
-                    }, clickMessage: "t64Lne%E"
+                    }, clickMessage: "tkOw_o7l"
                 });
                 e.createSubview(e, {title: translate("Outbound defending troops")}, A);
                 e.createSubview(e, {name: "outboubndDefendingUnitsTable", styles: "", units: u, habitat: i}, C.Table)
@@ -28681,7 +28725,7 @@
                         habitat: i,
                         ownExternalTroops: true,
                         title: "Outbound attacking troops"
-                    }, clickMessage: "t64Lne%E"
+                    }, clickMessage: "tkOw_o7l"
                 });
                 e.createSubview(e, {title: translate("Outbound attacking troops")}, A);
                 e.createSubview(e, {name: "outboubndAttackingUnitsTable", styles: "", units: r, habitat: i}, C.Table)
@@ -28696,7 +28740,7 @@
                         styles: "mission",
                         data: a.mission.unitConsumptions
                     });
-                    e.createSubview(e, {runningTimer: true, time: Math.floor((a.complete - (new Date - U)) / 1e3)}, q);
+                    e.createSubview(e, {runningTimer: true, time: Math.floor((a.complete - (new Date - P)) / 1e3)}, q);
                     e.createSubview(e, {title: translate(a.mission.identifier)}, A);
                     e.createSubview(e, {
                         units: a.mission.unitConsumptions,
@@ -28705,7 +28749,7 @@
                     }, C.Table);
                     e.createSubview(e, {
                         hoverView: o,
-                        content: this.notify("3s(kBgiI", this, {
+                        content: this.notify("Z-XGNYVU", this, {
                             imageName: a.mission.identifier,
                             imageCategory: "missions"
                         }),
@@ -28740,10 +28784,10 @@
         };
         i.prototype.create = function () {
             var n;
-            var f = [];
+            var p = [];
             var m = [];
-            var D, T;
-            var y = false;
+            var k, T;
+            var v = false;
             var l;
             var u, a;
             var i;
@@ -28751,16 +28795,16 @@
             var e;
             if (this.ownExternalTroops) {
                 for (e = 0; e < this.habitat.externalHabitatUnits.length; e++) {
-                    if (this.habitat.externalHabitatUnits[e].battleType == k.ATTACKER) {
+                    if (this.habitat.externalHabitatUnits[e].battleType == D.ATTACKER) {
                         m[e] = this.habitat.externalHabitatUnits[e]
                     } else {
-                        f[e] = this.habitat.externalHabitatUnits[e]
+                        p[e] = this.habitat.externalHabitatUnits[e]
                     }
                 }
                 if (this.title == "Outbound attacking troops") {
                     n = m
                 } else {
-                    n = f
+                    n = p
                 }
             } else {
                 n = this.habitat.habitatUnits
@@ -28786,7 +28830,7 @@
                     o[e] = n[e]
                 }
             }
-            if (n.length > 0 && n[0].battleType == k.OWN_HABITAT) {
+            if (n.length > 0 && n[0].battleType == D.OWN_HABITAT) {
                 u = o.shift()
             }
             a = o;
@@ -28801,7 +28845,7 @@
                     styles: "clickable",
                     units: S,
                     clickMessage: null,
-                    imageClickMessage: "&N2xhhek",
+                    imageClickMessage: ")WyTi%0g",
                     habitat: this.habitat
                 }, C.Table)
             }
@@ -28825,46 +28869,46 @@
                 i = this.createContainer();
                 i.createSubview(i, {
                     name: "foreignUnits",
-                    icon: this.notify("3s(kBgiI", this, {imageName: "centerHabitat", imageCategory: "icons"}),
+                    icon: this.notify("Z-XGNYVU", this, {imageName: "centerHabitat", imageCategory: "icons"}),
                     title: utils.sanitize(r.name) || translate("Renegade") + " " + r.id,
                     clickData: {habitat: r},
-                    titleClickMessage: "zog0GRpX"
+                    titleClickMessage: "s&TH%udj"
                 }, A);
-                if (a[e].battleType === k.EXTERNAL_UNITS_TO_DEFENSE) {
-                    var _ = this.habitat._getBundledUnits([a[e]], [k.EXTERNAL_UNITS_TO_DEFENSE]);
+                if (a[e].battleType === D.EXTERNAL_UNITS_TO_DEFENSE) {
+                    var _ = this.habitat._getBundledUnits([a[e]], [D.EXTERNAL_UNITS_TO_DEFENSE]);
                     this.unitTable = i.createSubview(i, {
                         name: "foreignDefenseUnits",
                         styles: "recallUnits",
                         units: _,
                         inputFields: true,
                         clickMessage: null,
-                        imageClickMessage: "&N2xhhek",
+                        imageClickMessage: ")WyTi%0g",
                         habitat: this.habitat
                     }, C.Table)
                 }
-                if (a[e].battleType === k.ATTACKER) {
+                if (a[e].battleType === D.ATTACKER) {
                     if (this.ownExternalTroops) {
-                        y = true
+                        v = true
                     }
-                    var w = this.habitat._getBundledUnits([a[e]], [k.ATTACKER]);
+                    var w = this.habitat._getBundledUnits([a[e]], [D.ATTACKER]);
                     this.unitTable = i.createSubview(i, {
                         name: "foreignAttackUnits",
-                        inputFields: y,
+                        inputFields: v,
                         units: w,
                         clickMessage: null,
-                        imageClickMessage: "&N2xhhek",
+                        imageClickMessage: ")WyTi%0g",
                         habitat: this.habitat,
                         finalClearfix: false
                     }, C.Table);
-                    var d = 0, c = t.conquestPointDictionary, v = a[e].habitat.id;
-                    if (c && c.hasOwnProperty(v)) {
-                        d = c[v]
+                    var d = 0, c = t.conquestPointDictionary, g = a[e].habitat.id;
+                    if (c && c.hasOwnProperty(g)) {
+                        d = c[g]
                     }
                     if (d > 0) {
                         var h = this.createSubview(this.unitTable, {styles: "resourceElement silver"});
                         h.createSubview(h, {
                             styles: "icon",
-                            content: this.notify("3s(kBgiI", this, {imageName: "6", imageCategory: "resources"})
+                            content: this.notify("Z-XGNYVU", this, {imageName: "6", imageCategory: "resources"})
                         });
                         h.createSubview(h, {styles: "amount", content: d})
                     }
@@ -28877,23 +28921,23 @@
                     }
                 }
                 i.clearfix();
-                var g = false, b = this.habitat;
-                if (this.ownExternalTroops || a[e].battleType != k.ATTACKER) {
+                var y = false, b = this.habitat;
+                if (this.ownExternalTroops || a[e].battleType != D.ATTACKER) {
                     l = this.ownExternalTroops ? "Recall troops" : "Send troops home";
                     i.createSubview(i, {
                         content: translate(l),
                         hover: translate(l),
                         data: {message: l, table: this.unitTable, habitatUnit: a[e]},
-                        clickMessage: "IKdc_r2t"
-                    }, p);
-                    g = true;
+                        clickMessage: "EhEZoYq3"
+                    }, f);
+                    y = true;
                     b = r
                 }
-                this.addCallHelp(g, b)
+                this.addCallHelp(y, b)
             }
         };
         i.prototype.addCallHelp = function (l, o) {
-            var u = o.id, h = [], r = "callHelpButton", n = "WvopJEB&", e = t.alliance ? t.alliance.id : null, i, s, c, d;
+            var u = o.id, h = [], r = "callHelpButton", n = "1rM7HNBw", e = t.alliance ? t.alliance.id : null, i, s, c, d;
             if (!e) {
                 return
             }
@@ -28932,9 +28976,9 @@
             }
         };
         i.prototype.castleLink = function (e, i) {
-            var t = e.createSubview(e, {styles: "habitatLink clickable", clickMessage: "zog0GRpX", data: {habitat: i}});
+            var t = e.createSubview(e, {styles: "habitatLink clickable", clickMessage: "s&TH%udj", data: {habitat: i}});
             t.createSubview(t, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "centerHabitat",
                     imageCategory: "icons"
                 }), styles: "icon"
@@ -28947,7 +28991,7 @@
         };
         return i
     }(e);
-    Hi = function (e) {
+    Bi = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -29075,8 +29119,8 @@
             this.addOption("headline", null);
             this.setOptions(e);
             this.isRedraw = false;
-            this.drawStartMessage = "VYOa5&uk";
-            this.drawEndMessage = "rNeqyvId"
+            this.drawStartMessage = "IyzpvIsg";
+            this.drawEndMessage = "YlxWQ_-Z"
         }
 
         t.prototype.dataUpdate = function (e, t) {
@@ -29117,7 +29161,7 @@
                 hover: translate("Send troops home"),
                 name: "recallAllUnitsButton",
                 hidden: true,
-                message: "8OjRr(VB"
+                message: "iHUXRmEe"
             });
             e.push({
                 graphic: "headlineButton_pageRight",
@@ -29126,7 +29170,7 @@
                 name: "nextHabitat",
                 group: "habitatPagination",
                 styles: "paginate next",
-                message: "a(xvQj%J"
+                message: "oSK%Lkmu"
             });
             e.push({
                 graphic: "headlineButton_pageLeft",
@@ -29135,7 +29179,7 @@
                 name: "prevHabitat",
                 group: "habitatPagination",
                 styles: "paginate prev",
-                message: "ZepI(72A"
+                message: "zWy_6EAv"
             });
             for (var i = 0; i < e.length; i++) {
                 var t = e[i], a = "headerButton";
@@ -29145,7 +29189,7 @@
                 this.createSubview(this.headline.buttons, {
                     graphic: t.graphic,
                     hover: t.hover,
-                    clickMessage: t.message || "9obJO5Cf",
+                    clickMessage: t.message || "_w32GmpP",
                     styles: a,
                     data: {action: t.action},
                     name: t.name,
@@ -29162,11 +29206,11 @@
             return t
         };
         t.prototype.createCastleScene = function () {
-            var n = this.habitat.publicHabitatType, y = this.habitat.habitatBuildings, h = [], a = [], u = [], t, e, p, o, s;
+            var n = this.habitat.publicHabitatType, v = this.habitat.habitatBuildings, h = [], a = [], u = [], t, e, f, o, s;
             this.deleteSubviewByField("group", "castleScene");
-            for (var v in f) {
-                buildingObject = f[v];
-                if (typeof y[buildingObject.primaryKey] !== "undefined") {
+            for (var g in d) {
+                buildingObject = d[g];
+                if (typeof v[buildingObject.primaryKey] !== "undefined") {
                     h.push(buildingObject)
                 }
             }
@@ -29184,43 +29228,43 @@
                     case"wall":
                     case"fortresswall":
                         a.push({
-                            src: this.notify("fc6TZO&_", this, {name: "extraWall" + n, level: e.level}),
+                            src: this.notify("SYduB87l", this, {name: "extraWall" + n, level: e.level}),
                             styles: "extra-wall-" + n
                         });
                     default:
-                        a.push({src: this.notify("fc6TZO&_", this, {name: t, level: e.level}), styles: t});
+                        a.push({src: this.notify("SYduB87l", this, {name: t, level: e.level}), styles: t});
                         u.push({
                             cssid: t,
                             level: e.level,
                             primaryKey: e.primaryKey,
-                            points: this.notify("51LgJaC2", this, t)
+                            points: this.notify("BlMEeY4o", this, t)
                         })
                 }
             }
             if (n === 0) {
-                a.push({src: this.notify("fc6TZO&_", this, {name: "backgroundcastle", level: 1}), styles: "background"})
+                a.push({src: this.notify("SYduB87l", this, {name: "backgroundcastle", level: 1}), styles: "background"})
             }
             this.controller.animationList = {};
-            var l = this.notify("r_JREQEf", this, {habitatType: n, buildingSet: u});
+            var l = this.notify("7MHJZFbL", this, {habitatType: n, buildingSet: u});
             for (var r = 0, m = l.length; r < m; r++) {
-                var g = utils.uniqueID();
-                this.controller.animationList[l[r].name] = {curentId: 0, htmlId: "#" + g, id: g, list: l[r].imgList}
+                var y = utils.uniqueID();
+                this.controller.animationList[l[r].name] = {curentId: 0, htmlId: "#" + y, id: y, list: l[r].imgList}
             }
             for (var i in this.controller.animationList) {
-                var d = this.controller.animationList[i].curentId + 5, s = this.controller.animationList[i].list, b = s <= d ? d - s : d;
+                var p = this.controller.animationList[i].curentId + 5, s = this.controller.animationList[i].list, b = s <= p ? p - s : p;
                 a.push({
                     src: this.controller.animationList[i].list[b],
                     styles: "habitat-animation " + i,
                     id: this.controller.animationList[i].id
                 })
             }
-            p = this.createSubview(this, {
+            f = this.createSubview(this, {
                 template: "castleScene",
                 group: "castleScene",
                 atachTo: this,
                 templateData: {parentHtmlId: this.parentID, htmlId: utils.uniqueID(), images: a, buildings: u}
             }, c.CastleScene, this.controller);
-            p.draw();
+            f.draw();
             if (this.controller.windowIsActive) {
                 this.controller.setActive()
             }
@@ -29248,7 +29292,7 @@
         }
 
         t.prototype.buildinginClickHandler = function (e, t) {
-            this.notify("wz5CjRul", {name: "content", primaryKey: t})
+            this.notify("C2loL2Fp", {name: "content", primaryKey: t})
         };
         t.prototype._attachEvents = function () {
             var e = $("#" + this.templateData.htmlId + " .building-area"), t = this;
@@ -29288,7 +29332,7 @@
             i.__super__.constructor.apply(this, arguments);
             this.addRequired("habitat");
             this.setOptions(t);
-            this.requiredKnowledge = P[22];
+            this.requiredKnowledge = U[22];
             this.atemptToAtachEvent = 0;
             this.atemptToAtachCounter = 0;
             this.upgradeObject = null
@@ -29296,7 +29340,7 @@
 
         i.prototype.create = function () {
             if (this.habitat.habitatType === 2) {
-                this.notify("Z04XvT7k")
+                this.notify("v2v6tJij")
             }
             var t = this.habitat.getFortressUpdate();
             this.upgradeObject = t;
@@ -29314,8 +29358,8 @@
                     break
             }
         };
-        i.prototype.toFortressExpand = function (a, y) {
-            var C = this.habitat.fortressExpansionArray.length || this.habitat.fortressExpansionArray, b = a.original.habitatAmount, m = b - C, h = [], l = [], u = [], c = utils.uniqueID(), w = this.habitat.isLinkedtoAnyFortressCenter(true), v = "castleToFortressExpand.first", n = {
+        i.prototype.toFortressExpand = function (a, v) {
+            var C = this.habitat.fortressExpansionArray.length || this.habitat.fortressExpansionArray, b = a.original.habitatAmount, m = b - C, h = [], l = [], u = [], c = utils.uniqueID(), w = this.habitat.isLinkedtoAnyFortressCenter(true), g = "castleToFortressExpand.first", n = {
                 title: a.title,
                 icon: "BuildFortressIcon",
                 descriptionLong: translate("BKServerKnowledge-22"),
@@ -29325,10 +29369,10 @@
                 connectedToMessage: w
             };
             if (a.ready.isInProgress && a.ready.isInProgress.upgradeId === 3) {
-                var g = a.ready.isInProgress.durationFactor <= .5;
-                v = "castleToFortressExpand.first.inProgress";
+                var y = a.ready.isInProgress.durationFactor <= .5;
+                g = "castleToFortressExpand.first.inProgress";
                 n.buttonStyles = "speedup-fortress-upgrade active";
-                n.buttonIcon = g ? "buildFinish" : "buildSpeedup";
+                n.buttonIcon = y ? "buildFinish" : "buildSpeedup";
                 n.speedupId = a.ready.isInProgress.id;
                 n.speedupCost = a.build.speedupCost;
                 n.compliteMachine = a.ready.isInProgress.complete;
@@ -29336,7 +29380,7 @@
             }
             this.createSubview(this, {
                 styles: "fortress-update-view first-row",
-                content: utils.Template.compile(v, n)
+                content: utils.Template.compile(g, n)
             }, e);
             h.push({
                 posX: this.habitat.mapX,
@@ -29346,8 +29390,8 @@
                 extraStyless: " first"
             });
             var S = translate("Required") + ": " + translate("ConquestSectionTitle");
-            for (var p = 0, _ = y.length; p < _; p++) {
-                var i = y[p], d = this.habitat.fortressExpansionArray.indexOf(i.id.toString()), o = this.habitat.habitatExpandingOrder[i.id.toString()], s;
+            for (var p = 0, _ = v.length; p < _; p++) {
+                var i = v[p], d = this.habitat.fortressExpansionArray.indexOf(i.id.toString()), o = this.habitat.habitatExpandingOrder[i.id.toString()], s;
                 if (i.habitatType === 2) {
                     continue
                 }
@@ -29355,13 +29399,13 @@
                     h[++d] = {
                         posX: i.mapX,
                         posY: i.mapY,
-                        habitatType: d + ". " + translate("expansion"),
+                        habitatType: translate("%1d. Expansion", d),
                         habitatName: i.name
                     };
                     continue
                 }
                 if (o) {
-                    var D = new Date(o.complete), T = new Date, g = o.durationFactor <= .5;
+                    var k = new Date(o.complete), T = new Date, y = o.durationFactor <= .5;
                     u.push({
                         posX: i.mapX,
                         posY: i.mapY,
@@ -29372,8 +29416,8 @@
                         speedupCost: a.build.speedupCost,
                         speedupId: o.id,
                         buttonStyles: "speedup-fortress-upgrade active",
-                        icon: g ? "buildFinish" : "buildSpeedup",
-                        isFinish: g
+                        icon: y ? "buildFinish" : "buildSpeedup",
+                        isFinish: y
                     });
                     continue
                 }
@@ -29386,7 +29430,7 @@
                     icon: "buildWhite"
                 };
                 if (t.id === i.player) {
-                    var k = new r.Habitat(i), f = k.getFortressUpdate(true);
+                    var D = new r.Habitat(i), f = D.getFortressUpdate(true);
                     s.isOwn = true;
                     s.isReady = f.ready.isReadyForBuild;
                     s.buttonStyles = f.ready.isReadyForBuild ? "active add-to-fortress-center" : "buildbuttondisabled disabled";
@@ -29402,7 +29446,7 @@
             if (b + 1 <= u.length + h.length) {
                 l = []
             } else if (l.length) {
-                l.sort(Z.expansionCandidats);
+                l.sort(J.expansionCandidats);
                 l[0].extraStyless = "first"
             }
             if (u.length) {
@@ -29453,10 +29497,10 @@
         };
         i.prototype.centerMapClick = function (t) {
             var e = $(t).data("pos-x"), i = $(t).data("pos-y");
-            this.notify("8R1G6P_n", {mapX: e, mapY: i})
+            this.notify("7sUejEtB", {mapX: e, mapY: i})
         };
         i.prototype.constructFortressClick = function (t) {
-            this.notify("H&Sw5H&u", {})
+            this.notify("vem20vX4", {})
         };
         i.prototype.addtoFortressClick = function (i) {
             var a = $(i).data("habitat-id"), t = {id: a}, e = 0;
@@ -29466,10 +29510,10 @@
             if (e >= this.upgradeObject.original.listBoundary) {
                 t.payment = this.upgradeObject.original.buildSpeedupCost
             }
-            this.notify("LUJp0HUo", t)
+            this.notify("fiVOAIVw", t)
         };
         i.prototype.toFortressCenter = function (t) {
-            var a = this.createContainer({styles: "fortress-update-view"}), p = this.createSubview(a, {styles: "row first-row"}), d = this.createSubview(a, {styles: "row second-row"}), c = this.createSubview(a, {styles: "row third-row"}), r = this.createSubview(a, {styles: "foutrh-row"}), h = new qe.HoverView(this.controller, {
+            var a = this.createContainer({styles: "fortress-update-view"}), p = this.createSubview(a, {styles: "row first-row"}), d = this.createSubview(a, {styles: "row second-row"}), c = this.createSubview(a, {styles: "row third-row"}), r = this.createSubview(a, {styles: "foutrh-row"}), h = new $e.HoverView(this.controller, {
                 knowledge: this.requiredKnowledge,
                 habitat: this.habitat
             }), i = utils.uniqueID(), u, n, l, s;
@@ -29548,11 +29592,11 @@
             }
         };
         i.prototype.buildFortressCenterClick = function (t) {
-            this.notify("CDcj5dJe")
+            this.notify("153zmq7V")
         };
         i.prototype.speedupFortressUpgradeClick = function (t) {
             var e = $(t).data("speedupid"), i = $(t).data("speedupcost"), a = $(t).data("isfinish");
-            this.notify("z-&CnG4g", {id: e, cost: i, isFinishing: a})
+            this.notify("IzeyXRPX", {id: e, cost: i, isFinishing: a})
         };
         i.prototype.runCounter = function (t) {
             var e = $(t.selector);
@@ -29621,7 +29665,7 @@
                 return
             }
             n = s.upgradeTo[0];
-            t = f[n];
+            t = d[n];
             h = this.createSubview(this, {styles: "nextLevelPreviewBlock"});
             var r = {};
             r[n - 1] = s;
@@ -29655,7 +29699,7 @@
                 i = t.requiredKnowledges[e];
                 this.createSubview(this, {
                     styles: "requiredKnowledgesIcon",
-                    content: this.notify("3s(kBgiI", this, {imageName: i.identifier, imageCategory: "knowledges"})
+                    content: this.notify("Z-XGNYVU", this, {imageName: i.identifier, imageCategory: "knowledges"})
                 });
                 if (!i.alreadyResearched(this.habitat)) {
                     l = "#B23116";
@@ -29689,15 +29733,15 @@
                 currentBattleValue = this.building.battleValues[t];
                 var a = this.createSubview(o, {name: "battleValueListRow", styles: "battleValueListRow"});
                 var s = [{
-                    icon: this.notify("3s(kBgiI", this, {imageName: t, imageCategory: "icons"}),
+                    icon: this.notify("Z-XGNYVU", this, {imageName: t, imageCategory: "icons"}),
                     text: translate(t),
                     name: "corps"
                 }, {
-                    icon: this.notify("3s(kBgiI", this, {imageName: "attack", imageCategory: "icons"}),
+                    icon: this.notify("Z-XGNYVU", this, {imageName: "attack", imageCategory: "icons"}),
                     text: currentBattleValue.offense,
                     name: "offense"
                 }, {
-                    icon: this.notify("3s(kBgiI", this, {imageName: "defense", imageCategory: "icons"}),
+                    icon: this.notify("Z-XGNYVU", this, {imageName: "defense", imageCategory: "icons"}),
                     text: currentBattleValue.defense,
                     name: "defense"
                 }];
@@ -29733,18 +29777,18 @@
                     maxLength: l.habitatNameLengthMax || l.nameMaximumLength,
                     caption: "Change Name",
                     currentValue: this.habitat.name
-                }, H.Input);
+                }, B.Input);
                 this.createSubview(this.changeNameContainer, {
                     content: translate("Save"),
                     hover: translate("Save"),
-                    clickMessage: "qlABwxfp"
-                }, p);
+                    clickMessage: "fyQl-yaH"
+                }, f);
                 this.createSubview(this.changeNameContainer, {
                     name: "editButton",
                     content: this.buttonText,
                     hover: this.buttonText,
-                    clickMessage: "9vn31KhM"
-                }, p)
+                    clickMessage: "U)fFuais"
+                }, f)
             } else {
                 this.createSubview(this.changeNameContainer, {
                     name: "castleName",
@@ -29753,11 +29797,11 @@
                 });
                 this.createSubview(this.changeNameContainer, {
                     name: "editButton",
-                    content: this.notify("3s(kBgiI", this, {imageName: "edit", imageCategory: "icons"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: "edit", imageCategory: "icons"}),
                     hover: this.buttonText,
-                    clickMessage: "Bn3PhQH4",
+                    clickMessage: "tuZwYNaZ",
                     styles: "editCastleName"
-                }, p)
+                }, f)
             }
         };
         return t
@@ -29798,7 +29842,7 @@
             }
             return i
         };
-        e.prototype["Z04XvT7k"] = function () {
+        e.prototype["v2v6tJij"] = function () {
             var o = !this.currentTab || this.currentTab === "visitCastle", a;
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t && t.name === "marketView") {
@@ -29806,8 +29850,8 @@
             }
             this.paginationLocked = false;
             this.editting = false;
-            this.notify("Z04XvT7k", this, {force: o});
-            if (x) {
+            this.notify("v2v6tJij", this, {force: o});
+            if (I) {
                 var s = this.controller.tutorialController.getCurrentStep(), i = null;
                 if (s.name === "backFromArsenal") {
                     i = "backFromArsenal"
@@ -29816,7 +29860,7 @@
                 }
                 if (i) {
                     a = function () {
-                        this.notify("qsBGtsBz", i)
+                        this.notify("cfdiF6Wv", i)
                     };
                     setTimeout(a.bind(this), 1e3)
                 }
@@ -29848,21 +29892,21 @@
                 t.draw()
             }
         };
-        e.prototype["gRayY3gp"] = function () {
+        e.prototype["BzDoxZ0V"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t && t.name === "habitatView") {
-                this.notify("69%UYxhx", this)
+                this.notify("SrbXsq-H", this)
             }
             this._paginationState()
         };
-        e.prototype["6)kQoR7F"] = function () {
+        e.prototype["%HVTsgFN"] = function () {
             this._manageMultiMissionButton()
         };
-        e.prototype["5gDHtT_N"] = function () {
+        e.prototype["x2x7Uarm"] = function () {
             this.currentTab = null;
-            this.notify("5gDHtT_N", this, e.__super__, arguments)
+            this.notify("x2x7Uarm", this, e.__super__, arguments)
         };
-        e.prototype["9obJO5Cf"] = function (e) {
+        e.prototype["_w32GmpP"] = function (e) {
             var t = e.data.action, a = this.view.habitat.id, i = false;
             i = ["sendDefense", "sendResources"].indexOf(t) === -1 && this.currentTab && this.currentTab === t;
             if (i && (typeof e.tutorialForce === "undefined" || e.tutorialForce !== true)) {
@@ -29871,9 +29915,9 @@
             if (r.indexOf(t) !== -1) {
                 this.currentTab = t
             }
-            this.notify("9obJO5Cf", this, {action: t, habitatID: a, data: e.data})
+            this.notify("_w32GmpP", this, {action: t, habitatID: a, data: e.data})
         };
-        e.prototype["wVrQWmJ%"] = function (t) {
+        e.prototype["zh%1hNJI"] = function (t) {
             if ((this.currentTab == null || this.currentTab === "visitCastle") && t.data.action === "visitCastle") {
                 return
             }
@@ -29883,10 +29927,10 @@
                     $("#" + this.view.id).removeClass("lightBG")
                 }
             }
-            if (typeof x !== "undefined" && x) {
+            if (typeof I !== "undefined" && I) {
                 if (t.data.action === "buildingList") {
                     var e = function () {
-                        this.notify("qsBGtsBz", "buildingListTab")
+                        this.notify("cfdiF6Wv", "buildingListTab")
                     };
                     setTimeout(e.bind(this), 500)
                 } else {
@@ -29897,12 +29941,12 @@
             this[t.data.msg](t)
         };
         e.prototype.dataUpdate = function (s, e) {
-            var v, i;
+            var g, i;
             if (typeof e === "undefined" || e === null || !e[this.name] || this.editting) {
                 return
             }
             if (this.datasource && this.datasource._restockRecalculate === true) {
-                this["HK_Jo-Lt"](this.view, null, true);
+                this["ElGl)BXz"](this.view, null, true);
                 return
             }
             this.view.habitat = e[this.name];
@@ -29917,8 +29961,8 @@
                 if (r !== null) {
                     i = e[this.name];
                     var S = i.getColorClass();
-                    v = {habitat: i, resourceColors: S};
-                    r.dataUpdate(s, v);
+                    g = {habitat: i, resourceColors: S};
+                    r.dataUpdate(s, g);
                     r.draw()
                 }
                 var l = this.view.findSubviewByField("group", "HabitatBuildingList");
@@ -29944,40 +29988,40 @@
                 }
                 var h = this.view.findSubviewByField("group", "HabitatUnitList");
                 if (h !== null) {
-                    var k = this.name;
-                    h.dataUpdate(null, k);
+                    var D = this.name;
+                    h.dataUpdate(null, D);
                     h.draw()
                 }
                 var n = this.view.findSubviewByField("group", "SingleHabitatUnitList");
                 if (n !== null) {
                     if (e[this.name].externalHabitatUnits.length === 0 && e[this.name].habitatUnits.length <= 1) {
                         if (this.view.findSubviewByField("tag", "currentView").id === n.id) {
-                            this["Z04XvT7k"]()
+                            this["v2v6tJij"]()
                         }
                     } else {
                         n.updateValues(e[this.name]);
                         n.draw()
                     }
                 }
-                var g = this.view.findSubviewByField("group", "habitatTransitList");
-                if (g !== null) {
+                var y = this.view.findSubviewByField("group", "habitatTransitList");
+                if (y !== null) {
                     var b = t.habitate[this.name].habitatTransits, m = this.datasource.prepareTransits(b);
-                    g.dataUpdate(null, m)
+                    y.dataUpdate(null, m)
                 }
                 var a = this.view.findSubviewByField("tag", "currentView");
-                var y = t.habitate[this.name].habitatTransits;
+                var v = t.habitate[this.name].habitatTransits;
                 var c = false;
                 if (a !== null && a.model) {
                     var _ = a.model.generatedTransitId;
-                    for (var o = 0; o < y.length; o++) {
-                        if (y[o].generatedTransitId === _) {
+                    for (var o = 0; o < v.length; o++) {
+                        if (v[o].generatedTransitId === _) {
                             a.dataUpdate();
                             c = true;
                             break
                         }
                     }
                     if (!c) {
-                        this["Z04XvT7k"]();
+                        this["v2v6tJij"]();
                         a = this.view.findSubviewByField("tag", "currentView")
                     }
                 }
@@ -30021,9 +30065,9 @@
             if (t === "visitCastle") {
                 this.currentTab = null
             } else if (t === "buildingList") {
-                this["L2hfbFJ9"]()
+                this["5PJWitzp"]()
             } else if (t === "unitList") {
-                this["NYS4pNns"]()
+                this["uJOS3CXL"]()
             } else if (t === "missions") {
                 var i;
                 for (var r in this.view.habitat.habitatBuildings) {
@@ -30033,36 +30077,36 @@
                         break
                     }
                 }
-                this["jIPyzFS)"]({
+                this["Mqs(JcJm"]({
                     buildingName: i.identifier.split("/")[0],
                     buildingPrimaryKey: i.primaryKey,
                     group: "BuildingElement"
                 })
             } else if (t === "sendResources") {
-                e = this["(k4d8uGo"]();
+                e = this["8vbwQDmT"]();
                 e = false
             } else if (t === "sendDefense") {
-                this["wJTsfelj"]();
+                this["(4qs7hFR"]();
                 e = false
             } else if (t === "transports") {
-                this["xLTWtR_("]()
+                this["A(NfVnHR"]()
             }
             this.actionSource = null;
             return e
         };
-        e.prototype["wz5CjRul"] = function (i) {
+        e.prototype["C2loL2Fp"] = function (i) {
             if (i.name === "content") {
-                var e = f[i.primaryKey];
+                var e = d[i.primaryKey];
                 if (e.identifier && e.identifier.indexOf("Lumberjack") !== -1) {
                     var s = utils.bind(function () {
-                        this.notify("qsBGtsBz", "viewLumberjack")
+                        this.notify("cfdiF6Wv", "viewLumberjack")
                     }, this);
                     setTimeout(s, 500)
                 }
                 this.currentSubViewBuildingID = i.primaryKey;
                 this.showNextViewOfClass(c.DetailView, {building: e, habitat: t.habitate[this.name]});
                 var a = e.identifier.split("/")[0];
-                this.notify("N60zjkFe", this, {msg: a, link: a, category: "building"})
+                this.notify("moYXcWen", this, {msg: a, link: a, category: "building"})
             }
         };
         e.prototype._speedupMessage = function (s, n, r, o, i) {
@@ -30072,20 +30116,20 @@
             var e = this;
             utils.dialog.confirm(this, u, a, function () {
                 if (t.gold < i) {
-                    e.notify("vF4Exq0E", e, {costs: i})
+                    e.notify("8xvB5GpX", e, {costs: i})
                 } else {
                     e.datasource[r](e.name, n)
                 }
             })
         };
-        e.prototype["a(xvQj%J"] = function () {
+        e.prototype["oSK%Lkmu"] = function () {
             var t = this._getPaginationInfo();
             if (!t || !t.next) {
                 return
             }
             this._performPagination(t.next)
         };
-        e.prototype["ZepI(72A"] = function () {
+        e.prototype["zWy_6EAv"] = function () {
             var t = this._getPaginationInfo();
             if (!t || !t.prev) {
                 return
@@ -30159,22 +30203,22 @@
                 e.hide()
             }
         };
-        e.prototype[")b64mnDd"] = function (t) {
+        e.prototype["eIRq5GQr"] = function (t) {
             this.showNextViewOfClass(Le.DetailView, {data: t.data})
         };
-        e.prototype["77nwKLLo"] = function (t) {
+        e.prototype["Pc3p1LJt"] = function (t) {
             this.datasource.executeMission(this.name, t.data);
             var e = function () {
-                this.notify("qsBGtsBz", "performMission")
+                this.notify("cfdiF6Wv", "performMission")
             };
             setTimeout(e.bind(this), 700)
         };
-        e.prototype["pglnpLqr"] = function (t) {
+        e.prototype["qpPcmzhQ"] = function (t) {
             var e = K[t.data].identifier;
             var i = K[t.data].buildSpeedupCost;
             this._speedupMessage("Mission time reduction for %@ costs %d %@. You have %d %@.", t.data, "speedupMission", e, i)
         };
-        e.prototype["x%vWq&Fx"] = function (l) {
+        e.prototype["TX3pPf8R"] = function (l) {
             var o = l.data;
             var i = [];
             var e = 0;
@@ -30193,13 +30237,13 @@
             var c = $.sprintf(u, i, e, r, t.gold, r);
             utils.dialog.confirm(this, c, r, function () {
                 if (t.gold < e) {
-                    s.notify("vF4Exq0E", s, {costs: e})
+                    s.notify("8xvB5GpX", s, {costs: e})
                 } else {
                     s.datasource.speedupAllMissions(s.name, "")
                 }
             })
         };
-        e.prototype["eG_LJFm0"] = function () {
+        e.prototype["me%WP7Wy"] = function () {
             var i = this.view.findSubviewByName("missionContainer"), a = i.habitat, r = this._findSelectedMissions(i), s = a.getSortedMissions();
             var n = [];
             for (var t = 0, o = s.length; t < o; t++) {
@@ -30220,7 +30264,7 @@
             }
             return i
         };
-        e.prototype["sfAGfxHm"] = function (e) {
+        e.prototype["-EUI6Hr_"] = function (e) {
             var n = e.data.habitatID;
             var i = e.data.item;
             var a = this.name;
@@ -30232,7 +30276,7 @@
             if (s) {
                 s.updateMissionCheckboxes(l)
             }
-            this.notify("sfAGfxHm", this, {habitatId: a, mission: i})
+            this.notify("-EUI6Hr_", this, {habitatId: a, mission: i})
         };
         e.prototype._manageMultiMissionButton = function () {
             if (!this.view) {
@@ -30279,53 +30323,53 @@
                 }
             }
         };
-        e.prototype["DQgIKYOF"] = function (t) {
+        e.prototype["zYi4zLQE"] = function (t) {
             this.showNextViewOfClass(si.DetailView, {data: t.data, habitat: t.parent.habitat})
         };
-        e.prototype["S2-_ba6Y"] = function (t) {
+        e.prototype["ZWcHPcYk"] = function (t) {
             if (t && t.styles && t.styles.indexOf("disabled") !== -1) {
                 return
             }
             this.datasource.executeResearch(this.name, t.data)
         };
-        e.prototype["1W&CJ7f_"] = function (t) {
-            var e = P[t.data].identifier;
-            var i = P[t.data].buildSpeedupCost;
+        e.prototype["EcocpNKT"] = function (t) {
+            var e = U[t.data].identifier;
+            var i = U[t.data].buildSpeedupCost;
             this._speedupMessage("Research time reduction for %@ costs %d %@. You have %d %@.", t.data, "speedupResearch", e, i)
         };
-        e.prototype["5lTV0a0i"] = function (t) {
-            var e = P[t.data].identifier;
-            var i = P[t.data].buildSpeedupCost;
+        e.prototype["Dk2QBR27"] = function (t) {
+            var e = U[t.data].identifier;
+            var i = U[t.data].buildSpeedupCost;
             this._speedupMessage("Finishing the research (%@) instantly costs %d %@. You have %d %@.", t.data, "finishResearch", e, i)
         };
-        e.prototype["fc6TZO&_"] = function (i, e) {
-            var t = this.notify("YrKz7XU6", this);
+        e.prototype["SYduB87l"] = function (i, e) {
+            var t = this.notify("AN4-Dk1u", this);
             if (t !== null) {
                 return t.getBuildingImage(e)
             }
             return null
         };
-        e.prototype["r_JREQEf"] = function (i, e) {
-            var t = this.notify("YrKz7XU6", this);
+        e.prototype["7MHJZFbL"] = function (i, e) {
+            var t = this.notify("AN4-Dk1u", this);
             if (t !== null) {
                 return t.getAllAnimationsImage(e)
             }
             return null
         };
-        e.prototype["51LgJaC2"] = function (i, e) {
-            var t = this.notify("YrKz7XU6", this);
+        e.prototype["BlMEeY4o"] = function (i, e) {
+            var t = this.notify("AN4-Dk1u", this);
             if (t !== null) {
                 return t.getBuildingCoords(e)
             }
             return null
         };
-        e.prototype["xheqVX09"] = function (e, t) {
+        e.prototype["mI&X&eaa"] = function (e, t) {
             this.view.findSubviewByName("habitatNextLevelPreviewElement").dataUpdate("", t)
         };
-        e.prototype["iBGdOz(N"] = function (t) {
-            this.showNextViewOfClass(Hi, {transit: t.data})
+        e.prototype["hn6BA)rh"] = function (t) {
+            this.showNextViewOfClass(Bi, {transit: t.data})
         };
-        e.prototype["zog0GRpX"] = function (s) {
+        e.prototype["s&TH%udj"] = function (s) {
             var e = s.data.habitat, i = "createForeignHabitatWindow";
             if (e.player && (e.player === t.id || e.player.id === t.id)) {
                 i = "createHabitatWindow";
@@ -30335,7 +30379,7 @@
             }
             this.controller[i](e)
         };
-        e.prototype["t64Lne%E"] = function (t) {
+        e.prototype["tkOw_o7l"] = function (t) {
             var e = [], i = "defending";
             if (t.data.title.indexOf("Offending") !== -1) {
                 i = "offending";
@@ -30358,7 +30402,7 @@
                 }
             }
         };
-        e.prototype["IKdc_r2t"] = function (i) {
+        e.prototype["EhEZoYq3"] = function (i) {
             var e = i.data.table.getAllFieldValues();
             var a = {};
             for (var t = 0; t < e.length; t++) {
@@ -30379,14 +30423,14 @@
             var o = translate("Send troops home"), l = translate("global.confirm");
             utils.dialog.confirm(this, l, o, r)
         };
-        e.prototype["8OjRr(VB"] = function () {
+        e.prototype["iHUXRmEe"] = function () {
             var t, e = translate("Recall troops"), i = translate("Do you really want to send all troops home?");
             t = function () {
                 this.datasource.recallAllTroops(this.view.habitat.id)
             };
             utils.dialog.confirm(this, i, e, t.bind(this))
         };
-        e.prototype["UmoDiQ&j"] = function (e) {
+        e.prototype["K9uiba(q"] = function (e) {
             if (e.group !== "Element") {
                 return
             }
@@ -30400,22 +30444,22 @@
                 this.showNextViewOfClass(si.DetailView, {data: e.data.primaryKey, habitat: t.habitate[this.name]})
             }
         };
-        e.prototype["PBEwBX%o"] = function (e) {
+        e.prototype["aBvK)dWb"] = function (e) {
             this.showNextViewOfClass(si.DetailView, {data: e.data.primaryKey, habitat: t.habitate[this.name]})
         };
-        e.prototype["tsD%_3Dy"] = function (e, t) {
+        e.prototype["8CFuQ465"] = function (e, t) {
             if (t.volumeAmount) {
-                t.buildResources[n.PEOPLE] = t.volumeAmount - f[t.upgradeOf].volumeAmount
+                t.buildResources[n.PEOPLE] = t.volumeAmount - d[t.upgradeOf].volumeAmount
             } else {
                 t.buildResources[n.PEOPLE] = 0
             }
             return [{resources: t.buildResources, time: t.buildDuration}]
         };
-        e.prototype["rNeqyvId"] = function () {
+        e.prototype["YlxWQ_-Z"] = function () {
             this._manageMultiMissionButton();
             this._paginationState()
         };
-        e.prototype["L2hfbFJ9"] = function () {
+        e.prototype["5PJWitzp"] = function () {
             var e = this.actionSource === "headlinePaginator" ? "simple" : true;
             this.showNextViewOfClass(c.BuildingList, {
                 showBack: false,
@@ -30424,11 +30468,11 @@
                 styles: "buildingList"
             }, e)
         };
-        e.prototype["NYS4pNns"] = function () {
+        e.prototype["uJOS3CXL"] = function () {
             var t = this.actionSource === "headlinePaginator" ? "simple" : true;
             this.showNextViewOfClass(c.UnitList, {showBack: false, habitatID: this.name, name: "unitList"}, t)
         };
-        e.prototype["Bn3PhQH4"] = function () {
+        e.prototype["tuZwYNaZ"] = function () {
             this.editting = true;
             this.paginationLocked = true;
             var e = this.view.findSubviewByName("castleName");
@@ -30445,7 +30489,7 @@
             this.changeNameSection.create();
             this.view.content.draw()
         };
-        e.prototype["9vn31KhM"] = function () {
+        e.prototype["U)fFuais"] = function () {
             var e = this.view.findSubviewByName("changeNameSection");
             var i = e.parent;
             var a = {
@@ -30462,7 +30506,7 @@
             this.editting = false;
             this.paginationLocked = false
         };
-        e.prototype["qlABwxfp"] = function (i) {
+        e.prototype["fyQl-yaH"] = function (i) {
             var e = this.view.findSubviewByName("editableField").getValue(), a = l.habitatNameLengthMin || l.nameMinimumLength, s = l.habitatNameLengthMax || l.nameMaximumLength;
             if (e.length > s) {
                 utils.dialog.alert(this, translate("The name is too long"), translate("Error"), function () {
@@ -30475,7 +30519,7 @@
             } else if (t.habitate[this.name].name === e) {
                 this.editting = false;
                 this.paginationLocked = false;
-                this["9vn31KhM"](i);
+                this["U)fFuais"](i);
                 return
             } else {
                 this.datasource.changeHabitatName(this.name, e);
@@ -30483,11 +30527,11 @@
                 this.paginationLocked = false
             }
         };
-        e.prototype["jIPyzFS)"] = function (e) {
+        e.prototype["Mqs(JcJm"] = function (e) {
             if (e.group !== "BuildingElement") {
                 return
             }
-            if (x) {
+            if (I) {
                 var i = null;
                 if (e.buildingName === "Arsenal") {
                     i = "openArsenal"
@@ -30498,14 +30542,14 @@
                 }
                 if (i) {
                     var a = function () {
-                        this.notify("qsBGtsBz", i)
+                        this.notify("cfdiF6Wv", i)
                     };
                     setTimeout(a.bind(this), 1e3)
                 }
             }
-            this.showNextViewOfClass(c.DetailView, {building: f[e.buildingPrimaryKey], habitat: t.habitate[this.name]})
+            this.showNextViewOfClass(c.DetailView, {building: d[e.buildingPrimaryKey], habitat: t.habitate[this.name]})
         };
-        e.prototype["EnrZIB7r"] = function (o) {
+        e.prototype["duJ(Odl5"] = function (o) {
             var s = o.data.upgrade;
             var e = s.buildingTarget;
             var a = h.getValueOf("Gold");
@@ -30516,10 +30560,10 @@
                 r = $.sprintf(n, translate(e.identifier.split("/")[0]), e.level, e.buildSpeedupCost, a, t.gold, a);
                 utils.dialog.confirm(this, r, a, function () {
                     if (t.gold < e.buildSpeedupCost) {
-                        i.notify("vF4Exq0E", i, {costs: e.buildSpeedupCost})
+                        i.notify("8xvB5GpX", i, {costs: e.buildSpeedupCost})
                     } else {
                         i.datasource.finishBuilding(s.id);
-                        i.notify("N60zjkFe", i, {msg: "finishBuilding"})
+                        i.notify("moYXcWen", i, {msg: "finishBuilding"})
                     }
                 })
             } else {
@@ -30527,15 +30571,15 @@
                 r = $.sprintf(n, translate(e.identifier.split("/")[0]), e.level, e.buildSpeedupCost, a, t.gold, a);
                 utils.dialog.confirm(this, r, a, function () {
                     if (t.gold < e.buildSpeedupCost) {
-                        i.notify("vF4Exq0E", i, {costs: e.buildSpeedupCost})
+                        i.notify("8xvB5GpX", i, {costs: e.buildSpeedupCost})
                     } else {
                         i.datasource.speedupBuilding(s.id);
-                        i.notify("N60zjkFe", i, {msg: "speedupBuilding"})
+                        i.notify("moYXcWen", i, {msg: "speedupBuilding"})
                     }
                 })
             }
         };
-        e.prototype["EvzUGlwm"] = function (s) {
+        e.prototype["xvCZvjBw"] = function (s) {
             if (s.node() && s.node().hasClass("disabled")) {
                 return
             }
@@ -30544,12 +30588,12 @@
             var a = this;
             if (o === null) {
                 i = t.habitate[this.name];
-                e = f[s.data.upgradeTo]
+                e = d[s.data.upgradeTo]
             } else {
                 i = o.habitat;
-                e = f[s.data.upgradeTo]
+                e = d[s.data.upgradeTo]
             }
-            if (x) {
+            if (I) {
                 var n = null;
                 if (e && e.identifier.indexOf("Lumberjack") !== -1) {
                     n = "upgradeLumberjack"
@@ -30560,36 +30604,36 @@
                 }
                 if (n) {
                     var u = function () {
-                        this.notify("qsBGtsBz", n)
+                        this.notify("cfdiF6Wv", n)
                     };
                     setTimeout(u.bind(this), 1e3)
                 }
             }
             if (i.habitatBuildingUpgrades.length >= l.buildingUpgradeListBoundaryByHabitatType[i.habitatType]) {
                 var r = h.getValueOf("Gold");
-                var c = $.sprintf(h.getValueOf("Your building upgrade queue is full. An additional slot costs %d %@\nYou have %d %@"), f[e.upgradeTo].buildSpeedupCost, r, t.gold, r);
+                var c = $.sprintf(h.getValueOf("Your building upgrade queue is full. An additional slot costs %d %@\nYou have %d %@"), d[e.upgradeTo].buildSpeedupCost, r, t.gold, r);
                 utils.dialog.confirm(this, c, r, function () {
-                    if (t.gold < f[e.upgradeTo].buildSpeedupCost) {
-                        a.notify("vF4Exq0E", a, {costs: f[e.upgradeTo].buildSpeedupCost})
+                    if (t.gold < d[e.upgradeTo].buildSpeedupCost) {
+                        a.notify("8xvB5GpX", a, {costs: d[e.upgradeTo].buildSpeedupCost})
                     } else {
-                        a.datasource.upgradeBuilding(i.id, f[e.upgradeTo].primaryKey, true);
-                        a.notify("N60zjkFe", a, {msg: "buildBuilding"})
+                        a.datasource.upgradeBuilding(i.id, d[e.upgradeTo].primaryKey, true);
+                        a.notify("moYXcWen", a, {msg: "buildBuilding"})
                     }
                 })
             } else {
-                this.datasource.upgradeBuilding(i.id, f[e.upgradeTo].primaryKey, true);
-                this.notify("N60zjkFe", this, {msg: "buildBuilding"})
+                this.datasource.upgradeBuilding(i.id, d[e.upgradeTo].primaryKey, true);
+                this.notify("moYXcWen", this, {msg: "buildBuilding"})
             }
         };
-        e.prototype["FjKxBS)h"] = function (t) {
+        e.prototype["ollpGsDn"] = function (t) {
             var e = t.parent.parent.building;
             var i = e.primaryKey + 1;
             var a = t.parent.parent.habitat;
             if (e.upgradeTo.length > 0) {
-                this.showNextViewOfClass(c.DetailView, {building: f[i], habitat: a, isPreview: true})
+                this.showNextViewOfClass(c.DetailView, {building: d[i], habitat: a, isPreview: true})
             }
         };
-        e.prototype["9s0CD%0r"] = function (t) {
+        e.prototype["nuihhhsj"] = function (t) {
             var e = this.view.findSubviewByField("tag", "currentView");
             var i = t.parent.getInputInfo();
             var a = e.getMaxTransportCapacity();
@@ -30600,18 +30644,18 @@
             t.overrideInputValue(s);
             e.updateResourcesCapicity()
         };
-        e.prototype["0FU1k0K0"] = function (t) {
-            return this["9s0CD%0r"](t)
+        e.prototype["&k8hOUr_"] = function (t) {
+            return this["nuihhhsj"](t)
         };
-        e.prototype["o0-zizZT"] = function () {
+        e.prototype["-GNeh9YQ"] = function () {
             var e = this.view.findSubviewByField("tag", "currentView");
             var i = t.habitate[this.name];
             e.updateTroopDurations(i)
         };
-        e.prototype["NMoTd)zu"] = function (t) {
-            return this["o0-zizZT"](t)
+        e.prototype["uWGOYwdk"] = function (t) {
+            return this["-GNeh9YQ"](t)
         };
-        e.prototype["dG5BeAbH"] = function (i) {
+        e.prototype["NRBiuJgn"] = function (i) {
             var e = i.data, a = !!e.goldTrade;
             if (a) {
                 this.currentNobleTrade = {type: e.rate.resourceID}
@@ -30624,14 +30668,14 @@
                 nobleTrade: a
             })
         };
-        e.prototype["-_E7Uyn6"] = function () {
+        e.prototype["WMzZAJF_"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             t.updateDurations()
         };
-        e.prototype["jY44DH&R"] = function (t) {
-            return this["-_E7Uyn6"](t)
+        e.prototype["ZM01-v(y"] = function (t) {
+            return this["WMzZAJF_"](t)
         };
-        e.prototype["_m&(IuBo"] = function (t) {
+        e.prototype["&VKQ0HjG"] = function (t) {
             var e = this.view.findSubviewByField("tag", "currentView");
             var s = t.parent.parent;
             var n = t.parent;
@@ -30646,20 +30690,20 @@
             t.overrideInputValue(a);
             var u = s.respectMaxTransportCapacity(l, r);
             if (u === 0) {
-                this["lfGbU54q"](t)
+                this["e-VijCYf"](t)
             }
             i = t.parent.getInputInfo();
             a = this.adjustResourceAmountToMarketRate(o, i);
             t.overrideInputValue(a);
             e.updateDurations()
         };
-        e.prototype["GL%aH3bo"] = function (t) {
-            return this["_m&(IuBo"](t)
+        e.prototype["aZv4MkAw"] = function (t) {
+            return this["&VKQ0HjG"](t)
         };
         e.prototype.adjustResourceAmountToMarketRate = function (e, t) {
             return Math.floor(t.value / e.rates[t.id]) * e.rates[t.id]
         };
-        e.prototype["lfGbU54q"] = function () {
+        e.prototype["e-VijCYf"] = function () {
             if (this.assignDialogShown === false) {
                 this.assignDialogShown = true;
                 var t = translate("Please assign more transport units or reduce the amount of resources.");
@@ -30669,7 +30713,7 @@
                 })
             }
         };
-        e.prototype["LgKDGNbA"] = function () {
+        e.prototype["VYt%K&SC"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             var a = t.validate(true), e = translate("Available market resources");
             if (!this._validateTable(t.unitTable)) {
@@ -30682,8 +30726,8 @@
             if (a.valid === true) {
                 var i = t.getFormDataForXHRAction();
                 this.datasource.tradeResources(this.name, t.marketRate.resourceID, i.resources, i.units);
-                this.notify("N60zjkFe", this, {msg: "tradeResource", data: t.marketRate.resourceID});
-                this["Z04XvT7k"]()
+                this.notify("moYXcWen", this, {msg: "tradeResource", data: t.marketRate.resourceID});
+                this["v2v6tJij"]()
             }
         };
         e.prototype._validateTable = function (s) {
@@ -30696,7 +30740,7 @@
             }
             return a > 0
         };
-        e.prototype["WKs9Q-)r"] = function (u) {
+        e.prototype["3KjdIaQ9"] = function (u) {
             var e = u.data, r = this.currentNobleTrade.type, s = Me.nobleTradeRate(r), h = t.habitate[this.name], o = h.habitatResources[r], l = o.storeAmount - o.amount, i, a, n;
             a = this.view.findSubviewByField("tag", "currentView");
             if (!a) {
@@ -30717,7 +30761,7 @@
             a.wantedResource.dataUpdate(null, {amount: i});
             a.wantedResource.draw()
         };
-        e.prototype["ek-8psDd"] = function () {
+        e.prototype["ncK2XNmj"] = function () {
             var e = this.currentNobleTrade, i, a, s, r, o, l;
             if (!e || !e.cost) {
                 a = translate("Insuffient Capacity");
@@ -30767,7 +30811,7 @@
             });
             return {resources: t, fillCapa: a, equalFillMax: e}
         };
-        e.prototype["sEquWZGu"] = function () {
+        e.prototype[")pw4)Kaz"] = function () {
             var n = this.view.findSubviewByField("tag", "currentView");
             var s = n.resourceTable;
             var c = s.resources;
@@ -30808,7 +30852,7 @@
             }
             n.updateDurations()
         };
-        e.prototype["HK_Jo-Lt"] = function (u, h, i) {
+        e.prototype["ElGl)BXz"] = function (u, h, i) {
             i = _.defaultsTo(i, false);
             var r = l.restockingResourcesUnit, o = l.restockingResourcesCostPerUnit, s = t.habitate[this.name].getRestockResourceAmount(), e = 0, n, a;
             if (s === 0) {
@@ -30826,34 +30870,34 @@
             n = translate(a, e, t.gold);
             utils.dialog.confirm(this, n, translate("Fill up the stock"), function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.restockResources(this.name, e)
                 }
             }.bind(this), function () {
             })
         };
-        e.prototype["D9UzMCzr"] = function (t) {
-            if (typeof x !== "undefined" && x) {
-                if (t && t.data && t.data > 0 && g[t.parent.unitID].identifier === "Spearman") {
-                    this.notify("qsBGtsBz", "recruitUnitSelection")
+        e.prototype["20sAjsAw"] = function (t) {
+            if (typeof I !== "undefined" && I) {
+                if (t && t.data && t.data > 0 && y[t.parent.unitID].identifier === "Spearman") {
+                    this.notify("cfdiF6Wv", "recruitUnitSelection")
                 }
             }
         };
-        e.prototype["-akxnDw7"] = function (t) {
-            this["D9UzMCzr"](t)
+        e.prototype["83Yo4xKR"] = function (t) {
+            this["20sAjsAw"](t)
         };
-        e.prototype["CpQaYl92"] = function (r) {
+        e.prototype["%A%_1MMF"] = function (r) {
             var a = t.habitate[this.name];
-            var e = g[r.parent.unitID];
+            var e = y[r.parent.unitID];
             var i = parseInt(r.parent.getInputInfo().value, 10), o = _.storeSession.createKey("habitat", a.id, e.primaryKey);
             var s = this;
             if (i <= 0) {
                 return
             }
-            if (typeof x !== "undefined" && x) {
+            if (typeof I !== "undefined" && I) {
                 if (e.identifier === "Spearman") {
-                    this.notify("qsBGtsBz", "recruitUnitExecution")
+                    this.notify("cfdiF6Wv", "recruitUnitExecution")
                 } else {
                     return
                 }
@@ -30863,20 +30907,20 @@
                 var u = $.sprintf(h.getValueOf("Your unit order queue is full. An additional slot costs %d %@\nYou have %d %@"), e.buildSpeedupCost * i, n, t.gold, n);
                 utils.dialog.confirm(this, u, n, function () {
                     if (t.gold < i) {
-                        s.notify("vF4Exq0E", s, {costs: e.buildSpeedupCost * i})
+                        s.notify("8xvB5GpX", s, {costs: e.buildSpeedupCost * i})
                     } else {
                         _.storeSession.removeItem(o);
                         s.datasource.recruit(a.id, e.primaryKey, i, true);
-                        s.notify("N60zjkFe", s, {msg: "recruitUnit", data: e.primaryKey})
+                        s.notify("moYXcWen", s, {msg: "recruitUnit", data: e.primaryKey})
                     }
                 })
             } else {
                 _.storeSession.removeItem(o);
                 this.datasource.recruit(a.id, e.primaryKey, i, false);
-                this.notify("N60zjkFe", this, {msg: "recruitUnit", data: e.primaryKey})
+                this.notify("moYXcWen", this, {msg: "recruitUnit", data: e.primaryKey})
             }
         };
-        e.prototype["1_kTu9KH"] = function (o) {
+        e.prototype["h6cRanxe"] = function (o) {
             var e = o.data;
             var i = translate("Gold");
             var n, r;
@@ -30887,7 +30931,7 @@
                 r = $.sprintf(n, e.orderAmount, h.getValueOf(e.unit.identifier), s, i, t.gold, i);
                 utils.dialog.confirm(this, r, i, function () {
                     if (t.gold < s) {
-                        a.notify("vF4Exq0E", a, {costs: s})
+                        a.notify("8xvB5GpX", a, {costs: s})
                     } else {
                         a.datasource.finishUnit(e.id)
                     }
@@ -30897,32 +30941,32 @@
                 r = $.sprintf(n, e.orderAmount, h.getValueOf(e.unit.identifier), s, i, t.gold, i);
                 utils.dialog.confirm(this, r, i, function () {
                     if (t.gold < s) {
-                        a.notify("vF4Exq0E", a, {costs: s})
+                        a.notify("8xvB5GpX", a, {costs: s})
                     } else {
                         a.datasource.speedUpUnit(e.id)
                     }
                 })
             }
         };
-        e.prototype["Z%9oe2)u"] = function (e) {
+        e.prototype["R44Ucezk"] = function (e) {
             var t = e.parent.parent.habitat;
-            this.notify("EE)XdOZG", this, {x: +t.mapX, y: +t.mapY})
+            this.notify("XSMaUxne", this, {x: +t.mapX, y: +t.mapY})
         };
-        e.prototype["(k4d8uGo"] = function () {
+        e.prototype["8vbwQDmT"] = function () {
             if (utils.dict.size(t.habitate) === 1) {
                 return
             }
-            this.notify("y7R3bxYT", {
+            this.notify("WumqB(Zw", {
                 foreignHabitat: this.view.habitat,
                 exclusionIDs: [this.name],
                 action: "sendResources"
             })
         };
-        e.prototype["wJTsfelj"] = function () {
+        e.prototype["(4qs7hFR"] = function () {
             if (utils.dict.size(t.habitate) === 1) {
                 return
             }
-            this.notify("y7R3bxYT", {
+            this.notify("WumqB(Zw", {
                 foreignHabitat: this.view.habitat,
                 exclusionIDs: [this.name],
                 action: "sendDefense"
@@ -30937,7 +30981,7 @@
             }
             return e
         };
-        e.prototype["OL49LDFV"] = function () {
+        e.prototype["IQ(Q-hLl"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             var s = this;
             if (t === null || t.group !== "SendStuffView") {
@@ -30965,9 +31009,9 @@
                 return
             }
             this.datasource.sendResources(this.selectedSourceHabitatID, this.view.habitat.id, b.TRANSPORT, i, e);
-            this["Z04XvT7k"]()
+            this["v2v6tJij"]()
         };
-        e.prototype["dwK1bWQb"] = function () {
+        e.prototype["-RYohef3"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t === null || t.group !== "SendStuffView") {
                 return
@@ -30979,17 +31023,17 @@
                 return
             }
             this.datasource.defendHabitat(this.selectedSourceHabitatID, this.view.habitat.id, b.DEFENSE, e);
-            this["Z04XvT7k"]()
+            this["v2v6tJij"]()
         };
-        e.prototype["&N2xhhek"] = function (e) {
-            var i = e.parent.unitID ? e.parent.unitID : e.unit.primaryKey, a = g[i];
+        e.prototype[")WyTi%0g"] = function (e) {
+            var i = e.parent.unitID ? e.parent.unitID : e.unit.primaryKey, a = y[i];
             this.showNextViewOfClass(c.UnitView, {unit: a, habitat: t.habitate[this.name]})
         };
-        e.prototype["s_gcHAcK"] = function (t) {
-            var e = this.notify("TVwAjJ5A", this, t.data);
-            this.notify("xCzXgU2u", this, e)
+        e.prototype["oewcG%iX"] = function (t) {
+            var e = this.notify("SswFkNj1", this, t.data);
+            this.notify("1EMjIwLd", this, e)
         };
-        e.prototype["xLTWtR_("] = function () {
+        e.prototype["A(NfVnHR"] = function () {
             var i = this.actionSource === "headlinePaginator" ? "simple" : true, a = t.habitate[this.name].habitatTransits, e = this.datasource.prepareTransits(a);
             e.transitListName = this.name;
             var s = this.showNextViewOfClass(c.TransitList, {
@@ -31001,41 +31045,41 @@
                 templateData: e,
                 useContainer: true
             }, i);
-            this.notify("bKUGf9HF", s);
+            this.notify("enjA1c%5", s);
             $("#" + this.view.id).addClass("lightBG")
         };
-        e.prototype["RH1ea9rA"] = function (e) {
+        e.prototype["TwE19Ltt"] = function (e) {
             var i = t.habitate[this.name].habitatTransits;
             e.addTransits(this.datasource.extendDisplayedTransits(i))
         };
-        e.prototype["SV&qDvlX"] = function (e, t) {
+        e.prototype["7Y3Pp4y("] = function (e, t) {
             $("#" + this.view.id).removeClass("lightBG");
             this.showNextViewOfClass(c.TransitDetail, {model: t.transit.model})
         };
-        e.prototype["ktCned%L"] = function (t) {
+        e.prototype["t2Qb%36o"] = function (t) {
             var e = t.data.habitat;
-            this.notify("DGiiS)m4", this, e)
+            this.notify("z4nJtGuw", this, e)
         };
-        e.prototype["hI3sAban"] = function (t) {
-            this.notify("FZpvdvBU", this, t.data.playerID)
+        e.prototype["M0hdYxpo"] = function (t) {
+            this.notify("i5I1OIPu", this, t.data.playerID)
         };
-        e.prototype["QjJvGay1"] = function (t) {
+        e.prototype["zLFMAO4v"] = function (t) {
             var e = t.data.alliance;
-            this.notify("eQbjanoz", this, e)
+            this.notify("Ve2s0mbd", this, e)
         };
-        e.prototype["5-kIwyYc"] = function () {
-            this.notify("5-kIwyYc", this)
+        e.prototype["TeVG5tXR"] = function () {
+            this.notify("TeVG5tXR", this)
         };
-        e.prototype["ltv6M4UZ"] = function (e) {
-            this.notify("0lnjIEGM", this, {start: this.view.habitat, end: t.habitate[e.name]})
+        e.prototype["iRXKLg1S"] = function (e) {
+            this.notify("&bByotxh", this, {start: this.view.habitat, end: t.habitate[e.name]})
         };
-        e.prototype["jHVG)I8%"] = function () {
-            this.notify("YY&))zm_", this)
+        e.prototype["ohVN24u4"] = function () {
+            this.notify("C-eD0kzq", this)
         };
-        e.prototype["&PbdUOlv"] = function (a, t) {
+        e.prototype["D74stK4b"] = function (a, t) {
             var e = t.destinationHabitat;
             var i = t.destinationETA;
-            this.notify("y7R3bxYT", {
+            this.notify("WumqB(Zw", {
                 action: t.transitType === b.DEFENSE ? "syncDefense" : "syncAttack",
                 foreignHabitat: e,
                 exclusionIDs: [this.name],
@@ -31045,7 +31089,7 @@
         };
         function i(t) {
             var e = 0, i;
-            i = (t.destinationETA.valueOf() - new Date - U) / 1e3 / 60;
+            i = (t.destinationETA.valueOf() - new Date - P) / 1e3 / 60;
             if (i < .5) {
                 return "finished"
             }
@@ -31059,7 +31103,7 @@
             return Math.ceil(e / l.speedUpReturningUnitsUnit * i)
         }
 
-        e.prototype["V0QJ_K1n"] = function (r, a) {
+        e.prototype["McQXIq&a"] = function (r, a) {
             var e = i(a);
             if (e === "finished") {
                 var s = translate("Your transport has already returned to the castle");
@@ -31071,13 +31115,13 @@
             var n = translate("Speeding up the transit costs %1$s gold coins. You own %2$s gold coins.", e, t.gold);
             utils.dialog.confirm(this, n, translate("Gold"), function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.finishReturningTransit(a.id, e)
                 }
             }.bind(this))
         };
-        e.prototype["sEozpTO_"] = function (p, a) {
+        e.prototype["2rQSA-wF"] = function (p, a) {
             var n = "Speeding up all transits costs %1$d %2$@. You own %3$d %4$@.", u = translate("Accelerate Returning Transit"), l = translate("Gold"), e = 0, o = 0, r = +this.name;
             if (typeof a !== "number") {
                 if (t.habitate[r]) {
@@ -31108,54 +31152,54 @@
             n = translate(n, e, l, t.gold, l);
             utils.dialog.confirm(this, n, u, function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.speedUpAllTransists(r, e)
                 }
             }.bind(this))
         };
-        e.prototype["DhKYVx7V"] = function (t) {
+        e.prototype["mSVw8M5T"] = function (t) {
             this.datasource.postTransitClash({transitID: t.data.id})
         };
-        e.prototype["WvopJEB&"] = function (t) {
+        e.prototype["1rM7HNBw"] = function (t) {
             this.datasource.postBattleClash({habitatID: t.data.id})
         };
-        e.prototype["MmruwsT("] = function (s) {
+        e.prototype["%yyEEyq%"] = function (s) {
             var i = s.data.model, n = translate("Raise the banner"), e = i.goldAmount, r = translate("Raising the banner costs %1$d gold coins. You currently own %2$d gold coins.", e, t.gold), a;
             a = function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.activteBuff(this.name, i.primaryKey)
                 }
             };
             utils.dialog.confirm(this, r, n, a.bind(this))
         };
-        e.prototype["9V3ABh3_"] = function (e) {
+        e.prototype["LZtgMWGP"] = function (e) {
             this.showNextViewOfClass(c.FortressUpdate, {habitat: t.habitate[this.name]});
             this.currentTab = "upgradeCastleToFortress"
         };
-        e.prototype["CDcj5dJe"] = function () {
+        e.prototype["153zmq7V"] = function () {
             this.datasource.buildFortressCenter({habitatID: +this.name})
         };
-        e.prototype["z-&CnG4g"] = function (i) {
+        e.prototype["IzeyXRPX"] = function (i) {
             var s = translate("Speedup build"), e = i.cost, n = "(" + i.id + ")", r = i.isFinishing ? "Finishing upgrade instantly costs %1$d %2$@. You have %3$d %4$@." : "Upgrade time reduction costs %1$d %2$@. You have %3$d %4$@.", o = translate(r, e, translate("Gold"), t.gold, translate("Gold")), a;
             a = function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.speedupFortressUpgrade({habitatUpgradeIdArray: n, paymentAmount: e})
                 }
             };
             utils.dialog.confirm(this, o, s, a.bind(this))
         };
-        e.prototype["8R1G6P_n"] = function (t) {
+        e.prototype["7sUejEtB"] = function (t) {
             if (!t || !t.mapX || !t.mapY) {
                 return
             }
-            this.notify("EE)XdOZG", this, {x: +t.mapX, y: +t.mapY})
+            this.notify("XSMaUxne", this, {x: +t.mapX, y: +t.mapY})
         };
-        e.prototype["LUJp0HUo"] = function (i) {
+        e.prototype["fiVOAIVw"] = function (i) {
             var e = i.payment || 0, n = {
                 habitatID: +this.name,
                 id: i.id,
@@ -31171,7 +31215,7 @@
                 }
             }, o = function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: i.payment})
+                    this.notify("8xvB5GpX", this, {costs: i.payment})
                 } else {
                     this.datasource.constructFortressExpansion(n)
                 }
@@ -31190,7 +31234,7 @@
                 this.datasource.constructFortressExpansion(n)
             }
         };
-        e.prototype["H&Sw5H&u"] = function (t) {
+        e.prototype["vem20vX4"] = function (t) {
             this.datasource.constructFortress({habitatID: +this.name})
         };
         return e
@@ -31269,27 +31313,27 @@
                 icon: "castle",
                 action: "visitCastle",
                 hoverText: "Castle",
-                msg: "9obJO5Cf"
+                msg: "_w32GmpP"
             }, {
                 name: "buildings",
                 icon: "buildings",
                 action: "buildingList",
                 hoverText: "Habitat Buildings",
-                msg: "L2hfbFJ9"
+                msg: "5PJWitzp"
             }, {
                 name: "troops",
                 icon: "troops",
                 action: "unitList",
                 hoverText: "Troop overview",
-                msg: "NYS4pNns"
-            }, {name: "transists", icon: "trade", action: "transports", hoverText: "Transits", msg: "xLTWtR_("}];
+                msg: "uJOS3CXL"
+            }, {name: "transists", icon: "trade", action: "transports", hoverText: "Transits", msg: "A(NfVnHR"}];
             for (var a = 0; a < i.length; a++) {
                 var e = i[a], r;
                 r = this.tabbar.createSubview(this.tabbar, {
                     styles: "tab",
                     icon: e.icon,
                     name: e.name,
-                    clickMessage: "wVrQWmJ%",
+                    clickMessage: "zh%1hNJI",
                     data: {action: e.action, msg: e.msg},
                     hoverText: translate(e.hoverText)
                 }, c.TabButton);
@@ -31305,16 +31349,16 @@
             var t = this.tabbar.createSubview(this.tabbar, {styles: "specials"});
             t.createSubview(t, {
                 content: this.getIcon("transitDefenseWhite"),
-                clickMessage: "9obJO5Cf",
+                clickMessage: "_w32GmpP",
                 data: {action: "sendDefense"},
                 hover: translate("Defend Habitat")
-            }, p);
+            }, f);
             t.createSubview(t, {
                 content: this.getIcon("transportWhite"),
-                clickMessage: "9obJO5Cf",
+                clickMessage: "_w32GmpP",
                 data: {action: "sendResources"},
                 hover: translate("Send Resources")
-            }, p)
+            }, f)
         };
         return e
     }(u.Window);
@@ -31329,10 +31373,10 @@
         }
 
         t.prototype.create = function () {
-            var t = this.notify("3s(kBgiI", this, {
+            var t = this.notify("Z-XGNYVU", this, {
                 imageName: this.icon + "_active",
                 imageCategory: "tabs"
-            }), e = this.notify("3s(kBgiI", this, {
+            }), e = this.notify("Z-XGNYVU", this, {
                 imageName: this.icon + "_active",
                 imageCategory: "tabs"
             }), i = $(t).attr("src"), a = $(e).attr("src");
@@ -31340,7 +31384,7 @@
             this.createSubview(this, {
                 styles: "tab-content",
                 content: t,
-                lazyHoverClass: v.TabHover,
+                lazyHoverClass: g.TabHover,
                 lazyHoverOptions: {name: this.hoverText}
             }, F)
         };
@@ -31361,9 +31405,9 @@
             }
             var p = this.habitat.id;
             var t = null;
-            for (var a in P) {
-                if (P[a].primaryKey == this.data) {
-                    t = P[a]
+            for (var a in U) {
+                if (U[a].primaryKey == this.data) {
+                    t = U[a]
                 }
             }
             var i;
@@ -31383,9 +31427,9 @@
             this.addSubview(new e(this.controller, i));
             if (t.requiredKnowledges != null) {
                 for (a = 0; a < t.requiredKnowledges.length > 0; a++) {
-                    var d = P[t.requiredKnowledges[a]].identifier;
+                    var d = U[t.requiredKnowledges[a]].identifier;
                     var s = $("<div class='container'>");
-                    s.append(this.notify("3s(kBgiI", this, {imageName: d, imageCategory: "knowledges"}));
+                    s.append(this.notify("Z-XGNYVU", this, {imageName: d, imageCategory: "knowledges"}));
                     s.append('<div class="featureName">' + h.getValueOf("Required knowledge") + ":  </div>");
                     s.append('<div class="buildingLevel"> ' + h.getValueOf(d) + "</div>");
                     var l;
@@ -31399,8 +31443,8 @@
                         name: "missionHeader",
                         styles: l,
                         content: s,
-                        data: P[t.requiredKnowledges[a]],
-                        clickMessage: "PBEwBX%o"
+                        data: U[t.requiredKnowledges[a]],
+                        clickMessage: "aBvK)dWb"
                     };
                     this.addSubview(new e(this.controller, i))
                 }
@@ -31457,7 +31501,7 @@
         };
         i.prototype.createKnowledgeHeader = function (i) {
             var e = i.identifier.split("/")[0];
-            var a = this.notify("3s(kBgiI", this, {imageName: e, imageCategory: "knowledges"});
+            var a = this.notify("Z-XGNYVU", this, {imageName: e, imageCategory: "knowledges"});
             var t = $("<div>");
             t.append(a);
             t.append("<div class='knowledgeName'>" + h.getValueOf(e) + "</div>");
@@ -31465,7 +31509,7 @@
         };
         i.prototype.getKnowledgeResources = function (i) {
             var e = i.identifier.split("/")[0];
-            var a = this.notify("3s(kBgiI", this, {imageName: e, imageCategory: "knowledges"});
+            var a = this.notify("Z-XGNYVU", this, {imageName: e, imageCategory: "knowledges"});
             var t = $("<div>");
             t.append(a);
             t.append("<div class='knowledgeName'>" + e + "</div>");
@@ -31518,7 +31562,7 @@
             var a;
             var s = t.identifier.split("/")[0];
             var i = $("<div>");
-            i.append(this.notify("3s(kBgiI", this, {imageName: s, imageCategory: "buildings"}));
+            i.append(this.notify("Z-XGNYVU", this, {imageName: s, imageCategory: "buildings"}));
             i.append('<div class="featureName">' + h.getValueOf(s) + '</div><div class="buildingLevel">' + h.getValueOf("Level") + " " + t.level + "</div>");
             a = {
                 parent: this,
@@ -31526,7 +31570,7 @@
                 styles: "knowledgeEnablesBlock enabledElement",
                 content: i,
                 data: t,
-                clickMessage: "UmoDiQ&j"
+                clickMessage: "K9uiba(q"
             };
             this.addSubview(new e(this.controller, a))
         };
@@ -31534,7 +31578,7 @@
             var a;
             var s = t.primaryKey + "";
             var i = $("<div>");
-            i.append(this.notify("3s(kBgiI", this, {imageName: s, imageCategory: "units"}));
+            i.append(this.notify("Z-XGNYVU", this, {imageName: s, imageCategory: "units"}));
             i.append('<div class="featureName">' + h.getValueOf(t.identifier) + "</div>");
             a = {
                 parent: this,
@@ -31542,15 +31586,15 @@
                 styles: "knowledgeEnablesBlock enabledElement",
                 content: i,
                 data: t,
-                clickMessage: "UmoDiQ&j"
+                clickMessage: "K9uiba(q"
             };
             this.addSubview(new e(this.controller, a))
         };
         t.prototype.createModifier = function (i) {
             var a;
             var t = $("<div>");
-            t.append(this.notify("3s(kBgiI", this, {
-                imageName: xe[i.primaryKey].type + "",
+            t.append(this.notify("Z-XGNYVU", this, {
+                imageName: Ie[i.primaryKey].type + "",
                 imageCategory: "modifiers"
             }));
             t.append('<div class="featureName">' + h.getValueOf(i.identifier) + "</div>");
@@ -31560,7 +31604,7 @@
         t.prototype.createKnowledge = function (t) {
             var a;
             var i = $("<div>");
-            i.append(this.notify("3s(kBgiI", this, {imageName: t.identifier, imageCategory: "knowledges"}));
+            i.append(this.notify("Z-XGNYVU", this, {imageName: t.identifier, imageCategory: "knowledges"}));
             i.append('<div class="featureName">' + h.getValueOf(t.identifier) + "</div>");
             a = {
                 parent: this,
@@ -31568,7 +31612,7 @@
                 styles: "knowledgeEnablesBlock enabledElement",
                 content: i,
                 data: t,
-                clickMessage: "UmoDiQ&j"
+                clickMessage: "K9uiba(q"
             };
             this.addSubview(new e(this.controller, a))
         };
@@ -31609,8 +31653,8 @@
                 units: this.habitat.stats.units.own,
                 recruit: false,
                 inputFields: true,
-                maxButtonClickMessage: "jY44DH&R",
-                inputChangeMessage: "-_E7Uyn6",
+                maxButtonClickMessage: "ZM01-v(y",
+                inputChangeMessage: "WMzZAJF_",
                 sessionPrefix: "marketUnit_" + this.marketRate.resourceID,
                 habitat: this.habitat
             };
@@ -31631,7 +31675,7 @@
                 formatFunction: utils.date.formatDateTime,
                 styles: "durationElement eta"
             }, q);
-            this.notify("bKUGf9HF", this);
+            this.notify("enjA1c%5", this);
             this.durationContainer.clearfix();
             this.transKapa = this.durationContainer.createSubview(this.durationContainer, {
                 showIcon: true,
@@ -31661,8 +31705,8 @@
                 clickMessage: null,
                 filterArray: i,
                 inputFields: true,
-                maxButtonClickMessage: "GL%aH3bo",
-                inputChangeMessage: "_m&(IuBo",
+                maxButtonClickMessage: "aZv4MkAw",
+                inputChangeMessage: "&VKQ0HjG",
                 rates: this.marketRate,
                 sessionPrefix: "marketResource_" + this.marketRate.resourceID
             }, L.Table)
@@ -31670,17 +31714,17 @@
         e.prototype.buildWantedResource = function () {
             var t = this.createContainer({styles: "typeContainer"});
             var i = {title: this.wantedResourceName};
-            var e = "LgKDGNbA";
+            var e = "VYt%K&SC";
             if (this.nobleTrade) {
-                e = "ek-8psDd"
+                e = "ncK2XNmj"
             }
             this.createSubview(t, i, A);
             t.createSubview(t, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "transportWhite",
                     imageCategory: "icons"
                 }), hover: translate("Barter %@", this.wantedResourceName), clickMessage: e
-            }, p);
+            }, f);
             this.wantedResource = t.createSubview(t, {
                 resourceName: null,
                 resourceID: this.marketRate.resourceID,
@@ -31698,8 +31742,8 @@
                 imageClickMessage: false,
                 styles: "resourceElement gold",
                 rate: Me.nobleTradeRate(this.marketRate.resourceID),
-                maxButtonClickMessage: "WKs9Q-)r",
-                inputChangeMessage: "WKs9Q-)r"
+                maxButtonClickMessage: "3KjdIaQ9",
+                inputChangeMessage: "3KjdIaQ9"
             }, L.Element)
         };
         e.prototype.validate = function (u) {
@@ -31726,7 +31770,7 @@
                 s += e[t].value
             }
             if (u && s > a) {
-                this.notify("lfGbU54q", this, {capacity: s, maxCapacity: a});
+                this.notify("e-VijCYf", this, {capacity: s, maxCapacity: a});
                 return {valid: false, capa: s, maxCapa: a, amount: r}
             }
             return {valid: true, capa: s, maxCapa: a, amount: r}
@@ -31834,11 +31878,11 @@
                 }
                 i.create();
                 e.createSubview(e, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "change",
                         imageCategory: "icons"
                     }), hoverView: i, clickMessage: this.itemClickMessage, data: {rate: t, goldTrade: this.goldTrade}
-                }, p)
+                }, f)
             }
         };
         return t
@@ -31887,15 +31931,15 @@
             this.view.dataUpdate(e, i[this.habitat.id]);
             this.draw()
         };
-        e.prototype["9obJO5Cf"] = function (t, i) {
+        e.prototype["_w32GmpP"] = function (t, i) {
             var e = this.habitat.id;
-            this.notify("9obJO5Cf", this, {action: t.data.action, habitatID: e, data: t.data})
+            this.notify("_w32GmpP", this, {action: t.data.action, habitatID: e, data: t.data})
         };
-        e.prototype["h4LimkDm"] = function (t, i) {
+        e.prototype["ftwphcGZ"] = function (t, i) {
             var e = this.habitat;
-            this.notify("h4LimkDm", this, {action: t.data.action, habitat: e, data: t.data})
+            this.notify("ftwphcGZ", this, {action: t.data.action, habitat: e, data: t.data})
         };
-        e.prototype["s(7SN3gU"] = function () {
+        e.prototype["QmUp(Le2"] = function () {
             for (var s in t.habitate) {
                 var a = t.habitate[s];
                 for (var i = 0; i < a.habitatTransits.length; i++) {
@@ -31907,8 +31951,8 @@
             }
             return false
         };
-        e.prototype["VhaIj0_A"] = function (t, e) {
-            return this.notify("VhaIj0_A", t, e)
+        e.prototype["cHRPueWe"] = function (t, e) {
+            return this.notify("cHRPueWe", t, e)
         };
         return e
     }(u.Controller);
@@ -31928,17 +31972,17 @@
             this.toolbar.clearfix();
             var e = [], i, a;
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "buttonCastleWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "buttonCastleWhite", imageCategory: "icons"}),
                 action: "visitCastle",
                 hover: translate("Castle")
             });
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "buttonBuildingsWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "buttonBuildingsWhite", imageCategory: "icons"}),
                 action: "buildingList",
                 hover: translate("Habitat Buildings")
             });
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "buttonTroopsWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "buttonTroopsWhite", imageCategory: "icons"}),
                 action: "unitList",
                 hover: translate("Troop overview")
             });
@@ -31950,7 +31994,7 @@
                 a = ""
             }
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "transportWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "transportWhite", imageCategory: "icons"}),
                 action: a,
                 hover: translate("Send Resources"),
                 styles: i
@@ -31963,23 +32007,23 @@
                 a = ""
             }
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "transitDefenseWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "transitDefenseWhite", imageCategory: "icons"}),
                 action: a,
                 hover: translate("Defend Habitat"),
                 styles: i
             });
             e.push({
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "pasteBoardCastleWhite",
                     imageCategory: "icons"
                 }), action: "copyCastleLink", hover: translate("Copy castle link")
             });
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "buttonMapWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "buttonMapWhite", imageCategory: "icons"}),
                 action: "markCastle",
                 hover: translate("mark castle")
             });
-            if (typeof this.habitat.habitatTransits != "undefined" && this.habitat.habitatTransits.length > 0 || this.notify("s(7SN3gU", this)) {
+            if (typeof this.habitat.habitatTransits != "undefined" && this.habitat.habitatTransits.length > 0 || this.notify("QmUp(Le2", this)) {
                 i = "";
                 a = "transports"
             } else {
@@ -31987,13 +32031,13 @@
                 a = ""
             }
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "tradeWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "tradeWhite", imageCategory: "icons"}),
                 action: a,
                 styles: i,
                 hover: translate("Transits")
             });
             e.push({
-                content: this.notify("3s(kBgiI", this, {imageName: "centerHabitatWhite", imageCategory: "icons"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: "centerHabitatWhite", imageCategory: "icons"}),
                 action: "centerCastle",
                 hover: translate("Map")
             });
@@ -32001,12 +32045,12 @@
                 this.createSubview(this, {
                     content: e[s].content,
                     hover: e[s].hover,
-                    clickMessage: "9obJO5Cf",
+                    clickMessage: "_w32GmpP",
                     styles: e[s].styles,
                     data: {action: e[s].action}
-                }, p)
+                }, f)
             }
-            var n = this.notify("VhaIj0_A", this, this.habitat.creationDate);
+            var n = this.notify("cHRPueWe", this, this.habitat.creationDate);
             if (n !== "") {
                 this.createSubview(this, {
                     content: translate("Castle is protected by newbie protection until %@.", n),
@@ -32046,7 +32090,7 @@
             hoverView.create();
             this.createSubview(this.descriptionContainer, {
                 styles: "image",
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageCategory: "unitsLarge",
                     imageName: this.unit.primaryKey.toString()
                 }),
@@ -32084,7 +32128,7 @@
             this.createSubview(e, {content: this.unitMod.storeAmount});
             var t = this.createSubview(e, {styles: "corps"});
             t.createSubview(t, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageCategory: "icons",
                     imageName: this.unit.corps
                 })
@@ -32114,7 +32158,7 @@
                 t = this.createSubview(u, {styles: "row"});
                 t.createSubview(t, {
                     styles: "categoryIcon",
-                    content: this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: s})
+                    content: this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: s})
                 });
                 t.createSubview(t, {styles: "name", content: translate(s)});
                 r = t.createSubview(t, {styles: "attackRow"});
@@ -32125,12 +32169,12 @@
             }
         };
         t.prototype.createImageWithValue = function (t, e, i) {
-            t.createSubview(t, {content: this.notify("3s(kBgiI", this, {imageCategory: "icons", imageName: e})});
+            t.createSubview(t, {content: this.notify("Z-XGNYVU", this, {imageCategory: "icons", imageName: e})});
             t.createSubview(t, {content: i})
         };
         return t
     }(e);
-    D.ActionController = function (a) {
+    k.ActionController = function (a) {
         "use strict";
         utils.__extends(e, a);
         function e(i, t) {
@@ -32157,19 +32201,19 @@
         e.prototype.dataUpdate = function (t, e) {
             if (!this.initialDataupdateDone) {
                 this.initialDataupdateDone = true;
-                this.notify("NbKCY7mj", this.view);
+                this.notify("7GVwxkqP", this.view);
                 window.setTimeout(function () {
                     if (this.view) {
                         this.view.dataUpdate.call(this.view, t, e);
-                        this.notify("gl%9o7sY", this.view);
-                        this.notify("o873Cuvp", this.view.castleList);
-                        this.notify("bKUGf9HF", this.view.castleList)
+                        this.notify("i8j%qM54", this.view);
+                        this.notify("YHC95tkO", this.view.castleList);
+                        this.notify("enjA1c%5", this.view.castleList)
                     }
                 }.bind(this), 500)
             } else {
-                this.notify("NbKCY7mj", this.view);
+                this.notify("7GVwxkqP", this.view);
                 window.setTimeout(function () {
-                    this.notify("gl%9o7sY", this.view)
+                    this.notify("i8j%qM54", this.view)
                 }.bind(this), 500);
                 this.deltaUpdate(t, e)
             }
@@ -32177,29 +32221,29 @@
         e.prototype.deltaUpdate = function (t, e) {
             this.view.castleList.deltaUpdate(t, e)
         };
-        e.prototype["(SovDy2S"] = function () {
-            e.__super__["(SovDy2S"].apply(this, arguments);
+        e.prototype["w3nkALRR"] = function () {
+            e.__super__["w3nkALRR"].apply(this, arguments);
             this.view.rebuildResourceHeader()
         };
-        e.prototype["5gDHtT_N"] = function () {
+        e.prototype["x2x7Uarm"] = function () {
             this.closeMiniWindow();
             this.clearSessionStorage();
-            this.notify("YY&))zm_", this);
-            this.notify("o873Cuvp", this.view.castleList);
-            e.__super__["5gDHtT_N"].apply(this, arguments)
+            this.notify("C-eD0kzq", this);
+            this.notify("YHC95tkO", this.view.castleList);
+            e.__super__["x2x7Uarm"].apply(this, arguments)
         };
         e.prototype.closeMiniWindow = function () {
             if (!this.miniController) {
                 return
             }
-            this.notify("56MCdi79", this.miniController);
+            this.notify("Eu50z7&J", this.miniController);
             this.miniController = null
         };
-        e.prototype["lUe%pBmJ"] = function (t, e, i) {
+        e.prototype["umQ(96%b"] = function (t, e, i) {
             this.datasource.prepareData(t, e, i);
             this.datasource.publishDeltaUpdate()
         };
-        e.prototype["o0-zizZT"] = function (n, l) {
+        e.prototype["-GNeh9YQ"] = function (n, l) {
             var i = t.habitate[l.habitatID], r = l.unitInfos, a = l.resourceInfos;
             var o = this._calculateDuration(i, r, a);
             var p = this._calculateArrivalTime(o);
@@ -32222,9 +32266,9 @@
                 }
                 n.updateResourceTable(a, i.id)
             }
-            if (typeof x !== "undefined" && x) {
+            if (typeof I !== "undefined" && I) {
                 if (r.length > 0) {
-                    this.notify("qsBGtsBz", "attackInfo")
+                    this.notify("cfdiF6Wv", "attackInfo")
                 }
             }
             if (o === 0) {
@@ -32235,7 +32279,7 @@
                 this.view.castleList.addTimerForEntry(i.id)
             }
         };
-        e.prototype["GOFr8YWb"] = function (h, n) {
+        e.prototype["Ds-4&NRg"] = function (h, n) {
             var l = t.habitate[n.habitatID], e = n.unitInfos, r = n.resourceInfos, o = this.view.action, i, a;
             var u = this._calculateDuration(l, e, r);
             var s = this._calculateCapacity(e, r);
@@ -32267,9 +32311,9 @@
         e.prototype._actions_attack = function (t) {
             this._checkNightTimeAndExcecute(function () {
                 this.datasource.attackForeignHabitat(t.source.id, t.target.id, b.ATTACKER, t.units, t.resources);
-                this.notify("N60zjkFe", this, {msg: "attack", data: null});
-                if (typeof x !== "undefined" && x) {
-                    this.notify("qsBGtsBz", "attackExecution")
+                this.notify("moYXcWen", this, {msg: "attack", data: null});
+                if (typeof I !== "undefined" && I) {
+                    this.notify("cfdiF6Wv", "attackExecution")
                 }
             }.bind(this), "Attack Habitat", t)
         };
@@ -32289,7 +32333,7 @@
                 return
             }
             this.datasource.sendSpy(t.source.id, t.target.id, b.SPY, t.resources[0].value);
-            this.notify("N60zjkFe", this, {msg: "spy", data: null})
+            this.notify("moYXcWen", this, {msg: "spy", data: null})
         };
         e.prototype._actions_sendDefense = function (t) {
             this.datasource.defendHabitat(t.source.id, t.target.id, b.DEFENSE, t.units)
@@ -32306,13 +32350,13 @@
         };
         e.prototype._actions_syncAttack = function (t) {
             this.datasource.syncTransit(t.transitID, t.source.id, t.units, t.resources);
-            this.notify("N60zjkFe", this, {msg: "attack", data: null})
+            this.notify("moYXcWen", this, {msg: "attack", data: null})
         };
         e.prototype._actions_syncDefense = function (t) {
             this.datasource.syncTransit(t.transitID, t.source.id, t.units, t.resources)
         };
         e.prototype._checkNightTimeAndExcecute = function (t, e, i) {
-            if (D.dayNightIcon(i.duration) === "nightIcon") {
+            if (k.dayNightIcon(i.duration) === "nightIcon") {
                 var a = translate("Nighttime attack warning"), s = translate(e), n = function () {
                 };
                 utils.dialog.confirm(this, a, s, t, n);
@@ -32320,15 +32364,15 @@
             }
             t()
         };
-        e.prototype["l5bniaxM"] = function (e, t) {
+        e.prototype["r&tMinEs"] = function (e, t) {
             this.view.cancelNextClickMessage();
             this.notify("createHabitatWindow", t.habitat)
         };
-        e.prototype["ltv6M4UZ"] = function (i, e) {
-            this.notify("0lnjIEGM", this, {start: this.habitat, end: t.habitate[e.habitatID]})
+        e.prototype["iRXKLg1S"] = function (i, e) {
+            this.notify("&bByotxh", this, {start: this.habitat, end: t.habitate[e.habitatID]})
         };
-        e.prototype["jHVG)I8%"] = function () {
-            this.notify("YY&))zm_", this)
+        e.prototype["ohVN24u4"] = function () {
+            this.notify("C-eD0kzq", this)
         };
         e.prototype._calculateDuration = function (t, i, r) {
             var a = this.habitat;
@@ -32340,7 +32384,7 @@
             var n = [];
             for (var e = 0, l = i.length; e < l; e++) {
                 var u = i[e];
-                n.push(g[u.id])
+                n.push(y[u.id])
             }
             return t.getSlowestHabitatUnit(n) * s
         };
@@ -32353,7 +32397,7 @@
         };
         e.prototype._calculateArrivalTime = function (t) {
             var e = Date.now();
-            return t * 1e3 + e - U
+            return t * 1e3 + e - P
         };
         e.prototype._calculateCapacity = function (i, s) {
             var n = 0, r = 0, a = [];
@@ -32362,7 +32406,7 @@
             }
             for (var t = 0, e = i.length; t < e; t++) {
                 var o = i[t];
-                a.push(g[o.id])
+                a.push(y[o.id])
             }
             for (t = 0; t < a.length; t++) {
                 for (e = 0; e < i.length; e++) {
@@ -32379,12 +32423,12 @@
         };
         return e
     }(u.Controller);
-    D.Controller = function (i) {
+    k.Controller = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
-            utils.linkMethod("DhKYVx7V", c.ViewController, e);
-            utils.linkMethod("WvopJEB&", c.ViewController, e);
+            utils.linkMethod("mSVw8M5T", c.ViewController, e);
+            utils.linkMethod("1rM7HNBw", c.ViewController, e);
             this.addRequired("habitat");
             this.setOptions(t);
             this.playerData = null;
@@ -32395,7 +32439,7 @@
 
         e.prototype.notifyProxy = function (e, a, s, n) {
             var t, i;
-            if (x) {
+            if (I) {
                 t = this.controller.checkTutorialMessages(e);
                 if (t === true) {
                     return
@@ -32412,21 +32456,21 @@
         e.prototype.add = function () {
             e.__super__.add.apply(this, arguments);
             if (this.habitat.player) {
-                this.notify("NbKCY7mj", this.view)
+                this.notify("7GVwxkqP", this.view)
             }
         };
-        e.prototype["5gDHtT_N"] = function () {
-            this.notify("YY&))zm_", this);
-            this.notify("5gDHtT_N", this, e.__super__, arguments)
+        e.prototype["x2x7Uarm"] = function () {
+            this.notify("C-eD0kzq", this);
+            this.notify("x2x7Uarm", this, e.__super__, arguments)
         };
-        e.prototype["DbSTNafr"] = function () {
-            e.__super__["DbSTNafr"].apply(this, arguments);
+        e.prototype["4qlajYYq"] = function () {
+            e.__super__["4qlajYYq"].apply(this, arguments);
             if (this.view) {
                 this.view.fixHeight()
             }
         };
-        e.prototype["Z04XvT7k"] = function () {
-            e.__super__["Z04XvT7k"].apply(this, arguments);
+        e.prototype["v2v6tJij"] = function () {
+            e.__super__["v2v6tJij"].apply(this, arguments);
             if (this.actionState === "sendMessage" || this.actionState === "transports") {
                 this.actionState = null
             } else if (this.actionState === "viewTransitDetail") {
@@ -32438,13 +32482,13 @@
                 return
             }
         };
-        e.prototype["h4LimkDm"] = function (t) {
+        e.prototype["ftwphcGZ"] = function (t) {
             t.data = t.data || {};
             t.data.habitat = t.data.habitat || this.habitat;
             if (t.data.habitat.player && t.data.alliance) {
                 t.data.habitat.player.alliance = t.data.alliance
             }
-            this.notify("h4LimkDm", this, t.data)
+            this.notify("ftwphcGZ", this, t.data)
         };
         e.prototype.savePlayerInfo = function (t) {
             this.playerData = new r.Player(t);
@@ -32459,7 +32503,7 @@
             }
             if (t.habitate.hasOwnProperty(i.id)) {
                 this.notify("createHabitatWindow", t.habitate[i.id]);
-                this["5gDHtT_N"](this.view);
+                this["x2x7Uarm"](this.view);
                 return
             }
             var l = this.view.findSubviewByField("name", "foreignHabitatExternalOverview");
@@ -32472,7 +32516,7 @@
                 if (h) {
                     s.draw()
                 } else {
-                    this["Z04XvT7k"]()
+                    this["v2v6tJij"]()
                 }
             }
             var e = this.view.findSubviewByField("tag", "currentView");
@@ -32487,7 +32531,7 @@
                     }
                 }
                 if (!u) {
-                    this["Z04XvT7k"]()
+                    this["v2v6tJij"]()
                 }
             }
             if (this.playerData === null && this.habitat.player) {
@@ -32500,7 +32544,7 @@
                     console.error("Player did not have ID information!");
                     return
                 }
-                this.notify("NbKCY7mj", this.view);
+                this.notify("7GVwxkqP", this.view);
                 this.datasource.loadPlayerInfo(o, this);
                 return
             } else if (!this.dataSaved && !this.habitat.player) {
@@ -32536,26 +32580,26 @@
         };
         e.prototype.performAction = function (t) {
             if (t === "sendMessage") {
-                this["9lFIh4B3"]();
+                this["hEEey9QX"]();
                 return true
             } else if (t === "transports") {
-                this["EJzT-KhK"]();
+                this["yzeADiTE"]();
                 return true
             }
             return false
         };
-        e.prototype["t-Bsb()d"] = function () {
-            this.notify("t-Bsb()d", this.habitat)
+        e.prototype["p)xTVMui"] = function () {
+            this.notify("p)xTVMui", this.habitat)
         };
-        e.prototype["15ACnqMQ"] = function () {
+        e.prototype[")teFW&Fc"] = function () {
             this.actionState = "player";
             var t = this.view.habitat.player;
             if (!t) {
                 return
             }
-            this.notify("FZpvdvBU", this, t)
+            this.notify("i5I1OIPu", this, t)
         };
-        e.prototype["9lFIh4B3"] = function () {
+        e.prototype["hEEey9QX"] = function () {
             if (this.actionState === "sendMessage") {
                 return
             }
@@ -32564,10 +32608,10 @@
             if (typeof t === "undefined" || !this.dataSaved) {
                 return
             }
-            this.notify("wLMgD-&F", this, t);
+            this.notify("Qz9L)T)V", this, t);
             this.view.fixHeight()
         };
-        e.prototype["j%CMIq2b"] = function () {
+        e.prototype["uQ7VPTg-"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -32577,7 +32621,7 @@
             }
             t.draw()
         };
-        e.prototype["aC%(xYUr"] = function () {
+        e.prototype["R1Ok1EP)"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -32587,7 +32631,7 @@
             }
             t.draw()
         };
-        e.prototype["j%CMIq2b"] = function () {
+        e.prototype["uQ7VPTg-"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -32597,7 +32641,7 @@
             }
             t.draw()
         };
-        e.prototype["aC%(xYUr"] = function () {
+        e.prototype["R1Ok1EP)"] = function () {
             var t = this.view.findSubviewByName("submit");
             if (!t) {
                 return
@@ -32607,10 +32651,10 @@
             }
             t.draw()
         };
-        e.prototype["1Xm08BW0"] = function () {
-            this.notify("1Xm08BW0", this)
+        e.prototype["5K_2H29H"] = function () {
+            this.notify("5K_2H29H", this)
         };
-        e.prototype["s(7SN3gU"] = function () {
+        e.prototype["QmUp(Le2"] = function () {
             for (var s in t.habitate) {
                 var a = t.habitate[s];
                 for (var i = 0; i < a.habitatTransits.length; i++) {
@@ -32635,7 +32679,7 @@
             }
             return a
         };
-        e.prototype["EJzT-KhK"] = function () {
+        e.prototype["yzeADiTE"] = function () {
             if (this.actionState === "transports") {
                 return
             }
@@ -32643,13 +32687,13 @@
             if (!this.dataSaved) {
                 return
             }
-            this.showNextViewOfClass(D.ExternalOverview, {
+            this.showNextViewOfClass(k.ExternalOverview, {
                 habitat: this.habitat,
                 name: "foreignHabitatExternalOverview"
             });
             this.view.fixHeight()
         };
-        e.prototype["t64Lne%E"] = function (t) {
+        e.prototype["tkOw_o7l"] = function (t) {
             var e = [];
             this.actionState = "viewTransitDetail";
             if (t.data.title.indexOf("Offending") !== -1) {
@@ -32659,14 +32703,14 @@
                 e.push(0);
                 e.push(1)
             }
-            this.showNextViewOfClass(D.SingleForeignHabitatUnitList, {
+            this.showNextViewOfClass(k.SingleForeignHabitatUnitList, {
                 habitat: t.data.habitat,
                 ownExternalTroops: t.data.ownExternalTroops,
                 title: t.data.title,
                 battleTypeFilter: e
             })
         };
-        e.prototype["IKdc_r2t"] = function (i) {
+        e.prototype["EhEZoYq3"] = function (i) {
             var e = i.data.table.getAllFieldValues();
             var a = {};
             for (var t = 0; t < e.length; t++) {
@@ -32682,9 +32726,9 @@
                 return
             }
             this.datasource.recallTroops(n, s, a);
-            this["Z04XvT7k"]()
+            this["v2v6tJij"]()
         };
-        e.prototype["zog0GRpX"] = function (a) {
+        e.prototype["s&TH%udj"] = function (a) {
             var e = a.data.habitat, i = "createForeignHabitatWindow";
             if (e.player && +e.player.id === +t.id) {
                 i = "createHabitatWindow";
@@ -32692,60 +32736,60 @@
             }
             this.controller[i](e)
         };
-        e.prototype["SV&qDvlX"] = function (e, t) {
+        e.prototype["7Y3Pp4y("] = function (e, t) {
             this.actionState = "viewTransitDetail";
             this.showNextViewOfClass(c.TransitDetail, {model: t.transit.model});
             this.view.fixHeight()
         };
-        e.prototype["ktCned%L"] = function (t) {
+        e.prototype["t2Qb%36o"] = function (t) {
             var e = t.data.habitat;
-            this.notify("DGiiS)m4", this, e)
+            this.notify("z4nJtGuw", this, e)
         };
-        e.prototype["RH1ea9rA"] = function (t) {
+        e.prototype["TwE19Ltt"] = function (t) {
             var e = this.filterTransits(this.habitat);
             t.addTransits(this.datasource.extendDisplayedTransits(e))
         };
-        e.prototype["hI3sAban"] = function (t) {
-            this.notify("FZpvdvBU", this, t.data.playerID)
+        e.prototype["M0hdYxpo"] = function (t) {
+            this.notify("i5I1OIPu", this, t.data.playerID)
         };
-        e.prototype["QjJvGay1"] = function (t) {
+        e.prototype["zLFMAO4v"] = function (t) {
             var e = t.data.alliance;
-            this.notify("eQbjanoz", this, e)
+            this.notify("Ve2s0mbd", this, e)
         };
-        e.prototype["O7)gbX8_"] = function () {
+        e.prototype["Hxwwx)4j"] = function () {
             var t = this.view.habitat.player;
             this.datasource.sendAllianceInvite(t.id)
         };
-        e.prototype["a(Syd_tW"] = function () {
+        e.prototype["bs97gS9A"] = function () {
             var t = this.view.habitat.player;
             this.datasource.cancelAllianceInvite(t.id)
         };
-        e.prototype["&l1V72Lj"] = function (t) {
-            if (typeof x !== "undefined" && x && t.data.action !== "attack") {
+        e.prototype["cMNHoS53"] = function (t) {
+            if (typeof I !== "undefined" && I && t.data.action !== "attack") {
                 return
             }
             if (t.data.action === "transports") {
-                this["EJzT-KhK"]();
+                this["yzeADiTE"]();
                 return
             } else if (t.data.action === "buyFreeCastle") {
-                this["t-Bsb()d"]();
+                this["p)xTVMui"]();
                 return
             } else if (t.data.action === "attack") {
                 var e = function () {
-                    this.notify("qsBGtsBz", "attackFreeCastle")
+                    this.notify("cfdiF6Wv", "attackFreeCastle")
                 };
                 setTimeout(e.bind(this), 800)
             } else if (t.data.action === "lastRaid") {
-                this.notify("JpnUlvf-", t.data);
+                this.notify("pyQe%Au6", t.data);
                 return
             }
-            this.notify("y7R3bxYT", t.data)
+            this.notify("WumqB(Zw", t.data)
         };
-        e.prototype["LMxm(ZWo"] = function () {
+        e.prototype[")QVFT9wz"] = function () {
             var t = this.view.findSubviewByName("ForeignPlayer").alliance;
             this.controller.createForeignAllianceWindow(t)
         };
-        e.prototype["9s0CD%0r"] = function (e) {
+        e.prototype["nuihhhsj"] = function (e) {
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t === null) {
                 return
@@ -32760,10 +32804,10 @@
             t.updateResourcesCapicity();
             t.updateTroopDurations(this.habitat)
         };
-        e.prototype["0FU1k0K0"] = function (t) {
-            return this["9s0CD%0r"](t)
+        e.prototype["&k8hOUr_"] = function (t) {
+            return this["nuihhhsj"](t)
         };
-        e.prototype["o0-zizZT"] = function () {
+        e.prototype["-GNeh9YQ"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
             if (t === null) {
                 return
@@ -32771,18 +32815,18 @@
             t.updateResourcesCapicity();
             t.updateTroopDurations(this.habitat)
         };
-        e.prototype["NMoTd)zu"] = function (t) {
-            return this["o0-zizZT"](t)
+        e.prototype["uWGOYwdk"] = function (t) {
+            return this["-GNeh9YQ"](t)
         };
-        e.prototype["6XkS-afU"] = function (t) {
-            var e = this.notify("TVwAjJ5A", this, t.data);
-            this.notify("xCzXgU2u", this, e)
+        e.prototype["ObYpm6kz"] = function (t) {
+            var e = this.notify("SswFkNj1", this, t.data);
+            this.notify("1EMjIwLd", this, e)
         };
-        e.prototype["J5FA3x6C"] = function () {
+        e.prototype["NYd&saEH"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
-            t.paste(this.notify("J5FA3x6C", this))
+            t.paste(this.notify("NYd&saEH", this))
         };
-        e.prototype["lfGbU54q"] = function () {
+        e.prototype["e-VijCYf"] = function () {
             if (this.assignDialogShown === false) {
                 this.assignDialogShown = true;
                 var t = translate("Please assign more transport units or reduce the amount of resources.");
@@ -32792,33 +32836,33 @@
                 })
             }
         };
-        e.prototype["ltv6M4UZ"] = function (e) {
-            this.notify("0lnjIEGM", this, {start: this.habitat, end: t.habitate[e.name]})
+        e.prototype["iRXKLg1S"] = function (e) {
+            this.notify("&bByotxh", this, {start: this.habitat, end: t.habitate[e.name]})
         };
-        e.prototype["jHVG)I8%"] = function () {
-            this.notify("YY&))zm_", this)
+        e.prototype["ohVN24u4"] = function () {
+            this.notify("C-eD0kzq", this)
         };
-        e.prototype["VhaIj0_A"] = function (t, e) {
-            return this.notify("VhaIj0_A", t, e)
+        e.prototype["cHRPueWe"] = function (t, e) {
+            return this.notify("cHRPueWe", t, e)
         };
-        e.prototype["g4pXoIQx"] = function (t) {
-            this.notify("EE)XdOZG", this, {x: +t.data.mapX, y: +t.data.mapY})
+        e.prototype["zmYT51%9"] = function (t) {
+            this.notify("XSMaUxne", this, {x: +t.data.mapX, y: +t.data.mapY})
         };
-        e.prototype["phIT(daK"] = function () {
-            return this.notify("phIT(daK", this)
+        e.prototype["BkuR(17Z"] = function () {
+            return this.notify("BkuR(17Z", this)
         };
-        e.prototype["&PbdUOlv"] = function () {
-            c.ViewController.prototype["&PbdUOlv"].apply(this, arguments)
+        e.prototype["D74stK4b"] = function () {
+            c.ViewController.prototype["D74stK4b"].apply(this, arguments)
         };
-        e.prototype["V0QJ_K1n"] = function () {
-            c.ViewController.prototype["V0QJ_K1n"].apply(this, arguments)
+        e.prototype["McQXIq&a"] = function () {
+            c.ViewController.prototype["McQXIq&a"].apply(this, arguments)
         };
-        e.prototype["sEozpTO_"] = function () {
-            c.ViewController.prototype["sEozpTO_"].apply(this, arguments)
+        e.prototype["2rQSA-wF"] = function () {
+            c.ViewController.prototype["2rQSA-wF"].apply(this, arguments)
         };
         return e
     }(u.Controller);
-    D.LastRaidController = function (e) {
+    k.LastRaidController = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -32831,23 +32875,23 @@
             t.__super__.dataUpdate.apply(this, arguments);
             if (this.attackExecuted) {
                 this.attackExecuted = false;
-                this.notify("aKR2A5nz", this);
-                this["5gDHtT_N"](this)
+                this.notify("r0dymb73", this);
+                this["x2x7Uarm"](this)
             }
         };
-        t.prototype["5gDHtT_N"] = function (e, i) {
-            this.notify("YY&))zm_", this);
-            t.__super__["5gDHtT_N"].apply(this, arguments)
+        t.prototype["x2x7Uarm"] = function (e, i) {
+            this.notify("C-eD0kzq", this);
+            t.__super__["x2x7Uarm"].apply(this, arguments)
         };
-        t.prototype["7(4Z75h2"] = function (t) {
+        t.prototype["6PjE%pZW"] = function (t) {
             this.view.cancelNextClickMessage();
-            this.notify("%jk-hJc4", this, null)
+            this.notify("uahWB6Sn", this, null)
         };
         t.prototype.updateSourceHabitat = function (t) {
             this.view.lastRaid = t;
             this.view.dataUpdate()
         };
-        t.prototype["Il8qE6Mg"] = function (n, i) {
+        t.prototype["bkhp_n7T"] = function (n, i) {
             var e = this.view.lastRaid, t = i.habitat, a = t.name ? t.name : translate("Renegade") + " " + t.id, s = this.view.habitat;
             utils.dialog.confirm(this, translate("Do you really want to attack castle %@ with last formation?", a), translate("Attack with last formation"), function () {
                 this.attackExecuted = true;
@@ -32855,20 +32899,20 @@
             }.bind(this), function () {
             })
         };
-        t.prototype["h4LimkDm"] = function (t, e) {
+        t.prototype["ftwphcGZ"] = function (t, e) {
             this.view.cancelNextClickMessage();
-            return this.notify("h4LimkDm", t, e)
+            return this.notify("ftwphcGZ", t, e)
         };
-        t.prototype["9obJO5Cf"] = function (t, e) {
+        t.prototype["_w32GmpP"] = function (t, e) {
             this.view.cancelNextClickMessage();
-            return this.notify("9obJO5Cf", t, e)
+            return this.notify("_w32GmpP", t, e)
         };
-        t.prototype["0lnjIEGM"] = function (e, t) {
-            return this.notify("0lnjIEGM", this, t)
+        t.prototype["&bByotxh"] = function (e, t) {
+            return this.notify("&bByotxh", this, t)
         };
         return t
     }(u.Controller);
-    D.DataSource = function (o) {
+    k.DataSource = function (o) {
         "use strict";
         utils.__extends(e, o);
         function e() {
@@ -32931,7 +32975,7 @@
                 unitDictionary: o,
                 resourceDictionary: t
             }, this.triggerModelUpdate, this, 5e3, this.displayError);
-            this.notify("u_kfVLf9", this, {sourceHabID: e, units: a})
+            this.notify("jNrGbro&", this, {sourceHabID: e, units: a})
         };
         e.prototype.sendResources = function (a, n, r, t, e) {
             t = "{" + $.param(i(t)).replace(/&/g, "; ") + ";}";
@@ -33001,7 +33045,7 @@
                 receivingPlayerArray: t,
                 subject: e,
                 content: i
-            }, this.triggerModelUpdate, this)
+            }, this.modelUpdate, this)
         };
         e.prototype.loadPlayerInfo = function (e, t) {
             function i(e) {
@@ -33012,7 +33056,7 @@
                     })
                 }
                 t.savePlayerInfo(_.try(e, "Data.Player.0"));
-                t.notify("gl%9o7sY", t.view)
+                t.notify("i8j%qM54", t.view)
             }
 
             s.request("ProfileAction/playerInformation", {id: e}, i, this)
@@ -33077,8 +33121,8 @@
                     icon: this.getImageSrc("buttonCastle", "icons"),
                     showUnits: this.action !== "sendSpy" ? true : false,
                     showResources: this.action !== "sendDefense" && this.action !== "syncDefense" ? true : false,
-                    habitatUnits: B.DataSource.prototype.prepareUnits.call(this, t.stats.units.own, true, s, true),
-                    habitatResources: B.DataSource.prototype.prepareResources.call(this, t.stats.resources, true, this.getResourceFilterForAction(this.action), t.id, true),
+                    habitatUnits: H.DataSource.prototype.prepareUnits.call(this, t.stats.units.own, true, s, true),
+                    habitatResources: H.DataSource.prototype.prepareResources.call(this, t.stats.resources, true, this.getResourceFilterForAction(this.action), t.id, true),
                     action: this.action,
                     actionText: u(this.action),
                     actionIcon: h(this.action, this),
@@ -33168,8 +33212,8 @@
             this.triggerModelUpdate.apply(this, arguments)
         };
         return e
-    }(I);
-    D.Window = function (i) {
+    }(x);
+    k.Window = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
@@ -33214,7 +33258,7 @@
                 freeCastle: i,
                 newbieProtectedUntil: a,
                 onVacation: s
-            }, D.View)
+            }, k.View)
         };
         e.prototype.addHeadlineControls = function () {
             if (!this.headline) {
@@ -33242,7 +33286,7 @@
                 this.createSubview(this.headline.buttons, {
                     graphic: a.graphic,
                     hover: a.hover,
-                    clickMessage: "h4LimkDm",
+                    clickMessage: "ftwphcGZ",
                     data: {action: a.action},
                     group: "headlineControls"
                 }, te)
@@ -33260,7 +33304,7 @@
                 if (t.noobProtectionEndDate && t.noobProtectionEndDate > new Date) {
                     return t.noobProtectionEndDate
                 }
-                e = this.notify("VhaIj0_A", this, t.creationDate);
+                e = this.notify("cHRPueWe", this, t.creationDate);
                 if (e !== "") {
                     i = e
                 }
@@ -33269,7 +33313,7 @@
         };
         return e
     }(u.Window);
-    D.View = function (e) {
+    k.View = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -33304,7 +33348,7 @@
             if (!s || e) {
                 t.push({action: "attack", hover: "Attack Habitat", icon: "transitAttackWhite"});
                 t.push({action: "sendSpy", hover: "Send Spy", icon: "transitSpyWhite"});
-                if (this.notify("phIT(daK") === true) {
+                if (this.notify("BkuR(17Z") === true) {
                     t.push({action: "lastRaid", hover: "Attack with last formation", icon: "lastRaidWhite"})
                 }
             }
@@ -33316,11 +33360,11 @@
                 var i = t[a];
                 o.createSubview(o, {
                     styles: i.action,
-                    clickMessage: "&l1V72Lj",
+                    clickMessage: "cMNHoS53",
                     data: {action: i.action, foreignHabitat: this.habitat, isFreeCastle: e, isProtected: s},
-                    content: this.notify("3s(kBgiI", this, {imageName: i.icon, imageCategory: "icons"}),
+                    content: this.notify("Z-XGNYVU", this, {imageName: i.icon, imageCategory: "icons"}),
                     hover: translate(i.hover)
-                }, p)
+                }, f)
             }
             this.addReservations()
         };
@@ -33339,19 +33383,19 @@
                 icon: "buttonPlayer",
                 iconCategory: "icons",
                 styles: "player",
-                clickMessage: "h4LimkDm",
+                clickMessage: "ftwphcGZ",
                 data: {action: "showPlayer"}
             }, m);
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "buttonMessages",
                     imageCategory: "icons"
                 }),
                 hover: translate("Send Message"),
                 styles: "playerMessage",
-                clickMessage: "h4LimkDm",
+                clickMessage: "ftwphcGZ",
                 data: {action: "sendMessage"}
-            }, p);
+            }, f);
             if (t) {
                 var e = utils.sanitize(t.name), i = o.Controller.findTransitRelation(this.player);
                 this.createSubview(this, {
@@ -33359,11 +33403,11 @@
                     icon: "buttonAlliance",
                     iconCategory: "icons",
                     styles: "alliance",
-                    clickMessage: "h4LimkDm",
+                    clickMessage: "ftwphcGZ",
                     data: {alliance: t, action: "showAlliance"}
                 }, m);
                 this.icon = this.createSubview(this, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: i,
                         imageCategory: "diplomacy"
                     }), styles: "allianceDiplomacy"
@@ -33415,7 +33459,7 @@
         };
         return t
     }(e);
-    D.ExternalOverview = function (e) {
+    k.ExternalOverview = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -33436,8 +33480,8 @@
                 template: "transitList",
                 templateData: e
             }, c.TransitList);
-            this.unitList = this.createSubview(this, {habitat: this.habitat}, D.UnitList);
-            this.notify("bKUGf9HF", this.transitList)
+            this.unitList = this.createSubview(this, {habitat: this.habitat}, k.UnitList);
+            this.notify("enjA1c%5", this.transitList)
         };
         t.prototype.dataUpdate = function (e, t) {
             if (t && t.entityName === "Habitat") {
@@ -33450,7 +33494,7 @@
         };
         return t
     }(e);
-    D.dayNightIcon = function (s) {
+    k.dayNightIcon = function (s) {
         var n = (new Date).getTime();
         var a = false;
         var t = String(utils.date.formatDateTimeForNightModus(new Date(s * 1e3 + n)));
@@ -33475,7 +33519,7 @@
         }
         return "dayIcon"
     };
-    D.ActionWindow = function (i) {
+    k.ActionWindow = function (i) {
         "use strict";
         utils.__extends(e, i);
         function e(i, t) {
@@ -33500,7 +33544,7 @@
                 template: "resourceHeaderSmall",
                 templateData: {targetResources: i}
             }, ai.ResourceHeader);
-            this.notify("bKUGf9HF", this.resourceHeader);
+            this.notify("enjA1c%5", this.resourceHeader);
             this.resourceHeaderContainer.draw();
             $("#" + this.id + " .main-content").addClass("with-resource-header")
         };
@@ -33515,7 +33559,7 @@
                 var a = utils.date.setCountDownTime(this.destinationETA), o = utils.date.secToTimeStr(a);
                 i = {
                     message: translate("Destination ETA"),
-                    arrivalIcon: this.getImageSrc(D.dayNightIcon(a), "icons"),
+                    arrivalIcon: this.getImageSrc(k.dayNightIcon(a), "icons"),
                     arrivalTime: utils.date.formatDateTime(this.destinationETA),
                     durationIcon: this.getImageSrc("duration", "icons"),
                     duration: o,
@@ -33542,7 +33586,7 @@
         };
         return e
     }(u.Window);
-    D.UnitList = function (s) {
+    k.UnitList = function (s) {
         utils.__extends(i, e);
         function i(e, t) {
             i.__super__.constructor.apply(this, arguments);
@@ -33554,13 +33598,13 @@
             this.styleArray.push("unitList")
         }
 
-        function a(p, v, b) {
+        function a(p, g, b) {
             var i = {}, c = {}, a, h, S, _, l;
             for (var w in t.habitate) {
                 var u = t.habitate[w];
                 for (a = 0, h = u.externalHabitatUnits.length; a < h; a++) {
-                    var e = u.externalHabitatUnits[a], f = e.battleType !== null && e.battleType === v, y = e.habitat && +e.habitat.id === +p;
-                    if (!f || !y) {
+                    var e = u.externalHabitatUnits[a], f = e.battleType !== null && e.battleType === g, v = e.habitat && +e.habitat.id === +p;
+                    if (!f || !v) {
                         continue
                     }
                     b.ownedHabitatsPresent += 1;
@@ -33574,8 +33618,8 @@
                 }
             }
             if (i) {
-                for (l in g) {
-                    var o = g[l], r = i[o.primaryKey];
+                for (l in y) {
+                    var o = y[l], r = i[o.primaryKey];
                     if (typeof r !== "undefined" && r) {
                         c[o.primaryKey] = r
                     }
@@ -33596,11 +33640,11 @@
         };
         i.prototype._createTroops = function () {
             var e = new r.Habitat(this.habitat);
-            var n = a(this.habitat.id, k.EXTERNAL_UNITS_TO_DEFENSE, this);
+            var n = a(this.habitat.id, D.EXTERNAL_UNITS_TO_DEFENSE, this);
             if (utils.dict.size(n) > 0) {
                 container = this.createContainer({
                     data: {habitat: e, title: "Defending troops"},
-                    clickMessage: "t64Lne%E"
+                    clickMessage: "tkOw_o7l"
                 });
                 container.createSubview(container, {title: translate("Defending troops")}, A);
                 container.createSubview(container, {
@@ -33610,11 +33654,11 @@
                     habitat: e
                 }, C.Table)
             }
-            var o = a(this.habitat.id, k.ATTACKER, this);
+            var o = a(this.habitat.id, D.ATTACKER, this);
             if (utils.dict.size(o) > 0) {
                 container = this.createContainer({
                     data: {habitat: e, title: "Offending troops"},
-                    clickMessage: "t64Lne%E"
+                    clickMessage: "tkOw_o7l"
                 });
                 container.createSubview(container, {title: translate("Offending troops")}, A);
                 container.createSubview(container, {
@@ -33654,7 +33698,7 @@
         };
         return i
     }(e);
-    D.SingleForeignHabitatUnitList = function (s) {
+    k.SingleForeignHabitatUnitList = function (s) {
         utils.__extends(i, e);
         function i(e, t) {
             i.__super__.constructor.apply(this, arguments);
@@ -33669,22 +33713,22 @@
         i.prototype.create = function () {
             var e;
             var s;
-            var f = [];
+            var p = [];
             var h = [];
             var w, b;
             var m = false;
             var o, a;
             var i;
             var n = [];
-            for (var g in t.habitate) {
-                var c = t.habitate[g];
+            for (var y in t.habitate) {
+                var c = t.habitate[y];
                 for (e = 0, j = c.externalHabitatUnits.length; e < j; e++) {
                     var r = c.externalHabitatUnits[e];
                     if (r.habitat && r.habitat.id == this.habitat.id) {
-                        if (r.battleType == k.ATTACKER) {
+                        if (r.battleType == D.ATTACKER) {
                             h.push(r)
                         } else {
-                            f.push(r)
+                            p.push(r)
                         }
                     }
                 }
@@ -33692,7 +33736,7 @@
             if (this.title === "Offending troops") {
                 s = h
             } else {
-                s = f
+                s = p
             }
             s.sort(function (t, e) {
                 if (t.battleType < e.battleType) {
@@ -33715,21 +33759,21 @@
                     n[e] = s[e]
                 }
             }
-            if (s.length > 0 && s[0].battleType == k.OWN_HABITAT) {
+            if (s.length > 0 && s[0].battleType == D.OWN_HABITAT) {
                 o = n.shift()
             }
             a = n;
             if (typeof o !== "undefined") {
                 i = this.createContainer();
-                var y = getUnitsForUnitTable(o.units);
+                var v = getUnitsForUnitTable(o.units);
                 this.title = "Defending troops";
                 i.createSubview(i, {title: translate(this.title)}, A);
                 i.createSubview(i, {
                     name: "ownUnitsTable",
                     styles: "clickable",
-                    units: y,
+                    units: v,
                     clickMessage: null,
-                    imageClickMessage: "&N2xhhek",
+                    imageClickMessage: ")WyTi%0g",
                     habitat: this.habitat
                 }, C.Table)
             }
@@ -33744,30 +33788,30 @@
                 }
             });
             for (e = 0; e < a.length; e++) {
-                var v = a[e].habitat, d = a[e].sourceHabitat, u = false;
+                var g = a[e].habitat, d = a[e].sourceHabitat, u = false;
                 if (t.habitate.hasOwnProperty(d.id)) {
                     u = true
                 }
                 i = this.createContainer();
                 i.createSubview(i, {
                     name: "foreignUnits",
-                    icon: this.notify("3s(kBgiI", this, {imageName: "centerForeignHabitat", imageCategory: "icons"}),
+                    icon: this.notify("Z-XGNYVU", this, {imageName: "centerForeignHabitat", imageCategory: "icons"}),
                     title: utils.sanitize(d.name),
-                    clickData: {habitat: v},
-                    titleClickMessage: "JldGVio)"
+                    clickData: {habitat: g},
+                    titleClickMessage: "&0cCHfk2"
                 }, A);
-                if (a[e].battleType === k.EXTERNAL_UNITS_TO_DEFENSE) {
+                if (a[e].battleType === D.EXTERNAL_UNITS_TO_DEFENSE) {
                     this.unitTable = i.createSubview(i, {
                         name: "foreignDefenseUnits",
                         styles: "recallUnits",
                         units: a[e].habitatUnitDictionary,
                         inputFields: true,
                         clickMessage: null,
-                        imageClickMessage: "&N2xhhek",
+                        imageClickMessage: ")WyTi%0g",
                         habitat: this.habitat
                     }, C.Table)
                 }
-                if (a[e].battleType === k.ATTACKER) {
+                if (a[e].battleType === D.ATTACKER) {
                     this.unitTable = i.createSubview(i, {
                         name: "foreignAttackUnits",
                         styles: "recallUnits",
@@ -33794,8 +33838,8 @@
                         content: translate(l),
                         hover: translate(l),
                         data: {message: l, table: this.unitTable, habitatUnit: a[e]},
-                        clickMessage: "IKdc_r2t"
-                    }, p);
+                        clickMessage: "EhEZoYq3"
+                    }, f);
                     i.clearfix()
                 }
             }
@@ -33803,7 +33847,7 @@
             this.isValid = !!(a.length || o)
         };
         i.prototype._createCallHelpButton = function () {
-            var i = this.habitat.id, e = t.alliance ? t.alliance.id : null, s = [], n = "callHelpButton", r = "WvopJEB&", u = "Plan Attack", h = "You've already shared this attack with your alliance.", o, l;
+            var i = this.habitat.id, e = t.alliance ? t.alliance.id : null, s = [], n = "callHelpButton", r = "1rM7HNBw", u = "Plan Attack", h = "You've already shared this attack with your alliance.", o, l;
             if (!e) {
                 return
             }
@@ -33831,9 +33875,9 @@
             return this.isValid
         };
         i.prototype.castleLink = function (e, i) {
-            var t = e.createSubview(e, {styles: "habitatLink clickable", clickMessage: "JldGVio)", data: {habitat: i}});
+            var t = e.createSubview(e, {styles: "habitatLink clickable", clickMessage: "&0cCHfk2", data: {habitat: i}});
             t.createSubview(t, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "centerForeignHabitat",
                     imageCategory: "icons"
                 }), styles: "icon"
@@ -33846,7 +33890,7 @@
         };
         return i
     }(e);
-    D.LastRaidWindow = function (i) {
+    k.LastRaidWindow = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
@@ -33917,7 +33961,7 @@
             function o(i) {
                 var t = 0;
                 for (var a in i) {
-                    var s = g[i[a].id] || g[a];
+                    var s = y[i[a].id] || y[a];
                     if (!s)continue;
                     var n = s.getSecondsPerField(e);
                     if (n > t) {
@@ -33962,16 +34006,16 @@
                         timeleft: utils.date.secToTimeStr(a)
                     }
                 }, template: "lastRaid", attachTo: this.content
-            }, D.LastRaidView)
+            }, k.LastRaidView)
         };
         e.prototype.dataUpdate = function (e, i) {
             this.create();
             this.lastRaidView.draw();
-            this.notify("0lnjIEGM", this, {start: this.habitat, end: t.habitate[this.lastRaid.sourceHabID]})
+            this.notify("&bByotxh", this, {start: this.habitat, end: t.habitate[this.lastRaid.sourceHabID]})
         };
         return e
     }(u.Window);
-    D.LastRaidView = function (e) {
+    k.LastRaidView = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -33979,37 +34023,37 @@
         }
 
         t.prototype.okayButtonHandler = function (t) {
-            this.notify("Il8qE6Mg", this, {habitat: this.templateData.destinationHabitat})
+            this.notify("bkhp_n7T", this, {habitat: this.templateData.destinationHabitat})
         };
         t.prototype.cancelButtonHandler = function (t) {
-            this.notify("5gDHtT_N", this)
+            this.notify("x2x7Uarm", this)
         };
         t.prototype.changeButtonHandler = function (t) {
-            this.notify("7(4Z75h2", this)
+            this.notify("6PjE%pZW", this)
         };
         t.prototype.openDestinationHabitat = function (t) {
-            this.notify("h4LimkDm", this, {
+            this.notify("ftwphcGZ", this, {
                 action: "visitCastle",
                 habitat: this.templateData.destinationHabitat.habitat
             })
         };
         t.prototype.openDestinationAlliance = function (t) {
-            this.notify("h4LimkDm", this, {
+            this.notify("ftwphcGZ", this, {
                 action: "showAlliance",
                 habitat: this.templateData.destinationHabitat.habitat
             })
         };
         t.prototype.openDestinationPlayer = function (t) {
-            this.notify("h4LimkDm", this, {action: "showPlayer", habitat: this.templateData.destinationHabitat.habitat})
+            this.notify("ftwphcGZ", this, {action: "showPlayer", habitat: this.templateData.destinationHabitat.habitat})
         };
         t.prototype.openSourceHabitat = function (t) {
-            this.notify("9obJO5Cf", this, {action: "visitCastle", habitatID: this.templateData.sourceHabitat.id})
+            this.notify("_w32GmpP", this, {action: "visitCastle", habitatID: this.templateData.sourceHabitat.id})
         };
         t.prototype.openSourcePlayer = function (t) {
-            this.notify("9obJO5Cf", this, {action: "showPlayer", habitatID: this.templateData.sourceHabitat.id})
+            this.notify("_w32GmpP", this, {action: "showPlayer", habitatID: this.templateData.sourceHabitat.id})
         };
         t.prototype.openSourceAlliance = function (t) {
-            this.notify("9obJO5Cf", this, {action: "showAlliance", habitatID: this.templateData.sourceHabitat.id})
+            this.notify("_w32GmpP", this, {action: "showAlliance", habitatID: this.templateData.sourceHabitat.id})
         };
         t.prototype.getEvents = function () {
             var i = t.__super__.getEvents.apply(this, arguments);
@@ -34082,7 +34126,7 @@
             return e
         };
         e.prototype.updateCapacity = function (d, s, l, t, n) {
-            var r = this.habitatNode(d), e = r.find(".actions"), o = e.find(".total"), i = e.find(".arrival"), u = e.find(".capacity"), h = this.getImageSrc(D.dayNightIcon(s), "icons"), c = e.find(".delay");
+            var r = this.habitatNode(d), e = r.find(".actions"), o = e.find(".total"), i = e.find(".arrival"), u = e.find(".capacity"), h = this.getImageSrc(k.dayNightIcon(s), "icons"), c = e.find(".delay");
             o.find(".counter ").text(utils.date.secToTimeStr(s));
             i.find(".counter").text(utils.date.formatDateTime(l));
             i.find("img").attr("src", h);
@@ -34141,7 +34185,7 @@
                     }
                     e.val(s)
                 }
-                this.notify("o0-zizZT", this, {habitatID: i.id, unitInfos: r, resourceInfos: o})
+                this.notify("-GNeh9YQ", this, {habitatID: i.id, unitInfos: r, resourceInfos: o})
             }
         };
         e.prototype.inputFieldChangeHandler = function (o) {
@@ -34149,11 +34193,11 @@
             var e = t.data("habitat");
             var s = i(t.find(".units input"));
             var n = i(t.find(".resources input"));
-            this.notify("o0-zizZT", this, {habitatID: e, unitInfos: s, resourceInfos: n});
+            this.notify("-GNeh9YQ", this, {habitatID: e, unitInfos: s, resourceInfos: n});
             var r = a(this.action, this.foreignHabitat.id, e);
             var l = {units: s, resources: n};
             _.storeSession.setJSON(r, l);
-            this.notify("wCMEKBWp", this, r)
+            this.notify("KfuWwK)P", this, r)
         };
         e.prototype.maxButtonClickHandler = function (a) {
             var t = $(a);
@@ -34164,36 +34208,36 @@
             r.val(n);
             var o = i(e.find(".units input"));
             var l = i(e.find(".resources input"));
-            this.notify("o0-zizZT", this, {habitatID: s, unitInfos: o, resourceInfos: l})
+            this.notify("-GNeh9YQ", this, {habitatID: s, unitInfos: o, resourceInfos: l})
         };
         e.prototype.openCastleClickHandler = function (i) {
             var e = $(i).parents(".listItem").data("habitat");
             if (!e) {
                 return
             }
-            this.notify("l5bniaxM", this, {habitat: t.habitate[e]})
+            this.notify("r&tMinEs", this, {habitat: t.habitate[e]})
         };
         e.prototype.hoverInListElement = function (e) {
             var t = $(e).data("habitat");
             if (!t) {
                 return
             }
-            this.notify("ltv6M4UZ", this, {habitatID: t})
+            this.notify("iRXKLg1S", this, {habitatID: t})
         };
         e.prototype.hoverOutListElement = function () {
-            this.notify("jHVG)I8%", this);
+            this.notify("ohVN24u4", this);
             this.hideHovers()
         };
         e.prototype.unitClickHandler = function (i, a) {
             var e = $(a), s = e.parents(".listItem").data("habitat"), n = e.parent().data("primary-key");
-            this.showHover(i, C.InfoHoverView, {unit: g[n], habitat: t.habitate[s]})
+            this.showHover(i, C.InfoHoverView, {unit: y[n], habitat: t.habitate[s]})
         };
         e.prototype.performAction = function (s) {
             var t = $(s).parents(".listItem");
             var e = t.data("habitat");
             var n = i(t.find(".units input"));
             var r = i(t.find(".resources input"));
-            this.notify("GOFr8YWb", this, {habitatID: e, unitInfos: n, resourceInfos: r});
+            this.notify("Ds-4&NRg", this, {habitatID: e, unitInfos: n, resourceInfos: r});
             t.find("inputs").val("");
             var o = a(this.action, this.foreignHabitat.id, e);
             _.storeSession.removeItem(o)
@@ -34290,19 +34334,19 @@
                 if (!e) {
                     continue
                 }
-                this.notify("o0-zizZT", this, {habitatID: e, unitInfos: n, resourceInfos: c})
+                this.notify("-GNeh9YQ", this, {habitatID: e, unitInfos: n, resourceInfos: c})
             }
             if (!this.templateData.syncMessage) {
                 return
             }
-            var o = $("#" + this.templateData.htmlID + " .syncMessage .time.duration"), s = this.templateData.syncMessage.rawData.destinationETA, u = utils.date.secToTimeStr(utils.date.setCountDownTime(s)), h = Math.floor(utils.date.timeDifference(new Date, s) / 1e3), l = this.getImageSrc(D.dayNightIcon(h), "icons");
+            var o = $("#" + this.templateData.htmlID + " .syncMessage .time.duration"), s = this.templateData.syncMessage.rawData.destinationETA, u = utils.date.secToTimeStr(utils.date.setCountDownTime(s)), h = Math.floor(utils.date.timeDifference(new Date, s) / 1e3), l = this.getImageSrc(k.dayNightIcon(h), "icons");
             o.text(u);
             $("#" + this.templateData.htmlID + " .syncMessage .icon.arrivalIcon").attr("src", l)
         };
-        e.prototype.deltaUpdate = function (k, p) {
-            var f = $("#" + this.id), y = f.find(".listItem"), m = f.parents(".win"), _ = m.hasClass("syncDefense") || m.hasClass("syncAttack"), r, v, i, u;
-            for (r = 0, v = y.length; r < v; r++) {
-                var t = p[r], e = $(y[r]), S = e.find(".unitElement"), b = e.find(".resourceElement");
+        e.prototype.deltaUpdate = function (D, p) {
+            var f = $("#" + this.id), v = f.find(".listItem"), m = f.parents(".win"), _ = m.hasClass("syncDefense") || m.hasClass("syncAttack"), r, g, i, u;
+            for (r = 0, g = v.length; r < g; r++) {
+                var t = p[r], e = $(v[r]), S = e.find(".unitElement"), b = e.find(".resourceElement");
                 e.attr("data-habitat", t.id);
                 e.data("habitat", t.id);
                 e.find(".title").html(t.name);
@@ -34311,13 +34355,13 @@
                 e.find(".actions").hide();
                 e.find("input").val("");
                 for (i = 0, u = t.habitatUnits.length; i < u; i++) {
-                    var c = t.habitatUnits[i], o = $(S[i]), h = c.amount, g = c.maxInput.disabled;
+                    var c = t.habitatUnits[i], o = $(S[i]), h = c.amount, y = c.maxInput.disabled;
                     o.find(".affordable").html(h);
                     o.find("input").attr("placeholder", h);
                     o.find(".maxButton").attr("data-max", h);
                     o.find(".maxButton").data("max", h);
-                    o.find("input").attr("disabled", g);
-                    if (g) {
+                    o.find("input").attr("disabled", y);
+                    if (y) {
                         n(a(this.action, this.foreignHabitat.id, t.id), c.unitID)
                     }
                 }
@@ -34360,12 +34404,12 @@
         };
         return t
     }(S);
-    B.View = function (i) {
+    H.View = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
             this.addOption("showSummary", true);
-            this.addOption("castleSelectMessage", "4H-Fa%gV");
+            this.addOption("castleSelectMessage", "5NU9I4-l");
             this.addOption("caller", false);
             this.setOptions(t);
             this.castleList = null;
@@ -34408,7 +34452,7 @@
                 template: "castleList",
                 attachTo: this.content,
                 castleSelectMessage: this.castleSelectMessage
-            }, B.CastleList);
+            }, H.CastleList);
             this._castleClass();
             if (this.showSummary) {
                 this._header()
@@ -34426,7 +34470,7 @@
                         detail: translate("Points") + ": " + t.points
                     }, habitatResources: this._formatTotalResources(), habitatUnits: this._formatTotalUnits()
                 }
-            }, B.OverviewElement)
+            }, H.OverviewElement)
         };
         e.prototype.dataUpdate = function (i, t) {
             e.__super__.dataUpdate.apply(this, arguments);
@@ -34443,11 +34487,11 @@
         };
         return e
     }(u.Window);
-    B.CastleList = function (e) {
+    H.CastleList = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
-            this.addOption("castleSelectMessage", "4H-Fa%gV");
+            this.addOption("castleSelectMessage", "5NU9I4-l");
             this.setOptions(e)
         }
 
@@ -34471,7 +34515,7 @@
             for (var t = 0, n = this.templateData.habitate.length; t < n; t++) {
                 var e = this.templateData.habitate[t];
                 if (e.id === a) {
-                    this.notify("g4pXoIQx", this, {mapX: e.mapX, mapY: e.mapY})
+                    this.notify("zmYT51%9", this, {mapX: e.mapX, mapY: e.mapY})
                 }
             }
             i.stopPropagation()
@@ -34495,7 +34539,7 @@
         };
         return t
     }(S);
-    B.Controller = function (e) {
+    H.Controller = function (e) {
         utils.__extends(t, u.Controller);
         function t() {
             t.__super__.constructor.apply(this, arguments)
@@ -34511,7 +34555,7 @@
             this.heightAdjusted = false;
             this.view.dataUpdate(e, t)
         };
-        t.prototype["6P71vlIF"] = function () {
+        t.prototype["(uTI&mLD"] = function () {
             if (this.heightAdjusted) {
                 return
             }
@@ -34522,25 +34566,25 @@
             }
             this.heightAdjusted = true
         };
-        t.prototype["4H-Fa%gV"] = function (e, t) {
+        t.prototype["5NU9I4-l"] = function (e, t) {
             this.view.cancelNextClickMessage();
-            this.notify("QB%fhFep", this, t)
+            this.notify("%T)kNhIc", this, t)
         };
-        t.prototype["g4pXoIQx"] = function (e, t) {
-            this.notify("EE)XdOZG", this, {x: +t.mapX, y: +t.mapY})
+        t.prototype["zmYT51%9"] = function (e, t) {
+            this.notify("XSMaUxne", this, {x: +t.mapX, y: +t.mapY})
         };
-        t.prototype["lUe%pBmJ"] = function (t, e, i) {
+        t.prototype["umQ(96%b"] = function (t, e, i) {
             this.datasource.prepareData(t, e, i);
             this.datasource.publishUpdate()
         };
-        t.prototype["4PhQPW7B"] = function (t, e) {
+        t.prototype["oGIHT%3e"] = function (t, e) {
             this.view.hide();
             this.view.cancelNextClickMessage();
-            return this.notify("4PhQPW7B", t, {id: e, foreignHabitat: this.view.foreignHabitat})
+            return this.notify("oGIHT%3e", t, {id: e, foreignHabitat: this.view.foreignHabitat})
         };
         return t
     }(u.Controller);
-    B.DataSource = function (i) {
+    H.DataSource = function (i) {
         utils.__extends(e, i);
         function e(t, i) {
             e.__super__.constructor.apply(this, arguments);
@@ -34642,8 +34686,8 @@
             this.publishUpdate()
         };
         return e
-    }(I);
-    B.OverviewElement = function (e) {
+    }(x);
+    H.OverviewElement = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -34654,7 +34698,7 @@
         return t
     }(S);
     O.DataSource = function (i) {
-        utils.__extends(e, I);
+        utils.__extends(e, x);
         function e() {
             e.__super__.constructor.apply(this, arguments)
         }
@@ -34715,7 +34759,7 @@
             return c.DataSource.prototype.prepareTransits.apply(this, arguments)
         };
         return e
-    }(I);
+    }(x);
     O.Controller = function (i) {
         utils.__extends(e, i);
         function e() {
@@ -34749,7 +34793,7 @@
         };
         e.prototype.switchView = function (e, i) {
             this.currentSection = e;
-            this.notify("NbKCY7mj", this.view);
+            this.notify("7GVwxkqP", this.view);
             var t = this.view.displayArea;
             if (!t) {
                 return false
@@ -34771,7 +34815,7 @@
                         this.applyDeplayedTotals()
                     }
                 }.bind(this), 0);
-                this.notify("gl%9o7sY", this.view)
+                this.notify("i8j%qM54", this.view)
             }.bind(this), 0)
         };
         e.prototype.applyDeplayedTotals = function () {
@@ -34782,16 +34826,16 @@
                 this.view.troopHeader.resourceCounts.dataUpdate(null, this.deplayedResourceTotals)
             }
         };
-        e.prototype["otUAjvdJ"] = function (t) {
+        e.prototype["J7scvNMM"] = function (t) {
             var e = t.name;
             this.switchView(e);
             this.resetCollpaseToggles()
         };
-        e.prototype["od5m%wpF"] = function (t) {
+        e.prototype["qc3rNG4z"] = function (t) {
             this.deplayedUnitTotals = t.units;
             this.deplayedResourceTotals = t.resources
         };
-        e.prototype["SU%(ketO"] = function (t) {
+        e.prototype["yoraCGUX"] = function (t) {
             this.sourceState = (t && t.name) === "toggleDest" ? "dest" : "source";
             this.manageSourceControl();
             if (this.view && this.view.displayArea) {
@@ -34815,10 +34859,10 @@
                 e.addClass("active")
             }
         };
-        e.prototype["P(43mpXZ"] = function (t) {
+        e.prototype["TyZ&xm8q"] = function (t) {
             this._collapseControl("collapse", t)
         };
-        e.prototype["(bndj%X3"] = function (t) {
+        e.prototype["X9kc5onw"] = function (t) {
             this._collapseControl("expand", t)
         };
         e.prototype.resetCollpaseToggles = function () {
@@ -34876,12 +34920,12 @@
                 return
             }
             if (this.currentSection && this.currentSection === "missions") {
-                this.notify("9obJO5Cf", this.view, {habitatID: t, action: "missions"});
+                this.notify("_w32GmpP", this.view, {habitatID: t, action: "missions"});
                 return
             }
             this.notify("createHabitatWindow", {id: t})
         };
-        e.prototype["5R8f)NW4"] = function (t) {
+        e.prototype["_hc4VFiK"] = function (t) {
             var e = function () {
                 this.datasource.sendHome(t.source, t.destination, t.units)
             }.bind(this);
@@ -34891,25 +34935,25 @@
             var i = translate("Send troops home"), a = translate("global.confirm");
             utils.dialog.confirm(this, a, i, e)
         };
-        e.prototype["wcJWl2B1"] = function (t) {
+        e.prototype["VvG_&qfn"] = function (t) {
             var e = function () {
                 this.datasource.sendAllHome(t)
             }.bind(this);
             var i = translate("Send troops home"), a = translate("Do you really want to send all troops home?");
             utils.dialog.confirm(this, a, i, e)
         };
-        e.prototype["(rzkiMw4"] = function (r, a) {
+        e.prototype["tFlJ_YuS"] = function (r, a) {
             var s = K[a], e = s.buildSpeedupCost, i = translate("Gold"), o = h.getValueOf("Mission time reduction for %@ costs %d %@. You have %d %@."), n;
             n = $.sprintf(o, translate(s.identifier), e, i, t.gold, i);
             utils.dialog.confirm(this, n, i, function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.speedUpMission(r, a)
                 }
             }.bind(this))
         };
-        e.prototype["FxFBecER"] = function (l) {
+        e.prototype["OyebGEXe"] = function (l) {
             var i = t.habitate[l].habitatMissions;
             var a = [];
             var e = 0;
@@ -34931,7 +34975,7 @@
             var c = $.sprintf(u, a, e, o, t.gold, o);
             utils.dialog.confirm(this, c, o, function () {
                 if (t.gold < e) {
-                    n.notify("vF4Exq0E", n, {costs: e})
+                    n.notify("8xvB5GpX", n, {costs: e})
                 } else {
                     n.datasource.speedupAllMissions(l, "")
                 }
@@ -34956,7 +35000,7 @@
             }
             return true
         };
-        e.prototype["&PbdUOlv"] = function (n, e) {
+        e.prototype["D74stK4b"] = function (n, e) {
             var i = e.destHabID, s = e.sourceHabID, t;
             if (a.transits) {
                 t = a.transits[e.transitID]
@@ -34964,8 +35008,8 @@
             if (!t) {
                 return
             }
-            D.DataSource.prototype.habitatInfo(i, function (e) {
-                this.notify("y7R3bxYT", {
+            k.DataSource.prototype.habitatInfo(i, function (e) {
+                this.notify("WumqB(Zw", {
                     action: t.transitType === b.DEFENSE ? "syncDefense" : "syncAttack",
                     foreignHabitat: _.try(e, "Data.Habitat.0"),
                     exclusionIDs: [s],
@@ -34974,7 +35018,7 @@
                 })
             }.bind(this))
         };
-        e.prototype["V0QJ_K1n"] = function (e, i) {
+        e.prototype["McQXIq&a"] = function (e, i) {
             var t;
             if (a.transits) {
                 t = a.transits[i.transitID]
@@ -34982,9 +35026,9 @@
             if (!t) {
                 return
             }
-            c.ViewController.prototype["V0QJ_K1n"].apply(this, [e, t])
+            c.ViewController.prototype["McQXIq&a"].apply(this, [e, t])
         };
-        e.prototype["sEozpTO_"] = function (i, n) {
+        e.prototype["2rQSA-wF"] = function (i, n) {
             var t = i.data, a = t.length;
             this.datasource._totalSpeedupTransitHabitats = a;
             for (var e = 0, s = t.length; e < s; e++) {
@@ -35108,7 +35152,7 @@
             this.informHeaderTotals();
             return e
         };
-        t.prototype._buildCells = function (n, u, g, r) {
+        t.prototype._buildCells = function (n, u, y, r) {
             if (typeof r === "undefined") {
                 r = false
             }
@@ -35132,13 +35176,13 @@
                     if (typeof o === "undefined") {
                         o = e
                     }
-                    if (g === true) {
-                        var y = r ? d[i] : i;
-                        var v = "units_" + n.id + "_" + y;
+                    if (y === true) {
+                        var v = r ? d[i] : i;
+                        var g = "units_" + n.id + "_" + v;
                         var h = o || "";
                         var f = h || "&nbsp;";
                         var c = "<span class='orig'>" + f + "</span>";
-                        c += "<input type='text' name='" + v + "' value='" + h + "' />";
+                        c += "<input type='text' name='" + g + "' value='" + h + "' />";
                         a.push(c)
                     } else {
                         a.push(o)
@@ -35174,7 +35218,7 @@
             this.totalHeaderCounter = {units: [0, 0, 0, 0, 0, 0, 0, 0], resources: t}
         };
         t.prototype.informHeaderTotals = function () {
-            this.notify("od5m%wpF", this.totalHeaderCounter)
+            this.notify("qc3rNG4z", this.totalHeaderCounter)
         };
         t.prototype._countForTotal = function (s, t, i) {
             if (typeof t === "undefined" || !t) {
@@ -35292,7 +35336,7 @@
                     styles: "tab",
                     icon: t.icon,
                     name: t.name,
-                    clickMessage: "otUAjvdJ",
+                    clickMessage: "J7scvNMM",
                     data: t.data || null,
                     hoverText: translate(t.hoverText)
                 }, o.TabButton)
@@ -35322,7 +35366,7 @@
                     showNames: false
                 }, L.Table)
             }
-            this.troopHeader.units = t.createSubview(t, {units: g, styles: "unit-list"}, C.Table);
+            this.troopHeader.units = t.createSubview(t, {units: y, styles: "unit-list"}, C.Table);
             if (i) {
                 this.troopHeader.resourceCounts = this.createSubview(this.troopHeader, {styles: "counter resources"}, O.HeaderCounter)
             }
@@ -35335,21 +35379,21 @@
             e.createSubview(e, {
                 styles: "control close",
                 name: "collapseClose",
-                clickMessage: "P(43mpXZ",
+                clickMessage: "TyZ&xm8q",
                 content: "<span class='shell'></span>",
                 group: "control",
                 hover: translate("Hide all"),
                 addButtonClass: false
-            }, p);
+            }, f);
             e.createSubview(e, {
                 styles: "control expand",
                 name: "collapseExpand",
-                clickMessage: "(bndj%X3",
+                clickMessage: "X9kc5onw",
                 content: "<span class='shell'></span>",
                 group: "control",
                 hover: translate("Show all"),
                 addButtonClass: false
-            }, p)
+            }, f)
         };
         t.prototype._buildSourceToggle = function (t) {
             t.sourceToggle = t.createSubview(t, {styles: "source-toggle"});
@@ -35357,21 +35401,21 @@
             e.createSubview(e, {
                 styles: "control source",
                 name: "toggleSource",
-                clickMessage: "SU%(ketO",
+                clickMessage: "yoraCGUX",
                 content: "<span class='shell'></span>",
                 group: "control",
                 hover: translate("Sort by source"),
                 addButtonClass: false
-            }, p);
+            }, f);
             e.createSubview(e, {
                 styles: "control dest",
                 name: "toggleDest",
-                clickMessage: "SU%(ketO",
+                clickMessage: "yoraCGUX",
                 content: "<span class='shell'></span>",
                 group: "control",
                 hover: translate("Sort by destination"),
                 addButtonClass: false
-            }, p)
+            }, f)
         };
         t.prototype._resourceFilter = function (e) {
             var t = null;
@@ -35455,9 +35499,9 @@
                         i[a] = +r
                     }
                 });
-                this.notify("5R8f)NW4", {source: r, destination: s, units: e, maximums: i})
+                this.notify("_hc4VFiK", {source: r, destination: s, units: e, maximums: i})
             } else {
-                this.notify("wcJWl2B1", s)
+                this.notify("VvG_&qfn", s)
             }
         };
         t.prototype._formatDataRow = function (n, l) {
@@ -35519,7 +35563,7 @@
                         r[e] = +s
                     }
                 });
-                this.notify("5R8f)NW4", {source: i, destination: e, units: n, maximums: r})
+                this.notify("_hc4VFiK", {source: i, destination: e, units: n, maximums: r})
             }
         };
         t.prototype._formatDataRow = function (l, n) {
@@ -35579,24 +35623,24 @@
                 return c
             }
             var m = [];
-            var y = this._createRowMapping(c);
+            var v = this._createRowMapping(c);
             this.resetTotalCounter();
-            for (var o in y) {
-                var d = y[o], w = o.split("_"), h = w.pop(), _ = o.replace("_" + h, ""), l = [_, 0, 0, 0, 0, 0, 0, 0, 0], p = [], i = {};
+            for (var o in v) {
+                var d = v[o], w = o.split("_"), h = w.pop(), _ = o.replace("_" + h, ""), l = [_, 0, 0, 0, 0, 0, 0, 0, 0], p = [], i = {};
                 for (var r = 0, b = d.length; r < b; r++) {
-                    var s = d[r], n = s.cells, u = [], f = [], g = [], e, v;
+                    var s = d[r], n = s.cells, u = [], f = [], y = [], e, g;
                     for (var t = 0, S = n.length; t < S; t++) {
                         var a;
                         if (t === 0) {
-                            v = n[t]
+                            g = n[t]
                         } else {
                             a = +n[t];
                             total = l[t] += a;
                             f.push(a);
-                            g.push(a)
+                            y.push(a)
                         }
                     }
-                    u = this._buildCells({name: v, id: s.data.id}, {units: g}, true, true);
+                    u = this._buildCells({name: g, id: s.data.id}, {units: y}, true, true);
                     e = {cells: u};
                     if (s.data) {
                         e.data = s.data
@@ -35649,9 +35693,9 @@
         t.prototype.buttonClicked = function (i) {
             var t = i.parents("tr"), e = t.data("id");
             if (t.hasClass("has-sub-rows")) {
-                this.notify("FxFBecER", e)
+                this.notify("OyebGEXe", e)
             } else {
-                this.notify("(rzkiMw4", e, t.data("pk"))
+                this.notify("tFlJ_YuS", e, t.data("pk"))
             }
         };
         t.prototype._formatDataRow = function (o, s) {
@@ -35660,7 +35704,7 @@
                 return false
             }
             s = i(s);
-            for (var r = 0, g = s.length; r < g; r++) {
+            for (var r = 0, y = s.length; r < y; r++) {
                 var n = s[r], e = n.mission, c = a(e.unitConsumptions), d = null, p;
                 p = this._buildCells({name: translate(e.identifier), id: e.primaryKey}, {units: c}, false, true);
                 if (!n.isSpeededup()) {
@@ -35774,14 +35818,14 @@
             return o
         };
         e.prototype.buttonClicked = function (e) {
-            var t = e.parents("tr"), a = t.prevAll("tr.has-sub-rows").data("id"), s = t.data("id"), n = t.data("transit"), i = "&PbdUOlv";
+            var t = e.parents("tr"), a = t.prevAll("tr.has-sub-rows").data("id"), s = t.data("id"), n = t.data("transit"), i = "D74stK4b";
             if (e.data("type") === "speedTransit") {
-                i = "V0QJ_K1n"
+                i = "McQXIq&a"
             }
             this.notify(i, this, {sourceHabID: a, destHabID: s, transitID: n})
         };
-        e.prototype._formatDataRow = function (c, n, g) {
-            var o = [], f, i = {}, w = s(c), k = [w, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], _ = 0;
+        e.prototype._formatDataRow = function (c, n, y) {
+            var o = [], f, i = {}, w = s(c), D = [w, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], _ = 0;
             if (!n.length) {
                 return false
             }
@@ -35789,25 +35833,25 @@
             for (var p = 0, S = n.length; p < S; p++) {
                 var e = n[p];
                 var h = e.destinationHabitat ? e.destinationHabitat : e.sourceHabitat;
-                var D = e.units || [0, 0, 0, 0, 0, 0, 0, 0];
+                var k = e.units || [0, 0, 0, 0, 0, 0, 0, 0];
                 var m = e.resources || [0, 0, 0, 0, 0];
                 var u = {};
                 var d = e.getIconData();
-                if (g === true && e.sourceHabitat) {
+                if (y === true && e.sourceHabitat) {
                     h = e.sourceHabitat
                 }
-                var r = this._buildCells(h, {units: D, resources: m});
-                var C = g ? h.id : c.id;
+                var r = this._buildCells(h, {units: k, resources: m});
+                var C = y ? h.id : c.id;
                 if (!Object.prototype.hasOwnProperty.call(t.habitate, C) && e.transitType === 2) {
                     r = [r[0]];
-                    for (var y = 0; y < 13; y++) {
+                    for (var v = 0; v < 13; v++) {
                         r.push("-")
                     }
                 }
-                var v = +e.transitType === +b.TRANSIT_SPY, T = l.featureSpeedupReturningSpy, I = l.featureSpeedupReturningUnits;
+                var g = +e.transitType === +b.TRANSIT_SPY, T = l.featureSpeedupReturningSpy, x = l.featureSpeedupReturningUnits;
                 if (e.sourceHabitat && t.habitate[e.sourceHabitat.id] && e.hasSynacableUnits()) {
                     u = {icon: this.syncIconForTransit(e.transitType), data: {type: "sync"}}
-                } else if (d && d.finishTransitIconName && (v && T || !v && I)) {
+                } else if (d && d.finishTransitIconName && (g && T || !g && x)) {
                     _ += 1;
                     u = {icon: this.getIcon(d.finishTransitIconName), data: {type: "speedTransit"}}
                 }
@@ -35826,7 +35870,7 @@
                 return
             }
             i.rows = o;
-            f = this._countAllHabitatUnits(k, o, false);
+            f = this._countAllHabitatUnits(D, o, false);
             i.icon = this.icons.castle;
             i.cells = f;
             i.data = {id: c.id};
@@ -35955,7 +35999,7 @@
                         n[e] = +s
                     }
                 });
-                this.notify("5R8f)NW4", {source: i, destination: e, units: r, maximums: n})
+                this.notify("_hc4VFiK", {source: i, destination: e, units: r, maximums: n})
             }
         };
         e.prototype._formatDataRow = function (o, a) {
@@ -36014,22 +36058,22 @@
             return e
         };
         e.prototype._reformatRows = function (M) {
-            var y = this._formatData();
+            var v = this._formatData();
             if (M === "source") {
-                return y
+                return v
             }
             var f = [];
-            var v = this._createRowMapping(y);
+            var g = this._createRowMapping(v);
             this.resetTotalCounter();
-            for (var c in v) {
-                var w = v[c], A = c.split("_"), p = A.pop(), I = c.replace("_" + p, ""), b = [], e = {}, _, o, g, m, a, r;
+            for (var c in g) {
+                var w = g[c], A = c.split("_"), p = A.pop(), x = c.replace("_" + p, ""), b = [], e = {}, _, o, y, m, a, r;
                 _ = n(p);
-                o = [I, 0, 0, 0, 0, 0, 0, 0, 0, _];
+                o = [x, 0, 0, 0, 0, 0, 0, 0, 0, _];
                 for (var d = 0, T = w.length; d < T; d++) {
-                    var h = [], S = [], D = [], k = [], C = [], s;
+                    var h = [], S = [], k = [], D = [], C = [], s;
                     a = w[d];
                     r = a.cells;
-                    for (var t = 0, x = r.length; t < x; t++) {
+                    for (var t = 0, I = r.length; t < I; t++) {
                         var l, u;
                         if (t === 0) {
                             m = r[t]
@@ -36037,15 +36081,15 @@
                             l = +r[t];
                             total = o[t] += l;
                             S.push(l);
-                            k.push(l)
+                            D.push(l)
                         } else {
                             u = +r[t];
                             total = o[t] += u;
-                            D.push(u);
+                            k.push(u);
                             C.push(u)
                         }
                     }
-                    h = this._buildCells({name: m, id: a.data.id}, {units: k, resources: C}, true, true);
+                    h = this._buildCells({name: m, id: a.data.id}, {units: D, resources: C}, true, true);
                     if (h[9] === 0) {
                         h[9] = i
                     }
@@ -36055,11 +36099,11 @@
                     }
                     s.button = this.button;
                     s.icon = this.icons.castle;
-                    g = a.extraContent;
+                    y = a.extraContent;
                     b.push(s);
                     this._countForTotal("units", S, true)
                 }
-                e.extraContent = g;
+                e.extraContent = y;
                 e.icon = this.icons.attack;
                 e.cells = a.extraContent;
                 e.cells = o;
@@ -36075,7 +36119,7 @@
         utils.__extends(e, a);
         function e() {
             e.__super__.constructor.apply(this, arguments);
-            utils.linkMethod("prepareResources", B.DataSource, e);
+            utils.linkMethod("prepareResources", H.DataSource, e);
             this.castleFortressSwithcer = {onlyForCastle: true, onlyForFortress: false}
         }
 
@@ -36125,21 +36169,27 @@
                 tabIcon: "BuildFortressIconWhite"
             }]
         };
-        e.prototype._preparemissionsArray = function (e) {
-            if (!e) {
+        e.prototype._preparemissionsArray = function (t) {
+            if (!t) {
                 return []
             }
-            var i = [], a = 0, t = null;
-            for (a in e) {
-                t = e[a];
-                if (this.castleFortressSwithcer.onlyForCastle && t.primaryKey > 13) {
-                    continue
-                } else if (this.castleFortressSwithcer.onlyForFortress && t.primaryKey < 14) {
-                    continue
-                }
-                i.push(t)
+            var e = "tavern";
+            if (this.castleFortressSwithcer.onlyForCastle) {
+                e = "tavern"
+            } else if (this.castleFortressSwithcer.onlyForFortress) {
+                e = "tavernarea"
             }
-            return _.sortBy(i, "order")
+            var r = d.settings.maxLevelsPrimaryKey[e], o = d[r].missions, a = {}, s = [], n, i;
+            o.forEach(function (t) {
+                a[t.primaryKey] = true
+            });
+            for (n in t) {
+                i = t[n];
+                if (a[i.primaryKey]) {
+                    s.push(i)
+                }
+            }
+            return _.sortBy(s, "order")
         };
         e.prototype._habitatData = function () {
             var s = [], r = t.getSortedHabitate();
@@ -36179,8 +36229,8 @@
                 group: "missionHeadlineButtons",
                 hidden: !t.length,
                 data: {missions: t},
-                clickMessage: "x%vWq&Fx"
-            }, p);
+                clickMessage: "TX3pPf8R"
+            }, f);
             this.headline.buttons.draw()
         };
         e.prototype.createBottomBar = function () {
@@ -36189,8 +36239,8 @@
                 name: "missionBottomBar",
                 useContainer: true,
                 templateData: {selected: 0, submitText: translate("Mission factory")},
-                executeMessage: "eG_LJFm0",
-                selectAllMessage: "xFks3GsO"
+                executeMessage: "me%WP7Wy",
+                selectAllMessage: "zucgXyVL"
             }, u.WindowBottomBar)
         };
         e.prototype.findListHabitatByID = function (t) {
@@ -36324,19 +36374,19 @@
         }
 
         t.prototype.castleFortressTabClick = function (t) {
-            this.notify("xP_TOI02", {action: t.data("action")})
+            this.notify("PvsRCIel", {action: t.data("action")})
         };
         t.prototype.missionClicked = function (t) {
-            this.notify("sfAGfxHm", {
+            this.notify("-EUI6Hr_", {
                 mission: t.data("mission"),
                 habitatID: t.parents(".missionContainer").data("habitat")
             })
         };
         t.prototype.selectRow = function (t) {
-            this.notify("m3ZoDkTh", {habitatID: t.parents(".missionContainer").data("habitat")})
+            this.notify("5P44vGgx", {habitatID: t.parents(".missionContainer").data("habitat")})
         };
         t.prototype.speedRow = function (t) {
-            this.notify("pglnpLqr", {habitatID: t.parents(".missionContainer").data("habitat")})
+            this.notify("qpPcmzhQ", {habitatID: t.parents(".missionContainer").data("habitat")})
         };
         t.prototype.showMissionInfo = function (t, e) {
             this.showHover(e, Le.HoverView, {styles: "mission", missionPK: t.data("mission")})
@@ -36348,7 +36398,7 @@
             this.showHover(t, E, {content: translate("Speedup all running missions"), styles: "buildingHover"})
         };
         t.prototype.openHabitat = function (t) {
-            this.notify("Q7xJDnbo", {habitat: {id: t.parents(".missionContainer").data("habitat")}})
+            this.notify("mvimqhdM", {habitat: {id: t.parents(".missionContainer").data("habitat")}})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "globalMissionList")
@@ -36400,12 +36450,12 @@
             this.view.dataUpdate(e, t);
             this.view.updateExecuteButton()
         };
-        e.prototype["xP_TOI02"] = function (t) {
+        e.prototype["PvsRCIel"] = function (t) {
             this.view.castleFortressSwithcer.onlyForCastle = t.action === "castle" ? true : false;
             this.view.castleFortressSwithcer.onlyForFortress = t.action === "fortress" ? true : false;
             this.view.dataUpdate()
         };
-        e.prototype["sfAGfxHm"] = function (i) {
+        e.prototype["-EUI6Hr_"] = function (i) {
             var a = {primaryKey: i.mission};
             var e = i.habitatID;
             var s = t.habitate[e];
@@ -36413,7 +36463,7 @@
             var r = s.getSortedMissions(n);
             this.view.updateSingleHabitat(e, r);
             this.view.updateExecuteButton();
-            this.notify("sfAGfxHm", this, {habitatId: e, mission: a})
+            this.notify("-EUI6Hr_", this, {habitatId: e, mission: a})
         };
         e.prototype.refreshMissionsForHabitat = function (e) {
             var i = this.datasource.getMissionArray(e);
@@ -36421,23 +36471,23 @@
             this.view.updateSingleHabitat(e, a);
             this.view.updateExecuteButton()
         };
-        e.prototype["eG_LJFm0"] = function () {
+        e.prototype["me%WP7Wy"] = function () {
             var t = this.view.getAllSelected();
             if (!utils.dict.size(t)) {
                 return
             }
             this.datasource.executeAllMissionsForHabitats(t)
         };
-        e.prototype["xFks3GsO"] = function () {
+        e.prototype["zucgXyVL"] = function () {
             var e = false;
             if (this.view.allCheckboxesSelected()) {
                 e = true
             }
             for (var i in t.habitate) {
-                this["m3ZoDkTh"]({habitatID: i}, e)
+                this["5P44vGgx"]({habitatID: i}, e)
             }
         };
-        e.prototype["m3ZoDkTh"] = function (h, l) {
+        e.prototype["5P44vGgx"] = function (h, l) {
             var a = h.habitatID, s = t.habitate[a], n = i(K), u = [], e;
             if (l) {
                 n = []
@@ -36457,9 +36507,9 @@
             }
             this.view.updateSingleHabitat(s.id, e);
             this.view.updateExecuteButton();
-            this.notify("sfAGfxHm", this, {habitatId: s.id})
+            this.notify("-EUI6Hr_", this, {habitatId: s.id})
         };
-        e.prototype["pglnpLqr"] = function (u) {
+        e.prototype["qpPcmzhQ"] = function (u) {
             var o = u.habitatID, l = _.try(t, "habitate." + o);
             if (!l) {
                 return
@@ -36477,13 +36527,13 @@
             var d = $.sprintf(c, a.length, e, r, t.gold, r);
             utils.dialog.confirm(this, d, r, function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", that, {costs: e})
+                    this.notify("8xvB5GpX", that, {costs: e})
                 } else {
                     this.datasource.speedupAllMissions(e, o)
                 }
             }.bind(this))
         };
-        e.prototype["x%vWq&Fx"] = function (n) {
+        e.prototype["TX3pPf8R"] = function (n) {
             var i = _.try(n, "data.missions");
             var e = 0;
             for (var a = 0; a < i.length; a++) {
@@ -36494,7 +36544,7 @@
             var o = $.sprintf(r, i.length, e, s, t.gold, s);
             utils.dialog.confirm(this, o, s, function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", that, {costs: e})
+                    this.notify("8xvB5GpX", that, {costs: e})
                 } else {
                     this.datasource.speedupAllMissions(e)
                 }
@@ -36504,7 +36554,7 @@
             this.datasource.remove(t.id);
             delete this.globalMissions[t.id]
         };
-        e.prototype["Q7xJDnbo"] = function (t) {
+        e.prototype["mvimqhdM"] = function (t) {
             this.notify("createHabitatWindow", t.habitat)
         };
         return e
@@ -36600,7 +36650,7 @@
             this.__data.globalMissions[t] = e
         };
         return e
-    }(I);
+    }(x);
     Le.HoverView = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
@@ -36616,7 +36666,7 @@
             var t = this.createSubview(this, {});
             this.createSubview(t, {content: translate(e), styles: "title"});
             this.createSubview(t, {
-                content: this.notify("3s(kBgiI", this, {imageName: e, imageCategory: "missions"}),
+                content: this.notify("Z-XGNYVU", this, {imageName: e, imageCategory: "missions"}),
                 styles: "icon"
             });
             this.createSubview(t, {content: this.mission.getDescription(), styles: "description"});
@@ -36704,9 +36754,9 @@
         };
         t.prototype.create = function () {
             t.__super__.create.apply(this, arguments);
-            var g = this.building.missions;
-            var a, h, u, s, v, o, r;
-            var y, l;
+            var y = this.building.missions;
+            var a, h, u, s, g, o, r;
+            var v, l;
             var f = 0;
             var C = {}, S = {};
             var c = true;
@@ -36730,7 +36780,7 @@
                     icon: "missionMultipleBlack",
                     iconCategory: "icons",
                     content: translate("Mission factory"),
-                    clickMessage: "eG_LJFm0",
+                    clickMessage: "me%WP7Wy",
                     name: "executeGlobal"
                 }, m)
             }
@@ -36739,15 +36789,15 @@
                     icon: "missionSpeedupBlack",
                     iconCategory: "icons",
                     content: translate("Speedup all running missions"),
-                    clickMessage: "x%vWq&Fx",
+                    clickMessage: "TX3pPf8R",
                     data: this.habitat.habitatMissions
                 }, m)
             }
             var b = this.habitat.getSortedMissions(this.preselectedMissions);
             var w = this.preselectedMissions;
-            for (i = 0; i < g.length; i++) {
-                a = g[i];
-                var _ = this.notify("3s(kBgiI", this, {imageName: a.identifier, imageCategory: "missions"});
+            for (i = 0; i < y.length; i++) {
+                a = y[i];
+                var _ = this.notify("Z-XGNYVU", this, {imageName: a.identifier, imageCategory: "missions"});
                 s = u.createSubview(u, {styles: "missionListItem", clickMessage: null});
                 s.createSubview(s, {
                     content: _,
@@ -36756,10 +36806,10 @@
                     lazyHoverOptions: {missionPK: a.primaryKey},
                     styles: "missionIcon"
                 }, F);
-                h = this.notify("3s(kBgiI", this, {imageName: "mission", imageCategory: "icons"});
-                o = "77nwKLLo";
+                h = this.notify("Z-XGNYVU", this, {imageName: "mission", imageCategory: "icons"});
+                o = "Pc3p1LJt";
                 r = "button disabled";
-                y = K[a.primaryKey];
+                v = K[a.primaryKey];
                 c = a.isMissionPossible(this.habitat.id);
                 if (c) {
                     r = "button"
@@ -36776,16 +36826,16 @@
                 }
                 l = this.habitat.getHabitatMission(a.primaryKey);
                 if (typeof l != "undefined") {
-                    h = this.notify("3s(kBgiI", this, {imageName: "missionSpeedup", imageCategory: "icons"});
+                    h = this.notify("Z-XGNYVU", this, {imageName: "missionSpeedup", imageCategory: "icons"});
                     r = "button speedup";
-                    o = "pglnpLqr";
+                    o = "qpPcmzhQ";
                     if (l.isSpeededup()) {
                         r = "button disabled";
                         o = null
                     }
                 }
                 if (this.showButtons && !this.parent.isPreview) {
-                    v = this.createSubview(s, {
+                    g = this.createSubview(s, {
                         content: h,
                         clickMessage: o,
                         styles: r,
@@ -36796,11 +36846,11 @@
                 if (this.checkbox) {
                     n = s.createSubview(s, {
                         styles: "checkboxWrapper",
-                        clickMessage: "sfAGfxHm",
+                        clickMessage: "-EUI6Hr_",
                         data: {item: a, habitatID: this.habitat.id},
                         propagateClicks: false,
                         fireClickMessage: true
-                    }, H.Checkbox);
+                    }, B.Checkbox);
                     this.checkboxes.push(n);
                     if (c === true) {
                         if (d === false) {
@@ -36819,7 +36869,7 @@
                 s.clearfix();
                 if (l) {
                     this.createSubview(s, {
-                        time: Math.floor((l.complete - (new Date - U)) / 1e3),
+                        time: Math.floor((l.complete - (new Date - P)) / 1e3),
                         runningTimer: true,
                         formatFunction: utils.date.secToTimeStr,
                         styles: "countdown"
@@ -36848,7 +36898,7 @@
         };
         return t
     }(e);
-    ve.Controller = function (i) {
+    ge.Controller = function (i) {
         utils.__extends(e, i);
         function e(i, t) {
             e.__super__.constructor.apply(this, arguments);
@@ -36861,14 +36911,14 @@
             }
             this.view.dataUpdate(t, e)
         };
-        e.prototype[")1SB3P&D"] = function () {
+        e.prototype["_KyK%xj&"] = function () {
             var e = this.view.getAllSelected(), i = 0, r = translate("Raise the banners"), o = "Raising the banners costs %1$d gold coins. You currently own %2$d gold coins.", s;
             if (!utils.dict.size(e)) {
                 return
             }
             s = function () {
                 if (t.gold < i) {
-                    this.notify("vF4Exq0E", this, {costs: i})
+                    this.notify("8xvB5GpX", this, {costs: i})
                 } else {
                     this.datasource.execute(e)
                 }
@@ -36882,16 +36932,16 @@
             }
             utils.dialog.confirm(this, translate(o, i, t.gold), r, s.bind(this))
         };
-        e.prototype["yWiu_HqC"] = function () {
+        e.prototype["lupdHCMC"] = function () {
             var e = false;
             if (this.view.allCheckboxesSelected()) {
                 e = true
             }
             for (var i in t.habitate) {
-                this["ZKW4WdmH"]({habitatID: i}, e)
+                this["YBCFUDcw"]({habitatID: i}, e)
             }
         };
-        e.prototype["ZKW4WdmH"] = function (e, i) {
+        e.prototype["YBCFUDcw"] = function (e, i) {
             var t = e.habitatID, a;
             a = i || typeof i === "undefined" && this.view.getSelectedItems(t).length > 0;
             if (a) {
@@ -36901,19 +36951,19 @@
             }
             this.view.rowUpdated(e.habitatID)
         };
-        e.prototype["p2jM-ewb"] = function (t) {
+        e.prototype["(w)Dxsyf"] = function (t) {
             this.datasource.setKey(t.habitatID, t.buff, t.active);
             this.view.rowUpdated(t.habitatID)
         };
-        e.prototype["hh6vPYRj"] = function (t) {
+        e.prototype["bMmXO7hf"] = function (t) {
             return this.datasource.getKeysFor(t)
         };
-        e.prototype["DuTxGRls"] = function (t) {
+        e.prototype["_xLEqW%A"] = function (t) {
             this.notify("createHabitatWindow", t.habitat)
         };
         return e
     }(u.Controller);
-    ve.DataSource = function (a) {
+    ge.DataSource = function (a) {
         "use strict";
         utils.__extends(e, a);
         function e() {
@@ -36961,8 +37011,8 @@
             return _.storeLocal.setJSON(i(t), e)
         };
         return e
-    }(I);
-    ve.HoverView = function (e) {
+    }(x);
+    ge.HoverView = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
@@ -36977,7 +37027,7 @@
         };
         return t
     }(E);
-    ve.GlobalListView = function (e) {
+    ge.GlobalListView = function (e) {
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments)
@@ -37014,23 +37064,23 @@
         }
 
         t.prototype.itemClicked = function (t) {
-            this.notify("p2jM-ewb", {
+            this.notify("(w)Dxsyf", {
                 buff: t.data("buff"),
                 habitatID: t.parents(".buffContainer").data("habitat"),
                 active: t.is(":checked")
             })
         };
         t.prototype.selectRow = function (t) {
-            this.notify("ZKW4WdmH", {habitatID: t.parents(".buffContainer").data("habitat")})
+            this.notify("YBCFUDcw", {habitatID: t.parents(".buffContainer").data("habitat")})
         };
         t.prototype.showInfo = function (t, e) {
-            this.showHover(e, ve.HoverView, {styles: "buff", buffPK: t.data("buff")})
+            this.showHover(e, ge.HoverView, {styles: "buff", buffPK: t.data("buff")})
         };
         t.prototype.showSelectAllHover = function (e, t) {
             this.showHover(t, E, {content: translate("Select all banners"), styles: "buildingHover"})
         };
         t.prototype.openHabitat = function (t) {
-            this.notify("DuTxGRls", {habitat: {id: t.parents(".buffContainer").data("habitat")}})
+            this.notify("_xLEqW%A", {habitat: {id: t.parents(".buffContainer").data("habitat")}})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "globalBuffsList")
@@ -37057,11 +37107,11 @@
         };
         return t
     }(S);
-    ve.Window = function (a) {
+    ge.Window = function (a) {
         utils.__extends(e, a);
         function e() {
             e.__super__.constructor.apply(this, arguments);
-            utils.linkMethod("prepareResources", B.DataSource, e)
+            utils.linkMethod("prepareResources", H.DataSource, e)
         }
 
         function i(t) {
@@ -37075,7 +37125,7 @@
                 name: "globalBuffsList",
                 useTimer: true,
                 templateData: {headerBuffs: t.getSortedBuffs(), listItems: this._habitatData()}
-            }, ve.GlobalListView)
+            }, ge.GlobalListView)
         };
         e.prototype.create = function () {
             this.dataUpdate(null, {})
@@ -37108,8 +37158,8 @@
                 name: "buffBottomBar",
                 useContainer: true,
                 templateData: {selected: 0, submitText: translate("Raise the banners")},
-                executeMessage: ")1SB3P&D",
-                selectAllMessage: "yWiu_HqC"
+                executeMessage: "_KyK%xj&",
+                selectAllMessage: "lupdHCMC"
             }, u.WindowBottomBar)
         };
         e.prototype.getSelectedItems = function (e) {
@@ -37123,7 +37173,7 @@
             return t
         };
         e.prototype.rowUpdated = function (t) {
-            var n = i(t), r = this.notify("hh6vPYRj", t), e, a, s;
+            var n = i(t), r = this.notify("bMmXO7hf", t), e, a, s;
             e = function (t) {
                 return t === a
             };
@@ -37200,7 +37250,7 @@
             this.deleteAllSubviews();
             if (this.alliance && this.alliance.name) {
                 a = this.alliance.name;
-                n = "LMxm(ZWo"
+                n = ")QVFT9wz"
             } else {
                 a = translate("No Alliance");
                 i = false
@@ -37220,28 +37270,28 @@
                 content: utils.dict.size(this.habitate)
             });
             e = this.createSubview(this.foreignProfileContainer, {styles: "actions"});
-            if (t.hasAlliance() && this.alliance.name == t.alliance.name && t.hasAlliancePermission(d.DISMISS_PLAYER) && this.playerID != t.id) {
+            if (t.hasAlliance() && this.alliance.name == t.alliance.name && t.hasAlliancePermission(p.DISMISS_PLAYER) && this.playerID != t.id) {
                 e.createSubview(e, {
                     hover: translate("Dismiss Player"),
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "permissionFalseColored",
                         imageCategory: "browserIcons"
                     }),
-                    clickMessage: "I(H0%_fN"
-                }, p)
+                    clickMessage: "Dq49S9QK"
+                }, f)
             }
             e.createSubview(e, {
                 hover: translate("Copy player link"),
-                content: this.notify("3s(kBgiI", this, {imageName: "pasteBoardPlayerWhite", imageCategory: "icons"}),
-                clickMessage: "M2x)kHWL",
+                content: this.notify("Z-XGNYVU", this, {imageName: "pasteBoardPlayerWhite", imageCategory: "icons"}),
+                clickMessage: "tOTx8E(7",
                 data: {player: this.playerID},
                 styles: "copy"
-            }, p);
+            }, f);
             e.createSubview(e, {
                 hover: translate("Send Message"),
-                content: this.notify("3s(kBgiI", this, {imageName: "buttonMessages", imageCategory: "icons"}),
-                clickMessage: "9lFIh4B3"
-            }, p);
+                content: this.notify("Z-XGNYVU", this, {imageName: "buttonMessages", imageCategory: "icons"}),
+                clickMessage: "hEEey9QX"
+            }, f);
             var r = this.createSubview(this, {
                 content: utils.sanitize(a),
                 styles: "alliance",
@@ -37252,15 +37302,15 @@
             if (i) {
                 r.createSubview(r, {styles: "points", content: this.alliance.points})
             }
-            if (t.hasAlliance() && (this.alliance.name != t.alliance.name || utils.dict.size(this.alliance) === 0) && t.hasAlliancePermission(d.INVITE_PLAYER)) {
+            if (t.hasAlliance() && (this.alliance.name != t.alliance.name || utils.dict.size(this.alliance) === 0) && t.hasAlliancePermission(p.INVITE_PLAYER)) {
                 if (s === false) {
-                    this.createSubview(this, {content: translate("Send Invitation"), clickMessage: "O7)gbX8_"}, m)
+                    this.createSubview(this, {content: translate("Send Invitation"), clickMessage: "Hxwwx)4j"}, m)
                 } else {
-                    this.createSubview(this, {content: translate("Revoke Invitation"), clickMessage: "a(Syd_tW"}, m)
+                    this.createSubview(this, {content: translate("Revoke Invitation"), clickMessage: "bs97gS9A"}, m)
                 }
             }
             if (i) {
-                var o = !!(t.hasAlliance() && this.alliance.name == t.alliance.name && t.hasAlliancePermission(d.PLAYER_PERMISSIONS) && t.id != this.playerID), l = o ? "pX(ft8PA" : null;
+                var o = !!(t.hasAlliance() && this.alliance.name == t.alliance.name && t.hasAlliancePermission(p.PLAYER_PERMISSIONS) && t.id != this.playerID), l = o ? "M2hQ(Wo%" : null;
                 var u = this.createSubview(this, {
                     content: translate("Permission"),
                     icon: "rights",
@@ -37280,20 +37330,20 @@
             if (typeof t === "undefined" || t === null) {
                 return
             }
-            var s = [{mask: d.INVITE_PLAYER, text: "Invite Player"}, {
-                mask: d.MASS_MAIL,
+            var s = [{mask: p.INVITE_PLAYER, text: "Invite Player"}, {
+                mask: p.MASS_MAIL,
                 text: "Mass Mail"
-            }, {mask: d.MODERATE_FORUM, text: "Moderate Forum"}, {
-                mask: d.DIPLOMATIC_RELATIONS,
+            }, {mask: p.MODERATE_FORUM, text: "Moderate Forum"}, {
+                mask: p.DIPLOMATIC_RELATIONS,
                 text: "Diplomacy Relatioship"
-            }, {mask: d.DISMISS_PLAYER, text: "Dismiss Player"}, {
-                mask: d.PLAYER_PERMISSIONS,
+            }, {mask: p.DISMISS_PLAYER, text: "Dismiss Player"}, {
+                mask: p.PLAYER_PERMISSIONS,
                 text: "Change Permission"
-            }, {mask: d.DISBAND_ALLIANCE, text: "Disband Alliance"}], r = t === d.MAX || t === d.ALL;
+            }, {mask: p.DISBAND_ALLIANCE, text: "Disband Alliance"}], r = t === p.MAX || t === p.ALL;
             e.permissions = e.createSubview(e, {styles: "permissionWrapper"});
             if (+t === 0) {
                 e.permissions.createSubview(e.permissions, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: "permission00",
                         imageCategory: "icons"
                     }), styles: "permission"
@@ -37305,7 +37355,7 @@
                 if (t & i || r) {
                     var o = String(i).length === 1 ? "permission" + "0" + i : "permission" + i;
                     e.permissions.createSubview(e.permissions, {
-                        content: this.notify("3s(kBgiI", this, {
+                        content: this.notify("Z-XGNYVU", this, {
                             imageName: o,
                             imageCategory: "icons"
                         }), styles: "permission", lazyHoverClass: pe.Hover, lazyHoverOptions: {text: n.text}
@@ -37372,16 +37422,16 @@
             this.setOptions(e)
         }
 
-        var e = [{name: "invitePlayer", mask: d.INVITE_PLAYER}, {
+        var e = [{name: "invitePlayer", mask: p.INVITE_PLAYER}, {
             name: "massMail",
-            mask: d.MASS_MAIL
-        }, {name: "moderateForum", mask: d.MODERATE_FORUM}, {
+            mask: p.MASS_MAIL
+        }, {name: "moderateForum", mask: p.MODERATE_FORUM}, {
             name: "diplomaticRelations",
-            mask: d.DIPLOMATIC_RELATIONS
-        }, {name: "dismissPlayer", mask: d.DISMISS_PLAYER}, {
+            mask: p.DIPLOMATIC_RELATIONS
+        }, {name: "dismissPlayer", mask: p.DISMISS_PLAYER}, {
             name: "changeRights",
-            mask: d.PLAYER_PERMISSIONS
-        }, {name: "disbandAlliance", mask: d.DISBAND_ALLIANCE}];
+            mask: p.PLAYER_PERMISSIONS
+        }, {name: "disbandAlliance", mask: p.DISBAND_ALLIANCE}];
         var a = {
             invitePlayer: "Invite Player",
             dismissPlayer: "Dismiss Player",
@@ -37410,7 +37460,7 @@
             this.createSubview(this, {
                 styles: "button saveChanges",
                 content: translate("Save"),
-                clickMessage: "xgIpeNpI"
+                clickMessage: "dmdIW_4p"
             });
             var r = this.createContainer({styles: "wrapper"});
             for (var n = 0; n < e.length; n++) {
@@ -37422,13 +37472,13 @@
                     data: {playerID: this.player.playerID, mask: i.mask}
                 });
                 t.icon = t.createSubview(t, {
-                    content: this.notify("3s(kBgiI", this, {
+                    content: this.notify("Z-XGNYVU", this, {
                         imageName: s(i.mask),
                         imageCategory: "icons"
                     }), styles: "icon"
                 });
                 t.text = t.createSubview(t, {styles: "text", content: translate(a[i.name])});
-                t.checkbox = t.createSubview(t, {styles: "checkbox"}, H.Checkbox);
+                t.checkbox = t.createSubview(t, {styles: "checkbox"}, B.Checkbox);
                 t.clearfix();
                 if (this.player && this.player.alliancePermission && this.player.alliancePermission & i.mask) {
                     t.checkbox.check()
@@ -37454,11 +37504,11 @@
             this.view.dataUpdate(e, t);
             this.view.draw()
         };
-        t.prototype["LMxm(ZWo"] = function () {
+        t.prototype[")QVFT9wz"] = function () {
             var t = this.view.findSubviewByName("ForeignPlayer").alliance;
             this.controller.createForeignAllianceWindow(t)
         };
-        t.prototype["9lFIh4B3"] = function () {
+        t.prototype["hEEey9QX"] = function () {
             this.actionState = "sendMessage";
             var t = $.extend(true, {}, this.view.player);
             t.id = t.playerID;
@@ -37466,24 +37516,24 @@
                 return
             }
             this.view.messageMode = true;
-            this.notify("wLMgD-&F", this, t)
+            this.notify("Qz9L)T)V", this, t)
         };
-        t.prototype["1Xm08BW0"] = function () {
-            this.notify("1Xm08BW0", this)
+        t.prototype["5K_2H29H"] = function () {
+            this.notify("5K_2H29H", this)
         };
-        t.prototype["O7)gbX8_"] = function () {
+        t.prototype["Hxwwx)4j"] = function () {
             var t = this.view.player;
             this.datasource.sendAllianceInvite(t.playerID)
         };
-        t.prototype["a(Syd_tW"] = function () {
+        t.prototype["bs97gS9A"] = function () {
             var t = this.view.player;
             this.datasource.cancelAllianceInvite(t.playerID)
         };
-        t.prototype["pX(ft8PA"] = function () {
+        t.prototype["M2hQ(Wo%"] = function () {
             var t = this.view.player;
             this.showNextViewOfClass(oe.RightsView, {player: t})
         };
-        t.prototype["xgIpeNpI"] = function (s) {
+        t.prototype["dmdIW_4p"] = function (s) {
             var n = this.view.player, i = s.parent.list, t = 0;
             for (var e = 0; e < i.length; e++) {
                 var a = i[e], r = a.data.mask;
@@ -37491,13 +37541,13 @@
                     t = t | r
                 }
             }
-            if (t === d.MAX) {
-                t = d.ALL
+            if (t === p.MAX) {
+                t = p.ALL
             }
             this.datasource.changePermissionForMember(n.playerID, t);
             this.view.player.alliancePermission = t
         };
-        t.prototype["I(H0%_fN"] = function () {
+        t.prototype["Dq49S9QK"] = function () {
             var t = this.view.player;
             var e = utils.bind(function () {
                 this.datasource.dismissPlayer(t.playerID)
@@ -37506,17 +37556,17 @@
             var a = translate("Alliance");
             utils.dialog.confirm(this, i, a, e)
         };
-        t.prototype["M2x)kHWL"] = function (t) {
-            var e = this.notify("-SD9RgVg", this, t.data);
-            this.notify("xCzXgU2u", this, e);
+        t.prototype["tOTx8E(7"] = function (t) {
+            var e = this.notify("n5BlUfYY", this, t.data);
+            this.notify("1EMjIwLd", this, e);
             _.blinkButton($("#" + this.view.id + " .button.copy"))
         };
-        t.prototype["J5FA3x6C"] = function () {
+        t.prototype["NYd&saEH"] = function () {
             var t = this.view.findSubviewByField("tag", "currentView");
-            t.paste(this.notify("J5FA3x6C", this))
+            t.paste(this.notify("NYd&saEH", this))
         };
-        t.prototype["VhaIj0_A"] = function (t, e) {
-            return this.notify("VhaIj0_A", t, e)
+        t.prototype["cHRPueWe"] = function (t, e) {
+            return this.notify("cHRPueWe", t, e)
         };
         return t
     }(u.Controller);
@@ -37531,7 +37581,7 @@
                 receivingPlayerArray: t,
                 subject: e,
                 content: i
-            }, this.triggerModelUpdate, this)
+            }, this.modelUpdate, this)
         };
         e.prototype.loadPlayerInfo = function (t, e) {
             var i = this;
@@ -37589,7 +37639,7 @@
             this.setData(t.alliance)
         };
         return e
-    }(I);
+    }(x);
     oe.Window = function (e) {
         utils.__extends(t, e);
         function t() {
@@ -37628,7 +37678,7 @@
         };
         return t
     }(u.Window);
-    He.Controller = function (e) {
+    Be.Controller = function (e) {
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments)
@@ -37639,29 +37689,29 @@
                 return
             }
             if (typeof t.error !== "undefined" && t.error !== null) {
-                this["5gDHtT_N"](this);
+                this["x2x7Uarm"](this);
                 return
             }
             this.view.dataUpdate(e, t);
             this.view.draw()
         };
-        t.prototype["ID(Le_5-"] = function (e) {
+        t.prototype["O&Mpa%G2"] = function (e) {
             var t = this.reportIconName(e);
             return {icon: t.icon, headline: t.headline, description: t.description}
         };
         t.prototype.reportIconName = function () {
-            return v.Controller.prototype.reportIconName.apply(this, arguments)
+            return g.Controller.prototype.reportIconName.apply(this, arguments)
         };
-        t.prototype["p9f7f1va"] = function (t) {
+        t.prototype["hQK__QBI"] = function (t) {
             this.notify("handleHabitatAction", t.data, "centerCastle")
         };
-        t.prototype["zog0GRpX"] = function (t) {
+        t.prototype["s&TH%udj"] = function (t) {
             this.notify("createHabitatWindow", t.data)
         };
         return t
     }(u.Controller);
-    He.DataSource = function (e) {
-        utils.__extends(t, I);
+    Be.DataSource = function (e) {
+        utils.__extends(t, x);
         function t() {
             t.__super__.constructor.apply(this, arguments)
         }
@@ -37676,8 +37726,8 @@
             }, this.setData, this, null, this.reportNotPublished.bind(this))
         };
         return t
-    }(I);
-    He.Window = function (e) {
+    }(x);
+    Be.Window = function (e) {
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments)
@@ -37706,8 +37756,8 @@
             e.threadID = e.id;
             e.headline = this._getHeadline(e);
             this.deleteSubviewByField("group", "foreignReport");
-            var l = v.Controller.prototype._prepareData.apply(this.controller, [e]);
-            this.report = this.content.createSubview(this.content, {group: "foreignReport"}, v.View);
+            var l = g.Controller.prototype._prepareData.apply(this.controller, [e]);
+            this.report = this.content.createSubview(this.content, {group: "foreignReport"}, g.View);
             this.report.dataUpdate(null, l)
         };
         t.prototype._getHeadline = function (t) {
@@ -37747,7 +37797,7 @@
             this.addOption("allianceName", "");
             this.addOption("allianceIcon", "");
             this.addOption("castleType", "");
-            this.addOption("circleMessage", "h4LimkDm");
+            this.addOption("circleMessage", "ftwphcGZ");
             this.addOption("circleSpeed", "fast");
             this.setOptions(e)
         }
@@ -37869,7 +37919,7 @@
 
         t.prototype.create = function () {
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageName: "hoverInfo",
                     imageCategory: "hoverRing"
                 }), clickMessage: this.clickMessage
@@ -37887,7 +37937,7 @@
         return t
     }(e);
     _e.CastleHoverController = function (e) {
-        utils.__extends(t, Ie);
+        utils.__extends(t, xe);
         function t(i, e) {
             this.addRequired("habitat");
             this.setOptions(e);
@@ -37896,17 +37946,17 @@
 
         t.prototype.dataUpdate = function (t, e) {
         };
-        t.prototype["9obJO5Cf"] = function (t, i) {
+        t.prototype["_w32GmpP"] = function (t, i) {
             var e = this.habitat.id;
-            this.notify("9obJO5Cf", this, {action: t.data.action, habitatID: e, data: t.data, source: "hoverCircle"})
+            this.notify("_w32GmpP", this, {action: t.data.action, habitatID: e, data: t.data, source: "hoverCircle"})
         };
-        t.prototype["h4LimkDm"] = function (t, i) {
+        t.prototype["ftwphcGZ"] = function (t, i) {
             var e = this.habitat;
-            this.notify("h4LimkDm", this, {action: t.data.action, habitat: e, data: t.data, source: "hoverCircle"})
+            this.notify("ftwphcGZ", this, {action: t.data.action, habitat: e, data: t.data, source: "hoverCircle"})
         };
         return t
-    }(Ie);
-    J.Controller = function (e) {
+    }(xe);
+    Z.Controller = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t() {
@@ -37926,27 +37976,27 @@
         t.prototype.getState = function () {
             return this.selected
         };
-        t.prototype["XPz0S4Ep"] = function (e) {
+        t.prototype["yGBxSOJb"] = function (e) {
             var i = e.name === "resourceSelector" ? "resource" : "unit", t = _.try(this, "view.topBar");
             if (!t) {
                 return
             }
             t[i + "Menu"].toggleOnce()
         };
-        t.prototype["vE)d)C-j"] = function (t) {
+        t.prototype["1hcnEfXQ"] = function (t) {
             this._itemSelected("resource", t)
         };
-        t.prototype["yf3J%Tbz"] = function (t) {
+        t.prototype["7D)fl63t"] = function (t) {
             this._itemSelected("unit", t)
         };
-        t.prototype["%KPLuOzH"] = function () {
+        t.prototype["nap&4(rW"] = function () {
             var t = this.view.selectedHabitats();
             if (t.length > 0) {
                 this.datasource.executeTrade(t, this.selected);
                 this.datasource.setCache([], this.selected)
             }
         };
-        t.prototype["EpPj71KO"] = function () {
+        t.prototype["Wc9C906Z"] = function () {
             var e = this.view.allSelectableHabitats(), a = this.view.selectedHabitats(), t = [], i = $(".win.globalMarket :checkbox");
             if (a.length !== e.length) {
                 t = e
@@ -37961,48 +38011,48 @@
             });
             this.view.updateExecuteButton()
         };
-        t.prototype["uN42UPLf"] = function () {
+        t.prototype["14VGXYhX"] = function () {
             return this.datasource.calculateTrade(this.selected)
         };
-        t.prototype["IlxVR_TA"] = function (t) {
+        t.prototype["Iwfpg9JE"] = function (t) {
             this.notify("createHabitatWindow", {id: t})
         };
-        t.prototype["v8lP8)0m"] = function (t) {
+        t.prototype["%psNhJwp"] = function (t) {
             this.datasource.toggleCache(t, this.selected);
             this.view.updateExecuteButton()
         };
         t.prototype._itemSelected = function (t, e) {
             this.selected[t] = +e[t + "ID"];
-            this["XPz0S4Ep"]({name: t + "Selector"});
+            this["yGBxSOJb"]({name: t + "Selector"});
             this.view.dataUpdate(null, {})
         };
         return t
     }(u.Controller);
-    J.Calculator = function (s) {
+    Z.Calculator = function (s) {
         "use strict";
         utils.__extends(e, s);
         function e() {
             e.__super__.constructor.apply(this, arguments)
         }
 
-        function n(u, k, o) {
-            var g = k.primaryKey, S = o.primaryKey, w = u.habitatResources[g], v = w.storeAmount - w.amount, D = u.stats.units.own[S], T = D * o.storeAmount, d = u.getMarketRateForResource(g), b = false, c = 0, C = 0, n;
+        function n(u, D, o) {
+            var y = D.primaryKey, S = o.primaryKey, w = u.habitatResources[y], g = w.storeAmount - w.amount, k = u.stats.units.own[S], T = k * o.storeAmount, d = u.getMarketRateForResource(y), b = false, c = 0, C = 0, n;
             n = {1: 0, 2: 0, 3: 0};
             for (var h in d.rates) {
                 if (b || !_.has(d.rates, h)) {
                     continue
                 }
-                var e = d.rates[h], m = u.habitatResources[h], A = r(n), l = T - A, y = i(m.amount, e), t = 0, s = 0, f = 0;
-                if (y < l) {
-                    t = y
+                var e = d.rates[h], m = u.habitatResources[h], A = r(n), l = T - A, v = i(m.amount, e), t = 0, s = 0, f = 0;
+                if (v < l) {
+                    t = v
                 } else {
                     t = i(l, e)
                 }
                 s = a(t / e);
                 f = t / o.storeAmount;
-                if (c + s > v) {
+                if (c + s > g) {
                     b = true;
-                    var I = c + s - v, x = I * e, p = m.amount - x;
+                    var x = c + s - g, I = x * e, p = m.amount - I;
                     if (p > l) {
                         p = l
                     }
@@ -38014,7 +38064,7 @@
                 c += s;
                 n[+h] += t
             }
-            return {unitsNeeded: a(C, "ceil"), resourceGain: c, resourceUsage: n, _tradeResourceID: g, _tradeUnitID: S}
+            return {unitsNeeded: a(C, "ceil"), resourceGain: c, resourceUsage: n, _tradeResourceID: y, _tradeUnitID: S}
         }
 
         function i(e, t) {
@@ -38043,7 +38093,7 @@
         }
 
         e.prototype.run = function (e) {
-            var r = re[e.resource], o = g[e.unit], i = {};
+            var r = re[e.resource], o = y[e.unit], i = {};
             for (var a in t.habitate) {
                 if (!_.has(t.habitate, a)) {
                     continue
@@ -38054,13 +38104,13 @@
             return i
         };
         return e
-    }(z);
-    J.DataSource = function (i) {
+    }(G);
+    Z.DataSource = function (i) {
         "use strict";
         utils.__extends(e, i);
         function e() {
             e.__super__.constructor.apply(this, arguments);
-            this.calculator = new J.Calculator;
+            this.calculator = new Z.Calculator;
             this._lastTradeInfo = {}
         }
 
@@ -38154,8 +38204,8 @@
             if (_.isArray(n)) {
                 a = n.length;
                 for (e = 0, u = n.length; e < u; e++) {
-                    var g = n[e];
-                    l.habitatIDResourceAndUnitDictionary = g;
+                    var y = n[e];
+                    l.habitatIDResourceAndUnitDictionary = y;
                     s.request("MarketAction/tradeResourcesForHabitatDictionary", l, this.triggerModelUpdate, this)
                 }
             } else {
@@ -38169,15 +38219,15 @@
             return this._format(t, e)
         };
         e.prototype._format = function (c, h) {
-            var d = [], s = c.resource, a = c.unit, w = r(s), b = B.DataSource.prototype.prepareResources, m = B.DataSource.prototype.prepareUnits, v = this._storageKey({
+            var d = [], s = c.resource, a = c.unit, w = r(s), b = H.DataSource.prototype.prepareResources, m = H.DataSource.prototype.prepareUnits, g = this._storageKey({
                 resource: s,
                 unit: a
-            }), S = _.storeLocal.getJSON(v) || [];
+            }), S = _.storeLocal.getJSON(g) || [];
             for (var n in h) {
                 if (!_.has(h, n)) {
                     continue
                 }
-                var u = h[n], i = t.habitate[n], e = $.extend(true, u, i), l = i.stats, C = [l.resources, false, w, i.id], p = {}, f, g, y, o;
+                var u = h[n], i = t.habitate[n], e = $.extend(true, u, i), l = i.stats, C = [l.resources, false, w, i.id], p = {}, f, y, v, o;
                 p[a] = l.units.own[a];
                 e.habitatResources = b.apply(this, C);
                 e.habitatUnits = m.apply(this, [p]);
@@ -38186,11 +38236,11 @@
                 e.icon = this.getImageSrc("buttonCastle", "icons");
                 e.tradeResourceIcon = this.getImageSrc(s, "resources");
                 e.tradeUnitIcon = this.getImageSrc(a, "units");
-                y = l.units.own[a];
+                v = l.units.own[a];
                 o = i.habitatResources[s];
-                f = y >= u.unitsNeeded && u.unitsNeeded > 0;
-                g = o.amount < o.storeAmount;
-                e.selectable = f && g;
+                f = v >= u.unitsNeeded && u.unitsNeeded > 0;
+                y = o.amount < o.storeAmount;
+                e.selectable = f && y;
                 e.checked = !!~S.indexOf(i.id);
                 d.push(e)
             }
@@ -38204,8 +38254,8 @@
             return _.storeLocal.createKey("gm", t.resource || "res", t.unit || "unit")
         };
         return e
-    }(I);
-    J.Buttons = function (e) {
+    }(x);
+    Z.Buttons = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t(i, e) {
@@ -38222,7 +38272,7 @@
                 icon: i,
                 iconCategory: "resources",
                 content: translate(be[i]),
-                clickMessage: "XPz0S4Ep",
+                clickMessage: "yGBxSOJb",
                 name: "resourceSelector",
                 styles: "resourceSelector"
             }, m);
@@ -38233,12 +38283,12 @@
                 hidden: true,
                 selectedItemID: i,
                 tag: "dropdown"
-            }, J.ResourceMenu);
+            }, Z.ResourceMenu);
             this.unitButton = this.createSubview(this, {
                 icon: e,
                 iconCategory: "units",
-                content: translate(g[e].identifier),
-                clickMessage: "XPz0S4Ep",
+                content: translate(y[e].identifier),
+                clickMessage: "yGBxSOJb",
                 name: "unitSelector",
                 styles: "unitSelector"
             }, m);
@@ -38249,11 +38299,11 @@
                 hidden: true,
                 selectedItemID: e,
                 tag: "dropdown"
-            }, J.UnitMenu)
+            }, Z.UnitMenu)
         };
         return t
     }(e);
-    J.MarketList = function (e) {
+    Z.MarketList = function (e) {
         utils.__extends(t, e);
         function t() {
             t.__super__.constructor.apply(this, arguments)
@@ -38285,10 +38335,10 @@
             return e
         };
         t.prototype.toggleHabitat = function (t) {
-            this.notify("v8lP8)0m", t)
+            this.notify("%psNhJwp", t)
         };
         t.prototype.habitatClicked = function (t) {
-            this.notify("IlxVR_TA", t)
+            this.notify("Iwfpg9JE", t)
         };
         t.prototype.timeEvent = function () {
             if (typeof this.parent.content === "undefined") {
@@ -38298,7 +38348,7 @@
         };
         return t
     }(S);
-    J.Window = function (a) {
+    Z.Window = function (a) {
         "use strict";
         utils.__extends(t, a);
         function t(i, e) {
@@ -38319,7 +38369,7 @@
         t.prototype.dataUpdate = function () {
             var t = _.try(this, "mainContentContainer.parent");
             this.scrollPosition = this._mainContentNode().scrollTop();
-            this.data = this.notify("uN42UPLf");
+            this.data = this.notify("14VGXYhX");
             this.deleteSubviewByField("tag", "MarketViewContent");
             if (t) {
                 t.deleteSubviewByField("tag", "MarketViewContent")
@@ -38334,7 +38384,7 @@
                 this._bottomBar();
                 this.draw();
                 if (!this._hasTimer()) {
-                    this.notify("bKUGf9HF", this.list)
+                    this.notify("enjA1c%5", this.list)
                 }
                 this.updateExecuteButton(false);
                 this._mainContentNode().scrollTop(this.scrollPosition);
@@ -38368,7 +38418,7 @@
                 return
             }
             t = this.createSubview(e, {styles: "topButtons", tag: "MarketViewContent"});
-            this.topBar = t.createSubview(t, {name: "globalMarketTopBar", windowID: this.id, selection: i}, J.Buttons);
+            this.topBar = t.createSubview(t, {name: "globalMarketTopBar", windowID: this.id, selection: i}, Z.Buttons);
             t.clearfix();
             t.createSubview(t, {styles: "divider"})
         };
@@ -38383,7 +38433,7 @@
                 template: "globalMarket",
                 tag: "MarketViewContent",
                 templateData: this.data
-            }, J.MarketList)
+            }, Z.MarketList)
         };
         t.prototype._bottomBar = function () {
             var t = _.try(this, "mainContentContainer.parent");
@@ -38393,14 +38443,14 @@
             this.bottomBar = this.createSubview(t, {styles: "bottomButtons", tag: "MarketViewContent"});
             this.executeButton = this.createSubview(this.bottomBar, {
                 styles: "globalExchangeButton disabled",
-                clickMessage: "%KPLuOzH"
-            }, p);
+                clickMessage: "nap&4(rW"
+            }, f);
             this.createSubview(this.bottomBar, {
-                clickMessage: "EpPj71KO",
+                clickMessage: "Wc9C906Z",
                 styles: "selectAllButton",
                 content: this.getIcon("buttonCastleMultiple"),
                 hover: translate("Select all habitats")
-            }, p)
+            }, f)
         };
         t.prototype._mainContentNode = function () {
             return this.node().find(".main-content")
@@ -38416,13 +38466,13 @@
         };
         return t
     }(u.Window);
-    J.ResourceMenu = function (e) {
+    Z.ResourceMenu = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t(i, e) {
             t.__super__.constructor.apply(this, arguments);
             this.styleArray.push("resource dropdown");
-            this.addOption("selectMessage", "vE)d)C-j");
+            this.addOption("selectMessage", "1hcnEfXQ");
             this.setOptions(e)
         }
 
@@ -38439,7 +38489,7 @@
         };
         return t
     }(u.PopUp);
-    J.UnitMenu = function (e) {
+    Z.UnitMenu = function (e) {
         "use strict";
         utils.__extends(t, e);
         function t(i, e) {
@@ -38447,7 +38497,7 @@
             this.styleArray.push("unit dropdown");
             this.addOption("itemSelector", "unitElement");
             this.addOption("dropdownSelector", "unit");
-            this.addOption("selectMessage", "yf3J%Tbz");
+            this.addOption("selectMessage", "7D)fl63t");
             this.setOptions(e)
         }
 
@@ -38455,7 +38505,7 @@
             this.deleteSubviewByField("name", "unitDropdown");
             this.createSubview(this, {
                 name: "unitDropdown",
-                units: g,
+                units: y,
                 showNames: true,
                 reverseOrder: false,
                 clickMessage: this.selectMessage
@@ -38476,14 +38526,14 @@
             }
             this.view.dataUpdate(t, e)
         };
-        e.prototype["dr&gHGfQ"] = function () {
+        e.prototype["7h5JvNro"] = function () {
             var i = this.view.getAllSelected(), e = 0, o = translate("Fill up the stock"), u = "Filling up the stock of resources costs %1$s gold coins. You own %2$s gold coins.", n = l.restockingResourcesUnit, d = l.restockingResourcesCostPerUnit, s;
             if (!utils.dict.size(i)) {
                 return
             }
             s = function () {
                 if (t.gold < e) {
-                    this.notify("vF4Exq0E", this, {costs: e})
+                    this.notify("8xvB5GpX", this, {costs: e})
                 } else {
                     this.datasource.execute(i, e)
                 }
@@ -38494,13 +38544,13 @@
             }
             utils.dialog.confirm(this, translate(u, e, t.gold), o, s.bind(this))
         };
-        e.prototype["QkkzMlUI"] = function () {
+        e.prototype["hOHRSjg("] = function () {
             if (this.view.allCheckboxesSelected()) {
                 this.clearAll();
                 return
             }
             for (var e in t.habitate) {
-                this["gYrB)0x%"]({habitatID: e}, false)
+                this["8gxS8vAS"]({habitatID: e}, false)
             }
         };
         e.prototype.clearAll = function () {
@@ -38508,15 +38558,15 @@
             this.view.clearAll();
             this.view.updateExecuteButton()
         };
-        e.prototype["gYrB)0x%"] = function (e, i) {
+        e.prototype["8gxS8vAS"] = function (e, i) {
             var t = e.habitatID, a = this.datasource.toggleKey(t, i);
             this.view.habitatSelected(t, a);
             this.view.updateExecuteButton()
         };
-        e.prototype["3qqD(nPj"] = function () {
+        e.prototype["ZVoaXQmw"] = function () {
             return this.datasource.getKeys()
         };
-        e.prototype["leWAK3tm"] = function (t) {
+        e.prototype["I02mPbeg"] = function (t) {
             this.notify("createHabitatWindow", t.habitat)
         };
         return e
@@ -38561,7 +38611,7 @@
             return n
         };
         return t
-    }(I);
+    }(x);
     Ce.GlobalListView = function (e) {
         utils.__extends(t, e);
         function t() {
@@ -38582,10 +38632,10 @@
         }
 
         t.prototype.itemClicked = function (t) {
-            this.notify("gYrB)0x%", {habitatID: t.data("id"), active: t.is(":checked")})
+            this.notify("8gxS8vAS", {habitatID: t.data("id"), active: t.is(":checked")})
         };
         t.prototype.openHabitat = function (t) {
-            this.notify("leWAK3tm", {habitat: {id: t.parents(".restockContainer").data("habitat")}})
+            this.notify("I02mPbeg", {habitat: {id: t.parents(".restockContainer").data("habitat")}})
         };
         t.prototype.clickHandler = function (t) {
             this.bubble(t, i.bind(this), "globalRestockList")
@@ -38607,7 +38657,7 @@
         utils.__extends(e, i);
         function e() {
             e.__super__.constructor.apply(this, arguments);
-            utils.linkMethod("prepareResources", B.DataSource, e)
+            utils.linkMethod("prepareResources", H.DataSource, e)
         }
 
         e.prototype.createList = function () {
@@ -38630,11 +38680,11 @@
             this.updateExecuteButton()
         };
         e.prototype._habitatData = function () {
-            var u = [], d = this.notify("3qqD(nPj"), o = t.getSortedHabitate();
+            var u = [], d = this.notify("ZVoaXQmw"), o = t.getSortedHabitate();
             for (var a = 0, p = o.length; a < p; a++) {
                 var e = o[a], h = {}, s = e.nextLegalRestockDate, c = e.getRestockResourceAmount(), l, r, i;
                 r = [n.WOOD, n.STONE, n.ORE, n.PEOPLE];
-                l = !s || s < new Date - U;
+                l = !s || s < new Date - P;
                 h = this.prepareResources(e.stats.resources, false, r, e.id);
                 i = {
                     habitatID: e.id,
@@ -38657,8 +38707,8 @@
                 name: "restockBottomBar",
                 useContainer: true,
                 templateData: {selected: 0, submitText: translate("Fill up the stock")},
-                executeMessage: "dr&gHGfQ",
-                selectAllMessage: "QkkzMlUI"
+                executeMessage: "7h5JvNro",
+                selectAllMessage: "hOHRSjg("
             }, u.WindowBottomBar)
         };
         e.prototype.habitatSelected = function (t, e) {
@@ -38699,18 +38749,18 @@
             this.dialogShown = false
         }
 
-        t.prototype["5gDHtT_N"] = function () {
+        t.prototype["x2x7Uarm"] = function () {
             if (!this.showConfirm) {
-                t.__super__["5gDHtT_N"].apply(this, arguments);
+                t.__super__["x2x7Uarm"].apply(this, arguments);
                 return
             }
             var i = function () {
                 this.dialogShown = false;
-                this.notify("j)909BLe");
+                this.notify("-_bqDYa1");
                 window.setTimeout(function () {
-                    this.notify("j)909BLe")
+                    this.notify("-_bqDYa1")
                 }.bind(this), 5e3);
-                t.__super__["5gDHtT_N"].apply(this, arguments)
+                t.__super__["x2x7Uarm"].apply(this, arguments)
             }.bind(this);
             var a = function () {
                 this.dialogShown = false;
@@ -38772,15 +38822,15 @@
                 this.view.dataUpdate(e, t)
             }
         };
-        t.prototype["5gDHtT_N"] = function () {
+        t.prototype["x2x7Uarm"] = function () {
             this.agreementBoxFirst = false;
             this.agreementBoxSecond = false;
             var e = this.view.findSubviewByName("agreementBoxFirst"), i = this.view.findSubviewByName("agreementBoxSecond");
             e.liveUpdate();
             i.liveUpdate();
-            this.notify("5gDHtT_N", this, t.__super__, arguments)
+            this.notify("x2x7Uarm", this, t.__super__, arguments)
         };
-        t.prototype["NEPcPeHx"] = function (t, i) {
+        t.prototype["WrmNaeON"] = function (t, i) {
             this.country = t.isoCode;
             this.product = "";
             this.provider = "";
@@ -38789,25 +38839,25 @@
                 this.view.shopView.countryMenu.toggle()
             }
         };
-        t.prototype["qKP5897L"] = function (t, e) {
+        t.prototype["Jzabagiq"] = function (t, e) {
             this.product = t.identifier;
             this.provider = "";
             this.datasource.select(this.country, this.product);
             this.view.shopView.setProduct(this.product)
         };
-        t.prototype["NWIKCd4M"] = function (t, e) {
+        t.prototype["s9rZ4fe4"] = function (t, e) {
             this.provider = t.identifier;
             this.view.shopView.setProvider(this.provider)
         };
-        t.prototype[")wwqyIPO"] = function (e, i) {
+        t.prototype["XRQtb11V"] = function (e, i) {
             var t = this.view.findSubviewByName("agreementBoxFirst");
             this.agreementBoxFirst = t.checked
         };
-        t.prototype["w1Vux2Mf"] = function (e, i) {
+        t.prototype["LN2-EP3D"] = function (e, i) {
             var t = this.view.findSubviewByName("agreementBoxSecond");
             this.agreementBoxSecond = t.checked
         };
-        t.prototype["SqUPHKcv"] = function (r, o) {
+        t.prototype["QN)cNP&F"] = function (r, o) {
             if (this.product === e && this.provider === i) {
                 var s = this.view.findSubviewByName("PromotionCode");
                 var a = s.getValue();
@@ -38825,7 +38875,7 @@
             this.datasource.payProduct(this.provider, this.gameCode);
             this.view.hide()
         };
-        t.prototype["c66Ae4VJ"] = function (i) {
+        t.prototype["8g_9DxuY"] = function (i) {
             if (this.view.shopView.countryMenu) {
                 this.view.shopView.countryMenu.toggle()
             }
@@ -38834,16 +38884,16 @@
             var e = $(".countryTable");
             e.scrollTop(t.top - e.height() + 20)
         };
-        t.prototype["zGsXHhDK"] = function () {
-            var t = this.notify("3s(kBgiI", this, {imageCategory: "resources", imageName: "7"});
+        t.prototype["PVchlONJ"] = function () {
+            var t = this.notify("Z-XGNYVU", this, {imageCategory: "resources", imageName: "7"});
             if (!this.gameCode)return t;
-            return this.notify("3s(kBgiI", this, {imageCategory: "shop", imageName: "GoldIcon_" + this.gameCode})
+            return this.notify("Z-XGNYVU", this, {imageCategory: "shop", imageName: "GoldIcon_" + this.gameCode})
         };
-        t.prototype["ECn)rA6i"] = function () {
-            return this.notify("ECn)rA6i", this, null)
+        t.prototype["(%ZZHnv&"] = function () {
+            return this.notify("(%ZZHnv&", this, null)
         };
-        t.prototype["lQanfjbE"] = function (t, e) {
-            return this.notify("lQanfjbE", t, e)
+        t.prototype["p(oDm2)m"] = function (t, e) {
+            return this.notify("p(oDm2)m", t, e)
         };
         return t
     }(u.Controller);
@@ -38853,11 +38903,11 @@
             t.__super__.constructor.apply(this, arguments)
         }
 
-        t.prototype["5gDHtT_N"] = function () {
+        t.prototype["x2x7Uarm"] = function () {
             var e = this.controller.findControllerByName("gold");
             e.view.show();
-            t.__super__["5gDHtT_N"].apply(this, arguments);
-            this.notify("56MCdi79", this)
+            t.__super__["x2x7Uarm"].apply(this, arguments);
+            this.notify("Eu50z7&J", this)
         };
         t.prototype.dataUpdate = function (t, e) {
         };
@@ -38871,7 +38921,7 @@
 
         t.prototype.dataUpdate = function () {
         };
-        t.prototype["MV%-gFHU"] = function () {
+        t.prototype["aiqKd0o)"] = function () {
             this.view.hide();
             this._window(false);
             this._finish()
@@ -38885,17 +38935,17 @@
             if (this.datasource.paymentSession.paymentProviderIdentifier.indexOf("paypal") !== -1) {
                 return
             }
-            this.notify("QI9ZDZ5g", this, {success: t, showIcon: true})
+            this.notify("U1Fx%0%0", this, {success: t, showIcon: true})
         };
         t.prototype._finish = function () {
-            this["j)909BLe"]();
+            this["-_bqDYa1"]();
             this.datasource.closePaymentWindow();
-            this.notify("56MCdi79", this)
+            this.notify("Eu50z7&J", this)
         };
         return t
     }(u.Controller);
     w.DataSource = function (a) {
-        utils.__extends(t, I);
+        utils.__extends(t, x);
         var e = "EARNGOLD";
         var i = "promotioncode";
         var n = "sponsorpay";
@@ -38972,7 +39022,7 @@
             if (!this.paymentWindow)return;
             this.paymentWindow.location = t.paymentSession.redirectUrl;
             this.checkState();
-            this.notify("tHxEb5Yw", this, {session: t, paymentWindow: this.paymentWindow})
+            this.notify("gvX2OHg6", this, {session: t, paymentWindow: this.paymentWindow})
         };
         t.prototype.select = function (e, t) {
             var a = false, i = false;
@@ -39034,7 +39084,7 @@
         };
         t.prototype.payProduct = function (a, r) {
             var e = "1";
-            var i = this.notify("ECn)rA6i", this, null);
+            var i = this.notify("(%ZZHnv&", this, null);
             if (i) {
                 e = i
             }
@@ -39051,7 +39101,7 @@
             s.request("StoreAction/redeemPromotionCode", {code: t}, this.triggerModelUpdate, this)
         };
         return t
-    }(I);
+    }(x);
     w.TransactionDatasource = function (e) {
         var i = 3e3;
         utils.__extends(t, e);
@@ -39101,7 +39151,7 @@
                 return
             }
             if (this.paymentWindow && (!this.paymentWindow.window || !this.paymentWindow.location || e) && this.subscribers && this.subscribers[0]) {
-                this.subscribers[0]["MV%-gFHU"]();
+                this.subscribers[0]["aiqKd0o)"]();
                 return
             }
             this.request(i)
@@ -39115,7 +39165,7 @@
             }
         };
         return t
-    }(I);
+    }(x);
     w.Countries = function (e) {
         utils.__extends(t, e);
         function t(i, e) {
@@ -39158,7 +39208,7 @@
             t.__super__.constructor.apply(this, arguments);
             this.addRequired("isoCode");
             this.addRequired("name");
-            this.addOption("clickMessage", "NEPcPeHx");
+            this.addOption("clickMessage", "WrmNaeON");
             this.setOptions(e);
             this.styleArray.push("listButton country");
             if (this.clickMessage)this.styleArray.push("clickable");
@@ -39169,7 +39219,7 @@
             t.__super__.create.apply(this, arguments);
             this.createSubview(this, {
                 styles: "flagIcon",
-                content: this.notify("3s(kBgiI", this, {imageCategory: "flags", imageName: this.isoCode})
+                content: this.notify("Z-XGNYVU", this, {imageCategory: "flags", imageName: this.isoCode})
             });
             this.createSubview(this, {content: this.name, styles: "name"})
         };
@@ -39185,7 +39235,7 @@
             this.addRequired("price");
             this.addOption("extra", 0);
             this.addRequired("country.isoCode");
-            this.addOption("clickMessage", "qKP5897L");
+            this.addOption("clickMessage", "Jzabagiq");
             this.setOptions(e);
             this.isoCode = this["country.isoCode"];
             this.styleArray.push("product");
@@ -39202,11 +39252,12 @@
             if (this.extra !== 0) {
                 this.createSubview(this, {content: this.extra + "% " + translate("payment.more"), styles: "banner"})
             }
-            this.createSubview(this, {content: this.notify("zGsXHhDK", this, null), styles: "goldIcon"});
+            this.createSubview(this, {content: this.notify("PVchlONJ", this, null), styles: "goldIcon"});
             this.createSubview(this, {content: this.name, styles: "name"});
             var e = "";
             if (this.price !== null && this.price.price) {
-                e = +this.price.price.toFixed(2) + " " + this.price.symbol
+                this.price.price = +this.price.price;
+                e = this.price.price.toFixed(2) + " " + this.price.symbol
             }
             this.createSubview(this, {content: e, styles: "price"})
         };
@@ -39233,7 +39284,7 @@
         t.prototype.create = function () {
             t.__super__.create.apply(this, arguments);
             this.createSubview(this, {content: translate("payment.promotion.enter"), styles: "headline"});
-            this.code = this.createSubview(this, {name: "PromotionCode"}, H.Input)
+            this.code = this.createSubview(this, {name: "PromotionCode"}, B.Input)
         };
         return t
     }(e);
@@ -39245,7 +39296,7 @@
             this.addRequired("name");
             this.addRequired("scoreCardCreditValue");
             this.addOption("showName", true);
-            this.addOption("clickMessage", "NWIKCd4M");
+            this.addOption("clickMessage", "s9rZ4fe4");
             this.setOptions(e);
             this.styleArray.push("paymentProvider");
             if (this.clickMessage) {
@@ -39262,7 +39313,7 @@
         t.prototype.create = function () {
             t.__super__.create.apply(this, arguments);
             this.createSubview(this, {
-                content: this.notify("3s(kBgiI", this, {
+                content: this.notify("Z-XGNYVU", this, {
                     imageCategory: "shop",
                     imageName: this.identifier
                 }), styles: "providerIcon"
@@ -39284,7 +39335,7 @@
 
         e.prototype.addPlayerGold = function (t) {
             this.goldContainer = this.createSubview(this.headline, {styles: "gold"});
-            this.createSubview(this.goldContainer, {styles: "icon", content: this.notify("zGsXHhDK", this, null)});
+            this.createSubview(this.goldContainer, {styles: "icon", content: this.notify("PVchlONJ", this, null)});
             this.createSubview(this.goldContainer, {content: t, styles: "amount"})
         };
         e.prototype.create = function () {
@@ -39355,7 +39406,7 @@
                 icon: this.country.isoCode,
                 iconCategory: "flags",
                 content: this.country.name,
-                clickMessage: "c66Ae4VJ",
+                clickMessage: "8g_9DxuY",
                 styles: "countrySelector"
             }, m)
         };
@@ -39412,7 +39463,7 @@
             }
             var h = this.product === e || a && a.price === 0 ? "Shop" : "Paynow";
             var l = "awesome";
-            var u = "SqUPHKcv";
+            var u = "QN)cNP&F";
             if (!this.providers || this.providers.length === 0) {
                 l += " disabled";
                 u = null
@@ -39427,8 +39478,8 @@
                 globalChecked: function () {
                     return this.controller.agreementBoxFirst
                 },
-                clickMessage: ")wwqyIPO"
-            }, H.LabeledCheckbox);
+                clickMessage: "XRQtb11V"
+            }, B.LabeledCheckbox);
             o.clearfix();
             var c = this.createSubview(this.agreeBoxes, {styles: "agreement-box"});
             this.createSubview(o, {
@@ -39439,8 +39490,8 @@
                 globalChecked: function () {
                     return this.controller.agreementBoxSecond
                 },
-                clickMessage: "w1Vux2Mf"
-            }, H.LabeledCheckbox);
+                clickMessage: "LN2-EP3D"
+            }, B.LabeledCheckbox);
             o.clearfix();
             this.payButton = this.createSubview(this.summaryCol, {
                 styles: l,
@@ -39547,8 +39598,8 @@
             this.createSubview(this.message, {
                 content: translate("close_window"),
                 styles: "closeButton",
-                clickMessage: "5gDHtT_N"
-            }, p)
+                clickMessage: "x2x7Uarm"
+            }, f)
         };
         t.prototype.dataUpdate = function (e, i) {
             t.__super__.dataUpdate.apply(this, arguments)
@@ -39572,8 +39623,8 @@
             }, T);
             this.createSubview(this.transactionView, {content: translate("payment_successful"), styles: "overview"});
             var e = this.createSubview(this.transactionView, {styles: "centerContainer"});
-            this.createSubview(e, {content: this.notify("1V5y4e3c", this), styles: "spinner"});
-            this.createSubview(e, {content: translate("cancel"), clickMessage: "MV%-gFHU"}, p)
+            this.createSubview(e, {content: this.notify("5f9mIWE-", this), styles: "spinner"});
+            this.createSubview(e, {content: translate("cancel"), clickMessage: "aiqKd0o)"}, f)
         };
         t.prototype.dataUpdate = function (e, i) {
             t.__super__.dataUpdate.apply(this, arguments)
@@ -39595,7 +39646,7 @@
             this.setupSteps = 0
         }
 
-        t.prototype["-nc-59bb"] = function () {
+        t.prototype["6%wiVnzB"] = function () {
             if (!this.isActive()) {
                 return
             }
@@ -39606,7 +39657,7 @@
                 t.__syncArrow()
             }
         };
-        t.prototype["DbSTNafr"] = function () {
+        t.prototype["4qlajYYq"] = function () {
             var t = this.view.node(), n = 85, e;
             t.find(".window-content").height("auto");
             e = t.find(".content-frame").outerHeight() + n;
@@ -39635,7 +39686,7 @@
                 this.totalSetupsRequired = this.steps.filter(function (e, i) {
                     return i <= t && e.setupComplete !== null
                 }).length;
-                x = true;
+                I = true;
                 if (this.totalSetupsRequired === 0) {
                     this.beginTutorial()
                 }
@@ -39647,11 +39698,11 @@
         };
         t.prototype.finish = function () {
             this.started = false;
-            x = false;
+            I = false;
             mTutorialFreeCastle = false;
             this.unlockScreen();
             this.resetGame();
-            this.notify("t1lXY8hf", this)
+            this.notify("J%5iNxCh", this)
         };
         t.prototype.beginTutorial = function () {
             var t = this.getCurrentStep();
@@ -39728,7 +39779,7 @@
             }
             return t
         };
-        t.prototype["XJIaop65"] = function (t) {
+        t.prototype["z6AeukXT"] = function (t) {
             if (!t.data || !t.data.step) {
                 return
             }
@@ -39754,14 +39805,14 @@
         };
         t.prototype.skip = function () {
             this.skipped = true;
-            x = false;
+            I = false;
             mTutorialFreeCastle = false;
             $.gaevents.trackEvent("tutorial", "skipped", "step-" + this.completedSteps);
             $.gaevents.trackPage("/tutorial-tracking/skip");
             this.unlockScreen();
             this.resetGame();
             $(".win:visible").not(".tutorial").find(".main-content").unbind("scroll");
-            this.notify("xEp)9xJ9", this);
+            this.notify("(uxH&&1J", this);
             if (this.datasource) {
                 this.datasource.skip();
                 return true
@@ -39808,10 +39859,10 @@
             }.bind(this);
             utils.dialog.confirm(this, e, i, t)
         };
-        t.prototype["5gDHtT_N"] = function () {
+        t.prototype["x2x7Uarm"] = function () {
             this._handleSkip()
         };
-        t.prototype["uDbe909D"] = function () {
+        t.prototype["0GTt_25N"] = function () {
             this._handleSkip()
         };
         t.prototype._save = function () {
@@ -40110,7 +40161,7 @@
             return t
         };
         return t
-    }(z);
+    }(G);
     M.DataSource = function (e) {
         utils.__extends(t, e);
         function t() {
@@ -40161,7 +40212,7 @@
             this._save()
         };
         return t
-    }(I);
+    }(x);
     M.Window = function (e) {
         utils.__extends(t, e);
         function t(e, i) {
@@ -40172,7 +40223,7 @@
 
         t.prototype.show = function () {
             t.__super__.show.apply(this, arguments);
-            this.notify("DbSTNafr", this)
+            this.notify("4qlajYYq", this)
         };
         t.prototype.create = function () {
             this.container = this.content.createContainer()
@@ -40229,10 +40280,10 @@
             this.createSubview(t, {content: translate("tutorial.intro.text")});
             this.createSubview(t, {
                 content: translate("tutorial.intro.new"),
-                clickMessage: "XJIaop65",
+                clickMessage: "z6AeukXT",
                 data: {step: "intro"}
-            }, p);
-            this.createSubview(t, {content: translate("tutorial.intro.skip"), clickMessage: "uDbe909D"}, p)
+            }, f);
+            this.createSubview(t, {content: translate("tutorial.intro.skip"), clickMessage: "0GTt_25N"}, f)
         };
         return t
     }(e);
@@ -40252,7 +40303,7 @@
                 var n = a[e];
                 t.createSubview(t, {
                     styles: "resource",
-                    content: this.notify("3s(kBgiI", this, {imageName: n, imageCategory: "resources"})
+                    content: this.notify("Z-XGNYVU", this, {imageName: n, imageCategory: "resources"})
                 })
             }
             t.clearfix()
@@ -40266,9 +40317,9 @@
             e.apply(this, [t, "tutorial.buildings.resourceText2", a]);
             this.createSubview(t, {
                 content: translate("tutorial.info.confirm"),
-                clickMessage: "XJIaop65",
+                clickMessage: "z6AeukXT",
                 data: {step: this.stepName}
-            }, p)
+            }, f)
         };
         return t
     }(e);
@@ -40287,9 +40338,9 @@
             this.createSubview(t, {content: this.text});
             this.createSubview(t, {
                 content: translate("tutorial.info.confirm"),
-                clickMessage: "XJIaop65",
+                clickMessage: "z6AeukXT",
                 data: {step: this.stepName}
-            }, p)
+            }, f)
         };
         return t
     }(e);
@@ -40323,14 +40374,14 @@
             t.createSubview(t, {styles: "text", content: translate("tutorial.info.helpIconText")});
             t.createSubview(t, {
                 styles: "icon",
-                content: this.notify("3s(kBgiI", this, {imageName: "Help", imageCategory: "bottombar"})
+                content: this.notify("Z-XGNYVU", this, {imageName: "Help", imageCategory: "bottombar"})
             });
             t.clearfix();
             this.createSubview(e, {
                 content: translate("tutorial.info.finalise"),
-                clickMessage: "XJIaop65",
+                clickMessage: "z6AeukXT",
                 data: {step: this.stepName}
-            }, p)
+            }, f)
         };
         return t
     }(e);
@@ -40369,7 +40420,7 @@
                 pointer: ".win.info .button",
                 pointerDirection: "right",
                 popupView: M.ResourceView,
-                messages: ["wVrQWmJ%", "9obJO5Cf", "wz5CjRul"],
+                messages: ["zh%1hNJI", "_w32GmpP", "C2loL2Fp"],
                 triggerCallback: function (e) {
                     var i = e.findControllerByName(t.firstHabitat.id);
                     this.setTargetController(i)
@@ -40388,24 +40439,24 @@
                 pointer: ".win.habitat .lumberjack",
                 text: "tutorial.buildings.viewLumberjack",
                 frameLock: true,
-                messages: ["wVrQWmJ%", "9obJO5Cf"]
+                messages: ["zh%1hNJI", "_w32GmpP"]
             },
             lumberjackInfo: {
                 pointer: ".win.info .button",
                 pointerDirection: "right",
                 text: "tutorial.buildings.lumberjackInfo",
                 popupView: M.InfoView,
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5"],
                 setupView: function () {
                     var t = this.getTargetController();
-                    t["wz5CjRul"]({name: "content", primaryKey: 105});
+                    t["C2loL2Fp"]({name: "content", primaryKey: 105});
                     setTimeout(utils.bind(this.setupComplete, this), 650)
                 }
             },
             upgradeLumberjack: {
                 pointer: ".buildbutton",
                 text: "tutorial.buildings.upgradeLumberjack",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij"],
                 triggerCallback: function () {
                     $(".habitatStorageBuildingElement .buildbutton").addClass("disabled")
                 },
@@ -40422,7 +40473,7 @@
                 showHighlight: false,
                 popupView: M.InfoView,
                 text: "tutorial.buildings.buildingUpgradeInfo",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EnrZIB7r"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "duJ(Odl5"],
                 triggerCallback: function () {
                     $(".buildbutton").first().addClass("disabled");
                     $(".habitatStorageBuildingElement .buildbutton").addClass("disabled")
@@ -40434,7 +40485,7 @@
             upgradeStore: {
                 pointer: ".habitatStorageBuildingElement .buildbutton",
                 text: "tutorial.buildings.upgradeStore",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EnrZIB7r"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "duJ(Odl5"],
                 validation: function () {
                     return !$(".habitatStorageBuildingElement .buildbutton").first().hasClass("buildbuttondisabled")
                 },
@@ -40446,7 +40497,7 @@
                 pointer: ".buildingList.tab",
                 pointerDirection: "left",
                 text: "tutorial.buildings.buildingListTab",
-                messages: ["Z04XvT7k", "EvzUGlwm", "EnrZIB7r"]
+                messages: ["v2v6tJij", "xvCZvjBw", "duJ(Odl5"]
             }
         };
         M.Steps.units = {
@@ -40454,11 +40505,11 @@
                 pointer: ".fixedBuildingList .building:nth-child(2)",
                 pointerDirection: "left",
                 text: "tutorial.units.openArsenal",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5"],
                 frameLock: true,
                 setupView: function () {
                     var t = this.getTargetController();
-                    t["9obJO5Cf"]({data: {action: "buildingList", habitat: t.view.habitat}});
+                    t["_w32GmpP"]({data: {action: "buildingList", habitat: t.view.habitat}});
                     setTimeout(utils.bind(this.setupComplete, this), 650)
                 }
             },
@@ -40466,14 +40517,14 @@
                 pointer: ".recruitUnits .unitElement:nth-child(1)",
                 pointerDirection: "left",
                 text: "tutorial.units.recruitUnit",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r", "&N2xhhek", "1_kTu9KH"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5", ")WyTi%0g", "h6cRanxe"],
                 setupView: function () {
                     var t = this.getTargetController();
-                    t["jIPyzFS)"]({buildingPrimaryKey: 1304, group: "BuildingElement"});
+                    t["Mqs(JcJm"]({buildingPrimaryKey: 1304, group: "BuildingElement"});
                     this.setupComplete()
                 },
                 validation: function () {
-                    return g[1].getMaxRecruiting(t.firstHabitat) > 0
+                    return y[1].getMaxRecruiting(t.firstHabitat) > 0
                 },
                 validationJump: "backFromArsenal"
             },
@@ -40481,14 +40532,14 @@
                 pointer: ".recruitUnits .unitElement:nth-child(1) > .button",
                 pointerDirection: "left",
                 text: "tutorial.units.recruitUnit",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r", "&N2xhhek", "1_kTu9KH"]
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5", ")WyTi%0g", "h6cRanxe"]
             },
             backFromArsenal: {
                 pointer: ".headline .gfxButton:visible",
                 pointerDirection: "left",
                 text: "tutorial.units.backFromArsenal",
                 frameLock: true,
-                messages: ["wVrQWmJ%", "9obJO5Cf", "EvzUGlwm", "EnrZIB7r", "-akxnDw7", "CpQaYl92", "&N2xhhek", "1_kTu9KH"]
+                messages: ["zh%1hNJI", "_w32GmpP", "xvCZvjBw", "duJ(Odl5", "83Yo4xKR", "%A%_1MMF", ")WyTi%0g", "h6cRanxe"]
             }
         };
         M.Steps.missions = {
@@ -40496,21 +40547,21 @@
                 pointer: ".fixedBuildingList .building:nth-child(3)",
                 pointerDirection: "left",
                 text: "tutorial.missions.openTavern",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r", "77nwKLLo", "pglnpLqr"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5", "Pc3p1LJt", "qpPcmzhQ"],
                 frameLock: true,
                 setupView: function () {
                     var t = this.getTargetController();
-                    t["9obJO5Cf"]({data: {action: "buildingList", habitat: t.view.habitat}, tutorialForce: true});
+                    t["_w32GmpP"]({data: {action: "buildingList", habitat: t.view.habitat}, tutorialForce: true});
                     setTimeout(utils.bind(this.setupComplete, this), 650)
                 }
             },
             performMission: {
                 pointer: ".missionListItem:nth-child(5) .button",
                 text: "tutorial.missions.performMission",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5"],
                 setupView: function () {
                     var t = this.getTargetController();
-                    t["jIPyzFS)"]({buildingPrimaryKey: 1102, group: "BuildingElement"});
+                    t["Mqs(JcJm"]({buildingPrimaryKey: 1102, group: "BuildingElement"});
                     setTimeout(utils.bind(this.setupComplete, this), 650)
                 },
                 validation: function () {
@@ -40523,10 +40574,10 @@
                 pointerDirection: "right",
                 popupView: M.InfoView,
                 text: "tutorial.missions.performMission",
-                messages: ["wVrQWmJ%", "9obJO5Cf", "Z04XvT7k", "EvzUGlwm", "EnrZIB7r", "77nwKLLo", "pglnpLqr"],
+                messages: ["zh%1hNJI", "_w32GmpP", "v2v6tJij", "xvCZvjBw", "duJ(Odl5", "Pc3p1LJt", "qpPcmzhQ"],
                 completionCallback: function () {
                     var t = this.releaseTargetController();
-                    t["5gDHtT_N"](t.view)
+                    t["x2x7Uarm"](t.view)
                 },
                 triggerCallback: function () {
                     $(".missionListItem .counter").addClass("tutorial-highlight")
@@ -40536,7 +40587,7 @@
         M.Steps.battle = {
             freeCastleInfo: {
                 text: "tutorial.battle.freeCastleInfo",
-                messages: ["aH1WfGjW"],
+                messages: [")_0HtzDq"],
                 pointer: ".free-castle",
                 frameLock: true,
                 autoFrameHighlight: false,
@@ -40567,7 +40618,7 @@
                 pointer: ".actions .button",
                 pointerDirection: "left",
                 text: "tutorial.battle.attackFreeCastle",
-                messages: ["h4LimkDm"],
+                messages: ["ftwphcGZ"],
                 setupView: function (i) {
                     window.mTutorialFreeCastle = true;
                     var a = i.subcontroller[0].datasource, s = a.getFreeCastles(), e = a.getClosestCastle(t.firstHabitat, s);
@@ -40582,17 +40633,17 @@
             attackInfo: {
                 pointer: ".foreignAction .unitElement .maxInput .button",
                 text: "tutorial.battle.attackInfo",
-                messages: ["Z04XvT7k"],
+                messages: ["v2v6tJij"],
                 setupView: function () {
                     var e = this.getTargetController(), t = e.habitat;
                     t.name = translate("Renegade") + " " + t.id;
-                    e["&l1V72Lj"]({data: {action: "attack", foreignHabitat: t}});
+                    e["cMNHoS53"]({data: {action: "attack", foreignHabitat: t}});
                     setTimeout(utils.bind(this.setupComplete, this), 200)
                 },
                 triggerCallback: function (e) {
                     var t = this.releaseTargetController();
                     if (t.view) {
-                        t["5gDHtT_N"](t.view)
+                        t["x2x7Uarm"](t.view)
                     }
                     if (t.habitat) {
                         var i = e.findControllerByName("ForeignHabitat_attack_" + t.habitat.id);
@@ -40604,7 +40655,7 @@
                 pointer: ".foreignAction .actionButton .button",
                 pointerDirection: "left",
                 text: "tutorial.battle.attackInfo",
-                messages: ["Z04XvT7k"],
+                messages: ["v2v6tJij"],
                 completionCallback: function () {
                     window.mTutorialFreeCastle = false
                 }
@@ -40615,7 +40666,7 @@
                 text: "tutorial.battle.finalInfo",
                 popupView: M.FinaliseView,
                 screenLock: false,
-                messages: ["DGiiS)m4", "aH1WfGjW", "h4LimkDm", "4H-Fa%gV"]
+                messages: ["z4nJtGuw", ")_0HtzDq", "ftwphcGZ", "5NU9I4-l"]
             }
         }
     })()
