@@ -54,13 +54,13 @@ var trueFalseFunc = function(key){
     return !tAr[key];
 };
 
-var toggleClear  = function(){
+unsafeWindow.toggleClear  = function(){
     unsafeWindow.clear = !unsafeWindow.clear;
     jQuery('#auto_clear').removeClass(unsafeWindow.clear?'Stopped':'Running').addClass(unsafeWindow.clear?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.clear',unsafeWindow.clear);
 };
 
-var toggleDebug  = function(){
+unsafeWindow.toggleDebug  = function(){
     unsafeWindow.debug = !unsafeWindow.debug;
     jQuery('#auto_debug').removeClass(unsafeWindow.debug?'Stopped':'Running').addClass(unsafeWindow.debug?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.debug',unsafeWindow.debug);
@@ -137,7 +137,7 @@ unsafeWindow.findLoners = function(){
     });
 };
 
-var rankingView = function(){
+unsafeWindow.rankingView = function(){
     if(!rankingsVisible()){
         jQuery('#rankingList').find('.clickable.alliance').click();
     }
@@ -349,13 +349,13 @@ var castleBuildings = function (ele,txt){
     }
 };
 
-var toggleSilver  = function(){
+unsafeWindow.toggleSilver  = function(){
     unsafeWindow.silver = !unsafeWindow.silver;
     jQuery('#auto_silver').removeClass(unsafeWindow.silver?'Stopped':'Running').addClass(unsafeWindow.silver?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.silver',unsafeWindow.silver);
 };
 
-var toggleResearch  = function(){
+unsafeWindow.toggleResearch  = function(){
     unsafeWindow.research = !unsafeWindow.research;
     jQuery('#auto_research').removeClass(unsafeWindow.research?'Stopped':'Running').addClass(unsafeWindow.research?'Running':'Stopped');
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('unsafeWindow.research',unsafeWindow.research);

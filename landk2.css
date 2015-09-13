@@ -57,9 +57,9 @@
 
 .lastUnit {
     float: none;
-    _position: relative;
-    _left: -3px;
-    _margin-right: -3px;
+    position: relative;
+    left: 0px;
+    margin-right: 0px;
     width: auto
 }
 
@@ -181,9 +181,9 @@ body {
     height: 5px;
     background: #DFCDC4 ;
     margin: 15px -16px;
-    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .scrollbar-measure {
@@ -216,12 +216,12 @@ body {
 .close-all:hover, .close-all:active {
     cursor: pointer;
     background: #adadad;
-    background-image: none 
+    background-image: none
 }
 
 .close-all:active {
     background: #adadad;
-    background-image: none 
+    background-image: none
 }
 
 .smart-truncate {
@@ -232,12 +232,12 @@ body {
 
 .frame-container {
     width: 450px;
-    height: 350px;
+    height: 600px;
     position: absolute;
     background: #666 ;
-    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .frame-container.static .content-container > .headline .title {
@@ -255,28 +255,28 @@ body {
     top: 0;
     left: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .corner.tr {
     top: 0;
     right: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .corner.bl {
     bottom: 0;
     left: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .corner.br {
     bottom: 0;
     right: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .side {
@@ -289,7 +289,7 @@ body {
     left: 0;
     width: 6px;
     height: 100%;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .side.r {
@@ -297,7 +297,7 @@ body {
     right: 0;
     width: 6px;
     height: 100%;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .side.t {
@@ -305,7 +305,7 @@ body {
     top: 0;
     height: 6px;
     width: 100%;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .side.b {
@@ -313,7 +313,7 @@ body {
     bottom: 0;
     height: 6px;
     width: 100%;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container {
@@ -388,7 +388,7 @@ body {
 }
 
 .frame-container .content-container > .headline .close:hover {
-    background: #c82224 
+    background: #c82224
 }
 
 .frame-container .content-container .inner-frame {
@@ -411,7 +411,7 @@ body {
     left: 0;
     top: 0;
     bottom: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-side.r {
@@ -420,7 +420,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-side.t {
@@ -429,7 +429,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-side.b {
@@ -438,7 +438,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-corner {
@@ -461,25 +461,25 @@ body {
 .frame-container .content-container .inner-frame .inner-corner.tl {
     left: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-corner.tr {
     right: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-corner.bl {
     left: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .inner-corner.br {
     right: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .frame-container .content-container .inner-frame .main-content {
@@ -492,9 +492,9 @@ body {
     right: 0px;
     overflow-y: auto;
     overflow-x: hidden;
-    -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
-    -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .frame-container .content-container .inner-frame .main-content .toolbar {
@@ -533,9 +533,9 @@ body {
     position: relative;
     margin: 0 0 15px 0;
     overflow: hidden;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .content-frame.overflowing {
@@ -543,7 +543,7 @@ body {
 }
 
 .content-frame.clickable:hover, .content-frame.highlight {
-    background: #d2ae77 
+    background: #d2ae77
 }
 
 .content-frame.last-child {
@@ -568,7 +568,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-side.l {
@@ -577,7 +577,7 @@ body {
     left: 0;
     top: 0;
     bottom: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-side.r {
@@ -586,7 +586,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-side.b {
@@ -595,7 +595,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-corner {
@@ -617,33 +617,33 @@ body {
 .content-frame .frame-corner.tl {
     left: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-corner.tr {
     right: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-corner.bl {
     left: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-corner.br {
     right: 0;
     display: none;
-    background: #DFCDC4 
+    background: #DFCDC4
 }
 
 .content-frame .frame-content {
     color: #272322;
     padding: 15px;
-    -webkit-box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
-    box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.6)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .content-frame .frame-content .content-header {
@@ -716,9 +716,9 @@ body {
 }
 
 .win.activeWindow {
-    -webkit-box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .win .contentLastView {
@@ -782,7 +782,7 @@ body {
 
 .win .divider {
     height: 5px;
-    background: #adadad 
+    background: #adadad
 }
 
 .button {
@@ -801,14 +801,14 @@ body {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .button:hover {
     cursor: pointer;
-    background: #494949 
+    background: #494949
 }
 
 .button.disabled {
@@ -820,7 +820,7 @@ body {
 }
 
 .button.disabled:hover {
-    background: #2f2f2f 
+    background: #2f2f2f
 }
 
 .button.paginate img {
@@ -869,25 +869,25 @@ body {
 }
 
 .listButton .frame-content {
-    padding: 10px
+    padding: 2px
 }
 
 .listButton .frame-content.with-icon .icon {
     float: left;
-    margin: 0 10px 0 0;
-    height: 32px
+    margin: 0;
+    height: auto
 }
 
 .listButton .frame-content.with-icon .icon img {
-    max-width: 32px;
-    max-height: 32px;
+    max-width: 12px;
+    max-height: 12px;
     display: inline;
-    position: relative;
-    margin-bottom: -5px
+    position: static;
+    margin-bottom: 0px
 }
 
 .listButton .frame-content.with-icon .contentText, .listButton .frame-content.with-icon .detail {
-    line-height: 32px;
+    line-height: 12px;
     overflow: hidden
 }
 
@@ -896,12 +896,12 @@ body {
 }
 
 .listButton .frame-content .contentText {
-    float: left;
+    float: none;
     min-width: 80%
 }
 
 .listButton .frame-content .detail {
-    float: right
+    float: none
 }
 
 .listButton .frame-content.with-description {
@@ -919,7 +919,7 @@ body {
     color: #666;
     line-height: 1;
     min-width: 70%;
-    float: left
+    float: none
 }
 
 .listButton.disabled .contentText {
@@ -1186,9 +1186,9 @@ p.error {
 
 .required-checkbox .banner-text-block {
     padding: 4px 10px 2px;
-    -moz-box-shadow: 2px 2px 6px #000;
-    -webkit-box-shadow: 2px 2px 6px #000;
-    box-shadow: 2px 2px 6px #000;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     max-width: 550px;
     background-color: #c40002;
     font-size: 10px;
@@ -1258,33 +1258,33 @@ p.error {
     height: inherit;
     text-align: left;
     font-size: 12px;
-    width: 280px
+    width: 200px
 }
 
 .hover .hover-element .hover-body {
     background: #DFCDC4 ;
-    width: 200px;
-    padding: 15px;
-    margin: 20px 0 -8px 24px
+    width: 196px;
+    padding: 2px;
+    margin: 0px
 }
 
 .hover .hover-element .header, .hover .hover-element .footer {
     background: #DFCDC4 ;
-    width: 280px;
-    height: 30px;
-    position: absolute
+    width: 200px;
+    height: auto;
+    position: static
 }
 
 .hover .hover-element .footer {
-    background: #DFCDC4 ;
+    background: none ;
 }
 
 .hover .hover-element .title, .hover .hover-element .nameHover, .hover .hover-element.buildingHover {
     color: #272322;
     font-size: 14px;
     font-weight: bold;
-    padding: 0 0 5px 0;
-    margin: 10px 0 5px 0;
+    padding: 2px;
+    margin: 0px;
     clear: both
 }
 
@@ -1310,46 +1310,46 @@ p.error {
 }
 
 .hover .hover-element .battleValueRow {
-    margin: 10px 0 0 0;
-    line-height: 22px
+    margin: 0px;
+    line-height: 12px
 }
 
 .hover .hover-element .battleValueRow .name {
-    float: left
+    float: none
 }
 
 .hover .hover-element .battleValueRow .name img {
-    float: left;
-    max-width: 22px;
-    max-height: 22px;
+    float: none;
+    max-width: 12px;
+    max-height: 12px;
     display: inline;
     position: relative;
-    margin-bottom: -5px;
-    margin-right: 5px
+    margin-bottom: 0px;
+    margin-right: 0px
 }
 
 .hover .hover-element .battleValueRow .val {
-    float: right
+    float: none
 }
 
 .hover .hover-element .upgradeResourceAmount {
-    line-height: 22px
+    line-height: 12px
 }
 
 .hover .hover-element .upgradeResourceAmount img {
-    margin-right: 6px;
-    max-width: 22px;
-    max-height: 22px;
+    margin-right: 0px;
+    max-width: 12px;
+    max-height: 12px;
     display: inline;
-    position: relative;
-    margin-bottom: -5px
+    position: static;
+    margin-bottom: 0px
 }
 
 .hover .hover-element .tradeUpgradeAmount {
     width: 100%;
-    line-height: 22px;
+    line-height: 12px;
     font-weight: normal;
-    margin: 0 0 8px 0
+    margin: 0px
 }
 
 .hover .hover-element .tradeUpgradeAmount:last-child {
@@ -1357,21 +1357,21 @@ p.error {
 }
 
 .hover .hover-element .tradeUpgradeAmount img {
-    max-width: 22px;
-    max-height: 22px;
+    max-width: 12px;
+    max-height: 12px;
     display: inline;
-    position: relative;
-    margin-bottom: -5px
+    position: static;
+    margin-bottom: 0px
 }
 
 .hover .hover-element .tradeUpgradeAmount .tradeFor {
-    float: left
+    float: none
 }
 
 .hover .hover-element .tradeUpgradeAmount .tradeWith {
     font-size: 12px;
-    float: right;
-    width: 55px;
+    float: none;
+    width: auto;
     text-align: left
 }
 
@@ -1385,33 +1385,33 @@ p.error {
 }
 
 .hover .hover-element .resources, .hover .hover-element .units {
-    font-size: 11px;
-    float: left
+    font-size: 12px;
+    float: none
 }
 
 .hover .hover-element .resources.resources img, .hover .hover-element .units.resources img {
-    max-width: 24px;
-    max-height: 24px;
+    max-width: 12px;
+    max-height: 12px;
     display: inline;
-    position: relative;
-    margin-bottom: -5px;
+    position: static;
+    margin-bottom: 0px;
     margin-bottom: 0
 }
 
 .hover .hover-element .resources > div, .hover .hover-element .units > div {
-    float: left;
-    margin: 0 5px 5px;
+    float: none;
+    margin: 0px;
     text-align: center;
     font-weight: normal;
     color: #666
 }
 
 .hover .hover-element .resources img, .hover .hover-element .units img {
-    max-width: 48px;
-    max-height: 48px;
+    max-width: 12px;
+    max-height: 12px;
     display: inline;
     position: relative;
-    margin-bottom: -5px;
+    margin-bottom: 0px;
     margin-bottom: 0
 }
 
@@ -1420,7 +1420,7 @@ p.error {
     width: auto;
     display: block;
     background: #8b7b64;
-    margin: 5px 0 15px
+    margin: 0px
 }
 
 .missionHover .icon, .knowledgeHover .icon, .unitHover .icon {
@@ -1872,11 +1872,11 @@ p.error {
 }
 
 .tabbar .tab.active .tab-content {
-    background-image: none; 
+    background-image: none;
 }
 
 .tabbar .tab.active .tabbar .tab.filler .tab-content {
-    background-image: none; 
+    background-image: none;
 }
 
 .tabbar .tab.filler {
@@ -2067,7 +2067,7 @@ table td {
 
 .sortbar .control.active {
     cursor: default;
-    background-image: none; 
+    background-image: none;
 }
 
 .sortbar .control.dist .icon img {
@@ -2134,7 +2134,7 @@ table td {
 }
 
 .win.lightBG .main-content, .win.lightBG .rankingControls {
-    background: #dfc59d 
+    background: #dfc59d
 }
 
 .rankingControls {
@@ -2256,12 +2256,12 @@ table td {
 
 .papyrusWindow.frame-container {
     width: 625px;
-    min-height: 400px;
+    min-height: 600px;
     background: #DFCDC4 ;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    padding: 30px 0 70px
+    padding: 2px
 }
 
 .papyrusWindow.frame-container > .corner {
@@ -2274,9 +2274,10 @@ table td {
 
 .papyrusWindow.frame-container > .side.t {
     display: none;
-    height: 100px;
+    height: auto;
     background: #DFCDC4 ;
-    top: -30px
+    top: 0px;
+    position: static;
 }
 
 .papyrusWindow.frame-container > .side.b {
@@ -2288,16 +2289,17 @@ table td {
 
 .eventWindow .event-type-title {
     display: block;
-    height: 40px;
-    padding-top: 12px;
-    margin: 45px 34px 0 27px;
-    opacity: .9;
-    font-size: 19px;
-    line-height: 1;
+    height: auto;
+    padding-top: 2px;
+    padding: 2px;
+    margin: 0px;
+    opacity: 1;
+    font-size: 12px;
+    line-height: 12px;
     font-weight: bold;
     color: #fff;
-    text-transform: capitalize;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8)
+    text-transform: none;
+    text-shadow: none;
 }
 
 .eventWindow .event-type-title.world {
@@ -2741,7 +2743,7 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
     margin: 1px 0 0 0;
     width: 100%;
     background: #DFCDC4 ;
-    box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.6), inset -1px 0 0 0 rgba(255, 255, 255, 0.8)
+    box-shadow: none
 }
 
 .win.habitat .tabbar.singleCastle .tab {
@@ -2764,10 +2766,10 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
     height: 43px;
     padding-left: 15px;
     float: right;
-    background: #dfc59d 
--webkit-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5)
+    background: #dfc59d
+-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .win.habitat .tabbar .specials .button {
@@ -4802,11 +4804,11 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
 }
 
 .win.foreignHabitat .listButton {
-    margin: -20px -21px 0 -21px
+    margin: 0px
 }
 
 .win.foreignHabitat .listButton .icon {
-    margin-left: 5px
+    margin-left: 0px
 }
 
 .win.foreignHabitat .listButton.alliance {
@@ -5246,7 +5248,7 @@ body.no-scrollbar .win.habitat .tradableItems .marketListItem {
 
 .win.foreignAction .main-content {
     top: 67px !important;
-    background: #dfc59d 
+    background: #dfc59d
 padding: 10px 0
 }
 
@@ -5259,7 +5261,7 @@ padding: 10px 0
 }
 
 .win.foreignAction .resourceHeader {
-    background: #dfc59d 
+    background: #dfc59d
 padding: 10px 5px 5px 5px
 }
 
@@ -5901,7 +5903,7 @@ body.has-scrollbar .win.messages .mailtable .title {
     margin: 5px 0 0 0 !important;
     width: 100%;
     background: #DFCDC4 ;
-    box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.6), inset -1px 0 0 0 rgba(255, 255, 255, 0.8)
+    box-shadow: none
 }
 
 .win.reports .tabbar.reports .tab {
@@ -6260,7 +6262,7 @@ body.has-scrollbar .win.messages .mailtable .title {
 
 .win.castleList .main-content {
     top: 170px !important;
-    background: #dfc59d 
+    background: #dfc59d
 }
 
 .win.castleList .main-content .window-content {
@@ -6268,7 +6270,7 @@ body.has-scrollbar .win.messages .mailtable .title {
 }
 
 .win.castleList .fixedHeader {
-    background: #dfc59d 
+    background: #dfc59d
 position: absolute;
     left: 5px;
     right: 5px
@@ -6312,7 +6314,7 @@ position: absolute;
 }
 
 .win.castleList .castleListItem:hover {
-    background: #d2ae77 
+    background: #d2ae77
 }
 
 .win.castleList .castleListItem:last-child {
@@ -6392,7 +6394,7 @@ position: absolute;
 }
 
 .win.buildingList .main-content {
-    background: #dfc59d 
+    background: #dfc59d
 top: 50px !important
 }
 
@@ -6431,7 +6433,7 @@ top: 50px !important
 }
 
 .win.buildingList .topButtons {
-    background: #dfc59d 
+    background: #dfc59d
 position: absolute;
     z-index: 40;
     left: 5px;
@@ -6624,7 +6626,7 @@ body.has-scrollbar .win.recruitingList .unitTableHeader {
 }
 
 .win.recruitingList .main-content {
-    background: #dfc59d 
+    background: #dfc59d
 top: 50px !important
 }
 
@@ -6698,7 +6700,7 @@ top: 50px !important
     left: 0;
     right: -1px;
     background: #DFCDC4 ;
-    box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.6), inset -1px 0 0 0 rgba(255, 255, 255, 0.8)
+    box-shadow: none
 }
 
 .win.recruitingList .tabbar.recruitment .tab {
@@ -6717,13 +6719,13 @@ top: 50px !important
     top: 0;
     width: 587px;
     cursor: default;
-    -webkit-box-shadow: inset 1px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: inset 1px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    box-shadow: inset 1px 3px 3px 3px rgba(0, 0, 0, 0.4)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .win.recruitingList .tabbar.recruitment .filler.unitTable {
-    background: #dfc59d 
+    background: #dfc59d
 }
 
 .win.recruitingList .tabbar.recruitment .filler .unitTableHeader {
@@ -7072,7 +7074,7 @@ top: 50px !important
     margin: 5px 0 0 0;
     width: 100%;
     background: #DFCDC4 ;
-    box-shadow: inset 1px 0 0 0 rgba(0, 0, 0, 0.6), inset -1px 0 0 0 rgba(255, 255, 255, 0.8)
+    box-shadow: none
 }
 
 .win.alliance .tabbar.alliance .tab {
@@ -7086,14 +7088,14 @@ top: 50px !important
 }
 
 .win.alliance .sortBar {
-    background: #dfc59d 
+    background: #dfc59d
 }
 
 .win.alliance .sortBar .searchTypeSelector {
     float: left;
     width: 150px;
     margin: -1px 10px 15px 0;
-    background-image: none; 
+    background-image: none;
     background-position: 120px center;
     background-repeat: no-repeat
 }
@@ -7134,7 +7136,7 @@ top: 50px !important
 }
 
 .win.alliance .sortBar .sort.active {
-    background-image: none; 
+    background-image: none;
 }
 
 .win.alliance .sortBar .border-bottom {
@@ -7548,7 +7550,7 @@ top: 50px !important
 }
 
 .win.alliance .dropdown .sortDropdownItem.selected {
-    background-image: none; 
+    background-image: none;
     background-position: 120px center;
     background-repeat: no-repeat
 }
@@ -8277,18 +8279,18 @@ top: 50px !important
 }
 
 .shop .providers .paymentProvider .providerIcon img, .transactionWindow .providers .paymentProvider .providerIcon img {
-    -webkit-box-shadow: 0 0 20px #fff;
-    -moz-box-shadow: 0 0 20px #fff;
-    box-shadow: 0 0 20px #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     border: 2px solid rgba(100, 100, 100, 0.3);
     width: 80px;
     height: 30px
 }
 
 .shop .providers .paymentProvider.active img, .transactionWindow .providers .paymentProvider.active img {
-    -webkit-box-shadow: 0 0 10px #000;
-    -moz-box-shadow: 0 0 10px #000;
-    box-shadow: 0 0 10px #000;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     border: 2px solid #c7994b
 }
 
@@ -8377,9 +8379,9 @@ top: 50px !important
     -webkit-transform: rotate(23deg);
     -moz-transform: rotate(23deg);
     transform: rotate(23deg);
-    -webkit-box-shadow: 0 1px 10px #000;
-    -moz-box-shadow: 0 1px 10px #000;
-    box-shadow: 0 1px 10px #000;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     -moz-opacity: .8;
     -khtml-opacity: .8;
     -webkit-opacity: .8;
@@ -8408,9 +8410,9 @@ top: 50px !important
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    -webkit-box-shadow: inset 0 1px 0 0 #f29c93;
-    -moz-box-shadow: inset 0 1px 0 0 #f29c93;
-    box-shadow: inset 0 1px 0 0 #f29c93
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .shop .awesome:hover, .transactionWindow .awesome:hover {
@@ -8813,7 +8815,7 @@ top: 50px !important
 }
 
 .win.troopMovements > .content-container .inner-frame .main-content {
-    background: #dfc59d 
+    background: #dfc59d
 top: 59px !important
 }
 
@@ -8822,7 +8824,7 @@ top: 59px !important
 }
 
 .win.troopMovements .header-bar {
-    background: #dfc59d 
+    background: #dfc59d
 height: 50px;
     position: relative;
     padding: 5px
@@ -8835,11 +8837,11 @@ height: 50px;
 }
 
 .win.troopMovements .header-bar .collapse-toggle.source-toggle .control.source .shell, .win.troopMovements .header-bar .source-toggle.source-toggle .control.source .shell {
-    background-image: none; 
+    background-image: none;
 }
 
 .win.troopMovements .header-bar .collapse-toggle.source-toggle .control .shell, .win.troopMovements .header-bar .source-toggle.source-toggle .control .shell {
-    background-image: none; 
+    background-image: none;
     background-size: contain
 }
 
@@ -8855,7 +8857,7 @@ height: 50px;
 }
 
 .win.troopMovements .header-bar .collapse-toggle .control.close .shell, .win.troopMovements .header-bar .source-toggle .control.close .shell {
-    background-image: none; 
+    background-image: none;
 }
 
 .win.troopMovements .header-bar .collapse-toggle .control .shell, .win.troopMovements .header-bar .source-toggle .control .shell {
@@ -8868,7 +8870,7 @@ height: 50px;
 
 .win.troopMovements .header-bar .collapse-toggle .control.active, .win.troopMovements .header-bar .source-toggle .control.active {
     cursor: default;
-    background-image: none; 
+    background-image: none;
 }
 
 .win.troopMovements .header-bar .unit-list, .win.troopMovements .header-bar .resource-list {
@@ -8924,7 +8926,7 @@ height: 50px;
 .win.troopMovements .header-bar .divider.bottom {
     top: auto;
     bottom: 0;
-    background-image: none; 
+    background-image: none;
     clear: both
 }
 
@@ -9026,7 +9028,7 @@ height: 50px;
 }
 
 .win.troopMovements .display-area .tree-table tr.has-sub-rows.active td:first-child {
-    background-image: none; 
+    background-image: none;
 }
 
 .win.troopMovements .display-area .tree-table tr.has-sub-rows td:first-child {
@@ -9074,7 +9076,7 @@ body.has-scrollbar .win.globalMissions .missionHeader {
 }
 
 .win.globalMissions .main-content, .win.globalMarket .main-content {
-    background: #dfc59d 
+    background: #dfc59d
 bottom: 42px !important
 }
 
@@ -9223,7 +9225,7 @@ bottom: 42px !important
 }
 
 .win.globalMissions .topButtons, .win.globalMarket .topButtons {
-    background: #dfc59d 
+    background: #dfc59d
 position: absolute;
     z-index: 40;
     left: 0;
@@ -9518,9 +9520,9 @@ position: absolute;
     width: 370px;
     height: 290px;
     z-index: 1000;
-    -webkit-box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .win.tutorial.positionTopRight {
@@ -9547,14 +9549,14 @@ position: absolute;
 }
 
 .win.tutorial.video .headline .close {
-    background-image: none; 
+    background-image: none;
     width: 28px;
     height: 28px;
     top: 1px
 }
 
 .win.tutorial.video .headline .close:hover {
-    background-image: none; 
+    background-image: none;
 }
 
 .win.tutorial.video .window-content .frame-content {
@@ -9569,9 +9571,9 @@ position: absolute;
     margin: 10px auto 0;
     display: table;
     padding: 6px 12px;
-    -webkit-box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.8)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .win.tutorial.resources .resource-container {
@@ -9611,9 +9613,9 @@ position: absolute;
     z-index: 1000;
     top: 100px;
     left: 100px;
-    -webkit-box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.8)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .screen-lock {
@@ -9681,7 +9683,7 @@ position: absolute;
 }
 
 .tutorial-arrow.right {
-    background-image: none; 
+    background-image: none;
     background-position: right center;
     margin: 50px 0 0 -90px
 }
@@ -9712,9 +9714,9 @@ position: absolute;
 }
 
 .tutorial-highlight {
-    -webkit-box-shadow: 0 0 20px 12px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 0 20px 12px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 20px 12px rgba(255, 255, 255, 0.8)
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
 }
 
 .tutorial-highlight.backFromArsenal {
@@ -9790,7 +9792,7 @@ position: absolute;
 }
 
 .win.globalBuffs .main-content {
-    background: #dfc59d 
+    background: #dfc59d
 bottom: 42px !important
 }
 
@@ -9930,7 +9932,7 @@ bottom: 42px !important
 }
 
 .win.globalBuffs .topButtons {
-    background: #dfc59d 
+    background: #dfc59d
 position: absolute;
     z-index: 40;
     left: 0;
@@ -10009,7 +10011,7 @@ position: absolute;
 }
 
 .win.globalRestock .main-content {
-    background: #dfc59d 
+    background: #dfc59d
 bottom: 42px !important
 }
 
@@ -10120,7 +10122,7 @@ bottom: 42px !important
 }
 
 .win.globalRestock .topButtons {
-    background: #dfc59d 
+    background: #dfc59d
 position: absolute;
     z-index: 40;
     left: 0;
@@ -10687,11 +10689,6 @@ html.ie .win.globalMarket .listButton {
     background-color: #23b739;
 }
 
-#mapContainer {
-    left: 150px;
-}
-
-
 .miniMapContainer {
     position: absolute;
     right: 0px;
@@ -10711,4 +10708,5 @@ html.ie .win.globalMarket .listButton {
     padding: 2px;
     border: solid black 2px;
     z-index: 2;
+    background-color: white;
 }
