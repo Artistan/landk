@@ -495,8 +495,8 @@ var habitatSilverFunctions = function(){
         var silver = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="6"] .resourceAmount',this).html() * 1;
         var copper = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="5"] .resourceAmount',this).html() * 1;
         var total = wood + stone + ore;
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('total '+total+' VS min '+resourceMinimum);
         if(total > resourceMinimum){
-            unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('total',total);
             jQuery('.keep,.townhall',this).click();
             if(silver<silverLimit){
                 jQuery('.tradableItems .marketListItem:last .button',this).click(); //trade for silver
