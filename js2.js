@@ -32,8 +32,8 @@ unsafeWindow.clear=true;
 unsafeWindow.debug=true;
 jQuery = unsafeWindow.jQuery;
 console = unsafeWindow.console;
-var incrementalCount=10;
-var incrementalCounter=9;
+var incrementalCount=6;
+var incrementalCounter=5;
 var tAr=[]; // test array
 
 // wait for elements...ΩΩ
@@ -337,7 +337,6 @@ var castleBuildings = function (ele,txt){
     unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castleBuildings',txt);
     var $c = jQuery(ele);
     if( $c.find('.upgrade').length < 2 && $c.find('.buildbutton:not(.disabled)').length > 0 ){
-        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings upgrade ', $c, $c.find('.upgrade').length);
 
         var buttons = $c.find('.buildbutton:not(.disabled)');
         // try to click upgrade until at least 2 upgrades are being performed
@@ -422,7 +421,8 @@ var castleFunctions = function(callback){
 };
 
 var habitatFunctions = function(){
-    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('habitat');
+    var title = jQuery('.headline .title',this).html();
+    unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('========'+title+' ========');
     //do stuff here
     if(unsafeWindow.missions && manualMissions){
         unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('manualMissions');
@@ -488,6 +488,9 @@ var habitatSilverFunctions = function(){
             leaveBehind = 20000; // each
         }
         // check resources
+        var title = jQuery('.headline .title',this).html();
+        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('========'+title+'========');
+
         var wood = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount',this).html() * 1 - leaveBehind;
         var stone = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="2"] .resourceAmount',this).html() * 1 - leaveBehind;
         var ore = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="3"] .resourceAmount',this).html() * 1 - leaveBehind;
@@ -540,7 +543,12 @@ var habitatSilverFunctions = function(){
                 .val(ore).trigger("change").trigger("blur");
 
             jQuery('.typeContainer .button',this).click();
-            unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('exchanged');
+            //function(waitTimeIntMin,waitTimeIntMax,truthyFunction,callback,failInt)
+            timeoutLoop(100,200,function(){
+                return !(jQuery('.resourceContainer .resourceElement[data-primary-key="1"] input').val()>0) && !(jQuery('.resourceContainer .resourceElement[data-primary-key="2"] input').val()>0) && !(jQuery('.resourceContainer .resourceElement[data-primary-key="3"] input').val()>0);
+            },function(){
+                unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('exchanged');
+            });
         }
     }
     closeDialogs();
