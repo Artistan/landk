@@ -36,6 +36,12 @@ var incrementalCount=6;
 var incrementalCounter=5;
 var tAr=[]; // test array
 
+
+function closeDialogs(){
+    jQuery('.button:contains("Cancel")').click();
+    jQuery('.button:contains("Ok")').click();
+}
+
 // wait for elements...ΩΩ
 //waitForKeyElements ("#atfResults", addCustomSearchResult);
 
@@ -406,7 +412,7 @@ var castleFunctions = function(callback){
 
             unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('castles');
 
-            timeoutLoop(10000,20000,function(){return trueFalseFunc('habitatFunctions');},function(){
+            timeoutLoop(5000,10000,function(){return trueFalseFunc('habitatFunctions');},function(){
                 jQuery('.habitat').each(habitatFunctions);
                 if(typeof callback != 'undefined')
                     callback();
@@ -457,7 +463,7 @@ var silverFunctions = function(callback){
             jQuery(".castleListItem .points:contains('289 Points')").click();
             jQuery(".castleListItem .points:contains('290 Points')").click();
             jQuery(".castleListItem .points:contains('1797 Points')").click();
-            timeoutLoop(10000,20000,function(){return trueFalseFunc('silverTrade');},function(){
+            timeoutLoop(5000,10000,function(){return trueFalseFunc('silverTrade');},function(){
                 jQuery('.habitat').each(habitatSilverFunctions);
                 if(typeof callback != 'undefined')
                     callback();
@@ -544,11 +550,15 @@ var habitatSilverFunctions = function(){
 
             jQuery('.typeContainer .button',this).click();
             //function(waitTimeIntMin,waitTimeIntMax,truthyFunction,callback,failInt)
-            timeoutLoop(100,200,function(){
-                return !(jQuery('.resourceContainer .resourceElement[data-primary-key="1"] input').val()>0) && !(jQuery('.resourceContainer .resourceElement[data-primary-key="2"] input').val()>0) && !(jQuery('.resourceContainer .resourceElement[data-primary-key="3"] input').val()>0);
-            },function(){
-                unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('exchanged');
-            });
+            var xval=0;
+            do {
+                xval = (jQuery('.resourceContainer .resourceElement[data-primary-key="1"] input').val() * 1);
+                xval += (jQuery('.resourceContainer .resourceElement[data-primary-key="2"] input').val() * 1);
+                xval += (jQuery('.resourceContainer .resourceElement[data-primary-key="3"] input').val() * 1);
+                unsafeWindow.console.log();
+            } while(xval > 0 && $(this).length);
+
+            unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('exchanged');
         }
     }
     closeDialogs();
@@ -607,12 +617,6 @@ waitForKeyElements(".bottombar", function(){
     unsafeWindow.console.log('.bottombar created');
     $('.bottombar[style],.bottombar *[style]').removeAttr('style');
 });
-
-
-function closeDialogs(){
-    jQuery('.button:contains("Cancel")').click();
-    jQuery('.button:contains("Ok")').click();
-}
 
 function randomIntFromInterval(min,max)
 {
