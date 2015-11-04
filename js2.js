@@ -5,7 +5,6 @@
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2.css?4l1=111
 // @resource    customCSS2 http://local.dev/landk/landk2.css?4l1=111
 // @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
 // @grant       all
@@ -236,10 +235,10 @@ var checkMissions = function(callback){
             // make sure it is closed before we try to open.
             jQuery('.globalMissions .close').click();
             var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
+
             if($missionsElem.length>0){
                 // open missions panel, if it exists.
                 $missionsElem.click().each(function(){
-
                     timeoutLoop(2000,3000,function(){return trueFalseFunc('missionControlCastle');},function(){
                         var $gMissions = jQuery('.globalMissions');
                         // try select all
