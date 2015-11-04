@@ -236,6 +236,7 @@ unsafeWindow.ALNK = (function () {
         return $castleElem.find('.resourceContainer .resourceElement').length>0;
     };
     var _tradeResourceClick = function(total,wood,ore,stone){
+        $castleElem = jQuery('.win.habitat.frame-container:visible');
         pub.debug==false?_doNothing():console.log('_tradeResourceClick');
         var carts = Math.ceil(total/2500);
         var $oxCart = $castleElem.find('.unitElement[data-primary-key="10002"] input');
@@ -261,7 +262,7 @@ unsafeWindow.ALNK = (function () {
         $castleElem.find('.resourceContainer .resourceElement[data-primary-key="3"] input')
             .val(ore).trigger("change").trigger("blur");
         $castleElem.find('.typeContainer .button').click();
-        _timeoutLoop( 3000, 5000, _missionReady , _tradeSendClick );
+        _timeoutLoop( 3000, 5000, _tradeSendReady , _tradeSendClick );
     }
     var _tradeSendReady = function(){
         pub.debug==false?_doNothing():console.log('_tradeSendReady');
@@ -273,7 +274,7 @@ unsafeWindow.ALNK = (function () {
     };
     var _closeCastle = function(){
         pub.debug==false?_doNothing():console.log('_closeCastle');
-        $castleElem.find('.close').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        jQuery('.win.habitat.frame-container:visible').find('.close').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
         return true;
     }
     var _randomIntFromInterval = function(min,max)
@@ -320,12 +321,12 @@ unsafeWindow.ALNK = (function () {
         pub.debug==false?_doNothing():console.log('pub.research',pub.research);
     };
     pub.runLnK = function(force) {
-        _closeDialogs();
-        if(pub.clear){
-            console.clear();
-        }
         if(pub.runLnKNow || force){
             if(jQuery('.win.habitat.frame-container').length==0){// closed, so open a new window.
+                if(pub.clear){
+                    console.clear();
+                }
+                _closeDialogs();
                 pub.debug==false?_doNothing():console.log('********* opening new castle *********');
                 jQuery('.incrementalCounter').html(currentList);
                 var castleListItem = jQuery(jQuery('.castleHabitatOverview .castleListItem')[currentList]);
@@ -343,7 +344,7 @@ unsafeWindow.ALNK = (function () {
                     pub.debug==false?_doNothing():console.log('.....  No castle list to open .....');
                 }
             } else {
-                pub.debug==false?_doNothing():console.log('.....  waiting for castle to close .....');
+                pub.debug==false?_doNothing():console.log('.....  waiting .....');
             }
         }
         clearTimeout(timer);
