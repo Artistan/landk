@@ -110,10 +110,11 @@ unsafeWindow.ALNK = (function () {
     var _researchClick = function(){
         pub.debug==false?_doNothing():console.log('_researchClick');
         var $kItems = [];
+        var maxResearch = (castlePoints<290)?2:1;
         $castleElem = jQuery('.win.habitat.frame-container:visible');
         $kItems = $castleElem.find('.knowledgeListItem:not(:has(.counter)) .button:not(.disabled)');
         // check if we can do more research...
-        if($kItems.length>0 && $castleElem.find('.knowledgeListItem:has(.counter)').length<2){
+        if($kItems.length>0 && $castleElem.find('.knowledgeListItem:has(.counter)').length<maxResearch){
             $kItems.slice(0,1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(3000, 5000,_noOverlay,_researchClick);
         } else {
@@ -365,7 +366,7 @@ unsafeWindow.ALNK = (function () {
                 '   <div><a onclick="ALNK.toggleDebug()">Debug</a><span id="auto_debug" class="' + (pub.debug?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleClear()">Clear</a><span id="auto_clear" class="' + (pub.clear?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
-                '   <div><a onclick="ALNK.rankingView()">Ranking View</a></div>' +
+                '   <div><a onclick="jQuery(\'.win.habitat.frame-container\')">Close Hidden</a></div>' +
                 '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
         });
         waitForKeyElements(".miniMapContainer", function(){
