@@ -36,6 +36,7 @@ unsafeWindow.ALNK = (function () {
     pub.missions=false;
     pub.buildings=true;
     pub.silver=true;
+    pub.preferCopper=true;
     pub.research=true;
     pub.clear=true;
     pub.debug=true;
@@ -215,7 +216,9 @@ unsafeWindow.ALNK = (function () {
             pub.debug==false?_doNothing():console.log('total '+total+' VS min '+resourceMinimum);
             if(total > resourceMinimum){
                 pub.debug==false?_doNothing():console.log('total '+total+' VS min '+resourceMinimum);
-                if(silver<silverLimit){
+                if(pub.preferCopper){
+                    $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
+                } else if(silver<silverLimit){
                     $castleElem.find('.tradableItems .marketListItem:last .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for silver
                 } else if(copper<copperLimit) {
                     $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
@@ -316,10 +319,18 @@ unsafeWindow.ALNK = (function () {
         jQuery('#auto_silver').removeClass(pub.silver?'Stopped':'Running').addClass(pub.silver?'Running':'Stopped');
         pub.debug==false?_doNothing():console.log('pub.silver',pub.silver);
     };
+    pub.togglePreferCopper  = function(){
+        pub.preferCopper = !pub.preferCopper;
+        jQuery('#auto_preferCopper').removeClass(pub.preferCopper?'Stopped':'Running').addClass(pub.preferCopper?'Running':'Stopped');
+        pub.debug==false?_doNothing():console.log('pub.preferCopper',pub.preferCopper);
+    };
     pub.toggleResearch  = function(){
         pub.research = !pub.research;
         jQuery('#auto_research').removeClass(pub.research?'Stopped':'Running').addClass(pub.research?'Running':'Stopped');
         pub.debug==false?_doNothing():console.log('pub.research',pub.research);
+    };
+    pub.clearHidden  = function(){
+        jQuery('.win.habitat.frame-container').find('.close').click();
     };
     pub.runLnK = function(force) {
         if(pub.runLnKNow || force){
@@ -334,6 +345,12 @@ unsafeWindow.ALNK = (function () {
                 if(castleListItem && castleListItem.length){
                     castlePoints = castleListItem.find('.points').html().replace(/ Points/i,'') * 1;
                     isFullyUpgraded = jQuery.inArray( castlePoints, fullyUpgraded ) > -1;
+                    // only reason to open castles
+                    // not fully upgraded OR
+                    // running missions / silver exchange.
+                    if(!isFullyUpgraded || (isFullyUpgraded && (pub.missions || pub.silver)) ){
+
+                    }
                     castleListItem.trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
 
                     currentList = currentList + 1;
@@ -360,11 +377,13 @@ unsafeWindow.ALNK = (function () {
                 '   <div><a onclick="ALNK.runLnK(true)">START/RESET</a></div>' +
                 '   <div><a onclick="ALNK.toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (pub.runLnKNow?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver?'Running':'Stopped') + '"></span></div>' +
+                '   <div><a onclick="ALNK.toggleSreferCopper ()">preferCopper</a><span id="auto_preferCopper" class="' + (pub.preferCopper?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleDebug()">Debug</a><span id="auto_debug" class="' + (pub.debug?'Running':'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleClear()">Clear</a><span id="auto_clear" class="' + (pub.clear?'Running':'Stopped') + '"></span></div>' +
+                '   <div><a onclick="ALNK.clearHidden()">clearHidden</a></div>' +
                 '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
                 '   <div><a onclick="jQuery(\'.win.habitat.frame-container\')">Close Hidden</a></div>' +
                 '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
