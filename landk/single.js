@@ -148,7 +148,7 @@ unsafeWindow.ALNK = (function () {
         }
     };
     var _missionFunctions = function(){
-        if(pub.missions){;
+        if( pub.missions || castlePoints < 289 ){;
             pub.debug==false?_doNothing():console.log('_missionFunctions');
             $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop( 3000, 5000, _missionReady , _missionClick );
@@ -216,7 +216,7 @@ unsafeWindow.ALNK = (function () {
             pub.debug==false?_doNothing():console.log('total '+total+' VS min '+resourceMinimum);
             if(total > resourceMinimum){
                 pub.debug==false?_doNothing():console.log('total '+total+' VS min '+resourceMinimum);
-                if(pub.preferCopper){
+                if(pub.preferCopper && copper<copperLimit){
                     $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
                 } else if(silver<silverLimit){
                     $castleElem.find('.tradableItems .marketListItem:last .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for silver
@@ -349,7 +349,7 @@ unsafeWindow.ALNK = (function () {
                     // not fully upgraded OR
                     // running missions / silver exchange.
                     if(!isFullyUpgraded || (isFullyUpgraded && (pub.missions || pub.silver)) ){
-
+// TODO..
                     }
                     castleListItem.trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
 
