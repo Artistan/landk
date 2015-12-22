@@ -141,7 +141,7 @@ unsafeWindow.ALNK = (function () {
         $kItems = $castleElem.find('.fixedBuildingList .button:not(.disabled)');
         // check if we can do more research...
         if($kItems.length>0 && $castleElem.find('.buildingUpgrade .building').length<2){
-            $kItems.slice(0,1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+            $kItems.slice(-1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(3000, 5000,_noOverlay,_buildingClick);
         } else {
             _missionFunctions();
@@ -167,7 +167,7 @@ unsafeWindow.ALNK = (function () {
         pub.debug==false?_doNothing():console.log('_missionClick',$castleElem,$kItems);
         // check if we can do more research...
         if($kItems.length>0){
-            $kItems.slice(0,1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+            $kItems.slice(-1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(3000, 5000,_noOverlay,function(){ _missionClick();} );
         } else {
             _tradeFunctions();
