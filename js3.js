@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         landk
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/js2.js
-// @version      0.1
+// @version      0.3
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
