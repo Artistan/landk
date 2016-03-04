@@ -38,6 +38,7 @@ unsafeWindow.ALNK = (function () {
     pub.buildings = true;
     pub.silver = true;
     pub.preferCopper = true;
+    pub.popTrade = true;
     pub.research = true;
     pub.clear = true;
     pub.debug = true;
@@ -155,8 +156,8 @@ unsafeWindow.ALNK = (function () {
         });
         currentBuildingLine = currentBuildingLine + 1;
         if(totalBuildingLines > currentBuildingLine){
-            // just wait 30-35 seconds...
-            _timeoutLoop(30000, 35000, function(){ return true; }, _buildingLineClick);
+            // just wait 40-45 seconds...
+            _timeoutLoop(40000, 45000, function(){ return true; }, _buildingLineClick);
         } else {
             // check if fortresses need updated
             var $fortressList = jQuery('.buildingList').find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
@@ -286,11 +287,11 @@ unsafeWindow.ALNK = (function () {
         }
     };
     var _tradeFunctions = function () {
-        pub.debug == false ? _doNothing() : console.log('_tradeFunctions', castlePoints, isFullyUpgraded);
+        pub.debug == false ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver', castlePoints, isFullyUpgraded ,pub.silver);
         // only run these every incrementalCount, or if manualMisssions
         if (pub.silver && isFullyUpgraded) {
             $castleElem.find('.keep,.townhall').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-            _timeoutLoop(3000, 5000, _tradeReady, _tradeClick);
+            _timeoutLoop(5000, 8000, _tradeReady, _tradeClick);
         } else {
             return _closeCastle();
         }
@@ -305,20 +306,22 @@ unsafeWindow.ALNK = (function () {
             pub.debug == false ? _doNothing() : console.log('_tradeClick');
             if (castleFortress) {
                 // set the fortress limits much higher.
-                var silverLimit = 117000;
-                var copperLimit = 117000;
+                var silverLimit = 190000;
+                var copperLimit = 190000;
                 var resourceMinimum = 140000;
+                var singleResourceMinimum = 195000;
                 var leaveBehind = 20000; // each
             } else {
                 // check limits
                 var silverLimit = 19800;
                 var copperLimit = 19800;
-                var resourceMinimum = 14000;
+                var resourceMinimum = 19000;
+                var singleResourceMinimum = 9500;
                 var leaveBehind = 1000; // each
             }
             // check resources
             var population = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="4"] .resourceAmount').html() * 1;
-            if(population > 250){
+            if(population > 250 && pub.popTrade){
                 pub.debug == false ? _doNothing() : console.log(' recruit more soldiers ');
                 return _closeCastle();
             }
@@ -330,7 +333,12 @@ unsafeWindow.ALNK = (function () {
             var copper = $castleElem.find('.resourceHeaderTable .resourceElement[data-primary-key="5"] .resourceAmount').html() * 1;
             var total = wood + stone + ore;
             pub.debug == false ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
-            if (total > resourceMinimum) {
+            if (
+                total > resourceMinimum ||
+                wood > singleResourceMinimum ||
+                stone > singleResourceMinimum ||
+                ore > singleResourceMinimum
+            ) {
                 pub.debug == false ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
                 if (pub.preferCopper && copper < copperLimit) {
                     $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
@@ -342,7 +350,7 @@ unsafeWindow.ALNK = (function () {
                     pub.debug == false ? _doNothing() : console.log('limited resources');
                     return _closeCastle();
                 }
-                _timeoutLoop(3000, 5000, _tradeResourceReady, _tradeResourceClick.bind(this, total, wood, ore, stone));
+                _timeoutLoop(5000, 8000, _tradeResourceReady.bind(), _tradeResourceClick.bind(this, total, wood, ore, stone));
             } else {
                 return _closeCastle();
             }
@@ -366,13 +374,13 @@ unsafeWindow.ALNK = (function () {
         } else if ($oxCart.attr('placeholder') * 1 < carts) {
             // less carts than resources to trade, so reduce the resources until fit in carts.
             carts = $oxCart.attr('placeholder') * 1;// set carts to max avail instead of total / 2500
-            total = carts + 2500; // then set new total to that * 2500
-            while (wood + stone + ore > total) {
-                // reduce resources until they fit into the available carts.
-                wood -= 5;
-                stone -= 5;
-                ore -= 5;
-            }
+            newTotal = carts * 2500; // then set new total to that * 2500 (max qty)
+            var diff = total - newTotal;
+            // reduce resources so they fit into the available carts.
+            // remove 1/3 from each.
+            wood = wood - Math.ceil(diff/3);
+            stone = stone - Math.ceil(diff/3);
+            ore = ore - Math.ceil(diff/3);
         }
         $oxCart.focus().click().val(carts).trigger("change").trigger("blur");
         $castleElem.find('.resourceContainer .resourceElement[data-primary-key="1"] input')
@@ -439,6 +447,13 @@ unsafeWindow.ALNK = (function () {
         jQuery('#auto_preferCopper').removeClass(pub.preferCopper ? 'Stopped' : 'Running').addClass(pub.preferCopper ? 'Running' : 'Stopped');
         pub.debug == false ? _doNothing() : console.log('pub.preferCopper', pub.preferCopper);
     };
+    // ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
+    pub.togglePopTrade = function () {
+        pub.popTrade = !pub.popTrade;
+        jQuery('#auto_popTrade').removeClass(pub.popTrade ? 'Stopped' : 'Running').addClass(pub.popTrade ? 'Running' : 'Stopped');
+        pub.debug == false ? _doNothing() : console.log('pub.popTrade', pub.popTrade);
+    };
+
     pub.toggleResearch = function () {
         pub.research = !pub.research;
         jQuery('#auto_research').removeClass(pub.research ? 'Stopped' : 'Running').addClass(pub.research ? 'Running' : 'Stopped');
@@ -495,6 +510,7 @@ unsafeWindow.ALNK = (function () {
                 '   <div><a onclick="ALNK.toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (pub.runLnKNow ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.togglePreferCopper ()">preferCopper</a><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></div>' +
+                '   <div><a onclick="ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></div>' +
