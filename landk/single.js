@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         landk single
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      0.3
+// @version      0.3.4
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
@@ -45,6 +45,7 @@ unsafeWindow.ALNK = (function () {
 
     // if not set / false, then flip it.
     var _trueFalseFunc = function (key) {
+        pub.debug == false ? _doNothing() : console.log('_trueFalseFunc',key);
         if (tAr[key] == true) {
             pub.debug == false ? _doNothing() : console.log('trueFalseFunc', true);
             tAr[key] = false;
@@ -67,8 +68,8 @@ unsafeWindow.ALNK = (function () {
     };
     // when truthyFunction then call callBackFunc ,, failInt causes max time out.
     var _timeoutLoop = function (waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt) {
-        //pub.debug==false?_doNothing():console.log('_timeoutLoop',waitTimeIntMin,waitTimeIntMax,truthyFunction,callBackFunc,failInt);
-        //pub.debug==false?_doNothing():console.log('truthyFunction',truthyFunction,truthyFunction());
+        pub.debug==false?_doNothing():console.log('_timeoutLoop',waitTimeIntMin,waitTimeIntMax,truthyFunction,callBackFunc,failInt);
+
         var waitTimeInt = _randomIntFromInterval(waitTimeIntMin, waitTimeIntMax);
         if (typeof failInt == 'undefined') {
             failInt = 100;
@@ -88,6 +89,7 @@ unsafeWindow.ALNK = (function () {
                 _timeoutLoop(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt);
             }, waitTimeInt);
         }
+        return true;
     };
 
     /// castle Functions
@@ -156,8 +158,8 @@ unsafeWindow.ALNK = (function () {
         });
         currentBuildingLine = currentBuildingLine + 1;
         if(totalBuildingLines > currentBuildingLine){
-            // just wait 40-45 seconds...
-            _timeoutLoop(40000, 45000, function(){ return true; }, _buildingLineClick);
+            //clicked so wait 31-40 seconds before moving on.
+            _timeoutLoop(31000, 40000, function(){ return _trueFalseFunc('buildingClick/next'); }, _buildingLineClick);
         } else {
             // check if fortresses need updated
             var $fortressList = jQuery('.buildingList').find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
@@ -165,7 +167,8 @@ unsafeWindow.ALNK = (function () {
                 $fortressList.click();
                 _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady);
             } else {
-                _doneBuilding();
+                //clicked so wait 31-40 seconds before moving on.
+                _timeoutLoop(31000, 40000, function(){ return _trueFalseFunc('buildingClicked/done'); }, _doneBuilding);
             }
         }
     };
@@ -339,18 +342,31 @@ unsafeWindow.ALNK = (function () {
                 stone > singleResourceMinimum ||
                 ore > singleResourceMinimum
             ) {
-                pub.debug == false ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
-                if (pub.preferCopper && copper < copperLimit) {
-                    $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
-                } else if (silver < silverLimit) {
-                    $castleElem.find('.tradableItems .marketListItem:last .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for silver
-                } else if (copper < copperLimit) {
-                    $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
-                } else {
-                    pub.debug == false ? _doNothing() : console.log('limited resources');
+                // (waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt)
+                var failedLoop = false;
+                var tryAgain = 10;
+                do{
+                    // click on the link...
+                    pub.debug == false ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
+                    if (pub.preferCopper && copper < copperLimit) {
+                        $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
+                    } else if (silver < silverLimit) {
+                        $castleElem.find('.tradableItems .marketListItem:last .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for silver
+                    } else if (copper < copperLimit) {
+                        $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
+                    } else {
+                        pub.debug == false ? _doNothing() : console.log('limited resources');
+                        return _closeCastle();
+                    }
+                    // this will try 10 times and then fail... up to 20 seconds.
+                    failedLoop = _timeoutLoop(1000, 2000, _tradeResourceReady, _tradeResourceClick.bind(this, total, wood, ore, stone), 10);
+                    tryAgain = tryAgain - 1;
+
+                    pub.debug == false ? _doNothing() : console.log('_tradeClick tryAgain',tryAgain);
+                } while(failedLoop===false && tryAgain>0) ;
+                if(failedLoop===false || tryAgain==0){
                     return _closeCastle();
                 }
-                _timeoutLoop(5000, 8000, _tradeResourceReady.bind(), _tradeResourceClick.bind(this, total, wood, ore, stone));
             } else {
                 return _closeCastle();
             }
