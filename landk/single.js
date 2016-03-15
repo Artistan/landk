@@ -13,12 +13,17 @@
 // @grant       GM_addStyle
 // ==/UserScript==
 
-
 var newCSS = GM_getResourceText("customCSS");
 GM_addStyle(newCSS);
 if (typeof unsafeWindow == 'undefined') {
     var unsafeWindow = window;
 }
+
+var _LNK_DEBUG_VERBOS = 5;
+var _LNK_DEBUG_LIMITED = 3;
+var _LNK_DEBUG_QUIET = 1;
+var _LNK_DEBUG_SILENT = 0;
+
 // ===================================== auto lnk =====================================
 unsafeWindow.ALNK = (function () {
     var pub = {};// public methods here
@@ -30,8 +35,35 @@ unsafeWindow.ALNK = (function () {
     var currentList = 0;
     var fullyUpgraded = [289, 290, 1797];
     var isFullyUpgraded = false;
-    var timer = false;
+    var timerObj = {};
     var runningBuildings = false;
+    var groups = {
+        'northern9elite': [
+            20331 	,
+            7212	,
+            9849	,
+            33771	,
+            17413   ,
+            9412	,
+            13654	,
+            10394	,
+            7210	,
+            12410	,
+            13020	,
+            7209	,
+            33257	,
+            4529
+        ],
+        'recyclers8': [
+            16904,
+            59021,
+            26055,
+            1072
+        ],
+        'alliance9': [
+            69130, 36507, 1505, 40020, 17738, 63008, 34484, 44174, 9411, 7542, 10185, 22269, 20331, 10887, 23508, 17421, 7212, 9849, 58713, 25555, 3556, 2180, 8912, 117, 33771, 53299, 11724, 13589, 25122, 18088, 12222, 50251, 215, 8158, 13978, 25, 23618, 7305, 56591, 17122, 56342, 48929, 21664, 44332, 66192, 63286, 36294, 40590, 43023, 64560, 68926, 32328, 10635, 22892, 18271, 15428, 13162, 17413, 13000, 20965, 12957, 63297, 14693, 33211, 16136, 27537, 77, 33119, 51958, 26927, 9412, 13654, 6773, 7068, 14276, 9458, 7282, 12990, 63295, 369, 5072, 55792, 11759, 874, 10367, 46482, 16150, 48857, 34689, 30821, 37652, 25131, 9403, 10394, 58005, 68233, 44170, 46367, 5165, 20507, 13425, 11770, 10661, 7210, 7401, 30817, 12410, 46535, 20643, 30664, 19233, 34706, 2837, 25784, 13020, 7209, 37522, 11275, 27465, 50217, 33257, 63604, 61378, 16278, 23528, 4529, 47171, 23996, 64492, 2440, 45098, 16786, 24093, 26363, 48033
+        ]
+    };
 
     pub.runLnKNow = true;
     pub.missions = false;
@@ -41,16 +73,22 @@ unsafeWindow.ALNK = (function () {
     pub.popTrade = true;
     pub.research = true;
     pub.clear = true;
-    pub.debug = true;
+    pub.debug = _LNK_DEBUG_VERBOS;
 
+    var _debug = function (level) {
+        return (pub.debug <= level);
+    };
+    var _doNothing = function () {
+        return true;
+    };
     // if not set / false, then flip it.
     var _trueFalseFunc = function (key) {
-        pub.debug == false ? _doNothing() : console.log('_trueFalseFunc',key);
-        if (tAr[key] == true) {
-            pub.debug == false ? _doNothing() : console.log('trueFalseFunc', true);
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_trueFalseFunc', key);
+        if (tAr[key] === true) {
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('trueFalseFunc', true);
             tAr[key] = false;
         } else {
-            pub.debug == false ? _doNothing() : console.log('trueFalseFunc', false);
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('trueFalseFunc', false);
             tAr[key] = true;
         }
         // return the opposite
@@ -63,86 +101,94 @@ unsafeWindow.ALNK = (function () {
     var _noOverlay = function () {
         return jQuery('.overlay').length < 1;
     };
-    var _doNothing = function () {
-        return true;
-    };
     // when truthyFunction then call callBackFunc ,, failInt causes max time out.
-    var _timeoutLoop = function (waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt) {
-        pub.debug==false?_doNothing():console.log('_timeoutLoop',waitTimeIntMin,waitTimeIntMax,truthyFunction,callBackFunc,failInt);
+    var _timeoutLoop = function (waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback) {
+        //_debug(_LNK_DEBUG_VERBOS)?_doNothing():console.log('_timeoutLoop',waitTimeIntMin,waitTimeIntMax,truthyFunction,callBackFunc,failInt);
 
         var waitTimeInt = _randomIntFromInterval(waitTimeIntMin, waitTimeIntMax);
-        if (typeof failInt == 'undefined') {
-            failInt = 100;
+        if (typeof failInt == 'undefined' || failInt > 100) {
+            failInt = 99;// 100-1
         } else if (failInt == 0) {
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop :: resetInt / _resetCallback / _failureCallback', resetInt, _resetCallback, _failureCallback);
+            if (typeof _resetCallback != 'undefined' && resetInt > 0) {
+                _resetCallback(resetInt);//go back to the one that called this...
+            } else if (typeof _failureCallback != 'undefined') {
+                _failureCallback();
+            }
             return false;
         } else {
             failInt--;
         }
-        if (truthyFunction() && failInt < 100) {
-            if (typeof callBackFunc == "function") {
-                pub.debug == false ? _doNothing() : console.log('timeout callBackFunc')
-                callBackFunc();
+        if (truthyFunction()) {
+            if (typeof callBackFunc !== "undefined") {
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_timeoutLoop callBackFunc CALLED');
+                setTimeout(function () {
+                    callBackFunc();// wait a sec OK!
+                }, 1000);
+            } else {
+                _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop callBackFunc INVALID', callBackFunc);
             }
         } else {
-            pub.debug == false ? _doNothing() : console.log('timeout time');
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop settimeout /  failInt', waitTimeInt, failInt);
             setTimeout(function () {
-                _timeoutLoop(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt);
+                return _timeoutLoop(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback);
             }, waitTimeInt);
         }
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('timeout time');
         return true;
     };
 
     /// castle Functions
+    var _castleReady = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_castleReady');
+        return jQuery('.win.habitat.frame-container:visible').length > 0;
+    };
     var _castleFunctions = function () {
-        pub.debug == false ? _doNothing() : console.log('_castleFunctions');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_castleFunctions');
         $castleElem = jQuery('.win.habitat.frame-container:visible');
         castleFortress = $castleElem.find('.townhall').length > 0;
-        castleTitle = $castleElem.find('.headline .title').html();
-        pub.debug == false ? _doNothing() : console.log('== ' + castleTitle + ' [' + castlePoints + '] ==');
+        var castleTitle = $castleElem.find('.headline .title').html();
+        _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('== ' + castleTitle + ' [' + castlePoints + '] ==');
 
         _buildingFunctions();
     };
 
-
-
-
-
-
     var _buildingFunctions = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingFunctions');
         jQuery('.buildingList .close').click();
         var $buildButton = jQuery('.topbarImageContainer:nth-of-type(2)');
-        if($buildButton.length>0) {
+        if (pub.buildings && $buildButton.length > 0) {
             // open buildings panel
             $buildButton.click();
             runningBuildings = true;
-
-            _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady);
+            _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady, 10, _missionFunctions);
         } else {
             _missionFunctions();
         }
     };
     var _buildingReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_buildingReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingReady');
         return jQuery('.buildingList').length > 0;
     };
     var totalBuildingLines = 0;
     var currentBuildingLine = 0;
-    var $buildingLines={};
+    var $buildingLines = {};
     var _buildingLinesReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_buildingClick');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingLinesReady');
         // try select all
-        $buildingLines = jQuery('.buildingList').find('.listContentRow').filter(function( index ) {
-            return jQuery( '.upgrade', this ).length < 2 && jQuery('.buildbutton:not(.disabled)',this).length;
+        var blist = jQuery('.buildingList');
+        $buildingLines = blist.find('.listContentRow').filter(function () {
+            return jQuery('.upgrade', this).length < 2 && jQuery('.buildbutton:not(.disabled)', this).length;
         });
         totalBuildingLines = $buildingLines.length;
-        pub.debug == false ? _doNothing() : console.log('totalBuildingLines',totalBuildingLines);
-        if(totalBuildingLines > 0){
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('totalBuildingLines', totalBuildingLines);
+        if (totalBuildingLines > 0) {
             currentBuildingLine = 0;
             _buildingLineClick();
         } else {
             // check if fortresses need updated
-            var $fortressList = jQuery('.buildingList').find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
-            if($fortressList.length>0){
+            var $fortressList = blist.find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
+            if ($fortressList.length > 0) {
                 $fortressList.click();
                 _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady);
             } else {
@@ -150,45 +196,40 @@ unsafeWindow.ALNK = (function () {
             }
         }
     };
-    var _buildingLineClick = function (){
-        unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('_buildingLineClick',currentBuildingLine);
-        // click all of them at once.
-        jQuery('.buildbutton:not(.disabled)',$buildingLines[currentBuildingLine]).click().each(function(){
-            unsafeWindow.debug==false?doNothing():unsafeWindow.console.log('buildings upgrading ', this);
-        });
+    var _buildingLineClick = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : unsafeWindow.console.log('_buildingLineClick', currentBuildingLine);
+        // click all of them at once. in reverse order.
+        var lines = jQuery( jQuery('.buildbutton:not(.disabled)', $buildingLines[currentBuildingLine]).get().reverse() );
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : unsafeWindow.console.log('_buildingLineClick buildbuttons', lines.length);
+        lines.click();
         currentBuildingLine = currentBuildingLine + 1;
-        if(totalBuildingLines > currentBuildingLine){
+        if (totalBuildingLines > currentBuildingLine) {
             //clicked so wait 31-40 seconds before moving on.
-            _timeoutLoop(31000, 40000, function(){ return _trueFalseFunc('buildingClick/next'); }, _buildingLineClick);
+            _timeoutLoop(31000, 40000, function () {
+                return _trueFalseFunc('buildingClick/next');
+            }, _buildingLineClick);
         } else {
             // check if fortresses need updated
             var $fortressList = jQuery('.buildingList').find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
-            if($fortressList.length>0){
+            if ($fortressList.length > 0) {
                 $fortressList.click();
                 _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady);
             } else {
                 //clicked so wait 31-40 seconds before moving on.
-                _timeoutLoop(31000, 40000, function(){ return _trueFalseFunc('buildingClicked/done'); }, _doneBuilding);
+                _timeoutLoop(31000, 40000, function () {
+                    return _trueFalseFunc('buildingClicked/done');
+                }, _doneBuilding);
             }
         }
     };
-
-    var _doneBuilding = function(){
+    var _doneBuilding = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : unsafeWindow.console.log('_doneBuilding');
         jQuery('.buildingList .close').click();
         runningBuildings = false;
         _researchFunctions();
-    }
-
-
-
-
-
-
-
-
-
-
+    };
     var _researchFunctions = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : unsafeWindow.console.log('_researchFunctions');
         if (pub.research && !isFullyUpgraded) {
             $castleElem.find('.building-area.library, .building-area.university').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(3000, 5000, _researchReady, _researchClick);
@@ -197,19 +238,18 @@ unsafeWindow.ALNK = (function () {
         }
     };
     var _researchReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_researchReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_researchReady');
         return $castleElem.find('.knowledgeListItem').length > 0;
     };
     var _researchClick = function () {
-        pub.debug == false ? _doNothing() : console.log('_researchClick');
-        var $kItems = [];
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_researchClick');
         var maxResearch = (castlePoints < 290) ? 2 : 1;
         $castleElem = jQuery('.win.habitat.frame-container:visible');
-        $kItems = $castleElem.find('.knowledgeListItem:not(:has(.counter)) .button:not(.disabled)');
+        var $kItems = $castleElem.find('.knowledgeListItem:not(:has(.counter)) .button:not(.disabled)');
         // check if we can do more research...
         if ($kItems.length > 0 && $castleElem.find('.knowledgeListItem:has(.counter)').length < maxResearch) {
             $kItems.slice(0, 1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-            _timeoutLoop(3000, 5000, _noOverlay, _researchClick);
+            _timeoutLoop(3000, 5000, _noOverlay, _researchClick, 10, _tradeFunctions);
         } else {
             _missionFunctions();
         }
@@ -218,24 +258,25 @@ unsafeWindow.ALNK = (function () {
         var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
         if (pub.missions && $missionsElem.length > 0) {
             // mass missions...
-            pub.debug == false ? _doNothing() : console.log('_massMission');
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_massMission');
             $missionsElem.trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(3000, 5000, _massMissionReady, _massMissionClick);
         } else if (castlePoints < 289) {
-            pub.debug == false ? _doNothing() : console.log('_missionFunctions');
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
             $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-            _timeoutLoop(3000, 5000, _missionReady, _missionClick);
+            //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
+            _timeoutLoop(3000, 5000, _missionReady, _missionClick, 10, _missionFunctions);
         } else {
             _tradeFunctions();
         }
     };
     var _massMissionReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_massMissionReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massMissionReady');
         return jQuery('.globalMissions').length > 0;
     };
     var _massMissionClick = function () {
-        pub.debug == false ? _doNothing() : console.log('_massMissionClick');
-        $gMissions = jQuery('.globalMissions');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massMissionClick');
+        var $gMissions = jQuery('.globalMissions');
 
         // try select all
         $gMissions.find('.selectAllButton').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
@@ -250,35 +291,32 @@ unsafeWindow.ALNK = (function () {
             $gMissions.find('.close').click();
             _tradeFunctions();
         }
-        unsafeWindow.debug == false ? doNothing() : unsafeWindow.console.log('missions castle');
     };
 
     var _massFortMissionReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_massFortMissionReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massFortMissionReady');
         return jQuery('.globalMissions').find('.tab.tab-castle-fortess.active[data-action="fortress"]').length > 0;
     };
     var _massFortMissionClick = function () {
-        $gMissions = jQuery('.globalMissions');
+        var $gMissions = jQuery('.globalMissions');
 
-        pub.debug == false ? _doNothing() : console.log('_massFortMissionClick');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massFortMissionClick');
         // try select all
         $gMissions.find('.selectAllButton').click();
         // execute them!
         $gMissions.find('.execute').click();
         // close
         $gMissions.find('.close').click();
-        unsafeWindow.debug == false ? doNothing() : unsafeWindow.console.log('missions fortress');
         _tradeFunctions();
-    }
+    };
     var _missionReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_missionReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_missionReady');
         return $castleElem.find('.missionListItem').length > 0;
     };
     var _missionClick = function () {
-        var $kItems = [];
         $castleElem = jQuery('.win.habitat.frame-container:visible');
-        $kItems = $castleElem.find('.missionListItem:not(:has(.counter)) .button:not(.speedup):not(.disabled)');
-        pub.debug == false ? _doNothing() : console.log('_missionClick', $castleElem, $kItems);
+        var $kItems = $castleElem.find('.missionListItem:not(:has(.counter)) .button:not(.speedup):not(.disabled)');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_missionClick', $castleElem, $kItems);
         // check if we can do more research...
         if ($kItems.length > 0) {
             $kItems.slice(-1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
@@ -290,42 +328,41 @@ unsafeWindow.ALNK = (function () {
         }
     };
     var _tradeFunctions = function () {
-        pub.debug == false ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver', castlePoints, isFullyUpgraded ,pub.silver);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver', castlePoints, isFullyUpgraded, pub.silver);
         // only run these every incrementalCount, or if manualMisssions
         if (pub.silver && isFullyUpgraded) {
             $castleElem.find('.keep,.townhall').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-            _timeoutLoop(5000, 8000, _tradeReady, _tradeClick);
+            _timeoutLoop(5000, 8000, _tradeReady, _tradeClick.bind(this, 10));
         } else {
             return _closeCastle();
         }
     };
     var _tradeReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_tradeReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeReady');
         return $castleElem.find('.marketListItem').length > 0;
     };
-    var _tradeClick = function () {
+    var _tradeClick = function (retry) {
         // if silver automation and once every incremental counter rounds, and no knowledge to learn.
         if (pub.silver) {
-            pub.debug == false ? _doNothing() : console.log('_tradeClick');
+            _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeClick', retry);
+            // check limits - default castle..
+            var silverLimit = 19800;
+            var copperLimit = 19800;
+            var resourceMinimum = 19000;
+            var singleResourceMinimum = 9500;
+            var leaveBehind = 1000; // each
             if (castleFortress) {
                 // set the fortress limits much higher.
-                var silverLimit = 190000;
-                var copperLimit = 190000;
-                var resourceMinimum = 140000;
-                var singleResourceMinimum = 195000;
-                var leaveBehind = 20000; // each
-            } else {
-                // check limits
-                var silverLimit = 19800;
-                var copperLimit = 19800;
-                var resourceMinimum = 19000;
-                var singleResourceMinimum = 9500;
-                var leaveBehind = 1000; // each
+                silverLimit = 190000;
+                copperLimit = 190000;
+                resourceMinimum = 140000;
+                singleResourceMinimum = 195000;
+                leaveBehind = 20000; // each
             }
             // check resources
             var population = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="4"] .resourceAmount').html() * 1;
-            if(population > 250 && pub.popTrade){
-                pub.debug == false ? _doNothing() : console.log(' recruit more soldiers ');
+            if (population > 250 && pub.popTrade) {
+                _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' recruit more soldiers ');
                 return _closeCastle();
             }
             var wood = $castleElem.find('.resourceHeaderTable .resourceElement[data-primary-key="1"] .resourceAmount').html() * 1 - leaveBehind;
@@ -335,68 +372,57 @@ unsafeWindow.ALNK = (function () {
             var silver = $castleElem.find('.resourceHeaderTable .resourceElement[data-primary-key="6"] .resourceAmount').html() * 1;
             var copper = $castleElem.find('.resourceHeaderTable .resourceElement[data-primary-key="5"] .resourceAmount').html() * 1;
             var total = wood + stone + ore;
-            pub.debug == false ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
+            _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
             if (
                 total > resourceMinimum ||
                 wood > singleResourceMinimum ||
                 stone > singleResourceMinimum ||
                 ore > singleResourceMinimum
             ) {
-                // (waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt)
-                var failedLoop = false;
-                var tryAgain = 10;
-                do{
-                    // click on the link...
-                    pub.debug == false ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
-                    if (pub.preferCopper && copper < copperLimit) {
-                        $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
-                    } else if (silver < silverLimit) {
-                        $castleElem.find('.tradableItems .marketListItem:last .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for silver
-                    } else if (copper < copperLimit) {
-                        $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
-                    } else {
-                        pub.debug == false ? _doNothing() : console.log('limited resources');
-                        return _closeCastle();
-                    }
-                    // this will try 10 times and then fail... up to 20 seconds.
-                    failedLoop = _timeoutLoop(1000, 2000, _tradeResourceReady, _tradeResourceClick.bind(this, total, wood, ore, stone), 10);
-                    tryAgain = tryAgain - 1;
-
-                    pub.debug == false ? _doNothing() : console.log('_tradeClick tryAgain',tryAgain);
-                } while(failedLoop===false && tryAgain>0) ;
-                if(failedLoop===false || tryAgain==0){
+                // click on the link...
+                _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
+                if (pub.preferCopper && copper < copperLimit) {
+                    $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
+                } else if (silver < silverLimit) {
+                    $castleElem.find('.tradableItems .marketListItem:last .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for silver
+                } else if (copper < copperLimit) {
+                    $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
+                } else {
+                    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('limited resources');
                     return _closeCastle();
                 }
+                // this will try 10 times and then fail... up to 20 seconds.
+                _timeoutLoop(1000, 2000, _tradeResourceReady, _tradeResourceClick.bind(this, total, wood, ore, stone), 10, _closeCastle, (retry - 1), _tradeClick);
             } else {
                 return _closeCastle();
             }
         } else {
-            pub.debug == false ? _doNothing() : console.log('trade disabled');
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('trade disabled');
             return _closeCastle();
         }
     };
     var _tradeResourceReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_tradeResourceReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeResourceReady');
         return $castleElem.find('.resourceContainer .resourceElement').length > 0;
     };
     var _tradeResourceClick = function (total, wood, ore, stone) {
         $castleElem = jQuery('.win.habitat.frame-container:visible');
-        pub.debug == false ? _doNothing() : console.log('_tradeResourceClick');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeResourceClick');
         var carts = Math.ceil(total / 2500);
         var $oxCart = $castleElem.find('.unitElement[data-primary-key="10002"] input');
         if ($oxCart.attr('placeholder') == 0) {
-            pub.debug == false ? _doNothing() : console.log('NO OXEN CARTS');
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('NO OXEN CARTS');
             return _closeCastle();
         } else if ($oxCart.attr('placeholder') * 1 < carts) {
             // less carts than resources to trade, so reduce the resources until fit in carts.
             carts = $oxCart.attr('placeholder') * 1;// set carts to max avail instead of total / 2500
-            newTotal = carts * 2500; // then set new total to that * 2500 (max qty)
+            var newTotal = carts * 2500; // then set new total to that * 2500 (max qty)
             var diff = total - newTotal;
             // reduce resources so they fit into the available carts.
             // remove 1/3 from each.
-            wood = wood - Math.ceil(diff/3);
-            stone = stone - Math.ceil(diff/3);
-            ore = ore - Math.ceil(diff/3);
+            wood = wood - Math.ceil(diff / 3);
+            stone = stone - Math.ceil(diff / 3);
+            ore = ore - Math.ceil(diff / 3);
         }
         $oxCart.focus().click().val(carts).trigger("change").trigger("blur");
         $castleElem.find('.resourceContainer .resourceElement[data-primary-key="1"] input')
@@ -407,43 +433,53 @@ unsafeWindow.ALNK = (function () {
             .val(ore).trigger("change").trigger("blur");
         $castleElem.find('.typeContainer .button').click();
         _timeoutLoop(3000, 5000, _tradeSendReady, _tradeSendClick);
-    }
+    };
     var _tradeSendReady = function () {
-        pub.debug == false ? _doNothing() : console.log('_tradeSendReady');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeSendReady');
         return $castleElem.find('.resourceContainer .resourceElement').length == 0;
     };
     var _tradeSendClick = function () {
-        pub.debug == false ? _doNothing() : console.log('exchanged (_tradeSendClick)');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('exchanged (_tradeSendClick)');
         return _closeCastle();
     };
     var _closeCastle = function () {
-        pub.debug == false ? _doNothing() : console.log('_closeCastle');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_closeCastle');
         jQuery('.win.habitat.frame-container:visible').find('.close').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
         return true;
-    }
+    };
     var _randomIntFromInterval = function (min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
+    };
+    var _addUsersToMessage = function(indx){
+        var group = groups[indx];
+        jQuery('#discussionWrapper > div.content-frame.discussionMemberList.clickable > div.frame-content.with-icon > div.title').click();
+        jQuery('#id310051209316588900').click();
+        jQuery('#mailManageMembersList input:checkbox').filter(function(){
+            console.log(jQuery(this).data("id"),jQuery.inArray(jQuery(this).data("id"),group));
+            return jQuery.inArray(jQuery(this).data("id"),group) >= 0;
+        }).click();
+        //jQuery('#id198794876970350720').click();
     }
     // all the toggles live here...
     pub.toggleClear = function () {
         pub.clear = !pub.clear;
         jQuery('#auto_clear').removeClass(pub.clear ? 'Stopped' : 'Running').addClass(pub.clear ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.clear', pub.clear);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.clear', pub.clear);
     };
     pub.toggleDebug = function () {
         pub.debug = !pub.debug;
         jQuery('#auto_debug').removeClass(pub.debug ? 'Stopped' : 'Running').addClass(pub.debug ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.debug', pub.debug);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.debug', pub.debug);
     };
     pub.toggleAuto = function () {
         pub.runLnKNow = !pub.runLnKNow;
         jQuery('#auto_runLnKNow').removeClass(pub.runLnKNow ? 'Stopped' : 'Running').addClass(pub.runLnKNow ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.runLnKNow', pub.runLnKNow);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.runLnKNow', pub.runLnKNow);
     };
     pub.toggleMissions = function () {
         pub.missions = !pub.missions;
         jQuery('#auto_missions').removeClass(pub.missions ? 'Stopped' : 'Running').addClass(pub.missions ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.missions', pub.missions);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.missions', pub.missions);
     };
     pub.toggleMiniMap = function () {
         jQuery('.miniMapContainer').toggle();
@@ -451,29 +487,29 @@ unsafeWindow.ALNK = (function () {
     pub.toggleBuildings = function () {
         pub.buildings = !pub.buildings;
         jQuery('#auto_buildings').removeClass(pub.buildings ? 'Stopped' : 'Running').addClass(pub.buildings ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.buildings', pub.buildings);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.buildings', pub.buildings);
     };
     pub.toggleSilver = function () {
         pub.silver = !pub.silver;
         jQuery('#auto_silver').removeClass(pub.silver ? 'Stopped' : 'Running').addClass(pub.silver ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.silver', pub.silver);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.silver', pub.silver);
     };
     pub.togglePreferCopper = function () {
         pub.preferCopper = !pub.preferCopper;
         jQuery('#auto_preferCopper').removeClass(pub.preferCopper ? 'Stopped' : 'Running').addClass(pub.preferCopper ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.preferCopper', pub.preferCopper);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.preferCopper', pub.preferCopper);
     };
     // ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
     pub.togglePopTrade = function () {
         pub.popTrade = !pub.popTrade;
         jQuery('#auto_popTrade').removeClass(pub.popTrade ? 'Stopped' : 'Running').addClass(pub.popTrade ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.popTrade', pub.popTrade);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.popTrade', pub.popTrade);
     };
 
     pub.toggleResearch = function () {
         pub.research = !pub.research;
         jQuery('#auto_research').removeClass(pub.research ? 'Stopped' : 'Running').addClass(pub.research ? 'Running' : 'Stopped');
-        pub.debug == false ? _doNothing() : console.log('pub.research', pub.research);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.research', pub.research);
     };
     pub.clearHidden = function () {
         jQuery('.win.habitat.frame-container').find('.close').click();
@@ -485,9 +521,11 @@ unsafeWindow.ALNK = (function () {
                     console.clear();
                 }
                 _closeDialogs();
-                pub.debug == false ? _doNothing() : console.log('********* opening new castle *********');
+                _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('********* opening new castle *********');
                 jQuery('.incrementalCounter').html(currentList);
-                var castleListItem = jQuery(jQuery('.castleHabitatOverview .castleListItem')[currentList]);
+                var currentListItems = jQuery('.castleHabitatOverview .castleListItem');
+                var castleListItem = jQuery(currentListItems[currentList]);
+
                 if (castleListItem && castleListItem.length) {
                     castlePoints = castleListItem.find('.points').html().replace(/ Points/i, '') * 1;
                     isFullyUpgraded = jQuery.inArray(castlePoints, fullyUpgraded) > -1;
@@ -500,21 +538,19 @@ unsafeWindow.ALNK = (function () {
                     castleListItem.trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
 
                     currentList = currentList + 1;
-                    if (jQuery('.castleHabitatOverview .castleListItem').length == currentList) {
+                    if (currentListItems.length == currentList) {
                         currentList = 0;//reset back to 0 for next pass...
                     }
-                    _timeoutLoop(3000, 5000, function () {
-                        return jQuery('.win.habitat.frame-container:visible').length > 0;
-                    }, _castleFunctions);// wait 2 seconds and run castle
+                    _timeoutLoop(3000, 5000, _castleReady, _castleFunctions);// wait 2 seconds and run castle
                 } else {
-                    pub.debug == false ? _doNothing() : console.log('.....  No castle list to open .....');
+                    _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('.....  No castle list to open .....');
                 }
             } else {
-                pub.debug == false ? _doNothing() : console.log('.....  waiting .....');
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('.....  waiting .....');
             }
         }
-        clearTimeout(timer);
-        timer = setTimeout(pub.runLnK, 10000);// wait 10 seconds and try again..
+        clearTimeout(timerObj);
+        timerObj = setTimeout(pub.runLnK, 10000);// wait 10 seconds and try again..
     };
     pub.init = function () {
         waitForKeyElements(".topbar", function () {
@@ -530,11 +566,18 @@ unsafeWindow.ALNK = (function () {
                 '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleDebug()">Log::Debug</a><span id="auto_debug" class="' + (pub.debug ? 'Running' : 'Stopped') + '"></span></div>' +
+                //'   <div><a onclick="ALNK.toggleDebug()">Log::Debug</a><span id="auto_debug" class="' + (pub.debug ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleClear()">Log::Clear</a><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
                 '   <div><a onclick="ALNK.clearHidden()">Close Castles</a></div>' +
                 '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+
+
+            var _LNK_DEBUG_VERBOS = 5;
+            var _LNK_DEBUG_LIMITED = 3;
+            var _LNK_DEBUG_QUIET = 1;
+            var _LNK_DEBUG_SILENT = 0;
+
         });
         waitForKeyElements(".miniMapContainer", function () {
             console.log('.miniMapContainer created');
@@ -544,7 +587,7 @@ unsafeWindow.ALNK = (function () {
             console.log('.bottombar created');
             jQuery('.bottombar[style],.bottombar *[style]').removeAttr('style');
         });
-    }
+    };
     return pub; // returns the Object with public methods
 }).call(unsafeWindow);
 
