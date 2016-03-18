@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         landk v3.6.1
+// @name         landk v3.6.2
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      3.6.1
+// @version      3.6.2
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
@@ -80,8 +80,10 @@ unsafeWindow.ALNK = (function () {
     pub.clear = true;
     pub.debug = _LNK_DEBUG_VERBOS;
 
+    // true == do nothing...
     var _debug = function (level) {
-        return (pub.debug <= level);
+        //console.log('_debug', pub.debug, level, (pub.debug >= level));
+        return (pub.debug < level);
     };
     var _doNothing = function () {
         return true;
@@ -305,23 +307,25 @@ unsafeWindow.ALNK = (function () {
         $castleElem = jQuery('.win.habitat.frame-container:visible');
         var $kItems = $castleElem.find('.knowledgeListItem:not(:has(.counter)) .button:not(.disabled)');
         // check if we can do more research...
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_researchClick',$kItems);
         if ($kItems.length > 0 && $castleElem.find('.knowledgeListItem:has(.counter)').length < maxResearch) {
             $kItems.slice(0, 1).trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(3000, 5000, _noOverlay, _researchClick, 10, _tradeFunctions);
         } else {
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_researchClick > _missionFunctions');
             _missionFunctions();
         }
     };
     var _missionFunctions = function () {
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
         var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
         if (pub.missions && $missionsElem.length > 0) {
             if(!missionTimer){
                 _missionIntervals();
             }
-            // mass misstions, move on...
+            // mass missions, move on...
             _tradeFunctions();
         } else if (castlePoints < 289) {
-            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
             $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
             _timeoutLoop(3000, 5000, _missionReady, _missionClick, 10, _missionFunctions);
@@ -348,7 +352,7 @@ unsafeWindow.ALNK = (function () {
         }
     };
     var _tradeFunctions = function () {
-        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver/allTrade', castlePoints, isFullyUpgraded, pub.silver, allTrade);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver/allTrade', castlePoints, isFullyUpgraded, pub.silver, pub.allTrade);
         // only run these every incrementalCount, or if manualMisssions
         if (pub.silver && (isFullyUpgraded || pub.allTrade)) {
             $castleElem.find('.keep,.townhall').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
@@ -487,6 +491,7 @@ unsafeWindow.ALNK = (function () {
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.clear', pub.clear);
     };
     pub.toggleDebug = function () {
+        // needs to be a dropdown selection
         pub.debug = !pub.debug;
         jQuery('#auto_debug').removeClass(pub.debug ? 'Stopped' : 'Running').addClass(pub.debug ? 'Running' : 'Stopped');
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.debug', pub.debug);
@@ -677,13 +682,6 @@ unsafeWindow.ALNK = (function () {
                 '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
                 '   <div><a onclick="ALNK.clearHidden()">Close Castles</a></div>' +
                 '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
-
-
-            var _LNK_DEBUG_VERBOS = 5;
-            var _LNK_DEBUG_LIMITED = 3;
-            var _LNK_DEBUG_QUIET = 1;
-            var _LNK_DEBUG_SILENT = 0;
-
         });
         waitForKeyElements(".miniMapContainer", function () {
             console.log('.miniMapContainer created');
