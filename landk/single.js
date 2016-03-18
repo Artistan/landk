@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         landk v3.6
+// @name         landk v3.6.1
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      3.6
+// @version      3.6.1
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
@@ -408,7 +408,7 @@ unsafeWindow.ALNK = (function () {
                 } else if (copper < copperLimit) {
                     $castleElem.find('.tradableItems .marketListItem:first .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click'); //trade for copper
                 } else {
-                    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('limited resources');
+                    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('limited resources', retry);
                     return _closeCastle();
                 }
                 // this will try 10 times and then fail... up to 20 seconds.
@@ -524,13 +524,11 @@ unsafeWindow.ALNK = (function () {
         jQuery('#auto_preferCopper').removeClass(pub.preferCopper ? 'Stopped' : 'Running').addClass(pub.preferCopper ? 'Running' : 'Stopped');
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.preferCopper', pub.preferCopper);
     };
-    // ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
     pub.togglePopTrade = function () {
         pub.popTrade = !pub.popTrade;
         jQuery('#auto_popTrade').removeClass(pub.popTrade ? 'Stopped' : 'Running').addClass(pub.popTrade ? 'Running' : 'Stopped');
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.popTrade', pub.popTrade);
     };
-
     pub.toggleResearch = function () {
         pub.research = !pub.research;
         jQuery('#auto_research').removeClass(pub.research ? 'Stopped' : 'Running').addClass(pub.research ? 'Running' : 'Stopped');
@@ -538,6 +536,74 @@ unsafeWindow.ALNK = (function () {
     };
     pub.clearHidden = function () {
         jQuery('.win.habitat.frame-container').find('.close').click();
+    };
+    var filterCastles = function(){
+        // return true for any castle that should be opened and worked on.
+        $c = jQuery(this);
+        console.log('filterCastles',$c);
+        castlePoints = castleListItem.find('.points').html().replace(/ Points/i, '') * 1;
+        isFullyUpgraded = jQuery.inArray(castlePoints, fullyUpgraded) > -1;
+        var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
+
+        if(pub.research && !isFullyUpgraded){
+            console.log('do research');
+            // research possible
+            return true;
+        }
+        if (pub.missions && $missionsElem.length > 0) {
+            ;
+        } else if (castlePoints < 289) {
+            // manual missions
+            console.log('do manual missions');
+            return true;
+        }
+        if (pub.silver && (isFullyUpgraded || pub.allTrade)){
+            // check limits - default castle..
+            var silverLimit = 19800;
+            var copperLimit = 19800;
+            var resourceMinimum = 19000;
+            var singleResourceMinimum = 9500;
+            var leaveBehind = 1000; // each
+            if (castleFortress) {
+                // set the fortress limits much higher.
+                silverLimit = 190000;
+                copperLimit = 190000;
+                resourceMinimum = 140000;
+                singleResourceMinimum = 195000;
+                leaveBehind = 20000; // each
+            }
+            // check resources
+            var population = $c.find('.resourceElement[data-primary-key="4"] .resourceAmount').html() * 1;
+            if (population > 250 && pub.popTrade) {
+                console.log('population limiter for trade, disable poptrade if you want to trade anyway');
+            } else {
+                var wood = $castleElem.find('.resourceElement[data-primary-key="1"] .resourceAmount').html() * 1 - leaveBehind;
+                var stone = $castleElem.find('.resourceElement[data-primary-key="2"] .resourceAmount').html() * 1 - leaveBehind;
+                var ore = $castleElem.find('.resourceElement[data-primary-key="3"] .resourceAmount').html() * 1 - leaveBehind;
+                // check total silver and copper
+                var silver = $castleElem.find('.resourceElement[data-primary-key="6"] .resourceAmount').html() * 1;
+                var copper = $castleElem.find('.resourceElement[data-primary-key="5"] .resourceAmount').html() * 1;
+                var total = wood + stone + ore;
+                if (
+                    total > resourceMinimum ||
+                    wood > singleResourceMinimum ||
+                    stone > singleResourceMinimum ||
+                    ore > singleResourceMinimum
+                ) {
+                    if (pub.preferCopper && copper < copperLimit) {
+                        console.log('do copper trade');
+                        return true;
+                    } else if (silver < silverLimit) {
+                        console.log('do silver trade');
+                        return true;
+                    } else if (copper < copperLimit) {
+                        console.log('do copper trade 2');
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     };
     pub.runLnK = function (force) {
         if (pub.runLnKNow || force) {
@@ -551,11 +617,19 @@ unsafeWindow.ALNK = (function () {
                 if (pub.clear) {
                     console.clear();
                 }
+                var castleListItem=false;
                 _closeDialogs();
                 _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('********* opening new castle *********');
                 jQuery('.incrementalCounter').html(currentList);
                 var currentListItems = jQuery('.castleHabitatOverview .castleListItem');
-                var castleListItem = jQuery(currentListItems[currentList]);
+                do {
+                    castleListItem = jQuery(currentListItems[currentList]);
+                    if(filterCastles.bind(castleListItem)===false){
+                        console.log('castle does not need work ',castleListItem)
+                        currentList = currentList + 1;
+                        castleListItem=false;
+                    }
+                } while(castleListItem==false && currentList<currentListItems.length);
 
                 if (castleListItem && castleListItem.length) {
                     castlePoints = castleListItem.find('.points').html().replace(/ Points/i, '') * 1;
