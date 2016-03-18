@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         landk single
+// @name         landk v3.6
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      0.3.4
+// @version      3.6
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
@@ -36,7 +36,11 @@ unsafeWindow.ALNK = (function () {
     var fullyUpgraded = [289, 290, 1797];
     var isFullyUpgraded = false;
     var timerObj = {};
+    var runningMassMissions = false;
+    var missionTimer = false;
     var runningBuildings = false;
+    var buildingTimer = false;
+
     var groups = {
         'northern9elite': [
             20331 	,
@@ -69,6 +73,7 @@ unsafeWindow.ALNK = (function () {
     pub.missions = false;
     pub.buildings = true;
     pub.silver = true;
+    pub.allTrade = false;
     pub.preferCopper = true;
     pub.popTrade = true;
     pub.research = true;
@@ -137,7 +142,6 @@ unsafeWindow.ALNK = (function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('timeout time');
         return true;
     };
-
     /// castle Functions
     var _castleReady = function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_castleReady');
@@ -150,20 +154,23 @@ unsafeWindow.ALNK = (function () {
         var castleTitle = $castleElem.find('.headline .title').html();
         _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('== ' + castleTitle + ' [' + castlePoints + '] ==');
 
-        _buildingFunctions();
+        _researchFunctions();
     };
-
+    var _buildingIntervals = function(){
+        _buildingFunctions();
+        console.log('_buildingIntervals',_buildingFunctions);
+        buildingTimer = setInterval(_buildingFunctions,(60000 * 5) );
+    };
     var _buildingFunctions = function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingFunctions');
         jQuery('.buildingList .close').click();
         var $buildButton = jQuery('.topbarImageContainer:nth-of-type(2)');
-        if (pub.buildings && $buildButton.length > 0) {
+        console.log('_buildingFunctions',pub.runLnKNow, runningBuildings, pub.buildings, $buildButton.length);
+        if (pub.runLnKNow && runningBuildings !== true && pub.buildings && $buildButton.length > 0) {
             // open buildings panel
             $buildButton.click();
             runningBuildings = true;
-            _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady, 10, _missionFunctions);
-        } else {
-            _missionFunctions();
+            _timeoutLoop(3000, 5000, _buildingReady, _buildingLinesReady);
         }
     };
     var _buildingReady = function () {
@@ -226,8 +233,59 @@ unsafeWindow.ALNK = (function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : unsafeWindow.console.log('_doneBuilding');
         jQuery('.buildingList .close').click();
         runningBuildings = false;
-        _researchFunctions();
     };
+
+    var _missionIntervals = function(){
+        _massMissionIteration();
+        console.log('_missionIntervals',_massMissionIteration);
+        missionTimer = setInterval(_massMissionIteration,(60000 * 5));
+    };
+    var _massMissionIteration = function(){
+        var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
+        // mass missions...
+        if (pub.runLnKNow && runningMassMissions !== true && pub.missions && $missionsElem.length > 0) {
+            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_massMission');
+            $missionsElem.trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+            _timeoutLoop(3000, 5000, _massMissionReady, _massMissionClick);
+        }
+    }
+    var _massMissionReady = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massMissionReady');
+        return jQuery('.globalMissions').length > 0;
+    };
+    var _massMissionClick = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massMissionClick');
+        var $gMissions = jQuery('.globalMissions');
+        // try select all
+        $gMissions.find('.selectAllButton').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        // execute them!
+        $gMissions.find('.execute').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        // now check fortress
+        var $fortMissions = $gMissions.find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
+        if ($fortMissions.length) {
+            $fortMissions.click();
+            _timeoutLoop(3000, 5000, _massFortMissionReady, _massFortMissionClick);
+        } else {
+            $gMissions.find('.close').click();
+        }
+    };
+    var _massFortMissionReady = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massFortMissionReady');
+        return jQuery('.globalMissions').find('.tab.tab-castle-fortess.active[data-action="fortress"]').length > 0;
+    };
+    var _massFortMissionClick = function () {
+        var $gMissions = jQuery('.globalMissions');
+
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massFortMissionClick');
+        // try select all
+        $gMissions.find('.selectAllButton').click();
+        // execute them!
+        $gMissions.find('.execute').click();
+        // close
+        $gMissions.find('.close').click();
+        _tradeFunctions();
+    };
+
     var _researchFunctions = function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : unsafeWindow.console.log('_researchFunctions');
         if (pub.research && !isFullyUpgraded) {
@@ -257,10 +315,11 @@ unsafeWindow.ALNK = (function () {
     var _missionFunctions = function () {
         var $missionsElem = jQuery('.topbarImageContainer:nth-of-type(7)');
         if (pub.missions && $missionsElem.length > 0) {
-            // mass missions...
-            _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_massMission');
-            $missionsElem.trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-            _timeoutLoop(3000, 5000, _massMissionReady, _massMissionClick);
+            if(!missionTimer){
+                _missionIntervals();
+            }
+            // mass misstions, move on...
+            _tradeFunctions();
         } else if (castlePoints < 289) {
             _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
             $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
@@ -269,45 +328,6 @@ unsafeWindow.ALNK = (function () {
         } else {
             _tradeFunctions();
         }
-    };
-    var _massMissionReady = function () {
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massMissionReady');
-        return jQuery('.globalMissions').length > 0;
-    };
-    var _massMissionClick = function () {
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massMissionClick');
-        var $gMissions = jQuery('.globalMissions');
-
-        // try select all
-        $gMissions.find('.selectAllButton').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-        // execute them!
-        $gMissions.find('.execute').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-        // now check fortress
-        var $fortMissions = $gMissions.find('.tab.tab-castle-fortess.clicable[data-action="fortress"]');
-        if ($fortMissions.length) {
-            $fortMissions.click();
-            _timeoutLoop(3000, 5000, _massFortMissionReady, _massFortMissionClick);
-        } else {
-            $gMissions.find('.close').click();
-            _tradeFunctions();
-        }
-    };
-
-    var _massFortMissionReady = function () {
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massFortMissionReady');
-        return jQuery('.globalMissions').find('.tab.tab-castle-fortess.active[data-action="fortress"]').length > 0;
-    };
-    var _massFortMissionClick = function () {
-        var $gMissions = jQuery('.globalMissions');
-
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_massFortMissionClick');
-        // try select all
-        $gMissions.find('.selectAllButton').click();
-        // execute them!
-        $gMissions.find('.execute').click();
-        // close
-        $gMissions.find('.close').click();
-        _tradeFunctions();
     };
     var _missionReady = function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_missionReady');
@@ -328,9 +348,9 @@ unsafeWindow.ALNK = (function () {
         }
     };
     var _tradeFunctions = function () {
-        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver', castlePoints, isFullyUpgraded, pub.silver);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver/allTrade', castlePoints, isFullyUpgraded, pub.silver, allTrade);
         // only run these every incrementalCount, or if manualMisssions
-        if (pub.silver && isFullyUpgraded) {
+        if (pub.silver && (isFullyUpgraded || pub.allTrade)) {
             $castleElem.find('.keep,.townhall').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             _timeoutLoop(5000, 8000, _tradeReady, _tradeClick.bind(this, 10));
         } else {
@@ -494,6 +514,11 @@ unsafeWindow.ALNK = (function () {
         jQuery('#auto_silver').removeClass(pub.silver ? 'Stopped' : 'Running').addClass(pub.silver ? 'Running' : 'Stopped');
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.silver', pub.silver);
     };
+    pub.toggleAllTrade = function () {
+        pub.allTrade = !pub.allTrade;
+        jQuery('#auto_all_trade').removeClass(pub.allTrade ? 'Stopped' : 'Running').addClass(pub.allTrade ? 'Running' : 'Stopped');
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.allTrade', pub.allTrade);
+    };
     pub.togglePreferCopper = function () {
         pub.preferCopper = !pub.preferCopper;
         jQuery('#auto_preferCopper').removeClass(pub.preferCopper ? 'Stopped' : 'Running').addClass(pub.preferCopper ? 'Running' : 'Stopped');
@@ -516,7 +541,13 @@ unsafeWindow.ALNK = (function () {
     };
     pub.runLnK = function (force) {
         if (pub.runLnKNow || force) {
-            if (jQuery('.win.habitat.frame-container').length == 0 && !runningBuildings) {// closed, so open a new window.
+            // start the building timer if not already started.
+            if (pub.buildings) {
+                if(!buildingTimer){
+                    _buildingIntervals();
+                }
+            }
+            if (jQuery('.win.habitat.frame-container').length == 0) {// closed, so open a new window.
                 if (pub.clear) {
                     console.clear();
                 }
@@ -561,6 +592,7 @@ unsafeWindow.ALNK = (function () {
                 '   <div><a onclick="ALNK.runLnK(true)">START/RESET</a></div>' +
                 '   <div><a onclick="ALNK.toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (pub.runLnKNow ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></div>' +
+                '   <div><a onclick="ALNK.toggleAllTrade ()">AllTrade</a><span id="auto_all_trade" class="' + (pub.allTrade ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.togglePreferCopper ()">preferCopper</a><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
                 '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
