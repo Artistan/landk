@@ -8183,7 +8183,7 @@ top: 50px !important
 }
 
 .shop .col .summary .frame-content, .transactionWindow .col .summary .frame-content, .shop .col .providers .frame-content, .transactionWindow .col .providers .frame-content {
-    height: 405px;
+    height: 420px;
     overflow: auto
 }
 
@@ -8642,15 +8642,16 @@ top: 50px !important
 
 .win.troopMovements.movements .header-bar .unit-list, .win.troopMovements.movements .header-bar .resource-list {
     margin: 4px 0 0 0;
-    width: 280px
+    width: 420px
 }
 
 .win.troopMovements.movements .header-bar .unit-list.resource-list, .win.troopMovements.movements .header-bar .resource-list.resource-list {
     width: 180px
 }
 
-.win.troopMovements.movements .header-bar .unit-list .unitElement, .win.troopMovements.movements .header-bar .resource-list .unitElement, .win.troopMovements.movements .header-bar .unit-list .resourceElement, .win.troopMovements.movements .header-bar .resource-list .resourceElement {
-    width: 35px
+.win.troopMovements.movements .header-bar .unit-list .unitElement, .win.troopMovements.movements .header-bar .resource-list .unitElement, .win.troopMovements.movements .header-bar .unit-list .resourceElement, .win.troopMovements.movements .header-bar .resource-list .resourceElement,
+.win.troopMovements.total-11-units.movements .header-bar .unit-list .unitElement, .win.troopMovements.total-11-units.movements .header-bar .resource-list .unitElement, .win.troopMovements.total-11-units.movements .header-bar .unit-list .resourceElement, .win.troopMovements.total-11-units.movements .header-bar .resource-list .resourceElement {
+    width: 36px
 }
 
 .win.troopMovements.movements .header-bar .unit-list .unitElement .unitIcon img, .win.troopMovements.movements .header-bar .resource-list .unitElement .unitIcon img, .win.troopMovements.movements .header-bar .unit-list .resourceElement .unitIcon img, .win.troopMovements.movements .header-bar .resource-list .resourceElement .unitIcon img, .win.troopMovements.movements .header-bar .unit-list .unitElement .resourceIcon img, .win.troopMovements.movements .header-bar .resource-list .unitElement .resourceIcon img, .win.troopMovements.movements .header-bar .unit-list .resourceElement .resourceIcon img, .win.troopMovements.movements .header-bar .resource-list .resourceElement .resourceIcon img {
@@ -8664,7 +8665,7 @@ top: 50px !important
 }
 
 .win.troopMovements.movements .header-bar .counter {
-    width: 280px
+    width: 420px
 }
 
 .win.troopMovements.movements .header-bar .counter.resources {
@@ -8712,12 +8713,13 @@ top: 50px !important
 }
 
 .win.troopMovements.offending_external .header-bar .unit-list, .win.troopMovements.offending_external .header-bar .resource-list {
-    margin: 2px 0 0 135px;
-    width: 360px
+    margin: 2px 0 0 24px;
+    width: 496px
 }
 
 .win.troopMovements.offending_external .header-bar .unit-list.resource-list, .win.troopMovements.offending_external .header-bar .resource-list.resource-list {
     width: 45px;
+    height: 34px;
     margin-left: 0
 }
 
@@ -8740,7 +8742,7 @@ top: 50px !important
 }
 
 .win.troopMovements.offending_external .header-bar .counter {
-    width: 360px
+    width: 496px
 }
 
 .win.troopMovements.offending_external .header-bar .counter.resources {
@@ -8846,7 +8848,7 @@ height: 50px;
 }
 
 .win.troopMovements .header-bar .collapse-toggle .control, .win.troopMovements .header-bar .source-toggle .control {
-    width: 54px;
+    width: 50px;
     text-align: center;
     cursor: pointer;
     background: #DFCDC4 ;
@@ -8875,7 +8877,7 @@ height: 50px;
 
 .win.troopMovements .header-bar .unit-list, .win.troopMovements .header-bar .resource-list {
     float: right;
-    width: 380px
+    width: 533px
 }
 
 .win.troopMovements .header-bar .unit-list.resource-list, .win.troopMovements .header-bar .resource-list.resource-list {
@@ -8884,7 +8886,7 @@ height: 50px;
 
 .win.troopMovements .header-bar .unit-list .unitElement, .win.troopMovements .header-bar .resource-list .unitElement, .win.troopMovements .header-bar .unit-list .resourceElement, .win.troopMovements .header-bar .resource-list .resourceElement {
     float: left;
-    width: 47px;
+    width: 48px;
     margin: 0 0 3px 0
 }
 
@@ -8904,7 +8906,7 @@ height: 50px;
 
 .win.troopMovements .header-bar .counter {
     float: right;
-    width: 380px
+    width: 533px
 }
 
 .win.troopMovements .header-bar .counter .headerCount {
@@ -8968,6 +8970,7 @@ height: 50px;
 }
 
 .win.troopMovements .display-area .tree-table td .icon {
+    display: none;
     float: left;
     margin: 0 5px 0 0;
     cursor: pointer
@@ -8985,7 +8988,7 @@ height: 50px;
 .win.troopMovements .display-area .tree-table td .text {
     float: left;
     cursor: pointer;
-    width: 210px;
+    width: 150px;
     overflow: hidden
 }
 
@@ -9021,8 +9024,8 @@ height: 50px;
     border-left: 0;
     padding-left: 30px;
     text-align: left;
-    max-width: 175px;
-    min-width: 175px;
+    max-width: 82px;
+    min-width: 82px;
     position: relative;
     font-size: 12px
 }
@@ -9041,7 +9044,8 @@ height: 50px;
 }
 
 .win.troopMovements .display-area .tree-table tr.subrow .text {
-    width: 200px
+    width: 150px;
+    overflow: hidden;
 }
 
 body.has-scrollbar .win.globalMissions .missionHeader {
