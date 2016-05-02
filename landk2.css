@@ -6746,10 +6746,12 @@ top: 50px !important
     position: relative;
     margin-bottom: -5px
 }
+/*
 
 .win.recruitingList .tabbar.recruitment .filler .unitTableHeader:first-child {
     margin-left: 85px
 }
+*/
 
 .win.recruitingList .tabbar.recruitment .divider {
     height: 5px;
