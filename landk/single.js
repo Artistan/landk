@@ -1,12 +1,14 @@
 // ==UserScript==
-// @name         landk v3.6.2
+// @name         landk v3.6.3
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      3.6.2
+// @version      3.6.3
 // @description  make it work.
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
-// @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2.css?4l122=1122
+// @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2.css?4l122=11224
 // @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
+// @require     https://gist.githubusercontent.com/Artistan/b33b8327bb29c6ad6de5b96d63636be5/raw/2f88290e3f4eecd21f3e80e47e827cfc87e3ed6a/jquery.binaryTransport.js
+// @require     https://gist.githubusercontent.com/Artistan/1d2d62f46b64724d088a0d47035076dc/raw/67af1cda396cfcb3c251376946f6c886a2280670/recursive.find.js
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
@@ -161,7 +163,7 @@ unsafeWindow.ALNK = (function () {
     var _buildingIntervals = function(){
         _buildingFunctions();
         console.log('_buildingIntervals',_buildingFunctions);
-        buildingTimer = setInterval(_buildingFunctions,(60000 * 5) );
+        buildingTimer = setInterval(_buildingFunctions,(60000 * 1) );
     };
     var _buildingFunctions = function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingFunctions');
@@ -398,10 +400,10 @@ unsafeWindow.ALNK = (function () {
             var total = wood + stone + ore;
             _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
             if (
-                total > resourceMinimum ||
-                wood > singleResourceMinimum ||
-                stone > singleResourceMinimum ||
-                ore > singleResourceMinimum
+                    total > resourceMinimum ||
+                    wood > singleResourceMinimum ||
+                    stone > singleResourceMinimum ||
+                    ore > singleResourceMinimum
             ) {
                 // click on the link...
                 _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('total ' + total + ' VS min ' + resourceMinimum);
@@ -450,11 +452,11 @@ unsafeWindow.ALNK = (function () {
         }
         $oxCart.focus().click().val(carts).trigger("change").trigger("blur");
         $castleElem.find('.resourceContainer .resourceElement[data-primary-key="1"] input')
-            .val(wood).trigger("change").trigger("blur");
+                .val(wood).trigger("change").trigger("blur");
         $castleElem.find('.resourceContainer .resourceElement[data-primary-key="2"] input')
-            .val(stone).trigger("change").trigger("blur");
+                .val(stone).trigger("change").trigger("blur");
         $castleElem.find('.resourceContainer .resourceElement[data-primary-key="3"] input')
-            .val(ore).trigger("change").trigger("blur");
+                .val(ore).trigger("change").trigger("blur");
         $castleElem.find('.typeContainer .button').click();
         _timeoutLoop(3000, 5000, _tradeSendReady, _tradeSendClick);
     };
@@ -590,10 +592,10 @@ unsafeWindow.ALNK = (function () {
                 var copper = $castleElem.find('.resourceElement[data-primary-key="5"] .resourceAmount').html() * 1;
                 var total = wood + stone + ore;
                 if (
-                    total > resourceMinimum ||
-                    wood > singleResourceMinimum ||
-                    stone > singleResourceMinimum ||
-                    ore > singleResourceMinimum
+                        total > resourceMinimum ||
+                        wood > singleResourceMinimum ||
+                        stone > singleResourceMinimum ||
+                        ore > singleResourceMinimum
                 ) {
                     if (pub.preferCopper && copper < copperLimit) {
                         console.log('do copper trade');
@@ -653,7 +655,18 @@ unsafeWindow.ALNK = (function () {
                     }
                     _timeoutLoop(3000, 5000, _castleReady, _castleFunctions);// wait 2 seconds and run castle
                 } else {
-                    _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('.....  No castle list to open .....');
+                    var altList = jQuery('.troopMovements .display-area .tree-table .text');
+                    if(altList && altList.length){
+                        // this will work with troop window open when only have 1 castle!
+                        altList[0].click();
+                        currentList = currentList + 1;
+                        if (currentListItems.length == currentList) {
+                            currentList = 0;//reset back to 0 for next pass...
+                        }
+                        _timeoutLoop(3000, 5000, _castleReady, _castleFunctions);// wait 2 seconds and run castle
+                    } else {
+                        _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('.....  No castle list to open .....');
+                    }
                 }
             } else {
                 _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('.....  waiting .....');
@@ -668,20 +681,20 @@ unsafeWindow.ALNK = (function () {
             jQuery('body').prepend('<div id="incrementalNumber" class="incrementalCounter"></div>');
             jQuery('.topbar[style],.topbar *[style]').removeAttr('style');
             jQuery('.topbar').find('.controls').append('<div id="jsLnK">' +
-                '   <div><a onclick="ALNK.runLnK(true)">START/RESET</a></div>' +
-                '   <div><a onclick="ALNK.toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (pub.runLnKNow ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleAllTrade ()">AllTrade</a><span id="auto_all_trade" class="' + (pub.allTrade ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.togglePreferCopper ()">preferCopper</a><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></div>' +
-                //'   <div><a onclick="ALNK.toggleDebug()">Log::Debug</a><span id="auto_debug" class="' + (pub.debug ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleClear()">Log::Clear</a><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></div>' +
-                '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
-                '   <div><a onclick="ALNK.clearHidden()">Close Castles</a></div>' +
-                '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
+                    '   <div><a onclick="ALNK.runLnK(true)">START/RESET</a></div>' +
+                    '   <div><a onclick="ALNK.toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (pub.runLnKNow ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleAllTrade ()">AllTrade</a><span id="auto_all_trade" class="' + (pub.allTrade ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.togglePreferCopper ()">preferCopper</a><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></div>' +
+                    //'   <div><a onclick="ALNK.toggleDebug()">Log::Debug</a><span id="auto_debug" class="' + (pub.debug ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleClear()">Log::Clear</a><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></div>' +
+                    '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
+                    '   <div><a onclick="ALNK.clearHidden()">Close Castles</a></div>' +
+                    '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
         });
         waitForKeyElements(".miniMapContainer", function () {
             console.log('.miniMapContainer created');
