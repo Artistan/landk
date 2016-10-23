@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         landk v3.6.4
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      3.6.4
-// @description  make it work.
+// @version      3.6.5
+// @description  make it work better
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
 // @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2.css?4l122=11224
@@ -86,16 +86,29 @@ unsafeWindow.ALNK = (function () {
     pub.attack_missions = false;
     pub.debug = _LNK_DEBUG_VERBOS;
     pub.troops = false;
+    pub.troopNames = {
+        /* spearman */ 1: 'spearman',
+        /* swordsman */ 2: 'swordsman',/*
+         /!* barbarian *!/ 3: 'barbarian',*/
+        /* archer */ 101: 'archer',
+        /* crossbow */ 102: 'crossbow',/*
+         /!* barcher *!/ 103: 'barcher',*/
+        /* armhorse */ 201: 'armhorse',
+        /* lancer */ 202: 'lancer',/*
+         /!* barhorse *!/ 203: 'barhorse',*/
+        /* cart */ 10001: 'cart',
+        /* oxen */ 10002: 'oxen'
+    };
     pub.troopCounts = {
         /* spearman */ 1: 100,
-        /* swordsman */ 2: 100,
-        /* barbarian */ 3: 100,
-        /* archer */ 101: 100,
-        /* crossbow */ 102: 100,
-        /* barcher */ 103: 100,
+        /* swordsman */ 2: 250,/*
+        /!* barbarian *!/ 3: 100,*/
+        /* archer */ 101: 250,
+        /* crossbow */ 102: 100,/*
+        /!* barcher *!/ 103: 100,*/
         /* armhorse */ 201: 100,
-        /* lancer */ 202: 100,
-        /* barhorse */ 203: 100,
+        /* lancer */ 202: 100,/*
+        /!* barhorse *!/ 203: 100,*/
         /* cart */ 10001: 0,
         /* oxen */ 10002: 36
     };
@@ -548,11 +561,13 @@ unsafeWindow.ALNK = (function () {
     };
     var _troopsMissionCount = function () {
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsMissionCount troops', pub.troops);
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('pub.troopCountsNOW ORIGINAL',pub.troopCountsNOW);
         jQuery('.missionHover .units .unitElement').each(function(){
             var jq = jQuery(this);
             var unit = jq.data('primaryKey');
             pub.troopCountsNOW[unit] = cloneObj(pub.troopCountsNOW[unit]) + (jq.find('.affordable').html() * 1)
         });
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('pub.troopCountsNOW NEW',pub.troopCountsNOW);
         jQuery('.missionListItem:not(:has(.countdown)) .missionIcon').trigger('mouseout');
         _troopsRecruitClick();
     };
@@ -578,7 +593,8 @@ unsafeWindow.ALNK = (function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('availablePopulation',availablePopulation);
         var recruitTotal = 100;// leave at least 100 free.
         var pendingTotal = 0;// leave at least 100 free.
-        // add the pending counts
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction troopCountsNOW', pub.troopCountsNOW);
+        // subtract the pending counts
         $castleElem.find('.pendingUnits .unitElement ').each(function(){
             var jq = jQuery(this);
             var units = jq.find('.details .affordable').html() * 1;
@@ -588,28 +604,53 @@ unsafeWindow.ALNK = (function () {
             pub.troopCountsNOW[pKey] = cloneObj(pub.troopCountsNOW[pKey]) - cloneObj(units);
             pendingTotal = pendingTotal + units;
         });
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('availablePopulation/pendingTotal',availablePopulation,pendingTotal);
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction troopCountsNOW after pending', pub.troopCountsNOW);
+        // subtract the existing
+        $castleElem.find('.recruitUnits .unitElement').each(function(){
+            var jq = jQuery(this);
+            var existing = jq.find('.unitAmount').html()*1;
+            var icon = jq.find('.unitIcon img').attr('src');
+            var pKey = cloneObj( pub.troopImages[icon] );
+            pub.troopCountsNOW[pKey] = cloneObj(pub.troopCountsNOW[pKey]) - cloneObj(existing);
+        });
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction troopCountsNOW after existing', pub.troopCountsNOW);
         // add units to each of these, if we can.
         $castleElem.find('.recruitUnits .unitElement').each(function(){
             if(availablePopulation > recruitTotal){
+
                 var jq = jQuery(this);
                 var icon = jq.find('.unitIcon img').attr('src');
                 var max = jq.find('.maxInput input').attr('placeholder');
                 var pKey = cloneObj( pub.troopImages[icon] );
                 var units = (pub.troopCountsNOW[pKey] > max) ? cloneObj(max) : cloneObj(pub.troopCountsNOW[pKey]);// how many are needed to run missions.
-                if((recruitTotal + units) > availablePopulation){
+                var multiplier = (pKey > 200)?2:1;
+                var unitPopulation = units * multiplier;
+
+                if((recruitTotal + unitPopulation) > availablePopulation){
                     // set to where the units will not exceed the availablePopulation;
-                    units = availablePopulation - recruitTotal;
+                    units = Math.floor((availablePopulation - recruitTotal)/multiplier);
                     recruitTotal = availablePopulation;
-                } else {
-                    recruitTotal = recruitTotal + units;
+                } else if (units > 0) {
+                    recruitTotal = recruitTotal + unitPopulation;
                 }
-                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction units/recruitTotal', units, recruitTotal);
-                jq.find('.maxInput input').val(units);
+                /*
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - max', pKey, max);
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - countNow', pKey, pub.troopCountsNOW[pKey]);
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - units', pKey, units);
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - unitPopulation', pKey, unitPopulation);
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - recruitTotal', pKey, recruitTotal);
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - availablePopulation', pKey, availablePopulation);
+                */
+
+                if( units > 0 ){
+                    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction '+pub.troopNames[pKey]+' - units', units);
+                    jq.find('.maxInput input').val(units);
+                }
+
             }
         });
-        $castleElem.find('.recruitUnits .unitElement .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-        _timeoutLoop(3000, 5000, _noOverlay, _closeCastle);
+        //$castleElem.find('.recruitUnits .unitElement .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        //_timeoutLoop(3000, 5000, _noOverlay, _closeCastle);
     };
 
     var _closeCastle = function () {
