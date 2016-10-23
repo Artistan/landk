@@ -505,10 +505,31 @@ unsafeWindow.ALNK = (function () {
 
     pub.troopCountsNOW = {};
 
+    /*<button onclick="numbers.forEach(myFunction)">Try it</button>
+     <p id="demo"></p>
+
+     <script>
+     demoP = document.getElementById("demo");
+     var numbers = [4, 9, 16, 25];
+
+     function myFunction(item, index) {
+     demoP.innerHTML = demoP.innerHTML + "index[" + index + "]: " + item + "<br />";
+     }
+     </script>*/
+
+    var cloneObj = function(obj) {
+        if (null == obj || "object" != typeof obj) return obj;
+        var copy = obj.constructor();
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = cloneObj(obj[attr]);
+        }
+        return copy;
+    };
+
     var _troopsFunctions = function () {
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsFunctions troops', pub.troops);
         if (pub.troops) {
-            pub.troopCountsNOW = pub.troopCounts;
+            pub.troopCountsNOW = cloneObj(pub.troopCounts);
             $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
             _timeoutLoop(3000, 5000, _troopsMissionsReady, _troopsMissionMouse, 10, _troopsRecruitClick);
@@ -530,7 +551,7 @@ unsafeWindow.ALNK = (function () {
         jQuery('.missionHover .units .unitElement').each(function(){
             var jq = jQuery(this);
             var unit = jq.data('primaryKey');
-            pub.troopCountsNOW[unit] = pub.troopCountsNOW[unit] + (jq.find('.affordable').html() * 1)
+            pub.troopCountsNOW[unit] = cloneObj(pub.troopCountsNOW[unit]) + (jq.find('.affordable').html() * 1)
         });
         jQuery('.missionListItem:not(:has(.countdown)) .missionIcon').trigger('mouseout');
         _troopsRecruitClick();
@@ -548,11 +569,13 @@ unsafeWindow.ALNK = (function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction');
         // based on the counts, set all the troop inputs and click them all.
         var pendingUnits = jQuery('.pendingUnits .unitElement').length;
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('pendingUnits',pendingUnits);
         if( (pendingUnits>2 && castlePoints < 1000) || (pendingUnits>1 && castlePoints > 1000) ){
             // queue is full.
             return _closeCastle();
         }
         var availablePopulation = $castleElem.find('.resourceHeaderTable .resourceElement[data-primary-key=4] .resourceAmount').html() * 1;
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('availablePopulation',availablePopulation);
         var recruitTotal = 100;// leave at least 100 free.
         var pendingTotal = 0;// leave at least 100 free.
         // add the pending counts
@@ -560,9 +583,9 @@ unsafeWindow.ALNK = (function () {
             var jq = jQuery(this);
             var units = jq.find('.details .affordable').html() * 1;
             var icon = jq.find('.unitIcon img').attr('src');
-            var pKey = pub.troopImages[icon];
+            var pKey = cloneObj(pub.troopImages[icon]);
             // remove the pending units from the NOW counts
-            pub.troopCountsNOW[pKey] = pub.troopCountsNOW[pKey] - units;
+            pub.troopCountsNOW[pKey] = cloneObj(pub.troopCountsNOW[pKey]) - cloneObj(units);
             pendingTotal = pendingTotal + units;
         });
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('availablePopulation/pendingTotal',availablePopulation,pendingTotal);
@@ -572,8 +595,8 @@ unsafeWindow.ALNK = (function () {
                 var jq = jQuery(this);
                 var icon = jq.find('.unitIcon img').attr('src');
                 var max = jq.find('.maxInput input').attr('placeholder');
-                var pKey = pub.troopImages[icon];
-                var units = pub.troopCountsNOW[pKey] > max ? max : pub.troopCountsNOW[pKey];// how many are needed to run missions.
+                var pKey = cloneObj( pub.troopImages[icon] );
+                var units = (pub.troopCountsNOW[pKey] > max) ? cloneObj(max) : cloneObj(pub.troopCountsNOW[pKey]);// how many are needed to run missions.
                 if((recruitTotal + units) > availablePopulation){
                     // set to where the units will not exceed the availablePopulation;
                     units = availablePopulation - recruitTotal;
