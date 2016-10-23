@@ -675,6 +675,10 @@ unsafeWindow.ALNK = (function () {
     pub.clearHidden = function () {
         jQuery('.win.habitat.frame-container').find('.close').click();
     };
+    pub.clearNoSilver = function () {
+        jQuery('.listItem:has(input[data-primary-key=6][placeholder=0])').hide();
+
+    }
     var filterCastles = function(){
         // return true for any castle that should be opened and worked on.
         $c = jQuery(this);
@@ -830,6 +834,7 @@ unsafeWindow.ALNK = (function () {
                     '   <div><a onclick="ALNK.toggleClear()">Log::Clear</a><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></div>' +
                     '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
                     '   <div><a onclick="ALNK.clearHidden()">Close Castles</a></div>' +
+                    '   <div><a onclick="ALNK.clearNoSilver()">Close NO Silver</a></div>' +
                     '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
         });
         waitForKeyElements(".miniMapContainer", function () {
