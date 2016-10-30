@@ -653,8 +653,8 @@ unsafeWindow.ALNK = (function () {
 
             }
         });
-        //$castleElem.find('.recruitUnits .unitElement .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-        //_timeoutLoop(3000, 5000, _noOverlay, _closeCastle);
+        $castleElem.find('.recruitUnits .unitElement .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        _timeoutLoop(3000, 5000, _noOverlay, _closeCastle);
     };
 
     var _closeCastle = function () {
