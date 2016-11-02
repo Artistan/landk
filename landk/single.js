@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         landk v3.6.4
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      3.6.5
+// @version      3.6.6
 // @description  make it work better
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
@@ -545,7 +545,7 @@ unsafeWindow.ALNK = (function () {
             pub.troopCountsNOW = cloneObj(pub.troopCounts);
             $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
             //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
-            _timeoutLoop(3000, 5000, _troopsMissionsReady, _troopsMissionMouse, 10, _troopsRecruitClick);
+            _timeoutLoop(3000, 5000, _troopsMissionsReady, _troopsMissionMouse, 10, _troopsDefendingClick);
         } else {
             return _closeCastle();
         }
@@ -569,8 +569,32 @@ unsafeWindow.ALNK = (function () {
         });
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('pub.troopCountsNOW NEW',pub.troopCountsNOW);
         jQuery('.missionListItem:not(:has(.countdown)) .missionIcon').trigger('mouseout');
+        _troopsDefendingClick();
+    };
+
+    // subtract external troops defending.
+    var _troopsDefendingClick = function () {
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsDefendingClick troops', pub.troops);
+       $castleElem.find('.unitList.tab').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        _timeoutLoop(3000, 5000, _troopsDefendingReady, _troopsDefendingCount, 10, _troopsRecruitClick);
+    };
+    var _troopsDefendingReady = function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_DefendingReady');
+        return $castleElem.find('.unitList.listing.contentCurrentView').length > 0;
+    };
+    // subtract external troops defending.
+    var _troopsDefendingCount = function () {
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsDefendingCount troops', pub.troops);
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('pub.troopCountsNOW ORIGINAL',pub.troopCountsNOW);
+        $castleElem.find('.frame-content:has(.content-header .title:contains("External troops - defending")) .unitElement').each(function(){
+            var jq = jQuery(this);
+            var unit = jq.data('primaryKey');
+            pub.troopCountsNOW[unit] = cloneObj(pub.troopCountsNOW[unit]) + (jq.find('.affordable').html() * 1)
+        });
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('pub.troopCountsNOW NEW',pub.troopCountsNOW);
         _troopsRecruitClick();
     };
+
     var _troopsRecruitClick = function () {
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsRecruitClick troops', pub.troops);
         $castleElem.find('.building-area.arsenal,.building-area.barracks').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
@@ -580,6 +604,7 @@ unsafeWindow.ALNK = (function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitReady');
         return $castleElem.find('.recruitUnits .unitElement').length > 0;
     };
+
     var _troopsRecruitAction = function () {
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction');
         // based on the counts, set all the troop inputs and click them all.
@@ -591,7 +616,8 @@ unsafeWindow.ALNK = (function () {
         }
         var availablePopulation = $castleElem.find('.resourceHeaderTable .resourceElement[data-primary-key=4] .resourceAmount').html() * 1;
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('availablePopulation',availablePopulation);
-        var recruitTotal = 100;// leave at least 100 free.
+        var maxUnits = 200;// max 200 per unit recruited...
+        var recruitTotal = 300;// leave at least 300 free.
         var pendingTotal = 0;// leave at least 100 free.
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction troopCountsNOW', pub.troopCountsNOW);
         // subtract the pending
@@ -607,6 +633,7 @@ unsafeWindow.ALNK = (function () {
             pendingTotal = pendingTotal + units;
         });
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction troopCountsNOW after pending', pub.troopCountsNOW);
+
         // subtract the existing
         $castleElem.find('.recruitUnits .unitElement').each(function(){
             var jq = jQuery(this);
@@ -624,11 +651,15 @@ unsafeWindow.ALNK = (function () {
                 var icon = jq.find('.unitIcon img').attr('src');
                 var max = jq.find('.maxInput input').attr('placeholder');
                 var pKey = cloneObj( pub.troopImages[icon] );
-                var units = (pub.troopCountsNOW[pKey] > max) ? cloneObj(max) : cloneObj(pub.troopCountsNOW[pKey]);// how many are needed to run missions.
+                var units = ( (pub.troopCountsNOW[pKey] > max) ? cloneObj(max) : cloneObj(pub.troopCountsNOW[pKey]) ) * 1;// how many are needed to run missions.
                 var multiplier = (pKey > 200)?2:1;
                 var unitPopulation = units * multiplier;
 
-                if((recruitTotal + unitPopulation) > availablePopulation){
+                if(unitPopulation > maxUnits) {
+                    unitPopulation = maxUnits;
+                }
+
+                if((recruitTotal + unitPopulation) >= availablePopulation){
                     // set to where the units will not exceed the availablePopulation;
                     units = Math.floor((availablePopulation - recruitTotal)/multiplier);
                     recruitTotal = availablePopulation;
@@ -651,9 +682,11 @@ unsafeWindow.ALNK = (function () {
                     jq.find('.maxInput input').val('');
                 }
 
+            } else {
+                _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('FULL :: availablePopulation (' + availablePopulation + ') < recruitTotal (' + recruitTotal + ')');
             }
         });
-        $castleElem.find('.recruitUnits .unitElement .button').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        $castleElem.find('.recruitUnits .unitElement > .button:not(.disabled)').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
         _timeoutLoop(3000, 5000, _noOverlay, _closeCastle);
     };
 
