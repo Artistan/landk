@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         landk v3.6.4
+// @name         landk v3.6.6
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
 // @version      3.6.6
 // @description  make it work better
@@ -78,9 +78,9 @@ unsafeWindow.ALNK = (function () {
     pub.missions = true;
     pub.buildings = true;
     pub.silver = true;
-    pub.allTrade = false;
-    pub.preferCopper = true;
-    pub.popTrade = true;
+    pub.allTrade = true;
+    pub.preferCopper = false;
+    pub.popTrade = false;
     pub.research = true;
     pub.clear = true;
     pub.attack_missions = false;
@@ -575,7 +575,7 @@ unsafeWindow.ALNK = (function () {
     // subtract external troops defending.
     var _troopsDefendingClick = function () {
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsDefendingClick troops', pub.troops);
-       $castleElem.find('.unitList.tab').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        $castleElem.find('.unitList.tab').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
         _timeoutLoop(3000, 5000, _troopsDefendingReady, _troopsDefendingCount, 10, _troopsRecruitClick);
     };
     var _troopsDefendingReady = function () {
@@ -686,8 +686,9 @@ unsafeWindow.ALNK = (function () {
                 _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('FULL :: availablePopulation (' + availablePopulation + ') < recruitTotal (' + recruitTotal + ')');
             }
         });
-        $castleElem.find('.recruitUnits .unitElement > .button:not(.disabled)').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-        _timeoutLoop(3000, 5000, _noOverlay, _closeCastle);
+        var foundButtons = $castleElem.find('.recruitUnits .unitElement > .button:not(.disabled)').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('foundButtons',foundButtons);
+        _timeoutLoop(5000, 8000, _noOverlay, _closeCastle);
     };
 
     var _closeCastle = function () {
