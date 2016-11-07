@@ -4,7 +4,7 @@
 // @version      4.0.0
 // @description  make it work better
 // @author       CPeterson
-// @match        http://browsergame.lordsandknights.com/
+// @match        https://browsergame.lordsandknights.com/
 // @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.css?4l122=11224
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
@@ -213,7 +213,7 @@ unsafeWindow.ALNK = (function () {
   var _buildingFunctions = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingFunctions');
     jQuery('.buildingList .close').click();
-    var $buildButton = jQuery('.topbarImageContainer:nth-of-type(2)');
+    var $buildButton = jQuery('.icon-BarBuildings');
     console.log('_buildingFunctions',pub.runLnKNow, runningBuildings, pub.buildings, $buildButton.length);
     if (pub.runLnKNow && runningBuildings !== true && pub.buildings && $buildButton.length > 0) {
       // open buildings panel
@@ -224,7 +224,8 @@ unsafeWindow.ALNK = (function () {
   };
   var _buildingReady = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingReady');
-    return jQuery('.buildingList').length > 0;
+    return jQuery('.global-building-overview').length > 0;
+    // tabular table--global-overview table--global-overview--buildings
   };
   var totalBuildingLines = 0;
   var currentBuildingLine = 0;
@@ -232,8 +233,9 @@ unsafeWindow.ALNK = (function () {
   var _buildingLinesReady = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingLinesReady');
     // try select all
-    var blist = jQuery('.buildingList');
-    $buildingLines = blist.find('.listContentRow').filter(function () {
+    var blist = jQuery('.global-building-overview');
+    $buildingLines = blist.find('.tabular-row').filter(function () {
+      // button button--default button-with-icon disabled menu-element--button--action
       return jQuery('.upgrade', this).length < 2 && jQuery('.buildbutton:not(.disabled)', this).length;
     });
     totalBuildingLines = $buildingLines.length;
