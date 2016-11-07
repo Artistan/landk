@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         landk v3.6.6
+// @name         landk v3.6.4
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/single.js
-// @version      3.6.6
+// @version      3.6.5
 // @description  make it work better
 // @author       CPeterson
 // @match        http://browser.lordsandknights.com/v2/game/index.php
@@ -677,18 +677,17 @@ unsafeWindow.ALNK = (function () {
 
                 if( units > 0 ){
                     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction '+pub.troopNames[pKey]+' - units ' + units + ' / total ' + recruitTotal);
-                    jq.find('.maxInput input').val(units);
+                    jq.find('.maxInput input').val(units).trigger('focus').trigger('change').trigger('blur');
                 } else {
-                    jq.find('.maxInput input').val('');
+                    jq.find('.maxInput input').val('').trigger('focus').trigger('change').trigger('blur');
                 }
 
             } else {
                 _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('FULL :: availablePopulation (' + availablePopulation + ') < recruitTotal (' + recruitTotal + ')');
             }
         });
-        var foundButtons = $castleElem.find('.recruitUnits .unitElement > .button:not(.disabled)').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('foundButtons',foundButtons);
-        _timeoutLoop(5000, 8000, _noOverlay, _closeCastle);
+        jQuery('.recruitUnits:visible .unitElement > .button:not(.disabled)').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');;
+        _timeoutLoop(7000, 10000, _noOverlay, _closeCastle);
     };
 
     var _closeCastle = function () {
