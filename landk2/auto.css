@@ -1,17 +1,27 @@
 #jsLnK{
-    background-color: #55765d;
+    display: block;
+    position: absolute;
+    width: 100px;
+    top: 50pt;
+    bottom: 50pt;
+    left: 0px;
+    margin: 2px auto;
+    padding: 2px;
+    border: solid black 2px;
     z-index: 9000;
-}
-#jsLnK div{
-    border: solid gray 1px;
-    text-align: right;
-    padding: 4px;
-    margin: 2px;
+    background-color: white;
+    overflow: scroll;
+    font-size: 10px;
 }
 #jsLnK a{
     cursor: pointer;
+    display: block;
+    height: 32px;
 }
 
+#jsLnK div{
+    float:left;
+}
 #jsLnK a:hover{
     background-color: #23b739;
 }
@@ -48,8 +58,8 @@
 #incrementalNumber{
     position: absolute;
     width: 100px;
-    top: 0px;
-    left: 40px;
+    bottom: 10px;
+    left: 10px;
     margin: 2px auto;
     padding: 2px;
     border: solid black 2px;

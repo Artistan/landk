@@ -1,0 +1,10 @@
+{ "name" : "lnk"
+, "version" : "4.0.0"
+, "description" : "lnk"
+, "main" : "lank2/auto.js"
+,"repository" :
+{ "type" : "git"
+, "url" : "https://github.com/npm/npm.git"
+}
+, "license": "UNLICENSED"
+}

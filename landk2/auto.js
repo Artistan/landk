@@ -4,20 +4,26 @@
 // @version      4.0.0
 // @description  make it work better
 // @author       CPeterson
-// @match        https://browsergame.lordsandknights.com/*
-// @resource    customCSS https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.css?4l122=11224
-// @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
-// @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
-// @require     https://gist.githubusercontent.com/Artistan/b33b8327bb29c6ad6de5b96d63636be5/raw/2f88290e3f4eecd21f3e80e47e827cfc87e3ed6a/jquery.binaryTransport.js
-// @require     https://gist.githubusercontent.com/Artistan/1d2d62f46b64724d088a0d47035076dc/raw/67af1cda396cfcb3c251376946f6c886a2280670/recursive.find.js
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
 // @grant       GM_addStyle
+// @match        https://browsergame.lordsandknights.com/*
+// @resource    customCSS1 https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.css?4l122=11224
+// @resource    customCSS2 http://upload.energybin.local/lnk.css?1=66
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
+// @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
+// @require     https://gist.githubusercontent.com/Artistan/b33b8327bb29c6ad6de5b96d63636be5/raw/2f88290e3f4eecd21f3e80e47e827cfc87e3ed6a/jquery.binaryTransport.js
+// @require     https://gist.githubusercontent.com/Artistan/1d2d62f46b64724d088a0d47035076dc/raw/67af1cda396cfcb3c251376946f6c886a2280670/recursive.find.js
 // ==/UserScript==
 
-var newCSS = GM_getResourceText("customCSS");
-GM_addStyle(newCSS);
+var newCSS1 = GM_getResourceText("customCSS1");
+GM_addStyle(newCSS1);
+var newCSS2 = GM_getResourceText("customCSS2");
+GM_addStyle(newCSS2);
+var fontCSS = GM_getResourceText("fontCSS");
+GM_addStyle(fontCSS);
+
 if (typeof unsafeWindow == 'undefined') {
   var unsafeWindow = window;
 }
@@ -35,7 +41,7 @@ unsafeWindow.ALNK = (function () {
 
   var tAr = []; // test array
   var $castleElem = false;
-  var fullyUpgraded = [289, 290, 1797];
+  var fullyUpgraded = [289, 290, 1799];
   var timerObj = {};
   var groups = {
     'northern9elite': [
@@ -70,9 +76,9 @@ unsafeWindow.ALNK = (function () {
   pub.buildings = true;
 
   pub.silver = true;
-  pub.allTrade = true;
+  pub.allTrade = false;
   pub.preferCopper = false;
-  pub.popTrade = false;
+  pub.minimumPopulation2Trade = true;
 
   pub.research = true;
   pub.clear = true;
@@ -126,22 +132,40 @@ unsafeWindow.ALNK = (function () {
     // return the opposite
     return !tAr[key];
   };
+  var okClick = false;
   var _closeDialogs = function () {
-    jQuery('.button-title-text:contains(Cancel)').click();
-    jQuery('.button-title-text:contains(Ok)').click();
+    var text = jQuery('#game-dialog-layer .dialog--text-section').text();
+    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_closeDialogs ('+text+')');
+    if( jQuery('#game-dialog-layer .button-title-text:contains(Cancel),#game-dialog-layer .button-title-text:contains(CANCEL)').length > 0 ){
+      jQuery('#game-dialog-layer .button-title-text:contains(Cancel),#game-dialog-layer .button-title-text:contains(CANCEL)').click();
+    } else {
+      jQuery('#game-dialog-layer .button-title-text:contains(Ok),#game-dialog-layer .button-title-text:contains(OK)').click();
+    }
+  };
+  var _hasOverlayDialog = function () {
+    return jQuery('#game-dialog-layer .button-title-text').length > 0;
+  };
+  var _hasOverlay = function () {
+    return jQuery('#over-layer--game-pending.in').length > 0;
   };
   var _noOverlay = function () {
     return jQuery('#over-layer--game-pending.in').length < 1;
   };
   // when truthyFunction then call callBackFunc ,, failInt causes max time out.
   var _timeoutLoop = function (waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback) {
+    if(_hasOverlayDialog()){
+      _closeDialogs();
+    }
     //_debug(_LNK_DEBUG_VERBOS)?_doNothing():console.log('_timeoutLoop',waitTimeIntMin,waitTimeIntMax,truthyFunction,callBackFunc,failInt);
+    var caller = _timeoutLoop.caller.name;
+    var truthyName = functionName( truthyFunction );
+    var callBackName = functionName( callBackFunc );
 
     var waitTimeInt = _randomIntFromInterval(waitTimeIntMin, waitTimeIntMax);
-    if (typeof failInt == 'undefined' || failInt > 100) {
-      failInt = 99;// 100-1
+    if (typeof failInt == 'undefined' || failInt > 40) {
+      failInt = 40;// 100-1
     } else if (failInt === 0) {
-      _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop :: resetInt / _resetCallback / _failureCallback', resetInt, _resetCallback, _failureCallback);
+      _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop ('+caller+') :: resetInt / _resetCallback / _failureCallback', resetInt, _resetCallback, _failureCallback);
       if (typeof _resetCallback != 'undefined' && resetInt > 0) {
         _resetCallback(resetInt);//go back to the one that called this...
       } else if (typeof _failureCallback != 'undefined') {
@@ -153,20 +177,20 @@ unsafeWindow.ALNK = (function () {
     }
     if (truthyFunction()) {
       if (typeof callBackFunc !== "undefined") {
-        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_timeoutLoop callBackFunc CALLED');
-        setTimeout(function () {
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_timeoutLoop ('+caller+') '+callBackName+' ');
+        currentTimeoutID = setTimeout(function () {
           callBackFunc();// wait a sec OK!
         }, 1000);
       } else {
-        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop callBackFunc INVALID', callBackFunc);
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop ('+caller+') callBackFunc INVALID', callBackFunc);
       }
     } else {
-      _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop settimeout /  failInt', waitTimeInt, failInt);
-      setTimeout(function () {
+      _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop ('+caller+')  settimeout '+truthyName);
+      //_debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_timeoutLoop settimeout ('+waitTimeInt+') /  failInt ('+failInt+')');
+      currentTimeoutID = setTimeout(function () {
         return _timeoutLoop(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback);
       }, waitTimeInt);
     }
-    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('timeout time');
     return true;
   };
   /// castle Functions
@@ -191,38 +215,51 @@ unsafeWindow.ALNK = (function () {
       pub.castle.minimum.resources.keep = 1000; // each
       if (pub.castle.fortress) {
         // set the fortress limits much higher.
-        pub.castle.limit.silver = 190000;
-        pub.castle.limit.copper = 190000;
+        pub.castle.limit.silver = 196000;
+        pub.castle.limit.copper = 196000;
         pub.castle.minimum.resources.total = 140000;
-        pub.castle.minimum.resources.single = 195000;
-        pub.castle.minimum.resources.keep = 20000; // each
+        pub.castle.minimum.resources.single = 77500;
+        pub.castle.minimum.resources.keep = 10000; // each
       } else if (pub.castle.city) {
         // set the city limits much...much higher.
-        pub.castle.limit.silver = 1900000;
-        pub.castle.limit.copper = 1900000;
+        pub.castle.limit.silver = 1990000;
+        pub.castle.limit.copper = 1990000;
         pub.castle.minimum.resources.total = 1400000;
         pub.castle.minimum.resources.single = 1950000;
-        pub.castle.minimum.resources.keep = 200000; // each
+        pub.castle.minimum.resources.keep = 100000; // each
       }
     }
     pub.castle.resources={};
-    pub.castle.resources.wood = jQuery('.icon-resource-1 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resources.stone = jQuery('.icon-resource-2 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resources.ore = jQuery('.icon-resource-3 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resources.units = jQuery('.icon-resource-4 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resources.copper = jQuery('.icon-resource-5 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resources.silver = jQuery('.icon-resource-6 .resource-progress-bar--amount').text() * 1;
+    pub.castle.resources.wood = getNumber('.resource-progress-bar--widget:has(.icon-resource-1) .resource-progress-bar--amount');
+    pub.castle.resources.stone = getNumber('.resource-progress-bar--widget:has(.icon-resource-2) .resource-progress-bar--amount');
+    pub.castle.resources.ore = getNumber('.resource-progress-bar--widget:has(.icon-resource-3) .resource-progress-bar--amount');
+    pub.castle.resources.units = getNumber('.resource-progress-bar--widget:has(.icon-resource-4) .resource-progress-bar--amount');
+    pub.castle.resources.copper = getNumber('.resource-progress-bar--widget:has(.icon-resource-5) .resource-progress-bar--amount');
+    pub.castle.resources.silver = getNumber('.resource-progress-bar--widget:has(.icon-resource-6) .resource-progress-bar--amount');
 
     pub.castle.resources.tradable = pub.castle.resources.wood + pub.castle.resources.stone + pub.castle.resources.ore;
 
     pub.castle.resourceID=[];
-    pub.castle.resourceID[1] = jQuery('.icon-resource-1 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resourceID[2] = jQuery('.icon-resource-2 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resourceID[3] = jQuery('.icon-resource-3 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resourceID[4] = jQuery('.icon-resource-4 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resourceID[5] = jQuery('.icon-resource-5 .resource-progress-bar--amount').text() * 1;
-    pub.castle.resourceID[6] = jQuery('.icon-resource-6 .resource-progress-bar--amount').text() * 1;
+    pub.castle.resourceID[1] = pub.castle.resources.wood;
+    pub.castle.resourceID[2] = pub.castle.resources.stone;
+    pub.castle.resourceID[3] = pub.castle.resources.ore;
+    pub.castle.resourceID[4] = pub.castle.resources.units;
+    pub.castle.resourceID[5] = pub.castle.resources.copper;
+    pub.castle.resourceID[6] = pub.castle.resources.silver;
 
+    console.log('pub.castle',pub.castle);
+  };
+  var getNumber = function(selector){
+    var num = jQuery(selector).text();
+    if(num.indexOf('k') >= 0){
+      num = num.replace(/k/i, '') * 1000;
+    }
+    else if(num.indexOf('m') >= 0){
+      num = num.replace(/m/i, '') * 1000000;
+    } else {
+      num = num * 1;
+    }
+    return num;
   };
   var verifyCastleVars = function(){
     var cname = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.0"]').text();
@@ -236,7 +273,7 @@ unsafeWindow.ALNK = (function () {
     pub.castle = {};
   };
   var _unitsReady = function () {
-    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_castleReady');
+    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_unitsReady');
     return jQuery('.menu--title-bar-main--title:contains(Units)').length > 0;
   };
   var _unitsFunctions = function() {
@@ -249,17 +286,18 @@ unsafeWindow.ALNK = (function () {
     _timeoutLoop(1000, 2000, _buildingReady, _buildingFunctions);// wait 1-2 seconds and run castle
   }
   var _buildingReady = function () {
-    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_castleReady');
+    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_buildingReady');
     return jQuery('.menu--title-bar-main--title:contains(Building list)').length > 0;
   };
   var _buildingFunctions = function () {
-    _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('== ' + castleTitle + ' [' + pub.castle.Points + '] ==');
+    _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('== _buildingFunctions  ::  ' + pub.castle.Name + ' [' + pub.castle.Points + '] ==');
     if (pub.buildings && !pub.castle.fullyUpgraded) {
       var currentBuilds = jQuery('.menu--content-section .widget--upgrades-in-progress--list .menu-list-element-basic--content-box.with-value:contains(Complete all buildings) .menu-list-element-basic--value').text() * 1;
-      if(currentBuilds <= 2){
+      if(currentBuilds < 2){
+        _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('currentBuilds '+currentBuilds);
         jQuery('.menu--content-section .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Build)').click();
       }
-      _timeoutLoop(3000, 5000, _noOverlay, _researchFunctions);
+      _timeoutLoop(8000, 10000, _noOverlay, _researchFunctions);
     } else {
       _researchFunctions();
     }
@@ -268,7 +306,7 @@ unsafeWindow.ALNK = (function () {
   var _researchFunctions = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : unsafeWindow.console.log('_researchFunctions');
     if (pub.research && !pub.castle.fullyUpgraded) {
-      jQuery('.menu-section .clickable:has(.icon-building-library), .menu-section .clickable:has(.icon-building-university)').click();
+      jQuery('.menu-section .clickable:has(.icon-building-library), .menu-section .clickable:has(.icon-building-university), .menu-section .clickable:has(.icon-building-universityarea)').click();
       _timeoutLoop(1000, 5000, _researchReady, _researchClick);
     } else {
       _missionFunctions();
@@ -276,7 +314,7 @@ unsafeWindow.ALNK = (function () {
   };
   var _researchReady = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_researchReady');
-    return jQuery('#menu-section-drill-container .menu-list-element .icon-building-library, #menu-section-drill-container .menu-list-element .icon-building-university').length > 0;
+    return jQuery('#menu-section-drill-container .menu-list-element .icon-building-library, #menu-section-drill-container .menu-list-element .icon-building-university, #menu-section-drill-container .menu-list-element .icon-building-universityarea').length > 0;
   };
   var _researchClick = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_researchClick');
@@ -287,12 +325,12 @@ unsafeWindow.ALNK = (function () {
       jQuery('#menu-section-drill-container .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Research)').click();
     }
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_researchClick > _missionFunctions');
-    _timeoutLoop(3000, 5000, _noOverlay, _missionFunctions);
+    _timeoutLoop(8000, 10000, _noOverlay, _missionFunctions);
   };
   var _missionFunctions = function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
     if ( !pub.castle.underAttack || pub.attack_missions) {
-      jQuery('.menu-section .clickable:has(.icon-building-tavern), .menu-section .clickable:has(.icon-building-tavernarea)').click();
+      jQuery('.menu-section .clickable:has(.icon-building-tavern), .menu-section .clickable:has(.icon-building-tavernarea), .menu-section .clickable:has(.icon-building-tavernquarter) ').click();
       jQuery('.menu--title-bar-main .button:contains(Tavern)').click();
       //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
       _timeoutLoop(3000, 5000, _missionReady, _missionClick, 10, _missionFunctions);
@@ -305,24 +343,33 @@ unsafeWindow.ALNK = (function () {
     return jQuery('#menu-section-drill-container .menu-list-element.menu-list-title-basic:contains(Available missions)').length > 0;
   };
   var _missionClick = function () {
+    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_missionClick');
+    var $kItems = jQuery('#menu-section-drill-container .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Mission)');
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_missionClick', $castleElem, $kItems);
-    jQuery('#menu-section-drill-container .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Mission)').click();
-    _timeoutLoop(3000, 5000, _noOverlay, _tradeFunctions);
+    // check if we can do more research...
+    if ($kItems.length > 0) {
+      $kItems.slice(-1).click();
+      _timeoutLoop(600, 800, _noOverlay, function () {
+        _missionClick();
+      });
+    } else {
+      _timeoutLoop(600, 800, _noOverlay, _tradeFunctions);
+    }
   };
   var _tradeFunctions = function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_tradeFunctions points/upgraded/silver/allTrade', pub.castle.Points, pub.castle.fullyUpgraded, pub.silver, pub.allTrade);
     // only run these every incrementalCount, or if manualMisssions
     if (pub.silver && (pub.castle.fullyUpgraded || pub.allTrade)) {
-      jQuery('.menu-section .clickable:has(.icon-building-keep),.menu-section .clickable:has(.icon-building-townhall)').click();
-      jQuery('.menu--title-bar-main .button:contains(Keep)').click();
-      _timeoutLoop(5000, 8000, _tradeReady, _tradeClick.bind(this, 10));
+      jQuery('.menu-section .clickable:has(.icon-building-keep),.menu-section .clickable:has(.icon-building-townhall), .menu-section .clickable:has(.icon-building-embassy)').click();
+      jQuery('.menu--title-bar-main .button:contains(Keep),.menu--title-bar-main .button:contains(Townhall)').click();
+      _timeoutLoop(2000, 3000, _tradeReady, _tradeClick.bind(this, 10));
     } else {
       return _troopsFunctions();
     }
   };
   var _tradeReady = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeReady');
-    return jQuery('.menu--title-bar-main--title:contains(Keep)').length > 0;
+    return jQuery('.menu--title-bar-main--title:contains(Keep),.menu--title-bar-main--title:contains(Townhall)').length > 0;
   };
 
 
@@ -332,8 +379,8 @@ unsafeWindow.ALNK = (function () {
       _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeClick', retry);
       // check resources
       setupCastleVars();// reset vars based on updates done thus far.
-      if (pub.castle.resources.units > 250 && pub.popTrade) {
-        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' recruit more soldiers ');
+      if (pub.castle.resources.units > 250 && pub.minimumPopulation2Trade) {
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' *** recruit more soldiers *** ');
         return _troopsFunctions();
       }
       _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('tradable ' + pub.castle.resources.tradable + ' VS min ' + pub.castle.minimum.resources.total);
@@ -344,14 +391,17 @@ unsafeWindow.ALNK = (function () {
               pub.castle.resources.ore > pub.castle.minimum.resources.single
       ) {
         // click on the link...
-        if (pub.preferCopper && copper < pub.castle.limit.copper) {
+        if (pub.preferCopper && pub.castle.resources.copper < pub.castle.limit.copper) {
           jQuery('.menu-list-element.menu-list-element-basic.clickable.widget--trade-rates:has(.icon-resource-5)').click(); //trade for copper
-        } else if (silver < pub.castle.limit.silver) {
+        } else if (pub.castle.resources.silver < pub.castle.limit.silver) {
           jQuery('.menu-list-element.menu-list-element-basic.clickable.widget--trade-rates:has(.icon-resource-6)').click(); //trade for silver
-        } else if (copper < pub.castle.limit.copper) {
+        } else if (pub.castle.resources.copper < pub.castle.limit.copper) {
           jQuery('.menu-list-element.menu-list-element-basic.clickable.widget--trade-rates:has(.icon-resource-5)').click(); //trade for copper
+        } else if(pub.castle.resources.copper > pub.castle.limit.copper || pub.castle.resources.silver > pub.castle.limit.silver) {
+          _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' *** Max Limit Reached *** ');
+          return _troopsFunctions();
         } else {
-          _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('limited resources', retry);
+          _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' *** limited resources *** ', retry);
           return _troopsFunctions();
         }
         // this will try 10 times and then fail... up to 20 seconds.
@@ -366,7 +416,7 @@ unsafeWindow.ALNK = (function () {
   };
   var _tradeResourceReady = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeResourceReady');
-    return $castleElem.find('.resourceContainer .resourceElement').length > 0;
+    return jQuery('.menu--title-bar-main--title:contains(Exchange resources)').length > 0;
   };
   var _tradeResourceClick = function () {
     $castleElem = jQuery('.win.habitat.frame-container:visible');
@@ -374,9 +424,9 @@ unsafeWindow.ALNK = (function () {
     var carts = Math.ceil(pub.castle.resources.tradable / 2500);
     var oxen = jQuery('.menu-list-element.widget--range-slider.divider-slider:has(div:contains(Ox cart))  .button-title-text').slice(0,1).text() * 1;
     var exchange = {};
-    exchange.wood=pub.castle.resources.wood;
-    exchange.stone=pub.castle.resources.stone;
-    exchange.ore=pub.castle.resources.ore;
+    exchange.wood_all  = pub.castle.resources.wood - pub.castle.minimum.resources.keep;
+    exchange.stone_all = pub.castle.resources.stone - pub.castle.minimum.resources.keep;
+    exchange.ore_all   = pub.castle.resources.ore - pub.castle.minimum.resources.keep;
     if (oxen === 0) {
       _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('NO OXEN CARTS');
       return _troopsFunctions();
@@ -387,17 +437,22 @@ unsafeWindow.ALNK = (function () {
       var diff = pub.castle.resources.tradable - newTotal;
       // reduce resources so they fit into the available carts.
       // remove 1/3 from each.
-      exchange.wood = exchange.wood - Math.ceil(diff / 3);
-      exchange.stone = exchange.stone - Math.ceil(diff / 3);
-      exchange.ore = exchange.ore - Math.ceil(diff / 3);
+      exchange.wood_all = exchange.wood_all - Math.ceil(diff / 3);
+      exchange.stone_all = exchange.stone_all - Math.ceil(diff / 3);
+      exchange.ore_all = exchange.ore_all - Math.ceil(diff / 3);
     }
+
+    exchange.wood  = Math.floor(exchange.wood_all/50);
+    exchange.stone = Math.floor(exchange.stone_all/50);
+    exchange.ore   = Math.floor(exchange.ore_all/50);
+
     jQuery('.button.button--default.button-increase--specialized--icon-uniticon-unit-10002')._clickButtonXtimes(carts);
     jQuery('.button.button--default.button-increase--specialized--iconicon-resourceicon-resource-1')._clickButtonXtimes(exchange.wood);
     jQuery('.button.button--default.button-increase--specialized--iconicon-resourceicon-resource-2')._clickButtonXtimes(exchange.stone);
     jQuery('.button.button--default.button-increase--specialized--iconicon-resourceicon-resource-3')._clickButtonXtimes(exchange.ore);
+    //console.log('STOP exchange',exchange); return false;
     jQuery('.menu-list-element.menu-list-button-basic.clickable.with-icon-left:contains(Barter Silver)').click();
-    _timeoutLoop(2000, 4000, _noOverlay, _closeCastle);
-    //_timeoutLoop(2000, 4000, _noOverlay, _troopsFunctions);
+    _timeoutLoop(500, 1000, _noOverlay, _troopsFunctions);
   };
 
 
@@ -430,10 +485,17 @@ unsafeWindow.ALNK = (function () {
   };
 
   var _troopsFunctions = function () {
+    return _closeCastle();
+
+
+
+
+
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsFunctions troops', pub.troops);
     if (pub.troops) {
       pub.troopCountsNOW = cloneObj(pub.troopCounts);
-      $castleElem.find('.building-area.tavern,.building-area.tavernarea').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+      jQuery('.menu-section .clickable:has(.icon-building-arsenal), .menu-section .clickable:has(.icon-building-barracks), .menu-section .clickable:has(.icon-building-militaryacademy) ').click();
+      jQuery('.menu--title-bar-main .button:contains(Arsenal),.menu--title-bar-main .button:contains(Barracks)').click();
       //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
       _timeoutLoop(3000, 5000, _troopsMissionsReady, _troopsMissionMouse, 10, _troopsDefendingClick);
     } else {
@@ -442,7 +504,7 @@ unsafeWindow.ALNK = (function () {
   };
   var _troopsMissionsReady = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_missionReady');
-    return $castleElem.find('.missionListItem').length > 0;
+    return jQuery('.menu-list-element.menu-list-title-basic:contains(Unit recruitment)').length > 0;
   };
   var _troopsMissionMouse = function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsMissionMouse troops', pub.troops);
@@ -487,7 +549,7 @@ unsafeWindow.ALNK = (function () {
 
   var _troopsRecruitClick = function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_troopsRecruitClick troops', pub.troops);
-    $castleElem.find('.building-area.arsenal,.building-area.barracks').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
+    $castleElem.find('.building-area.arsenal, .building-area.barracks, .building-area.militaryacademy').trigger('mouseover').trigger('mouseenter').trigger('mousedown touchstart').trigger('click');
     _timeoutLoop(3000, 5000, _troopsRecruitReady, _troopsRecruitAction, 10, _closeCastle);
   };
   var _troopsRecruitReady = function () {
@@ -582,7 +644,8 @@ unsafeWindow.ALNK = (function () {
 
   var _closeCastle = function () {
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_closeCastle');
-    pub.isRunning=false;
+    jQuery('.habitat-chooser--arrow.controls.arrow-right').click();
+    pub.isRunning = false;
     return true;
   };
   var _randomIntFromInterval = function (min, max) {
@@ -651,21 +714,24 @@ unsafeWindow.ALNK = (function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.preferCopper', pub.preferCopper);
   };
   pub.togglePopTrade = function () {
-    pub.popTrade = !pub.popTrade;
-    jQuery('#auto_popTrade').removeClass(pub.popTrade ? 'Stopped' : 'Running').addClass(pub.popTrade ? 'Running' : 'Stopped');
-    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.popTrade', pub.popTrade);
+    pub.minimumPopulation2Trade = !pub.minimumPopulation2Trade;
+    jQuery('#auto_popTrade').removeClass(pub.minimumPopulation2Trade ? 'Stopped' : 'Running').addClass(pub.minimumPopulation2Trade ? 'Running' : 'Stopped');
+    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.minimumPopulation2Trade', pub.minimumPopulation2Trade);
   };
   pub.toggleResearch = function () {
     pub.research = !pub.research;
     jQuery('#auto_research').removeClass(pub.research ? 'Stopped' : 'Running').addClass(pub.research ? 'Running' : 'Stopped');
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : (console.log('pub.research', pub.research ));
   };
-  pub.clearHidden = function () {
-    jQuery('.win.habitat.frame-container').find('.close').click();
+  pub.toggleLNKpanel = function () {
+    pub.research = !pub.research;
+    jQuery('#jsLnK').toggle();
+    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : (console.log('pub.toggleLNKpanel'));
   };
-  pub.clearNoSilver = function () {
-    jQuery('.listItem:has(input[data-primary-key=6][placeholder=0])').hide();
-
+  pub.ResetRunning = function () {
+    clearTimeouts();
+    pub.isRunning = false;
+    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : (console.log('pub.ResetRunning'));
   };
   pub.isRunning = false;
   pub.runLnK = function (force) {
@@ -678,30 +744,31 @@ unsafeWindow.ALNK = (function () {
       }
     }
     clearTimeout(timerObj);
-    timerObj = setTimeout(pub.runLnK, 10000);// wait 10 seconds and try again..
+    timerObj = setTimeout(pub.runLnK, 2000);// wait 2 seconds and try again..
   };
   pub.init = function () {
     waitForKeyElements(".menu-box", function () {
       console.log('.menu-box');
-      jQuery('body').append('<div id="incrementalNumber" class="incrementalCounter"></div>');
+      jQuery('body').append('<div id="incrementalNumber" class="incrementalCounter">' +
+                      '   <a onclick="ALNK.toggleLNKpanel()">auto panel</a>' +
+              '</div>');
       //jQuery('.topbar[style],.topbar *[style]').removeAttr('style');
       jQuery('body').append('<div id="jsLnK">' +
-              '   <div><a onclick="ALNK.runLnK(true)">START / RESET</a></div>' +
-              '   <div><a onclick="ALNK.toggleAuto()">Automation</a><span id="auto_runLnKNow" class="' + (pub.runLnKNow ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleAllTrade ()">All Trade</a><span id="auto_all_trade" class="' + (pub.allTrade ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.togglePreferCopper ()">Prefer Copper</a><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.togglePopTrade ()">Pop Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleAttackMissions()">Attack Msn</a><span id="auto_attack_missions" class="' + (pub.attack_missions ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleTroops()">Recruit Troops</a><span id="auto_recruit_troops" class="' + (pub.troops ? 'Running' : 'Stopped') + '"></span></div>' +
+
+              '   <a onclick="ALNK.runLnK(true)">RUN/FORCE</a>' +
+              '   <a onclick="ALNK.toggleAuto ()">AUTOMATE<span id="auto_runLnKNow" class="' + (pub.runLnKNow ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="TRADE SILVER" onclick="ALNK.toggleSilver ()"><div class="icon icon-left icon-resource icon-resource-6"></div><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="TRADE ANY LEVEL" onclick="ALNK.toggleAllTrade ()"><div class="icon icon-in-button icon-game icon-BarCastle"></div><span id="auto_all_trade" class="' + (pub.allTrade ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="PREFER COPPER" onclick="ALNK.togglePreferCopper ()"><div class="icon resource-progress-bar--icon icon-resource icon-resource-5"></div><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="MINIMUM POPULATION 2 TRADE ( < 250 )" onclick="ALNK.togglePopTrade ()"><div class="icon resource-progress-bar--icon icon-resource icon-resource-4"></div><span id="auto_popTrade" class="' + (pub.minimumPopulation2Trade ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="RUN RESEARCH" onclick="ALNK.toggleResearch ()"><div class="icon icon-in-button icon-game icon-Research"></div><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="RUN BUILDINGS" onclick="ALNK.toggleBuildings ()"><div class="icon icon-in-button icon-game icon-Build"></div><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="RUN MISSIONS" onclick="ALNK.toggleMissions ()"><div class="icon icon-in-button icon-game icon-Mission"></div><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="RUN WHILE ATTACK" onclick="ALNK.toggleAttackMissions ()"><div class="icon icon-game icon-HabitatUnderAttack"></div><span id="auto_attack_missions" class="' + (pub.attack_missions ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="RECRUIT TROOPS" onclick="ALNK.toggleTroops ()"><div class="icon icon-in-button icon-game icon-Recruit"></div><span id="auto_recruit_troops" class="' + (pub.auto_recruit_troops ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="CLEAR" onclick="ALNK.toggleClear ()"><div>CLEAR</div><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="Reset Running" onclick="ALNK.ResetRunning ()"><div>Reset</div></a>' +
               //'   <div><a onclick="ALNK.toggleDebug()">Log::Debug</a><span id="auto_debug" class="' + (pub.debug ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleClear()">Log::Clear</a><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.toggleMiniMap()">Toggle MiniMap</a></div>' +
-              '   <div><a onclick="ALNK.clearHidden()">Close Castles</a></div>' +
-              '   <div><a onclick="ALNK.clearNoSilver()">Close NO Silver</a></div>' +
               '</div>').find('#jsLnK').css('z-index: 888888888; top: 0; position: absolute; bottom: auto;');
     });
   };
@@ -717,9 +784,28 @@ jQuery.fn.extend({
     }
   }
 });
+function functionName( func )
+{
+  // Match:
+  // - ^          the beginning of the string
+  // - function   the word 'function'
+  // - \s+        at least some white space
+  // - ([\w\$]+)  capture one or more valid JavaScript identifier characters
+  // - \s*        optionally followed by white space (in theory there won't be any here,
+  //              so if performance is an issue this can be omitted[1]
+  // - \(         followed by an opening brace
+  //
+  var result = /^function\s+([\w\$]+)\s*\(/.exec( func.toString() )
 
+  return  result  ?  result[ 1 ]  :  '' // for an anonymous function there won't be a match
+}
 
-
+var currentTimeoutID = false;
+function clearTimeouts(){
+  while (currentTimeoutID--) {
+    window.clearTimeout(currentTimeoutID); // will do nothing if no timeout with id is present
+  }
+}
 
 
 

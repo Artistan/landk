@@ -77,7 +77,7 @@ unsafeWindow.ALNK = (function () {
   pub.silver = true;
   pub.allTrade = false;
   pub.preferCopper = true;
-  pub.popTrade = true;
+  pub.minimumPopulation2Trade = true;
   pub.research = true;
   pub.clear = true;
   pub.debug = _LNK_DEBUG_VERBOS;
@@ -387,7 +387,7 @@ unsafeWindow.ALNK = (function () {
       }
       // check resources
       var population = jQuery('.resourceHeaderTable .resourceElement[data-primary-key="4"] .resourceAmount').html() * 1;
-      if (population > 250 && pub.popTrade) {
+      if (population > 250 && pub.minimumPopulation2Trade) {
         _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' recruit more soldiers ');
         return _closeCastle();
       }
@@ -532,9 +532,9 @@ unsafeWindow.ALNK = (function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.preferCopper', pub.preferCopper);
   };
   pub.togglePopTrade = function () {
-    pub.popTrade = !pub.popTrade;
-    jQuery('#auto_popTrade').removeClass(pub.popTrade ? 'Stopped' : 'Running').addClass(pub.popTrade ? 'Running' : 'Stopped');
-    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.popTrade', pub.popTrade);
+    pub.minimumPopulation2Trade = !pub.minimumPopulation2Trade;
+    jQuery('#auto_popTrade').removeClass(pub.minimumPopulation2Trade ? 'Stopped' : 'Running').addClass(pub.minimumPopulation2Trade ? 'Running' : 'Stopped');
+    _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('pub.minimumPopulation2Trade', pub.minimumPopulation2Trade);
   };
   pub.toggleResearch = function () {
     pub.research = !pub.research;
@@ -581,7 +581,7 @@ unsafeWindow.ALNK = (function () {
       }
       // check resources
       var population = $c.find('.resourceElement[data-primary-key="4"] .resourceAmount').html() * 1;
-      if (population > 250 && pub.popTrade) {
+      if (population > 250 && pub.minimumPopulation2Trade) {
         console.log('population limiter for trade, disable poptrade if you want to trade anyway');
       } else {
         var wood = $castleElem.find('.resourceElement[data-primary-key="1"] .resourceAmount').html() * 1 - leaveBehind;
@@ -686,7 +686,7 @@ unsafeWindow.ALNK = (function () {
               '   <div><a onclick="ALNK.toggleSilver ()">Silver</a><span id="auto_silver" class="' + (pub.silver ? 'Running' : 'Stopped') + '"></span></div>' +
               '   <div><a onclick="ALNK.toggleAllTrade ()">AllTrade</a><span id="auto_all_trade" class="' + (pub.allTrade ? 'Running' : 'Stopped') + '"></span></div>' +
               '   <div><a onclick="ALNK.togglePreferCopper ()">preferCopper</a><span id="auto_preferCopper" class="' + (pub.preferCopper ? 'Running' : 'Stopped') + '"></span></div>' +
-              '   <div><a onclick="ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.popTrade ? 'Running' : 'Stopped') + '"></span></div>' +
+              '   <div><a onclick="ALNK.togglePopTrade ()">Population Trade</a><span id="auto_popTrade" class="' + (pub.minimumPopulation2Trade ? 'Running' : 'Stopped') + '"></span></div>' +
               '   <div><a onclick="ALNK.toggleResearch ()">Research</a><span id="auto_research" class="' + (pub.research ? 'Running' : 'Stopped') + '"></span></div>' +
               '   <div><a onclick="ALNK.toggleBuildings()">Buildings</a><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></div>' +
               '   <div><a onclick="ALNK.toggleMissions()">Missions</a><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></div>' +
