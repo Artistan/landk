@@ -15,6 +15,7 @@
 // @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
 // @require     https://gist.githubusercontent.com/Artistan/b33b8327bb29c6ad6de5b96d63636be5/raw/2f88290e3f4eecd21f3e80e47e827cfc87e3ed6a/jquery.binaryTransport.js
 // @require     https://gist.githubusercontent.com/Artistan/1d2d62f46b64724d088a0d47035076dc/raw/67af1cda396cfcb3c251376946f6c886a2280670/recursive.find.js
+// @require     https://raw.githubusercontent.com/j-ulrich/jquery-simulate-ext/master/libs/jquery.simulate.js
 // ==/UserScript==
 
 var newCSS1 = GM_getResourceText("customCSS1");
@@ -246,7 +247,7 @@ unsafeWindow.ALNK = (function () {
   pub.castle.underAttack = false;
   var setupCastleVars = function() {
     pub.castle.Name = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.0"]').text();
-    pub.castle.Points = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.1"]').text().replace(/ \(/i, '').replace(/\)/i, '') * 1;
+    pub.castle.Points = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.1"]').text().replace(/\(/i, '').replace(/\)/i, '') * 1;
     pub.castle.fullyUpgraded = jQuery.inArray(pub.castle.Points, fullyUpgraded) > -1;
     pub.castle.fortress = pub.castle.Points > 290 && pub.castle.Points < 1800;
     pub.castle.city = pub.castle.Points > 1800;
@@ -356,7 +357,7 @@ unsafeWindow.ALNK = (function () {
       var currentBuilds = jQuery('.menu--content-section .widget--upgrades-in-progress--list .menu-list-element-basic--content-box.with-value:contains(Complete all buildings) .menu-list-element-basic--value').text() * 1;
       if(currentBuilds < 2){
         _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('currentBuilds '+currentBuilds);
-        jQuery('.menu--content-section .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Build)').click();
+        jQuery('.menu--content-section .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Build)').reverse().click();
       }
       _timeoutLoop(8000, 10000, _buildingRemoveOverlay, _researchFunctions);
     } else {
@@ -386,7 +387,7 @@ unsafeWindow.ALNK = (function () {
       jQuery('#menu-section-drill-container .button.button--default.button-with-icon.menu-element--button--action:not(.disabled):has(.icon-Research)').click();
     }
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_researchClick > _missionFunctions');
-    _timeoutLoop(8000, 10000, _noOverlay, _missionFunctions);
+    _timeoutLoop(8000, 10000, _buildingRemoveOverlay, _missionFunctions);
   };
   var _missionFunctions = function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
@@ -501,7 +502,7 @@ unsafeWindow.ALNK = (function () {
     $castleElem = jQuery('.win.habitat.frame-container:visible');
     _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeResourceClick');
     var carts = Math.ceil(pub.castle.resources.tradable / 2500);
-    var oxen = jQuery('.menu-list-element.widget--range-slider.divider-slider:has(div:contains(Ox cart))  .button-title-text').slice(0,1).text() * 1;
+    var oxen = jQuery('.button-title-text[data-reactid*="transportation-unit-range-slider-10002"][data-reactid*="widget-range-slider-decrease-button"]').text() * 1;
     var exchange = {};
     exchange.wood_all  = pub.castle.resources.wood - pub.castle.minimum.resources.keep;
     exchange.stone_all = pub.castle.resources.stone - pub.castle.minimum.resources.keep;
@@ -653,7 +654,7 @@ unsafeWindow.ALNK = (function () {
              */
             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction '+pub.troopNames[pKey]+' - units ' + units + ', wanted ' + wanted + ', max ' + max);
 
-            if( units > 0 && units < max ){
+            if( units > 0 && units <= max ){
               _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction '+pub.troopNames[pKey]+' - unitPopulation ' + unitPopulation + ' / total ' + recruitTotal);
               _clickUnits(units);
             }
@@ -674,11 +675,16 @@ unsafeWindow.ALNK = (function () {
   };
 
   var _clickUnits = function(total){
-    while( (jQuery('.widget-range-slider--current-value').text()*1) < total ){
-      jQuery('.button.button--default.range-slider-increase-value--button').click();
+
+    if(jQuery('.component--input.widget-range-slider--current-value-input')){
+      while( (jQuery('.component--input.widget-range-slider--current-value-input').val()*1) < total ){
+        jQuery('.button.button--default.range-slider-increase-value--button').click();
+      }
     }
-    if((jQuery('.widget-range-slider--current-value').text()*1) > 0){
+    if((jQuery('.component--input.widget-range-slider--current-value-input').val()*1) > 0){
       jQuery('.button.button--default.button-with-icon.menu-element--button--action.range-slider-accept-value--button').click();
+      _closeDialogs();
+      _buildingRemoveOverlay();
     }
   }
 
@@ -809,7 +815,7 @@ unsafeWindow.ALNK = (function () {
               '   <a title="RUN BUILDINGS" onclick="ALNK.toggleBuildings ()"><div class="icon icon-in-button icon-game icon-Build"></div><span id="auto_buildings" class="' + (pub.buildings ? 'Running' : 'Stopped') + '"></span></a>' +
               '   <a title="RUN MISSIONS" onclick="ALNK.toggleMissions ()"><div class="icon icon-in-button icon-game icon-Mission"></div><span id="auto_missions" class="' + (pub.missions ? 'Running' : 'Stopped') + '"></span></a>' +
               '   <a title="RUN WHILE ATTACK" onclick="ALNK.toggleAttackMissions ()"><div class="icon icon-game icon-HabitatUnderAttack"></div><span id="auto_attack_missions" class="' + (pub.attack_missions ? 'Running' : 'Stopped') + '"></span></a>' +
-              '   <a title="RECRUIT TROOPS" onclick="ALNK.toggleTroops ()"><div class="icon icon-in-button icon-game icon-Recruit"></div><span id="auto_recruit_troops" class="' + (pub.auto_recruit_troops ? 'Running' : 'Stopped') + '"></span></a>' +
+              '   <a title="RECRUIT TROOPS" onclick="ALNK.toggleTroops ()"><div class="icon icon-in-button icon-game icon-Recruit"></div><span id="auto_recruit_troops" class="' + (pub.troops ? 'Running' : 'Stopped') + '"></span></a>' +
               '   <a title="CLEAR" onclick="ALNK.toggleClear ()"><div>CLEAR</div><span id="auto_clear" class="' + (pub.clear ? 'Running' : 'Stopped') + '"></span></a>' +
               '   <a title="Reset Running" onclick="ALNK.ResetRunning ()"><div>Reset</div></a>' +
               //'   <div><a onclick="ALNK.toggleDebug()">Log::Debug</a><span id="auto_debug" class="' + (pub.debug ? 'Running' : 'Stopped') + '"></span></div>' +
@@ -828,6 +834,9 @@ jQuery.fn.extend({
     }
   }
 });
+
+jQuery.fn.reverse = [].reverse;
+
 function functionName( func )
 {
   // Match:
