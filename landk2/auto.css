@@ -1,10 +1,14 @@
+.toggle-buttons--content{
+    top: 68px;
+    margin-top: 0px;
+}
 #jsLnK{
     display: block;
     position: absolute;
-    width: 100px;
-    top: 50pt;
-    bottom: 50pt;
-    left: 0px;
+    width: 60px;
+    top: 356px;
+    bottom: 64px;
+    right: 2px;
     margin: 2px auto;
     padding: 2px;
     border: solid black 2px;
@@ -58,11 +62,14 @@
 #incrementalNumber{
     position: absolute;
     width: 100px;
-    bottom: 10px;
-    left: 10px;
+    bottom: 2px;
+    left:2px;
     margin: 2px auto;
     padding: 2px;
     border: solid black 2px;
     z-index: 9000;
     background-color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 18px 0px;
 }
