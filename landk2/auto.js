@@ -9,8 +9,8 @@
 // @grant       GM_getResourceText
 // @grant       GM_addStyle
 // @match        https://browsergame.lordsandknights.com/*
-// @resource    customCSS1 https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.css?4l122=2131123
-// @resource    customCSS2 http://upload.energybin.local/lnk.css?1=123
+// @resource    customCSS1 https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.css?4l122=234wesd
+// @resource    customCSS2 http://upload.energybin.local/lnk.css?1=ewr
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
 // @require     https://gist.githubusercontent.com/Artistan/b33b8327bb29c6ad6de5b96d63636be5/raw/2f88290e3f4eecd21f3e80e47e827cfc87e3ed6a/jquery.binaryTransport.js
