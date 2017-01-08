@@ -42,7 +42,7 @@ unsafeWindow.ALNK = (function () {
 
   var tAr = []; // test array
   var $castleElem = false;
-  var fullyUpgraded = [289, 290, 1799];
+  var fullyUpgraded = [289, 290, 1799, 1800];
   var timerObj = {};
   var groups = {
     'northern9elite': [
@@ -139,18 +139,18 @@ unsafeWindow.ALNK = (function () {
         /* cart */ 10001: 0,
         /* oxen */ 10002: 220
       },
-      12000: { /* TODO: get max limits for cities.*/
-        /* spearman */ 1: 4750,
-        /* swordman */ 2: 5425,/*
+      10000: { /* TODO: get max limits for cities.*/
+        /* spearman */ 1: 15000,
+        /* swordman */ 2: 15000,/*
          /!* barbarian *!/ 3: 100,*/
-        /* archer */ 101: 4911,
-        /* crossbowman */ 102: 5875,/*
+        /* archer */ 101: 15000,
+        /* crossbowman */ 102: 15000,/*
          /!* barcher *!/ 103: 100,*/
-        /* scorpionrider */ 201: 3450,
-        /* lancer */ 202: 2475,/*
+        /* scorpionrider */ 201: 12000,
+        /* lancer */ 202: 12000,/*
          /!* barhorse *!/ 203: 100,*/
         /* cart */ 10001: 0,
-        /* oxen */ 10002: 220
+        /* oxen */ 10002: 10000
       }
   };
   // true == do nothing...
@@ -257,6 +257,7 @@ unsafeWindow.ALNK = (function () {
       pub.castle.limit={};
       pub.castle.limit.silver = 19800;
       pub.castle.limit.copper = 19800;
+      pub.castle.troops = 250;
       pub.castle.minimum={};
       pub.castle.minimum.resources={};
       pub.castle.minimum.resources.total = 19000;
@@ -266,6 +267,7 @@ unsafeWindow.ALNK = (function () {
         // set the fortress limits much higher.
         pub.castle.limit.silver = 196000;
         pub.castle.limit.copper = 196000;
+        pub.castle.troops = 1500;
         pub.castle.minimum.resources.total = 140000;
         pub.castle.minimum.resources.single = 77500;
         pub.castle.minimum.resources.keep = 10000; // each
@@ -273,9 +275,10 @@ unsafeWindow.ALNK = (function () {
         // set the city limits much...much higher.
         pub.castle.limit.silver = 1990000;
         pub.castle.limit.copper = 1990000;
-        pub.castle.minimum.resources.total = 1400000;
-        pub.castle.minimum.resources.single = 1950000;
-        pub.castle.minimum.resources.keep = 100000; // each
+        pub.castle.troops = 7500;
+        pub.castle.minimum.resources.total = 900000;
+        pub.castle.minimum.resources.single = 500000;
+        pub.castle.minimum.resources.keep = 200000; // each
       }
     }
     pub.castle.resources={};
@@ -391,7 +394,7 @@ unsafeWindow.ALNK = (function () {
   };
   var _missionFunctions = function () {
     _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('_missionFunctions');
-    if ( !pub.castle.underAttack || pub.attack_missions) {
+    if ( (!pub.castle.underAttack && pub.missions) || pub.attack_missions) {
       jQuery('.menu-section .clickable:has(.icon-building-tavern), .menu-section .clickable:has(.icon-building-tavernarea), .menu-section .clickable:has(.icon-building-tavernquarter) ').click();
       jQuery('.menu--title-bar-main .button:contains(Tavern)').click();
       //(waitTimeIntMin, waitTimeIntMax, truthyFunction, callBackFunc, failInt, _failureCallback, resetInt, _resetCallback)
@@ -459,8 +462,8 @@ unsafeWindow.ALNK = (function () {
       _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_tradeClick', retry);
       // check resources
       setupCastleVars();// reset vars based on updates done thus far.
-      if (pub.castle.resources.units > 250 && pub.minimumPopulation2Trade) {
-        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' *** recruit more soldiers *** ');
+      if (pub.castle.resources.units > pub.castle.troops && pub.minimumPopulation2Trade) {
+        _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log(' *** recruit more soldiers ('+pub.castle.troops+') *** ');
         return _troopsFunctions();
       }
       _debug(_LNK_DEBUG_QUIET) ? _doNothing() : console.log('tradable ' + pub.castle.resources.tradable + ' VS min ' + pub.castle.minimum.resources.total);
@@ -470,6 +473,10 @@ unsafeWindow.ALNK = (function () {
               pub.castle.resources.stone > pub.castle.minimum.resources.single ||
               pub.castle.resources.ore > pub.castle.minimum.resources.single
       ) {
+        // lets get the actual trade limits from the display
+        pub.castle.limit.silver = jQuery('.menu-list-element-basic--value[data-reactid*="building-overview-store-6.2"]').text().replace(/[0-9]*\//i,'') * 1;
+        pub.castle.limit.copper = jQuery('.menu-list-element-basic--value[data-reactid*="building-overview-store-5.2"]').text().replace(/[0-9]*\//i,'') * 1;
+
         // click on the link...
         if (pub.preferCopper && pub.castle.resources.copper < pub.castle.limit.copper) {
           jQuery('.menu-list-element.menu-list-element-basic.clickable.widget--trade-rates:has(.icon-resource-5)').click(); //trade for copper
@@ -504,9 +511,9 @@ unsafeWindow.ALNK = (function () {
     var carts = Math.ceil(pub.castle.resources.tradable / 2500);
     var oxen = jQuery('.button-title-text[data-reactid*="transportation-unit-range-slider-10002"][data-reactid*="widget-range-slider-decrease-button"]').text() * 1;
     var exchange = {};
-    exchange.wood_all  = pub.castle.resources.wood - pub.castle.minimum.resources.keep;
-    exchange.stone_all = pub.castle.resources.stone - pub.castle.minimum.resources.keep;
-    exchange.ore_all   = pub.castle.resources.ore - pub.castle.minimum.resources.keep;
+    exchange.wood  = pub.castle.resources.wood - pub.castle.minimum.resources.keep;
+    exchange.stone = pub.castle.resources.stone - pub.castle.minimum.resources.keep;
+    exchange.ore   = pub.castle.resources.ore - pub.castle.minimum.resources.keep;
     if (oxen === 0) {
       _debug(_LNK_DEBUG_VERBOS) ? _doNothing() : console.log('NO OXEN CARTS');
       return _troopsFunctions();
@@ -517,21 +524,17 @@ unsafeWindow.ALNK = (function () {
       var diff = pub.castle.resources.tradable - newTotal;
       // reduce resources so they fit into the available carts.
       // remove 1/3 from each.
-      exchange.wood_all = exchange.wood_all - Math.ceil(diff / 3);
-      exchange.stone_all = exchange.stone_all - Math.ceil(diff / 3);
-      exchange.ore_all = exchange.ore_all - Math.ceil(diff / 3);
+      exchange.wood = exchange.wood - Math.ceil(diff / 3);
+      exchange.stone = exchange.stone - Math.ceil(diff / 3);
+      exchange.ore = exchange.ore - Math.ceil(diff / 3);
     }
 
-    exchange.wood  = Math.floor(exchange.wood_all/50);
-    exchange.stone = Math.floor(exchange.stone_all/50);
-    exchange.ore   = Math.floor(exchange.ore_all/50);
-
-    jQuery('.button.button--default.button-increase--specialized--icon-uniticon-unit-10002')._clickButtonXtimes(carts);
-    jQuery('.button.button--default.button-increase--specialized--iconicon-resourceicon-resource-1')._clickButtonXtimes(exchange.wood);
-    jQuery('.button.button--default.button-increase--specialized--iconicon-resourceicon-resource-2')._clickButtonXtimes(exchange.stone);
-    jQuery('.button.button--default.button-increase--specialized--iconicon-resourceicon-resource-3')._clickButtonXtimes(exchange.ore);
+    _clickSlider(carts,'transportation-unit-range-slider-10002');
+    _clickSlider(exchange.wood,'transportation-resource-range-slider-1');
+    _clickSlider(exchange.stone,'transportation-resource-range-slider-2');
+    _clickSlider(exchange.ore,'transportation-resource-range-slider-3');
     //console.log('STOP exchange',exchange); return false;
-    jQuery('.menu-list-element.menu-list-button-basic.clickable.with-icon-left:contains(Barter Silver)').click();
+    jQuery('.menu-list-element.menu-list-button-basic.clickable.with-icon-left:contains(Barter)').click();
     _timeoutLoop(500, 1000, _noOverlay, _troopsFunctions);
   };
 
@@ -644,19 +647,19 @@ unsafeWindow.ALNK = (function () {
             } else if (units > 0) {
               recruitTotal = recruitTotal + unitPopulation;
             }
-            /*
-             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - max', pKey, max);
-             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - countNow', pKey, pub.troopCountsNOW[pKey]);
-             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - units', pKey, units);
-             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - unitPopulation', pKey, unitPopulation);
-             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - recruitTotal', pKey, recruitTotal);
-             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - availablePopulation', pKey, availablePopulation);
-             */
+
+//             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - max', pKey, max);
+//             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - countNow', pKey, pub.troopCountsNOW[pKey]);
+//             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - units', pKey, units);
+//             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - unitPopulation', pKey, unitPopulation);
+//             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - recruitTotal', pKey, recruitTotal);
+//             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction pKey - availablePopulation', pKey, availablePopulation);
+
             _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction '+pub.troopNames[pKey]+' - units ' + units + ', wanted ' + wanted + ', max ' + max);
 
             if( units > 0 && units <= max ){
               _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_troopsRecruitAction '+pub.troopNames[pKey]+' - unitPopulation ' + unitPopulation + ' / total ' + recruitTotal);
-              _clickUnits(units);
+              _clickSlider(units,'unit-construction-range-slider');
             }
             // exit this unit.
             jQuery('.menu--title-bar-main .button:contains(Arsenal),.menu--title-bar-main .button:contains(Barracks)').click();
@@ -673,16 +676,21 @@ unsafeWindow.ALNK = (function () {
 
     _timeoutLoop(7000, 10000, _noOverlay, _closeCastle);
   };
+  //
 
-  var _clickUnits = function(total){
+  // units ;; _clickSlider(units,'unit-construction-range-slider');
+  // trade ;; _clickSlider(units,'transportation-resource-range-slider-2');
+  var _clickSlider = function(total,reactid){
+    _debug(_LNK_DEBUG_LIMITED) ? _doNothing() : console.log('_clickSlider', total, reactid);
 
-    if(jQuery('.component--input.widget-range-slider--current-value-input')){
-      while( (jQuery('.component--input.widget-range-slider--current-value-input').val()*1) < total ){
-        jQuery('.button.button--default.range-slider-increase-value--button').click();
+    if(jQuery('div[data-reactid*="'+reactid+'"] .component--input.widget-range-slider--current-value-input')){
+      while( (jQuery('div[data-reactid*="'+reactid+'"] .component--input.widget-range-slider--current-value-input').val()*1) < total ){
+        jQuery('div[data-reactid*="'+reactid+'"] .button[data-reactid*="increase"]').click();
       }
     }
-    if((jQuery('.component--input.widget-range-slider--current-value-input').val()*1) > 0){
-      jQuery('.button.button--default.button-with-icon.menu-element--button--action.range-slider-accept-value--button').click();
+    if((jQuery('div[data-reactid*="'+reactid+'"] .component--input.widget-range-slider--current-value-input').val()*1) > 0
+            && jQuery('div[data-reactid*="'+reactid+'"] .button.button--default.button-with-icon.menu-element--button--action.range-slider-accept-value--button')){
+      jQuery('div[data-reactid*="'+reactid+'"] .button.button--default.button-with-icon.menu-element--button--action.range-slider-accept-value--button').click();
       _closeDialogs();
       _buildingRemoveOverlay();
     }
