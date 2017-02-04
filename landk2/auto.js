@@ -1,16 +1,16 @@
 // ==UserScript==
-// @name         landk v4.0.0
+// @name         landk v5.0.0
 // @namespace    https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.js
-// @version      4.0.0
+// @version      5.0.0
 // @description  make it work better
 // @author       CPeterson
 // @grant       all
 // @grant       unsafeWindow
 // @grant       GM_getResourceText
 // @grant       GM_addStyle
-// @match        https://browsergame.lordsandknights.com/*
+// @match        http*://lordsandknights.com/*
 // @resource    customCSS1 https://raw.githubusercontent.com/Artistan/landk/master/landk2/auto.css?4l122=23213
-// @resource    customCSS2 http://upload.energybin.local/lnk.css?1=123
+// @resource    customCSS2 http://upload.energybin.local/lnk.css.old?1=123
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
 // @require     https://gist.githubusercontent.com/Artistan/385fb5676c5408227410/raw/9c97aa67ff9c5d56be34a55ad6c18a314e5eb548/waitForKeyElements.js
 // @require     https://gist.githubusercontent.com/Artistan/b33b8327bb29c6ad6de5b96d63636be5/raw/2f88290e3f4eecd21f3e80e47e827cfc87e3ed6a/jquery.binaryTransport.js
@@ -100,58 +100,58 @@ unsafeWindow.ALNK = (function () {
     /* oxen */ 10002: 'oxen'
   };
   pub.troopCounts = {
-      0: {
-        /* spearman */ 1: 100,
-        /* swordman */ 2: 250,/*
-         /!* barbarian *!/ 3: 100,*/
-        /* archer */ 101: 250,
-        /* crossbowman */ 102: 100,/*
-         /!* barcher *!/ 103: 100,*/
-        /* scorpionrider */ 201: 100,
-        /* lancer */ 202: 100,/*
-         /!* barhorse *!/ 203: 100,*/
-        /* cart */ 10001: 0,
-        /* oxen */ 10002: 36
-      },
-      289: {
-        /* spearman */ 1: 605,
-        /* swordman */ 2: 1010,/*
-         /!* barbarian *!/ 3: 100,*/
-        /* archer */ 101: 750,
-        /* crossbowman */ 102: 400,/*
-         /!* barcher *!/ 103: 100,*/
-        /* scorpionrider */ 201: 330,
-        /* lancer */ 202: 300,/*
-         /!* barhorse *!/ 203: 100,*/
-        /* cart */ 10001: 0,
-        /* oxen */ 10002: 36
-      },
-      1799: {
-        /* spearman */ 1: 4750,
-        /* swordman */ 2: 5425,/*
-         /!* barbarian *!/ 3: 100,*/
-        /* archer */ 101: 4911,
-        /* crossbowman */ 102: 5875,/*
-         /!* barcher *!/ 103: 100,*/
-        /* scorpionrider */ 201: 3450,
-        /* lancer */ 202: 2475,/*
-         /!* barhorse *!/ 203: 100,*/
-        /* cart */ 10001: 0,
-        /* oxen */ 10002: 220
-      },
-      10000: { /* TODO: get max limits for cities.*/
-        /* spearman */ 1: 15000,
-        /* swordman */ 2: 15000,/*
-         /!* barbarian *!/ 3: 100,*/
-        /* archer */ 101: 15000,
-        /* crossbowman */ 102: 15000,/*
-         /!* barcher *!/ 103: 100,*/
-        /* scorpionrider */ 201: 12000,
-        /* lancer */ 202: 12000,/*
-         /!* barhorse *!/ 203: 100,*/
-        /* cart */ 10001: 0,
-        /* oxen */ 10002: 10000
-      }
+    0: {
+      /* spearman */ 1: 100,
+      /* swordman */ 2: 250,/*
+       /!* barbarian *!/ 3: 100,*/
+      /* archer */ 101: 250,
+      /* crossbowman */ 102: 100,/*
+       /!* barcher *!/ 103: 100,*/
+      /* scorpionrider */ 201: 100,
+      /* lancer */ 202: 100,/*
+       /!* barhorse *!/ 203: 100,*/
+      /* cart */ 10001: 0,
+      /* oxen */ 10002: 36
+    },
+    289: {
+      /* spearman */ 1: 605,
+      /* swordman */ 2: 1010,/*
+       /!* barbarian *!/ 3: 100,*/
+      /* archer */ 101: 750,
+      /* crossbowman */ 102: 400,/*
+       /!* barcher *!/ 103: 100,*/
+      /* scorpionrider */ 201: 330,
+      /* lancer */ 202: 300,/*
+       /!* barhorse *!/ 203: 100,*/
+      /* cart */ 10001: 0,
+      /* oxen */ 10002: 36
+    },
+    1799: {
+      /* spearman */ 1: 4750,
+      /* swordman */ 2: 5425,/*
+       /!* barbarian *!/ 3: 100,*/
+      /* archer */ 101: 4911,
+      /* crossbowman */ 102: 5875,/*
+       /!* barcher *!/ 103: 100,*/
+      /* scorpionrider */ 201: 3450,
+      /* lancer */ 202: 2475,/*
+       /!* barhorse *!/ 203: 100,*/
+      /* cart */ 10001: 0,
+      /* oxen */ 10002: 220
+    },
+    10000: { /* TODO: get max limits for cities.*/
+      /* spearman */ 1: 15000,
+      /* swordman */ 2: 15000,/*
+       /!* barbarian *!/ 3: 100,*/
+      /* archer */ 101: 15000,
+      /* crossbowman */ 102: 15000,/*
+       /!* barcher *!/ 103: 100,*/
+      /* scorpionrider */ 201: 12000,
+      /* lancer */ 202: 12000,/*
+       /!* barhorse *!/ 203: 100,*/
+      /* cart */ 10001: 0,
+      /* oxen */ 10002: 10000
+    }
   };
   // true == do nothing...
   var _debug = function (level) {
@@ -246,8 +246,8 @@ unsafeWindow.ALNK = (function () {
   pub.castle = {};
   pub.castle.underAttack = false;
   var setupCastleVars = function() {
-    pub.castle.Name = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.0"]').text();
-    pub.castle.Points = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.1"]').text().replace(/\(/i, '').replace(/\)/i, '') * 1;
+    pub.castle.Name = jQuery('#game-bar-top > div > div.bar-top--center-column > div > div.habitat-chooser--title-row > div.habitat-chooser--title.text-name-with-emo-icons > span:nth-child(1)').text();
+    pub.castle.Points = jQuery('#game-bar-top > div > div.bar-top--center-column > div > div.habitat-chooser--title-row > div.habitat-chooser--title.text-name-with-emo-icons > span.font-oblique').text().replace(/\(/i, '').replace(/\)/i, '') * 1;
     pub.castle.fullyUpgraded = jQuery.inArray(pub.castle.Points, fullyUpgraded) > -1;
     pub.castle.fortress = pub.castle.Points > 290 && pub.castle.Points < 1800;
     pub.castle.city = pub.castle.Points > 1800;
@@ -314,7 +314,7 @@ unsafeWindow.ALNK = (function () {
     return num;
   };
   var verifyCastleVars = function(){
-    var cname = jQuery('.habitat-chooser--title span[data-reactid=".2.1.0.0.1.0"]').text();
+    var cname = jQuery('#game-bar-top > div > div.bar-top--center-column > div > div.habitat-chooser--title-row > div.habitat-chooser--title.text-name-with-emo-icons > span:nth-child(1)').text();
     if(cname != pub.castle.Name){
       resetCastleVars();
       return false;
@@ -432,7 +432,7 @@ unsafeWindow.ALNK = (function () {
     // check if we can do more research...
     if ($kItems.length > 0) {
       $kItems.slice(-1).click();
-      _timeoutLoop(600, 800, _noOverlay, function () {
+      _timeoutLoop(1000, 1400, _noOverlay, function () {
         _missionClick();
       });
     } else {
@@ -808,7 +808,7 @@ unsafeWindow.ALNK = (function () {
     waitForKeyElements(".menu-box", function () {
       console.log('.menu-box');
       jQuery('body').append('<div id="incrementalNumber" class="incrementalCounter">' +
-                      '   <a onclick="ALNK.toggleLNKpanel()">auto panel</a>' +
+              '   <a onclick="ALNK.toggleLNKpanel()">auto panel</a>' +
               '</div>');
       //jQuery('.topbar[style],.topbar *[style]').removeAttr('style');
       jQuery('body').append('<div id="jsLnK">' +
